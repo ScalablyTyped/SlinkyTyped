@@ -4,18 +4,49 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonContents extends js.Object {
-  var contents: js.UndefOr[Boolean] = js.undefined
-  var deep: js.UndefOr[Boolean] = js.undefined
+  var contents: js.UndefOr[Boolean] = js.native
+  var deep: js.UndefOr[Boolean] = js.native
 }
 
 object AnonContents {
   @scala.inline
-  def apply(contents: js.UndefOr[Boolean] = js.undefined, deep: js.UndefOr[Boolean] = js.undefined): AnonContents = {
+  def apply(): AnonContents = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(contents)) __obj.updateDynamic("contents")(contents.asInstanceOf[js.Any])
-    if (!js.isUndefined(deep)) __obj.updateDynamic("deep")(deep.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonContents]
   }
+  @scala.inline
+  implicit class AnonContentsOps[Self <: AnonContents] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withContents(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contents")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContents: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contents")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeep(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deep")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeep: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deep")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -23,22 +23,20 @@ trait SyncToken extends js.Object
 
 object SyncToken {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def iCalUID: typingsSlinky.gapiCalendar.gapiCalendarStrings.iCalUID = "iCalUID".asInstanceOf[typingsSlinky.gapiCalendar.gapiCalendarStrings.iCalUID]
   @scala.inline
-  def iCalUID: typingsSlinky.gapiCalendar.gapiCalendarStrings.iCalUID = this.cast("iCalUID")
+  def orderBy: typingsSlinky.gapiCalendar.gapiCalendarStrings.orderBy = "orderBy".asInstanceOf[typingsSlinky.gapiCalendar.gapiCalendarStrings.orderBy]
   @scala.inline
-  def orderBy: typingsSlinky.gapiCalendar.gapiCalendarStrings.orderBy = this.cast("orderBy")
+  def privateExtendedProperty: typingsSlinky.gapiCalendar.gapiCalendarStrings.privateExtendedProperty = "privateExtendedProperty".asInstanceOf[typingsSlinky.gapiCalendar.gapiCalendarStrings.privateExtendedProperty]
   @scala.inline
-  def privateExtendedProperty: typingsSlinky.gapiCalendar.gapiCalendarStrings.privateExtendedProperty = this.cast("privateExtendedProperty")
+  def q: typingsSlinky.gapiCalendar.gapiCalendarStrings.q = "q".asInstanceOf[typingsSlinky.gapiCalendar.gapiCalendarStrings.q]
   @scala.inline
-  def q: typingsSlinky.gapiCalendar.gapiCalendarStrings.q = this.cast("q")
+  def sharedExtendedProperty: typingsSlinky.gapiCalendar.gapiCalendarStrings.sharedExtendedProperty = "sharedExtendedProperty".asInstanceOf[typingsSlinky.gapiCalendar.gapiCalendarStrings.sharedExtendedProperty]
   @scala.inline
-  def sharedExtendedProperty: typingsSlinky.gapiCalendar.gapiCalendarStrings.sharedExtendedProperty = this.cast("sharedExtendedProperty")
+  def timeMax: typingsSlinky.gapiCalendar.gapiCalendarStrings.timeMax = "timeMax".asInstanceOf[typingsSlinky.gapiCalendar.gapiCalendarStrings.timeMax]
   @scala.inline
-  def timeMax: typingsSlinky.gapiCalendar.gapiCalendarStrings.timeMax = this.cast("timeMax")
+  def timeMin: typingsSlinky.gapiCalendar.gapiCalendarStrings.timeMin = "timeMin".asInstanceOf[typingsSlinky.gapiCalendar.gapiCalendarStrings.timeMin]
   @scala.inline
-  def timeMin: typingsSlinky.gapiCalendar.gapiCalendarStrings.timeMin = this.cast("timeMin")
-  @scala.inline
-  def updatedMin: typingsSlinky.gapiCalendar.gapiCalendarStrings.updatedMin = this.cast("updatedMin")
+  def updatedMin: typingsSlinky.gapiCalendar.gapiCalendarStrings.updatedMin = "updatedMin".asInstanceOf[typingsSlinky.gapiCalendar.gapiCalendarStrings.updatedMin]
 }
 

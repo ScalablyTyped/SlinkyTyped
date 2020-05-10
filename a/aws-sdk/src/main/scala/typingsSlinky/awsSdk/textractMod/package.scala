@@ -49,7 +49,7 @@ package object textractMod {
   type HumanLoopArn = java.lang.String
   type HumanLoopName = java.lang.String
   type IdList = js.Array[typingsSlinky.awsSdk.textractMod.NonEmptyString]
-  type ImageBlob = typingsSlinky.node.Buffer | scala.scalajs.js.typedarray.Uint8Array | typingsSlinky.awsSdk.textractMod.Blob | java.lang.String
+  type ImageBlob = typingsSlinky.node.Buffer | js.typedarray.Uint8Array | typingsSlinky.awsSdk.textractMod.Blob | java.lang.String
   type JobId = java.lang.String
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.IN_PROGRESS

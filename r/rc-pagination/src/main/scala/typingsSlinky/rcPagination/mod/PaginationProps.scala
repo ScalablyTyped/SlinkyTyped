@@ -2,103 +2,456 @@ package typingsSlinky.rcPagination.mod
 
 import slinky.core.ReactComponentClass
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined parent std.Partial<rc-pagination.rc-pagination.PaginationData> */
+@js.native
 trait PaginationProps extends js.Object {
-  var className: js.UndefOr[String] = js.undefined
-  var current: js.UndefOr[Double] = js.undefined
-  var defaultCurrent: js.UndefOr[Double] = js.undefined
-  var defaultPageSize: js.UndefOr[Double] = js.undefined
-  var hideOnSinglePage: js.UndefOr[Boolean] = js.undefined
+  var className: js.UndefOr[String] = js.native
+  var current: js.UndefOr[Double] = js.native
+  var defaultCurrent: js.UndefOr[Double] = js.native
+  var defaultPageSize: js.UndefOr[Double] = js.native
+  var hideOnSinglePage: js.UndefOr[Boolean] = js.native
   var itemRender: js.UndefOr[
     js.Function3[/* page */ Double, /* type */ String, /* element */ TagMod[Any], TagMod[Any]]
-  ] = js.undefined
-  var jumpNextIcon: js.UndefOr[ReactComponentClass[js.Object] | TagMod[Any]] = js.undefined
-  var jumpPrevIcon: js.UndefOr[ReactComponentClass[js.Object] | TagMod[Any]] = js.undefined
-  var locale: js.UndefOr[js.Object] = js.undefined
-  var nextIcon: js.UndefOr[ReactComponentClass[js.Object] | TagMod[Any]] = js.undefined
-  var onChange: js.UndefOr[js.Function2[/* page */ Double, /* pageSize */ Double, Unit]] = js.undefined
-  var onShowSizeChange: js.UndefOr[js.Function2[/* current */ Double, /* size */ Double, Unit]] = js.undefined
-  var pageSize: js.UndefOr[Double] = js.undefined
-  var pageSizeOptions: js.UndefOr[js.Array[String]] = js.undefined
-  var prefixCls: js.UndefOr[String] = js.undefined
-  var prevIcon: js.UndefOr[ReactComponentClass[js.Object] | TagMod[Any]] = js.undefined
-  var selectComponentClass: js.UndefOr[ReactComponentClass[js.Object]] = js.undefined
-  var selectPrefixCls: js.UndefOr[String] = js.undefined
-  var showLessItems: js.UndefOr[Boolean] = js.undefined
-  var showPrevNextJumpers: js.UndefOr[Boolean] = js.undefined
-  var showQuickJumper: js.UndefOr[Boolean | js.Object] = js.undefined
-  var showSizeChanger: js.UndefOr[Boolean] = js.undefined
-  var showTitle: js.UndefOr[Boolean] = js.undefined
+  ] = js.native
+  var jumpNextIcon: js.UndefOr[ReactComponentClass[js.Object] | TagMod[Any]] = js.native
+  var jumpPrevIcon: js.UndefOr[ReactComponentClass[js.Object] | TagMod[Any]] = js.native
+  var locale: js.UndefOr[js.Object] = js.native
+  var nextIcon: js.UndefOr[ReactComponentClass[js.Object] | TagMod[Any]] = js.native
+  var onChange: js.UndefOr[js.Function2[/* page */ Double, /* pageSize */ Double, Unit]] = js.native
+  var onShowSizeChange: js.UndefOr[js.Function2[/* current */ Double, /* size */ Double, Unit]] = js.native
+  var pageSize: js.UndefOr[Double] = js.native
+  var pageSizeOptions: js.UndefOr[js.Array[String]] = js.native
+  var prefixCls: js.UndefOr[String] = js.native
+  var prevIcon: js.UndefOr[ReactComponentClass[js.Object] | TagMod[Any]] = js.native
+  var selectComponentClass: js.UndefOr[ReactComponentClass[js.Object]] = js.native
+  var selectPrefixCls: js.UndefOr[String] = js.native
+  var showLessItems: js.UndefOr[Boolean] = js.native
+  var showPrevNextJumpers: js.UndefOr[Boolean] = js.native
+  var showQuickJumper: js.UndefOr[Boolean | js.Object] = js.native
+  var showSizeChanger: js.UndefOr[Boolean] = js.native
+  var showTitle: js.UndefOr[Boolean] = js.native
   var showTotal: js.UndefOr[
     js.Function2[/* total */ Double, /* range */ js.Tuple2[Double, Double], TagMod[Any]]
-  ] = js.undefined
-  var style: js.UndefOr[CSSProperties] = js.undefined
-  var total: js.UndefOr[Double] = js.undefined
+  ] = js.native
+  var style: js.UndefOr[CSSProperties] = js.native
+  var total: js.UndefOr[Double] = js.native
 }
 
 object PaginationProps {
   @scala.inline
-  def apply(
-    className: String = null,
-    current: Int | Double = null,
-    defaultCurrent: Int | Double = null,
-    defaultPageSize: Int | Double = null,
-    hideOnSinglePage: js.UndefOr[Boolean] = js.undefined,
-    itemRender: (/* page */ Double, /* type */ String, /* element */ TagMod[Any]) => TagMod[Any] = null,
-    jumpNextIcon: ReactComponentClass[js.Object] | TagMod[Any] = null,
-    jumpPrevIcon: ReactComponentClass[js.Object] | TagMod[Any] = null,
-    locale: js.Object = null,
-    nextIcon: ReactComponentClass[js.Object] | TagMod[Any] = null,
-    onChange: (/* page */ Double, /* pageSize */ Double) => Unit = null,
-    onShowSizeChange: (/* current */ Double, /* size */ Double) => Unit = null,
-    pageSize: Int | Double = null,
-    pageSizeOptions: js.Array[String] = null,
-    prefixCls: String = null,
-    prevIcon: ReactComponentClass[js.Object] | TagMod[Any] = null,
-    selectComponentClass: ReactComponentClass[js.Object] = null,
-    selectPrefixCls: String = null,
-    showLessItems: js.UndefOr[Boolean] = js.undefined,
-    showPrevNextJumpers: js.UndefOr[Boolean] = js.undefined,
-    showQuickJumper: Boolean | js.Object = null,
-    showSizeChanger: js.UndefOr[Boolean] = js.undefined,
-    showTitle: js.UndefOr[Boolean] = js.undefined,
-    showTotal: (/* total */ Double, /* range */ js.Tuple2[Double, Double]) => TagMod[Any] = null,
-    style: CSSProperties = null,
-    total: Int | Double = null
-  ): PaginationProps = {
+  def apply(): PaginationProps = {
     val __obj = js.Dynamic.literal()
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (current != null) __obj.updateDynamic("current")(current.asInstanceOf[js.Any])
-    if (defaultCurrent != null) __obj.updateDynamic("defaultCurrent")(defaultCurrent.asInstanceOf[js.Any])
-    if (defaultPageSize != null) __obj.updateDynamic("defaultPageSize")(defaultPageSize.asInstanceOf[js.Any])
-    if (!js.isUndefined(hideOnSinglePage)) __obj.updateDynamic("hideOnSinglePage")(hideOnSinglePage.asInstanceOf[js.Any])
-    if (itemRender != null) __obj.updateDynamic("itemRender")(js.Any.fromFunction3(itemRender))
-    if (jumpNextIcon != null) __obj.updateDynamic("jumpNextIcon")(jumpNextIcon.asInstanceOf[js.Any])
-    if (jumpPrevIcon != null) __obj.updateDynamic("jumpPrevIcon")(jumpPrevIcon.asInstanceOf[js.Any])
-    if (locale != null) __obj.updateDynamic("locale")(locale.asInstanceOf[js.Any])
-    if (nextIcon != null) __obj.updateDynamic("nextIcon")(nextIcon.asInstanceOf[js.Any])
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction2(onChange))
-    if (onShowSizeChange != null) __obj.updateDynamic("onShowSizeChange")(js.Any.fromFunction2(onShowSizeChange))
-    if (pageSize != null) __obj.updateDynamic("pageSize")(pageSize.asInstanceOf[js.Any])
-    if (pageSizeOptions != null) __obj.updateDynamic("pageSizeOptions")(pageSizeOptions.asInstanceOf[js.Any])
-    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
-    if (prevIcon != null) __obj.updateDynamic("prevIcon")(prevIcon.asInstanceOf[js.Any])
-    if (selectComponentClass != null) __obj.updateDynamic("selectComponentClass")(selectComponentClass.asInstanceOf[js.Any])
-    if (selectPrefixCls != null) __obj.updateDynamic("selectPrefixCls")(selectPrefixCls.asInstanceOf[js.Any])
-    if (!js.isUndefined(showLessItems)) __obj.updateDynamic("showLessItems")(showLessItems.asInstanceOf[js.Any])
-    if (!js.isUndefined(showPrevNextJumpers)) __obj.updateDynamic("showPrevNextJumpers")(showPrevNextJumpers.asInstanceOf[js.Any])
-    if (showQuickJumper != null) __obj.updateDynamic("showQuickJumper")(showQuickJumper.asInstanceOf[js.Any])
-    if (!js.isUndefined(showSizeChanger)) __obj.updateDynamic("showSizeChanger")(showSizeChanger.asInstanceOf[js.Any])
-    if (!js.isUndefined(showTitle)) __obj.updateDynamic("showTitle")(showTitle.asInstanceOf[js.Any])
-    if (showTotal != null) __obj.updateDynamic("showTotal")(js.Any.fromFunction2(showTotal))
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (total != null) __obj.updateDynamic("total")(total.asInstanceOf[js.Any])
     __obj.asInstanceOf[PaginationProps]
   }
+  @scala.inline
+  implicit class PaginationPropsOps[Self <: PaginationProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClassName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClassName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCurrent(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("current")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCurrent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("current")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultCurrent(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultCurrent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultCurrent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultCurrent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultPageSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultPageSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultPageSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultPageSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHideOnSinglePage(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hideOnSinglePage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHideOnSinglePage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hideOnSinglePage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withItemRender(value: (/* page */ Double, /* type */ String, /* element */ TagMod[Any]) => TagMod[Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemRender")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutItemRender: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemRender")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withJumpNextIconReactElement(value: ReactElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jumpNextIcon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withJumpNextIconFunctionComponent(value: ReactComponentClass[js.Object]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jumpNextIcon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withJumpNextIconComponentClass(value: ReactComponentClass[js.Object]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jumpNextIcon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withJumpNextIcon(value: ReactComponentClass[js.Object] | TagMod[Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jumpNextIcon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutJumpNextIcon: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jumpNextIcon")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withJumpPrevIconReactElement(value: ReactElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jumpPrevIcon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withJumpPrevIconFunctionComponent(value: ReactComponentClass[js.Object]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jumpPrevIcon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withJumpPrevIconComponentClass(value: ReactComponentClass[js.Object]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jumpPrevIcon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withJumpPrevIcon(value: ReactComponentClass[js.Object] | TagMod[Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jumpPrevIcon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutJumpPrevIcon: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jumpPrevIcon")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocale(value: js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocale: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextIconReactElement(value: ReactElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextIcon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNextIconFunctionComponent(value: ReactComponentClass[js.Object]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextIcon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNextIconComponentClass(value: ReactComponentClass[js.Object]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextIcon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNextIcon(value: ReactComponentClass[js.Object] | TagMod[Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextIcon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextIcon: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextIcon")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnChange(value: (/* page */ Double, /* pageSize */ Double) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnChange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnShowSizeChange(value: (/* current */ Double, /* size */ Double) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onShowSizeChange")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnShowSizeChange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onShowSizeChange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPageSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pageSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPageSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pageSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPageSizeOptions(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pageSizeOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPageSizeOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pageSizeOptions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrefixCls(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prefixCls")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrefixCls: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prefixCls")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrevIconReactElement(value: ReactElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prevIcon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPrevIconFunctionComponent(value: ReactComponentClass[js.Object]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prevIcon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPrevIconComponentClass(value: ReactComponentClass[js.Object]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prevIcon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPrevIcon(value: ReactComponentClass[js.Object] | TagMod[Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prevIcon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrevIcon: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prevIcon")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelectComponentClassFunctionComponent(value: ReactComponentClass[js.Object]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectComponentClass")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSelectComponentClassComponentClass(value: ReactComponentClass[js.Object]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectComponentClass")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSelectComponentClass(value: ReactComponentClass[js.Object]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectComponentClass")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelectComponentClass: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectComponentClass")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelectPrefixCls(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectPrefixCls")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelectPrefixCls: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectPrefixCls")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowLessItems(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showLessItems")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowLessItems: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showLessItems")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowPrevNextJumpers(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showPrevNextJumpers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowPrevNextJumpers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showPrevNextJumpers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowQuickJumper(value: Boolean | js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showQuickJumper")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowQuickJumper: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showQuickJumper")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowSizeChanger(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showSizeChanger")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowSizeChanger: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showSizeChanger")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowTitle(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showTitle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showTitle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowTotal(value: (/* total */ Double, /* range */ js.Tuple2[Double, Double]) => TagMod[Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showTotal")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutShowTotal: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showTotal")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyle(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTotal(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("total")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTotal: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("total")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

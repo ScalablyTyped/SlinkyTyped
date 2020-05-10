@@ -1,0 +1,40 @@
+package typingsSlinky.titanium.Titanium.Media
+
+import typingsSlinky.titanium.TiMetadataItemType
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/**
+		 * Fired when the timed metadata was encountered most recently within the media as it plays.
+		 */
+@js.native
+trait AudioPlayerMetadataEvent extends AudioPlayerBaseEvent {
+  /**
+  			 * An array of metadata items containing relevant information about the current media item.
+  			 */
+  var items: js.Array[TiMetadataItemType] = js.native
+}
+
+object AudioPlayerMetadataEvent {
+  @scala.inline
+  def apply(items: js.Array[TiMetadataItemType], source: AudioPlayer): AudioPlayerMetadataEvent = {
+    val __obj = js.Dynamic.literal(items = items.asInstanceOf[js.Any], source = source.asInstanceOf[js.Any])
+    __obj.asInstanceOf[AudioPlayerMetadataEvent]
+  }
+  @scala.inline
+  implicit class AudioPlayerMetadataEventOps[Self <: AudioPlayerMetadataEvent] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withItems(value: js.Array[TiMetadataItemType]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
+

@@ -1,20 +1,15 @@
 package typingsSlinky.officeUiFabricReact.components
 
-import slinky.core.ExternalComponentNoPropsWithAttributesWithRefType
-import slinky.web.html.`*`.tag
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object DialogModelessExample
-  extends ExternalComponentNoPropsWithAttributesWithRefType[
-      tag.type, 
-      typingsSlinky.officeUiFabricReact.dialogModelessExampleMod.DialogModelessExample
-    ] {
+object DialogModelessExample {
   @JSImport("office-ui-fabric-react/lib/components/Dialog/examples/Dialog.Modeless.Example", "DialogModelessExample")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: js.Object): SharedBuilder_Object_159303587[typingsSlinky.officeUiFabricReact.dialogModelessExampleMod.DialogModelessExample] = new SharedBuilder_Object_159303587[typingsSlinky.officeUiFabricReact.dialogModelessExampleMod.DialogModelessExample](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: DialogModelessExample.type): SharedBuilder_Object_159303587[typingsSlinky.officeUiFabricReact.dialogModelessExampleMod.DialogModelessExample] = new SharedBuilder_Object_159303587[typingsSlinky.officeUiFabricReact.dialogModelessExampleMod.DialogModelessExample](js.Array(this.component, js.Dictionary.empty))()
 }
 

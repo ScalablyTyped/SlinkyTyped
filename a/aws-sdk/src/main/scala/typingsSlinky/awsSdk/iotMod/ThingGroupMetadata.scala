@@ -22,16 +22,53 @@ trait ThingGroupMetadata extends js.Object {
 
 object ThingGroupMetadata {
   @scala.inline
-  def apply(
-    creationDate: js.Date = null,
-    parentGroupName: ThingGroupName = null,
-    rootToParentThingGroups: ThingGroupNameAndArnList = null
-  ): ThingGroupMetadata = {
+  def apply(): ThingGroupMetadata = {
     val __obj = js.Dynamic.literal()
-    if (creationDate != null) __obj.updateDynamic("creationDate")(creationDate.asInstanceOf[js.Any])
-    if (parentGroupName != null) __obj.updateDynamic("parentGroupName")(parentGroupName.asInstanceOf[js.Any])
-    if (rootToParentThingGroups != null) __obj.updateDynamic("rootToParentThingGroups")(rootToParentThingGroups.asInstanceOf[js.Any])
     __obj.asInstanceOf[ThingGroupMetadata]
   }
+  @scala.inline
+  implicit class ThingGroupMetadataOps[Self <: ThingGroupMetadata] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCreationDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("creationDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreationDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("creationDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParentGroupName(value: ThingGroupName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parentGroupName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParentGroupName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parentGroupName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRootToParentThingGroups(value: ThingGroupNameAndArnList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rootToParentThingGroups")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRootToParentThingGroups: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rootToParentThingGroups")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

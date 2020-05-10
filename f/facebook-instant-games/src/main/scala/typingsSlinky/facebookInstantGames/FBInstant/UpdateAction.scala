@@ -18,10 +18,8 @@ trait UpdateAction extends js.Object
 
 object UpdateAction {
   @scala.inline
-  def CUSTOM: typingsSlinky.facebookInstantGames.facebookInstantGamesStrings.CUSTOM = this.cast("CUSTOM")
+  def CUSTOM: typingsSlinky.facebookInstantGames.facebookInstantGamesStrings.CUSTOM = "CUSTOM".asInstanceOf[typingsSlinky.facebookInstantGames.facebookInstantGamesStrings.CUSTOM]
   @scala.inline
-  def LEADERBOARD: typingsSlinky.facebookInstantGames.facebookInstantGamesStrings.LEADERBOARD = this.cast("LEADERBOARD")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def LEADERBOARD: typingsSlinky.facebookInstantGames.facebookInstantGamesStrings.LEADERBOARD = "LEADERBOARD".asInstanceOf[typingsSlinky.facebookInstantGames.facebookInstantGamesStrings.LEADERBOARD]
 }
 

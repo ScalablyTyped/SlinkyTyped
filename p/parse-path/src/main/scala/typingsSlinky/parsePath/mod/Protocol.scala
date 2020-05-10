@@ -15,16 +15,14 @@ trait Protocol extends js.Object
 
 object Protocol {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def file: typingsSlinky.parsePath.parsePathStrings.file = "file".asInstanceOf[typingsSlinky.parsePath.parsePathStrings.file]
   @scala.inline
-  def file: typingsSlinky.parsePath.parsePathStrings.file = this.cast("file")
+  def git: typingsSlinky.parsePath.parsePathStrings.git = "git".asInstanceOf[typingsSlinky.parsePath.parsePathStrings.git]
   @scala.inline
-  def git: typingsSlinky.parsePath.parsePathStrings.git = this.cast("git")
+  def http: typingsSlinky.parsePath.parsePathStrings.http = "http".asInstanceOf[typingsSlinky.parsePath.parsePathStrings.http]
   @scala.inline
-  def http: typingsSlinky.parsePath.parsePathStrings.http = this.cast("http")
+  def https: typingsSlinky.parsePath.parsePathStrings.https = "https".asInstanceOf[typingsSlinky.parsePath.parsePathStrings.https]
   @scala.inline
-  def https: typingsSlinky.parsePath.parsePathStrings.https = this.cast("https")
-  @scala.inline
-  def ssh: typingsSlinky.parsePath.parsePathStrings.ssh = this.cast("ssh")
+  def ssh: typingsSlinky.parsePath.parsePathStrings.ssh = "ssh".asInstanceOf[typingsSlinky.parsePath.parsePathStrings.ssh]
 }
 

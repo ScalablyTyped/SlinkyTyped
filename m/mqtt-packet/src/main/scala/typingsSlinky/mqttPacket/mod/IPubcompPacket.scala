@@ -6,27 +6,46 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IPubcompPacket
   extends IPacket
      with Packet {
   @JSName("cmd")
-  var cmd_IPubcompPacket: pubcomp
-  var properties: js.UndefOr[AnonReasonString] = js.undefined
+  var cmd_IPubcompPacket: pubcomp = js.native
+  var properties: js.UndefOr[AnonReasonString] = js.native
 }
 
 object IPubcompPacket {
   @scala.inline
-  def apply(
-    cmd: pubcomp,
-    length: Int | Double = null,
-    messageId: Int | Double = null,
-    properties: AnonReasonString = null
-  ): IPubcompPacket = {
+  def apply(cmd: pubcomp): IPubcompPacket = {
     val __obj = js.Dynamic.literal(cmd = cmd.asInstanceOf[js.Any])
-    if (length != null) __obj.updateDynamic("length")(length.asInstanceOf[js.Any])
-    if (messageId != null) __obj.updateDynamic("messageId")(messageId.asInstanceOf[js.Any])
-    if (properties != null) __obj.updateDynamic("properties")(properties.asInstanceOf[js.Any])
     __obj.asInstanceOf[IPubcompPacket]
   }
+  @scala.inline
+  implicit class IPubcompPacketOps[Self <: IPubcompPacket] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCmd(value: pubcomp): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cmd")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withProperties(value: AnonReasonString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProperties: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

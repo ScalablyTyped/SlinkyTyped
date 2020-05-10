@@ -2,7 +2,6 @@ package typingsSlinky.googleCloudCommon.utilMod
 
 import org.scalablytyped.runtime.Instantiable1
 import typingsSlinky.googleCloudCommon.TypeofApiError
-import typingsSlinky.std.Error
 import typingsSlinky.teenyRequest.mod.Response
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -45,12 +44,12 @@ class Util_ () extends js.Object {
     * @param {*} body - Body value.
     * @param {function} callback - The callback function.
     */
-  def handleResp(err: Error): Unit = js.native
-  def handleResp(err: Error, resp: Null, body: ResponseBody): Unit = js.native
-  def handleResp(err: Error, resp: Null, body: ResponseBody, callback: BodyResponseCallback): Unit = js.native
-  def handleResp(err: Error, resp: Response[_]): Unit = js.native
-  def handleResp(err: Error, resp: Response[_], body: ResponseBody): Unit = js.native
-  def handleResp(err: Error, resp: Response[_], body: ResponseBody, callback: BodyResponseCallback): Unit = js.native
+  def handleResp(err: js.Error): Unit = js.native
+  def handleResp(err: js.Error, resp: Null, body: ResponseBody): Unit = js.native
+  def handleResp(err: js.Error, resp: Null, body: ResponseBody, callback: BodyResponseCallback): Unit = js.native
+  def handleResp(err: js.Error, resp: Response[_]): Unit = js.native
+  def handleResp(err: js.Error, resp: Response[_], body: ResponseBody): Unit = js.native
+  def handleResp(err: js.Error, resp: Response[_], body: ResponseBody, callback: BodyResponseCallback): Unit = js.native
   def isCustomType(unknown: js.Any, module: String): Boolean = js.native
   /**
     * Get a function for making authenticated requests.

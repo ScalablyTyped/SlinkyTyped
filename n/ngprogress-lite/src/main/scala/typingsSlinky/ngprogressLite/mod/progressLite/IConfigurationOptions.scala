@@ -4,13 +4,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IConfigurationOptions extends js.Object {
-  var ease: String
-  var minimum: Double
-  var speed: Double
-  var template: String
-  var trickleRate: Double
-  var trickleSpeed: Double
+  var ease: String = js.native
+  var minimum: Double = js.native
+  var speed: Double = js.native
+  var template: String = js.native
+  var trickleRate: Double = js.native
+  var trickleSpeed: Double = js.native
 }
 
 object IConfigurationOptions {
@@ -24,8 +25,51 @@ object IConfigurationOptions {
     trickleSpeed: Double
   ): IConfigurationOptions = {
     val __obj = js.Dynamic.literal(ease = ease.asInstanceOf[js.Any], minimum = minimum.asInstanceOf[js.Any], speed = speed.asInstanceOf[js.Any], template = template.asInstanceOf[js.Any], trickleRate = trickleRate.asInstanceOf[js.Any], trickleSpeed = trickleSpeed.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[IConfigurationOptions]
   }
+  @scala.inline
+  implicit class IConfigurationOptionsOps[Self <: IConfigurationOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEase(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ease")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMinimum(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minimum")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSpeed(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("speed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTemplate(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("template")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTrickleRate(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trickleRate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTrickleSpeed(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trickleSpeed")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

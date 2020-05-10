@@ -69,7 +69,7 @@ import scala.scalajs.js.annotation._
   * @param params Hash of initialization parameters for widget, including scalar values (like title, duration etc.)and functions, typically callbacks like onClick.The hash can contain any of the widget's properties, excluding read-only properties.     
   * @param srcNodeRef       OptionalIf a srcNodeRef (DOM node) is specified:use srcNodeRef.innerHTML as my contentsif this is a behavioral widget then apply behavior to that srcNodeRefotherwise, replace srcNodeRef with my generated DOM tree     
   */
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.dojo.dijit.Destroyable because Inheritance from two classes. Inlined destroy, destroy, own */ @JSGlobal("dijit._WidgetBase")
 @js.native
 class WidgetBase () extends Stateful {
@@ -591,9 +591,9 @@ class WidgetBase () extends Stateful {
     * @param reference Widget, DOMNode, or id of widget or DOMNode             
     * @param position               OptionalIf reference is a widget (or id of widget), and that widget has an ".addChild" method,it will be called passing this widget instance into that method, supplying the optionalposition index passed.  In this case position (if specified) should be an integer.If reference is a DOMNode (or id matching a DOMNode but not a widget),the position argument can be a numeric index or a string"first", "last", "before", or "after", same as dojo/dom-construct::place().             
     */
-  def placeAt(reference: typingsSlinky.std.HTMLElement): js.Any = js.native
-  def placeAt(reference: typingsSlinky.std.HTMLElement, position: String): js.Any = js.native
-  def placeAt(reference: typingsSlinky.std.HTMLElement, position: Double): js.Any = js.native
+  def placeAt(reference: HTMLElement): js.Any = js.native
+  def placeAt(reference: HTMLElement, position: String): js.Any = js.native
+  def placeAt(reference: HTMLElement, position: Double): js.Any = js.native
   /**
     * Processing after the DOM fragment is created
     * Called after the DOM fragment has been created, but not necessarily

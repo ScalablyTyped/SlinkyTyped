@@ -14,10 +14,29 @@ trait DescribeReservedInstancesResult extends js.Object {
 
 object DescribeReservedInstancesResult {
   @scala.inline
-  def apply(ReservedInstances: ReservedInstancesList = null): DescribeReservedInstancesResult = {
+  def apply(): DescribeReservedInstancesResult = {
     val __obj = js.Dynamic.literal()
-    if (ReservedInstances != null) __obj.updateDynamic("ReservedInstances")(ReservedInstances.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeReservedInstancesResult]
   }
+  @scala.inline
+  implicit class DescribeReservedInstancesResultOps[Self <: DescribeReservedInstancesResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withReservedInstances(value: ReservedInstancesList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReservedInstances")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReservedInstances: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReservedInstances")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

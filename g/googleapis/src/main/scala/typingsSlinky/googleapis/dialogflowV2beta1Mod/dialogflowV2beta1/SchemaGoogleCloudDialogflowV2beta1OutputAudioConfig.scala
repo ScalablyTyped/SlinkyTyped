@@ -29,16 +29,53 @@ trait SchemaGoogleCloudDialogflowV2beta1OutputAudioConfig extends js.Object {
 
 object SchemaGoogleCloudDialogflowV2beta1OutputAudioConfig {
   @scala.inline
-  def apply(
-    audioEncoding: String = null,
-    sampleRateHertz: Int | Double = null,
-    synthesizeSpeechConfig: SchemaGoogleCloudDialogflowV2beta1SynthesizeSpeechConfig = null
-  ): SchemaGoogleCloudDialogflowV2beta1OutputAudioConfig = {
+  def apply(): SchemaGoogleCloudDialogflowV2beta1OutputAudioConfig = {
     val __obj = js.Dynamic.literal()
-    if (audioEncoding != null) __obj.updateDynamic("audioEncoding")(audioEncoding.asInstanceOf[js.Any])
-    if (sampleRateHertz != null) __obj.updateDynamic("sampleRateHertz")(sampleRateHertz.asInstanceOf[js.Any])
-    if (synthesizeSpeechConfig != null) __obj.updateDynamic("synthesizeSpeechConfig")(synthesizeSpeechConfig.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudDialogflowV2beta1OutputAudioConfig]
   }
+  @scala.inline
+  implicit class SchemaGoogleCloudDialogflowV2beta1OutputAudioConfigOps[Self <: SchemaGoogleCloudDialogflowV2beta1OutputAudioConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAudioEncoding(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("audioEncoding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAudioEncoding: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("audioEncoding")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSampleRateHertz(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sampleRateHertz")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSampleRateHertz: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sampleRateHertz")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSynthesizeSpeechConfig(value: SchemaGoogleCloudDialogflowV2beta1SynthesizeSpeechConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("synthesizeSpeechConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSynthesizeSpeechConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("synthesizeSpeechConfig")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

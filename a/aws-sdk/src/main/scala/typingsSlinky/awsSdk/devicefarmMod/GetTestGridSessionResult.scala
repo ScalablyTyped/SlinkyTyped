@@ -14,10 +14,29 @@ trait GetTestGridSessionResult extends js.Object {
 
 object GetTestGridSessionResult {
   @scala.inline
-  def apply(testGridSession: TestGridSession = null): GetTestGridSessionResult = {
+  def apply(): GetTestGridSessionResult = {
     val __obj = js.Dynamic.literal()
-    if (testGridSession != null) __obj.updateDynamic("testGridSession")(testGridSession.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetTestGridSessionResult]
   }
+  @scala.inline
+  implicit class GetTestGridSessionResultOps[Self <: GetTestGridSessionResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withTestGridSession(value: TestGridSession): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("testGridSession")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTestGridSession: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("testGridSession")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

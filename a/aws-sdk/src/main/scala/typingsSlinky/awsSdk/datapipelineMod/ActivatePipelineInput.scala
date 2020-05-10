@@ -22,11 +22,47 @@ trait ActivatePipelineInput extends js.Object {
 
 object ActivatePipelineInput {
   @scala.inline
-  def apply(pipelineId: id, parameterValues: ParameterValueList = null, startTimestamp: js.Date = null): ActivatePipelineInput = {
+  def apply(pipelineId: id): ActivatePipelineInput = {
     val __obj = js.Dynamic.literal(pipelineId = pipelineId.asInstanceOf[js.Any])
-    if (parameterValues != null) __obj.updateDynamic("parameterValues")(parameterValues.asInstanceOf[js.Any])
-    if (startTimestamp != null) __obj.updateDynamic("startTimestamp")(startTimestamp.asInstanceOf[js.Any])
     __obj.asInstanceOf[ActivatePipelineInput]
   }
+  @scala.inline
+  implicit class ActivatePipelineInputOps[Self <: ActivatePipelineInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPipelineId(value: id): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pipelineId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withParameterValues(value: ParameterValueList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parameterValues")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParameterValues: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parameterValues")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartTimestamp(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startTimestamp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartTimestamp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startTimestamp")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

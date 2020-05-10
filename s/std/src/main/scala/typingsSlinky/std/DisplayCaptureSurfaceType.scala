@@ -14,14 +14,12 @@ trait DisplayCaptureSurfaceType extends js.Object
 
 object DisplayCaptureSurfaceType {
   @scala.inline
-  def application: typingsSlinky.std.stdStrings.application = this.cast("application")
+  def application: typingsSlinky.std.stdStrings.application = "application".asInstanceOf[typingsSlinky.std.stdStrings.application]
   @scala.inline
-  def browser: typingsSlinky.std.stdStrings.browser = this.cast("browser")
+  def browser: typingsSlinky.std.stdStrings.browser = "browser".asInstanceOf[typingsSlinky.std.stdStrings.browser]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def monitor: typingsSlinky.std.stdStrings.monitor = "monitor".asInstanceOf[typingsSlinky.std.stdStrings.monitor]
   @scala.inline
-  def monitor: typingsSlinky.std.stdStrings.monitor = this.cast("monitor")
-  @scala.inline
-  def window: typingsSlinky.std.stdStrings.window = this.cast("window")
+  def window: typingsSlinky.std.stdStrings.window = "window".asInstanceOf[typingsSlinky.std.stdStrings.window]
 }
 

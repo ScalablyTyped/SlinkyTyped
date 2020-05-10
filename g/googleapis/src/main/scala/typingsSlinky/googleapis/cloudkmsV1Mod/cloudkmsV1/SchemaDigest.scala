@@ -25,12 +25,53 @@ trait SchemaDigest extends js.Object {
 
 object SchemaDigest {
   @scala.inline
-  def apply(sha256: String = null, sha384: String = null, sha512: String = null): SchemaDigest = {
+  def apply(): SchemaDigest = {
     val __obj = js.Dynamic.literal()
-    if (sha256 != null) __obj.updateDynamic("sha256")(sha256.asInstanceOf[js.Any])
-    if (sha384 != null) __obj.updateDynamic("sha384")(sha384.asInstanceOf[js.Any])
-    if (sha512 != null) __obj.updateDynamic("sha512")(sha512.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDigest]
   }
+  @scala.inline
+  implicit class SchemaDigestOps[Self <: SchemaDigest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSha256(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sha256")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSha256: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sha256")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSha384(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sha384")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSha384: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sha384")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSha512(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sha512")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSha512: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sha512")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

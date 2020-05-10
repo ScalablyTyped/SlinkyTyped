@@ -1,10 +1,10 @@
 package typingsSlinky.xhrMock
 
 import org.scalablytyped.runtime.TopLevel
+import org.scalajs.dom.raw.EventListenerOptions
 import typingsSlinky.std.AddEventListenerOptions
 import typingsSlinky.std.BodyInit
 import typingsSlinky.std.Document_
-import typingsSlinky.std.EventListenerOptions
 import typingsSlinky.std.Event_
 import typingsSlinky.std.XMLHttpRequestResponseType
 import typingsSlinky.std.XMLHttpRequestUpload
@@ -19,7 +19,7 @@ import scala.scalajs.js.annotation._
 @JSImport("xhr-mock/lib/MockXMLHttpRequest", JSImport.Namespace)
 @js.native
 object mockXMLHttpRequestMod extends js.Object {
-  /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+  /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
   - typingsSlinky.std.EventTarget because Already inherited
   - typingsSlinky.std.XMLHttpRequestEventTarget because Already inherited
   - typingsSlinky.std.XMLHttpRequest because var conflicts: onabort, onerror, onload, onloadend, onloadstart, onprogress, ontimeout. Inlined DONE, HEADERS_RECEIVED, LOADING, OPENED, UNSENT, onreadystatechange, readyState, response, responseText, responseType, responseURL, responseXML, status, statusText, timeout, upload, withCredentials, abort, addEventListener_readystatechange, addEventListener_readystatechange, addEventListener_readystatechange, getAllResponseHeaders, getResponseHeader, open, open, open, open, open, overrideMimeType, removeEventListener_readystatechange, removeEventListener_readystatechange, removeEventListener_readystatechange, send, send, send, setRequestHeader */ @js.native

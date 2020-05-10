@@ -11,6 +11,7 @@ import scala.scalajs.js.annotation._
   * 
   * 参考: [http://www.html5plus.org/doc/zh_cn/share.html](http://www.html5plus.org/doc/zh_cn/share.html)
   */
+@js.native
 trait PlusShareWeixinMiniProgramOptions extends js.Object {
   /**
     * 微信小程序ID
@@ -18,13 +19,13 @@ trait PlusShareWeixinMiniProgramOptions extends js.Object {
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/share.html](http://www.html5plus.org/doc/zh_cn/share.html)
     */
-  var id: js.UndefOr[String] = js.undefined
+  var id: js.UndefOr[String] = js.native
   /**
     * 微信小程序打开的页面路径
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/share.html](http://www.html5plus.org/doc/zh_cn/share.html)
     */
-  var path: js.UndefOr[String] = js.undefined
+  var path: js.UndefOr[String] = js.native
   /**
     * 微信小程序版本类型
     * 可取值：
@@ -35,24 +36,76 @@ trait PlusShareWeixinMiniProgramOptions extends js.Object {
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/share.html](http://www.html5plus.org/doc/zh_cn/share.html)
     */
-  var `type`: js.UndefOr[Double] = js.undefined
+  var `type`: js.UndefOr[Double] = js.native
   /**
     * 兼容低版本的网页链接
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/share.html](http://www.html5plus.org/doc/zh_cn/share.html)
     */
-  var webUrl: js.UndefOr[String] = js.undefined
+  var webUrl: js.UndefOr[String] = js.native
 }
 
 object PlusShareWeixinMiniProgramOptions {
   @scala.inline
-  def apply(id: String = null, path: String = null, `type`: Int | Double = null, webUrl: String = null): PlusShareWeixinMiniProgramOptions = {
+  def apply(): PlusShareWeixinMiniProgramOptions = {
     val __obj = js.Dynamic.literal()
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (path != null) __obj.updateDynamic("path")(path.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (webUrl != null) __obj.updateDynamic("webUrl")(webUrl.asInstanceOf[js.Any])
     __obj.asInstanceOf[PlusShareWeixinMiniProgramOptions]
   }
+  @scala.inline
+  implicit class PlusShareWeixinMiniProgramOptionsOps[Self <: PlusShareWeixinMiniProgramOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPath(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("webUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("webUrl")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

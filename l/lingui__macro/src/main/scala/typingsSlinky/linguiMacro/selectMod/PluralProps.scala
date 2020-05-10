@@ -5,31 +5,43 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait PluralProps extends PluralForms {
-  var offset: js.UndefOr[Double] = js.undefined
-  var value: Double
+  var offset: js.UndefOr[Double] = js.native
+  var value: Double = js.native
 }
 
 object PluralProps {
   @scala.inline
-  def apply(
-    other: String | MessageDescriptor,
-    value: Double,
-    few: String | MessageDescriptor = null,
-    many: String | MessageDescriptor = null,
-    offset: Int | Double = null,
-    one: String | MessageDescriptor = null,
-    two: String | MessageDescriptor = null,
-    zero: String | MessageDescriptor = null
-  ): PluralProps = {
+  def apply(other: String | MessageDescriptor, value: Double): PluralProps = {
     val __obj = js.Dynamic.literal(other = other.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
-    if (few != null) __obj.updateDynamic("few")(few.asInstanceOf[js.Any])
-    if (many != null) __obj.updateDynamic("many")(many.asInstanceOf[js.Any])
-    if (offset != null) __obj.updateDynamic("offset")(offset.asInstanceOf[js.Any])
-    if (one != null) __obj.updateDynamic("one")(one.asInstanceOf[js.Any])
-    if (two != null) __obj.updateDynamic("two")(two.asInstanceOf[js.Any])
-    if (zero != null) __obj.updateDynamic("zero")(zero.asInstanceOf[js.Any])
     __obj.asInstanceOf[PluralProps]
   }
+  @scala.inline
+  implicit class PluralPropsOps[Self <: PluralProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withValue(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOffset(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOffset: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

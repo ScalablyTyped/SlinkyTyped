@@ -6,12 +6,11 @@ import typingsSlinky.hapiJoi.hapiJoiStrings.NFKC
 import typingsSlinky.hapiJoi.hapiJoiStrings.NFKD
 import typingsSlinky.hapiJoi.hapiJoiStrings.lower
 import typingsSlinky.hapiJoi.hapiJoiStrings.upper
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.hapiJoi.mod._Schema because Already inherited */ @js.native
 trait StringSchema extends AnySchema {
   /**
@@ -154,7 +153,7 @@ trait StringSchema extends AnySchema {
     * @param pattern - a regular expression object to match against, or a string of which all occurrences will be replaced.
     * @param replacement - the string that will replace the pattern.
     */
-  def replace(pattern: RegExp, replacement: String): this.type = js.native
+  def replace(pattern: js.RegExp, replacement: String): this.type = js.native
   /**
     * Requires the string value to only contain a-z, A-Z, 0-9, and underscore _.
     */

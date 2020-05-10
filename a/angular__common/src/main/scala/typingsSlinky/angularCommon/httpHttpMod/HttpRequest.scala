@@ -106,6 +106,6 @@ class HttpRequest[T] protected () extends js.Object {
     * Transform the free-form body into a serialized format suitable for
     * transmission to the server.
     */
-  def serializeBody(): scala.scalajs.js.typedarray.ArrayBuffer | Blob | FormData | String | Null = js.native
+  def serializeBody(): js.typedarray.ArrayBuffer | Blob | FormData | String | Null = js.native
 }
 

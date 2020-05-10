@@ -7,51 +7,179 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonAttributes extends js.Object {
-  var attributes: js.UndefOr[NoteAttributes] = js.undefined
-  var contentLength: js.UndefOr[Double] = js.undefined
-  var created: js.UndefOr[Timestamp] = js.undefined
-  var deleted: js.UndefOr[Timestamp] = js.undefined
-  var guid: js.UndefOr[Guid] = js.undefined
-  var largestResourceMime: js.UndefOr[String] = js.undefined
-  var largestResourceSize: js.UndefOr[Double] = js.undefined
-  var notebookGuid: js.UndefOr[String] = js.undefined
-  var tagGuids: js.UndefOr[js.Array[Guid]] = js.undefined
-  var title: js.UndefOr[String] = js.undefined
-  var updateSequenceNum: js.UndefOr[Double] = js.undefined
-  var updated: js.UndefOr[Timestamp] = js.undefined
+  var attributes: js.UndefOr[NoteAttributes] = js.native
+  var contentLength: js.UndefOr[Double] = js.native
+  var created: js.UndefOr[Timestamp] = js.native
+  var deleted: js.UndefOr[Timestamp] = js.native
+  var guid: js.UndefOr[Guid] = js.native
+  var largestResourceMime: js.UndefOr[String] = js.native
+  var largestResourceSize: js.UndefOr[Double] = js.native
+  var notebookGuid: js.UndefOr[String] = js.native
+  var tagGuids: js.UndefOr[js.Array[Guid]] = js.native
+  var title: js.UndefOr[String] = js.native
+  var updateSequenceNum: js.UndefOr[Double] = js.native
+  var updated: js.UndefOr[Timestamp] = js.native
 }
 
 object AnonAttributes {
   @scala.inline
-  def apply(
-    attributes: NoteAttributes = null,
-    contentLength: Int | Double = null,
-    created: Int | Double = null,
-    deleted: Int | Double = null,
-    guid: Guid = null,
-    largestResourceMime: String = null,
-    largestResourceSize: Int | Double = null,
-    notebookGuid: String = null,
-    tagGuids: js.Array[Guid] = null,
-    title: String = null,
-    updateSequenceNum: Int | Double = null,
-    updated: Int | Double = null
-  ): AnonAttributes = {
+  def apply(): AnonAttributes = {
     val __obj = js.Dynamic.literal()
-    if (attributes != null) __obj.updateDynamic("attributes")(attributes.asInstanceOf[js.Any])
-    if (contentLength != null) __obj.updateDynamic("contentLength")(contentLength.asInstanceOf[js.Any])
-    if (created != null) __obj.updateDynamic("created")(created.asInstanceOf[js.Any])
-    if (deleted != null) __obj.updateDynamic("deleted")(deleted.asInstanceOf[js.Any])
-    if (guid != null) __obj.updateDynamic("guid")(guid.asInstanceOf[js.Any])
-    if (largestResourceMime != null) __obj.updateDynamic("largestResourceMime")(largestResourceMime.asInstanceOf[js.Any])
-    if (largestResourceSize != null) __obj.updateDynamic("largestResourceSize")(largestResourceSize.asInstanceOf[js.Any])
-    if (notebookGuid != null) __obj.updateDynamic("notebookGuid")(notebookGuid.asInstanceOf[js.Any])
-    if (tagGuids != null) __obj.updateDynamic("tagGuids")(tagGuids.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
-    if (updateSequenceNum != null) __obj.updateDynamic("updateSequenceNum")(updateSequenceNum.asInstanceOf[js.Any])
-    if (updated != null) __obj.updateDynamic("updated")(updated.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonAttributes]
   }
+  @scala.inline
+  implicit class AnonAttributesOps[Self <: AnonAttributes] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAttributes(value: NoteAttributes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attributes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContentLength(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentLength")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContentLength: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentLength")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreated(value: Timestamp): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("created")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreated: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("created")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeleted(value: Timestamp): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deleted")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeleted: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deleted")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGuid(value: Guid): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("guid")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGuid: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("guid")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLargestResourceMime(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("largestResourceMime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLargestResourceMime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("largestResourceMime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLargestResourceSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("largestResourceSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLargestResourceSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("largestResourceSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNotebookGuid(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notebookGuid")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNotebookGuid: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notebookGuid")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTagGuids(value: js.Array[Guid]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tagGuids")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTagGuids: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tagGuids")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUpdateSequenceNum(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateSequenceNum")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUpdateSequenceNum: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateSequenceNum")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUpdated(value: Timestamp): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updated")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUpdated: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updated")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

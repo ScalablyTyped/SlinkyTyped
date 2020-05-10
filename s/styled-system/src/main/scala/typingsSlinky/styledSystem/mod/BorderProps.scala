@@ -1,14 +1,9 @@
 package typingsSlinky.styledSystem.mod
 
 import typingsSlinky.csstype.mod.BorderBottomProperty
-import typingsSlinky.csstype.mod.BorderBottomStyleProperty
 import typingsSlinky.csstype.mod.BorderLeftProperty
-import typingsSlinky.csstype.mod.BorderLeftStyleProperty
 import typingsSlinky.csstype.mod.BorderRightProperty
-import typingsSlinky.csstype.mod.BorderRightStyleProperty
-import typingsSlinky.csstype.mod.BorderStyleProperty
 import typingsSlinky.csstype.mod.BorderTopProperty
-import typingsSlinky.csstype.mod.BorderTopStyleProperty
 import typingsSlinky.styledSystem.styledSystemStrings.borderWidths
 import typingsSlinky.styledSystem.styledSystemStrings.colors
 import typingsSlinky.styledSystem.styledSystemStrings.radii
@@ -16,6 +11,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait BorderProps[ThemeType /* <: Theme[TLengthStyledSystem] */, TVal]
   extends BorderWidthProps[ThemeType, ThemeValue[borderWidths, ThemeType, js.Any]]
      with BorderStyleProps[ThemeType]
@@ -31,71 +27,78 @@ trait BorderProps[ThemeType /* <: Theme[TLengthStyledSystem] */, TVal]
     *
     * [MDN reference](https://developer.mozilla.org/en-US/docs/Web/CSS/border)
     */
-  var border: js.UndefOr[ResponsiveValue[TVal, ThemeType]] = js.undefined
-  var borderX: js.UndefOr[ResponsiveValue[TVal, ThemeType]] = js.undefined
-  var borderY: js.UndefOr[ResponsiveValue[TVal, ThemeType]] = js.undefined
+  var border: js.UndefOr[ResponsiveValue[TVal, ThemeType]] = js.native
+  var borderX: js.UndefOr[ResponsiveValue[TVal, ThemeType]] = js.native
+  var borderY: js.UndefOr[ResponsiveValue[TVal, ThemeType]] = js.native
 }
 
 object BorderProps {
   @scala.inline
-  def apply[ThemeType /* <: Theme[TLengthStyledSystem] */, TVal](
-    border: ResponsiveValue[TVal, ThemeType] = null,
-    borderBottom: ResponsiveValue[BorderBottomProperty[TLengthStyledSystem], ThemeType] = null,
-    borderBottomColor: ResponsiveValue[ThemeValue[colors, ThemeType, js.Any], ThemeType] = null,
-    borderBottomLeftRadius: ResponsiveValue[ThemeValue[radii, ThemeType, js.Any], ThemeType] = null,
-    borderBottomRightRadius: ResponsiveValue[ThemeValue[radii, ThemeType, js.Any], ThemeType] = null,
-    borderBottomStyle: ResponsiveValue[BorderBottomStyleProperty, ThemeType] = null,
-    borderBottomWidth: ResponsiveValue[ThemeValue[borderWidths, ThemeType, js.Any], ThemeType] = null,
-    borderColor: ResponsiveValue[ThemeValue[colors, ThemeType, js.Any], ThemeType] = null,
-    borderLeft: ResponsiveValue[BorderLeftProperty[TLengthStyledSystem], ThemeType] = null,
-    borderLeftColor: ResponsiveValue[ThemeValue[colors, ThemeType, js.Any], ThemeType] = null,
-    borderLeftStyle: ResponsiveValue[BorderLeftStyleProperty, ThemeType] = null,
-    borderLeftWidth: ResponsiveValue[ThemeValue[borderWidths, ThemeType, js.Any], ThemeType] = null,
-    borderRadius: ResponsiveValue[ThemeValue[radii, ThemeType, js.Any], ThemeType] = null,
-    borderRight: ResponsiveValue[BorderRightProperty[TLengthStyledSystem], ThemeType] = null,
-    borderRightColor: ResponsiveValue[ThemeValue[colors, ThemeType, js.Any], ThemeType] = null,
-    borderRightStyle: ResponsiveValue[BorderRightStyleProperty, ThemeType] = null,
-    borderRightWidth: ResponsiveValue[ThemeValue[borderWidths, ThemeType, js.Any], ThemeType] = null,
-    borderStyle: ResponsiveValue[BorderStyleProperty, ThemeType] = null,
-    borderTop: ResponsiveValue[BorderTopProperty[TLengthStyledSystem], ThemeType] = null,
-    borderTopColor: ResponsiveValue[ThemeValue[colors, ThemeType, js.Any], ThemeType] = null,
-    borderTopLeftRadius: ResponsiveValue[ThemeValue[radii, ThemeType, js.Any], ThemeType] = null,
-    borderTopRightRadius: ResponsiveValue[ThemeValue[radii, ThemeType, js.Any], ThemeType] = null,
-    borderTopStyle: ResponsiveValue[BorderTopStyleProperty, ThemeType] = null,
-    borderTopWidth: ResponsiveValue[ThemeValue[borderWidths, ThemeType, js.Any], ThemeType] = null,
-    borderWidth: ResponsiveValue[ThemeValue[borderWidths, ThemeType, js.Any], ThemeType] = null,
-    borderX: ResponsiveValue[TVal, ThemeType] = null,
-    borderY: ResponsiveValue[TVal, ThemeType] = null
-  ): BorderProps[ThemeType, TVal] = {
+  def apply[ThemeType, TVal](): BorderProps[ThemeType, TVal] = {
     val __obj = js.Dynamic.literal()
-    if (border != null) __obj.updateDynamic("border")(border.asInstanceOf[js.Any])
-    if (borderBottom != null) __obj.updateDynamic("borderBottom")(borderBottom.asInstanceOf[js.Any])
-    if (borderBottomColor != null) __obj.updateDynamic("borderBottomColor")(borderBottomColor.asInstanceOf[js.Any])
-    if (borderBottomLeftRadius != null) __obj.updateDynamic("borderBottomLeftRadius")(borderBottomLeftRadius.asInstanceOf[js.Any])
-    if (borderBottomRightRadius != null) __obj.updateDynamic("borderBottomRightRadius")(borderBottomRightRadius.asInstanceOf[js.Any])
-    if (borderBottomStyle != null) __obj.updateDynamic("borderBottomStyle")(borderBottomStyle.asInstanceOf[js.Any])
-    if (borderBottomWidth != null) __obj.updateDynamic("borderBottomWidth")(borderBottomWidth.asInstanceOf[js.Any])
-    if (borderColor != null) __obj.updateDynamic("borderColor")(borderColor.asInstanceOf[js.Any])
-    if (borderLeft != null) __obj.updateDynamic("borderLeft")(borderLeft.asInstanceOf[js.Any])
-    if (borderLeftColor != null) __obj.updateDynamic("borderLeftColor")(borderLeftColor.asInstanceOf[js.Any])
-    if (borderLeftStyle != null) __obj.updateDynamic("borderLeftStyle")(borderLeftStyle.asInstanceOf[js.Any])
-    if (borderLeftWidth != null) __obj.updateDynamic("borderLeftWidth")(borderLeftWidth.asInstanceOf[js.Any])
-    if (borderRadius != null) __obj.updateDynamic("borderRadius")(borderRadius.asInstanceOf[js.Any])
-    if (borderRight != null) __obj.updateDynamic("borderRight")(borderRight.asInstanceOf[js.Any])
-    if (borderRightColor != null) __obj.updateDynamic("borderRightColor")(borderRightColor.asInstanceOf[js.Any])
-    if (borderRightStyle != null) __obj.updateDynamic("borderRightStyle")(borderRightStyle.asInstanceOf[js.Any])
-    if (borderRightWidth != null) __obj.updateDynamic("borderRightWidth")(borderRightWidth.asInstanceOf[js.Any])
-    if (borderStyle != null) __obj.updateDynamic("borderStyle")(borderStyle.asInstanceOf[js.Any])
-    if (borderTop != null) __obj.updateDynamic("borderTop")(borderTop.asInstanceOf[js.Any])
-    if (borderTopColor != null) __obj.updateDynamic("borderTopColor")(borderTopColor.asInstanceOf[js.Any])
-    if (borderTopLeftRadius != null) __obj.updateDynamic("borderTopLeftRadius")(borderTopLeftRadius.asInstanceOf[js.Any])
-    if (borderTopRightRadius != null) __obj.updateDynamic("borderTopRightRadius")(borderTopRightRadius.asInstanceOf[js.Any])
-    if (borderTopStyle != null) __obj.updateDynamic("borderTopStyle")(borderTopStyle.asInstanceOf[js.Any])
-    if (borderTopWidth != null) __obj.updateDynamic("borderTopWidth")(borderTopWidth.asInstanceOf[js.Any])
-    if (borderWidth != null) __obj.updateDynamic("borderWidth")(borderWidth.asInstanceOf[js.Any])
-    if (borderX != null) __obj.updateDynamic("borderX")(borderX.asInstanceOf[js.Any])
-    if (borderY != null) __obj.updateDynamic("borderY")(borderY.asInstanceOf[js.Any])
     __obj.asInstanceOf[BorderProps[ThemeType, TVal]]
   }
+  @scala.inline
+  implicit class BorderPropsOps[Self[themetype, tval] <: BorderProps[themetype, tval], ThemeType, TVal] (val x: Self[ThemeType, TVal]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[ThemeType, TVal] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[ThemeType, TVal]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): (Self[ThemeType, TVal]) with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[(Self[ThemeType, TVal]) with Other]
+    @scala.inline
+    def withBorder(value: ResponsiveValue[TVal, ThemeType]): Self[ThemeType, TVal] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("border")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorder: Self[ThemeType, TVal] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("border")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBorderNull: Self[ThemeType, TVal] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("border")(null)
+        ret
+    }
+    @scala.inline
+    def withBorderX(value: ResponsiveValue[TVal, ThemeType]): Self[ThemeType, TVal] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderX")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorderX: Self[ThemeType, TVal] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderX")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBorderXNull: Self[ThemeType, TVal] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderX")(null)
+        ret
+    }
+    @scala.inline
+    def withBorderY(value: ResponsiveValue[TVal, ThemeType]): Self[ThemeType, TVal] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderY")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorderY: Self[ThemeType, TVal] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderY")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBorderYNull: Self[ThemeType, TVal] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderY")(null)
+        ret
+    }
+  }
+  
 }
 

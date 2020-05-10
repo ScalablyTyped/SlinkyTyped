@@ -18,10 +18,35 @@ trait DeleteTrafficMirrorFilterRequest extends js.Object {
 
 object DeleteTrafficMirrorFilterRequest {
   @scala.inline
-  def apply(TrafficMirrorFilterId: TrafficMirrorFilterId, DryRun: js.UndefOr[scala.Boolean] = js.undefined): DeleteTrafficMirrorFilterRequest = {
+  def apply(TrafficMirrorFilterId: TrafficMirrorFilterId): DeleteTrafficMirrorFilterRequest = {
     val __obj = js.Dynamic.literal(TrafficMirrorFilterId = TrafficMirrorFilterId.asInstanceOf[js.Any])
-    if (!js.isUndefined(DryRun)) __obj.updateDynamic("DryRun")(DryRun.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeleteTrafficMirrorFilterRequest]
   }
+  @scala.inline
+  implicit class DeleteTrafficMirrorFilterRequestOps[Self <: DeleteTrafficMirrorFilterRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withTrafficMirrorFilterId(value: TrafficMirrorFilterId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TrafficMirrorFilterId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDryRun(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDryRun: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

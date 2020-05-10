@@ -24,16 +24,16 @@ package object mod {
     typingsSlinky.yargs.mod.Argv[U] | js.Thenable[typingsSlinky.yargs.mod.Argv[U]]
   ])
   /** Remove undefined as a possible value for keys K in T */
-  type Defined[T, K /* <: java.lang.String */] = (typingsSlinky.yargs.mod.Omit[T, K]) with typingsSlinky.yargs.yargsStrings.Defined with T
+  type Defined[T, K /* <: /* keyof T */ java.lang.String */] = (typingsSlinky.yargs.mod.Omit[T, K]) with typingsSlinky.yargs.yargsStrings.Defined with org.scalablytyped.runtime.TopLevel[T]
   type InferredOptionType[O /* <: typingsSlinky.yargs.mod.Options | typingsSlinky.yargs.mod.PositionalOptions */] = js.UndefOr[typingsSlinky.yargs.mod.RequiredOptionType[O] | scala.Double]
   type InferredOptionTypes[O /* <: org.scalablytyped.runtime.StringDictionary[typingsSlinky.yargs.mod.Options] */] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ key in keyof O ]: yargs.yargs.InferredOptionType<O[key]>}
-    */ typingsSlinky.yargs.yargsStrings.InferredOptionTypes with O
+    */ typingsSlinky.yargs.yargsStrings.InferredOptionTypes with org.scalablytyped.runtime.TopLevel[O]
   type MiddlewareFunction[T] = js.Function1[/* args */ typingsSlinky.yargs.mod.Arguments[T], scala.Unit]
   /** Remove keys K in T */
   type Omit[T, K] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ key in std.Exclude<keyof T, K> ]: T[key]}
-    */ typingsSlinky.yargs.yargsStrings.Omit with T
+    */ typingsSlinky.yargs.yargsStrings.Omit with org.scalablytyped.runtime.TopLevel[T]
   type ParseCallback[T] = js.Function3[
     /* err */ js.UndefOr[js.Error], 
     /* argv */ typingsSlinky.yargs.mod.Arguments[T], 

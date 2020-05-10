@@ -13,6 +13,7 @@ import scala.scalajs.js.annotation._
   * 
   * 参考: [http://www.html5plus.org/doc/zh_cn/webview.html](http://www.html5plus.org/doc/zh_cn/webview.html)
   */
+@js.native
 trait PlusWebviewWebviewTitleNViewStyles extends js.Object {
   /**
     * 标题栏控件是否显示左侧返回按钮
@@ -25,14 +26,14 @@ trait PlusWebviewWebviewTitleNViewStyles extends js.Object {
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/webview.html](http://www.html5plus.org/doc/zh_cn/webview.html)
     */
-  var autoBackButton: js.UndefOr[Boolean] = js.undefined
+  var autoBackButton: js.UndefOr[Boolean] = js.native
   /**
     * 标题栏控件的背景颜色
     * 颜色值格式为"#RRGGBB"，如"#FF0000"表示为红色背景，默认值为"#F7F7F7"。
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/webview.html](http://www.html5plus.org/doc/zh_cn/webview.html)
     */
-  var backgroundColor: js.UndefOr[String] = js.undefined
+  var backgroundColor: js.UndefOr[String] = js.native
   /**
     * 标题栏上的自定义按钮
     * 创建的自定义按钮数目不限制，实际应用中建议最多设置4个按钮（包括左侧返回按钮）。
@@ -40,7 +41,7 @@ trait PlusWebviewWebviewTitleNViewStyles extends js.Object {
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/webview.html](http://www.html5plus.org/doc/zh_cn/webview.html)
     */
-  var buttons: js.UndefOr[js.Array[PlusWebview]] = js.undefined
+  var buttons: js.UndefOr[js.Array[PlusWebview]] = js.native
   /**
     * 标题栏控件变化作用范围
     * 仅在type值为transparent时有效，页面滚动时标题栏背景透明度将发生变化。
@@ -49,7 +50,7 @@ trait PlusWebviewWebviewTitleNViewStyles extends js.Object {
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/webview.html](http://www.html5plus.org/doc/zh_cn/webview.html)
     */
-  var coverage: js.UndefOr[String] = js.undefined
+  var coverage: js.UndefOr[String] = js.native
   /**
     * 标题栏控件是否显示Home按钮
     * 可取值：
@@ -61,7 +62,7 @@ trait PlusWebviewWebviewTitleNViewStyles extends js.Object {
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/webview.html](http://www.html5plus.org/doc/zh_cn/webview.html)
     */
-  var homeButton: js.UndefOr[Boolean] = js.undefined
+  var homeButton: js.UndefOr[Boolean] = js.native
   /**
     * 内边距
     * 标题栏左右的内边距，单位为px（逻辑像素值），如"10px"表示10逻辑像素值。
@@ -69,7 +70,7 @@ trait PlusWebviewWebviewTitleNViewStyles extends js.Object {
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/webview.html](http://www.html5plus.org/doc/zh_cn/webview.html)
     */
-  var padding: js.UndefOr[String] = js.undefined
+  var padding: js.UndefOr[String] = js.native
   /**
     * 左内边距
     * 标题栏左侧内边距，单位为px（逻辑像素值），如"10px"表示10逻辑像素值。
@@ -77,7 +78,7 @@ trait PlusWebviewWebviewTitleNViewStyles extends js.Object {
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/webview.html](http://www.html5plus.org/doc/zh_cn/webview.html)
     */
-  var `padding-left`: js.UndefOr[String] = js.undefined
+  var `padding-left`: js.UndefOr[String] = js.native
   /**
     * 右内边距
     * 标题栏右侧内边距，单位为px（逻辑像素值），如"10px"表示10逻辑像素值。
@@ -85,7 +86,7 @@ trait PlusWebviewWebviewTitleNViewStyles extends js.Object {
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/webview.html](http://www.html5plus.org/doc/zh_cn/webview.html)
     */
-  var `padding-right`: js.UndefOr[String] = js.undefined
+  var `padding-right`: js.UndefOr[String] = js.native
   /**
     * 标题栏控件的进度条样式
     * 设置此属性则在标题栏控件的底部显示进度条，可配置进度条颜色值即高度。
@@ -95,7 +96,7 @@ trait PlusWebviewWebviewTitleNViewStyles extends js.Object {
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/webview.html](http://www.html5plus.org/doc/zh_cn/webview.html)
     */
-  var progress: js.UndefOr[PlusWebviewWebviewProgressStyles] = js.undefined
+  var progress: js.UndefOr[PlusWebviewWebviewProgressStyles] = js.native
   /**
     * 标题栏控件的底部分割线
     * 设置此属性则在标题栏控件的底部显示分割线，可配置颜色值及高度。
@@ -104,7 +105,7 @@ trait PlusWebviewWebviewTitleNViewStyles extends js.Object {
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/webview.html](http://www.html5plus.org/doc/zh_cn/webview.html)
     */
-  var splitLine: js.UndefOr[PlusWebviewWebviewSplitLineStyles] = js.undefined
+  var splitLine: js.UndefOr[PlusWebviewWebviewSplitLineStyles] = js.native
   /**
     * 标题栏上初始自定义绘制内容
     * 可用于设置自定义绘制图片、矩形区域、文本等内容。
@@ -112,14 +113,14 @@ trait PlusWebviewWebviewTitleNViewStyles extends js.Object {
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/webview.html](http://www.html5plus.org/doc/zh_cn/webview.html)
     */
-  var tags: js.UndefOr[js.Array[_]] = js.undefined
+  var tags: js.UndefOr[js.Array[_]] = js.native
   /**
     * 标题栏控件的标题文字颜色
     * 颜色值格式为"#RRGGBB"，如"#FF0000"表示标题文字颜色为红色，默认值为"#000000"。
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/webview.html](http://www.html5plus.org/doc/zh_cn/webview.html)
     */
-  var titleColor: js.UndefOr[String] = js.undefined
+  var titleColor: js.UndefOr[String] = js.native
   /**
     * 标题栏控件的标题文字超出显示区域时处理方式
     * 可取值：
@@ -129,14 +130,14 @@ trait PlusWebviewWebviewTitleNViewStyles extends js.Object {
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/webview.html](http://www.html5plus.org/doc/zh_cn/webview.html)
     */
-  var titleOverflow: js.UndefOr[String] = js.undefined
+  var titleOverflow: js.UndefOr[String] = js.native
   /**
     * 标题栏控件的标题文字字体大小
     * 字体大小单位为像素，如"20px"表示字体大小为20像素，默认值为17像素。
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/webview.html](http://www.html5plus.org/doc/zh_cn/webview.html)
     */
-  var titleSize: js.UndefOr[String] = js.undefined
+  var titleSize: js.UndefOr[String] = js.native
   /**
     * 标题栏控件的标题文字内容
     * 在标题栏控件居中（水平和垂直）显示，左右边距为88px，如果文本过长则尾部裁剪（加三个点"..."）显示。
@@ -144,7 +145,7 @@ trait PlusWebviewWebviewTitleNViewStyles extends js.Object {
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/webview.html](http://www.html5plus.org/doc/zh_cn/webview.html)
     */
-  var titleText: js.UndefOr[String] = js.undefined
+  var titleText: js.UndefOr[String] = js.native
   /**
     * 标题栏控件样式
     * 可取值：
@@ -161,47 +162,214 @@ trait PlusWebviewWebviewTitleNViewStyles extends js.Object {
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/webview.html](http://www.html5plus.org/doc/zh_cn/webview.html)
     */
-  var `type`: js.UndefOr[default | transparent] = js.undefined
+  var `type`: js.UndefOr[default | transparent] = js.native
 }
 
 object PlusWebviewWebviewTitleNViewStyles {
   @scala.inline
-  def apply(
-    autoBackButton: js.UndefOr[Boolean] = js.undefined,
-    backgroundColor: String = null,
-    buttons: js.Array[PlusWebview] = null,
-    coverage: String = null,
-    homeButton: js.UndefOr[Boolean] = js.undefined,
-    padding: String = null,
-    `padding-left`: String = null,
-    `padding-right`: String = null,
-    progress: PlusWebviewWebviewProgressStyles = null,
-    splitLine: PlusWebviewWebviewSplitLineStyles = null,
-    tags: js.Array[_] = null,
-    titleColor: String = null,
-    titleOverflow: String = null,
-    titleSize: String = null,
-    titleText: String = null,
-    `type`: default | transparent = null
-  ): PlusWebviewWebviewTitleNViewStyles = {
+  def apply(): PlusWebviewWebviewTitleNViewStyles = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(autoBackButton)) __obj.updateDynamic("autoBackButton")(autoBackButton.asInstanceOf[js.Any])
-    if (backgroundColor != null) __obj.updateDynamic("backgroundColor")(backgroundColor.asInstanceOf[js.Any])
-    if (buttons != null) __obj.updateDynamic("buttons")(buttons.asInstanceOf[js.Any])
-    if (coverage != null) __obj.updateDynamic("coverage")(coverage.asInstanceOf[js.Any])
-    if (!js.isUndefined(homeButton)) __obj.updateDynamic("homeButton")(homeButton.asInstanceOf[js.Any])
-    if (padding != null) __obj.updateDynamic("padding")(padding.asInstanceOf[js.Any])
-    if (`padding-left` != null) __obj.updateDynamic("padding-left")(`padding-left`.asInstanceOf[js.Any])
-    if (`padding-right` != null) __obj.updateDynamic("padding-right")(`padding-right`.asInstanceOf[js.Any])
-    if (progress != null) __obj.updateDynamic("progress")(progress.asInstanceOf[js.Any])
-    if (splitLine != null) __obj.updateDynamic("splitLine")(splitLine.asInstanceOf[js.Any])
-    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
-    if (titleColor != null) __obj.updateDynamic("titleColor")(titleColor.asInstanceOf[js.Any])
-    if (titleOverflow != null) __obj.updateDynamic("titleOverflow")(titleOverflow.asInstanceOf[js.Any])
-    if (titleSize != null) __obj.updateDynamic("titleSize")(titleSize.asInstanceOf[js.Any])
-    if (titleText != null) __obj.updateDynamic("titleText")(titleText.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[PlusWebviewWebviewTitleNViewStyles]
   }
+  @scala.inline
+  implicit class PlusWebviewWebviewTitleNViewStylesOps[Self <: PlusWebviewWebviewTitleNViewStyles] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAutoBackButton(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoBackButton")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoBackButton: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoBackButton")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBackgroundColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackgroundColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withButtons(value: js.Array[PlusWebview]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buttons")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutButtons: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buttons")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCoverage(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("coverage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCoverage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("coverage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHomeButton(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("homeButton")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHomeButton: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("homeButton")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPadding(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPadding: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withPadding-left`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("padding-left")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutPadding-left`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("padding-left")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withPadding-right`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("padding-right")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutPadding-right`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("padding-right")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProgress(value: PlusWebviewWebviewProgressStyles): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("progress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProgress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("progress")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSplitLine(value: PlusWebviewWebviewSplitLineStyles): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("splitLine")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSplitLine: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("splitLine")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTags(value: js.Array[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitleColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("titleColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTitleColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("titleColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitleOverflow(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("titleOverflow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTitleOverflow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("titleOverflow")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitleSize(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("titleSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTitleSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("titleSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitleText(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("titleText")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTitleText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("titleText")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: default | transparent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -15,13 +15,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait GraphQLRequestListener[TContext] extends js.Object {
   var didEncounterErrors: js.UndefOr[
     js.Function1[
       /* requestContext */ WithRequired[GraphQLRequestContext[TContext], metrics | source | errors], 
       ValueOrPromise[Unit]
     ]
-  ] = js.undefined
+  ] = js.native
   var didResolveOperation: js.UndefOr[
     js.Function1[
       /* requestContext */ WithRequired[
@@ -30,7 +31,7 @@ trait GraphQLRequestListener[TContext] extends js.Object {
       ], 
       ValueOrPromise[Unit]
     ]
-  ] = js.undefined
+  ] = js.native
   var executionDidStart: js.UndefOr[
     js.Function1[
       /* requestContext */ WithRequired[
@@ -39,13 +40,13 @@ trait GraphQLRequestListener[TContext] extends js.Object {
       ], 
       (js.Function1[/* err */ js.UndefOr[js.Error], Unit]) | Unit
     ]
-  ] = js.undefined
+  ] = js.native
   var parsingDidStart: js.UndefOr[
     js.Function1[
       /* requestContext */ WithRequired[GraphQLRequestContext[TContext], metrics | source], 
       (js.Function1[/* err */ js.UndefOr[js.Error], Unit]) | Unit
     ]
-  ] = js.undefined
+  ] = js.native
   var responseForOperation: js.UndefOr[
     js.Function1[
       /* requestContext */ WithRequired[
@@ -54,50 +55,141 @@ trait GraphQLRequestListener[TContext] extends js.Object {
       ], 
       ValueOrPromise[GraphQLResponse | Null]
     ]
-  ] = js.undefined
+  ] = js.native
   var validationDidStart: js.UndefOr[
     js.Function1[
       /* requestContext */ WithRequired[GraphQLRequestContext[TContext], metrics | source | document], 
       (js.Function1[/* err */ js.UndefOr[js.Array[js.Error]], Unit]) | Unit
     ]
-  ] = js.undefined
+  ] = js.native
   var willSendResponse: js.UndefOr[
     js.Function1[
       /* requestContext */ WithRequired[GraphQLRequestContext[TContext], metrics | response], 
       ValueOrPromise[Unit]
     ]
-  ] = js.undefined
+  ] = js.native
 }
 
 object GraphQLRequestListener {
   @scala.inline
-  def apply[TContext](
-    didEncounterErrors: /* requestContext */ WithRequired[GraphQLRequestContext[TContext], metrics | source | errors] => ValueOrPromise[Unit] = null,
-    didResolveOperation: /* requestContext */ WithRequired[
-      GraphQLRequestContext[TContext], 
-      metrics | source | document | operationName | operation
-    ] => ValueOrPromise[Unit] = null,
-    executionDidStart: /* requestContext */ WithRequired[
-      GraphQLRequestContext[TContext], 
-      metrics | source | document | operationName | operation
-    ] => (js.Function1[/* err */ js.UndefOr[js.Error], Unit]) | Unit = null,
-    parsingDidStart: /* requestContext */ WithRequired[GraphQLRequestContext[TContext], metrics | source] => (js.Function1[/* err */ js.UndefOr[js.Error], Unit]) | Unit = null,
-    responseForOperation: /* requestContext */ WithRequired[
-      GraphQLRequestContext[TContext], 
-      metrics | source | document | operationName | operation
-    ] => ValueOrPromise[GraphQLResponse | Null] = null,
-    validationDidStart: /* requestContext */ WithRequired[GraphQLRequestContext[TContext], metrics | source | document] => (js.Function1[/* err */ js.UndefOr[js.Array[js.Error]], Unit]) | Unit = null,
-    willSendResponse: /* requestContext */ WithRequired[GraphQLRequestContext[TContext], metrics | response] => ValueOrPromise[Unit] = null
-  ): GraphQLRequestListener[TContext] = {
+  def apply[TContext](): GraphQLRequestListener[TContext] = {
     val __obj = js.Dynamic.literal()
-    if (didEncounterErrors != null) __obj.updateDynamic("didEncounterErrors")(js.Any.fromFunction1(didEncounterErrors))
-    if (didResolveOperation != null) __obj.updateDynamic("didResolveOperation")(js.Any.fromFunction1(didResolveOperation))
-    if (executionDidStart != null) __obj.updateDynamic("executionDidStart")(js.Any.fromFunction1(executionDidStart))
-    if (parsingDidStart != null) __obj.updateDynamic("parsingDidStart")(js.Any.fromFunction1(parsingDidStart))
-    if (responseForOperation != null) __obj.updateDynamic("responseForOperation")(js.Any.fromFunction1(responseForOperation))
-    if (validationDidStart != null) __obj.updateDynamic("validationDidStart")(js.Any.fromFunction1(validationDidStart))
-    if (willSendResponse != null) __obj.updateDynamic("willSendResponse")(js.Any.fromFunction1(willSendResponse))
     __obj.asInstanceOf[GraphQLRequestListener[TContext]]
   }
+  @scala.inline
+  implicit class GraphQLRequestListenerOps[Self[tcontext] <: GraphQLRequestListener[tcontext], TContext] (val x: Self[TContext]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[TContext] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[TContext]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self[TContext] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[TContext] with Other]
+    @scala.inline
+    def withDidEncounterErrors(
+      value: /* requestContext */ WithRequired[GraphQLRequestContext[TContext], metrics | source | errors] => ValueOrPromise[Unit]
+    ): Self[TContext] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("didEncounterErrors")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutDidEncounterErrors: Self[TContext] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("didEncounterErrors")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDidResolveOperation(
+      value: /* requestContext */ WithRequired[
+          GraphQLRequestContext[TContext], 
+          metrics | source | document | operationName | operation
+        ] => ValueOrPromise[Unit]
+    ): Self[TContext] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("didResolveOperation")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutDidResolveOperation: Self[TContext] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("didResolveOperation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExecutionDidStart(
+      value: /* requestContext */ WithRequired[
+          GraphQLRequestContext[TContext], 
+          metrics | source | document | operationName | operation
+        ] => (js.Function1[/* err */ js.UndefOr[js.Error], Unit]) | Unit
+    ): Self[TContext] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("executionDidStart")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutExecutionDidStart: Self[TContext] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("executionDidStart")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParsingDidStart(
+      value: /* requestContext */ WithRequired[GraphQLRequestContext[TContext], metrics | source] => (js.Function1[/* err */ js.UndefOr[js.Error], Unit]) | Unit
+    ): Self[TContext] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parsingDidStart")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutParsingDidStart: Self[TContext] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parsingDidStart")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResponseForOperation(
+      value: /* requestContext */ WithRequired[
+          GraphQLRequestContext[TContext], 
+          metrics | source | document | operationName | operation
+        ] => ValueOrPromise[GraphQLResponse | Null]
+    ): Self[TContext] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("responseForOperation")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutResponseForOperation: Self[TContext] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("responseForOperation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValidationDidStart(
+      value: /* requestContext */ WithRequired[GraphQLRequestContext[TContext], metrics | source | document] => (js.Function1[/* err */ js.UndefOr[js.Array[js.Error]], Unit]) | Unit
+    ): Self[TContext] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("validationDidStart")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutValidationDidStart: Self[TContext] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("validationDidStart")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWillSendResponse(
+      value: /* requestContext */ WithRequired[GraphQLRequestContext[TContext], metrics | response] => ValueOrPromise[Unit]
+    ): Self[TContext] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("willSendResponse")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutWillSendResponse: Self[TContext] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("willSendResponse")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

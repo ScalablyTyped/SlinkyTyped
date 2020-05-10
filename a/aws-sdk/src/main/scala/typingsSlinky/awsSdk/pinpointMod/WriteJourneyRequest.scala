@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait WriteJourneyRequest extends js.Object {
   /**
-    * A map that contains a set of Activity objects, one object for each activity in the journey. For each Activity object, the key is the unique identifier (string) for an activity and the value is the settings for the activity. An activity identifier can contain a maximum of 128 characters. The characters must be alphanumeric characters.
+    * A map that contains a set of Activity objects, one object for each activity in the journey. For each Activity object, the key is the unique identifier (string) for an activity and the value is the settings for the activity. An activity identifier can contain a maximum of 100 characters. The characters must be alphanumeric characters.
     */
   var Activities: js.UndefOr[MapOfActivity] = js.native
   /**
@@ -43,7 +43,7 @@ trait WriteJourneyRequest extends js.Object {
     */
   var Schedule: js.UndefOr[JourneySchedule] = js.native
   /**
-    * The unique identifier for the first activity in the journey. An activity identifier can contain a maximum of 128 characters. The characters must be alphanumeric characters.
+    * The unique identifier for the first activity in the journey. The identifier for this activity can contain a maximum of 128 characters. The characters must be alphanumeric characters.
     */
   var StartActivity: js.UndefOr[string] = js.native
   /**
@@ -58,33 +58,155 @@ trait WriteJourneyRequest extends js.Object {
 
 object WriteJourneyRequest {
   @scala.inline
-  def apply(
-    Name: string,
-    Activities: MapOfActivity = null,
-    CreationDate: string = null,
-    LastModifiedDate: string = null,
-    Limits: JourneyLimits = null,
-    LocalTime: js.UndefOr[Boolean] = js.undefined,
-    QuietTime: QuietTime = null,
-    RefreshFrequency: string = null,
-    Schedule: JourneySchedule = null,
-    StartActivity: string = null,
-    StartCondition: StartCondition = null,
-    State: State = null
-  ): WriteJourneyRequest = {
+  def apply(Name: string): WriteJourneyRequest = {
     val __obj = js.Dynamic.literal(Name = Name.asInstanceOf[js.Any])
-    if (Activities != null) __obj.updateDynamic("Activities")(Activities.asInstanceOf[js.Any])
-    if (CreationDate != null) __obj.updateDynamic("CreationDate")(CreationDate.asInstanceOf[js.Any])
-    if (LastModifiedDate != null) __obj.updateDynamic("LastModifiedDate")(LastModifiedDate.asInstanceOf[js.Any])
-    if (Limits != null) __obj.updateDynamic("Limits")(Limits.asInstanceOf[js.Any])
-    if (!js.isUndefined(LocalTime)) __obj.updateDynamic("LocalTime")(LocalTime.asInstanceOf[js.Any])
-    if (QuietTime != null) __obj.updateDynamic("QuietTime")(QuietTime.asInstanceOf[js.Any])
-    if (RefreshFrequency != null) __obj.updateDynamic("RefreshFrequency")(RefreshFrequency.asInstanceOf[js.Any])
-    if (Schedule != null) __obj.updateDynamic("Schedule")(Schedule.asInstanceOf[js.Any])
-    if (StartActivity != null) __obj.updateDynamic("StartActivity")(StartActivity.asInstanceOf[js.Any])
-    if (StartCondition != null) __obj.updateDynamic("StartCondition")(StartCondition.asInstanceOf[js.Any])
-    if (State != null) __obj.updateDynamic("State")(State.asInstanceOf[js.Any])
     __obj.asInstanceOf[WriteJourneyRequest]
   }
+  @scala.inline
+  implicit class WriteJourneyRequestOps[Self <: WriteJourneyRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withName(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withActivities(value: MapOfActivity): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Activities")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutActivities: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Activities")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreationDate(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreationDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLastModifiedDate(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LastModifiedDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLastModifiedDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LastModifiedDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLimits(value: JourneyLimits): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Limits")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLimits: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Limits")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocalTime(value: boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LocalTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocalTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LocalTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQuietTime(value: QuietTime): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("QuietTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQuietTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("QuietTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRefreshFrequency(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RefreshFrequency")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRefreshFrequency: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RefreshFrequency")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSchedule(value: JourneySchedule): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Schedule")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSchedule: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Schedule")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartActivity(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StartActivity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartActivity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StartActivity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartCondition(value: StartCondition): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StartCondition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartCondition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StartCondition")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withState(value: State): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("State")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("State")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

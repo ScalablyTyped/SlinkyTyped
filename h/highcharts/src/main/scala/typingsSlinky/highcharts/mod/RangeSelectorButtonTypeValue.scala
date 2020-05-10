@@ -20,26 +20,24 @@ trait RangeSelectorButtonTypeValue extends js.Object
 
 object RangeSelectorButtonTypeValue {
   @scala.inline
-  def all: typingsSlinky.highcharts.highchartsStrings.all = this.cast("all")
+  def all: typingsSlinky.highcharts.highchartsStrings.all = "all".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.all]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def day: typingsSlinky.highcharts.highchartsStrings.day = "day".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.day]
   @scala.inline
-  def day: typingsSlinky.highcharts.highchartsStrings.day = this.cast("day")
+  def hour: typingsSlinky.highcharts.highchartsStrings.hour = "hour".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.hour]
   @scala.inline
-  def hour: typingsSlinky.highcharts.highchartsStrings.hour = this.cast("hour")
+  def millisecond: typingsSlinky.highcharts.highchartsStrings.millisecond = "millisecond".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.millisecond]
   @scala.inline
-  def millisecond: typingsSlinky.highcharts.highchartsStrings.millisecond = this.cast("millisecond")
+  def minute: typingsSlinky.highcharts.highchartsStrings.minute = "minute".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.minute]
   @scala.inline
-  def minute: typingsSlinky.highcharts.highchartsStrings.minute = this.cast("minute")
+  def month: typingsSlinky.highcharts.highchartsStrings.month = "month".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.month]
   @scala.inline
-  def month: typingsSlinky.highcharts.highchartsStrings.month = this.cast("month")
+  def second: typingsSlinky.highcharts.highchartsStrings.second = "second".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.second]
   @scala.inline
-  def second: typingsSlinky.highcharts.highchartsStrings.second = this.cast("second")
+  def week: typingsSlinky.highcharts.highchartsStrings.week = "week".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.week]
   @scala.inline
-  def week: typingsSlinky.highcharts.highchartsStrings.week = this.cast("week")
+  def year: typingsSlinky.highcharts.highchartsStrings.year = "year".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.year]
   @scala.inline
-  def year: typingsSlinky.highcharts.highchartsStrings.year = this.cast("year")
-  @scala.inline
-  def ytd: typingsSlinky.highcharts.highchartsStrings.ytd = this.cast("ytd")
+  def ytd: typingsSlinky.highcharts.highchartsStrings.ytd = "ytd".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.ytd]
 }
 

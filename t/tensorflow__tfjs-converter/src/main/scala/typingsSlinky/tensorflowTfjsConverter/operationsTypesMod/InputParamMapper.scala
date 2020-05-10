@@ -4,27 +4,44 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait InputParamMapper extends ParamMapper {
-  var end: js.UndefOr[Double] = js.undefined
-  var start: Double
+  var end: js.UndefOr[Double] = js.native
+  var start: Double = js.native
 }
 
 object InputParamMapper {
   @scala.inline
-  def apply(
-    name: String,
-    start: Double,
-    `type`: ParamType,
-    defaultValue: ValueType = null,
-    end: Int | Double = null,
-    notSupported: js.UndefOr[Boolean] = js.undefined
-  ): InputParamMapper = {
+  def apply(name: String, start: Double, `type`: ParamType): InputParamMapper = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (defaultValue != null) __obj.updateDynamic("defaultValue")(defaultValue.asInstanceOf[js.Any])
-    if (end != null) __obj.updateDynamic("end")(end.asInstanceOf[js.Any])
-    if (!js.isUndefined(notSupported)) __obj.updateDynamic("notSupported")(notSupported.asInstanceOf[js.Any])
     __obj.asInstanceOf[InputParamMapper]
   }
+  @scala.inline
+  implicit class InputParamMapperOps[Self <: InputParamMapper] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withStart(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEnd(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("end")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnd: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("end")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,7 +1,6 @@
 package typingsSlinky.coreJs.core
 
 import typingsSlinky.std.ArrayLike
-import typingsSlinky.std.Iterable
 import typingsSlinky.std.IterableIterator
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -56,11 +55,11 @@ object Array extends js.Object {
     thisArg: js.Any
   ): Unit = js.native
   def from[T](arrayLike: ArrayLike[T]): typingsSlinky.coreJs.Array[T] = js.native
-  def from[T](arrayLike: Iterable[T]): typingsSlinky.coreJs.Array[T] = js.native
+  def from[T](arrayLike: js.Iterable[T]): typingsSlinky.coreJs.Array[T] = js.native
   def from[T, U](arrayLike: ArrayLike[T], mapfn: js.Function2[/* v */ T, /* k */ Double, U]): typingsSlinky.coreJs.Array[U] = js.native
   def from[T, U](arrayLike: ArrayLike[T], mapfn: js.Function2[/* v */ T, /* k */ Double, U], thisArg: js.Any): typingsSlinky.coreJs.Array[U] = js.native
-  def from[T, U](arrayLike: Iterable[T], mapfn: js.Function2[/* v */ T, /* k */ Double, U]): typingsSlinky.coreJs.Array[U] = js.native
-  def from[T, U](arrayLike: Iterable[T], mapfn: js.Function2[/* v */ T, /* k */ Double, U], thisArg: js.Any): typingsSlinky.coreJs.Array[U] = js.native
+  def from[T, U](arrayLike: js.Iterable[T], mapfn: js.Function2[/* v */ T, /* k */ Double, U]): typingsSlinky.coreJs.Array[U] = js.native
+  def from[T, U](arrayLike: js.Iterable[T], mapfn: js.Function2[/* v */ T, /* k */ Double, U], thisArg: js.Any): typingsSlinky.coreJs.Array[U] = js.native
   def includes[T](array: ArrayLike[T], value: T): Boolean = js.native
   def includes[T](array: ArrayLike[T], value: T, fromIndex: Double): Boolean = js.native
   def indexOf[T](array: ArrayLike[T], searchElement: T): Double = js.native

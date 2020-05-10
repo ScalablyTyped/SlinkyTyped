@@ -1,10 +1,10 @@
 package typingsSlinky.jqueryAjaxfile
 
 import org.scalablytyped.runtime.StringDictionary
+import org.scalajs.dom.raw.Element
+import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.Node
 import typingsSlinky.std.Document_
-import typingsSlinky.std.Element
-import typingsSlinky.std.HTMLElement
 import typingsSlinky.std.XMLDocument
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -155,20 +155,20 @@ trait JQueryStatic extends js.Object {
     * @param container The DOM element that may contain the other element.
     * @param contained The DOM element that may be contained by (a descendant of) the other element.
     */
-  def contains(container: org.scalajs.dom.raw.Element, contained: org.scalajs.dom.raw.Element): Boolean = js.native
+  def contains(container: Element, contained: Element): Boolean = js.native
   /**
     * Returns value at named data store for the element, as set by jQuery.data(element, name, value), or the full data store for the element.
     *
     * @param element The DOM element to associate with the data.
     */
-  def data(element: org.scalajs.dom.raw.Element): js.Any = js.native
+  def data(element: Element): js.Any = js.native
   /**
     * Returns value at named data store for the element, as set by jQuery.data(element, name, value), or the full data store for the element.
     *
     * @param element The DOM element to associate with the data.
     * @param key A string naming the piece of data to set.
     */
-  def data(element: org.scalajs.dom.raw.Element, key: String): js.Any = js.native
+  def data(element: Element, key: String): js.Any = js.native
   /**
     * Store arbitrary data associated with the specified element. Returns the value that was set.
     *
@@ -176,15 +176,15 @@ trait JQueryStatic extends js.Object {
     * @param key A string naming the piece of data to set.
     * @param value The new data value.
     */
-  def data[T](element: org.scalajs.dom.raw.Element, key: String, value: T): T = js.native
+  def data[T](element: Element, key: String, value: T): T = js.native
   /**
     * Execute the next function on the queue for the matched element.
     *
     * @param element A DOM element from which to remove and execute a queued function.
     * @param queueName A string containing the name of the queue. Defaults to fx, the standard effects queue.
     */
-  def dequeue(element: org.scalajs.dom.raw.Element): Unit = js.native
-  def dequeue(element: org.scalajs.dom.raw.Element, queueName: String): Unit = js.native
+  def dequeue(element: Element): Unit = js.native
+  def dequeue(element: Element, queueName: String): Unit = js.native
   /**
     * A generic iterator function, which can be used to seamlessly iterate over both objects and arrays. Arrays and array-like objects with a length property (such as a function's arguments object) are iterated by numeric index, from 0 to length-1. Other objects are iterated via their named properties.
     * 
@@ -329,7 +329,7 @@ trait JQueryStatic extends js.Object {
     *
     * @param element A DOM element to be checked for data.
     */
-  def hasData(element: org.scalajs.dom.raw.Element): Boolean = js.native
+  def hasData(element: Element): Boolean = js.native
   /**
     * Holds or releases the execution of jQuery's ready event.
     *
@@ -535,8 +535,8 @@ trait JQueryStatic extends js.Object {
     * @param element A DOM element to inspect for an attached queue.
     * @param queueName A string containing the name of the queue. Defaults to fx, the standard effects queue.
     */
-  def queue(element: org.scalajs.dom.raw.Element): js.Array[_] = js.native
-  def queue(element: org.scalajs.dom.raw.Element, queueName: String): js.Array[_] = js.native
+  def queue(element: Element): js.Array[_] = js.native
+  def queue(element: Element, queueName: String): js.Array[_] = js.native
   /**
     * Manipulate the queue of functions to be executed on the matched element.
     *
@@ -544,7 +544,7 @@ trait JQueryStatic extends js.Object {
     * @param queueName A string containing the name of the queue. Defaults to fx, the standard effects queue.
     * @param callback The new function to add to the queue.
     */
-  def queue(element: org.scalajs.dom.raw.Element, queueName: String, callback: js.Function): JQuery_ = js.native
+  def queue(element: Element, queueName: String, callback: js.Function): JQuery_ = js.native
   /**
     * Manipulate the queue of functions to be executed on the matched element.
     *
@@ -552,15 +552,15 @@ trait JQueryStatic extends js.Object {
     * @param queueName A string containing the name of the queue. Defaults to fx, the standard effects queue.
     * @param newQueue An array of functions to replace the current queue contents.
     */
-  def queue(element: org.scalajs.dom.raw.Element, queueName: String, newQueue: js.Array[js.Function]): JQuery_ = js.native
+  def queue(element: Element, queueName: String, newQueue: js.Array[js.Function]): JQuery_ = js.native
   /**
     * Remove a previously-stored piece of data.
     *
     * @param element A DOM element from which to remove data.
     * @param name A string naming the piece of data to remove.
     */
-  def removeData(element: org.scalajs.dom.raw.Element): JQuery_ = js.native
-  def removeData(element: org.scalajs.dom.raw.Element, name: String): JQuery_ = js.native
+  def removeData(element: Element): JQuery_ = js.native
+  def removeData(element: Element, name: String): JQuery_ = js.native
   /**
     * Remove the whitespace from the beginning and end of a string.
     * 
@@ -578,7 +578,7 @@ trait JQueryStatic extends js.Object {
     * 
     * @param array The Array of DOM elements.
     */
-  def unique(array: js.Array[org.scalajs.dom.raw.Element]): js.Array[org.scalajs.dom.raw.Element] = js.native
+  def unique(array: js.Array[Element]): js.Array[Element] = js.native
   /**
     * Provides a way to execute callback functions based on one or more objects, usually Deferred objects that represent asynchronous events.
     *

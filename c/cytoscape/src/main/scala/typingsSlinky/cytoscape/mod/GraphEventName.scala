@@ -23,24 +23,22 @@ trait GraphEventName extends js.Object
 
 object GraphEventName {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def destroy: typingsSlinky.cytoscape.cytoscapeStrings.destroy = "destroy".asInstanceOf[typingsSlinky.cytoscape.cytoscapeStrings.destroy]
   @scala.inline
-  def destroy: typingsSlinky.cytoscape.cytoscapeStrings.destroy = this.cast("destroy")
+  def layoutready: typingsSlinky.cytoscape.cytoscapeStrings.layoutready = "layoutready".asInstanceOf[typingsSlinky.cytoscape.cytoscapeStrings.layoutready]
   @scala.inline
-  def layoutready: typingsSlinky.cytoscape.cytoscapeStrings.layoutready = this.cast("layoutready")
+  def layoutstart: typingsSlinky.cytoscape.cytoscapeStrings.layoutstart = "layoutstart".asInstanceOf[typingsSlinky.cytoscape.cytoscapeStrings.layoutstart]
   @scala.inline
-  def layoutstart: typingsSlinky.cytoscape.cytoscapeStrings.layoutstart = this.cast("layoutstart")
+  def layoutstop: typingsSlinky.cytoscape.cytoscapeStrings.layoutstop = "layoutstop".asInstanceOf[typingsSlinky.cytoscape.cytoscapeStrings.layoutstop]
   @scala.inline
-  def layoutstop: typingsSlinky.cytoscape.cytoscapeStrings.layoutstop = this.cast("layoutstop")
+  def pan: typingsSlinky.cytoscape.cytoscapeStrings.pan = "pan".asInstanceOf[typingsSlinky.cytoscape.cytoscapeStrings.pan]
   @scala.inline
-  def pan: typingsSlinky.cytoscape.cytoscapeStrings.pan = this.cast("pan")
+  def ready: typingsSlinky.cytoscape.cytoscapeStrings.ready = "ready".asInstanceOf[typingsSlinky.cytoscape.cytoscapeStrings.ready]
   @scala.inline
-  def ready: typingsSlinky.cytoscape.cytoscapeStrings.ready = this.cast("ready")
+  def render: typingsSlinky.cytoscape.cytoscapeStrings.render = "render".asInstanceOf[typingsSlinky.cytoscape.cytoscapeStrings.render]
   @scala.inline
-  def render: typingsSlinky.cytoscape.cytoscapeStrings.render = this.cast("render")
+  def resize: typingsSlinky.cytoscape.cytoscapeStrings.resize = "resize".asInstanceOf[typingsSlinky.cytoscape.cytoscapeStrings.resize]
   @scala.inline
-  def resize: typingsSlinky.cytoscape.cytoscapeStrings.resize = this.cast("resize")
-  @scala.inline
-  def zoom: typingsSlinky.cytoscape.cytoscapeStrings.zoom = this.cast("zoom")
+  def zoom: typingsSlinky.cytoscape.cytoscapeStrings.zoom = "zoom".asInstanceOf[typingsSlinky.cytoscape.cytoscapeStrings.zoom]
 }
 

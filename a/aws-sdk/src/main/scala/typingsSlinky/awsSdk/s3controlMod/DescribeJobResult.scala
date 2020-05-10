@@ -14,10 +14,29 @@ trait DescribeJobResult extends js.Object {
 
 object DescribeJobResult {
   @scala.inline
-  def apply(Job: JobDescriptor = null): DescribeJobResult = {
+  def apply(): DescribeJobResult = {
     val __obj = js.Dynamic.literal()
-    if (Job != null) __obj.updateDynamic("Job")(Job.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeJobResult]
   }
+  @scala.inline
+  implicit class DescribeJobResultOps[Self <: DescribeJobResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withJob(value: JobDescriptor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Job")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutJob: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Job")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

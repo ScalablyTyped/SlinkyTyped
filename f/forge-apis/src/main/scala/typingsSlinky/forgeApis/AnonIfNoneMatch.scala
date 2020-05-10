@@ -4,30 +4,88 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonIfNoneMatch extends js.Object {
-  var acceptEncoding: js.UndefOr[String] = js.undefined
-  var ifModifiedSince: js.UndefOr[String] = js.undefined
-  var ifNoneMatch: js.UndefOr[String] = js.undefined
-  var range: js.UndefOr[String] = js.undefined
-  var region: js.UndefOr[String] = js.undefined
+  var acceptEncoding: js.UndefOr[String] = js.native
+  var ifModifiedSince: js.UndefOr[String] = js.native
+  var ifNoneMatch: js.UndefOr[String] = js.native
+  var range: js.UndefOr[String] = js.native
+  var region: js.UndefOr[String] = js.native
 }
 
 object AnonIfNoneMatch {
   @scala.inline
-  def apply(
-    acceptEncoding: String = null,
-    ifModifiedSince: String = null,
-    ifNoneMatch: String = null,
-    range: String = null,
-    region: String = null
-  ): AnonIfNoneMatch = {
+  def apply(): AnonIfNoneMatch = {
     val __obj = js.Dynamic.literal()
-    if (acceptEncoding != null) __obj.updateDynamic("acceptEncoding")(acceptEncoding.asInstanceOf[js.Any])
-    if (ifModifiedSince != null) __obj.updateDynamic("ifModifiedSince")(ifModifiedSince.asInstanceOf[js.Any])
-    if (ifNoneMatch != null) __obj.updateDynamic("ifNoneMatch")(ifNoneMatch.asInstanceOf[js.Any])
-    if (range != null) __obj.updateDynamic("range")(range.asInstanceOf[js.Any])
-    if (region != null) __obj.updateDynamic("region")(region.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonIfNoneMatch]
   }
+  @scala.inline
+  implicit class AnonIfNoneMatchOps[Self <: AnonIfNoneMatch] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAcceptEncoding(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("acceptEncoding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAcceptEncoding: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("acceptEncoding")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIfModifiedSince(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ifModifiedSince")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIfModifiedSince: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ifModifiedSince")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIfNoneMatch(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ifNoneMatch")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIfNoneMatch: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ifNoneMatch")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRange(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("range")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("range")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRegion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("region")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRegion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("region")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

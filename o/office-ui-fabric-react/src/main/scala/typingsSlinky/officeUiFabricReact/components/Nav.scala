@@ -1,13 +1,12 @@
 package typingsSlinky.officeUiFabricReact.components
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLElement
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
+import slinky.core.ReactComponentClass
 import slinky.core.facade.ReactElement
+import slinky.core.facade.ReactRef
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.officeUiFabricReact.navTypesMod.INav
 import typingsSlinky.officeUiFabricReact.navTypesMod.INavButtonProps
 import typingsSlinky.officeUiFabricReact.navTypesMod.INavLink
@@ -15,60 +14,80 @@ import typingsSlinky.officeUiFabricReact.navTypesMod.INavLinkGroup
 import typingsSlinky.officeUiFabricReact.navTypesMod.INavProps
 import typingsSlinky.officeUiFabricReact.navTypesMod.INavStyleProps
 import typingsSlinky.officeUiFabricReact.navTypesMod.INavStyles
+import typingsSlinky.std.Partial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
 import typingsSlinky.uifabricUtilities.icomponentasMod.IComponentAs
+import typingsSlinky.uifabricUtilities.icomponentasMod.IComponentAsProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Nav
-  extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+object Nav {
   @JSImport("office-ui-fabric-react", "Nav")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className */
-  def apply(
-    ariaLabel: String = null,
-    componentRef: IRefObject[INav] = null,
-    expandButtonAriaLabel: String = null,
-    groups: js.Array[INavLinkGroup] = null,
-    initialSelectedKey: String = null,
-    isOnTop: js.UndefOr[Boolean] = js.undefined,
-    linkAs: IComponentAs[INavButtonProps] = null,
-    onLinkClick: (/* ev */ js.UndefOr[SyntheticMouseEvent[HTMLElement]], /* item */ js.UndefOr[INavLink]) => Unit = null,
-    onLinkExpandClick: (/* ev */ js.UndefOr[SyntheticMouseEvent[HTMLElement]], /* item */ js.UndefOr[INavLink]) => Unit = null,
-    onRenderGroupHeader: (/* props */ js.UndefOr[INavLinkGroup], /* defaultRender */ js.UndefOr[js.Function1[/* props */ js.UndefOr[INavLinkGroup], ReactElement | Null]]) => ReactElement | Null = null,
-    onRenderLink: (/* props */ js.UndefOr[INavLink], /* defaultRender */ js.UndefOr[js.Function1[/* props */ js.UndefOr[INavLink], ReactElement | Null]]) => ReactElement | Null = null,
-    selectedAriaLabel: String = null,
-    selectedKey: String = null,
-    styles: IStyleFunctionOrObject[INavStyleProps, INavStyles] = null,
-    theme: ITheme = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, js.Object] = {
-    val __obj = js.Dynamic.literal()
-    if (ariaLabel != null) __obj.updateDynamic("ariaLabel")(ariaLabel.asInstanceOf[js.Any])
-    if (componentRef != null) __obj.updateDynamic("componentRef")(componentRef.asInstanceOf[js.Any])
-    if (expandButtonAriaLabel != null) __obj.updateDynamic("expandButtonAriaLabel")(expandButtonAriaLabel.asInstanceOf[js.Any])
-    if (groups != null) __obj.updateDynamic("groups")(groups.asInstanceOf[js.Any])
-    if (initialSelectedKey != null) __obj.updateDynamic("initialSelectedKey")(initialSelectedKey.asInstanceOf[js.Any])
-    if (!js.isUndefined(isOnTop)) __obj.updateDynamic("isOnTop")(isOnTop.asInstanceOf[js.Any])
-    if (linkAs != null) __obj.updateDynamic("linkAs")(linkAs.asInstanceOf[js.Any])
-    if (onLinkClick != null) __obj.updateDynamic("onLinkClick")(js.Any.fromFunction2(onLinkClick))
-    if (onLinkExpandClick != null) __obj.updateDynamic("onLinkExpandClick")(js.Any.fromFunction2(onLinkExpandClick))
-    if (onRenderGroupHeader != null) __obj.updateDynamic("onRenderGroupHeader")(js.Any.fromFunction2(onRenderGroupHeader))
-    if (onRenderLink != null) __obj.updateDynamic("onRenderLink")(js.Any.fromFunction2(onRenderLink))
-    if (selectedAriaLabel != null) __obj.updateDynamic("selectedAriaLabel")(selectedAriaLabel.asInstanceOf[js.Any])
-    if (selectedKey != null) __obj.updateDynamic("selectedKey")(selectedKey.asInstanceOf[js.Any])
-    if (styles != null) __obj.updateDynamic("styles")(styles.asInstanceOf[js.Any])
-    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, js.Object] {
+    @scala.inline
+    def ariaLabel(value: String): this.type = set("ariaLabel", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def componentRefFunction1(value: /* ref */ INav | Null => Unit): this.type = set("componentRef", js.Any.fromFunction1(value))
+    @scala.inline
+    def componentRefRefObject(value: ReactRef[INav]): this.type = set("componentRef", value.asInstanceOf[js.Any])
+    @scala.inline
+    def componentRef(value: IRefObject[INav]): this.type = set("componentRef", value.asInstanceOf[js.Any])
+    @scala.inline
+    def expandButtonAriaLabel(value: String): this.type = set("expandButtonAriaLabel", value.asInstanceOf[js.Any])
+    @scala.inline
+    def groups(value: js.Array[INavLinkGroup]): this.type = set("groups", value.asInstanceOf[js.Any])
+    @scala.inline
+    def groupsNull: this.type = set("groups", null)
+    @scala.inline
+    def initialSelectedKey(value: String): this.type = set("initialSelectedKey", value.asInstanceOf[js.Any])
+    @scala.inline
+    def isOnTop(value: Boolean): this.type = set("isOnTop", value.asInstanceOf[js.Any])
+    @scala.inline
+    def linkAsFunctionComponent(value: ReactComponentClass[IComponentAsProps[INavButtonProps]]): this.type = set("linkAs", value.asInstanceOf[js.Any])
+    @scala.inline
+    def linkAsComponentClass(value: ReactComponentClass[IComponentAsProps[INavButtonProps]]): this.type = set("linkAs", value.asInstanceOf[js.Any])
+    @scala.inline
+    def linkAs(value: IComponentAs[INavButtonProps]): this.type = set("linkAs", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onLinkClick(
+      value: (/* ev */ js.UndefOr[SyntheticMouseEvent[HTMLElement]], /* item */ js.UndefOr[INavLink]) => Unit
+    ): this.type = set("onLinkClick", js.Any.fromFunction2(value))
+    @scala.inline
+    def onLinkExpandClick(
+      value: (/* ev */ js.UndefOr[SyntheticMouseEvent[HTMLElement]], /* item */ js.UndefOr[INavLink]) => Unit
+    ): this.type = set("onLinkExpandClick", js.Any.fromFunction2(value))
+    @scala.inline
+    def onRenderGroupHeader(
+      value: (/* props */ js.UndefOr[INavLinkGroup], /* defaultRender */ js.UndefOr[js.Function1[/* props */ js.UndefOr[INavLinkGroup], ReactElement | Null]]) => ReactElement | Null
+    ): this.type = set("onRenderGroupHeader", js.Any.fromFunction2(value))
+    @scala.inline
+    def onRenderLink(
+      value: (/* props */ js.UndefOr[INavLink], /* defaultRender */ js.UndefOr[js.Function1[/* props */ js.UndefOr[INavLink], ReactElement | Null]]) => ReactElement | Null
+    ): this.type = set("onRenderLink", js.Any.fromFunction2(value))
+    @scala.inline
+    def selectedAriaLabel(value: String): this.type = set("selectedAriaLabel", value.asInstanceOf[js.Any])
+    @scala.inline
+    def selectedKey(value: String): this.type = set("selectedKey", value.asInstanceOf[js.Any])
+    @scala.inline
+    def stylesFunction1(value: INavStyleProps => Partial[INavStyles]): this.type = set("styles", js.Any.fromFunction1(value))
+    @scala.inline
+    def styles(value: IStyleFunctionOrObject[INavStyleProps, INavStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
+    @scala.inline
+    def theme(value: ITheme): this.type = set("theme", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, js.Object] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, js.Object](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = INavProps
+  
+  def withProps(p: INavProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Nav.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

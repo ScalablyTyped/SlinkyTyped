@@ -12,10 +12,8 @@ trait Units extends js.Object
 
 object Units {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def objectBoundingBox: typingsSlinky.reactNativeSvg.reactNativeSvgStrings.objectBoundingBox = "objectBoundingBox".asInstanceOf[typingsSlinky.reactNativeSvg.reactNativeSvgStrings.objectBoundingBox]
   @scala.inline
-  def objectBoundingBox: typingsSlinky.reactNativeSvg.reactNativeSvgStrings.objectBoundingBox = this.cast("objectBoundingBox")
-  @scala.inline
-  def userSpaceOnUse: typingsSlinky.reactNativeSvg.reactNativeSvgStrings.userSpaceOnUse = this.cast("userSpaceOnUse")
+  def userSpaceOnUse: typingsSlinky.reactNativeSvg.reactNativeSvgStrings.userSpaceOnUse = "userSpaceOnUse".asInstanceOf[typingsSlinky.reactNativeSvg.reactNativeSvgStrings.userSpaceOnUse]
 }
 

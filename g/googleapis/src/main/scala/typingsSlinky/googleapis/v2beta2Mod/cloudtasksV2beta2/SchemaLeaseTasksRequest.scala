@@ -57,18 +57,65 @@ trait SchemaLeaseTasksRequest extends js.Object {
 
 object SchemaLeaseTasksRequest {
   @scala.inline
-  def apply(
-    filter: String = null,
-    leaseDuration: String = null,
-    maxTasks: Int | Double = null,
-    responseView: String = null
-  ): SchemaLeaseTasksRequest = {
+  def apply(): SchemaLeaseTasksRequest = {
     val __obj = js.Dynamic.literal()
-    if (filter != null) __obj.updateDynamic("filter")(filter.asInstanceOf[js.Any])
-    if (leaseDuration != null) __obj.updateDynamic("leaseDuration")(leaseDuration.asInstanceOf[js.Any])
-    if (maxTasks != null) __obj.updateDynamic("maxTasks")(maxTasks.asInstanceOf[js.Any])
-    if (responseView != null) __obj.updateDynamic("responseView")(responseView.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaLeaseTasksRequest]
   }
+  @scala.inline
+  implicit class SchemaLeaseTasksRequestOps[Self <: SchemaLeaseTasksRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFilter(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFilter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLeaseDuration(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("leaseDuration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLeaseDuration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("leaseDuration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxTasks(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxTasks")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxTasks: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxTasks")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResponseView(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("responseView")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResponseView: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("responseView")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

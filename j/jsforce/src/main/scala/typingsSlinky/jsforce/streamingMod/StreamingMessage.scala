@@ -6,17 +6,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait StreamingMessage extends js.Object {
-  var event: AnonCreatedDate
-  var sobject: Record[_]
+  var event: AnonCreatedDate = js.native
+  var sobject: Record[_] = js.native
 }
 
 object StreamingMessage {
   @scala.inline
   def apply(event: AnonCreatedDate, sobject: Record[_]): StreamingMessage = {
     val __obj = js.Dynamic.literal(event = event.asInstanceOf[js.Any], sobject = sobject.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[StreamingMessage]
   }
+  @scala.inline
+  implicit class StreamingMessageOps[Self <: StreamingMessage] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEvent(value: AnonCreatedDate): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("event")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSobject(value: Record[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sobject")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

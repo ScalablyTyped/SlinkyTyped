@@ -16,15 +16,21 @@ package object mod {
   */
   type JsonValue = typingsSlinky.typeFest.mod._JsonValue | java.lang.String | scala.Double | scala.Boolean | scala.Null
   type LiteralUnion[LiteralType /* <: BaseType */, BaseType /* <: typingsSlinky.typeFest.mod.Primitive */] = LiteralType | (BaseType with js.Object)
-  type Merge[FirstType, SecondType] = (typingsSlinky.typeFest.mod.Omit[FirstType, typingsSlinky.std.Extract[java.lang.String, java.lang.String]]) with SecondType
+  type Merge[FirstType, SecondType] = (typingsSlinky.typeFest.mod.Omit[
+    FirstType, 
+    typingsSlinky.std.Extract[/* keyof FirstType */ java.lang.String, /* keyof SecondType */ java.lang.String]
+  ]) with SecondType
   type MergeExclusive[FirstType, SecondType] = FirstType | SecondType | ((typingsSlinky.typeFest.mod.Without[FirstType, SecondType]) with SecondType) | ((typingsSlinky.typeFest.mod.Without[SecondType, FirstType]) with FirstType)
-  type Omit[ObjectType, KeysType /* <: java.lang.String */] = typingsSlinky.std.Pick[ObjectType, typingsSlinky.std.Exclude[java.lang.String, KeysType]]
+  type Omit[ObjectType, KeysType /* <: /* keyof ObjectType */ java.lang.String */] = typingsSlinky.std.Pick[
+    ObjectType, 
+    typingsSlinky.std.Exclude[/* keyof ObjectType */ java.lang.String, KeysType]
+  ]
   type Primitive = js.UndefOr[scala.Null | java.lang.String | scala.Double | scala.Boolean | js.Symbol]
-  type RequireAtLeastOne[ObjectType, KeysType /* <: java.lang.String */] = (/* import warning: importer.ImportType#apply Failed type conversion: {[ Key in KeysType ]: // …by picking that Key's type and making it required
+  type RequireAtLeastOne[ObjectType, KeysType /* <: /* keyof ObjectType */ java.lang.String */] = (/* import warning: importer.ImportType#apply Failed type conversion: {[ Key in KeysType ]: // …by picking that Key's type and making it required
   std.Required<std.Pick<ObjectType, Key>>}[KeysType] */ js.Any) with (typingsSlinky.typeFest.mod.Omit[ObjectType, KeysType])
-  type TypedArray = scala.scalajs.js.typedarray.Int8Array | scala.scalajs.js.typedarray.Uint8Array | scala.scalajs.js.typedarray.Uint8ClampedArray | scala.scalajs.js.typedarray.Int16Array | scala.scalajs.js.typedarray.Uint16Array | scala.scalajs.js.typedarray.Int32Array | scala.scalajs.js.typedarray.Uint32Array | scala.scalajs.js.typedarray.Float32Array | scala.scalajs.js.typedarray.Float64Array
+  type TypedArray = js.typedarray.Int8Array | js.typedarray.Uint8Array | js.typedarray.Uint8ClampedArray | js.typedarray.Int16Array | js.typedarray.Uint16Array | js.typedarray.Int32Array | js.typedarray.Uint32Array | js.typedarray.Float32Array | js.typedarray.Float64Array
   // Helper type. Not useful on its own.
   type Without[FirstType, SecondType] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ KeyType in std.Exclude<keyof FirstType, keyof SecondType> ]:? never}
-    */ typingsSlinky.typeFest.typeFestStrings.Without with js.Any
+    */ typingsSlinky.typeFest.typeFestStrings.Without with org.scalablytyped.runtime.TopLevel[js.Any]
 }

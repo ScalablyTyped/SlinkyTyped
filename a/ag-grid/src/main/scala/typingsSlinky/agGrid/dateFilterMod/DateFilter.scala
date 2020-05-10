@@ -2,14 +2,14 @@ package typingsSlinky.agGrid.dateFilterMod
 
 import typingsSlinky.agGrid.baseFilterMod.FilterConditionType
 import typingsSlinky.agGrid.baseFilterMod.ScalarBaseFilter
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSImport("ag-grid/dist/lib/filter/dateFilter", "DateFilter")
 @js.native
-class DateFilter () extends ScalarBaseFilter[Date, IDateFilterParams, SerializedDateFilter] {
+class DateFilter ()
+  extends ScalarBaseFilter[js.Date, IDateFilterParams, SerializedDateFilter] {
   var componentRecipes: js.Any = js.native
   var dateFrom: js.Any = js.native
   var dateFromComponent: js.Any = js.native

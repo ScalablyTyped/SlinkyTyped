@@ -1,7 +1,6 @@
 package typingsSlinky.ionic
 
 import typingsSlinky.ionic.definitionsMod.EnterpriseProjectIntegration
-import typingsSlinky.ionic.ionicStrings.`Ionic Enterprise Edition provides premier native solutionsComma UIComma Ampersand support for companies building cross-platform appsDot`
 import typingsSlinky.ionic.libIntegrationsMod.BaseIntegration
 import typingsSlinky.ionic.libIntegrationsMod.IntegationUnion
 import typingsSlinky.ionicCliFramework.mod.BaseConfig
@@ -29,12 +28,10 @@ object integrationsEnterpriseMod extends js.Object {
     var getAppClient: js.Any = js.native
     var getPK: js.Any = js.native
     var registerKey: js.Any = js.native
-    @JSName("summary")
-    val summary_Integration: `Ionic Enterprise Edition provides premier native solutionsComma UIComma Ampersand support for companies building cross-platform appsDot` = js.native
     var updateNPMRC: js.Any = js.native
     var validatePK: js.Any = js.native
     @JSName("config")
-    def config_MIntegration(): EnterpriseIntegrationConfig = js.native
+    def config_MIntegration: EnterpriseIntegrationConfig = js.native
   }
   
 }

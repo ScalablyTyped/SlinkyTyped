@@ -6,8 +6,8 @@ import scala.scalajs.js.annotation._
 
 package object qldbsessionMod {
   type ClientConfiguration = typingsSlinky.awsSdk.serviceMod.ServiceConfigurationOptions with typingsSlinky.awsSdk.qldbsessionMod.ClientApiVersions
-  type CommitDigest = typingsSlinky.node.Buffer | scala.scalajs.js.typedarray.Uint8Array | typingsSlinky.awsSdk.qldbsessionMod.Blob | java.lang.String
-  type IonBinary = typingsSlinky.node.Buffer | scala.scalajs.js.typedarray.Uint8Array | typingsSlinky.awsSdk.qldbsessionMod.Blob | java.lang.String
+  type CommitDigest = typingsSlinky.node.Buffer | js.typedarray.Uint8Array | typingsSlinky.awsSdk.qldbsessionMod.Blob | java.lang.String
+  type IonBinary = typingsSlinky.node.Buffer | js.typedarray.Uint8Array | typingsSlinky.awsSdk.qldbsessionMod.Blob | java.lang.String
   type IonText = java.lang.String
   type LedgerName = java.lang.String
   type PageToken = java.lang.String

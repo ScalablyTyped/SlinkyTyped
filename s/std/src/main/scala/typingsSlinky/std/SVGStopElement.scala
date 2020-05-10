@@ -13,5 +13,6 @@ trait SVGStopElement extends SVGElement {
 
 @JSGlobal("SVGStopElement")
 @js.native
-object SVGStopElement extends Instantiable0[SVGStopElement]
+object SVGStopElement
+  extends Instantiable0[org.scalajs.dom.raw.SVGStopElement]
 

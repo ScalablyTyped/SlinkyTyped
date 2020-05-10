@@ -5,19 +5,39 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait HapiMiddleware extends Middleware {
   /** Back-reference to Config object of `Runner` that has created this middleware */
-  var config: ConfigInternal
+  var config: ConfigInternal = js.native
   /** Hapi Plugin */
-  var plugin: AnonRegister
+  var plugin: AnonRegister = js.native
 }
 
 object HapiMiddleware {
   @scala.inline
   def apply(config: ConfigInternal, plugin: AnonRegister, runner: Runner): HapiMiddleware = {
     val __obj = js.Dynamic.literal(config = config.asInstanceOf[js.Any], plugin = plugin.asInstanceOf[js.Any], runner = runner.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[HapiMiddleware]
   }
+  @scala.inline
+  implicit class HapiMiddlewareOps[Self <: HapiMiddleware] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConfig(value: ConfigInternal): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("config")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPlugin(value: AnonRegister): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("plugin")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

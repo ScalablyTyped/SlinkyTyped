@@ -36,16 +36,53 @@ trait SchemaGenericSignedAttestation extends js.Object {
 
 object SchemaGenericSignedAttestation {
   @scala.inline
-  def apply(
-    contentType: String = null,
-    serializedPayload: String = null,
-    signatures: js.Array[SchemaSignature] = null
-  ): SchemaGenericSignedAttestation = {
+  def apply(): SchemaGenericSignedAttestation = {
     val __obj = js.Dynamic.literal()
-    if (contentType != null) __obj.updateDynamic("contentType")(contentType.asInstanceOf[js.Any])
-    if (serializedPayload != null) __obj.updateDynamic("serializedPayload")(serializedPayload.asInstanceOf[js.Any])
-    if (signatures != null) __obj.updateDynamic("signatures")(signatures.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGenericSignedAttestation]
   }
+  @scala.inline
+  implicit class SchemaGenericSignedAttestationOps[Self <: SchemaGenericSignedAttestation] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withContentType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContentType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSerializedPayload(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serializedPayload")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSerializedPayload: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serializedPayload")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSignatures(value: js.Array[SchemaSignature]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("signatures")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSignatures: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("signatures")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

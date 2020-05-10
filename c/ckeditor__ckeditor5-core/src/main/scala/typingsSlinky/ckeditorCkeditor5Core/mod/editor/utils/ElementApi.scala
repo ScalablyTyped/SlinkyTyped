@@ -5,17 +5,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ElementApi extends js.Object {
-  val sourceElement: HTMLElement
-  def updateSourceElement(): Unit
+  val sourceElement: HTMLElement = js.native
+  def updateSourceElement(): Unit = js.native
 }
 
 object ElementApi {
   @scala.inline
   def apply(sourceElement: HTMLElement, updateSourceElement: () => Unit): ElementApi = {
     val __obj = js.Dynamic.literal(sourceElement = sourceElement.asInstanceOf[js.Any], updateSourceElement = js.Any.fromFunction0(updateSourceElement))
-  
     __obj.asInstanceOf[ElementApi]
   }
+  @scala.inline
+  implicit class ElementApiOps[Self <: ElementApi] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSourceElement(value: HTMLElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceElement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUpdateSourceElement(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateSourceElement")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

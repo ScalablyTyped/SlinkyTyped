@@ -1,7 +1,7 @@
 package typingsSlinky.tensorflowTfjsLayers.poolingMod
 
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank
-import typingsSlinky.tensorflowTfjsCore.mod.Tensor_
+import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor
 import typingsSlinky.tensorflowTfjsLayers.kerasFormatCommonMod.DataFormat
 import typingsSlinky.tensorflowTfjsLayers.kerasFormatCommonMod.PaddingMode
 import typingsSlinky.tensorflowTfjsLayers.topologyMod.Layer
@@ -18,11 +18,11 @@ abstract class Pooling2D protected () extends Layer {
   val poolSize: js.Tuple2[Double, Double] = js.native
   val strides: js.Tuple2[Double, Double] = js.native
   /* protected */ def poolingFunction(
-    inputs: Tensor_[Rank],
+    inputs: Tensor[Rank],
     poolSize: js.Tuple2[Double, Double],
     strides: js.Tuple2[Double, Double],
     padding: PaddingMode,
     dataFormat: DataFormat
-  ): Tensor_[Rank] = js.native
+  ): Tensor[Rank] = js.native
 }
 

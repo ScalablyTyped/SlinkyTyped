@@ -20,10 +20,29 @@ trait SchemaControl extends js.Object {
 
 object SchemaControl {
   @scala.inline
-  def apply(environment: String = null): SchemaControl = {
+  def apply(): SchemaControl = {
     val __obj = js.Dynamic.literal()
-    if (environment != null) __obj.updateDynamic("environment")(environment.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaControl]
   }
+  @scala.inline
+  implicit class SchemaControlOps[Self <: SchemaControl] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEnvironment(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("environment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnvironment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("environment")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

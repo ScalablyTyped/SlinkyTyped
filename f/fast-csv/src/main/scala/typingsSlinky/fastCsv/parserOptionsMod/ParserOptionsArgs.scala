@@ -6,66 +6,256 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ParserOptionsArgs extends js.Object {
-  var comment: js.UndefOr[String] = js.undefined
-  var delimiter: js.UndefOr[String] = js.undefined
-  var discardUnmappedColumns: js.UndefOr[Boolean] = js.undefined
-  var encoding: js.UndefOr[String] = js.undefined
-  var escape: js.UndefOr[String] = js.undefined
-  var headers: js.UndefOr[Boolean | HeaderTransformFunction | HeaderArray] = js.undefined
-  var ignoreEmpty: js.UndefOr[Boolean] = js.undefined
-  var ltrim: js.UndefOr[Boolean] = js.undefined
-  var maxRows: js.UndefOr[Double] = js.undefined
-  var objectMode: js.UndefOr[Boolean] = js.undefined
-  var quote: js.UndefOr[String | Null] = js.undefined
-  var renameHeaders: js.UndefOr[Boolean] = js.undefined
-  var rtrim: js.UndefOr[Boolean] = js.undefined
-  var skipLines: js.UndefOr[Double] = js.undefined
-  var skipRows: js.UndefOr[Double] = js.undefined
-  var strictColumnHandling: js.UndefOr[Boolean] = js.undefined
-  var trim: js.UndefOr[Boolean] = js.undefined
+  var comment: js.UndefOr[String] = js.native
+  var delimiter: js.UndefOr[String] = js.native
+  var discardUnmappedColumns: js.UndefOr[Boolean] = js.native
+  var encoding: js.UndefOr[String] = js.native
+  var escape: js.UndefOr[String] = js.native
+  var headers: js.UndefOr[Boolean | HeaderTransformFunction | HeaderArray] = js.native
+  var ignoreEmpty: js.UndefOr[Boolean] = js.native
+  var ltrim: js.UndefOr[Boolean] = js.native
+  var maxRows: js.UndefOr[Double] = js.native
+  var objectMode: js.UndefOr[Boolean] = js.native
+  var quote: js.UndefOr[String | Null] = js.native
+  var renameHeaders: js.UndefOr[Boolean] = js.native
+  var rtrim: js.UndefOr[Boolean] = js.native
+  var skipLines: js.UndefOr[Double] = js.native
+  var skipRows: js.UndefOr[Double] = js.native
+  var strictColumnHandling: js.UndefOr[Boolean] = js.native
+  var trim: js.UndefOr[Boolean] = js.native
 }
 
 object ParserOptionsArgs {
   @scala.inline
-  def apply(
-    comment: String = null,
-    delimiter: String = null,
-    discardUnmappedColumns: js.UndefOr[Boolean] = js.undefined,
-    encoding: String = null,
-    escape: String = null,
-    headers: Boolean | HeaderTransformFunction | HeaderArray = null,
-    ignoreEmpty: js.UndefOr[Boolean] = js.undefined,
-    ltrim: js.UndefOr[Boolean] = js.undefined,
-    maxRows: Int | Double = null,
-    objectMode: js.UndefOr[Boolean] = js.undefined,
-    quote: String = null,
-    renameHeaders: js.UndefOr[Boolean] = js.undefined,
-    rtrim: js.UndefOr[Boolean] = js.undefined,
-    skipLines: Int | Double = null,
-    skipRows: Int | Double = null,
-    strictColumnHandling: js.UndefOr[Boolean] = js.undefined,
-    trim: js.UndefOr[Boolean] = js.undefined
-  ): ParserOptionsArgs = {
+  def apply(): ParserOptionsArgs = {
     val __obj = js.Dynamic.literal()
-    if (comment != null) __obj.updateDynamic("comment")(comment.asInstanceOf[js.Any])
-    if (delimiter != null) __obj.updateDynamic("delimiter")(delimiter.asInstanceOf[js.Any])
-    if (!js.isUndefined(discardUnmappedColumns)) __obj.updateDynamic("discardUnmappedColumns")(discardUnmappedColumns.asInstanceOf[js.Any])
-    if (encoding != null) __obj.updateDynamic("encoding")(encoding.asInstanceOf[js.Any])
-    if (escape != null) __obj.updateDynamic("escape")(escape.asInstanceOf[js.Any])
-    if (headers != null) __obj.updateDynamic("headers")(headers.asInstanceOf[js.Any])
-    if (!js.isUndefined(ignoreEmpty)) __obj.updateDynamic("ignoreEmpty")(ignoreEmpty.asInstanceOf[js.Any])
-    if (!js.isUndefined(ltrim)) __obj.updateDynamic("ltrim")(ltrim.asInstanceOf[js.Any])
-    if (maxRows != null) __obj.updateDynamic("maxRows")(maxRows.asInstanceOf[js.Any])
-    if (!js.isUndefined(objectMode)) __obj.updateDynamic("objectMode")(objectMode.asInstanceOf[js.Any])
-    if (quote != null) __obj.updateDynamic("quote")(quote.asInstanceOf[js.Any])
-    if (!js.isUndefined(renameHeaders)) __obj.updateDynamic("renameHeaders")(renameHeaders.asInstanceOf[js.Any])
-    if (!js.isUndefined(rtrim)) __obj.updateDynamic("rtrim")(rtrim.asInstanceOf[js.Any])
-    if (skipLines != null) __obj.updateDynamic("skipLines")(skipLines.asInstanceOf[js.Any])
-    if (skipRows != null) __obj.updateDynamic("skipRows")(skipRows.asInstanceOf[js.Any])
-    if (!js.isUndefined(strictColumnHandling)) __obj.updateDynamic("strictColumnHandling")(strictColumnHandling.asInstanceOf[js.Any])
-    if (!js.isUndefined(trim)) __obj.updateDynamic("trim")(trim.asInstanceOf[js.Any])
     __obj.asInstanceOf[ParserOptionsArgs]
   }
+  @scala.inline
+  implicit class ParserOptionsArgsOps[Self <: ParserOptionsArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withComment(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("comment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutComment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("comment")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDelimiter(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("delimiter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDelimiter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("delimiter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDiscardUnmappedColumns(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("discardUnmappedColumns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDiscardUnmappedColumns: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("discardUnmappedColumns")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEncoding(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encoding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEncoding: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encoding")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEscape(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("escape")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEscape: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("escape")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeadersFunction1(value: /* headers */ HeaderArray => HeaderArray): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withHeaders(value: Boolean | HeaderTransformFunction | HeaderArray): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeaders: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIgnoreEmpty(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreEmpty")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIgnoreEmpty: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreEmpty")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLtrim(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ltrim")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLtrim: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ltrim")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxRows(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxRows")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxRows: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxRows")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withObjectMode(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("objectMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutObjectMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("objectMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQuote(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("quote")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQuote: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("quote")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQuoteNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("quote")(null)
+        ret
+    }
+    @scala.inline
+    def withRenameHeaders(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("renameHeaders")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRenameHeaders: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("renameHeaders")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRtrim(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rtrim")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRtrim: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rtrim")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSkipLines(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("skipLines")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSkipLines: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("skipLines")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSkipRows(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("skipRows")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSkipRows: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("skipRows")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStrictColumnHandling(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strictColumnHandling")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStrictColumnHandling: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strictColumnHandling")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTrim(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trim")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTrim: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trim")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

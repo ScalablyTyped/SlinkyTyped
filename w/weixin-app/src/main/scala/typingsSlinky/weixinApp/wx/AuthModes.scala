@@ -13,12 +13,10 @@ trait AuthModes extends js.Object
 
 object AuthModes {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def facial: typingsSlinky.weixinApp.weixinAppStrings.facial = "facial".asInstanceOf[typingsSlinky.weixinApp.weixinAppStrings.facial]
   @scala.inline
-  def facial: typingsSlinky.weixinApp.weixinAppStrings.facial = this.cast("facial")
+  def fingerPrint: typingsSlinky.weixinApp.weixinAppStrings.fingerPrint = "fingerPrint".asInstanceOf[typingsSlinky.weixinApp.weixinAppStrings.fingerPrint]
   @scala.inline
-  def fingerPrint: typingsSlinky.weixinApp.weixinAppStrings.fingerPrint = this.cast("fingerPrint")
-  @scala.inline
-  def speech: typingsSlinky.weixinApp.weixinAppStrings.speech = this.cast("speech")
+  def speech: typingsSlinky.weixinApp.weixinAppStrings.speech = "speech".asInstanceOf[typingsSlinky.weixinApp.weixinAppStrings.speech]
 }
 

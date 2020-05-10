@@ -18,5 +18,6 @@ trait SVGRadialGradientElement extends SVGGradientElement {
 
 @JSGlobal("SVGRadialGradientElement")
 @js.native
-object SVGRadialGradientElement extends Instantiable0[SVGRadialGradientElement]
+object SVGRadialGradientElement
+  extends Instantiable0[org.scalajs.dom.raw.SVGRadialGradientElement]
 

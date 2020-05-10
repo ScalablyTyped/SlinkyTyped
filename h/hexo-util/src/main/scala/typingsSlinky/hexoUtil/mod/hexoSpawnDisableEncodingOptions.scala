@@ -2,53 +2,54 @@ package typingsSlinky.hexoUtil.mod
 
 import typingsSlinky.hexoUtil.hexoUtilBooleans.`false`
 import typingsSlinky.hexoUtil.hexoUtilStrings._empty
-import typingsSlinky.node.NodeJS.ProcessEnv
-import typingsSlinky.node.childProcessMod.SerializationType
 import typingsSlinky.node.childProcessMod.SpawnOptions
-import typingsSlinky.node.childProcessMod.StdioOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait hexoSpawnDisableEncodingOptions extends SpawnOptions {
-  var encoding: _empty | `false` | Null
-  var verbose: js.UndefOr[Boolean] = js.undefined
+  var encoding: _empty | `false` | Null = js.native
+  var verbose: js.UndefOr[Boolean] = js.native
 }
 
 object hexoSpawnDisableEncodingOptions {
   @scala.inline
-  def apply(
-    argv0: String = null,
-    cwd: String = null,
-    detached: js.UndefOr[Boolean] = js.undefined,
-    encoding: _empty | `false` = null,
-    env: ProcessEnv = null,
-    gid: Int | Double = null,
-    serialization: SerializationType = null,
-    shell: Boolean | String = null,
-    stdio: StdioOptions = null,
-    timeout: Int | Double = null,
-    uid: Int | Double = null,
-    verbose: js.UndefOr[Boolean] = js.undefined,
-    windowsHide: js.UndefOr[Boolean] = js.undefined,
-    windowsVerbatimArguments: js.UndefOr[Boolean] = js.undefined
-  ): hexoSpawnDisableEncodingOptions = {
+  def apply(): hexoSpawnDisableEncodingOptions = {
     val __obj = js.Dynamic.literal()
-    if (argv0 != null) __obj.updateDynamic("argv0")(argv0.asInstanceOf[js.Any])
-    if (cwd != null) __obj.updateDynamic("cwd")(cwd.asInstanceOf[js.Any])
-    if (!js.isUndefined(detached)) __obj.updateDynamic("detached")(detached.asInstanceOf[js.Any])
-    if (encoding != null) __obj.updateDynamic("encoding")(encoding.asInstanceOf[js.Any])
-    if (env != null) __obj.updateDynamic("env")(env.asInstanceOf[js.Any])
-    if (gid != null) __obj.updateDynamic("gid")(gid.asInstanceOf[js.Any])
-    if (serialization != null) __obj.updateDynamic("serialization")(serialization.asInstanceOf[js.Any])
-    if (shell != null) __obj.updateDynamic("shell")(shell.asInstanceOf[js.Any])
-    if (stdio != null) __obj.updateDynamic("stdio")(stdio.asInstanceOf[js.Any])
-    if (timeout != null) __obj.updateDynamic("timeout")(timeout.asInstanceOf[js.Any])
-    if (uid != null) __obj.updateDynamic("uid")(uid.asInstanceOf[js.Any])
-    if (!js.isUndefined(verbose)) __obj.updateDynamic("verbose")(verbose.asInstanceOf[js.Any])
-    if (!js.isUndefined(windowsHide)) __obj.updateDynamic("windowsHide")(windowsHide.asInstanceOf[js.Any])
-    if (!js.isUndefined(windowsVerbatimArguments)) __obj.updateDynamic("windowsVerbatimArguments")(windowsVerbatimArguments.asInstanceOf[js.Any])
     __obj.asInstanceOf[hexoSpawnDisableEncodingOptions]
   }
+  @scala.inline
+  implicit class hexoSpawnDisableEncodingOptionsOps[Self <: hexoSpawnDisableEncodingOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEncoding(value: _empty | `false`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encoding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEncodingNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encoding")(null)
+        ret
+    }
+    @scala.inline
+    def withVerbose(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("verbose")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVerbose: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("verbose")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

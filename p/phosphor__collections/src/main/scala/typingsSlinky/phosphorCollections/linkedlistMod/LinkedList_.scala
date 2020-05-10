@@ -160,19 +160,6 @@ class LinkedList_[T] ()
     */
   def insertBefore(value: T, ref: INode[T]): INode[T] = js.native
   /**
-    * Get an iterator over the object's values.
-    *
-    * @returns An iterator which yields the object's values.
-    *
-    * #### Notes
-    * Depending on the iterable, the returned iterator may or may not be
-    * a new object. A collection or other container-like object should
-    * typically return a new iterator, while an iterator itself should
-    * normally return `this`.
-    */
-  /* CompleteClass */
-  override def iter(): IIterator[T] = js.native
-  /**
     * Create an iterator over the nodes in the list.
     *
     * @returns A new iterator starting with the first node.
@@ -235,13 +222,6 @@ class LinkedList_[T] ()
     * The node must be owned by the list.
     */
   def removeNode(node: INode[T]): Unit = js.native
-  /**
-    * Get a reverse iterator over the object's values.
-    *
-    * @returns An iterator which yields the object's values in reverse.
-    */
-  /* CompleteClass */
-  override def retro(): IIterator[T] = js.native
   /**
     * Create a reverse iterator over the nodes in the list.
     *

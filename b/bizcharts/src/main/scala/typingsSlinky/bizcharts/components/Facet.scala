@@ -1,10 +1,7 @@
 package typingsSlinky.bizcharts.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.bizcharts.AnonOffsetX
 import typingsSlinky.bizcharts.AnonOffsetY
 import typingsSlinky.bizcharts.mod.FacetProps
@@ -13,39 +10,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Facet
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.bizcharts.mod.Facet] {
+object Facet {
   @JSImport("bizcharts", "Facet")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    autoSetAxis: js.UndefOr[Boolean] = js.undefined,
-    colTitle: AnonOffsetY = null,
-    eachView: (/* view */ js.UndefOr[js.Any], /* facet */ js.UndefOr[js.Any]) => Unit = null,
-    fields: String | js.Array[_] = null,
-    margin: Double | js.Array[Double] = null,
-    padding: Double | js.Array[Double] = null,
-    rowTitle: AnonOffsetX = null,
-    showTitle: js.UndefOr[Boolean] = js.undefined,
-    `type`: FacetType = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.bizcharts.mod.Facet] = {
-    val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(autoSetAxis)) __obj.updateDynamic("autoSetAxis")(autoSetAxis.asInstanceOf[js.Any])
-    if (colTitle != null) __obj.updateDynamic("colTitle")(colTitle.asInstanceOf[js.Any])
-    if (eachView != null) __obj.updateDynamic("eachView")(js.Any.fromFunction2(eachView))
-    if (fields != null) __obj.updateDynamic("fields")(fields.asInstanceOf[js.Any])
-    if (margin != null) __obj.updateDynamic("margin")(margin.asInstanceOf[js.Any])
-    if (padding != null) __obj.updateDynamic("padding")(padding.asInstanceOf[js.Any])
-    if (rowTitle != null) __obj.updateDynamic("rowTitle")(rowTitle.asInstanceOf[js.Any])
-    if (!js.isUndefined(showTitle)) __obj.updateDynamic("showTitle")(showTitle.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.bizcharts.mod.Facet] {
+    @scala.inline
+    def autoSetAxis(value: Boolean): this.type = set("autoSetAxis", value.asInstanceOf[js.Any])
+    @scala.inline
+    def colTitle(value: AnonOffsetY): this.type = set("colTitle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def eachView(value: (/* view */ js.UndefOr[js.Any], /* facet */ js.UndefOr[js.Any]) => Unit): this.type = set("eachView", js.Any.fromFunction2(value))
+    @scala.inline
+    def fields(value: String | js.Array[_]): this.type = set("fields", value.asInstanceOf[js.Any])
+    @scala.inline
+    def margin(value: Double | js.Array[Double]): this.type = set("margin", value.asInstanceOf[js.Any])
+    @scala.inline
+    def padding(value: Double | js.Array[Double]): this.type = set("padding", value.asInstanceOf[js.Any])
+    @scala.inline
+    def rowTitle(value: AnonOffsetX): this.type = set("rowTitle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def showTitle(value: Boolean): this.type = set("showTitle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `type`(value: FacetType): this.type = set("type", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.bizcharts.mod.Facet] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.bizcharts.mod.Facet](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = FacetProps
+  
+  def withProps(p: FacetProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Facet.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

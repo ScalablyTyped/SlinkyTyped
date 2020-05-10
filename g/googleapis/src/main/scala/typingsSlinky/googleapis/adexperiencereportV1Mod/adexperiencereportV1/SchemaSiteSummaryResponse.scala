@@ -25,16 +25,53 @@ trait SchemaSiteSummaryResponse extends js.Object {
 
 object SchemaSiteSummaryResponse {
   @scala.inline
-  def apply(
-    desktopSummary: SchemaPlatformSummary = null,
-    mobileSummary: SchemaPlatformSummary = null,
-    reviewedSite: String = null
-  ): SchemaSiteSummaryResponse = {
+  def apply(): SchemaSiteSummaryResponse = {
     val __obj = js.Dynamic.literal()
-    if (desktopSummary != null) __obj.updateDynamic("desktopSummary")(desktopSummary.asInstanceOf[js.Any])
-    if (mobileSummary != null) __obj.updateDynamic("mobileSummary")(mobileSummary.asInstanceOf[js.Any])
-    if (reviewedSite != null) __obj.updateDynamic("reviewedSite")(reviewedSite.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSiteSummaryResponse]
   }
+  @scala.inline
+  implicit class SchemaSiteSummaryResponseOps[Self <: SchemaSiteSummaryResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDesktopSummary(value: SchemaPlatformSummary): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("desktopSummary")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDesktopSummary: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("desktopSummary")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMobileSummary(value: SchemaPlatformSummary): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mobileSummary")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMobileSummary: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mobileSummary")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReviewedSite(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reviewedSite")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReviewedSite: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reviewedSite")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

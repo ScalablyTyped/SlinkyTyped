@@ -2,7 +2,6 @@ package typingsSlinky.reactPrimitives.mod
 
 import slinky.core.ReactComponentClass
 import typingsSlinky.react.mod.ComponentClass
-import typingsSlinky.react.mod.ComponentState
 import typingsSlinky.react.mod.FunctionComponent
 import typingsSlinky.reactNative.AnonY
 import typingsSlinky.reactNative.mod.Animated.AnimatedComponent
@@ -83,7 +82,7 @@ object Animated extends js.Object {
     a: typingsSlinky.reactNative.mod.Animated.Animated,
     b: typingsSlinky.reactNative.mod.Animated.Animated
   ): typingsSlinky.reactNative.mod.Animated.AnimatedAddition = js.native
-  def createAnimatedComponent(component: ComponentClass[ComponentProps[_], ComponentState]): AnimatedComponent[
+  def createAnimatedComponent(component: ComponentClass[ComponentProps[_], js.Object]): AnimatedComponent[
     ReactComponentClass[ComponentProps[_]] | InstanceType[ReactComponentClass[ComponentProps[_]]]
   ] = js.native
   def createAnimatedComponent(component: FunctionComponent[ComponentProps[_]]): AnimatedComponent[

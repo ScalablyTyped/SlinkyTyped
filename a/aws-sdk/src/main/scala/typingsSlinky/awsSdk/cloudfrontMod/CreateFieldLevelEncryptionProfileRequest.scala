@@ -16,8 +16,21 @@ object CreateFieldLevelEncryptionProfileRequest {
   @scala.inline
   def apply(FieldLevelEncryptionProfileConfig: FieldLevelEncryptionProfileConfig): CreateFieldLevelEncryptionProfileRequest = {
     val __obj = js.Dynamic.literal(FieldLevelEncryptionProfileConfig = FieldLevelEncryptionProfileConfig.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[CreateFieldLevelEncryptionProfileRequest]
   }
+  @scala.inline
+  implicit class CreateFieldLevelEncryptionProfileRequestOps[Self <: CreateFieldLevelEncryptionProfileRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFieldLevelEncryptionProfileConfig(value: FieldLevelEncryptionProfileConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FieldLevelEncryptionProfileConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

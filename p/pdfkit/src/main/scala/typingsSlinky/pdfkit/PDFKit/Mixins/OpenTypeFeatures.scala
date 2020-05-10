@@ -250,484 +250,482 @@ trait OpenTypeFeatures extends js.Object
 
 object OpenTypeFeatures {
   @scala.inline
-  def aalt: typingsSlinky.pdfkit.pdfkitStrings.aalt = this.cast("aalt")
+  def aalt: typingsSlinky.pdfkit.pdfkitStrings.aalt = "aalt".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.aalt]
   @scala.inline
-  def abvf: typingsSlinky.pdfkit.pdfkitStrings.abvf = this.cast("abvf")
+  def abvf: typingsSlinky.pdfkit.pdfkitStrings.abvf = "abvf".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.abvf]
   @scala.inline
-  def abvm: typingsSlinky.pdfkit.pdfkitStrings.abvm = this.cast("abvm")
+  def abvm: typingsSlinky.pdfkit.pdfkitStrings.abvm = "abvm".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.abvm]
   @scala.inline
-  def abvs: typingsSlinky.pdfkit.pdfkitStrings.abvs = this.cast("abvs")
+  def abvs: typingsSlinky.pdfkit.pdfkitStrings.abvs = "abvs".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.abvs]
   @scala.inline
-  def afrc: typingsSlinky.pdfkit.pdfkitStrings.afrc = this.cast("afrc")
+  def afrc: typingsSlinky.pdfkit.pdfkitStrings.afrc = "afrc".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.afrc]
   @scala.inline
-  def akhn: typingsSlinky.pdfkit.pdfkitStrings.akhn = this.cast("akhn")
+  def akhn: typingsSlinky.pdfkit.pdfkitStrings.akhn = "akhn".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.akhn]
   @scala.inline
-  def blwf: typingsSlinky.pdfkit.pdfkitStrings.blwf = this.cast("blwf")
+  def blwf: typingsSlinky.pdfkit.pdfkitStrings.blwf = "blwf".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.blwf]
   @scala.inline
-  def blwm: typingsSlinky.pdfkit.pdfkitStrings.blwm = this.cast("blwm")
+  def blwm: typingsSlinky.pdfkit.pdfkitStrings.blwm = "blwm".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.blwm]
   @scala.inline
-  def blws: typingsSlinky.pdfkit.pdfkitStrings.blws = this.cast("blws")
+  def blws: typingsSlinky.pdfkit.pdfkitStrings.blws = "blws".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.blws]
   @scala.inline
-  def c2pc: typingsSlinky.pdfkit.pdfkitStrings.c2pc = this.cast("c2pc")
+  def c2pc: typingsSlinky.pdfkit.pdfkitStrings.c2pc = "c2pc".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.c2pc]
   @scala.inline
-  def c2sc: typingsSlinky.pdfkit.pdfkitStrings.c2sc = this.cast("c2sc")
+  def c2sc: typingsSlinky.pdfkit.pdfkitStrings.c2sc = "c2sc".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.c2sc]
   @scala.inline
-  def calt: typingsSlinky.pdfkit.pdfkitStrings.calt = this.cast("calt")
+  def calt: typingsSlinky.pdfkit.pdfkitStrings.calt = "calt".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.calt]
   @scala.inline
-  def `case`: typingsSlinky.pdfkit.pdfkitStrings.`case` = this.cast("case")
+  def `case`: typingsSlinky.pdfkit.pdfkitStrings.`case` = "case".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.`case`]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def ccmp: typingsSlinky.pdfkit.pdfkitStrings.ccmp = "ccmp".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.ccmp]
   @scala.inline
-  def ccmp: typingsSlinky.pdfkit.pdfkitStrings.ccmp = this.cast("ccmp")
+  def cfar: typingsSlinky.pdfkit.pdfkitStrings.cfar = "cfar".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.cfar]
   @scala.inline
-  def cfar: typingsSlinky.pdfkit.pdfkitStrings.cfar = this.cast("cfar")
+  def cjct: typingsSlinky.pdfkit.pdfkitStrings.cjct = "cjct".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.cjct]
   @scala.inline
-  def cjct: typingsSlinky.pdfkit.pdfkitStrings.cjct = this.cast("cjct")
+  def clig: typingsSlinky.pdfkit.pdfkitStrings.clig = "clig".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.clig]
   @scala.inline
-  def clig: typingsSlinky.pdfkit.pdfkitStrings.clig = this.cast("clig")
+  def cpct: typingsSlinky.pdfkit.pdfkitStrings.cpct = "cpct".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.cpct]
   @scala.inline
-  def cpct: typingsSlinky.pdfkit.pdfkitStrings.cpct = this.cast("cpct")
+  def cpsp: typingsSlinky.pdfkit.pdfkitStrings.cpsp = "cpsp".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.cpsp]
   @scala.inline
-  def cpsp: typingsSlinky.pdfkit.pdfkitStrings.cpsp = this.cast("cpsp")
+  def cswh: typingsSlinky.pdfkit.pdfkitStrings.cswh = "cswh".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.cswh]
   @scala.inline
-  def cswh: typingsSlinky.pdfkit.pdfkitStrings.cswh = this.cast("cswh")
+  def curs: typingsSlinky.pdfkit.pdfkitStrings.curs = "curs".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.curs]
   @scala.inline
-  def curs: typingsSlinky.pdfkit.pdfkitStrings.curs = this.cast("curs")
+  def cv01: typingsSlinky.pdfkit.pdfkitStrings.cv01 = "cv01".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.cv01]
   @scala.inline
-  def cv01: typingsSlinky.pdfkit.pdfkitStrings.cv01 = this.cast("cv01")
+  def cv02: typingsSlinky.pdfkit.pdfkitStrings.cv02 = "cv02".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.cv02]
   @scala.inline
-  def cv02: typingsSlinky.pdfkit.pdfkitStrings.cv02 = this.cast("cv02")
+  def cv03: typingsSlinky.pdfkit.pdfkitStrings.cv03 = "cv03".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.cv03]
   @scala.inline
-  def cv03: typingsSlinky.pdfkit.pdfkitStrings.cv03 = this.cast("cv03")
+  def cv04: typingsSlinky.pdfkit.pdfkitStrings.cv04 = "cv04".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.cv04]
   @scala.inline
-  def cv04: typingsSlinky.pdfkit.pdfkitStrings.cv04 = this.cast("cv04")
+  def cv05: typingsSlinky.pdfkit.pdfkitStrings.cv05 = "cv05".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.cv05]
   @scala.inline
-  def cv05: typingsSlinky.pdfkit.pdfkitStrings.cv05 = this.cast("cv05")
+  def cv06: typingsSlinky.pdfkit.pdfkitStrings.cv06 = "cv06".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.cv06]
   @scala.inline
-  def cv06: typingsSlinky.pdfkit.pdfkitStrings.cv06 = this.cast("cv06")
+  def cv07: typingsSlinky.pdfkit.pdfkitStrings.cv07 = "cv07".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.cv07]
   @scala.inline
-  def cv07: typingsSlinky.pdfkit.pdfkitStrings.cv07 = this.cast("cv07")
+  def cv08: typingsSlinky.pdfkit.pdfkitStrings.cv08 = "cv08".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.cv08]
   @scala.inline
-  def cv08: typingsSlinky.pdfkit.pdfkitStrings.cv08 = this.cast("cv08")
+  def cv09: typingsSlinky.pdfkit.pdfkitStrings.cv09 = "cv09".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.cv09]
   @scala.inline
-  def cv09: typingsSlinky.pdfkit.pdfkitStrings.cv09 = this.cast("cv09")
+  def cv10: typingsSlinky.pdfkit.pdfkitStrings.cv10 = "cv10".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.cv10]
   @scala.inline
-  def cv10: typingsSlinky.pdfkit.pdfkitStrings.cv10 = this.cast("cv10")
+  def cv11: typingsSlinky.pdfkit.pdfkitStrings.cv11 = "cv11".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.cv11]
   @scala.inline
-  def cv11: typingsSlinky.pdfkit.pdfkitStrings.cv11 = this.cast("cv11")
+  def cv12: typingsSlinky.pdfkit.pdfkitStrings.cv12 = "cv12".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.cv12]
   @scala.inline
-  def cv12: typingsSlinky.pdfkit.pdfkitStrings.cv12 = this.cast("cv12")
+  def cv13: typingsSlinky.pdfkit.pdfkitStrings.cv13 = "cv13".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.cv13]
   @scala.inline
-  def cv13: typingsSlinky.pdfkit.pdfkitStrings.cv13 = this.cast("cv13")
+  def cv14: typingsSlinky.pdfkit.pdfkitStrings.cv14 = "cv14".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.cv14]
   @scala.inline
-  def cv14: typingsSlinky.pdfkit.pdfkitStrings.cv14 = this.cast("cv14")
+  def cv15: typingsSlinky.pdfkit.pdfkitStrings.cv15 = "cv15".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.cv15]
   @scala.inline
-  def cv15: typingsSlinky.pdfkit.pdfkitStrings.cv15 = this.cast("cv15")
+  def cv16: typingsSlinky.pdfkit.pdfkitStrings.cv16 = "cv16".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.cv16]
   @scala.inline
-  def cv16: typingsSlinky.pdfkit.pdfkitStrings.cv16 = this.cast("cv16")
+  def cv17: typingsSlinky.pdfkit.pdfkitStrings.cv17 = "cv17".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.cv17]
   @scala.inline
-  def cv17: typingsSlinky.pdfkit.pdfkitStrings.cv17 = this.cast("cv17")
+  def cv18: typingsSlinky.pdfkit.pdfkitStrings.cv18 = "cv18".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.cv18]
   @scala.inline
-  def cv18: typingsSlinky.pdfkit.pdfkitStrings.cv18 = this.cast("cv18")
+  def cv19: typingsSlinky.pdfkit.pdfkitStrings.cv19 = "cv19".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.cv19]
   @scala.inline
-  def cv19: typingsSlinky.pdfkit.pdfkitStrings.cv19 = this.cast("cv19")
+  def cv20: typingsSlinky.pdfkit.pdfkitStrings.cv20 = "cv20".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.cv20]
   @scala.inline
-  def cv20: typingsSlinky.pdfkit.pdfkitStrings.cv20 = this.cast("cv20")
+  def cv21: typingsSlinky.pdfkit.pdfkitStrings.cv21 = "cv21".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.cv21]
   @scala.inline
-  def cv21: typingsSlinky.pdfkit.pdfkitStrings.cv21 = this.cast("cv21")
+  def cv22: typingsSlinky.pdfkit.pdfkitStrings.cv22 = "cv22".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.cv22]
   @scala.inline
-  def cv22: typingsSlinky.pdfkit.pdfkitStrings.cv22 = this.cast("cv22")
+  def cv23: typingsSlinky.pdfkit.pdfkitStrings.cv23 = "cv23".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.cv23]
   @scala.inline
-  def cv23: typingsSlinky.pdfkit.pdfkitStrings.cv23 = this.cast("cv23")
+  def cv24: typingsSlinky.pdfkit.pdfkitStrings.cv24 = "cv24".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.cv24]
   @scala.inline
-  def cv24: typingsSlinky.pdfkit.pdfkitStrings.cv24 = this.cast("cv24")
+  def cv25: typingsSlinky.pdfkit.pdfkitStrings.cv25 = "cv25".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.cv25]
   @scala.inline
-  def cv25: typingsSlinky.pdfkit.pdfkitStrings.cv25 = this.cast("cv25")
+  def cv26: typingsSlinky.pdfkit.pdfkitStrings.cv26 = "cv26".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.cv26]
   @scala.inline
-  def cv26: typingsSlinky.pdfkit.pdfkitStrings.cv26 = this.cast("cv26")
+  def cv27: typingsSlinky.pdfkit.pdfkitStrings.cv27 = "cv27".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.cv27]
   @scala.inline
-  def cv27: typingsSlinky.pdfkit.pdfkitStrings.cv27 = this.cast("cv27")
+  def cv28: typingsSlinky.pdfkit.pdfkitStrings.cv28 = "cv28".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.cv28]
   @scala.inline
-  def cv28: typingsSlinky.pdfkit.pdfkitStrings.cv28 = this.cast("cv28")
+  def cv29: typingsSlinky.pdfkit.pdfkitStrings.cv29 = "cv29".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.cv29]
   @scala.inline
-  def cv29: typingsSlinky.pdfkit.pdfkitStrings.cv29 = this.cast("cv29")
+  def cv30: typingsSlinky.pdfkit.pdfkitStrings.cv30 = "cv30".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.cv30]
   @scala.inline
-  def cv30: typingsSlinky.pdfkit.pdfkitStrings.cv30 = this.cast("cv30")
+  def cv31: typingsSlinky.pdfkit.pdfkitStrings.cv31 = "cv31".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.cv31]
   @scala.inline
-  def cv31: typingsSlinky.pdfkit.pdfkitStrings.cv31 = this.cast("cv31")
+  def cv32: typingsSlinky.pdfkit.pdfkitStrings.cv32 = "cv32".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.cv32]
   @scala.inline
-  def cv32: typingsSlinky.pdfkit.pdfkitStrings.cv32 = this.cast("cv32")
+  def cv33: typingsSlinky.pdfkit.pdfkitStrings.cv33 = "cv33".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.cv33]
   @scala.inline
-  def cv33: typingsSlinky.pdfkit.pdfkitStrings.cv33 = this.cast("cv33")
+  def cv34: typingsSlinky.pdfkit.pdfkitStrings.cv34 = "cv34".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.cv34]
   @scala.inline
-  def cv34: typingsSlinky.pdfkit.pdfkitStrings.cv34 = this.cast("cv34")
+  def cv35: typingsSlinky.pdfkit.pdfkitStrings.cv35 = "cv35".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.cv35]
   @scala.inline
-  def cv35: typingsSlinky.pdfkit.pdfkitStrings.cv35 = this.cast("cv35")
+  def cv36: typingsSlinky.pdfkit.pdfkitStrings.cv36 = "cv36".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.cv36]
   @scala.inline
-  def cv36: typingsSlinky.pdfkit.pdfkitStrings.cv36 = this.cast("cv36")
+  def cv37: typingsSlinky.pdfkit.pdfkitStrings.cv37 = "cv37".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.cv37]
   @scala.inline
-  def cv37: typingsSlinky.pdfkit.pdfkitStrings.cv37 = this.cast("cv37")
+  def cv38: typingsSlinky.pdfkit.pdfkitStrings.cv38 = "cv38".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.cv38]
   @scala.inline
-  def cv38: typingsSlinky.pdfkit.pdfkitStrings.cv38 = this.cast("cv38")
+  def cv39: typingsSlinky.pdfkit.pdfkitStrings.cv39 = "cv39".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.cv39]
   @scala.inline
-  def cv39: typingsSlinky.pdfkit.pdfkitStrings.cv39 = this.cast("cv39")
+  def cv40: typingsSlinky.pdfkit.pdfkitStrings.cv40 = "cv40".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.cv40]
   @scala.inline
-  def cv40: typingsSlinky.pdfkit.pdfkitStrings.cv40 = this.cast("cv40")
+  def cv41: typingsSlinky.pdfkit.pdfkitStrings.cv41 = "cv41".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.cv41]
   @scala.inline
-  def cv41: typingsSlinky.pdfkit.pdfkitStrings.cv41 = this.cast("cv41")
+  def cv42: typingsSlinky.pdfkit.pdfkitStrings.cv42 = "cv42".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.cv42]
   @scala.inline
-  def cv42: typingsSlinky.pdfkit.pdfkitStrings.cv42 = this.cast("cv42")
+  def cv43: typingsSlinky.pdfkit.pdfkitStrings.cv43 = "cv43".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.cv43]
   @scala.inline
-  def cv43: typingsSlinky.pdfkit.pdfkitStrings.cv43 = this.cast("cv43")
+  def cv44: typingsSlinky.pdfkit.pdfkitStrings.cv44 = "cv44".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.cv44]
   @scala.inline
-  def cv44: typingsSlinky.pdfkit.pdfkitStrings.cv44 = this.cast("cv44")
+  def cv45: typingsSlinky.pdfkit.pdfkitStrings.cv45 = "cv45".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.cv45]
   @scala.inline
-  def cv45: typingsSlinky.pdfkit.pdfkitStrings.cv45 = this.cast("cv45")
+  def cv46: typingsSlinky.pdfkit.pdfkitStrings.cv46 = "cv46".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.cv46]
   @scala.inline
-  def cv46: typingsSlinky.pdfkit.pdfkitStrings.cv46 = this.cast("cv46")
+  def cv47: typingsSlinky.pdfkit.pdfkitStrings.cv47 = "cv47".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.cv47]
   @scala.inline
-  def cv47: typingsSlinky.pdfkit.pdfkitStrings.cv47 = this.cast("cv47")
+  def cv48: typingsSlinky.pdfkit.pdfkitStrings.cv48 = "cv48".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.cv48]
   @scala.inline
-  def cv48: typingsSlinky.pdfkit.pdfkitStrings.cv48 = this.cast("cv48")
+  def cv49: typingsSlinky.pdfkit.pdfkitStrings.cv49 = "cv49".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.cv49]
   @scala.inline
-  def cv49: typingsSlinky.pdfkit.pdfkitStrings.cv49 = this.cast("cv49")
+  def cv50: typingsSlinky.pdfkit.pdfkitStrings.cv50 = "cv50".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.cv50]
   @scala.inline
-  def cv50: typingsSlinky.pdfkit.pdfkitStrings.cv50 = this.cast("cv50")
+  def cv51: typingsSlinky.pdfkit.pdfkitStrings.cv51 = "cv51".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.cv51]
   @scala.inline
-  def cv51: typingsSlinky.pdfkit.pdfkitStrings.cv51 = this.cast("cv51")
+  def cv52: typingsSlinky.pdfkit.pdfkitStrings.cv52 = "cv52".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.cv52]
   @scala.inline
-  def cv52: typingsSlinky.pdfkit.pdfkitStrings.cv52 = this.cast("cv52")
+  def cv53: typingsSlinky.pdfkit.pdfkitStrings.cv53 = "cv53".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.cv53]
   @scala.inline
-  def cv53: typingsSlinky.pdfkit.pdfkitStrings.cv53 = this.cast("cv53")
+  def cv54: typingsSlinky.pdfkit.pdfkitStrings.cv54 = "cv54".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.cv54]
   @scala.inline
-  def cv54: typingsSlinky.pdfkit.pdfkitStrings.cv54 = this.cast("cv54")
+  def cv55: typingsSlinky.pdfkit.pdfkitStrings.cv55 = "cv55".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.cv55]
   @scala.inline
-  def cv55: typingsSlinky.pdfkit.pdfkitStrings.cv55 = this.cast("cv55")
+  def cv56: typingsSlinky.pdfkit.pdfkitStrings.cv56 = "cv56".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.cv56]
   @scala.inline
-  def cv56: typingsSlinky.pdfkit.pdfkitStrings.cv56 = this.cast("cv56")
+  def cv57: typingsSlinky.pdfkit.pdfkitStrings.cv57 = "cv57".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.cv57]
   @scala.inline
-  def cv57: typingsSlinky.pdfkit.pdfkitStrings.cv57 = this.cast("cv57")
+  def cv58: typingsSlinky.pdfkit.pdfkitStrings.cv58 = "cv58".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.cv58]
   @scala.inline
-  def cv58: typingsSlinky.pdfkit.pdfkitStrings.cv58 = this.cast("cv58")
+  def cv59: typingsSlinky.pdfkit.pdfkitStrings.cv59 = "cv59".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.cv59]
   @scala.inline
-  def cv59: typingsSlinky.pdfkit.pdfkitStrings.cv59 = this.cast("cv59")
+  def cv60: typingsSlinky.pdfkit.pdfkitStrings.cv60 = "cv60".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.cv60]
   @scala.inline
-  def cv60: typingsSlinky.pdfkit.pdfkitStrings.cv60 = this.cast("cv60")
+  def cv61: typingsSlinky.pdfkit.pdfkitStrings.cv61 = "cv61".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.cv61]
   @scala.inline
-  def cv61: typingsSlinky.pdfkit.pdfkitStrings.cv61 = this.cast("cv61")
+  def cv62: typingsSlinky.pdfkit.pdfkitStrings.cv62 = "cv62".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.cv62]
   @scala.inline
-  def cv62: typingsSlinky.pdfkit.pdfkitStrings.cv62 = this.cast("cv62")
+  def cv63: typingsSlinky.pdfkit.pdfkitStrings.cv63 = "cv63".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.cv63]
   @scala.inline
-  def cv63: typingsSlinky.pdfkit.pdfkitStrings.cv63 = this.cast("cv63")
+  def cv64: typingsSlinky.pdfkit.pdfkitStrings.cv64 = "cv64".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.cv64]
   @scala.inline
-  def cv64: typingsSlinky.pdfkit.pdfkitStrings.cv64 = this.cast("cv64")
+  def cv65: typingsSlinky.pdfkit.pdfkitStrings.cv65 = "cv65".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.cv65]
   @scala.inline
-  def cv65: typingsSlinky.pdfkit.pdfkitStrings.cv65 = this.cast("cv65")
+  def cv66: typingsSlinky.pdfkit.pdfkitStrings.cv66 = "cv66".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.cv66]
   @scala.inline
-  def cv66: typingsSlinky.pdfkit.pdfkitStrings.cv66 = this.cast("cv66")
+  def cv67: typingsSlinky.pdfkit.pdfkitStrings.cv67 = "cv67".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.cv67]
   @scala.inline
-  def cv67: typingsSlinky.pdfkit.pdfkitStrings.cv67 = this.cast("cv67")
+  def cv68: typingsSlinky.pdfkit.pdfkitStrings.cv68 = "cv68".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.cv68]
   @scala.inline
-  def cv68: typingsSlinky.pdfkit.pdfkitStrings.cv68 = this.cast("cv68")
+  def cv69: typingsSlinky.pdfkit.pdfkitStrings.cv69 = "cv69".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.cv69]
   @scala.inline
-  def cv69: typingsSlinky.pdfkit.pdfkitStrings.cv69 = this.cast("cv69")
+  def cv70: typingsSlinky.pdfkit.pdfkitStrings.cv70 = "cv70".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.cv70]
   @scala.inline
-  def cv70: typingsSlinky.pdfkit.pdfkitStrings.cv70 = this.cast("cv70")
+  def cv71: typingsSlinky.pdfkit.pdfkitStrings.cv71 = "cv71".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.cv71]
   @scala.inline
-  def cv71: typingsSlinky.pdfkit.pdfkitStrings.cv71 = this.cast("cv71")
+  def cv72: typingsSlinky.pdfkit.pdfkitStrings.cv72 = "cv72".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.cv72]
   @scala.inline
-  def cv72: typingsSlinky.pdfkit.pdfkitStrings.cv72 = this.cast("cv72")
+  def cv73: typingsSlinky.pdfkit.pdfkitStrings.cv73 = "cv73".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.cv73]
   @scala.inline
-  def cv73: typingsSlinky.pdfkit.pdfkitStrings.cv73 = this.cast("cv73")
+  def cv74: typingsSlinky.pdfkit.pdfkitStrings.cv74 = "cv74".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.cv74]
   @scala.inline
-  def cv74: typingsSlinky.pdfkit.pdfkitStrings.cv74 = this.cast("cv74")
+  def cv75: typingsSlinky.pdfkit.pdfkitStrings.cv75 = "cv75".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.cv75]
   @scala.inline
-  def cv75: typingsSlinky.pdfkit.pdfkitStrings.cv75 = this.cast("cv75")
+  def cv76: typingsSlinky.pdfkit.pdfkitStrings.cv76 = "cv76".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.cv76]
   @scala.inline
-  def cv76: typingsSlinky.pdfkit.pdfkitStrings.cv76 = this.cast("cv76")
+  def cv77: typingsSlinky.pdfkit.pdfkitStrings.cv77 = "cv77".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.cv77]
   @scala.inline
-  def cv77: typingsSlinky.pdfkit.pdfkitStrings.cv77 = this.cast("cv77")
+  def cv78: typingsSlinky.pdfkit.pdfkitStrings.cv78 = "cv78".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.cv78]
   @scala.inline
-  def cv78: typingsSlinky.pdfkit.pdfkitStrings.cv78 = this.cast("cv78")
+  def cv79: typingsSlinky.pdfkit.pdfkitStrings.cv79 = "cv79".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.cv79]
   @scala.inline
-  def cv79: typingsSlinky.pdfkit.pdfkitStrings.cv79 = this.cast("cv79")
+  def cv80: typingsSlinky.pdfkit.pdfkitStrings.cv80 = "cv80".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.cv80]
   @scala.inline
-  def cv80: typingsSlinky.pdfkit.pdfkitStrings.cv80 = this.cast("cv80")
+  def cv81: typingsSlinky.pdfkit.pdfkitStrings.cv81 = "cv81".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.cv81]
   @scala.inline
-  def cv81: typingsSlinky.pdfkit.pdfkitStrings.cv81 = this.cast("cv81")
+  def cv82: typingsSlinky.pdfkit.pdfkitStrings.cv82 = "cv82".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.cv82]
   @scala.inline
-  def cv82: typingsSlinky.pdfkit.pdfkitStrings.cv82 = this.cast("cv82")
+  def cv83: typingsSlinky.pdfkit.pdfkitStrings.cv83 = "cv83".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.cv83]
   @scala.inline
-  def cv83: typingsSlinky.pdfkit.pdfkitStrings.cv83 = this.cast("cv83")
+  def cv84: typingsSlinky.pdfkit.pdfkitStrings.cv84 = "cv84".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.cv84]
   @scala.inline
-  def cv84: typingsSlinky.pdfkit.pdfkitStrings.cv84 = this.cast("cv84")
+  def cv85: typingsSlinky.pdfkit.pdfkitStrings.cv85 = "cv85".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.cv85]
   @scala.inline
-  def cv85: typingsSlinky.pdfkit.pdfkitStrings.cv85 = this.cast("cv85")
+  def cv86: typingsSlinky.pdfkit.pdfkitStrings.cv86 = "cv86".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.cv86]
   @scala.inline
-  def cv86: typingsSlinky.pdfkit.pdfkitStrings.cv86 = this.cast("cv86")
+  def cv87: typingsSlinky.pdfkit.pdfkitStrings.cv87 = "cv87".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.cv87]
   @scala.inline
-  def cv87: typingsSlinky.pdfkit.pdfkitStrings.cv87 = this.cast("cv87")
+  def cv88: typingsSlinky.pdfkit.pdfkitStrings.cv88 = "cv88".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.cv88]
   @scala.inline
-  def cv88: typingsSlinky.pdfkit.pdfkitStrings.cv88 = this.cast("cv88")
+  def cv89: typingsSlinky.pdfkit.pdfkitStrings.cv89 = "cv89".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.cv89]
   @scala.inline
-  def cv89: typingsSlinky.pdfkit.pdfkitStrings.cv89 = this.cast("cv89")
+  def cv90: typingsSlinky.pdfkit.pdfkitStrings.cv90 = "cv90".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.cv90]
   @scala.inline
-  def cv90: typingsSlinky.pdfkit.pdfkitStrings.cv90 = this.cast("cv90")
+  def cv91: typingsSlinky.pdfkit.pdfkitStrings.cv91 = "cv91".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.cv91]
   @scala.inline
-  def cv91: typingsSlinky.pdfkit.pdfkitStrings.cv91 = this.cast("cv91")
+  def cv92: typingsSlinky.pdfkit.pdfkitStrings.cv92 = "cv92".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.cv92]
   @scala.inline
-  def cv92: typingsSlinky.pdfkit.pdfkitStrings.cv92 = this.cast("cv92")
+  def cv93: typingsSlinky.pdfkit.pdfkitStrings.cv93 = "cv93".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.cv93]
   @scala.inline
-  def cv93: typingsSlinky.pdfkit.pdfkitStrings.cv93 = this.cast("cv93")
+  def cv94: typingsSlinky.pdfkit.pdfkitStrings.cv94 = "cv94".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.cv94]
   @scala.inline
-  def cv94: typingsSlinky.pdfkit.pdfkitStrings.cv94 = this.cast("cv94")
+  def cv95: typingsSlinky.pdfkit.pdfkitStrings.cv95 = "cv95".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.cv95]
   @scala.inline
-  def cv95: typingsSlinky.pdfkit.pdfkitStrings.cv95 = this.cast("cv95")
+  def cv96: typingsSlinky.pdfkit.pdfkitStrings.cv96 = "cv96".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.cv96]
   @scala.inline
-  def cv96: typingsSlinky.pdfkit.pdfkitStrings.cv96 = this.cast("cv96")
+  def cv97: typingsSlinky.pdfkit.pdfkitStrings.cv97 = "cv97".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.cv97]
   @scala.inline
-  def cv97: typingsSlinky.pdfkit.pdfkitStrings.cv97 = this.cast("cv97")
+  def cv98: typingsSlinky.pdfkit.pdfkitStrings.cv98 = "cv98".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.cv98]
   @scala.inline
-  def cv98: typingsSlinky.pdfkit.pdfkitStrings.cv98 = this.cast("cv98")
+  def cv99: typingsSlinky.pdfkit.pdfkitStrings.cv99 = "cv99".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.cv99]
   @scala.inline
-  def cv99: typingsSlinky.pdfkit.pdfkitStrings.cv99 = this.cast("cv99")
+  def dist: typingsSlinky.pdfkit.pdfkitStrings.dist = "dist".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.dist]
   @scala.inline
-  def dist: typingsSlinky.pdfkit.pdfkitStrings.dist = this.cast("dist")
+  def dlig: typingsSlinky.pdfkit.pdfkitStrings.dlig = "dlig".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.dlig]
   @scala.inline
-  def dlig: typingsSlinky.pdfkit.pdfkitStrings.dlig = this.cast("dlig")
+  def dnom: typingsSlinky.pdfkit.pdfkitStrings.dnom = "dnom".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.dnom]
   @scala.inline
-  def dnom: typingsSlinky.pdfkit.pdfkitStrings.dnom = this.cast("dnom")
+  def dtls: typingsSlinky.pdfkit.pdfkitStrings.dtls = "dtls".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.dtls]
   @scala.inline
-  def dtls: typingsSlinky.pdfkit.pdfkitStrings.dtls = this.cast("dtls")
+  def expt: typingsSlinky.pdfkit.pdfkitStrings.expt = "expt".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.expt]
   @scala.inline
-  def expt: typingsSlinky.pdfkit.pdfkitStrings.expt = this.cast("expt")
+  def falt: typingsSlinky.pdfkit.pdfkitStrings.falt = "falt".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.falt]
   @scala.inline
-  def falt: typingsSlinky.pdfkit.pdfkitStrings.falt = this.cast("falt")
+  def fin2: typingsSlinky.pdfkit.pdfkitStrings.fin2 = "fin2".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.fin2]
   @scala.inline
-  def fin2: typingsSlinky.pdfkit.pdfkitStrings.fin2 = this.cast("fin2")
+  def fin3: typingsSlinky.pdfkit.pdfkitStrings.fin3 = "fin3".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.fin3]
   @scala.inline
-  def fin3: typingsSlinky.pdfkit.pdfkitStrings.fin3 = this.cast("fin3")
+  def fina: typingsSlinky.pdfkit.pdfkitStrings.fina = "fina".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.fina]
   @scala.inline
-  def fina: typingsSlinky.pdfkit.pdfkitStrings.fina = this.cast("fina")
+  def flac: typingsSlinky.pdfkit.pdfkitStrings.flac = "flac".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.flac]
   @scala.inline
-  def flac: typingsSlinky.pdfkit.pdfkitStrings.flac = this.cast("flac")
+  def frac: typingsSlinky.pdfkit.pdfkitStrings.frac = "frac".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.frac]
   @scala.inline
-  def frac: typingsSlinky.pdfkit.pdfkitStrings.frac = this.cast("frac")
+  def fwid: typingsSlinky.pdfkit.pdfkitStrings.fwid = "fwid".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.fwid]
   @scala.inline
-  def fwid: typingsSlinky.pdfkit.pdfkitStrings.fwid = this.cast("fwid")
+  def half: typingsSlinky.pdfkit.pdfkitStrings.half = "half".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.half]
   @scala.inline
-  def half: typingsSlinky.pdfkit.pdfkitStrings.half = this.cast("half")
+  def haln: typingsSlinky.pdfkit.pdfkitStrings.haln = "haln".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.haln]
   @scala.inline
-  def haln: typingsSlinky.pdfkit.pdfkitStrings.haln = this.cast("haln")
+  def halt: typingsSlinky.pdfkit.pdfkitStrings.halt = "halt".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.halt]
   @scala.inline
-  def halt: typingsSlinky.pdfkit.pdfkitStrings.halt = this.cast("halt")
+  def hist: typingsSlinky.pdfkit.pdfkitStrings.hist = "hist".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.hist]
   @scala.inline
-  def hist: typingsSlinky.pdfkit.pdfkitStrings.hist = this.cast("hist")
+  def hkna: typingsSlinky.pdfkit.pdfkitStrings.hkna = "hkna".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.hkna]
   @scala.inline
-  def hkna: typingsSlinky.pdfkit.pdfkitStrings.hkna = this.cast("hkna")
+  def hlig: typingsSlinky.pdfkit.pdfkitStrings.hlig = "hlig".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.hlig]
   @scala.inline
-  def hlig: typingsSlinky.pdfkit.pdfkitStrings.hlig = this.cast("hlig")
+  def hngl: typingsSlinky.pdfkit.pdfkitStrings.hngl = "hngl".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.hngl]
   @scala.inline
-  def hngl: typingsSlinky.pdfkit.pdfkitStrings.hngl = this.cast("hngl")
+  def hojo: typingsSlinky.pdfkit.pdfkitStrings.hojo = "hojo".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.hojo]
   @scala.inline
-  def hojo: typingsSlinky.pdfkit.pdfkitStrings.hojo = this.cast("hojo")
+  def hwid: typingsSlinky.pdfkit.pdfkitStrings.hwid = "hwid".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.hwid]
   @scala.inline
-  def hwid: typingsSlinky.pdfkit.pdfkitStrings.hwid = this.cast("hwid")
+  def init: typingsSlinky.pdfkit.pdfkitStrings.init = "init".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.init]
   @scala.inline
-  def init: typingsSlinky.pdfkit.pdfkitStrings.init = this.cast("init")
+  def isol: typingsSlinky.pdfkit.pdfkitStrings.isol = "isol".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.isol]
   @scala.inline
-  def isol: typingsSlinky.pdfkit.pdfkitStrings.isol = this.cast("isol")
+  def ital: typingsSlinky.pdfkit.pdfkitStrings.ital = "ital".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.ital]
   @scala.inline
-  def ital: typingsSlinky.pdfkit.pdfkitStrings.ital = this.cast("ital")
+  def jalt: typingsSlinky.pdfkit.pdfkitStrings.jalt = "jalt".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.jalt]
   @scala.inline
-  def jalt: typingsSlinky.pdfkit.pdfkitStrings.jalt = this.cast("jalt")
+  def jp04: typingsSlinky.pdfkit.pdfkitStrings.jp04 = "jp04".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.jp04]
   @scala.inline
-  def jp04: typingsSlinky.pdfkit.pdfkitStrings.jp04 = this.cast("jp04")
+  def jp78: typingsSlinky.pdfkit.pdfkitStrings.jp78 = "jp78".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.jp78]
   @scala.inline
-  def jp78: typingsSlinky.pdfkit.pdfkitStrings.jp78 = this.cast("jp78")
+  def jp83: typingsSlinky.pdfkit.pdfkitStrings.jp83 = "jp83".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.jp83]
   @scala.inline
-  def jp83: typingsSlinky.pdfkit.pdfkitStrings.jp83 = this.cast("jp83")
+  def jp90: typingsSlinky.pdfkit.pdfkitStrings.jp90 = "jp90".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.jp90]
   @scala.inline
-  def jp90: typingsSlinky.pdfkit.pdfkitStrings.jp90 = this.cast("jp90")
+  def kern: typingsSlinky.pdfkit.pdfkitStrings.kern = "kern".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.kern]
   @scala.inline
-  def kern: typingsSlinky.pdfkit.pdfkitStrings.kern = this.cast("kern")
+  def lfbd: typingsSlinky.pdfkit.pdfkitStrings.lfbd = "lfbd".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.lfbd]
   @scala.inline
-  def lfbd: typingsSlinky.pdfkit.pdfkitStrings.lfbd = this.cast("lfbd")
+  def liga: typingsSlinky.pdfkit.pdfkitStrings.liga = "liga".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.liga]
   @scala.inline
-  def liga: typingsSlinky.pdfkit.pdfkitStrings.liga = this.cast("liga")
+  def ljmo: typingsSlinky.pdfkit.pdfkitStrings.ljmo = "ljmo".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.ljmo]
   @scala.inline
-  def ljmo: typingsSlinky.pdfkit.pdfkitStrings.ljmo = this.cast("ljmo")
+  def lnum: typingsSlinky.pdfkit.pdfkitStrings.lnum = "lnum".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.lnum]
   @scala.inline
-  def lnum: typingsSlinky.pdfkit.pdfkitStrings.lnum = this.cast("lnum")
+  def locl: typingsSlinky.pdfkit.pdfkitStrings.locl = "locl".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.locl]
   @scala.inline
-  def locl: typingsSlinky.pdfkit.pdfkitStrings.locl = this.cast("locl")
+  def ltra: typingsSlinky.pdfkit.pdfkitStrings.ltra = "ltra".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.ltra]
   @scala.inline
-  def ltra: typingsSlinky.pdfkit.pdfkitStrings.ltra = this.cast("ltra")
+  def ltrm: typingsSlinky.pdfkit.pdfkitStrings.ltrm = "ltrm".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.ltrm]
   @scala.inline
-  def ltrm: typingsSlinky.pdfkit.pdfkitStrings.ltrm = this.cast("ltrm")
+  def mark: typingsSlinky.pdfkit.pdfkitStrings.mark = "mark".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.mark]
   @scala.inline
-  def mark: typingsSlinky.pdfkit.pdfkitStrings.mark = this.cast("mark")
+  def med2: typingsSlinky.pdfkit.pdfkitStrings.med2 = "med2".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.med2]
   @scala.inline
-  def med2: typingsSlinky.pdfkit.pdfkitStrings.med2 = this.cast("med2")
+  def medi: typingsSlinky.pdfkit.pdfkitStrings.medi = "medi".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.medi]
   @scala.inline
-  def medi: typingsSlinky.pdfkit.pdfkitStrings.medi = this.cast("medi")
+  def mgrk: typingsSlinky.pdfkit.pdfkitStrings.mgrk = "mgrk".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.mgrk]
   @scala.inline
-  def mgrk: typingsSlinky.pdfkit.pdfkitStrings.mgrk = this.cast("mgrk")
+  def mkmk: typingsSlinky.pdfkit.pdfkitStrings.mkmk = "mkmk".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.mkmk]
   @scala.inline
-  def mkmk: typingsSlinky.pdfkit.pdfkitStrings.mkmk = this.cast("mkmk")
+  def mset: typingsSlinky.pdfkit.pdfkitStrings.mset = "mset".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.mset]
   @scala.inline
-  def mset: typingsSlinky.pdfkit.pdfkitStrings.mset = this.cast("mset")
+  def nalt: typingsSlinky.pdfkit.pdfkitStrings.nalt = "nalt".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.nalt]
   @scala.inline
-  def nalt: typingsSlinky.pdfkit.pdfkitStrings.nalt = this.cast("nalt")
+  def nlck: typingsSlinky.pdfkit.pdfkitStrings.nlck = "nlck".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.nlck]
   @scala.inline
-  def nlck: typingsSlinky.pdfkit.pdfkitStrings.nlck = this.cast("nlck")
+  def nukt: typingsSlinky.pdfkit.pdfkitStrings.nukt = "nukt".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.nukt]
   @scala.inline
-  def nukt: typingsSlinky.pdfkit.pdfkitStrings.nukt = this.cast("nukt")
+  def numr: typingsSlinky.pdfkit.pdfkitStrings.numr = "numr".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.numr]
   @scala.inline
-  def numr: typingsSlinky.pdfkit.pdfkitStrings.numr = this.cast("numr")
+  def onum: typingsSlinky.pdfkit.pdfkitStrings.onum = "onum".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.onum]
   @scala.inline
-  def onum: typingsSlinky.pdfkit.pdfkitStrings.onum = this.cast("onum")
+  def opbd: typingsSlinky.pdfkit.pdfkitStrings.opbd = "opbd".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.opbd]
   @scala.inline
-  def opbd: typingsSlinky.pdfkit.pdfkitStrings.opbd = this.cast("opbd")
+  def ordn: typingsSlinky.pdfkit.pdfkitStrings.ordn = "ordn".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.ordn]
   @scala.inline
-  def ordn: typingsSlinky.pdfkit.pdfkitStrings.ordn = this.cast("ordn")
+  def ornm: typingsSlinky.pdfkit.pdfkitStrings.ornm = "ornm".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.ornm]
   @scala.inline
-  def ornm: typingsSlinky.pdfkit.pdfkitStrings.ornm = this.cast("ornm")
+  def palt: typingsSlinky.pdfkit.pdfkitStrings.palt = "palt".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.palt]
   @scala.inline
-  def palt: typingsSlinky.pdfkit.pdfkitStrings.palt = this.cast("palt")
+  def pcap: typingsSlinky.pdfkit.pdfkitStrings.pcap = "pcap".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.pcap]
   @scala.inline
-  def pcap: typingsSlinky.pdfkit.pdfkitStrings.pcap = this.cast("pcap")
+  def pkna: typingsSlinky.pdfkit.pdfkitStrings.pkna = "pkna".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.pkna]
   @scala.inline
-  def pkna: typingsSlinky.pdfkit.pdfkitStrings.pkna = this.cast("pkna")
+  def pnum: typingsSlinky.pdfkit.pdfkitStrings.pnum = "pnum".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.pnum]
   @scala.inline
-  def pnum: typingsSlinky.pdfkit.pdfkitStrings.pnum = this.cast("pnum")
+  def pref: typingsSlinky.pdfkit.pdfkitStrings.pref = "pref".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.pref]
   @scala.inline
-  def pref: typingsSlinky.pdfkit.pdfkitStrings.pref = this.cast("pref")
+  def pres: typingsSlinky.pdfkit.pdfkitStrings.pres = "pres".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.pres]
   @scala.inline
-  def pres: typingsSlinky.pdfkit.pdfkitStrings.pres = this.cast("pres")
+  def pstf: typingsSlinky.pdfkit.pdfkitStrings.pstf = "pstf".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.pstf]
   @scala.inline
-  def pstf: typingsSlinky.pdfkit.pdfkitStrings.pstf = this.cast("pstf")
+  def psts: typingsSlinky.pdfkit.pdfkitStrings.psts = "psts".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.psts]
   @scala.inline
-  def psts: typingsSlinky.pdfkit.pdfkitStrings.psts = this.cast("psts")
+  def pwid: typingsSlinky.pdfkit.pdfkitStrings.pwid = "pwid".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.pwid]
   @scala.inline
-  def pwid: typingsSlinky.pdfkit.pdfkitStrings.pwid = this.cast("pwid")
+  def qwid: typingsSlinky.pdfkit.pdfkitStrings.qwid = "qwid".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.qwid]
   @scala.inline
-  def qwid: typingsSlinky.pdfkit.pdfkitStrings.qwid = this.cast("qwid")
+  def rand: typingsSlinky.pdfkit.pdfkitStrings.rand = "rand".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.rand]
   @scala.inline
-  def rand: typingsSlinky.pdfkit.pdfkitStrings.rand = this.cast("rand")
+  def rclt: typingsSlinky.pdfkit.pdfkitStrings.rclt = "rclt".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.rclt]
   @scala.inline
-  def rclt: typingsSlinky.pdfkit.pdfkitStrings.rclt = this.cast("rclt")
+  def rkrf: typingsSlinky.pdfkit.pdfkitStrings.rkrf = "rkrf".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.rkrf]
   @scala.inline
-  def rkrf: typingsSlinky.pdfkit.pdfkitStrings.rkrf = this.cast("rkrf")
+  def rlig: typingsSlinky.pdfkit.pdfkitStrings.rlig = "rlig".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.rlig]
   @scala.inline
-  def rlig: typingsSlinky.pdfkit.pdfkitStrings.rlig = this.cast("rlig")
+  def rphf: typingsSlinky.pdfkit.pdfkitStrings.rphf = "rphf".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.rphf]
   @scala.inline
-  def rphf: typingsSlinky.pdfkit.pdfkitStrings.rphf = this.cast("rphf")
+  def rtbd: typingsSlinky.pdfkit.pdfkitStrings.rtbd = "rtbd".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.rtbd]
   @scala.inline
-  def rtbd: typingsSlinky.pdfkit.pdfkitStrings.rtbd = this.cast("rtbd")
+  def rtla: typingsSlinky.pdfkit.pdfkitStrings.rtla = "rtla".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.rtla]
   @scala.inline
-  def rtla: typingsSlinky.pdfkit.pdfkitStrings.rtla = this.cast("rtla")
+  def rtlm: typingsSlinky.pdfkit.pdfkitStrings.rtlm = "rtlm".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.rtlm]
   @scala.inline
-  def rtlm: typingsSlinky.pdfkit.pdfkitStrings.rtlm = this.cast("rtlm")
+  def ruby: typingsSlinky.pdfkit.pdfkitStrings.ruby = "ruby".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.ruby]
   @scala.inline
-  def ruby: typingsSlinky.pdfkit.pdfkitStrings.ruby = this.cast("ruby")
+  def rvrn: typingsSlinky.pdfkit.pdfkitStrings.rvrn = "rvrn".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.rvrn]
   @scala.inline
-  def rvrn: typingsSlinky.pdfkit.pdfkitStrings.rvrn = this.cast("rvrn")
+  def salt: typingsSlinky.pdfkit.pdfkitStrings.salt = "salt".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.salt]
   @scala.inline
-  def salt: typingsSlinky.pdfkit.pdfkitStrings.salt = this.cast("salt")
+  def sinf: typingsSlinky.pdfkit.pdfkitStrings.sinf = "sinf".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.sinf]
   @scala.inline
-  def sinf: typingsSlinky.pdfkit.pdfkitStrings.sinf = this.cast("sinf")
+  def size: typingsSlinky.pdfkit.pdfkitStrings.size = "size".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.size]
   @scala.inline
-  def size: typingsSlinky.pdfkit.pdfkitStrings.size = this.cast("size")
+  def smcp: typingsSlinky.pdfkit.pdfkitStrings.smcp = "smcp".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.smcp]
   @scala.inline
-  def smcp: typingsSlinky.pdfkit.pdfkitStrings.smcp = this.cast("smcp")
+  def smpl: typingsSlinky.pdfkit.pdfkitStrings.smpl = "smpl".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.smpl]
   @scala.inline
-  def smpl: typingsSlinky.pdfkit.pdfkitStrings.smpl = this.cast("smpl")
+  def ss01: typingsSlinky.pdfkit.pdfkitStrings.ss01 = "ss01".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.ss01]
   @scala.inline
-  def ss01: typingsSlinky.pdfkit.pdfkitStrings.ss01 = this.cast("ss01")
+  def ss02: typingsSlinky.pdfkit.pdfkitStrings.ss02 = "ss02".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.ss02]
   @scala.inline
-  def ss02: typingsSlinky.pdfkit.pdfkitStrings.ss02 = this.cast("ss02")
+  def ss03: typingsSlinky.pdfkit.pdfkitStrings.ss03 = "ss03".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.ss03]
   @scala.inline
-  def ss03: typingsSlinky.pdfkit.pdfkitStrings.ss03 = this.cast("ss03")
+  def ss04: typingsSlinky.pdfkit.pdfkitStrings.ss04 = "ss04".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.ss04]
   @scala.inline
-  def ss04: typingsSlinky.pdfkit.pdfkitStrings.ss04 = this.cast("ss04")
+  def ss05: typingsSlinky.pdfkit.pdfkitStrings.ss05 = "ss05".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.ss05]
   @scala.inline
-  def ss05: typingsSlinky.pdfkit.pdfkitStrings.ss05 = this.cast("ss05")
+  def ss06: typingsSlinky.pdfkit.pdfkitStrings.ss06 = "ss06".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.ss06]
   @scala.inline
-  def ss06: typingsSlinky.pdfkit.pdfkitStrings.ss06 = this.cast("ss06")
+  def ss07: typingsSlinky.pdfkit.pdfkitStrings.ss07 = "ss07".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.ss07]
   @scala.inline
-  def ss07: typingsSlinky.pdfkit.pdfkitStrings.ss07 = this.cast("ss07")
+  def ss08: typingsSlinky.pdfkit.pdfkitStrings.ss08 = "ss08".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.ss08]
   @scala.inline
-  def ss08: typingsSlinky.pdfkit.pdfkitStrings.ss08 = this.cast("ss08")
+  def ss09: typingsSlinky.pdfkit.pdfkitStrings.ss09 = "ss09".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.ss09]
   @scala.inline
-  def ss09: typingsSlinky.pdfkit.pdfkitStrings.ss09 = this.cast("ss09")
+  def ss10: typingsSlinky.pdfkit.pdfkitStrings.ss10 = "ss10".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.ss10]
   @scala.inline
-  def ss10: typingsSlinky.pdfkit.pdfkitStrings.ss10 = this.cast("ss10")
+  def ss11: typingsSlinky.pdfkit.pdfkitStrings.ss11 = "ss11".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.ss11]
   @scala.inline
-  def ss11: typingsSlinky.pdfkit.pdfkitStrings.ss11 = this.cast("ss11")
+  def ss12: typingsSlinky.pdfkit.pdfkitStrings.ss12 = "ss12".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.ss12]
   @scala.inline
-  def ss12: typingsSlinky.pdfkit.pdfkitStrings.ss12 = this.cast("ss12")
+  def ss13: typingsSlinky.pdfkit.pdfkitStrings.ss13 = "ss13".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.ss13]
   @scala.inline
-  def ss13: typingsSlinky.pdfkit.pdfkitStrings.ss13 = this.cast("ss13")
+  def ss14: typingsSlinky.pdfkit.pdfkitStrings.ss14 = "ss14".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.ss14]
   @scala.inline
-  def ss14: typingsSlinky.pdfkit.pdfkitStrings.ss14 = this.cast("ss14")
+  def ss15: typingsSlinky.pdfkit.pdfkitStrings.ss15 = "ss15".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.ss15]
   @scala.inline
-  def ss15: typingsSlinky.pdfkit.pdfkitStrings.ss15 = this.cast("ss15")
+  def ss16: typingsSlinky.pdfkit.pdfkitStrings.ss16 = "ss16".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.ss16]
   @scala.inline
-  def ss16: typingsSlinky.pdfkit.pdfkitStrings.ss16 = this.cast("ss16")
+  def ss17: typingsSlinky.pdfkit.pdfkitStrings.ss17 = "ss17".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.ss17]
   @scala.inline
-  def ss17: typingsSlinky.pdfkit.pdfkitStrings.ss17 = this.cast("ss17")
+  def ss18: typingsSlinky.pdfkit.pdfkitStrings.ss18 = "ss18".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.ss18]
   @scala.inline
-  def ss18: typingsSlinky.pdfkit.pdfkitStrings.ss18 = this.cast("ss18")
+  def ss19: typingsSlinky.pdfkit.pdfkitStrings.ss19 = "ss19".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.ss19]
   @scala.inline
-  def ss19: typingsSlinky.pdfkit.pdfkitStrings.ss19 = this.cast("ss19")
+  def ss20: typingsSlinky.pdfkit.pdfkitStrings.ss20 = "ss20".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.ss20]
   @scala.inline
-  def ss20: typingsSlinky.pdfkit.pdfkitStrings.ss20 = this.cast("ss20")
+  def ssty: typingsSlinky.pdfkit.pdfkitStrings.ssty = "ssty".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.ssty]
   @scala.inline
-  def ssty: typingsSlinky.pdfkit.pdfkitStrings.ssty = this.cast("ssty")
+  def stch: typingsSlinky.pdfkit.pdfkitStrings.stch = "stch".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.stch]
   @scala.inline
-  def stch: typingsSlinky.pdfkit.pdfkitStrings.stch = this.cast("stch")
+  def subs: typingsSlinky.pdfkit.pdfkitStrings.subs = "subs".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.subs]
   @scala.inline
-  def subs: typingsSlinky.pdfkit.pdfkitStrings.subs = this.cast("subs")
+  def sups: typingsSlinky.pdfkit.pdfkitStrings.sups = "sups".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.sups]
   @scala.inline
-  def sups: typingsSlinky.pdfkit.pdfkitStrings.sups = this.cast("sups")
+  def swsh: typingsSlinky.pdfkit.pdfkitStrings.swsh = "swsh".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.swsh]
   @scala.inline
-  def swsh: typingsSlinky.pdfkit.pdfkitStrings.swsh = this.cast("swsh")
+  def titl: typingsSlinky.pdfkit.pdfkitStrings.titl = "titl".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.titl]
   @scala.inline
-  def titl: typingsSlinky.pdfkit.pdfkitStrings.titl = this.cast("titl")
+  def tjmo: typingsSlinky.pdfkit.pdfkitStrings.tjmo = "tjmo".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.tjmo]
   @scala.inline
-  def tjmo: typingsSlinky.pdfkit.pdfkitStrings.tjmo = this.cast("tjmo")
+  def tnam: typingsSlinky.pdfkit.pdfkitStrings.tnam = "tnam".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.tnam]
   @scala.inline
-  def tnam: typingsSlinky.pdfkit.pdfkitStrings.tnam = this.cast("tnam")
+  def tnum: typingsSlinky.pdfkit.pdfkitStrings.tnum = "tnum".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.tnum]
   @scala.inline
-  def tnum: typingsSlinky.pdfkit.pdfkitStrings.tnum = this.cast("tnum")
+  def trad: typingsSlinky.pdfkit.pdfkitStrings.trad = "trad".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.trad]
   @scala.inline
-  def trad: typingsSlinky.pdfkit.pdfkitStrings.trad = this.cast("trad")
+  def twid: typingsSlinky.pdfkit.pdfkitStrings.twid = "twid".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.twid]
   @scala.inline
-  def twid: typingsSlinky.pdfkit.pdfkitStrings.twid = this.cast("twid")
+  def unic: typingsSlinky.pdfkit.pdfkitStrings.unic = "unic".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.unic]
   @scala.inline
-  def unic: typingsSlinky.pdfkit.pdfkitStrings.unic = this.cast("unic")
+  def valt: typingsSlinky.pdfkit.pdfkitStrings.valt = "valt".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.valt]
   @scala.inline
-  def valt: typingsSlinky.pdfkit.pdfkitStrings.valt = this.cast("valt")
+  def vatu: typingsSlinky.pdfkit.pdfkitStrings.vatu = "vatu".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.vatu]
   @scala.inline
-  def vatu: typingsSlinky.pdfkit.pdfkitStrings.vatu = this.cast("vatu")
+  def vert: typingsSlinky.pdfkit.pdfkitStrings.vert = "vert".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.vert]
   @scala.inline
-  def vert: typingsSlinky.pdfkit.pdfkitStrings.vert = this.cast("vert")
+  def vhal: typingsSlinky.pdfkit.pdfkitStrings.vhal = "vhal".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.vhal]
   @scala.inline
-  def vhal: typingsSlinky.pdfkit.pdfkitStrings.vhal = this.cast("vhal")
+  def vjmo: typingsSlinky.pdfkit.pdfkitStrings.vjmo = "vjmo".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.vjmo]
   @scala.inline
-  def vjmo: typingsSlinky.pdfkit.pdfkitStrings.vjmo = this.cast("vjmo")
+  def vkna: typingsSlinky.pdfkit.pdfkitStrings.vkna = "vkna".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.vkna]
   @scala.inline
-  def vkna: typingsSlinky.pdfkit.pdfkitStrings.vkna = this.cast("vkna")
+  def vkrn: typingsSlinky.pdfkit.pdfkitStrings.vkrn = "vkrn".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.vkrn]
   @scala.inline
-  def vkrn: typingsSlinky.pdfkit.pdfkitStrings.vkrn = this.cast("vkrn")
+  def vpal: typingsSlinky.pdfkit.pdfkitStrings.vpal = "vpal".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.vpal]
   @scala.inline
-  def vpal: typingsSlinky.pdfkit.pdfkitStrings.vpal = this.cast("vpal")
+  def vrt2: typingsSlinky.pdfkit.pdfkitStrings.vrt2 = "vrt2".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.vrt2]
   @scala.inline
-  def vrt2: typingsSlinky.pdfkit.pdfkitStrings.vrt2 = this.cast("vrt2")
+  def vrtr: typingsSlinky.pdfkit.pdfkitStrings.vrtr = "vrtr".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.vrtr]
   @scala.inline
-  def vrtr: typingsSlinky.pdfkit.pdfkitStrings.vrtr = this.cast("vrtr")
-  @scala.inline
-  def zero: typingsSlinky.pdfkit.pdfkitStrings.zero = this.cast("zero")
+  def zero: typingsSlinky.pdfkit.pdfkitStrings.zero = "zero".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.zero]
 }
 

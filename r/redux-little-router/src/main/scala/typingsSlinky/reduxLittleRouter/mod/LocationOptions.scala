@@ -4,18 +4,49 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait LocationOptions extends js.Object {
-  var persistQuery: js.UndefOr[Boolean] = js.undefined
-  var updateRoutes: js.UndefOr[Boolean] = js.undefined
+  var persistQuery: js.UndefOr[Boolean] = js.native
+  var updateRoutes: js.UndefOr[Boolean] = js.native
 }
 
 object LocationOptions {
   @scala.inline
-  def apply(persistQuery: js.UndefOr[Boolean] = js.undefined, updateRoutes: js.UndefOr[Boolean] = js.undefined): LocationOptions = {
+  def apply(): LocationOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(persistQuery)) __obj.updateDynamic("persistQuery")(persistQuery.asInstanceOf[js.Any])
-    if (!js.isUndefined(updateRoutes)) __obj.updateDynamic("updateRoutes")(updateRoutes.asInstanceOf[js.Any])
     __obj.asInstanceOf[LocationOptions]
   }
+  @scala.inline
+  implicit class LocationOptionsOps[Self <: LocationOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPersistQuery(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("persistQuery")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPersistQuery: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("persistQuery")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUpdateRoutes(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateRoutes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUpdateRoutes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateRoutes")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

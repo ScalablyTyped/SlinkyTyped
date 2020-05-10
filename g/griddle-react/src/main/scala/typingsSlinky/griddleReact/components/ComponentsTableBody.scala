@@ -1,32 +1,34 @@
 package typingsSlinky.griddleReact.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.griddleReact.mod.components.TableBody
 import typingsSlinky.griddleReact.mod.components.TableBodyProps
+import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ComponentsTableBody
-  extends ExternalComponentWithAttributesWithRefType[tag.type, TableBody] {
+object ComponentsTableBody {
   @JSImport("griddle-react", "components.TableBody")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, style */
-  def apply(Row: js.Any = null, rowIds: js.Array[Double] = null, _overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, TableBody] = {
-    val __obj = js.Dynamic.literal()
-    if (Row != null) __obj.updateDynamic("Row")(Row.asInstanceOf[js.Any])
-    if (rowIds != null) __obj.updateDynamic("rowIds")(rowIds.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, TableBody] {
+    @scala.inline
+    def Row(value: js.Any): this.type = set("Row", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def rowIds(value: js.Array[Double]): this.type = set("rowIds", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, TableBody] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.griddleReact.mod.components.TableBody](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = TableBodyProps
+  
+  def withProps(p: TableBodyProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: ComponentsTableBody.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

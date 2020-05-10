@@ -21,5 +21,6 @@ trait HTMLOptGroupElement extends HTMLElement {
 
 @JSGlobal("HTMLOptGroupElement")
 @js.native
-object HTMLOptGroupElement extends Instantiable0[HTMLOptGroupElement]
+object HTMLOptGroupElement
+  extends Instantiable0[org.scalajs.dom.raw.HTMLOptGroupElement]
 

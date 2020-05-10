@@ -1,16 +1,21 @@
 package typingsSlinky.reactSelect.components
 
-import typingsSlinky.reactSelect.mod.default
+import typingsSlinky.reactSelect.selectMod.Props
+import typingsSlinky.reactSelect.selectMod.default
+import typingsSlinky.reactSelect.stateManagerMod.StateProps
+import typingsSlinky.reactSelect.typesMod.OptionTypeBase
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactSelect
-  extends `SharedApply_<intersection>1647742208`[default[js.Any, js.Any]] {
+object ReactSelect {
   @JSImport("react-select", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps[OptionType <: OptionTypeBase, T <: default[OptionType]](
+    p: StateProps[Props[OptionType]] with typingsSlinky.reactSelect.stateManagerMod.Props[OptionType] with Props[OptionType]
+  ): `SharedBuilder_<intersection>_1462585424`[typingsSlinky.reactSelect.mod.default[js.Any, js.Any], OptionType, T] = new `SharedBuilder_<intersection>_1462585424`[typingsSlinky.reactSelect.mod.default[js.Any, js.Any], OptionType, T](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make[OptionType <: OptionTypeBase, T <: default[OptionType]](companion: ReactSelect.type): `SharedBuilder_<intersection>_1462585424`[typingsSlinky.reactSelect.mod.default[js.Any, js.Any], OptionType, T] = new `SharedBuilder_<intersection>_1462585424`[typingsSlinky.reactSelect.mod.default[js.Any, js.Any], OptionType, T](js.Array(this.component, js.Dictionary.empty))()
 }
 

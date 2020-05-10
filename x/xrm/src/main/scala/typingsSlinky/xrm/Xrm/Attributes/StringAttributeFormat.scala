@@ -20,18 +20,16 @@ trait StringAttributeFormat extends js.Object
 
 object StringAttributeFormat {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def email: typingsSlinky.xrm.xrmStrings.email = "email".asInstanceOf[typingsSlinky.xrm.xrmStrings.email]
   @scala.inline
-  def email: typingsSlinky.xrm.xrmStrings.email = this.cast("email")
+  def phone: typingsSlinky.xrm.xrmStrings.phone = "phone".asInstanceOf[typingsSlinky.xrm.xrmStrings.phone]
   @scala.inline
-  def phone: typingsSlinky.xrm.xrmStrings.phone = this.cast("phone")
+  def text: typingsSlinky.xrm.xrmStrings.text = "text".asInstanceOf[typingsSlinky.xrm.xrmStrings.text]
   @scala.inline
-  def text: typingsSlinky.xrm.xrmStrings.text = this.cast("text")
+  def textarea: typingsSlinky.xrm.xrmStrings.textarea = "textarea".asInstanceOf[typingsSlinky.xrm.xrmStrings.textarea]
   @scala.inline
-  def textarea: typingsSlinky.xrm.xrmStrings.textarea = this.cast("textarea")
+  def tickersymbol: typingsSlinky.xrm.xrmStrings.tickersymbol = "tickersymbol".asInstanceOf[typingsSlinky.xrm.xrmStrings.tickersymbol]
   @scala.inline
-  def tickersymbol: typingsSlinky.xrm.xrmStrings.tickersymbol = this.cast("tickersymbol")
-  @scala.inline
-  def url: typingsSlinky.xrm.xrmStrings.url = this.cast("url")
+  def url: typingsSlinky.xrm.xrmStrings.url = "url".asInstanceOf[typingsSlinky.xrm.xrmStrings.url]
 }
 

@@ -1,6 +1,5 @@
 package typingsSlinky.winrt.Windows.Globalization
 
-import typingsSlinky.winrt.Windows.Foundation.Collections.IVectorView
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,20 +8,6 @@ import scala.scalajs.js.annotation._
 @js.native
 class GeographicRegion () extends IGeographicRegion {
   def this(geographicRegionCode: String) = this()
-  /* CompleteClass */
-  override var code: String = js.native
-  /* CompleteClass */
-  override var codeThreeDigit: String = js.native
-  /* CompleteClass */
-  override var codeThreeLetter: String = js.native
-  /* CompleteClass */
-  override var codeTwoLetter: String = js.native
-  /* CompleteClass */
-  override var currenciesInUse: IVectorView[String] = js.native
-  /* CompleteClass */
-  override var displayName: String = js.native
-  /* CompleteClass */
-  override var nativeName: String = js.native
 }
 
 /* static members */

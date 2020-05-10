@@ -4,41 +4,32 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait OptionsWithUri
   extends CoreOptions
      with Options {
-  var uri: String
+  var uri: String = js.native
 }
 
 object OptionsWithUri {
   @scala.inline
-  def apply(
-    uri: String,
-    body: String | js.Object = null,
-    forever: js.UndefOr[Boolean] = js.undefined,
-    gzip: js.UndefOr[Boolean] = js.undefined,
-    headers: Headers = null,
-    json: js.Any = null,
-    method: String = null,
-    multipart: js.Array[RequestPart] = null,
-    proxy: String = null,
-    qs: js.Any = null,
-    timeout: Int | Double = null,
-    useQuerystring: js.UndefOr[Boolean] = js.undefined
-  ): OptionsWithUri = {
+  def apply(uri: String): OptionsWithUri = {
     val __obj = js.Dynamic.literal(uri = uri.asInstanceOf[js.Any])
-    if (body != null) __obj.updateDynamic("body")(body.asInstanceOf[js.Any])
-    if (!js.isUndefined(forever)) __obj.updateDynamic("forever")(forever.asInstanceOf[js.Any])
-    if (!js.isUndefined(gzip)) __obj.updateDynamic("gzip")(gzip.asInstanceOf[js.Any])
-    if (headers != null) __obj.updateDynamic("headers")(headers.asInstanceOf[js.Any])
-    if (json != null) __obj.updateDynamic("json")(json.asInstanceOf[js.Any])
-    if (method != null) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
-    if (multipart != null) __obj.updateDynamic("multipart")(multipart.asInstanceOf[js.Any])
-    if (proxy != null) __obj.updateDynamic("proxy")(proxy.asInstanceOf[js.Any])
-    if (qs != null) __obj.updateDynamic("qs")(qs.asInstanceOf[js.Any])
-    if (timeout != null) __obj.updateDynamic("timeout")(timeout.asInstanceOf[js.Any])
-    if (!js.isUndefined(useQuerystring)) __obj.updateDynamic("useQuerystring")(useQuerystring.asInstanceOf[js.Any])
     __obj.asInstanceOf[OptionsWithUri]
   }
+  @scala.inline
+  implicit class OptionsWithUriOps[Self <: OptionsWithUri] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withUri(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("uri")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

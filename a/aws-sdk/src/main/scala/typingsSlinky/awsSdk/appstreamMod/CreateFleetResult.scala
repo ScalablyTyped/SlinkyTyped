@@ -14,10 +14,29 @@ trait CreateFleetResult extends js.Object {
 
 object CreateFleetResult {
   @scala.inline
-  def apply(Fleet: Fleet = null): CreateFleetResult = {
+  def apply(): CreateFleetResult = {
     val __obj = js.Dynamic.literal()
-    if (Fleet != null) __obj.updateDynamic("Fleet")(Fleet.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateFleetResult]
   }
+  @scala.inline
+  implicit class CreateFleetResultOps[Self <: CreateFleetResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFleet(value: Fleet): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Fleet")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFleet: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Fleet")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

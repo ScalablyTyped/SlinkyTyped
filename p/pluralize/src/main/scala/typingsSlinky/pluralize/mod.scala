@@ -1,6 +1,5 @@
 package typingsSlinky.pluralize
 
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,7 +24,7 @@ object mod extends js.Object {
     * @param replacement
     */
   def addPluralRule(rule: String, replacemant: String): Unit = js.native
-  def addPluralRule(rule: RegExp, replacemant: String): Unit = js.native
+  def addPluralRule(rule: js.RegExp, replacemant: String): Unit = js.native
   /**
     * Add a singularization rule to the collection.
     *
@@ -33,14 +32,14 @@ object mod extends js.Object {
     * @param replacement
     */
   def addSingularRule(rule: String, replacemant: String): Unit = js.native
-  def addSingularRule(rule: RegExp, replacemant: String): Unit = js.native
+  def addSingularRule(rule: js.RegExp, replacemant: String): Unit = js.native
   /**
     * Add an uncountable word rule.
     *
     * @param word
     */
   def addUncountableRule(word: String): Unit = js.native
-  def addUncountableRule(word: RegExp): Unit = js.native
+  def addUncountableRule(word: js.RegExp): Unit = js.native
   /**
     * Test if provided word is plural.
     *

@@ -130,6 +130,6 @@ object ^ extends js.Object {
   def install(scope: js.Any): Unit = js.native
   def setup(element: String): Unit = js.native
   def setup(element: Size): Unit = js.native
-  def setup(element: typingsSlinky.std.HTMLCanvasElement): Unit = js.native
+  def setup(element: HTMLCanvasElement): Unit = js.native
 }
 

@@ -26,3 +26,43 @@ trait WorkbookProtectionLoadOptions extends js.Object {
   var `protected`: js.UndefOr[Boolean] = js.native
 }
 
+object WorkbookProtectionLoadOptions {
+  @scala.inline
+  def apply(): WorkbookProtectionLoadOptions = {
+    val __obj = js.Dynamic.literal()
+    __obj.asInstanceOf[WorkbookProtectionLoadOptions]
+  }
+  @scala.inline
+  implicit class WorkbookProtectionLoadOptionsOps[Self <: WorkbookProtectionLoadOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def with$all(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$all")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without$all: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$all")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProtected(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("protected")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProtected: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("protected")(js.undefined)
+        ret
+    }
+  }
+  
+}
+

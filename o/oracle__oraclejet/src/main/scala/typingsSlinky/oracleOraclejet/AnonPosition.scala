@@ -15,12 +15,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonPosition extends js.Object {
-  var converter: js.Object
-  var position: inside | outside
-  var rendered: off | on
-  var scaling: none | thousand | million | billion | trillion | quadrillion | auto
-  var style: js.Object
+  var converter: js.Object = js.native
+  var position: inside | outside = js.native
+  var rendered: off | on = js.native
+  var scaling: none | thousand | million | billion | trillion | quadrillion | auto = js.native
+  var style: js.Object = js.native
 }
 
 object AnonPosition {
@@ -33,8 +34,45 @@ object AnonPosition {
     style: js.Object
   ): AnonPosition = {
     val __obj = js.Dynamic.literal(converter = converter.asInstanceOf[js.Any], position = position.asInstanceOf[js.Any], rendered = rendered.asInstanceOf[js.Any], scaling = scaling.asInstanceOf[js.Any], style = style.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[AnonPosition]
   }
+  @scala.inline
+  implicit class AnonPositionOps[Self <: AnonPosition] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConverter(value: js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("converter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPosition(value: inside | outside): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRendered(value: off | on): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rendered")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withScaling(value: none | thousand | million | billion | trillion | quadrillion | auto): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scaling")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStyle(value: js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -18,10 +18,35 @@ trait TrialComponentArtifact extends js.Object {
 
 object TrialComponentArtifact {
   @scala.inline
-  def apply(Value: TrialComponentArtifactValue, MediaType: MediaType = null): TrialComponentArtifact = {
+  def apply(Value: TrialComponentArtifactValue): TrialComponentArtifact = {
     val __obj = js.Dynamic.literal(Value = Value.asInstanceOf[js.Any])
-    if (MediaType != null) __obj.updateDynamic("MediaType")(MediaType.asInstanceOf[js.Any])
     __obj.asInstanceOf[TrialComponentArtifact]
   }
+  @scala.inline
+  implicit class TrialComponentArtifactOps[Self <: TrialComponentArtifact] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withValue(value: TrialComponentArtifactValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Value")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMediaType(value: MediaType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MediaType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMediaType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MediaType")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

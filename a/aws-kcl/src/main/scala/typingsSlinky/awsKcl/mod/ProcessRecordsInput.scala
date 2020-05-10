@@ -1,0 +1,46 @@
+package typingsSlinky.awsKcl.mod
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait ProcessRecordsInput extends CheckpointInput {
+  var millisBehindLatest: js.UndefOr[Double] = js.native
+  var records: js.Array[Record] = js.native
+}
+
+object ProcessRecordsInput {
+  @scala.inline
+  def apply(checkpointer: Checkpointer, records: js.Array[Record]): ProcessRecordsInput = {
+    val __obj = js.Dynamic.literal(checkpointer = checkpointer.asInstanceOf[js.Any], records = records.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ProcessRecordsInput]
+  }
+  @scala.inline
+  implicit class ProcessRecordsInputOps[Self <: ProcessRecordsInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRecords(value: js.Array[Record]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("records")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMillisBehindLatest(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("millisBehindLatest")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMillisBehindLatest: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("millisBehindLatest")(js.undefined)
+        ret
+    }
+  }
+  
+}
+

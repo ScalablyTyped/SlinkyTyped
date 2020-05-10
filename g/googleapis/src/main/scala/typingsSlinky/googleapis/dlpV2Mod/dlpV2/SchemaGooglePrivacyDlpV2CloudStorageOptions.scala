@@ -45,22 +45,89 @@ trait SchemaGooglePrivacyDlpV2CloudStorageOptions extends js.Object {
 
 object SchemaGooglePrivacyDlpV2CloudStorageOptions {
   @scala.inline
-  def apply(
-    bytesLimitPerFile: String = null,
-    bytesLimitPerFilePercent: Int | Double = null,
-    fileSet: SchemaGooglePrivacyDlpV2FileSet = null,
-    fileTypes: js.Array[String] = null,
-    filesLimitPercent: Int | Double = null,
-    sampleMethod: String = null
-  ): SchemaGooglePrivacyDlpV2CloudStorageOptions = {
+  def apply(): SchemaGooglePrivacyDlpV2CloudStorageOptions = {
     val __obj = js.Dynamic.literal()
-    if (bytesLimitPerFile != null) __obj.updateDynamic("bytesLimitPerFile")(bytesLimitPerFile.asInstanceOf[js.Any])
-    if (bytesLimitPerFilePercent != null) __obj.updateDynamic("bytesLimitPerFilePercent")(bytesLimitPerFilePercent.asInstanceOf[js.Any])
-    if (fileSet != null) __obj.updateDynamic("fileSet")(fileSet.asInstanceOf[js.Any])
-    if (fileTypes != null) __obj.updateDynamic("fileTypes")(fileTypes.asInstanceOf[js.Any])
-    if (filesLimitPercent != null) __obj.updateDynamic("filesLimitPercent")(filesLimitPercent.asInstanceOf[js.Any])
-    if (sampleMethod != null) __obj.updateDynamic("sampleMethod")(sampleMethod.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGooglePrivacyDlpV2CloudStorageOptions]
   }
+  @scala.inline
+  implicit class SchemaGooglePrivacyDlpV2CloudStorageOptionsOps[Self <: SchemaGooglePrivacyDlpV2CloudStorageOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBytesLimitPerFile(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bytesLimitPerFile")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBytesLimitPerFile: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bytesLimitPerFile")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBytesLimitPerFilePercent(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bytesLimitPerFilePercent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBytesLimitPerFilePercent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bytesLimitPerFilePercent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFileSet(value: SchemaGooglePrivacyDlpV2FileSet): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fileSet")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFileSet: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fileSet")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFileTypes(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fileTypes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFileTypes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fileTypes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFilesLimitPercent(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filesLimitPercent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFilesLimitPercent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filesLimitPercent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSampleMethod(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sampleMethod")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSampleMethod: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sampleMethod")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

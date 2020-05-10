@@ -19,44 +19,116 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait keyword extends js.Object {
-  def ansi16(from: KEYWORD_): ANSI16_
-  def ansi256(from: KEYWORD_): ANSI256_
-  def apple(from: KEYWORD_): APPLE_
-  def cmyk(from: KEYWORD_): CMYK_
-  def gray(from: KEYWORD_): GRAY_
-  def hcg(from: KEYWORD_): HCG_
-  def hex(from: KEYWORD_): HEX_
-  def hsl(from: KEYWORD_): HSL_
-  def hsv(from: KEYWORD_): HSV_
-  def hwb(from: KEYWORD_): HWB_
-  def lab(from: KEYWORD_): LAB_
-  def lch(from: KEYWORD_): LCH_
-  def rgb(from: KEYWORD_): RGB_
-  def xyz(from: KEYWORD_): XYZ_
+  def ansi16(from: KEYWORD_): ANSI16_ = js.native
+  def ansi256(from: KEYWORD_): ANSI256_ = js.native
+  def apple(from: KEYWORD_): APPLE_ = js.native
+  def cmyk(from: KEYWORD_): CMYK_ = js.native
+  def gray(from: KEYWORD_): GRAY_ = js.native
+  def hcg(from: KEYWORD_): HCG_ = js.native
+  def hex(from: KEYWORD_): HEX_ = js.native
+  def hsl(from: KEYWORD_): HSL_ = js.native
+  def hsv(from: KEYWORD_): HSV_ = js.native
+  def hwb(from: KEYWORD_): HWB_ = js.native
+  def lab(from: KEYWORD_): LAB_ = js.native
+  def lch(from: KEYWORD_): LCH_ = js.native
+  def rgb(from: KEYWORD_): RGB_ = js.native
+  def xyz(from: KEYWORD_): XYZ_ = js.native
 }
 
 object keyword {
   @scala.inline
-  def apply(
-    ansi16: KEYWORD_ => ANSI16_,
-    ansi256: KEYWORD_ => ANSI256_,
-    apple: KEYWORD_ => APPLE_,
-    cmyk: KEYWORD_ => CMYK_,
-    gray: KEYWORD_ => GRAY_,
-    hcg: KEYWORD_ => HCG_,
-    hex: KEYWORD_ => HEX_,
-    hsl: KEYWORD_ => HSL_,
-    hsv: KEYWORD_ => HSV_,
-    hwb: KEYWORD_ => HWB_,
-    lab: KEYWORD_ => LAB_,
-    lch: KEYWORD_ => LCH_,
-    rgb: KEYWORD_ => RGB_,
-    xyz: KEYWORD_ => XYZ_
-  ): keyword = {
-    val __obj = js.Dynamic.literal(ansi16 = js.Any.fromFunction1(ansi16), ansi256 = js.Any.fromFunction1(ansi256), apple = js.Any.fromFunction1(apple), cmyk = js.Any.fromFunction1(cmyk), gray = js.Any.fromFunction1(gray), hcg = js.Any.fromFunction1(hcg), hex = js.Any.fromFunction1(hex), hsl = js.Any.fromFunction1(hsl), hsv = js.Any.fromFunction1(hsv), hwb = js.Any.fromFunction1(hwb), lab = js.Any.fromFunction1(lab), lch = js.Any.fromFunction1(lch), rgb = js.Any.fromFunction1(rgb), xyz = js.Any.fromFunction1(xyz))
-  
-    __obj.asInstanceOf[keyword]
+  implicit class keywordOps[Self <: keyword] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAnsi16(value: KEYWORD_ => ANSI16_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ansi16")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withAnsi256(value: KEYWORD_ => ANSI256_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ansi256")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withApple(value: KEYWORD_ => APPLE_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("apple")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withCmyk(value: KEYWORD_ => CMYK_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cmyk")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGray(value: KEYWORD_ => GRAY_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gray")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withHcg(value: KEYWORD_ => HCG_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hcg")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withHex(value: KEYWORD_ => HEX_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hex")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withHsl(value: KEYWORD_ => HSL_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hsl")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withHsv(value: KEYWORD_ => HSV_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hsv")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withHwb(value: KEYWORD_ => HWB_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hwb")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withLab(value: KEYWORD_ => LAB_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lab")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withLch(value: KEYWORD_ => LCH_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lch")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withRgb(value: KEYWORD_ => RGB_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rgb")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withXyz(value: KEYWORD_ => XYZ_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("xyz")(js.Any.fromFunction1(value))
+        ret
+    }
   }
+  
 }
 

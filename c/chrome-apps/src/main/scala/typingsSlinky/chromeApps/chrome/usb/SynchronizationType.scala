@@ -1,8 +1,8 @@
 package typingsSlinky.chromeApps.chrome.usb
 
-import typingsSlinky.chromeApps.chromeAppsStrings.adaptive
-import typingsSlinky.chromeApps.chromeAppsStrings.asynchronous
-import typingsSlinky.chromeApps.chromeAppsStrings.synchronous
+import typingsSlinky.chromeApps.chromeAppsStrings.adaptive_
+import typingsSlinky.chromeApps.chromeAppsStrings.asynchronous_
+import typingsSlinky.chromeApps.chromeAppsStrings.synchronous_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,8 +10,8 @@ import scala.scalajs.js.annotation._
 @JSGlobal("chrome.usb.SynchronizationType")
 @js.native
 object SynchronizationType extends js.Object {
-  var ADAPTIVE: adaptive = js.native
-  var ASYNCHRONOUS: asynchronous = js.native
-  var SYNCHRONOUS: synchronous = js.native
+  var ADAPTIVE: adaptive_ = js.native
+  var ASYNCHRONOUS: asynchronous_ = js.native
+  var SYNCHRONOUS: synchronous_ = js.native
 }
 

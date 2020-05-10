@@ -8,8 +8,9 @@ import scala.scalajs.js.annotation._
 
 /** The SVGNumberList defines a list of SVGNumber objects. */
 @js.native
-trait SVGNumberList extends /* index */ NumberDictionary[SVGNumber] {
-  @JSName(scala.scalajs.js.Symbol.iterator)
+trait SVGNumberList
+  extends /* index */ NumberDictionary[org.scalajs.dom.raw.SVGNumber] {
+  @JSName(js.Symbol.iterator)
   var iterator: js.Function0[IterableIterator[org.scalajs.dom.raw.SVGNumber]] = js.native
   val length: Double = js.native
   val numberOfItems: Double = js.native
@@ -24,5 +25,6 @@ trait SVGNumberList extends /* index */ NumberDictionary[SVGNumber] {
 
 @JSGlobal("SVGNumberList")
 @js.native
-object SVGNumberList extends Instantiable0[SVGNumberList]
+object SVGNumberList
+  extends Instantiable0[org.scalajs.dom.raw.SVGNumberList]
 

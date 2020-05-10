@@ -14,10 +14,29 @@ trait SchemaGoogleCloudMlV1Config extends js.Object {
 
 object SchemaGoogleCloudMlV1Config {
   @scala.inline
-  def apply(tpuServiceAccount: String = null): SchemaGoogleCloudMlV1Config = {
+  def apply(): SchemaGoogleCloudMlV1Config = {
     val __obj = js.Dynamic.literal()
-    if (tpuServiceAccount != null) __obj.updateDynamic("tpuServiceAccount")(tpuServiceAccount.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudMlV1Config]
   }
+  @scala.inline
+  implicit class SchemaGoogleCloudMlV1ConfigOps[Self <: SchemaGoogleCloudMlV1Config] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withTpuServiceAccount(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tpuServiceAccount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTpuServiceAccount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tpuServiceAccount")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,15 +1,21 @@
 package typingsSlinky.reactNativeLinearGradient.components
 
+import typingsSlinky.reactNativeLinearGradient.mod.LinearGradientProps
 import typingsSlinky.reactNativeLinearGradient.mod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactNativeLinearGradient extends SharedApply_LinearGradientProps733843778[default] {
+object ReactNativeLinearGradient {
   @JSImport("react-native-linear-gradient", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: LinearGradientProps): SharedBuilder_LinearGradientProps1757348134[default] = new SharedBuilder_LinearGradientProps1757348134[default](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(colors: js.Array[String | Double]): SharedBuilder_LinearGradientProps1757348134[default] = {
+    val __props = js.Dynamic.literal(colors = colors.asInstanceOf[js.Any])
+    new SharedBuilder_LinearGradientProps1757348134[default](js.Array(this.component, __props.asInstanceOf[LinearGradientProps]))
+  }
 }
 

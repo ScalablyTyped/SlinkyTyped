@@ -17,38 +17,118 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonCloseIcon extends js.Object {
-  var closeIcon: js.UndefOr[String] = js.undefined
-  var direction: js.UndefOr[auto | up | down] = js.undefined
-  var icon: js.UndefOr[String] = js.undefined
-  var label: js.UndefOr[String] = js.undefined
-  var maxSpeedDialActionCount: js.UndefOr[Double] = js.undefined
+  var closeIcon: js.UndefOr[String] = js.native
+  var direction: js.UndefOr[auto | up | down] = js.native
+  var icon: js.UndefOr[String] = js.native
+  var label: js.UndefOr[String] = js.native
+  var maxSpeedDialActionCount: js.UndefOr[Double] = js.native
   var position: js.UndefOr[
     bottom | center | left | (`left bottom`) | (`left top`) | right | (`right bottom`) | (`right top`) | top | positionConfig | js.Function
-  ] = js.undefined
-  var shading: js.UndefOr[Boolean] = js.undefined
+  ] = js.native
+  var shading: js.UndefOr[Boolean] = js.native
 }
 
 object AnonCloseIcon {
   @scala.inline
-  def apply(
-    closeIcon: String = null,
-    direction: auto | up | down = null,
-    icon: String = null,
-    label: String = null,
-    maxSpeedDialActionCount: Int | Double = null,
-    position: bottom | center | left | (`left bottom`) | (`left top`) | right | (`right bottom`) | (`right top`) | top | positionConfig | js.Function = null,
-    shading: js.UndefOr[Boolean] = js.undefined
-  ): AnonCloseIcon = {
+  def apply(): AnonCloseIcon = {
     val __obj = js.Dynamic.literal()
-    if (closeIcon != null) __obj.updateDynamic("closeIcon")(closeIcon.asInstanceOf[js.Any])
-    if (direction != null) __obj.updateDynamic("direction")(direction.asInstanceOf[js.Any])
-    if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
-    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
-    if (maxSpeedDialActionCount != null) __obj.updateDynamic("maxSpeedDialActionCount")(maxSpeedDialActionCount.asInstanceOf[js.Any])
-    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
-    if (!js.isUndefined(shading)) __obj.updateDynamic("shading")(shading.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonCloseIcon]
   }
+  @scala.inline
+  implicit class AnonCloseIconOps[Self <: AnonCloseIcon] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCloseIcon(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("closeIcon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCloseIcon: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("closeIcon")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDirection(value: auto | up | down): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDirection: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIcon(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIcon: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxSpeedDialActionCount(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxSpeedDialActionCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxSpeedDialActionCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxSpeedDialActionCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPosition(
+      value: bottom | center | left | (`left bottom`) | (`left top`) | right | (`right bottom`) | (`right top`) | top | positionConfig | js.Function
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPosition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShading(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shading")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShading: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shading")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -10,8 +10,8 @@ import scala.scalajs.js.annotation._
 @JSImport("libsodium-wrappers-sumo", "crypto_onetimeauth_final")
 @js.native
 object cryptoOnetimeauthFinal extends js.Object {
-  def apply(state_address: StateAddress): scala.scalajs.js.typedarray.Uint8Array = js.native
+  def apply(state_address: StateAddress): js.typedarray.Uint8Array = js.native
   def apply(state_address: StateAddress, outputFormat: StringOutputFormat): String = js.native
-  def apply(state_address: StateAddress, outputFormat: Uint8ArrayOutputFormat): scala.scalajs.js.typedarray.Uint8Array = js.native
+  def apply(state_address: StateAddress, outputFormat: Uint8ArrayOutputFormat): js.typedarray.Uint8Array = js.native
 }
 

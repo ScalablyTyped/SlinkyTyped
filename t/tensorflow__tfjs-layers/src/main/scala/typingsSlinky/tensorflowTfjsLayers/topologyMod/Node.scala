@@ -1,8 +1,8 @@
 package typingsSlinky.tensorflowTfjsLayers.topologyMod
 
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank
-import typingsSlinky.tensorflowTfjsCore.mod.Tensor_
 import typingsSlinky.tensorflowTfjsCore.serializationMod.ConfigDict
+import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor
 import typingsSlinky.tensorflowTfjsLayers.distTypesMod.Kwargs
 import typingsSlinky.tensorflowTfjsLayers.kerasFormatCommonMod.Shape
 import scala.scalajs.js
@@ -22,7 +22,7 @@ class Node protected () extends js.Object {
     */
   var inboundLayers: js.Array[Layer] = js.native
   /** List of input masks (a mask can be a tensor, or null). */
-  var inputMasks: js.Array[Tensor_[Rank]] = js.native
+  var inputMasks: js.Array[Tensor[Rank]] = js.native
   /** List of input shape tuples. */
   var inputShapes: Shape | js.Array[Shape] = js.native
   /** List of input tensors. */
@@ -40,7 +40,7 @@ class Node protected () extends js.Object {
     */
   var outboundLayer: Layer = js.native
   /** List of output masks (a mask can be a tensor, or null). */
-  var outputMasks: js.Array[Tensor_[Rank]] = js.native
+  var outputMasks: js.Array[Tensor[Rank]] = js.native
   /** List of output shape tuples. */
   var outputShapes: Shape | js.Array[Shape] = js.native
   /** List of output tensors. */

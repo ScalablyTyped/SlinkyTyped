@@ -14,10 +14,29 @@ trait MaintenanceWindowTaskParameterValueExpression extends js.Object {
 
 object MaintenanceWindowTaskParameterValueExpression {
   @scala.inline
-  def apply(Values: MaintenanceWindowTaskParameterValueList = null): MaintenanceWindowTaskParameterValueExpression = {
+  def apply(): MaintenanceWindowTaskParameterValueExpression = {
     val __obj = js.Dynamic.literal()
-    if (Values != null) __obj.updateDynamic("Values")(Values.asInstanceOf[js.Any])
     __obj.asInstanceOf[MaintenanceWindowTaskParameterValueExpression]
   }
+  @scala.inline
+  implicit class MaintenanceWindowTaskParameterValueExpressionOps[Self <: MaintenanceWindowTaskParameterValueExpression] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withValues(value: MaintenanceWindowTaskParameterValueList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Values")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValues: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Values")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

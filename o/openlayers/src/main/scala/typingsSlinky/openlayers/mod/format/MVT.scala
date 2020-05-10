@@ -1,12 +1,11 @@
 package typingsSlinky.openlayers.mod.format
 
+import org.scalajs.dom.raw.Node
 import typingsSlinky.openlayers.mod.GlobalObject
 import typingsSlinky.openlayers.mod.olx.format.MVTOptions
 import typingsSlinky.openlayers.mod.olx.format.ReadOptions
 import typingsSlinky.openlayers.mod.proj.Projection
-import typingsSlinky.std.ArrayBuffer
 import typingsSlinky.std.Document_
-import typingsSlinky.std.Node
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -33,8 +32,8 @@ class MVT () extends Feature {
   def readFeatures(source: String, opt_options: ReadOptions): js.Array[typingsSlinky.openlayers.mod.Feature] = js.native
   def readFeatures(source: GlobalObject): js.Array[typingsSlinky.openlayers.mod.Feature] = js.native
   def readFeatures(source: GlobalObject, opt_options: ReadOptions): js.Array[typingsSlinky.openlayers.mod.Feature] = js.native
-  def readFeatures(source: ArrayBuffer): js.Array[typingsSlinky.openlayers.mod.Feature] = js.native
-  def readFeatures(source: ArrayBuffer, opt_options: ReadOptions): js.Array[typingsSlinky.openlayers.mod.Feature] = js.native
+  def readFeatures(source: js.typedarray.ArrayBuffer): js.Array[typingsSlinky.openlayers.mod.Feature] = js.native
+  def readFeatures(source: js.typedarray.ArrayBuffer, opt_options: ReadOptions): js.Array[typingsSlinky.openlayers.mod.Feature] = js.native
   /**
     * @inheritDoc
     * @api

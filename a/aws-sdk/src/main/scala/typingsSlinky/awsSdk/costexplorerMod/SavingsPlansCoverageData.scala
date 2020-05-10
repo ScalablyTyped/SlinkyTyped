@@ -26,18 +26,65 @@ trait SavingsPlansCoverageData extends js.Object {
 
 object SavingsPlansCoverageData {
   @scala.inline
-  def apply(
-    CoveragePercentage: GenericString = null,
-    OnDemandCost: GenericString = null,
-    SpendCoveredBySavingsPlans: GenericString = null,
-    TotalCost: GenericString = null
-  ): SavingsPlansCoverageData = {
+  def apply(): SavingsPlansCoverageData = {
     val __obj = js.Dynamic.literal()
-    if (CoveragePercentage != null) __obj.updateDynamic("CoveragePercentage")(CoveragePercentage.asInstanceOf[js.Any])
-    if (OnDemandCost != null) __obj.updateDynamic("OnDemandCost")(OnDemandCost.asInstanceOf[js.Any])
-    if (SpendCoveredBySavingsPlans != null) __obj.updateDynamic("SpendCoveredBySavingsPlans")(SpendCoveredBySavingsPlans.asInstanceOf[js.Any])
-    if (TotalCost != null) __obj.updateDynamic("TotalCost")(TotalCost.asInstanceOf[js.Any])
     __obj.asInstanceOf[SavingsPlansCoverageData]
   }
+  @scala.inline
+  implicit class SavingsPlansCoverageDataOps[Self <: SavingsPlansCoverageData] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCoveragePercentage(value: GenericString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CoveragePercentage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCoveragePercentage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CoveragePercentage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnDemandCost(value: GenericString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnDemandCost")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnDemandCost: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnDemandCost")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSpendCoveredBySavingsPlans(value: GenericString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SpendCoveredBySavingsPlans")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSpendCoveredBySavingsPlans: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SpendCoveredBySavingsPlans")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTotalCost(value: GenericString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TotalCost")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTotalCost: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TotalCost")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

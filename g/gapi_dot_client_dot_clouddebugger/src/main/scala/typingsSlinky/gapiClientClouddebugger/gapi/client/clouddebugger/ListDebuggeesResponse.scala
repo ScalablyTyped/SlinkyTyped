@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ListDebuggeesResponse extends js.Object {
   /**
     * List of debuggees accessible to the calling user.
@@ -11,15 +12,34 @@ trait ListDebuggeesResponse extends js.Object {
     * The `description` field is a human readable field provided by agents and
     * can be displayed to users.
     */
-  var debuggees: js.UndefOr[js.Array[Debuggee]] = js.undefined
+  var debuggees: js.UndefOr[js.Array[Debuggee]] = js.native
 }
 
 object ListDebuggeesResponse {
   @scala.inline
-  def apply(debuggees: js.Array[Debuggee] = null): ListDebuggeesResponse = {
+  def apply(): ListDebuggeesResponse = {
     val __obj = js.Dynamic.literal()
-    if (debuggees != null) __obj.updateDynamic("debuggees")(debuggees.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListDebuggeesResponse]
   }
+  @scala.inline
+  implicit class ListDebuggeesResponseOps[Self <: ListDebuggeesResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDebuggees(value: js.Array[Debuggee]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("debuggees")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDebuggees: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("debuggees")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

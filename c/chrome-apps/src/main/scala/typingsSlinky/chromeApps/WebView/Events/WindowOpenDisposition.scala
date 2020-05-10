@@ -18,20 +18,18 @@ trait WindowOpenDisposition extends js.Object
 
 object WindowOpenDisposition {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def current_tab: typingsSlinky.chromeApps.chromeAppsStrings.current_tab = "current_tab".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.current_tab]
   @scala.inline
-  def current_tab: typingsSlinky.chromeApps.chromeAppsStrings.current_tab = this.cast("current_tab")
+  def ignore: typingsSlinky.chromeApps.chromeAppsStrings.ignore = "ignore".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.ignore]
   @scala.inline
-  def ignore: typingsSlinky.chromeApps.chromeAppsStrings.ignore = this.cast("ignore")
+  def new_background_tab: typingsSlinky.chromeApps.chromeAppsStrings.new_background_tab = "new_background_tab".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.new_background_tab]
   @scala.inline
-  def new_background_tab: typingsSlinky.chromeApps.chromeAppsStrings.new_background_tab = this.cast("new_background_tab")
+  def new_foreground_tab: typingsSlinky.chromeApps.chromeAppsStrings.new_foreground_tab = "new_foreground_tab".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.new_foreground_tab]
   @scala.inline
-  def new_foreground_tab: typingsSlinky.chromeApps.chromeAppsStrings.new_foreground_tab = this.cast("new_foreground_tab")
+  def new_popup: typingsSlinky.chromeApps.chromeAppsStrings.new_popup = "new_popup".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.new_popup]
   @scala.inline
-  def new_popup: typingsSlinky.chromeApps.chromeAppsStrings.new_popup = this.cast("new_popup")
+  def new_window: typingsSlinky.chromeApps.chromeAppsStrings.new_window = "new_window".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.new_window]
   @scala.inline
-  def new_window: typingsSlinky.chromeApps.chromeAppsStrings.new_window = this.cast("new_window")
-  @scala.inline
-  def save_to_disk: typingsSlinky.chromeApps.chromeAppsStrings.save_to_disk = this.cast("save_to_disk")
+  def save_to_disk: typingsSlinky.chromeApps.chromeAppsStrings.save_to_disk = "save_to_disk".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.save_to_disk]
 }
 

@@ -17,7 +17,8 @@ trait PushManager extends js.Object {
 
 @JSGlobal("PushManager")
 @js.native
-object PushManager extends Instantiable0[PushManager] {
+object PushManager
+  extends Instantiable0[org.scalajs.dom.experimental.push.PushManager] {
   val supportedContentEncodings: js.Array[java.lang.String] = js.native
 }
 

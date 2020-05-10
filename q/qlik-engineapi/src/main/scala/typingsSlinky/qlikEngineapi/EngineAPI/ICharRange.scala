@@ -7,23 +7,43 @@ import scala.scalajs.js.annotation._
 /**
   * CharRange...
   */
+@js.native
 trait ICharRange extends js.Object {
   /*
     * Number of occurrences found
     */
-  var qCharCount: Double
+  var qCharCount: Double = js.native
   /**
     * Position of the first search occurrence
     */
-  var qCharPos: Double
+  var qCharPos: Double = js.native
 }
 
 object ICharRange {
   @scala.inline
   def apply(qCharCount: Double, qCharPos: Double): ICharRange = {
     val __obj = js.Dynamic.literal(qCharCount = qCharCount.asInstanceOf[js.Any], qCharPos = qCharPos.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[ICharRange]
   }
+  @scala.inline
+  implicit class ICharRangeOps[Self <: ICharRange] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withQCharCount(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("qCharCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withQCharPos(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("qCharPos")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

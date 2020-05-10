@@ -4,36 +4,114 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait DownloadOptions extends js.Object {
-  var chunkSizeIncrement: js.UndefOr[Double] = js.undefined
-  var end: js.UndefOr[js.Any] = js.undefined
-  var initialChunkSize: js.UndefOr[Double] = js.undefined
-  var maxChunkSize: js.UndefOr[Double] = js.undefined
-  var maxConnections: js.UndefOr[Double] = js.undefined
-  var returnCiphertext: js.UndefOr[Boolean] = js.undefined
-  var start: js.UndefOr[js.Any] = js.undefined
+  var chunkSizeIncrement: js.UndefOr[Double] = js.native
+  var end: js.UndefOr[js.Any] = js.native
+  var initialChunkSize: js.UndefOr[Double] = js.native
+  var maxChunkSize: js.UndefOr[Double] = js.native
+  var maxConnections: js.UndefOr[Double] = js.native
+  var returnCiphertext: js.UndefOr[Boolean] = js.native
+  var start: js.UndefOr[js.Any] = js.native
 }
 
 object DownloadOptions {
   @scala.inline
-  def apply(
-    chunkSizeIncrement: Int | Double = null,
-    end: js.Any = null,
-    initialChunkSize: Int | Double = null,
-    maxChunkSize: Int | Double = null,
-    maxConnections: Int | Double = null,
-    returnCiphertext: js.UndefOr[Boolean] = js.undefined,
-    start: js.Any = null
-  ): DownloadOptions = {
+  def apply(): DownloadOptions = {
     val __obj = js.Dynamic.literal()
-    if (chunkSizeIncrement != null) __obj.updateDynamic("chunkSizeIncrement")(chunkSizeIncrement.asInstanceOf[js.Any])
-    if (end != null) __obj.updateDynamic("end")(end.asInstanceOf[js.Any])
-    if (initialChunkSize != null) __obj.updateDynamic("initialChunkSize")(initialChunkSize.asInstanceOf[js.Any])
-    if (maxChunkSize != null) __obj.updateDynamic("maxChunkSize")(maxChunkSize.asInstanceOf[js.Any])
-    if (maxConnections != null) __obj.updateDynamic("maxConnections")(maxConnections.asInstanceOf[js.Any])
-    if (!js.isUndefined(returnCiphertext)) __obj.updateDynamic("returnCiphertext")(returnCiphertext.asInstanceOf[js.Any])
-    if (start != null) __obj.updateDynamic("start")(start.asInstanceOf[js.Any])
     __obj.asInstanceOf[DownloadOptions]
   }
+  @scala.inline
+  implicit class DownloadOptionsOps[Self <: DownloadOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withChunkSizeIncrement(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("chunkSizeIncrement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChunkSizeIncrement: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("chunkSizeIncrement")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnd(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("end")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnd: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("end")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInitialChunkSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initialChunkSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInitialChunkSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initialChunkSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxChunkSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxChunkSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxChunkSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxChunkSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxConnections(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxConnections")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxConnections: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxConnections")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReturnCiphertext(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("returnCiphertext")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReturnCiphertext: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("returnCiphertext")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStart(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStart: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -21,28 +21,26 @@ trait Types extends js.Object
 
 object Types {
   @scala.inline
-  def alternatives: typingsSlinky.joi.joiStrings.alternatives = this.cast("alternatives")
+  def alternatives: typingsSlinky.joi.joiStrings.alternatives = "alternatives".asInstanceOf[typingsSlinky.joi.joiStrings.alternatives]
   @scala.inline
-  def any: typingsSlinky.joi.joiStrings.any = this.cast("any")
+  def any: typingsSlinky.joi.joiStrings.any = "any".asInstanceOf[typingsSlinky.joi.joiStrings.any]
   @scala.inline
-  def array: typingsSlinky.joi.joiStrings.array = this.cast("array")
+  def array: typingsSlinky.joi.joiStrings.array = "array".asInstanceOf[typingsSlinky.joi.joiStrings.array]
   @scala.inline
-  def binary: typingsSlinky.joi.joiStrings.binary = this.cast("binary")
+  def binary: typingsSlinky.joi.joiStrings.binary = "binary".asInstanceOf[typingsSlinky.joi.joiStrings.binary]
   @scala.inline
-  def boolean: typingsSlinky.joi.joiStrings.boolean = this.cast("boolean")
+  def boolean: typingsSlinky.joi.joiStrings.boolean = "boolean".asInstanceOf[typingsSlinky.joi.joiStrings.boolean]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def date: typingsSlinky.joi.joiStrings.date = "date".asInstanceOf[typingsSlinky.joi.joiStrings.date]
   @scala.inline
-  def date: typingsSlinky.joi.joiStrings.date = this.cast("date")
+  def function: typingsSlinky.joi.joiStrings.function = "function".asInstanceOf[typingsSlinky.joi.joiStrings.function]
   @scala.inline
-  def function: typingsSlinky.joi.joiStrings.function = this.cast("function")
+  def `lazy`: typingsSlinky.joi.joiStrings.`lazy` = "lazy".asInstanceOf[typingsSlinky.joi.joiStrings.`lazy`]
   @scala.inline
-  def `lazy`: typingsSlinky.joi.joiStrings.`lazy` = this.cast("lazy")
+  def number: typingsSlinky.joi.joiStrings.number = "number".asInstanceOf[typingsSlinky.joi.joiStrings.number]
   @scala.inline
-  def number: typingsSlinky.joi.joiStrings.number = this.cast("number")
+  def `object`: typingsSlinky.joi.joiStrings.`object` = "object".asInstanceOf[typingsSlinky.joi.joiStrings.`object`]
   @scala.inline
-  def `object`: typingsSlinky.joi.joiStrings.`object` = this.cast("object")
-  @scala.inline
-  def string: typingsSlinky.joi.joiStrings.string = this.cast("string")
+  def string: typingsSlinky.joi.joiStrings.string = "string".asInstanceOf[typingsSlinky.joi.joiStrings.string]
 }
 

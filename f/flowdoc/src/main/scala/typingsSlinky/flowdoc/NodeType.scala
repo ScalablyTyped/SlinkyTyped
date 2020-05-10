@@ -19,24 +19,22 @@ trait NodeType extends js.Object
 
 object NodeType {
   @scala.inline
-  def DIAMOND: typingsSlinky.flowdoc.flowdocStrings.DIAMOND = this.cast("DIAMOND")
+  def DIAMOND: typingsSlinky.flowdoc.flowdocStrings.DIAMOND = "DIAMOND".asInstanceOf[typingsSlinky.flowdoc.flowdocStrings.DIAMOND]
   @scala.inline
-  def DOCUMENT: typingsSlinky.flowdoc.flowdocStrings.DOCUMENT = this.cast("DOCUMENT")
+  def DOCUMENT: typingsSlinky.flowdoc.flowdocStrings.DOCUMENT = "DOCUMENT".asInstanceOf[typingsSlinky.flowdoc.flowdocStrings.DOCUMENT]
   @scala.inline
-  def ELLIPSE: typingsSlinky.flowdoc.flowdocStrings.ELLIPSE = this.cast("ELLIPSE")
+  def ELLIPSE: typingsSlinky.flowdoc.flowdocStrings.ELLIPSE = "ELLIPSE".asInstanceOf[typingsSlinky.flowdoc.flowdocStrings.ELLIPSE]
   @scala.inline
-  def HOTSPOT: typingsSlinky.flowdoc.flowdocStrings.HOTSPOT = this.cast("HOTSPOT")
+  def HOTSPOT: typingsSlinky.flowdoc.flowdocStrings.HOTSPOT = "HOTSPOT".asInstanceOf[typingsSlinky.flowdoc.flowdocStrings.HOTSPOT]
   @scala.inline
-  def IMAGE: typingsSlinky.flowdoc.flowdocStrings.IMAGE = this.cast("IMAGE")
+  def IMAGE: typingsSlinky.flowdoc.flowdocStrings.IMAGE = "IMAGE".asInstanceOf[typingsSlinky.flowdoc.flowdocStrings.IMAGE]
   @scala.inline
-  def LAYER: typingsSlinky.flowdoc.flowdocStrings.LAYER = this.cast("LAYER")
+  def LAYER: typingsSlinky.flowdoc.flowdocStrings.LAYER = "LAYER".asInstanceOf[typingsSlinky.flowdoc.flowdocStrings.LAYER]
   @scala.inline
-  def PAGE: typingsSlinky.flowdoc.flowdocStrings.PAGE = this.cast("PAGE")
+  def PAGE: typingsSlinky.flowdoc.flowdocStrings.PAGE = "PAGE".asInstanceOf[typingsSlinky.flowdoc.flowdocStrings.PAGE]
   @scala.inline
-  def RECT: typingsSlinky.flowdoc.flowdocStrings.RECT = this.cast("RECT")
+  def RECT: typingsSlinky.flowdoc.flowdocStrings.RECT = "RECT".asInstanceOf[typingsSlinky.flowdoc.flowdocStrings.RECT]
   @scala.inline
-  def SCREEN: typingsSlinky.flowdoc.flowdocStrings.SCREEN = this.cast("SCREEN")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def SCREEN: typingsSlinky.flowdoc.flowdocStrings.SCREEN = "SCREEN".asInstanceOf[typingsSlinky.flowdoc.flowdocStrings.SCREEN]
 }
 

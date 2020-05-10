@@ -17,20 +17,18 @@ trait RequestMethod extends js.Object
 
 object RequestMethod {
   @scala.inline
-  def CONNECT: typingsSlinky.wegameApi.wegameApiStrings.CONNECT = this.cast("CONNECT")
+  def CONNECT: typingsSlinky.wegameApi.wegameApiStrings.CONNECT = "CONNECT".asInstanceOf[typingsSlinky.wegameApi.wegameApiStrings.CONNECT]
   @scala.inline
-  def DELETE: typingsSlinky.wegameApi.wegameApiStrings.DELETE = this.cast("DELETE")
+  def DELETE: typingsSlinky.wegameApi.wegameApiStrings.DELETE = "DELETE".asInstanceOf[typingsSlinky.wegameApi.wegameApiStrings.DELETE]
   @scala.inline
-  def GET: typingsSlinky.wegameApi.wegameApiStrings.GET = this.cast("GET")
+  def GET: typingsSlinky.wegameApi.wegameApiStrings.GET = "GET".asInstanceOf[typingsSlinky.wegameApi.wegameApiStrings.GET]
   @scala.inline
-  def HEAD: typingsSlinky.wegameApi.wegameApiStrings.HEAD = this.cast("HEAD")
+  def HEAD: typingsSlinky.wegameApi.wegameApiStrings.HEAD = "HEAD".asInstanceOf[typingsSlinky.wegameApi.wegameApiStrings.HEAD]
   @scala.inline
-  def POST: typingsSlinky.wegameApi.wegameApiStrings.POST = this.cast("POST")
+  def POST: typingsSlinky.wegameApi.wegameApiStrings.POST = "POST".asInstanceOf[typingsSlinky.wegameApi.wegameApiStrings.POST]
   @scala.inline
-  def PUT: typingsSlinky.wegameApi.wegameApiStrings.PUT = this.cast("PUT")
+  def PUT: typingsSlinky.wegameApi.wegameApiStrings.PUT = "PUT".asInstanceOf[typingsSlinky.wegameApi.wegameApiStrings.PUT]
   @scala.inline
-  def TRACE: typingsSlinky.wegameApi.wegameApiStrings.TRACE = this.cast("TRACE")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def TRACE: typingsSlinky.wegameApi.wegameApiStrings.TRACE = "TRACE".asInstanceOf[typingsSlinky.wegameApi.wegameApiStrings.TRACE]
 }
 

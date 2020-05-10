@@ -7,37 +7,38 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait File extends js.Object {
-  var base: String
-  val contents: Buffer
-  var cwd: String
-  var dir: String
-  var editorMode: String
-  var editorScope: String
-  var ext: String
-  var githubColor: String
-  var handle: String
-  var id: String
-  val isAsset: js.UndefOr[scala.Nothing] = js.undefined
-  var isBinary: Boolean
-  val isCollection: js.UndefOr[scala.Nothing] = js.undefined
-  val isComponent: js.UndefOr[scala.Nothing] = js.undefined
-  val isDoc: js.UndefOr[scala.Nothing] = js.undefined
-  val isFile: `true`
-  val isImage: Boolean
-  val isVariant: js.UndefOr[scala.Nothing] = js.undefined
-  var lang: String
-  var mime: String
-  var name: String
-  var path: String
-  var relPath: String
-  var stat: Stats | Null
-  def getContent(): js.Promise[String]
-  def getContentSync(): String
-  def getContext(): js.Any
-  def read(): js.Promise[String]
-  def readSync(): String
-  def toVinyl(): typingsSlinky.vinyl.mod.File
+  var base: String = js.native
+  val contents: Buffer = js.native
+  var cwd: String = js.native
+  var dir: String = js.native
+  var editorMode: String = js.native
+  var editorScope: String = js.native
+  var ext: String = js.native
+  var githubColor: String = js.native
+  var handle: String = js.native
+  var id: String = js.native
+  val isAsset: js.UndefOr[scala.Nothing] = js.native
+  var isBinary: Boolean = js.native
+  val isCollection: js.UndefOr[scala.Nothing] = js.native
+  val isComponent: js.UndefOr[scala.Nothing] = js.native
+  val isDoc: js.UndefOr[scala.Nothing] = js.native
+  val isFile: `true` = js.native
+  val isImage: Boolean = js.native
+  val isVariant: js.UndefOr[scala.Nothing] = js.native
+  var lang: String = js.native
+  var mime: String = js.native
+  var name: String = js.native
+  var path: String = js.native
+  var relPath: String = js.native
+  var stat: Stats | Null = js.native
+  def getContent(): js.Promise[String] = js.native
+  def getContentSync(): String = js.native
+  def getContext(): js.Any = js.native
+  def read(): js.Promise[String] = js.native
+  def readSync(): String = js.native
+  def toVinyl(): typingsSlinky.vinyl.mod.File = js.native
 }
 
 object File {
@@ -66,22 +67,234 @@ object File {
     read: () => js.Promise[String],
     readSync: () => String,
     relPath: String,
-    toVinyl: () => typingsSlinky.vinyl.mod.File,
-    isAsset: js.UndefOr[scala.Nothing] = js.undefined,
-    isCollection: js.UndefOr[scala.Nothing] = js.undefined,
-    isComponent: js.UndefOr[scala.Nothing] = js.undefined,
-    isDoc: js.UndefOr[scala.Nothing] = js.undefined,
-    isVariant: js.UndefOr[scala.Nothing] = js.undefined,
-    stat: Stats = null
+    toVinyl: () => typingsSlinky.vinyl.mod.File
   ): File = {
     val __obj = js.Dynamic.literal(base = base.asInstanceOf[js.Any], contents = contents.asInstanceOf[js.Any], cwd = cwd.asInstanceOf[js.Any], dir = dir.asInstanceOf[js.Any], editorMode = editorMode.asInstanceOf[js.Any], editorScope = editorScope.asInstanceOf[js.Any], ext = ext.asInstanceOf[js.Any], getContent = js.Any.fromFunction0(getContent), getContentSync = js.Any.fromFunction0(getContentSync), getContext = js.Any.fromFunction0(getContext), githubColor = githubColor.asInstanceOf[js.Any], handle = handle.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], isBinary = isBinary.asInstanceOf[js.Any], isFile = isFile.asInstanceOf[js.Any], isImage = isImage.asInstanceOf[js.Any], lang = lang.asInstanceOf[js.Any], mime = mime.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], path = path.asInstanceOf[js.Any], read = js.Any.fromFunction0(read), readSync = js.Any.fromFunction0(readSync), relPath = relPath.asInstanceOf[js.Any], toVinyl = js.Any.fromFunction0(toVinyl))
-    if (!js.isUndefined(isAsset)) __obj.updateDynamic("isAsset")(isAsset.asInstanceOf[js.Any])
-    if (!js.isUndefined(isCollection)) __obj.updateDynamic("isCollection")(isCollection.asInstanceOf[js.Any])
-    if (!js.isUndefined(isComponent)) __obj.updateDynamic("isComponent")(isComponent.asInstanceOf[js.Any])
-    if (!js.isUndefined(isDoc)) __obj.updateDynamic("isDoc")(isDoc.asInstanceOf[js.Any])
-    if (!js.isUndefined(isVariant)) __obj.updateDynamic("isVariant")(isVariant.asInstanceOf[js.Any])
-    if (stat != null) __obj.updateDynamic("stat")(stat.asInstanceOf[js.Any])
     __obj.asInstanceOf[File]
   }
+  @scala.inline
+  implicit class FileOps[Self <: File] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBase(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("base")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withContents(value: Buffer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contents")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCwd(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cwd")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDir(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dir")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEditorMode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("editorMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEditorScope(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("editorScope")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withExt(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ext")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGetContent(value: () => js.Promise[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getContent")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetContentSync(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getContentSync")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetContext(value: () => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getContext")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGithubColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("githubColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHandle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("handle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsBinary(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isBinary")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsFile(value: `true`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isFile")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsImage(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isImage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLang(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lang")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMime(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPath(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRead(value: () => js.Promise[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("read")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withReadSync(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("readSync")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withRelPath(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("relPath")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withToVinyl(value: () => typingsSlinky.vinyl.mod.File): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toVinyl")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withIsAsset(value: scala.Nothing): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isAsset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsAsset: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isAsset")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsCollection(value: scala.Nothing): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isCollection")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsCollection: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isCollection")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsComponent(value: scala.Nothing): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isComponent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsComponent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isComponent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsDoc(value: scala.Nothing): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isDoc")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsDoc: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isDoc")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsVariant(value: scala.Nothing): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isVariant")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsVariant: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isVariant")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStat(value: Stats): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stat")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStatNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stat")(null)
+        ret
+    }
+  }
+  
 }
 

@@ -5,24 +5,62 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait CollapsibleEvents extends js.Object {
-  var collapse: js.UndefOr[JQueryMobileEvent] = js.undefined
-  var create: js.UndefOr[JQueryMobileEvent] = js.undefined
-  var expand: js.UndefOr[JQueryMobileEvent] = js.undefined
+  var collapse: js.UndefOr[JQueryMobileEvent] = js.native
+  var create: js.UndefOr[JQueryMobileEvent] = js.native
+  var expand: js.UndefOr[JQueryMobileEvent] = js.native
 }
 
 object CollapsibleEvents {
   @scala.inline
-  def apply(
-    collapse: (/* event */ Event_, /* ui */ js.Any) => Unit = null,
-    create: (/* event */ Event_, /* ui */ js.Any) => Unit = null,
-    expand: (/* event */ Event_, /* ui */ js.Any) => Unit = null
-  ): CollapsibleEvents = {
+  def apply(): CollapsibleEvents = {
     val __obj = js.Dynamic.literal()
-    if (collapse != null) __obj.updateDynamic("collapse")(js.Any.fromFunction2(collapse))
-    if (create != null) __obj.updateDynamic("create")(js.Any.fromFunction2(create))
-    if (expand != null) __obj.updateDynamic("expand")(js.Any.fromFunction2(expand))
     __obj.asInstanceOf[CollapsibleEvents]
   }
+  @scala.inline
+  implicit class CollapsibleEventsOps[Self <: CollapsibleEvents] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCollapse(value: (/* event */ Event_, /* ui */ js.Any) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("collapse")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutCollapse: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("collapse")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreate(value: (/* event */ Event_, /* ui */ js.Any) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutCreate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExpand(value: (/* event */ Event_, /* ui */ js.Any) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expand")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutExpand: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expand")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -4,8 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait RunOnServerDeployPhase extends DeployPhase {
-  var deploymentInput: ServerDeploymentInput
+  var deploymentInput: ServerDeploymentInput = js.native
 }
 
 object RunOnServerDeployPhase {
@@ -18,8 +19,21 @@ object RunOnServerDeployPhase {
     workflowTasks: js.Array[WorkflowTask]
   ): RunOnServerDeployPhase = {
     val __obj = js.Dynamic.literal(deploymentInput = deploymentInput.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], phaseType = phaseType.asInstanceOf[js.Any], rank = rank.asInstanceOf[js.Any], workflowTasks = workflowTasks.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[RunOnServerDeployPhase]
   }
+  @scala.inline
+  implicit class RunOnServerDeployPhaseOps[Self <: RunOnServerDeployPhase] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDeploymentInput(value: ServerDeploymentInput): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deploymentInput")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

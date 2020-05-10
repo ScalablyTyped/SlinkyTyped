@@ -18,14 +18,41 @@ trait AvailableCapacity extends js.Object {
 
 object AvailableCapacity {
   @scala.inline
-  def apply(
-    AvailableInstanceCapacity: AvailableInstanceCapacityList = null,
-    AvailableVCpus: Int | scala.Double = null
-  ): AvailableCapacity = {
+  def apply(): AvailableCapacity = {
     val __obj = js.Dynamic.literal()
-    if (AvailableInstanceCapacity != null) __obj.updateDynamic("AvailableInstanceCapacity")(AvailableInstanceCapacity.asInstanceOf[js.Any])
-    if (AvailableVCpus != null) __obj.updateDynamic("AvailableVCpus")(AvailableVCpus.asInstanceOf[js.Any])
     __obj.asInstanceOf[AvailableCapacity]
   }
+  @scala.inline
+  implicit class AvailableCapacityOps[Self <: AvailableCapacity] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAvailableInstanceCapacity(value: AvailableInstanceCapacityList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AvailableInstanceCapacity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAvailableInstanceCapacity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AvailableInstanceCapacity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAvailableVCpus(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AvailableVCpus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAvailableVCpus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AvailableVCpus")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

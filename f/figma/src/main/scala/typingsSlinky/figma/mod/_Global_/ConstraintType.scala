@@ -15,16 +15,14 @@ trait ConstraintType extends js.Object
 
 object ConstraintType {
   @scala.inline
-  def CENTER: typingsSlinky.figma.figmaStrings.CENTER = this.cast("CENTER")
+  def CENTER: typingsSlinky.figma.figmaStrings.CENTER = "CENTER".asInstanceOf[typingsSlinky.figma.figmaStrings.CENTER]
   @scala.inline
-  def MAX: typingsSlinky.figma.figmaStrings.MAX = this.cast("MAX")
+  def MAX: typingsSlinky.figma.figmaStrings.MAX = "MAX".asInstanceOf[typingsSlinky.figma.figmaStrings.MAX]
   @scala.inline
-  def MIN: typingsSlinky.figma.figmaStrings.MIN = this.cast("MIN")
+  def MIN: typingsSlinky.figma.figmaStrings.MIN = "MIN".asInstanceOf[typingsSlinky.figma.figmaStrings.MIN]
   @scala.inline
-  def SCALE: typingsSlinky.figma.figmaStrings.SCALE = this.cast("SCALE")
+  def SCALE: typingsSlinky.figma.figmaStrings.SCALE = "SCALE".asInstanceOf[typingsSlinky.figma.figmaStrings.SCALE]
   @scala.inline
-  def STRETCH: typingsSlinky.figma.figmaStrings.STRETCH = this.cast("STRETCH")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def STRETCH: typingsSlinky.figma.figmaStrings.STRETCH = "STRETCH".asInstanceOf[typingsSlinky.figma.figmaStrings.STRETCH]
 }
 

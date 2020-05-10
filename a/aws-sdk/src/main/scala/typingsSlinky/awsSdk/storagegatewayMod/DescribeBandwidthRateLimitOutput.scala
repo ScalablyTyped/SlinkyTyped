@@ -19,16 +19,53 @@ trait DescribeBandwidthRateLimitOutput extends js.Object {
 
 object DescribeBandwidthRateLimitOutput {
   @scala.inline
-  def apply(
-    AverageDownloadRateLimitInBitsPerSec: Int | Double = null,
-    AverageUploadRateLimitInBitsPerSec: Int | Double = null,
-    GatewayARN: GatewayARN = null
-  ): DescribeBandwidthRateLimitOutput = {
+  def apply(): DescribeBandwidthRateLimitOutput = {
     val __obj = js.Dynamic.literal()
-    if (AverageDownloadRateLimitInBitsPerSec != null) __obj.updateDynamic("AverageDownloadRateLimitInBitsPerSec")(AverageDownloadRateLimitInBitsPerSec.asInstanceOf[js.Any])
-    if (AverageUploadRateLimitInBitsPerSec != null) __obj.updateDynamic("AverageUploadRateLimitInBitsPerSec")(AverageUploadRateLimitInBitsPerSec.asInstanceOf[js.Any])
-    if (GatewayARN != null) __obj.updateDynamic("GatewayARN")(GatewayARN.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeBandwidthRateLimitOutput]
   }
+  @scala.inline
+  implicit class DescribeBandwidthRateLimitOutputOps[Self <: DescribeBandwidthRateLimitOutput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAverageDownloadRateLimitInBitsPerSec(value: BandwidthDownloadRateLimit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AverageDownloadRateLimitInBitsPerSec")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAverageDownloadRateLimitInBitsPerSec: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AverageDownloadRateLimitInBitsPerSec")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAverageUploadRateLimitInBitsPerSec(value: BandwidthUploadRateLimit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AverageUploadRateLimitInBitsPerSec")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAverageUploadRateLimitInBitsPerSec: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AverageUploadRateLimitInBitsPerSec")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGatewayARN(value: GatewayARN): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GatewayARN")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGatewayARN: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GatewayARN")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

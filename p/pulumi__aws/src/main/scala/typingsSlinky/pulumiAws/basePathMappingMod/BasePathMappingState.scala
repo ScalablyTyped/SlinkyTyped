@@ -19,7 +19,7 @@ trait BasePathMappingState extends js.Object {
   /**
     * The id of the API to connect.
     */
-  val restApi: js.UndefOr[Input[RestApi]] = js.native
+  val restApi: js.UndefOr[Input[String | RestApi]] = js.native
   /**
     * The name of a specific deployment stage to expose at the given path. If omitted, callers may select any stage by including its name as a path element after the base path.
     */
@@ -28,18 +28,65 @@ trait BasePathMappingState extends js.Object {
 
 object BasePathMappingState {
   @scala.inline
-  def apply(
-    basePath: Input[String] = null,
-    domainName: Input[String] = null,
-    restApi: Input[RestApi] = null,
-    stageName: Input[String] = null
-  ): BasePathMappingState = {
+  def apply(): BasePathMappingState = {
     val __obj = js.Dynamic.literal()
-    if (basePath != null) __obj.updateDynamic("basePath")(basePath.asInstanceOf[js.Any])
-    if (domainName != null) __obj.updateDynamic("domainName")(domainName.asInstanceOf[js.Any])
-    if (restApi != null) __obj.updateDynamic("restApi")(restApi.asInstanceOf[js.Any])
-    if (stageName != null) __obj.updateDynamic("stageName")(stageName.asInstanceOf[js.Any])
     __obj.asInstanceOf[BasePathMappingState]
   }
+  @scala.inline
+  implicit class BasePathMappingStateOps[Self <: BasePathMappingState] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBasePath(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("basePath")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBasePath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("basePath")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDomainName(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("domainName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDomainName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("domainName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRestApi(value: Input[String | RestApi]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("restApi")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRestApi: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("restApi")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStageName(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stageName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStageName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stageName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

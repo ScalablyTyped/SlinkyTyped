@@ -26,18 +26,65 @@ trait UploadLayerPartResponse extends js.Object {
 
 object UploadLayerPartResponse {
   @scala.inline
-  def apply(
-    lastByteReceived: Int | Double = null,
-    registryId: RegistryId = null,
-    repositoryName: RepositoryName = null,
-    uploadId: UploadId = null
-  ): UploadLayerPartResponse = {
+  def apply(): UploadLayerPartResponse = {
     val __obj = js.Dynamic.literal()
-    if (lastByteReceived != null) __obj.updateDynamic("lastByteReceived")(lastByteReceived.asInstanceOf[js.Any])
-    if (registryId != null) __obj.updateDynamic("registryId")(registryId.asInstanceOf[js.Any])
-    if (repositoryName != null) __obj.updateDynamic("repositoryName")(repositoryName.asInstanceOf[js.Any])
-    if (uploadId != null) __obj.updateDynamic("uploadId")(uploadId.asInstanceOf[js.Any])
     __obj.asInstanceOf[UploadLayerPartResponse]
   }
+  @scala.inline
+  implicit class UploadLayerPartResponseOps[Self <: UploadLayerPartResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLastByteReceived(value: PartSize): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastByteReceived")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLastByteReceived: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastByteReceived")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRegistryId(value: RegistryId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("registryId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRegistryId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("registryId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRepositoryName(value: RepositoryName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("repositoryName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRepositoryName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("repositoryName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUploadId(value: UploadId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("uploadId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUploadId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("uploadId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

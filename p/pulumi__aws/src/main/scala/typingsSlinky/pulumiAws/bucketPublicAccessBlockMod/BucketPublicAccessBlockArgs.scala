@@ -36,19 +36,71 @@ trait BucketPublicAccessBlockArgs extends js.Object {
 
 object BucketPublicAccessBlockArgs {
   @scala.inline
-  def apply(
-    bucket: Input[String],
-    blockPublicAcls: Input[Boolean] = null,
-    blockPublicPolicy: Input[Boolean] = null,
-    ignorePublicAcls: Input[Boolean] = null,
-    restrictPublicBuckets: Input[Boolean] = null
-  ): BucketPublicAccessBlockArgs = {
+  def apply(bucket: Input[String]): BucketPublicAccessBlockArgs = {
     val __obj = js.Dynamic.literal(bucket = bucket.asInstanceOf[js.Any])
-    if (blockPublicAcls != null) __obj.updateDynamic("blockPublicAcls")(blockPublicAcls.asInstanceOf[js.Any])
-    if (blockPublicPolicy != null) __obj.updateDynamic("blockPublicPolicy")(blockPublicPolicy.asInstanceOf[js.Any])
-    if (ignorePublicAcls != null) __obj.updateDynamic("ignorePublicAcls")(ignorePublicAcls.asInstanceOf[js.Any])
-    if (restrictPublicBuckets != null) __obj.updateDynamic("restrictPublicBuckets")(restrictPublicBuckets.asInstanceOf[js.Any])
     __obj.asInstanceOf[BucketPublicAccessBlockArgs]
   }
+  @scala.inline
+  implicit class BucketPublicAccessBlockArgsOps[Self <: BucketPublicAccessBlockArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBucket(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bucket")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBlockPublicAcls(value: Input[Boolean]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("blockPublicAcls")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBlockPublicAcls: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("blockPublicAcls")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBlockPublicPolicy(value: Input[Boolean]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("blockPublicPolicy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBlockPublicPolicy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("blockPublicPolicy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIgnorePublicAcls(value: Input[Boolean]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignorePublicAcls")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIgnorePublicAcls: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignorePublicAcls")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRestrictPublicBuckets(value: Input[Boolean]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("restrictPublicBuckets")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRestrictPublicBuckets: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("restrictPublicBuckets")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

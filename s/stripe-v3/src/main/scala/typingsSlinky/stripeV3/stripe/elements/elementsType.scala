@@ -18,22 +18,20 @@ trait elementsType extends js.Object
 
 object elementsType {
   @scala.inline
-  def card: typingsSlinky.stripeV3.stripeV3Strings.card = this.cast("card")
+  def card: typingsSlinky.stripeV3.stripeV3Strings.card = "card".asInstanceOf[typingsSlinky.stripeV3.stripeV3Strings.card]
   @scala.inline
-  def cardCvc: typingsSlinky.stripeV3.stripeV3Strings.cardCvc = this.cast("cardCvc")
+  def cardCvc: typingsSlinky.stripeV3.stripeV3Strings.cardCvc = "cardCvc".asInstanceOf[typingsSlinky.stripeV3.stripeV3Strings.cardCvc]
   @scala.inline
-  def cardExpiry: typingsSlinky.stripeV3.stripeV3Strings.cardExpiry = this.cast("cardExpiry")
+  def cardExpiry: typingsSlinky.stripeV3.stripeV3Strings.cardExpiry = "cardExpiry".asInstanceOf[typingsSlinky.stripeV3.stripeV3Strings.cardExpiry]
   @scala.inline
-  def cardNumber: typingsSlinky.stripeV3.stripeV3Strings.cardNumber = this.cast("cardNumber")
+  def cardNumber: typingsSlinky.stripeV3.stripeV3Strings.cardNumber = "cardNumber".asInstanceOf[typingsSlinky.stripeV3.stripeV3Strings.cardNumber]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def iban: typingsSlinky.stripeV3.stripeV3Strings.iban = "iban".asInstanceOf[typingsSlinky.stripeV3.stripeV3Strings.iban]
   @scala.inline
-  def iban: typingsSlinky.stripeV3.stripeV3Strings.iban = this.cast("iban")
+  def idealBank: typingsSlinky.stripeV3.stripeV3Strings.idealBank = "idealBank".asInstanceOf[typingsSlinky.stripeV3.stripeV3Strings.idealBank]
   @scala.inline
-  def idealBank: typingsSlinky.stripeV3.stripeV3Strings.idealBank = this.cast("idealBank")
+  def paymentRequestButton: typingsSlinky.stripeV3.stripeV3Strings.paymentRequestButton = "paymentRequestButton".asInstanceOf[typingsSlinky.stripeV3.stripeV3Strings.paymentRequestButton]
   @scala.inline
-  def paymentRequestButton: typingsSlinky.stripeV3.stripeV3Strings.paymentRequestButton = this.cast("paymentRequestButton")
-  @scala.inline
-  def postalCode: typingsSlinky.stripeV3.stripeV3Strings.postalCode = this.cast("postalCode")
+  def postalCode: typingsSlinky.stripeV3.stripeV3Strings.postalCode = "postalCode".asInstanceOf[typingsSlinky.stripeV3.stripeV3Strings.postalCode]
 }
 

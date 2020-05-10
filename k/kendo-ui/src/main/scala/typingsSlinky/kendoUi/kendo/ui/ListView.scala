@@ -23,7 +23,7 @@ class ListView protected () extends Widget {
   def clearSelection(): Unit = js.native
   def dataItem(row: String): ObservableObject = js.native
   def dataItem(row: JQuery): ObservableObject = js.native
-  def dataItem(row: typingsSlinky.std.Element): ObservableObject = js.native
+  def dataItem(row: Element): ObservableObject = js.native
   def dataItems(): ObservableArray = js.native
   def edit(item: JQuery): Unit = js.native
   def items(): js.Any = js.native

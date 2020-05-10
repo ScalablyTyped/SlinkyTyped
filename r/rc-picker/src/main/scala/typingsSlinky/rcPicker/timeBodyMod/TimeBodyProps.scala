@@ -12,14 +12,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait TimeBodyProps[DateType] extends SharedTimeProps[DateType] {
-  var activeColumnIndex: Double
-  var generateConfig: GenerateConfig[DateType]
-  var locale: Locale
-  var onSelect: OnSelect[DateType]
-  var operationRef: MutableRefObject[js.UndefOr[BodyOperationRef]]
-  var prefixCls: String
-  var value: js.UndefOr[DateType | Null] = js.undefined
+  var activeColumnIndex: Double = js.native
+  var generateConfig: GenerateConfig[DateType] = js.native
+  var locale: Locale = js.native
+  var onSelect: OnSelect[DateType] = js.native
+  var operationRef: MutableRefObject[js.UndefOr[BodyOperationRef]] = js.native
+  var prefixCls: String = js.native
+  var value: js.UndefOr[DateType | Null] = js.native
 }
 
 object TimeBodyProps {
@@ -30,38 +31,72 @@ object TimeBodyProps {
     locale: Locale,
     onSelect: (DateType, /* type */ key | mouse | submit) => Unit,
     operationRef: MutableRefObject[js.UndefOr[BodyOperationRef]],
-    prefixCls: String,
-    defaultValue: DateType = null,
-    disabledHours: () => js.Array[Double] = null,
-    disabledMinutes: /* hour */ Double => js.Array[Double] = null,
-    disabledSeconds: (/* hour */ Double, /* minute */ Double) => js.Array[Double] = null,
-    format: String = null,
-    hideDisabledOptions: js.UndefOr[Boolean] = js.undefined,
-    hourStep: Int | Double = null,
-    minuteStep: Int | Double = null,
-    secondStep: Int | Double = null,
-    showHour: js.UndefOr[Boolean] = js.undefined,
-    showMinute: js.UndefOr[Boolean] = js.undefined,
-    showSecond: js.UndefOr[Boolean] = js.undefined,
-    use12Hours: js.UndefOr[Boolean] = js.undefined,
-    value: DateType = null
+    prefixCls: String
   ): TimeBodyProps[DateType] = {
     val __obj = js.Dynamic.literal(activeColumnIndex = activeColumnIndex.asInstanceOf[js.Any], generateConfig = generateConfig.asInstanceOf[js.Any], locale = locale.asInstanceOf[js.Any], onSelect = js.Any.fromFunction2(onSelect), operationRef = operationRef.asInstanceOf[js.Any], prefixCls = prefixCls.asInstanceOf[js.Any])
-    if (defaultValue != null) __obj.updateDynamic("defaultValue")(defaultValue.asInstanceOf[js.Any])
-    if (disabledHours != null) __obj.updateDynamic("disabledHours")(js.Any.fromFunction0(disabledHours))
-    if (disabledMinutes != null) __obj.updateDynamic("disabledMinutes")(js.Any.fromFunction1(disabledMinutes))
-    if (disabledSeconds != null) __obj.updateDynamic("disabledSeconds")(js.Any.fromFunction2(disabledSeconds))
-    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
-    if (!js.isUndefined(hideDisabledOptions)) __obj.updateDynamic("hideDisabledOptions")(hideDisabledOptions.asInstanceOf[js.Any])
-    if (hourStep != null) __obj.updateDynamic("hourStep")(hourStep.asInstanceOf[js.Any])
-    if (minuteStep != null) __obj.updateDynamic("minuteStep")(minuteStep.asInstanceOf[js.Any])
-    if (secondStep != null) __obj.updateDynamic("secondStep")(secondStep.asInstanceOf[js.Any])
-    if (!js.isUndefined(showHour)) __obj.updateDynamic("showHour")(showHour.asInstanceOf[js.Any])
-    if (!js.isUndefined(showMinute)) __obj.updateDynamic("showMinute")(showMinute.asInstanceOf[js.Any])
-    if (!js.isUndefined(showSecond)) __obj.updateDynamic("showSecond")(showSecond.asInstanceOf[js.Any])
-    if (!js.isUndefined(use12Hours)) __obj.updateDynamic("use12Hours")(use12Hours.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     __obj.asInstanceOf[TimeBodyProps[DateType]]
   }
+  @scala.inline
+  implicit class TimeBodyPropsOps[Self[datetype] <: TimeBodyProps[datetype], DateType] (val x: Self[DateType]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[DateType] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[DateType]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self[DateType] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[DateType] with Other]
+    @scala.inline
+    def withActiveColumnIndex(value: Double): Self[DateType] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("activeColumnIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGenerateConfig(value: GenerateConfig[DateType]): Self[DateType] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("generateConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLocale(value: Locale): Self[DateType] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOnSelect(value: (DateType, /* type */ key | mouse | submit) => Unit): Self[DateType] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onSelect")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withOperationRef(value: MutableRefObject[js.UndefOr[BodyOperationRef]]): Self[DateType] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("operationRef")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPrefixCls(value: String): Self[DateType] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prefixCls")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withValue(value: DateType): Self[DateType] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValue: Self[DateType] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValueNull: Self[DateType] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(null)
+        ret
+    }
+  }
+  
 }
 

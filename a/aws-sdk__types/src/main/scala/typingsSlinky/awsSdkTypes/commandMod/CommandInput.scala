@@ -31,3 +31,55 @@ trait CommandInput extends js.Object {
   var $maxRetries: js.UndefOr[Double] = js.native
 }
 
+object CommandInput {
+  @scala.inline
+  def apply(): CommandInput = {
+    val __obj = js.Dynamic.literal()
+    __obj.asInstanceOf[CommandInput]
+  }
+  @scala.inline
+  implicit class CommandInputOps[Self <: CommandInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def with$abortSignal(value: AbortSignal): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$abortSignal")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without$abortSignal: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$abortSignal")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with$httpOptions(value: HttpOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$httpOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without$httpOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$httpOptions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with$maxRetries(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$maxRetries")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without$maxRetries: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$maxRetries")(js.undefined)
+        ret
+    }
+  }
+  
+}
+

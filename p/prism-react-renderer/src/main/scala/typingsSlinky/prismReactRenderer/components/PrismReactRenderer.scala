@@ -1,9 +1,7 @@
 package typingsSlinky.prismReactRenderer.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.prismReactRenderer.mod.HighlightProps
 import typingsSlinky.prismReactRenderer.mod.Language
 import typingsSlinky.prismReactRenderer.mod.PrismLib
@@ -13,25 +11,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object PrismReactRenderer
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object PrismReactRenderer {
   @JSImport("prism-react-renderer", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    Prism: PrismLib,
-    code: String,
-    language: Language,
-    theme: PrismTheme = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(Prism = Prism.asInstanceOf[js.Any], code = code.asInstanceOf[js.Any], language = language.asInstanceOf[js.Any])
-    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def theme(value: PrismTheme): this.type = set("theme", value.asInstanceOf[js.Any])
   }
-  type Props = HighlightProps
+  
+  def withProps(p: HighlightProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(Prism: PrismLib, code: String, language: Language): Builder = {
+    val __props = js.Dynamic.literal(Prism = Prism.asInstanceOf[js.Any], code = code.asInstanceOf[js.Any], language = language.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[HighlightProps]))
+  }
 }
 

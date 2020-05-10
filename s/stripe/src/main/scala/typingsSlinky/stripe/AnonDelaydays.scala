@@ -15,44 +15,92 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonDelaydays extends js.Object {
   /**
     * The number of days charges for the account will be held before being paid out.
     * May also be the string “minimum” for the lowest available value (based on
     * country). Default is “minimum”. Does not apply when interval is “manual”.
     */
-  var delay_days: js.UndefOr[Double | String] = js.undefined
+  var delay_days: js.UndefOr[Double | String] = js.native
   /**
     * How frequently funds will be paid out. One of "manual" (for only triggered
     * via API call), "daily", "weekly", or "monthly". Default is "daily".
     */
-  var interval: js.UndefOr[manual | daily | weekly | monthly] = js.undefined
+  var interval: js.UndefOr[manual | daily | weekly | monthly] = js.native
   /**
     * The day of the month funds will be paid out. Required and available only if
     * interval is "monthly".
     */
-  var monthly_anchor: js.UndefOr[Double] = js.undefined
+  var monthly_anchor: js.UndefOr[Double] = js.native
   /**
     * The day of the week funds will be paid out, of the style ‘monday’,
     * ‘tuesday’, etc. Required and available only if interval is weekly.
     */
-  var weekly_anchor: js.UndefOr[monday | tuesday | wednesday | thursday | friday | saturday | sunday] = js.undefined
+  var weekly_anchor: js.UndefOr[monday | tuesday | wednesday | thursday | friday | saturday | sunday] = js.native
 }
 
 object AnonDelaydays {
   @scala.inline
-  def apply(
-    delay_days: Double | String = null,
-    interval: manual | daily | weekly | monthly = null,
-    monthly_anchor: Int | Double = null,
-    weekly_anchor: monday | tuesday | wednesday | thursday | friday | saturday | sunday = null
-  ): AnonDelaydays = {
+  def apply(): AnonDelaydays = {
     val __obj = js.Dynamic.literal()
-    if (delay_days != null) __obj.updateDynamic("delay_days")(delay_days.asInstanceOf[js.Any])
-    if (interval != null) __obj.updateDynamic("interval")(interval.asInstanceOf[js.Any])
-    if (monthly_anchor != null) __obj.updateDynamic("monthly_anchor")(monthly_anchor.asInstanceOf[js.Any])
-    if (weekly_anchor != null) __obj.updateDynamic("weekly_anchor")(weekly_anchor.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonDelaydays]
   }
+  @scala.inline
+  implicit class AnonDelaydaysOps[Self <: AnonDelaydays] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDelay_days(value: Double | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("delay_days")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDelay_days: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("delay_days")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInterval(value: manual | daily | weekly | monthly): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("interval")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInterval: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("interval")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMonthly_anchor(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("monthly_anchor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMonthly_anchor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("monthly_anchor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWeekly_anchor(value: monday | tuesday | wednesday | thursday | friday | saturday | sunday): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("weekly_anchor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWeekly_anchor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("weekly_anchor")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

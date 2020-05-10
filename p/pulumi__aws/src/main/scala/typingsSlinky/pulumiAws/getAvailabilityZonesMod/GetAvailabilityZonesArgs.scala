@@ -25,16 +25,53 @@ trait GetAvailabilityZonesArgs extends js.Object {
 
 object GetAvailabilityZonesArgs {
   @scala.inline
-  def apply(
-    blacklistedNames: js.Array[String] = null,
-    blacklistedZoneIds: js.Array[String] = null,
-    state: String = null
-  ): GetAvailabilityZonesArgs = {
+  def apply(): GetAvailabilityZonesArgs = {
     val __obj = js.Dynamic.literal()
-    if (blacklistedNames != null) __obj.updateDynamic("blacklistedNames")(blacklistedNames.asInstanceOf[js.Any])
-    if (blacklistedZoneIds != null) __obj.updateDynamic("blacklistedZoneIds")(blacklistedZoneIds.asInstanceOf[js.Any])
-    if (state != null) __obj.updateDynamic("state")(state.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetAvailabilityZonesArgs]
   }
+  @scala.inline
+  implicit class GetAvailabilityZonesArgsOps[Self <: GetAvailabilityZonesArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBlacklistedNames(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("blacklistedNames")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBlacklistedNames: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("blacklistedNames")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBlacklistedZoneIds(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("blacklistedZoneIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBlacklistedZoneIds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("blacklistedZoneIds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withState(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

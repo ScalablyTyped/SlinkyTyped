@@ -46,28 +46,125 @@ trait ScheduleActionSettings extends js.Object {
 
 object ScheduleActionSettings {
   @scala.inline
-  def apply(
-    HlsId3SegmentTaggingSettings: HlsId3SegmentTaggingScheduleActionSettings = null,
-    HlsTimedMetadataSettings: HlsTimedMetadataScheduleActionSettings = null,
-    InputSwitchSettings: InputSwitchScheduleActionSettings = null,
-    PauseStateSettings: PauseStateScheduleActionSettings = null,
-    Scte35ReturnToNetworkSettings: Scte35ReturnToNetworkScheduleActionSettings = null,
-    Scte35SpliceInsertSettings: Scte35SpliceInsertScheduleActionSettings = null,
-    Scte35TimeSignalSettings: Scte35TimeSignalScheduleActionSettings = null,
-    StaticImageActivateSettings: StaticImageActivateScheduleActionSettings = null,
-    StaticImageDeactivateSettings: StaticImageDeactivateScheduleActionSettings = null
-  ): ScheduleActionSettings = {
+  def apply(): ScheduleActionSettings = {
     val __obj = js.Dynamic.literal()
-    if (HlsId3SegmentTaggingSettings != null) __obj.updateDynamic("HlsId3SegmentTaggingSettings")(HlsId3SegmentTaggingSettings.asInstanceOf[js.Any])
-    if (HlsTimedMetadataSettings != null) __obj.updateDynamic("HlsTimedMetadataSettings")(HlsTimedMetadataSettings.asInstanceOf[js.Any])
-    if (InputSwitchSettings != null) __obj.updateDynamic("InputSwitchSettings")(InputSwitchSettings.asInstanceOf[js.Any])
-    if (PauseStateSettings != null) __obj.updateDynamic("PauseStateSettings")(PauseStateSettings.asInstanceOf[js.Any])
-    if (Scte35ReturnToNetworkSettings != null) __obj.updateDynamic("Scte35ReturnToNetworkSettings")(Scte35ReturnToNetworkSettings.asInstanceOf[js.Any])
-    if (Scte35SpliceInsertSettings != null) __obj.updateDynamic("Scte35SpliceInsertSettings")(Scte35SpliceInsertSettings.asInstanceOf[js.Any])
-    if (Scte35TimeSignalSettings != null) __obj.updateDynamic("Scte35TimeSignalSettings")(Scte35TimeSignalSettings.asInstanceOf[js.Any])
-    if (StaticImageActivateSettings != null) __obj.updateDynamic("StaticImageActivateSettings")(StaticImageActivateSettings.asInstanceOf[js.Any])
-    if (StaticImageDeactivateSettings != null) __obj.updateDynamic("StaticImageDeactivateSettings")(StaticImageDeactivateSettings.asInstanceOf[js.Any])
     __obj.asInstanceOf[ScheduleActionSettings]
   }
+  @scala.inline
+  implicit class ScheduleActionSettingsOps[Self <: ScheduleActionSettings] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHlsId3SegmentTaggingSettings(value: HlsId3SegmentTaggingScheduleActionSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HlsId3SegmentTaggingSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHlsId3SegmentTaggingSettings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HlsId3SegmentTaggingSettings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHlsTimedMetadataSettings(value: HlsTimedMetadataScheduleActionSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HlsTimedMetadataSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHlsTimedMetadataSettings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HlsTimedMetadataSettings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInputSwitchSettings(value: InputSwitchScheduleActionSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InputSwitchSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInputSwitchSettings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InputSwitchSettings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPauseStateSettings(value: PauseStateScheduleActionSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PauseStateSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPauseStateSettings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PauseStateSettings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScte35ReturnToNetworkSettings(value: Scte35ReturnToNetworkScheduleActionSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Scte35ReturnToNetworkSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScte35ReturnToNetworkSettings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Scte35ReturnToNetworkSettings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScte35SpliceInsertSettings(value: Scte35SpliceInsertScheduleActionSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Scte35SpliceInsertSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScte35SpliceInsertSettings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Scte35SpliceInsertSettings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScte35TimeSignalSettings(value: Scte35TimeSignalScheduleActionSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Scte35TimeSignalSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScte35TimeSignalSettings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Scte35TimeSignalSettings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStaticImageActivateSettings(value: StaticImageActivateScheduleActionSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StaticImageActivateSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStaticImageActivateSettings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StaticImageActivateSettings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStaticImageDeactivateSettings(value: StaticImageDeactivateScheduleActionSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StaticImageDeactivateSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStaticImageDeactivateSettings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StaticImageDeactivateSettings")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

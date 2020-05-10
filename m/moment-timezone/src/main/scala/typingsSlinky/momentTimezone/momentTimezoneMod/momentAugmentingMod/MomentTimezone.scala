@@ -2,7 +2,8 @@ package typingsSlinky.momentTimezone.momentTimezoneMod.momentAugmentingMod
 
 import typingsSlinky.moment.mod.MomentFormatSpecification
 import typingsSlinky.momentTimezone.AnonLinks
-import typingsSlinky.std.Date
+import typingsSlinky.momentTimezone.momentTimezoneBooleans.`false`
+import typingsSlinky.momentTimezone.momentTimezoneBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,18 +26,26 @@ trait MomentTimezone extends js.Object {
   def apply(date: js.Array[Double], timezone: String): typingsSlinky.moment.mod.Moment = js.native
   def apply(date: Double, timezone: String): typingsSlinky.moment.mod.Moment = js.native
   def apply(date: typingsSlinky.moment.mod.Moment, timezone: String): typingsSlinky.moment.mod.Moment = js.native
-  def apply(date: Date, timezone: String): typingsSlinky.moment.mod.Moment = js.native
+  def apply(date: js.Date, timezone: String): typingsSlinky.moment.mod.Moment = js.native
   def apply(timezone: String): typingsSlinky.moment.mod.Moment = js.native
   def add(packedZoneString: String): Unit = js.native
   def add(packedZoneString: js.Array[String]): Unit = js.native
+  def countries(): js.Array[String] = js.native
   def guess(): String = js.native
   def guess(ignoreCache: Boolean): String = js.native
   def link(packedLinkString: String): Unit = js.native
   def link(packedLinkString: js.Array[String]): Unit = js.native
   def load(data: AnonLinks): Unit = js.native
   def names(): js.Array[String] = js.native
-  def setDefault(): MomentTimezone = js.native
-  def setDefault(timezone: String): MomentTimezone = js.native
+  def setDefault(): Moment = js.native
+  def setDefault(timezone: String): Moment = js.native
   def zone(timezone: String): MomentZone | Null = js.native
+  def zonesForCountry(country: String): js.Array[MomentZoneOffset | String] = js.native
+  def zonesForCountry(country: String, with_offset: Boolean): js.Array[MomentZoneOffset | String] = js.native
+  def zonesForCountry[T /* <: `false` */](country: String, with_offset: T): js.Array[String] = js.native
+  @JSName("zonesForCountry")
+  def zonesForCountry_T_false[T /* <: `false` */](country: String): js.Array[String] = js.native
+  @JSName("zonesForCountry")
+  def zonesForCountry_T_true[T /* <: `true` */](country: String, with_offset: T): js.Array[MomentZoneOffset] = js.native
 }
 

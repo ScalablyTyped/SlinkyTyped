@@ -4,6 +4,7 @@ import typingsSlinky.bunyan.mod.^
 import typingsSlinky.easyApiRequest.AnonCb
 import typingsSlinky.express.mod.Request_
 import typingsSlinky.expressServeStaticCore.mod.ParamsDictionary
+import typingsSlinky.expressServeStaticCore.mod.Query
 import typingsSlinky.request.mod.Request
 import typingsSlinky.std.IArguments
 import scala.scalajs.js
@@ -16,7 +17,7 @@ trait BaseRequest extends js.Object {
   var jSend: Boolean = js.native
   var log: ^ = js.native
   var replyCookies: js.Array[String] = js.native
-  var req: Request_[ParamsDictionary] = js.native
+  var req: Request_[ParamsDictionary, _, _, Query] = js.native
   def _do(args: IArguments): js.Any = js.native
   def _do(args: IArguments, `type`: String): js.Any = js.native
   def _parseOptions(args: IArguments, `type`: String): AnonCb = js.native

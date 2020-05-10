@@ -1,0 +1,21 @@
+package typingsSlinky.recurlyRecurlyJs.elementsMod
+
+import typingsSlinky.recurlyRecurlyJs.emitterMod.Emitter
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait ElementsInstance extends Emitter[ElementsInstanceEvents] {
+  def CardCvvElement(): IndividualElement = js.native
+  def CardCvvElement(cardCvvElementOptions: IndividualElementOptions): IndividualElement = js.native
+  def CardElement(): typingsSlinky.recurlyRecurlyJs.elementsMod.CardElement = js.native
+  def CardElement(cardElementOptions: CardElementOptions): typingsSlinky.recurlyRecurlyJs.elementsMod.CardElement = js.native
+  def CardMonthElement(): IndividualElement = js.native
+  def CardMonthElement(cardMonthElementOptions: IndividualElementOptions): IndividualElement = js.native
+  def CardNumberElement(): IndividualElement = js.native
+  def CardNumberElement(cardNumberElementOptions: IndividualElementOptions): IndividualElement = js.native
+  def CardYearElement(): IndividualElement = js.native
+  def CardYearElement(cardYearElementOptions: IndividualElementOptions): IndividualElement = js.native
+}
+

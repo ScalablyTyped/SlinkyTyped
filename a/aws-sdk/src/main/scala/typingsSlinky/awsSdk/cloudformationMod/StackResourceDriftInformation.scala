@@ -18,10 +18,35 @@ trait StackResourceDriftInformation extends js.Object {
 
 object StackResourceDriftInformation {
   @scala.inline
-  def apply(StackResourceDriftStatus: StackResourceDriftStatus, LastCheckTimestamp: js.Date = null): StackResourceDriftInformation = {
+  def apply(StackResourceDriftStatus: StackResourceDriftStatus): StackResourceDriftInformation = {
     val __obj = js.Dynamic.literal(StackResourceDriftStatus = StackResourceDriftStatus.asInstanceOf[js.Any])
-    if (LastCheckTimestamp != null) __obj.updateDynamic("LastCheckTimestamp")(LastCheckTimestamp.asInstanceOf[js.Any])
     __obj.asInstanceOf[StackResourceDriftInformation]
   }
+  @scala.inline
+  implicit class StackResourceDriftInformationOps[Self <: StackResourceDriftInformation] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withStackResourceDriftStatus(value: StackResourceDriftStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StackResourceDriftStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLastCheckTimestamp(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LastCheckTimestamp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLastCheckTimestamp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LastCheckTimestamp")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

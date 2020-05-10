@@ -1,12 +1,12 @@
 package typingsSlinky.reachCombobox.mod
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.react.mod.FC
+import slinky.core.ReactComponentClass
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSImport("@reach/combobox", "Combobox")
 @js.native
-object Combobox extends TopLevel[FC[ComboboxProps]]
+object Combobox extends TopLevel[ReactComponentClass[ComboboxProps]]
 

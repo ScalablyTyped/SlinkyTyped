@@ -46,28 +46,125 @@ trait GlobalSecondaryIndexDescription extends js.Object {
 
 object GlobalSecondaryIndexDescription {
   @scala.inline
-  def apply(
-    Backfilling: js.UndefOr[Boolean] = js.undefined,
-    IndexArn: String = null,
-    IndexName: IndexName = null,
-    IndexSizeBytes: Int | scala.Double = null,
-    IndexStatus: IndexStatus = null,
-    ItemCount: Int | scala.Double = null,
-    KeySchema: KeySchema = null,
-    Projection: Projection = null,
-    ProvisionedThroughput: ProvisionedThroughputDescription = null
-  ): GlobalSecondaryIndexDescription = {
+  def apply(): GlobalSecondaryIndexDescription = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(Backfilling)) __obj.updateDynamic("Backfilling")(Backfilling.asInstanceOf[js.Any])
-    if (IndexArn != null) __obj.updateDynamic("IndexArn")(IndexArn.asInstanceOf[js.Any])
-    if (IndexName != null) __obj.updateDynamic("IndexName")(IndexName.asInstanceOf[js.Any])
-    if (IndexSizeBytes != null) __obj.updateDynamic("IndexSizeBytes")(IndexSizeBytes.asInstanceOf[js.Any])
-    if (IndexStatus != null) __obj.updateDynamic("IndexStatus")(IndexStatus.asInstanceOf[js.Any])
-    if (ItemCount != null) __obj.updateDynamic("ItemCount")(ItemCount.asInstanceOf[js.Any])
-    if (KeySchema != null) __obj.updateDynamic("KeySchema")(KeySchema.asInstanceOf[js.Any])
-    if (Projection != null) __obj.updateDynamic("Projection")(Projection.asInstanceOf[js.Any])
-    if (ProvisionedThroughput != null) __obj.updateDynamic("ProvisionedThroughput")(ProvisionedThroughput.asInstanceOf[js.Any])
     __obj.asInstanceOf[GlobalSecondaryIndexDescription]
   }
+  @scala.inline
+  implicit class GlobalSecondaryIndexDescriptionOps[Self <: GlobalSecondaryIndexDescription] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBackfilling(value: Backfilling): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Backfilling")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackfilling: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Backfilling")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIndexArn(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IndexArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIndexArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IndexArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIndexName(value: IndexName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IndexName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIndexName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IndexName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIndexSizeBytes(value: Long): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IndexSizeBytes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIndexSizeBytes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IndexSizeBytes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIndexStatus(value: IndexStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IndexStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIndexStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IndexStatus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withItemCount(value: Long): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ItemCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutItemCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ItemCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKeySchema(value: KeySchema): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KeySchema")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKeySchema: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KeySchema")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProjection(value: Projection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Projection")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProjection: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Projection")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProvisionedThroughput(value: ProvisionedThroughputDescription): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProvisionedThroughput")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProvisionedThroughput: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProvisionedThroughput")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

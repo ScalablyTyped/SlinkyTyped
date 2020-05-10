@@ -20,7 +20,7 @@ import scala.scalajs.js.annotation._
   * that the browser tries to play it with a suitable plug-in.
   *
   */
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.dojo.dijit.Contained because Inheritance from two classes. Inlined getIndexInParent, getNextSibling, getPreviousSibling */ @JSGlobal("dojox.mobile.Audio")
 @js.native
 class Audio () extends WidgetBase {

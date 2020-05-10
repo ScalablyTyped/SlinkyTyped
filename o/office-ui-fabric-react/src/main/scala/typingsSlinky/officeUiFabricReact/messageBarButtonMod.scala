@@ -1,7 +1,7 @@
 package typingsSlinky.officeUiFabricReact
 
 import typingsSlinky.officeUiFabricReact.buttonTypesMod.IButtonProps
-import typingsSlinky.officeUiFabricReact.utilitiesMod.BaseComponent
+import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
 object messageBarButtonMod extends js.Object {
   @js.native
   class MessageBarButton ()
-    extends BaseComponent[IButtonProps, js.Object]
+    extends Component[IButtonProps, js.Object, js.Any]
   
 }
 

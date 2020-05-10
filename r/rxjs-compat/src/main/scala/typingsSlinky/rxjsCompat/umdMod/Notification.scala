@@ -2,7 +2,7 @@ package typingsSlinky.rxjsCompat.umdMod
 
 import org.scalablytyped.runtime.Instantiable1
 import org.scalablytyped.runtime.Instantiable2
-import typingsSlinky.std.NotificationOptions
+import org.scalajs.dom.experimental.NotificationOptions
 import typingsSlinky.std.NotificationPermission
 import typingsSlinky.std.NotificationPermissionCallback
 import scala.scalajs.js
@@ -12,11 +12,11 @@ import scala.scalajs.js.annotation._
 @JSImport("rxjs-compat/umd", "Notification")
 @js.native
 object Notification
-  extends Instantiable1[/* title */ String, typingsSlinky.std.Notification]
+  extends Instantiable1[/* title */ String, org.scalajs.dom.experimental.Notification]
      with Instantiable2[
       /* title */ String, 
       /* options */ NotificationOptions, 
-      typingsSlinky.std.Notification
+      org.scalajs.dom.experimental.Notification
     ] {
   val maxActions: Double = js.native
   val permission: NotificationPermission = js.native

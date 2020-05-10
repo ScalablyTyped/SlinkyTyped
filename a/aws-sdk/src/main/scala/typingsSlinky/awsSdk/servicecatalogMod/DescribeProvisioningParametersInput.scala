@@ -26,16 +26,53 @@ trait DescribeProvisioningParametersInput extends js.Object {
 
 object DescribeProvisioningParametersInput {
   @scala.inline
-  def apply(
-    ProductId: Id,
-    ProvisioningArtifactId: Id,
-    AcceptLanguage: AcceptLanguage = null,
-    PathId: Id = null
-  ): DescribeProvisioningParametersInput = {
+  def apply(ProductId: Id, ProvisioningArtifactId: Id): DescribeProvisioningParametersInput = {
     val __obj = js.Dynamic.literal(ProductId = ProductId.asInstanceOf[js.Any], ProvisioningArtifactId = ProvisioningArtifactId.asInstanceOf[js.Any])
-    if (AcceptLanguage != null) __obj.updateDynamic("AcceptLanguage")(AcceptLanguage.asInstanceOf[js.Any])
-    if (PathId != null) __obj.updateDynamic("PathId")(PathId.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeProvisioningParametersInput]
   }
+  @scala.inline
+  implicit class DescribeProvisioningParametersInputOps[Self <: DescribeProvisioningParametersInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withProductId(value: Id): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProductId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withProvisioningArtifactId(value: Id): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProvisioningArtifactId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAcceptLanguage(value: AcceptLanguage): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AcceptLanguage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAcceptLanguage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AcceptLanguage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPathId(value: Id): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PathId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPathId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PathId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

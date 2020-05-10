@@ -18,14 +18,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonDurationEffectLevel extends js.Object {
-  var className: operator
-  var cooldown: `800`
-  var duration: `1000`
-  var effect: js.Tuple5[`10`, `20`, `30`, `40`, `50`]
-  var level: js.Tuple5[`20`, `21`, `22`, `23`, `24`]
-  var ops: `200`
-  var range: `3`
+  var className: operator = js.native
+  var cooldown: `800` = js.native
+  var duration: `1000` = js.native
+  var effect: js.Tuple5[`10`, `20`, `30`, `40`, `50`] = js.native
+  var level: js.Tuple5[`20`, `21`, `22`, `23`, `24`] = js.native
+  var ops: `200` = js.native
+  var range: `3` = js.native
 }
 
 object AnonDurationEffectLevel {
@@ -40,8 +41,57 @@ object AnonDurationEffectLevel {
     range: `3`
   ): AnonDurationEffectLevel = {
     val __obj = js.Dynamic.literal(className = className.asInstanceOf[js.Any], cooldown = cooldown.asInstanceOf[js.Any], duration = duration.asInstanceOf[js.Any], effect = effect.asInstanceOf[js.Any], level = level.asInstanceOf[js.Any], ops = ops.asInstanceOf[js.Any], range = range.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[AnonDurationEffectLevel]
   }
+  @scala.inline
+  implicit class AnonDurationEffectLevelOps[Self <: AnonDurationEffectLevel] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClassName(value: operator): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCooldown(value: `800`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cooldown")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDuration(value: `1000`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEffect(value: js.Tuple5[`10`, `20`, `30`, `40`, `50`]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("effect")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLevel(value: js.Tuple5[`20`, `21`, `22`, `23`, `24`]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("level")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOps(value: `200`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ops")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRange(value: `3`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("range")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -1,38 +1,32 @@
 package typingsSlinky.muiDatatables.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.muiDatatables.mod.MUIDataTableSearch
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object TableSearch
-  extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+object TableSearch {
   @JSImport("mui-datatables", "TableSearch")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    classes: js.Object = null,
-    onHide: /* args */ js.Any => _ = null,
-    onSearch: /* args */ js.Any => _ = null,
-    options: js.Object = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, js.Object] = {
-    val __obj = js.Dynamic.literal()
-    if (classes != null) __obj.updateDynamic("classes")(classes.asInstanceOf[js.Any])
-    if (onHide != null) __obj.updateDynamic("onHide")(js.Any.fromFunction1(onHide))
-    if (onSearch != null) __obj.updateDynamic("onSearch")(js.Any.fromFunction1(onSearch))
-    if (options != null) __obj.updateDynamic("options")(options.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, js.Object] {
+    @scala.inline
+    def classes(value: js.Object): this.type = set("classes", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onHide(value: /* args */ js.Any => _): this.type = set("onHide", js.Any.fromFunction1(value))
+    @scala.inline
+    def onSearch(value: /* args */ js.Any => _): this.type = set("onSearch", js.Any.fromFunction1(value))
+    @scala.inline
+    def options(value: js.Object): this.type = set("options", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, js.Object] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, js.Object](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = MUIDataTableSearch
+  
+  def withProps(p: MUIDataTableSearch): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: TableSearch.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

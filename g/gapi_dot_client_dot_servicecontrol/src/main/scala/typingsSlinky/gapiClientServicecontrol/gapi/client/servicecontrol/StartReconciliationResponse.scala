@@ -4,12 +4,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait StartReconciliationResponse extends js.Object {
   /**
     * The same operation_id value used in the StartReconciliationRequest. Used
     * for logging and diagnostics purposes.
     */
-  var operationId: js.UndefOr[String] = js.undefined
+  var operationId: js.UndefOr[String] = js.native
   /**
     * Metric values as tracked by One Platform before the start of
     * reconciliation. The following metrics will be included:
@@ -22,27 +23,74 @@ trait StartReconciliationResponse extends js.Object {
     * using the following gauge metric:
     * "serviceruntime.googleapis.com/quota/limit"
     */
-  var quotaMetrics: js.UndefOr[js.Array[MetricValueSet]] = js.undefined
+  var quotaMetrics: js.UndefOr[js.Array[MetricValueSet]] = js.native
   /** Indicates the decision of the reconciliation start. */
-  var reconciliationErrors: js.UndefOr[js.Array[QuotaError]] = js.undefined
+  var reconciliationErrors: js.UndefOr[js.Array[QuotaError]] = js.native
   /** ID of the actual config used to process the request. */
-  var serviceConfigId: js.UndefOr[String] = js.undefined
+  var serviceConfigId: js.UndefOr[String] = js.native
 }
 
 object StartReconciliationResponse {
   @scala.inline
-  def apply(
-    operationId: String = null,
-    quotaMetrics: js.Array[MetricValueSet] = null,
-    reconciliationErrors: js.Array[QuotaError] = null,
-    serviceConfigId: String = null
-  ): StartReconciliationResponse = {
+  def apply(): StartReconciliationResponse = {
     val __obj = js.Dynamic.literal()
-    if (operationId != null) __obj.updateDynamic("operationId")(operationId.asInstanceOf[js.Any])
-    if (quotaMetrics != null) __obj.updateDynamic("quotaMetrics")(quotaMetrics.asInstanceOf[js.Any])
-    if (reconciliationErrors != null) __obj.updateDynamic("reconciliationErrors")(reconciliationErrors.asInstanceOf[js.Any])
-    if (serviceConfigId != null) __obj.updateDynamic("serviceConfigId")(serviceConfigId.asInstanceOf[js.Any])
     __obj.asInstanceOf[StartReconciliationResponse]
   }
+  @scala.inline
+  implicit class StartReconciliationResponseOps[Self <: StartReconciliationResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOperationId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("operationId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOperationId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("operationId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQuotaMetrics(value: js.Array[MetricValueSet]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("quotaMetrics")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQuotaMetrics: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("quotaMetrics")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReconciliationErrors(value: js.Array[QuotaError]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reconciliationErrors")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReconciliationErrors: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reconciliationErrors")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withServiceConfigId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceConfigId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutServiceConfigId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceConfigId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

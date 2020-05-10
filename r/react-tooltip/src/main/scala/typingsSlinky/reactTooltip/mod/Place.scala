@@ -14,14 +14,12 @@ trait Place extends js.Object
 
 object Place {
   @scala.inline
-  def bottom: typingsSlinky.reactTooltip.reactTooltipStrings.bottom = this.cast("bottom")
+  def bottom: typingsSlinky.reactTooltip.reactTooltipStrings.bottom = "bottom".asInstanceOf[typingsSlinky.reactTooltip.reactTooltipStrings.bottom]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def left: typingsSlinky.reactTooltip.reactTooltipStrings.left = "left".asInstanceOf[typingsSlinky.reactTooltip.reactTooltipStrings.left]
   @scala.inline
-  def left: typingsSlinky.reactTooltip.reactTooltipStrings.left = this.cast("left")
+  def right: typingsSlinky.reactTooltip.reactTooltipStrings.right = "right".asInstanceOf[typingsSlinky.reactTooltip.reactTooltipStrings.right]
   @scala.inline
-  def right: typingsSlinky.reactTooltip.reactTooltipStrings.right = this.cast("right")
-  @scala.inline
-  def top: typingsSlinky.reactTooltip.reactTooltipStrings.top = this.cast("top")
+  def top: typingsSlinky.reactTooltip.reactTooltipStrings.top = "top".asInstanceOf[typingsSlinky.reactTooltip.reactTooltipStrings.top]
 }
 

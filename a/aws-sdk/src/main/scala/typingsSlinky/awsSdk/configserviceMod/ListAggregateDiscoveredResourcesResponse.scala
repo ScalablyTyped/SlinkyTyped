@@ -18,11 +18,41 @@ trait ListAggregateDiscoveredResourcesResponse extends js.Object {
 
 object ListAggregateDiscoveredResourcesResponse {
   @scala.inline
-  def apply(NextToken: NextToken = null, ResourceIdentifiers: DiscoveredResourceIdentifierList = null): ListAggregateDiscoveredResourcesResponse = {
+  def apply(): ListAggregateDiscoveredResourcesResponse = {
     val __obj = js.Dynamic.literal()
-    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
-    if (ResourceIdentifiers != null) __obj.updateDynamic("ResourceIdentifiers")(ResourceIdentifiers.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListAggregateDiscoveredResourcesResponse]
   }
+  @scala.inline
+  implicit class ListAggregateDiscoveredResourcesResponseOps[Self <: ListAggregateDiscoveredResourcesResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNextToken(value: NextToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResourceIdentifiers(value: DiscoveredResourceIdentifierList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceIdentifiers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResourceIdentifiers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceIdentifiers")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

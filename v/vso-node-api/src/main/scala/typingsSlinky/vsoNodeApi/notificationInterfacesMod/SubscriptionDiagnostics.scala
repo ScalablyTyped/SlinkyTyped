@@ -4,19 +4,33 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SubscriptionDiagnostics extends js.Object {
   /**
     * Optional. Contol the tracing
     */
-  var notificationTracing: NotificationTracing
+  var notificationTracing: NotificationTracing = js.native
 }
 
 object SubscriptionDiagnostics {
   @scala.inline
   def apply(notificationTracing: NotificationTracing): SubscriptionDiagnostics = {
     val __obj = js.Dynamic.literal(notificationTracing = notificationTracing.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[SubscriptionDiagnostics]
   }
+  @scala.inline
+  implicit class SubscriptionDiagnosticsOps[Self <: SubscriptionDiagnostics] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNotificationTracing(value: NotificationTracing): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notificationTracing")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

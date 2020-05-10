@@ -28,7 +28,7 @@ object Autocomplete extends js.Object {
   /**
     * Init autocomplete
     */
-  def init(els: typingsSlinky.std.Element): typingsSlinky.materializeCss.M.Autocomplete = js.native
-  def init(els: typingsSlinky.std.Element, options: PartialAutocompleteOption): typingsSlinky.materializeCss.M.Autocomplete = js.native
+  def init(els: Element): typingsSlinky.materializeCss.M.Autocomplete = js.native
+  def init(els: Element, options: PartialAutocompleteOption): typingsSlinky.materializeCss.M.Autocomplete = js.native
 }
 

@@ -39,6 +39,7 @@ import scala.scalajs.js.annotation._
   *
   * @see https://echarts.apache.org/en/option.html#series-pie
   */
+@js.native
 trait SeriesPie_ extends js.Object {
   /**
     * Whether to enable animation.
@@ -48,7 +49,7 @@ trait SeriesPie_ extends js.Object {
     * "true"
     * @see https://echarts.apache.org/en/option.html#series-pie.animation
     */
-  var animation: js.UndefOr[Boolean] = js.undefined
+  var animation: js.UndefOr[Boolean] = js.native
   /**
     * Delay before updating the first animation, which supports callback
     * function for different data to have different animation effect.
@@ -64,7 +65,7 @@ trait SeriesPie_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-pie.animationDelay
     */
-  var animationDelay: js.UndefOr[js.Function | Double] = js.undefined
+  var animationDelay: js.UndefOr[js.Function | Double] = js.native
   /**
     * Delay before updating animation, which supports callback function
     * for different data to have different animation effect.
@@ -80,7 +81,7 @@ trait SeriesPie_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-pie.animationDelayUpdate
     */
-  var animationDelayUpdate: js.UndefOr[js.Function | Double] = js.undefined
+  var animationDelayUpdate: js.UndefOr[js.Function | Double] = js.native
   /**
     * Duration of the first animation, which supports callback function
     * for different data to have different animation effect:
@@ -92,7 +93,7 @@ trait SeriesPie_ extends js.Object {
     * 1000
     * @see https://echarts.apache.org/en/option.html#series-pie.animationDuration
     */
-  var animationDuration: js.UndefOr[js.Function | Double] = js.undefined
+  var animationDuration: js.UndefOr[js.Function | Double] = js.native
   /**
     * Time for animation to complete, which supports callback function
     * for different data to have different animation effect:
@@ -104,7 +105,7 @@ trait SeriesPie_ extends js.Object {
     * 300
     * @see https://echarts.apache.org/en/option.html#series-pie.animationDurationUpdate
     */
-  var animationDurationUpdate: js.UndefOr[js.Function | Double] = js.undefined
+  var animationDurationUpdate: js.UndefOr[js.Function | Double] = js.native
   /**
     * Easing method used for the first animation.
     * Varied easing effects can be found at
@@ -116,7 +117,7 @@ trait SeriesPie_ extends js.Object {
     * "cubicOut"
     * @see https://echarts.apache.org/en/option.html#series-pie.animationEasing
     */
-  var animationEasing: js.UndefOr[String] = js.undefined
+  var animationEasing: js.UndefOr[String] = js.native
   /**
     * Easing method used for animation.
     *
@@ -125,7 +126,7 @@ trait SeriesPie_ extends js.Object {
     * "cubicOut"
     * @see https://echarts.apache.org/en/option.html#series-pie.animationEasingUpdate
     */
-  var animationEasingUpdate: js.UndefOr[String] = js.undefined
+  var animationEasingUpdate: js.UndefOr[String] = js.native
   /**
     * Whether to set graphic number threshold to animation.
     * Animation will be disabled when graphic number is larger than
@@ -136,7 +137,7 @@ trait SeriesPie_ extends js.Object {
     * 2000
     * @see https://echarts.apache.org/en/option.html#series-pie.animationThreshold
     */
-  var animationThreshold: js.UndefOr[Double] = js.undefined
+  var animationThreshold: js.UndefOr[Double] = js.native
   /**
     * Initial animation type.
     *
@@ -150,7 +151,7 @@ trait SeriesPie_ extends js.Object {
     * "expansion"
     * @see https://echarts.apache.org/en/option.html#series-pie.animationType
     */
-  var animationType: js.UndefOr[String] = js.undefined
+  var animationType: js.UndefOr[String] = js.native
   /**
     * Whether to enable the strategy to avoid labels overlap.
     * Defaults to be enabled, which will move the label positions in
@@ -161,7 +162,7 @@ trait SeriesPie_ extends js.Object {
     * "true"
     * @see https://echarts.apache.org/en/option.html#series-pie.avoidLabelOverlap
     */
-  var avoidLabelOverlap: js.UndefOr[Boolean] = js.undefined
+  var avoidLabelOverlap: js.UndefOr[Boolean] = js.native
   /**
     * Center position of Pie chart, the first of which is the horizontal
     * position, and the second is the vertical position.
@@ -179,7 +180,7 @@ trait SeriesPie_ extends js.Object {
     * ['50%', '50%']
     * @see https://echarts.apache.org/en/option.html#series-pie.center
     */
-  var center: js.UndefOr[js.Array[_]] = js.undefined
+  var center: js.UndefOr[js.Array[_]] = js.native
   /**
     * Whether the layout of sectors of pie chart is clockwise.
     *
@@ -188,7 +189,7 @@ trait SeriesPie_ extends js.Object {
     * "true"
     * @see https://echarts.apache.org/en/option.html#series-pie.clockwise
     */
-  var clockwise: js.UndefOr[Boolean] = js.undefined
+  var clockwise: js.UndefOr[Boolean] = js.native
   /**
     * The mouse style when mouse hovers on an element, the same as
     * `cursor` property in `CSS`.
@@ -198,7 +199,7 @@ trait SeriesPie_ extends js.Object {
     * "pointer"
     * @see https://echarts.apache.org/en/option.html#series-pie.cursor
     */
-  var cursor: js.UndefOr[String] = js.undefined
+  var cursor: js.UndefOr[String] = js.native
   /**
     * Data array of series, which can be a single data value, like:
     *
@@ -234,7 +235,7 @@ trait SeriesPie_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-pie.data
     */
-  var data: js.UndefOr[js.Array[js.Array[Double] | DataObject | Double]] = js.undefined
+  var data: js.UndefOr[js.Array[js.Array[Double] | DataObject | Double]] = js.native
   /**
     * If
     * [series.data](https://echarts.apache.org/en/option.html#series.data)
@@ -246,11 +247,11 @@ trait SeriesPie_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-pie.datasetIndex
     */
-  var datasetIndex: js.UndefOr[Double] = js.undefined
+  var datasetIndex: js.UndefOr[Double] = js.native
   /**
     * @see https://echarts.apache.org/en/option.html#series-pie.emphasis
     */
-  var emphasis: js.UndefOr[AnonLabelAnonFontWeight] = js.undefined
+  var emphasis: js.UndefOr[AnonLabelAnonFontWeight] = js.native
   /**
     * Whether to enable the zoom animation effects when hovering sectors.
     *
@@ -259,7 +260,7 @@ trait SeriesPie_ extends js.Object {
     * "true"
     * @see https://echarts.apache.org/en/option.html#series-pie.hoverAnimation
     */
-  var hoverAnimation: js.UndefOr[Boolean] = js.undefined
+  var hoverAnimation: js.UndefOr[Boolean] = js.native
   /**
     * The offset distance of hovered sector.
     *
@@ -268,7 +269,7 @@ trait SeriesPie_ extends js.Object {
     * 10
     * @see https://echarts.apache.org/en/option.html#series-pie.hoverOffset
     */
-  var hoverOffset: js.UndefOr[Double] = js.undefined
+  var hoverOffset: js.UndefOr[Double] = js.native
   /**
     * Component ID, not specified by default.
     * If specified, it can be used to refer the component in option
@@ -277,7 +278,7 @@ trait SeriesPie_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-pie.id
     */
-  var id: js.UndefOr[String] = js.undefined
+  var id: js.UndefOr[String] = js.native
   /**
     * Graphic style of , `emphasis` is the style when it is highlighted,
     * like being hovered by mouse, or highlighted via legend connect.
@@ -285,7 +286,7 @@ trait SeriesPie_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-pie.itemStyle
     */
-  var itemStyle: js.UndefOr[AnonDictunknownPropertyBorderColor] = js.undefined
+  var itemStyle: js.UndefOr[AnonDictunknownPropertyBorderColor] = js.native
   /**
     * Text label of pie chart, to explain some data information about
     * graphic item like value, name and so on.
@@ -297,7 +298,7 @@ trait SeriesPie_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-pie.label
     */
-  var label: js.UndefOr[AnonTextBorderWidth] = js.undefined
+  var label: js.UndefOr[AnonTextBorderWidth] = js.native
   /**
     * The style of visual guide line. Will show when
     * [label position](https://echarts.apache.org/en/option.html#series-pie.label.position)
@@ -308,7 +309,7 @@ trait SeriesPie_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-pie.labelLine
     */
-  var labelLine: js.UndefOr[AnonLength2] = js.undefined
+  var labelLine: js.UndefOr[AnonLength2] = js.native
   /**
     * Whether to enable highlighting chart when
     * [legend](https://echarts.apache.org/en/option.html#legend)
@@ -319,7 +320,7 @@ trait SeriesPie_ extends js.Object {
     * "true"
     * @see https://echarts.apache.org/en/option.html#series-pie.legendHoverLink
     */
-  var legendHoverLink: js.UndefOr[Boolean] = js.undefined
+  var legendHoverLink: js.UndefOr[Boolean] = js.native
   /**
     * Used to mark an area in chart.
     * For example, mark a time interval.
@@ -327,21 +328,21 @@ trait SeriesPie_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-pie.markArea
     */
-  var markArea: js.UndefOr[AnonAnimationEasingUpdate] = js.undefined
+  var markArea: js.UndefOr[AnonAnimationEasingUpdate] = js.native
   /**
     * Use a line in the chart to illustrate.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-pie.markLine
     */
-  var markLine: js.UndefOr[AnonAnimationEasing] = js.undefined
+  var markLine: js.UndefOr[AnonAnimationEasing] = js.native
   /**
     * Mark point in a chart.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-pie.markPoint
     */
-  var markPoint: js.UndefOr[AnonAnimationDurationUpdate] = js.undefined
+  var markPoint: js.UndefOr[AnonAnimationDurationUpdate] = js.native
   /**
     * The minimum angle of sector (0 ~ 360).
     * It prevents some sector from being too small when value is small,
@@ -350,13 +351,13 @@ trait SeriesPie_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-pie.minAngle
     */
-  var minAngle: js.UndefOr[Double] = js.undefined
+  var minAngle: js.UndefOr[Double] = js.native
   /**
     * If a sector is less than this angle (0 ~ 360), label and labelLine will not be displayed.
     *
     * @see https://echarts.apache.org/en/option.html#series-pie.minShowLabelAngle
     */
-  var minShowLabelAngle: js.UndefOr[Double] = js.undefined
+  var minShowLabelAngle: js.UndefOr[Double] = js.native
   /**
     * Series name used for displaying in
     * [tooltip](https://echarts.apache.org/en/option.html#tooltip)
@@ -367,7 +368,7 @@ trait SeriesPie_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-pie.name
     */
-  var name: js.UndefOr[String] = js.undefined
+  var name: js.UndefOr[String] = js.native
   /**
     * Radius of Pie chart. Value can be:
     *
@@ -387,7 +388,7 @@ trait SeriesPie_ extends js.Object {
     * [0, '75%']
     * @see https://echarts.apache.org/en/option.html#series-pie.radius
     */
-  var radius: js.UndefOr[js.Array[_] | Double | String] = js.undefined
+  var radius: js.UndefOr[js.Array[_] | Double | String] = js.native
   /**
     * Whether to show as Nightingale chart, which distinguishs data
     * through radius. There are 2 optional modes:
@@ -400,7 +401,7 @@ trait SeriesPie_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-pie.roseType
     */
-  var roseType: js.UndefOr[Boolean | String] = js.undefined
+  var roseType: js.UndefOr[Boolean | String] = js.native
   /**
     * Selected mode of pie.
     * It is enabled by default, and you may set it to be `false` to
@@ -412,7 +413,7 @@ trait SeriesPie_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-pie.selectedMode
     */
-  var selectedMode: js.UndefOr[Boolean | String] = js.undefined
+  var selectedMode: js.UndefOr[Boolean | String] = js.native
   /**
     * The offset distance of selected sector.
     *
@@ -421,7 +422,7 @@ trait SeriesPie_ extends js.Object {
     * 10
     * @see https://echarts.apache.org/en/option.html#series-pie.selectedOffset
     */
-  var selectedOffset: js.UndefOr[Double] = js.undefined
+  var selectedOffset: js.UndefOr[Double] = js.native
   /**
     * When
     * [dataset](https://echarts.apache.org/en/option.html#dataset)
@@ -443,7 +444,7 @@ trait SeriesPie_ extends js.Object {
     * "column"
     * @see https://echarts.apache.org/en/option.html#series-pie.seriesLayoutBy
     */
-  var seriesLayoutBy: js.UndefOr[String] = js.undefined
+  var seriesLayoutBy: js.UndefOr[String] = js.native
   /**
     * Whether to ignore mouse events.
     * Default value is false, for triggering and responding to mouse
@@ -452,7 +453,7 @@ trait SeriesPie_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-pie.silent
     */
-  var silent: js.UndefOr[Boolean] = js.undefined
+  var silent: js.UndefOr[Boolean] = js.native
   /**
     * The start angle, which range is \[0, 360\].
     *
@@ -461,7 +462,7 @@ trait SeriesPie_ extends js.Object {
     * 90
     * @see https://echarts.apache.org/en/option.html#series-pie.startAngle
     */
-  var startAngle: js.UndefOr[Double] = js.undefined
+  var startAngle: js.UndefOr[Double] = js.native
   /**
     * Whether to show sector when all data are zero.
     *
@@ -470,20 +471,20 @@ trait SeriesPie_ extends js.Object {
     * "true"
     * @see https://echarts.apache.org/en/option.html#series-pie.stillShowZeroSum
     */
-  var stillShowZeroSum: js.UndefOr[Boolean] = js.undefined
+  var stillShowZeroSum: js.UndefOr[Boolean] = js.native
   /**
     * tooltip settings in this series.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-pie.tooltip
     */
-  var tooltip: js.UndefOr[AnonExtraCssText] = js.undefined
+  var tooltip: js.UndefOr[AnonExtraCssText] = js.native
   /**
     * @default
     * "pie"
     * @see https://echarts.apache.org/en/option.html#series-pie.type
     */
-  var `type`: js.UndefOr[String] = js.undefined
+  var `type`: js.UndefOr[String] = js.native
   /**
     * `z` value of all graghical elements in , which controls order
     * of drawing graphical components.
@@ -498,7 +499,7 @@ trait SeriesPie_ extends js.Object {
     * 2
     * @see https://echarts.apache.org/en/option.html#series-pie.z
     */
-  var z: js.UndefOr[Double] = js.undefined
+  var z: js.UndefOr[Double] = js.native
   /**
     * `zlevel` value of all graghical elements in .
     *
@@ -516,97 +517,514 @@ trait SeriesPie_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-pie.zlevel
     */
-  var zlevel: js.UndefOr[Double] = js.undefined
+  var zlevel: js.UndefOr[Double] = js.native
 }
 
 object SeriesPie_ {
   @scala.inline
-  def apply(
-    animation: js.UndefOr[Boolean] = js.undefined,
-    animationDelay: js.Function | Double = null,
-    animationDelayUpdate: js.Function | Double = null,
-    animationDuration: js.Function | Double = null,
-    animationDurationUpdate: js.Function | Double = null,
-    animationEasing: String = null,
-    animationEasingUpdate: String = null,
-    animationThreshold: Int | Double = null,
-    animationType: String = null,
-    avoidLabelOverlap: js.UndefOr[Boolean] = js.undefined,
-    center: js.Array[_] = null,
-    clockwise: js.UndefOr[Boolean] = js.undefined,
-    cursor: String = null,
-    data: js.Array[js.Array[Double] | DataObject | Double] = null,
-    datasetIndex: Int | Double = null,
-    emphasis: AnonLabelAnonFontWeight = null,
-    hoverAnimation: js.UndefOr[Boolean] = js.undefined,
-    hoverOffset: Int | Double = null,
-    id: String = null,
-    itemStyle: AnonDictunknownPropertyBorderColor = null,
-    label: AnonTextBorderWidth = null,
-    labelLine: AnonLength2 = null,
-    legendHoverLink: js.UndefOr[Boolean] = js.undefined,
-    markArea: AnonAnimationEasingUpdate = null,
-    markLine: AnonAnimationEasing = null,
-    markPoint: AnonAnimationDurationUpdate = null,
-    minAngle: Int | Double = null,
-    minShowLabelAngle: Int | Double = null,
-    name: String = null,
-    radius: js.Array[_] | Double | String = null,
-    roseType: Boolean | String = null,
-    selectedMode: Boolean | String = null,
-    selectedOffset: Int | Double = null,
-    seriesLayoutBy: String = null,
-    silent: js.UndefOr[Boolean] = js.undefined,
-    startAngle: Int | Double = null,
-    stillShowZeroSum: js.UndefOr[Boolean] = js.undefined,
-    tooltip: AnonExtraCssText = null,
-    `type`: String = null,
-    z: Int | Double = null,
-    zlevel: Int | Double = null
-  ): SeriesPie_ = {
+  def apply(): SeriesPie_ = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(animation)) __obj.updateDynamic("animation")(animation.asInstanceOf[js.Any])
-    if (animationDelay != null) __obj.updateDynamic("animationDelay")(animationDelay.asInstanceOf[js.Any])
-    if (animationDelayUpdate != null) __obj.updateDynamic("animationDelayUpdate")(animationDelayUpdate.asInstanceOf[js.Any])
-    if (animationDuration != null) __obj.updateDynamic("animationDuration")(animationDuration.asInstanceOf[js.Any])
-    if (animationDurationUpdate != null) __obj.updateDynamic("animationDurationUpdate")(animationDurationUpdate.asInstanceOf[js.Any])
-    if (animationEasing != null) __obj.updateDynamic("animationEasing")(animationEasing.asInstanceOf[js.Any])
-    if (animationEasingUpdate != null) __obj.updateDynamic("animationEasingUpdate")(animationEasingUpdate.asInstanceOf[js.Any])
-    if (animationThreshold != null) __obj.updateDynamic("animationThreshold")(animationThreshold.asInstanceOf[js.Any])
-    if (animationType != null) __obj.updateDynamic("animationType")(animationType.asInstanceOf[js.Any])
-    if (!js.isUndefined(avoidLabelOverlap)) __obj.updateDynamic("avoidLabelOverlap")(avoidLabelOverlap.asInstanceOf[js.Any])
-    if (center != null) __obj.updateDynamic("center")(center.asInstanceOf[js.Any])
-    if (!js.isUndefined(clockwise)) __obj.updateDynamic("clockwise")(clockwise.asInstanceOf[js.Any])
-    if (cursor != null) __obj.updateDynamic("cursor")(cursor.asInstanceOf[js.Any])
-    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
-    if (datasetIndex != null) __obj.updateDynamic("datasetIndex")(datasetIndex.asInstanceOf[js.Any])
-    if (emphasis != null) __obj.updateDynamic("emphasis")(emphasis.asInstanceOf[js.Any])
-    if (!js.isUndefined(hoverAnimation)) __obj.updateDynamic("hoverAnimation")(hoverAnimation.asInstanceOf[js.Any])
-    if (hoverOffset != null) __obj.updateDynamic("hoverOffset")(hoverOffset.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (itemStyle != null) __obj.updateDynamic("itemStyle")(itemStyle.asInstanceOf[js.Any])
-    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
-    if (labelLine != null) __obj.updateDynamic("labelLine")(labelLine.asInstanceOf[js.Any])
-    if (!js.isUndefined(legendHoverLink)) __obj.updateDynamic("legendHoverLink")(legendHoverLink.asInstanceOf[js.Any])
-    if (markArea != null) __obj.updateDynamic("markArea")(markArea.asInstanceOf[js.Any])
-    if (markLine != null) __obj.updateDynamic("markLine")(markLine.asInstanceOf[js.Any])
-    if (markPoint != null) __obj.updateDynamic("markPoint")(markPoint.asInstanceOf[js.Any])
-    if (minAngle != null) __obj.updateDynamic("minAngle")(minAngle.asInstanceOf[js.Any])
-    if (minShowLabelAngle != null) __obj.updateDynamic("minShowLabelAngle")(minShowLabelAngle.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (radius != null) __obj.updateDynamic("radius")(radius.asInstanceOf[js.Any])
-    if (roseType != null) __obj.updateDynamic("roseType")(roseType.asInstanceOf[js.Any])
-    if (selectedMode != null) __obj.updateDynamic("selectedMode")(selectedMode.asInstanceOf[js.Any])
-    if (selectedOffset != null) __obj.updateDynamic("selectedOffset")(selectedOffset.asInstanceOf[js.Any])
-    if (seriesLayoutBy != null) __obj.updateDynamic("seriesLayoutBy")(seriesLayoutBy.asInstanceOf[js.Any])
-    if (!js.isUndefined(silent)) __obj.updateDynamic("silent")(silent.asInstanceOf[js.Any])
-    if (startAngle != null) __obj.updateDynamic("startAngle")(startAngle.asInstanceOf[js.Any])
-    if (!js.isUndefined(stillShowZeroSum)) __obj.updateDynamic("stillShowZeroSum")(stillShowZeroSum.asInstanceOf[js.Any])
-    if (tooltip != null) __obj.updateDynamic("tooltip")(tooltip.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (z != null) __obj.updateDynamic("z")(z.asInstanceOf[js.Any])
-    if (zlevel != null) __obj.updateDynamic("zlevel")(zlevel.asInstanceOf[js.Any])
     __obj.asInstanceOf[SeriesPie_]
   }
+  @scala.inline
+  implicit class SeriesPie_Ops[Self <: SeriesPie_] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAnimation(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAnimationDelay(value: js.Function | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDelay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimationDelay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDelay")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAnimationDelayUpdate(value: js.Function | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDelayUpdate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimationDelayUpdate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDelayUpdate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAnimationDuration(value: js.Function | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDuration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimationDuration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDuration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAnimationDurationUpdate(value: js.Function | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDurationUpdate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimationDurationUpdate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDurationUpdate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAnimationEasing(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationEasing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimationEasing: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationEasing")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAnimationEasingUpdate(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationEasingUpdate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimationEasingUpdate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationEasingUpdate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAnimationThreshold(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationThreshold")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimationThreshold: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationThreshold")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAnimationType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimationType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAvoidLabelOverlap(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("avoidLabelOverlap")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAvoidLabelOverlap: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("avoidLabelOverlap")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCenter(value: js.Array[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("center")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCenter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("center")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClockwise(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clockwise")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClockwise: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clockwise")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCursor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cursor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCursor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cursor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withData(value: js.Array[js.Array[Double] | DataObject | Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDatasetIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("datasetIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDatasetIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("datasetIndex")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEmphasis(value: AnonLabelAnonFontWeight): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("emphasis")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEmphasis: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("emphasis")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHoverAnimation(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hoverAnimation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHoverAnimation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hoverAnimation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHoverOffset(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hoverOffset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHoverOffset: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hoverOffset")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withItemStyle(value: AnonDictunknownPropertyBorderColor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutItemStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabel(value: AnonTextBorderWidth): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabelLine(value: AnonLength2): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelLine")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabelLine: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelLine")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLegendHoverLink(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("legendHoverLink")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLegendHoverLink: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("legendHoverLink")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMarkArea(value: AnonAnimationEasingUpdate): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("markArea")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMarkArea: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("markArea")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMarkLine(value: AnonAnimationEasing): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("markLine")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMarkLine: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("markLine")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMarkPoint(value: AnonAnimationDurationUpdate): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("markPoint")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMarkPoint: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("markPoint")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinAngle(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minAngle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinAngle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minAngle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinShowLabelAngle(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minShowLabelAngle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinShowLabelAngle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minShowLabelAngle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRadius(value: js.Array[_] | Double | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("radius")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRadius: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("radius")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRoseType(value: Boolean | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("roseType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRoseType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("roseType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelectedMode(value: Boolean | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelectedMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelectedOffset(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedOffset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelectedOffset: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedOffset")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSeriesLayoutBy(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("seriesLayoutBy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSeriesLayoutBy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("seriesLayoutBy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSilent(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("silent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSilent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("silent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartAngle(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startAngle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartAngle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startAngle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStillShowZeroSum(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stillShowZeroSum")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStillShowZeroSum: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stillShowZeroSum")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTooltip(value: AnonExtraCssText): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTooltip: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withZ(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("z")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutZ: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("z")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withZlevel(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zlevel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutZlevel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zlevel")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

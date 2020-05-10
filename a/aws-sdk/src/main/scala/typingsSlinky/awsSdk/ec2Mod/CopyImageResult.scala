@@ -14,10 +14,29 @@ trait CopyImageResult extends js.Object {
 
 object CopyImageResult {
   @scala.inline
-  def apply(ImageId: String = null): CopyImageResult = {
+  def apply(): CopyImageResult = {
     val __obj = js.Dynamic.literal()
-    if (ImageId != null) __obj.updateDynamic("ImageId")(ImageId.asInstanceOf[js.Any])
     __obj.asInstanceOf[CopyImageResult]
   }
+  @scala.inline
+  implicit class CopyImageResultOps[Self <: CopyImageResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withImageId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ImageId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImageId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ImageId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

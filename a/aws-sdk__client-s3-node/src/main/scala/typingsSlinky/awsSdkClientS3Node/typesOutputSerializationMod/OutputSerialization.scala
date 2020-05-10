@@ -6,24 +6,55 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait OutputSerialization extends js.Object {
   /**
     * <p>Describes the serialization of CSV-encoded Select results.</p>
     */
-  var CSV: js.UndefOr[CSVOutput] = js.undefined
+  var CSV: js.UndefOr[CSVOutput] = js.native
   /**
     * <p>Specifies JSON as request's output serialization format.</p>
     */
-  var JSON: js.UndefOr[JSONOutput] = js.undefined
+  var JSON: js.UndefOr[JSONOutput] = js.native
 }
 
 object OutputSerialization {
   @scala.inline
-  def apply(CSV: CSVOutput = null, JSON: JSONOutput = null): OutputSerialization = {
+  def apply(): OutputSerialization = {
     val __obj = js.Dynamic.literal()
-    if (CSV != null) __obj.updateDynamic("CSV")(CSV.asInstanceOf[js.Any])
-    if (JSON != null) __obj.updateDynamic("JSON")(JSON.asInstanceOf[js.Any])
     __obj.asInstanceOf[OutputSerialization]
   }
+  @scala.inline
+  implicit class OutputSerializationOps[Self <: OutputSerialization] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCSV(value: CSVOutput): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CSV")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCSV: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CSV")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withJSON(value: JSONOutput): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("JSON")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutJSON: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("JSON")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

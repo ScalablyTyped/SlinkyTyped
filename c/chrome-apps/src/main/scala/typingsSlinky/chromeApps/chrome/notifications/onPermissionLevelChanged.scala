@@ -13,5 +13,5 @@ import scala.scalajs.js.annotation._
 @JSGlobal("chrome.notifications.onPermissionLevelChanged")
 @js.native
 object onPermissionLevelChanged
-  extends TopLevel[Event[js.Function1[/* level */ String, Unit]]]
+  extends TopLevel[Event[js.Function1[/* id */ String, Unit]]]
 

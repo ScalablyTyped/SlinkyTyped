@@ -5,16 +5,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonDropLocation extends js.Object {
-  var dropLocation: js.UndefOr[ColumnDragEndLocation] = js.undefined
+  var dropLocation: js.UndefOr[ColumnDragEndLocation] = js.native
 }
 
 object AnonDropLocation {
   @scala.inline
-  def apply(dropLocation: ColumnDragEndLocation = null): AnonDropLocation = {
+  def apply(): AnonDropLocation = {
     val __obj = js.Dynamic.literal()
-    if (dropLocation != null) __obj.updateDynamic("dropLocation")(dropLocation.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonDropLocation]
   }
+  @scala.inline
+  implicit class AnonDropLocationOps[Self <: AnonDropLocation] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDropLocation(value: ColumnDragEndLocation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dropLocation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDropLocation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dropLocation")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

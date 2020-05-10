@@ -1,6 +1,6 @@
 package typingsSlinky.youtubePlayer
 
-import typingsSlinky.std.HTMLElement
+import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.youtubePlayer.typesMod.Options
 import typingsSlinky.youtubePlayer.typesMod.YouTubePlayer
 import scala.scalajs.js

@@ -18,14 +18,41 @@ trait DescribeProvisionedProductOutput extends js.Object {
 
 object DescribeProvisionedProductOutput {
   @scala.inline
-  def apply(
-    CloudWatchDashboards: CloudWatchDashboards = null,
-    ProvisionedProductDetail: ProvisionedProductDetail = null
-  ): DescribeProvisionedProductOutput = {
+  def apply(): DescribeProvisionedProductOutput = {
     val __obj = js.Dynamic.literal()
-    if (CloudWatchDashboards != null) __obj.updateDynamic("CloudWatchDashboards")(CloudWatchDashboards.asInstanceOf[js.Any])
-    if (ProvisionedProductDetail != null) __obj.updateDynamic("ProvisionedProductDetail")(ProvisionedProductDetail.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeProvisionedProductOutput]
   }
+  @scala.inline
+  implicit class DescribeProvisionedProductOutputOps[Self <: DescribeProvisionedProductOutput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCloudWatchDashboards(value: CloudWatchDashboards): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CloudWatchDashboards")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCloudWatchDashboards: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CloudWatchDashboards")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProvisionedProductDetail(value: ProvisionedProductDetail): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProvisionedProductDetail")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProvisionedProductDetail: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProvisionedProductDetail")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

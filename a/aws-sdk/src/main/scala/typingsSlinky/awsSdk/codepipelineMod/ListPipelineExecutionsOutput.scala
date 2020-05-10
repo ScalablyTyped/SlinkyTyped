@@ -18,11 +18,41 @@ trait ListPipelineExecutionsOutput extends js.Object {
 
 object ListPipelineExecutionsOutput {
   @scala.inline
-  def apply(nextToken: NextToken = null, pipelineExecutionSummaries: PipelineExecutionSummaryList = null): ListPipelineExecutionsOutput = {
+  def apply(): ListPipelineExecutionsOutput = {
     val __obj = js.Dynamic.literal()
-    if (nextToken != null) __obj.updateDynamic("nextToken")(nextToken.asInstanceOf[js.Any])
-    if (pipelineExecutionSummaries != null) __obj.updateDynamic("pipelineExecutionSummaries")(pipelineExecutionSummaries.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListPipelineExecutionsOutput]
   }
+  @scala.inline
+  implicit class ListPipelineExecutionsOutputOps[Self <: ListPipelineExecutionsOutput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNextToken(value: NextToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPipelineExecutionSummaries(value: PipelineExecutionSummaryList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pipelineExecutionSummaries")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPipelineExecutionSummaries: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pipelineExecutionSummaries")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

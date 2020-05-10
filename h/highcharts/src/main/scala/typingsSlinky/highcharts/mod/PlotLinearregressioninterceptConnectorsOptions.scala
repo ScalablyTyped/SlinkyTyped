@@ -4,36 +4,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait PlotLinearregressioninterceptConnectorsOptions extends js.Object {
   /**
     * (Gantt) Set the default dash style for this chart's connecting lines.
     */
-  var dashStyle: js.UndefOr[String] = js.undefined
+  var dashStyle: js.UndefOr[String] = js.native
   /**
     * (Gantt) Marker options specific to the end markers for this chart's
     * Pathfinder connectors. Overrides the generic marker options.
     */
-  var endMarker: js.UndefOr[PlotLinearregressioninterceptConnectorsEndMarkerOptions] = js.undefined
+  var endMarker: js.UndefOr[PlotLinearregressioninterceptConnectorsEndMarkerOptions] = js.native
   /**
     * (Gantt) Set the default color for this chart's Pathfinder connecting
     * lines. Defaults to the color of the point being connected.
     */
-  var lineColor: js.UndefOr[ColorString] = js.undefined
+  var lineColor: js.UndefOr[ColorString] = js.native
   /**
     * (Gantt) Set the default pixel width for this chart's Pathfinder
     * connecting lines.
     */
-  var lineWidth: js.UndefOr[Double] = js.undefined
+  var lineWidth: js.UndefOr[Double] = js.native
   /**
     * (Gantt) Marker options for this chart's Pathfinder connectors. Note that
     * this option is overridden by the `startMarker` and `endMarker` options.
     */
-  var marker: js.UndefOr[PlotLinearregressioninterceptConnectorsMarkerOptions] = js.undefined
+  var marker: js.UndefOr[PlotLinearregressioninterceptConnectorsMarkerOptions] = js.native
   /**
     * (Gantt) Marker options specific to the start markers for this chart's
     * Pathfinder connectors. Overrides the generic marker options.
     */
-  var startMarker: js.UndefOr[PlotLinearregressioninterceptConnectorsStartMarkerOptions] = js.undefined
+  var startMarker: js.UndefOr[PlotLinearregressioninterceptConnectorsStartMarkerOptions] = js.native
   /**
     * (Gantt) Set the default pathfinder algorithm to use for this chart. It is
     * possible to define your own algorithms by adding them to the
@@ -57,29 +58,106 @@ trait PlotLinearregressioninterceptConnectorsOptions extends js.Object {
     * `simpleConnect` is used as default for Gantt series, to show dependencies
     * between points.
     */
-  var `type`: js.UndefOr[PathfinderTypeValue] = js.undefined
+  var `type`: js.UndefOr[PathfinderTypeValue] = js.native
 }
 
 object PlotLinearregressioninterceptConnectorsOptions {
   @scala.inline
-  def apply(
-    dashStyle: String = null,
-    endMarker: PlotLinearregressioninterceptConnectorsEndMarkerOptions = null,
-    lineColor: ColorString = null,
-    lineWidth: Int | Double = null,
-    marker: PlotLinearregressioninterceptConnectorsMarkerOptions = null,
-    startMarker: PlotLinearregressioninterceptConnectorsStartMarkerOptions = null,
-    `type`: PathfinderTypeValue = null
-  ): PlotLinearregressioninterceptConnectorsOptions = {
+  def apply(): PlotLinearregressioninterceptConnectorsOptions = {
     val __obj = js.Dynamic.literal()
-    if (dashStyle != null) __obj.updateDynamic("dashStyle")(dashStyle.asInstanceOf[js.Any])
-    if (endMarker != null) __obj.updateDynamic("endMarker")(endMarker.asInstanceOf[js.Any])
-    if (lineColor != null) __obj.updateDynamic("lineColor")(lineColor.asInstanceOf[js.Any])
-    if (lineWidth != null) __obj.updateDynamic("lineWidth")(lineWidth.asInstanceOf[js.Any])
-    if (marker != null) __obj.updateDynamic("marker")(marker.asInstanceOf[js.Any])
-    if (startMarker != null) __obj.updateDynamic("startMarker")(startMarker.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[PlotLinearregressioninterceptConnectorsOptions]
   }
+  @scala.inline
+  implicit class PlotLinearregressioninterceptConnectorsOptionsOps[Self <: PlotLinearregressioninterceptConnectorsOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDashStyle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dashStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDashStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dashStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEndMarker(value: PlotLinearregressioninterceptConnectorsEndMarkerOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endMarker")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEndMarker: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endMarker")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLineColor(value: ColorString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLineColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLineWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLineWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMarker(value: PlotLinearregressioninterceptConnectorsMarkerOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("marker")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMarker: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("marker")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartMarker(value: PlotLinearregressioninterceptConnectorsStartMarkerOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startMarker")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartMarker: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startMarker")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: PathfinderTypeValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

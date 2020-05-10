@@ -20,12 +20,10 @@ trait Box
 
 object Box {
   @scala.inline
-  def `border-box`: typingsSlinky.csstype.csstypeStrings.`border-box` = this.cast("border-box")
+  def `border-box`: typingsSlinky.csstype.csstypeStrings.`border-box` = "border-box".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`border-box`]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def `content-box`: typingsSlinky.csstype.csstypeStrings.`content-box` = "content-box".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`content-box`]
   @scala.inline
-  def `content-box`: typingsSlinky.csstype.csstypeStrings.`content-box` = this.cast("content-box")
-  @scala.inline
-  def `padding-box`: typingsSlinky.csstype.csstypeStrings.`padding-box` = this.cast("padding-box")
+  def `padding-box`: typingsSlinky.csstype.csstypeStrings.`padding-box` = "padding-box".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`padding-box`]
 }
 

@@ -38,8 +38,45 @@ object CreateTrafficPolicyInstanceRequest {
     TrafficPolicyVersion: TrafficPolicyVersion
   ): CreateTrafficPolicyInstanceRequest = {
     val __obj = js.Dynamic.literal(HostedZoneId = HostedZoneId.asInstanceOf[js.Any], Name = Name.asInstanceOf[js.Any], TTL = TTL.asInstanceOf[js.Any], TrafficPolicyId = TrafficPolicyId.asInstanceOf[js.Any], TrafficPolicyVersion = TrafficPolicyVersion.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[CreateTrafficPolicyInstanceRequest]
   }
+  @scala.inline
+  implicit class CreateTrafficPolicyInstanceRequestOps[Self <: CreateTrafficPolicyInstanceRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHostedZoneId(value: ResourceId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HostedZoneId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withName(value: DNSName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTTL(value: TTL): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TTL")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTrafficPolicyId(value: TrafficPolicyId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TrafficPolicyId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTrafficPolicyVersion(value: TrafficPolicyVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TrafficPolicyVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

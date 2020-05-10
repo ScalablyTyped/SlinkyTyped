@@ -15,20 +15,77 @@ trait LinkStylesProps extends js.Object {
 
 object LinkStylesProps {
   @scala.inline
-  def apply(
-    inverse: js.UndefOr[Boolean] = js.undefined,
-    isButton: js.UndefOr[Boolean] = js.undefined,
-    nochrome: js.UndefOr[Boolean] = js.undefined,
-    secondary: js.UndefOr[Boolean] = js.undefined,
-    tertiary: js.UndefOr[Boolean] = js.undefined
-  ): LinkStylesProps = {
+  def apply(): LinkStylesProps = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(inverse)) __obj.updateDynamic("inverse")(inverse.asInstanceOf[js.Any])
-    if (!js.isUndefined(isButton)) __obj.updateDynamic("isButton")(isButton.asInstanceOf[js.Any])
-    if (!js.isUndefined(nochrome)) __obj.updateDynamic("nochrome")(nochrome.asInstanceOf[js.Any])
-    if (!js.isUndefined(secondary)) __obj.updateDynamic("secondary")(secondary.asInstanceOf[js.Any])
-    if (!js.isUndefined(tertiary)) __obj.updateDynamic("tertiary")(tertiary.asInstanceOf[js.Any])
     __obj.asInstanceOf[LinkStylesProps]
   }
+  @scala.inline
+  implicit class LinkStylesPropsOps[Self <: LinkStylesProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withInverse(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inverse")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInverse: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inverse")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsButton(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isButton")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsButton: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isButton")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNochrome(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nochrome")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNochrome: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nochrome")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSecondary(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("secondary")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSecondary: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("secondary")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTertiary(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tertiary")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTertiary: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tertiary")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

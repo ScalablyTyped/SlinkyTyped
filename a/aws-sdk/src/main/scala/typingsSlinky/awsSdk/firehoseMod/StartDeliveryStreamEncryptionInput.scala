@@ -18,13 +18,35 @@ trait StartDeliveryStreamEncryptionInput extends js.Object {
 
 object StartDeliveryStreamEncryptionInput {
   @scala.inline
-  def apply(
-    DeliveryStreamName: DeliveryStreamName,
-    DeliveryStreamEncryptionConfigurationInput: DeliveryStreamEncryptionConfigurationInput = null
-  ): StartDeliveryStreamEncryptionInput = {
+  def apply(DeliveryStreamName: DeliveryStreamName): StartDeliveryStreamEncryptionInput = {
     val __obj = js.Dynamic.literal(DeliveryStreamName = DeliveryStreamName.asInstanceOf[js.Any])
-    if (DeliveryStreamEncryptionConfigurationInput != null) __obj.updateDynamic("DeliveryStreamEncryptionConfigurationInput")(DeliveryStreamEncryptionConfigurationInput.asInstanceOf[js.Any])
     __obj.asInstanceOf[StartDeliveryStreamEncryptionInput]
   }
+  @scala.inline
+  implicit class StartDeliveryStreamEncryptionInputOps[Self <: StartDeliveryStreamEncryptionInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDeliveryStreamName(value: DeliveryStreamName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeliveryStreamName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDeliveryStreamEncryptionConfigurationInput(value: DeliveryStreamEncryptionConfigurationInput): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeliveryStreamEncryptionConfigurationInput")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeliveryStreamEncryptionConfigurationInput: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeliveryStreamEncryptionConfigurationInput")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -13,12 +13,10 @@ trait SqliteOpenFlag extends js.Object
 
 object SqliteOpenFlag {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def create: typingsSlinky.fridaGum.fridaGumStrings.create = "create".asInstanceOf[typingsSlinky.fridaGum.fridaGumStrings.create]
   @scala.inline
-  def create: typingsSlinky.fridaGum.fridaGumStrings.create = this.cast("create")
+  def readonly: typingsSlinky.fridaGum.fridaGumStrings.readonly = "readonly".asInstanceOf[typingsSlinky.fridaGum.fridaGumStrings.readonly]
   @scala.inline
-  def readonly: typingsSlinky.fridaGum.fridaGumStrings.readonly = this.cast("readonly")
-  @scala.inline
-  def readwrite: typingsSlinky.fridaGum.fridaGumStrings.readwrite = this.cast("readwrite")
+  def readwrite: typingsSlinky.fridaGum.fridaGumStrings.readwrite = "readwrite".asInstanceOf[typingsSlinky.fridaGum.fridaGumStrings.readwrite]
 }
 

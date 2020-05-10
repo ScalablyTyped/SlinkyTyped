@@ -9,7 +9,7 @@ trait ReadableByteStreamController extends js.Object {
   val byobRequest: js.UndefOr[ReadableStreamBYOBRequest] = js.native
   val desiredSize: Double | Null = js.native
   def close(): Unit = js.native
-  def enqueue(chunk: scala.scalajs.js.typedarray.ArrayBufferView): Unit = js.native
+  def enqueue(chunk: js.typedarray.ArrayBufferView): Unit = js.native
   def error(): Unit = js.native
   def error(error: js.Any): Unit = js.native
 }

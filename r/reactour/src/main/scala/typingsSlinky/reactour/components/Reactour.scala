@@ -1,12 +1,11 @@
 package typingsSlinky.reactour.components
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLDivElement
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.div.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactour.mod.ReactourProps
 import typingsSlinky.reactour.mod.ReactourStep
 import typingsSlinky.reactour.mod.default
@@ -17,84 +16,94 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Reactour
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object Reactour {
   @JSImport("reactour", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className */
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def accentColor(value: String): this.type = set("accentColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def badgeContent(value: (/* current */ Double, /* total */ Double) => TagMod[Any]): this.type = set("badgeContent", js.Any.fromFunction2(value))
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def closeWithMask(value: Boolean): this.type = set("closeWithMask", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disableDotsNavigation(value: Boolean): this.type = set("disableDotsNavigation", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disableInteraction(value: Boolean): this.type = set("disableInteraction", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disableKeyboardNavigation(value: Boolean | (js.Array[esc | right | left])): this.type = set("disableKeyboardNavigation", value.asInstanceOf[js.Any])
+    @scala.inline
+    def getCurrentStep(value: /* currentStep */ Double => Unit): this.type = set("getCurrentStep", js.Any.fromFunction1(value))
+    @scala.inline
+    def goToStep(value: Double): this.type = set("goToStep", value.asInstanceOf[js.Any])
+    @scala.inline
+    def highlightedMaskClassName(value: String): this.type = set("highlightedMaskClassName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def inViewThreshold(value: Double): this.type = set("inViewThreshold", value.asInstanceOf[js.Any])
+    @scala.inline
+    def lastStepNextButtonReactElement(value: ReactElement): this.type = set("lastStepNextButton", value.asInstanceOf[js.Any])
+    @scala.inline
+    def lastStepNextButton(value: TagMod[Any]): this.type = set("lastStepNextButton", value.asInstanceOf[js.Any])
+    @scala.inline
+    def maskClassName(value: String): this.type = set("maskClassName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def maskSpace(value: Double): this.type = set("maskSpace", value.asInstanceOf[js.Any])
+    @scala.inline
+    def nextButtonReactElement(value: ReactElement): this.type = set("nextButton", value.asInstanceOf[js.Any])
+    @scala.inline
+    def nextButton(value: TagMod[Any]): this.type = set("nextButton", value.asInstanceOf[js.Any])
+    @scala.inline
+    def nextStep(value: () => Unit): this.type = set("nextStep", js.Any.fromFunction0(value))
+    @scala.inline
+    def onAfterOpen(value: /* target */ HTMLDivElement => Unit): this.type = set("onAfterOpen", js.Any.fromFunction1(value))
+    @scala.inline
+    def onBeforeClose(value: /* target */ HTMLDivElement => Unit): this.type = set("onBeforeClose", js.Any.fromFunction1(value))
+    @scala.inline
+    def prevButtonReactElement(value: ReactElement): this.type = set("prevButton", value.asInstanceOf[js.Any])
+    @scala.inline
+    def prevButton(value: TagMod[Any]): this.type = set("prevButton", value.asInstanceOf[js.Any])
+    @scala.inline
+    def prevStep(value: () => Unit): this.type = set("prevStep", js.Any.fromFunction0(value))
+    @scala.inline
+    def rounded(value: Double): this.type = set("rounded", value.asInstanceOf[js.Any])
+    @scala.inline
+    def scrollDuration(value: Double): this.type = set("scrollDuration", value.asInstanceOf[js.Any])
+    @scala.inline
+    def scrollOffset(value: Double): this.type = set("scrollOffset", value.asInstanceOf[js.Any])
+    @scala.inline
+    def showButtons(value: Boolean): this.type = set("showButtons", value.asInstanceOf[js.Any])
+    @scala.inline
+    def showCloseButton(value: Boolean): this.type = set("showCloseButton", value.asInstanceOf[js.Any])
+    @scala.inline
+    def showNavigation(value: Boolean): this.type = set("showNavigation", value.asInstanceOf[js.Any])
+    @scala.inline
+    def showNavigationNumber(value: Boolean): this.type = set("showNavigationNumber", value.asInstanceOf[js.Any])
+    @scala.inline
+    def showNumber(value: Boolean): this.type = set("showNumber", value.asInstanceOf[js.Any])
+    @scala.inline
+    def startAt(value: Double): this.type = set("startAt", value.asInstanceOf[js.Any])
+    @scala.inline
+    def update(value: String): this.type = set("update", value.asInstanceOf[js.Any])
+    @scala.inline
+    def updateDelay(value: Double): this.type = set("updateDelay", value.asInstanceOf[js.Any])
+  }
+  
+  def withProps(p: ReactourProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
   def apply(
     isOpen: Boolean,
     onRequestClose: SyntheticMouseEvent[HTMLDivElement] => Unit,
-    steps: js.Array[ReactourStep],
-    accentColor: String = null,
-    badgeContent: (/* current */ Double, /* total */ Double) => TagMod[Any] = null,
-    closeWithMask: js.UndefOr[Boolean] = js.undefined,
-    disableDotsNavigation: js.UndefOr[Boolean] = js.undefined,
-    disableInteraction: js.UndefOr[Boolean] = js.undefined,
-    disableKeyboardNavigation: Boolean | (js.Array[esc | right | left]) = null,
-    getCurrentStep: /* currentStep */ Double => Unit = null,
-    goToStep: Int | Double = null,
-    highlightedMaskClassName: String = null,
-    inViewThreshold: Int | Double = null,
-    lastStepNextButton: TagMod[Any] = null,
-    maskClassName: String = null,
-    maskSpace: Int | Double = null,
-    nextButton: TagMod[Any] = null,
-    nextStep: () => Unit = null,
-    onAfterOpen: /* target */ HTMLDivElement => Unit = null,
-    onBeforeClose: /* target */ HTMLDivElement => Unit = null,
-    prevButton: TagMod[Any] = null,
-    prevStep: () => Unit = null,
-    rounded: Int | Double = null,
-    scrollDuration: Int | Double = null,
-    scrollOffset: Int | Double = null,
-    showButtons: js.UndefOr[Boolean] = js.undefined,
-    showCloseButton: js.UndefOr[Boolean] = js.undefined,
-    showNavigation: js.UndefOr[Boolean] = js.undefined,
-    showNavigationNumber: js.UndefOr[Boolean] = js.undefined,
-    showNumber: js.UndefOr[Boolean] = js.undefined,
-    startAt: Int | Double = null,
-    update: String = null,
-    updateDelay: Int | Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(isOpen = isOpen.asInstanceOf[js.Any], onRequestClose = js.Any.fromFunction1(onRequestClose), steps = steps.asInstanceOf[js.Any])
-    if (accentColor != null) __obj.updateDynamic("accentColor")(accentColor.asInstanceOf[js.Any])
-    if (badgeContent != null) __obj.updateDynamic("badgeContent")(js.Any.fromFunction2(badgeContent))
-    if (!js.isUndefined(closeWithMask)) __obj.updateDynamic("closeWithMask")(closeWithMask.asInstanceOf[js.Any])
-    if (!js.isUndefined(disableDotsNavigation)) __obj.updateDynamic("disableDotsNavigation")(disableDotsNavigation.asInstanceOf[js.Any])
-    if (!js.isUndefined(disableInteraction)) __obj.updateDynamic("disableInteraction")(disableInteraction.asInstanceOf[js.Any])
-    if (disableKeyboardNavigation != null) __obj.updateDynamic("disableKeyboardNavigation")(disableKeyboardNavigation.asInstanceOf[js.Any])
-    if (getCurrentStep != null) __obj.updateDynamic("getCurrentStep")(js.Any.fromFunction1(getCurrentStep))
-    if (goToStep != null) __obj.updateDynamic("goToStep")(goToStep.asInstanceOf[js.Any])
-    if (highlightedMaskClassName != null) __obj.updateDynamic("highlightedMaskClassName")(highlightedMaskClassName.asInstanceOf[js.Any])
-    if (inViewThreshold != null) __obj.updateDynamic("inViewThreshold")(inViewThreshold.asInstanceOf[js.Any])
-    if (lastStepNextButton != null) __obj.updateDynamic("lastStepNextButton")(lastStepNextButton.asInstanceOf[js.Any])
-    if (maskClassName != null) __obj.updateDynamic("maskClassName")(maskClassName.asInstanceOf[js.Any])
-    if (maskSpace != null) __obj.updateDynamic("maskSpace")(maskSpace.asInstanceOf[js.Any])
-    if (nextButton != null) __obj.updateDynamic("nextButton")(nextButton.asInstanceOf[js.Any])
-    if (nextStep != null) __obj.updateDynamic("nextStep")(js.Any.fromFunction0(nextStep))
-    if (onAfterOpen != null) __obj.updateDynamic("onAfterOpen")(js.Any.fromFunction1(onAfterOpen))
-    if (onBeforeClose != null) __obj.updateDynamic("onBeforeClose")(js.Any.fromFunction1(onBeforeClose))
-    if (prevButton != null) __obj.updateDynamic("prevButton")(prevButton.asInstanceOf[js.Any])
-    if (prevStep != null) __obj.updateDynamic("prevStep")(js.Any.fromFunction0(prevStep))
-    if (rounded != null) __obj.updateDynamic("rounded")(rounded.asInstanceOf[js.Any])
-    if (scrollDuration != null) __obj.updateDynamic("scrollDuration")(scrollDuration.asInstanceOf[js.Any])
-    if (scrollOffset != null) __obj.updateDynamic("scrollOffset")(scrollOffset.asInstanceOf[js.Any])
-    if (!js.isUndefined(showButtons)) __obj.updateDynamic("showButtons")(showButtons.asInstanceOf[js.Any])
-    if (!js.isUndefined(showCloseButton)) __obj.updateDynamic("showCloseButton")(showCloseButton.asInstanceOf[js.Any])
-    if (!js.isUndefined(showNavigation)) __obj.updateDynamic("showNavigation")(showNavigation.asInstanceOf[js.Any])
-    if (!js.isUndefined(showNavigationNumber)) __obj.updateDynamic("showNavigationNumber")(showNavigationNumber.asInstanceOf[js.Any])
-    if (!js.isUndefined(showNumber)) __obj.updateDynamic("showNumber")(showNumber.asInstanceOf[js.Any])
-    if (startAt != null) __obj.updateDynamic("startAt")(startAt.asInstanceOf[js.Any])
-    if (update != null) __obj.updateDynamic("update")(update.asInstanceOf[js.Any])
-    if (updateDelay != null) __obj.updateDynamic("updateDelay")(updateDelay.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+    steps: js.Array[ReactourStep]
+  ): Builder = {
+    val __props = js.Dynamic.literal(isOpen = isOpen.asInstanceOf[js.Any], onRequestClose = js.Any.fromFunction1(onRequestClose), steps = steps.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ReactourProps]))
   }
-  type Props = ReactourProps
 }
 

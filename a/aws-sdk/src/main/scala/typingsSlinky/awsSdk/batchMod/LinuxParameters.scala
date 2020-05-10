@@ -14,10 +14,29 @@ trait LinuxParameters extends js.Object {
 
 object LinuxParameters {
   @scala.inline
-  def apply(devices: DevicesList = null): LinuxParameters = {
+  def apply(): LinuxParameters = {
     val __obj = js.Dynamic.literal()
-    if (devices != null) __obj.updateDynamic("devices")(devices.asInstanceOf[js.Any])
     __obj.asInstanceOf[LinuxParameters]
   }
+  @scala.inline
+  implicit class LinuxParametersOps[Self <: LinuxParameters] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDevices(value: DevicesList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("devices")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDevices: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("devices")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

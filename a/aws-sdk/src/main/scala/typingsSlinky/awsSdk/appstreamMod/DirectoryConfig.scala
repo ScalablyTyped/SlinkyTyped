@@ -26,17 +26,59 @@ trait DirectoryConfig extends js.Object {
 
 object DirectoryConfig {
   @scala.inline
-  def apply(
-    DirectoryName: DirectoryName,
-    CreatedTime: js.Date = null,
-    OrganizationalUnitDistinguishedNames: OrganizationalUnitDistinguishedNamesList = null,
-    ServiceAccountCredentials: ServiceAccountCredentials = null
-  ): DirectoryConfig = {
+  def apply(DirectoryName: DirectoryName): DirectoryConfig = {
     val __obj = js.Dynamic.literal(DirectoryName = DirectoryName.asInstanceOf[js.Any])
-    if (CreatedTime != null) __obj.updateDynamic("CreatedTime")(CreatedTime.asInstanceOf[js.Any])
-    if (OrganizationalUnitDistinguishedNames != null) __obj.updateDynamic("OrganizationalUnitDistinguishedNames")(OrganizationalUnitDistinguishedNames.asInstanceOf[js.Any])
-    if (ServiceAccountCredentials != null) __obj.updateDynamic("ServiceAccountCredentials")(ServiceAccountCredentials.asInstanceOf[js.Any])
     __obj.asInstanceOf[DirectoryConfig]
   }
+  @scala.inline
+  implicit class DirectoryConfigOps[Self <: DirectoryConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDirectoryName(value: DirectoryName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DirectoryName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCreatedTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreatedTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreatedTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreatedTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOrganizationalUnitDistinguishedNames(value: OrganizationalUnitDistinguishedNamesList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OrganizationalUnitDistinguishedNames")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOrganizationalUnitDistinguishedNames: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OrganizationalUnitDistinguishedNames")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withServiceAccountCredentials(value: ServiceAccountCredentials): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceAccountCredentials")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutServiceAccountCredentials: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceAccountCredentials")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

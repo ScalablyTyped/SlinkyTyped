@@ -13,12 +13,10 @@ trait GoogleActionsTransactionsV3DigitalPurchaseCheckResultResultType extends js
 
 object GoogleActionsTransactionsV3DigitalPurchaseCheckResultResultType {
   @scala.inline
-  def CANNOT_PURCHASE: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.CANNOT_PURCHASE = this.cast("CANNOT_PURCHASE")
+  def CANNOT_PURCHASE: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.CANNOT_PURCHASE = "CANNOT_PURCHASE".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.CANNOT_PURCHASE]
   @scala.inline
-  def CAN_PURCHASE: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.CAN_PURCHASE = this.cast("CAN_PURCHASE")
+  def CAN_PURCHASE: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.CAN_PURCHASE = "CAN_PURCHASE".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.CAN_PURCHASE]
   @scala.inline
-  def RESULT_TYPE_UNSPECIFIED: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.RESULT_TYPE_UNSPECIFIED = this.cast("RESULT_TYPE_UNSPECIFIED")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def RESULT_TYPE_UNSPECIFIED: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.RESULT_TYPE_UNSPECIFIED = "RESULT_TYPE_UNSPECIFIED".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.RESULT_TYPE_UNSPECIFIED]
 }
 

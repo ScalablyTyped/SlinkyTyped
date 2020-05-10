@@ -1,6 +1,5 @@
 package typingsSlinky.intlRelativeformat
 
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,8 +8,8 @@ import scala.scalajs.js.annotation._
 @js.native
 object diffMod extends js.Object {
   def default(from: Double, to: Double): RecordSUPPORTEDFIELDnumbe = js.native
-  def default(from: Double, to: Date): RecordSUPPORTEDFIELDnumbe = js.native
-  def default(from: Date, to: Double): RecordSUPPORTEDFIELDnumbe = js.native
-  def default(from: Date, to: Date): RecordSUPPORTEDFIELDnumbe = js.native
+  def default(from: Double, to: js.Date): RecordSUPPORTEDFIELDnumbe = js.native
+  def default(from: js.Date, to: Double): RecordSUPPORTEDFIELDnumbe = js.native
+  def default(from: js.Date, to: js.Date): RecordSUPPORTEDFIELDnumbe = js.native
 }
 

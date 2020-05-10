@@ -14,10 +14,29 @@ trait BatchGetOnPremisesInstancesOutput extends js.Object {
 
 object BatchGetOnPremisesInstancesOutput {
   @scala.inline
-  def apply(instanceInfos: InstanceInfoList = null): BatchGetOnPremisesInstancesOutput = {
+  def apply(): BatchGetOnPremisesInstancesOutput = {
     val __obj = js.Dynamic.literal()
-    if (instanceInfos != null) __obj.updateDynamic("instanceInfos")(instanceInfos.asInstanceOf[js.Any])
     __obj.asInstanceOf[BatchGetOnPremisesInstancesOutput]
   }
+  @scala.inline
+  implicit class BatchGetOnPremisesInstancesOutputOps[Self <: BatchGetOnPremisesInstancesOutput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withInstanceInfos(value: InstanceInfoList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceInfos")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstanceInfos: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceInfos")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

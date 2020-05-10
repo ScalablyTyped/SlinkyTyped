@@ -12,10 +12,8 @@ trait LengthAdjust extends js.Object
 
 object LengthAdjust {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def spacing: typingsSlinky.reactSketchapp.reactSketchappStrings.spacing = "spacing".asInstanceOf[typingsSlinky.reactSketchapp.reactSketchappStrings.spacing]
   @scala.inline
-  def spacing: typingsSlinky.reactSketchapp.reactSketchappStrings.spacing = this.cast("spacing")
-  @scala.inline
-  def spacingAndGlyphs: typingsSlinky.reactSketchapp.reactSketchappStrings.spacingAndGlyphs = this.cast("spacingAndGlyphs")
+  def spacingAndGlyphs: typingsSlinky.reactSketchapp.reactSketchappStrings.spacingAndGlyphs = "spacingAndGlyphs".asInstanceOf[typingsSlinky.reactSketchapp.reactSketchappStrings.spacingAndGlyphs]
 }
 

@@ -1,9 +1,8 @@
 package typingsSlinky.googleMapsReact.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
+import org.scalajs.dom.raw.Element
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.googleMapsReact.mod.GoogleAPI
 import typingsSlinky.googleMapsReact.mod.MapProps
 import typingsSlinky.googlemaps.google.maps.FullscreenControlOptions
@@ -26,142 +25,184 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Map
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.googleMapsReact.mod.Map] {
+object Map {
   @JSImport("google-maps-react", "Map")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: draggable */
-  def apply(
-    google: GoogleAPI,
-    backgroundColor: String = null,
-    bounds: LatLngBounds | LatLngBoundsLiteral = null,
-    center: LatLng | LatLngLiteral = null,
-    centerAroundCurrentLocation: js.UndefOr[Boolean] = js.undefined,
-    clickableIcons: js.UndefOr[Boolean] = js.undefined,
-    controlSize: Int | Double = null,
-    disableDefaultUI: js.UndefOr[Boolean] = js.undefined,
-    disableDoubleClickZoom: js.UndefOr[Boolean] = js.undefined,
-    draggableCursor: String = null,
-    draggingCursor: String = null,
-    fullscreenControl: js.UndefOr[Boolean] = js.undefined,
-    fullscreenControlOptions: FullscreenControlOptions = null,
-    gestureHandling: GestureHandlingOptions = null,
-    heading: Int | Double = null,
-    initialCenter: LatLngLiteral = null,
-    keyboardShortcuts: js.UndefOr[Boolean] = js.undefined,
-    loaded: js.UndefOr[Boolean] = js.undefined,
-    mapTypeControl: js.UndefOr[Boolean] = js.undefined,
-    mapTypeControlOptions: MapTypeControlOptions = null,
-    mapTypeId: MapTypeId | String = null,
-    maxZoom: Int | Double = null,
-    minZoom: Int | Double = null,
-    noClear: js.UndefOr[Boolean] = js.undefined,
-    onBoundsChanged: (/* mapProps */ js.UndefOr[MapProps], /* map */ js.UndefOr[typingsSlinky.googlemaps.google.maps.Map[org.scalajs.dom.raw.Element]], /* event */ js.UndefOr[js.Any]) => js.Any = null,
-    onCenterChanged: (/* mapProps */ js.UndefOr[MapProps], /* map */ js.UndefOr[typingsSlinky.googlemaps.google.maps.Map[org.scalajs.dom.raw.Element]], /* event */ js.UndefOr[js.Any]) => js.Any = null,
-    onClick: (/* mapProps */ js.UndefOr[MapProps], /* map */ js.UndefOr[typingsSlinky.googlemaps.google.maps.Map[org.scalajs.dom.raw.Element]], /* event */ js.UndefOr[js.Any]) => js.Any = null,
-    onDblclick: (/* mapProps */ js.UndefOr[MapProps], /* map */ js.UndefOr[typingsSlinky.googlemaps.google.maps.Map[org.scalajs.dom.raw.Element]], /* event */ js.UndefOr[js.Any]) => js.Any = null,
-    onDragend: (/* mapProps */ js.UndefOr[MapProps], /* map */ js.UndefOr[typingsSlinky.googlemaps.google.maps.Map[org.scalajs.dom.raw.Element]], /* event */ js.UndefOr[js.Any]) => js.Any = null,
-    onDragstart: (/* mapProps */ js.UndefOr[MapProps], /* map */ js.UndefOr[typingsSlinky.googlemaps.google.maps.Map[org.scalajs.dom.raw.Element]], /* event */ js.UndefOr[js.Any]) => js.Any = null,
-    onHeadingChange: (/* mapProps */ js.UndefOr[MapProps], /* map */ js.UndefOr[typingsSlinky.googlemaps.google.maps.Map[org.scalajs.dom.raw.Element]], /* event */ js.UndefOr[js.Any]) => js.Any = null,
-    onIdle: (/* mapProps */ js.UndefOr[MapProps], /* map */ js.UndefOr[typingsSlinky.googlemaps.google.maps.Map[org.scalajs.dom.raw.Element]], /* event */ js.UndefOr[js.Any]) => js.Any = null,
-    onMaptypeidChanged: (/* mapProps */ js.UndefOr[MapProps], /* map */ js.UndefOr[typingsSlinky.googlemaps.google.maps.Map[org.scalajs.dom.raw.Element]], /* event */ js.UndefOr[js.Any]) => js.Any = null,
-    onMousemove: (/* mapProps */ js.UndefOr[MapProps], /* map */ js.UndefOr[typingsSlinky.googlemaps.google.maps.Map[org.scalajs.dom.raw.Element]], /* event */ js.UndefOr[js.Any]) => js.Any = null,
-    onMouseout: (/* mapProps */ js.UndefOr[MapProps], /* map */ js.UndefOr[typingsSlinky.googlemaps.google.maps.Map[org.scalajs.dom.raw.Element]], /* event */ js.UndefOr[js.Any]) => js.Any = null,
-    onMouseover: (/* mapProps */ js.UndefOr[MapProps], /* map */ js.UndefOr[typingsSlinky.googlemaps.google.maps.Map[org.scalajs.dom.raw.Element]], /* event */ js.UndefOr[js.Any]) => js.Any = null,
-    onProjectionChanged: (/* mapProps */ js.UndefOr[MapProps], /* map */ js.UndefOr[typingsSlinky.googlemaps.google.maps.Map[org.scalajs.dom.raw.Element]], /* event */ js.UndefOr[js.Any]) => js.Any = null,
-    onReady: (/* mapProps */ js.UndefOr[MapProps], /* map */ js.UndefOr[typingsSlinky.googlemaps.google.maps.Map[org.scalajs.dom.raw.Element]], /* event */ js.UndefOr[js.Any]) => js.Any = null,
-    onRecenter: (/* mapProps */ js.UndefOr[MapProps], /* map */ js.UndefOr[typingsSlinky.googlemaps.google.maps.Map[org.scalajs.dom.raw.Element]], /* event */ js.UndefOr[js.Any]) => js.Any = null,
-    onResize: (/* mapProps */ js.UndefOr[MapProps], /* map */ js.UndefOr[typingsSlinky.googlemaps.google.maps.Map[org.scalajs.dom.raw.Element]], /* event */ js.UndefOr[js.Any]) => js.Any = null,
-    onRightclick: (/* mapProps */ js.UndefOr[MapProps], /* map */ js.UndefOr[typingsSlinky.googlemaps.google.maps.Map[org.scalajs.dom.raw.Element]], /* event */ js.UndefOr[js.Any]) => js.Any = null,
-    onTilesloaded: (/* mapProps */ js.UndefOr[MapProps], /* map */ js.UndefOr[typingsSlinky.googlemaps.google.maps.Map[org.scalajs.dom.raw.Element]], /* event */ js.UndefOr[js.Any]) => js.Any = null,
-    onTiltChanged: (/* mapProps */ js.UndefOr[MapProps], /* map */ js.UndefOr[typingsSlinky.googlemaps.google.maps.Map[org.scalajs.dom.raw.Element]], /* event */ js.UndefOr[js.Any]) => js.Any = null,
-    onZoomChanged: (/* mapProps */ js.UndefOr[MapProps], /* map */ js.UndefOr[typingsSlinky.googlemaps.google.maps.Map[org.scalajs.dom.raw.Element]], /* event */ js.UndefOr[js.Any]) => js.Any = null,
-    panControl: js.UndefOr[Boolean] = js.undefined,
-    panControlOptions: PanControlOptions = null,
-    restriction: MapRestriction = null,
-    rotateControl: js.UndefOr[Boolean] = js.undefined,
-    rotateControlOptions: RotateControlOptions = null,
-    scaleControl: js.UndefOr[Boolean] = js.undefined,
-    scaleControlOptions: ScaleControlOptions = null,
-    scrollwheel: js.UndefOr[Boolean] = js.undefined,
-    streetView: StreetViewPanorama = null,
-    streetViewControl: js.UndefOr[Boolean] = js.undefined,
-    streetViewControlOptions: StreetViewControlOptions = null,
-    styles: js.Array[MapTypeStyle] = null,
-    tilt: Int | Double = null,
-    visible: js.UndefOr[Boolean] = js.undefined,
-    zoom: Int | Double = null,
-    zoomControl: js.UndefOr[Boolean] = js.undefined,
-    zoomControlOptions: ZoomControlOptions = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.googleMapsReact.mod.Map] = {
-    val __obj = js.Dynamic.literal(google = google.asInstanceOf[js.Any])
-    if (backgroundColor != null) __obj.updateDynamic("backgroundColor")(backgroundColor.asInstanceOf[js.Any])
-    if (bounds != null) __obj.updateDynamic("bounds")(bounds.asInstanceOf[js.Any])
-    if (center != null) __obj.updateDynamic("center")(center.asInstanceOf[js.Any])
-    if (!js.isUndefined(centerAroundCurrentLocation)) __obj.updateDynamic("centerAroundCurrentLocation")(centerAroundCurrentLocation.asInstanceOf[js.Any])
-    if (!js.isUndefined(clickableIcons)) __obj.updateDynamic("clickableIcons")(clickableIcons.asInstanceOf[js.Any])
-    if (controlSize != null) __obj.updateDynamic("controlSize")(controlSize.asInstanceOf[js.Any])
-    if (!js.isUndefined(disableDefaultUI)) __obj.updateDynamic("disableDefaultUI")(disableDefaultUI.asInstanceOf[js.Any])
-    if (!js.isUndefined(disableDoubleClickZoom)) __obj.updateDynamic("disableDoubleClickZoom")(disableDoubleClickZoom.asInstanceOf[js.Any])
-    if (draggableCursor != null) __obj.updateDynamic("draggableCursor")(draggableCursor.asInstanceOf[js.Any])
-    if (draggingCursor != null) __obj.updateDynamic("draggingCursor")(draggingCursor.asInstanceOf[js.Any])
-    if (!js.isUndefined(fullscreenControl)) __obj.updateDynamic("fullscreenControl")(fullscreenControl.asInstanceOf[js.Any])
-    if (fullscreenControlOptions != null) __obj.updateDynamic("fullscreenControlOptions")(fullscreenControlOptions.asInstanceOf[js.Any])
-    if (gestureHandling != null) __obj.updateDynamic("gestureHandling")(gestureHandling.asInstanceOf[js.Any])
-    if (heading != null) __obj.updateDynamic("heading")(heading.asInstanceOf[js.Any])
-    if (initialCenter != null) __obj.updateDynamic("initialCenter")(initialCenter.asInstanceOf[js.Any])
-    if (!js.isUndefined(keyboardShortcuts)) __obj.updateDynamic("keyboardShortcuts")(keyboardShortcuts.asInstanceOf[js.Any])
-    if (!js.isUndefined(loaded)) __obj.updateDynamic("loaded")(loaded.asInstanceOf[js.Any])
-    if (!js.isUndefined(mapTypeControl)) __obj.updateDynamic("mapTypeControl")(mapTypeControl.asInstanceOf[js.Any])
-    if (mapTypeControlOptions != null) __obj.updateDynamic("mapTypeControlOptions")(mapTypeControlOptions.asInstanceOf[js.Any])
-    if (mapTypeId != null) __obj.updateDynamic("mapTypeId")(mapTypeId.asInstanceOf[js.Any])
-    if (maxZoom != null) __obj.updateDynamic("maxZoom")(maxZoom.asInstanceOf[js.Any])
-    if (minZoom != null) __obj.updateDynamic("minZoom")(minZoom.asInstanceOf[js.Any])
-    if (!js.isUndefined(noClear)) __obj.updateDynamic("noClear")(noClear.asInstanceOf[js.Any])
-    if (onBoundsChanged != null) __obj.updateDynamic("onBoundsChanged")(js.Any.fromFunction3(onBoundsChanged))
-    if (onCenterChanged != null) __obj.updateDynamic("onCenterChanged")(js.Any.fromFunction3(onCenterChanged))
-    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction3(onClick))
-    if (onDblclick != null) __obj.updateDynamic("onDblclick")(js.Any.fromFunction3(onDblclick))
-    if (onDragend != null) __obj.updateDynamic("onDragend")(js.Any.fromFunction3(onDragend))
-    if (onDragstart != null) __obj.updateDynamic("onDragstart")(js.Any.fromFunction3(onDragstart))
-    if (onHeadingChange != null) __obj.updateDynamic("onHeadingChange")(js.Any.fromFunction3(onHeadingChange))
-    if (onIdle != null) __obj.updateDynamic("onIdle")(js.Any.fromFunction3(onIdle))
-    if (onMaptypeidChanged != null) __obj.updateDynamic("onMaptypeidChanged")(js.Any.fromFunction3(onMaptypeidChanged))
-    if (onMousemove != null) __obj.updateDynamic("onMousemove")(js.Any.fromFunction3(onMousemove))
-    if (onMouseout != null) __obj.updateDynamic("onMouseout")(js.Any.fromFunction3(onMouseout))
-    if (onMouseover != null) __obj.updateDynamic("onMouseover")(js.Any.fromFunction3(onMouseover))
-    if (onProjectionChanged != null) __obj.updateDynamic("onProjectionChanged")(js.Any.fromFunction3(onProjectionChanged))
-    if (onReady != null) __obj.updateDynamic("onReady")(js.Any.fromFunction3(onReady))
-    if (onRecenter != null) __obj.updateDynamic("onRecenter")(js.Any.fromFunction3(onRecenter))
-    if (onResize != null) __obj.updateDynamic("onResize")(js.Any.fromFunction3(onResize))
-    if (onRightclick != null) __obj.updateDynamic("onRightclick")(js.Any.fromFunction3(onRightclick))
-    if (onTilesloaded != null) __obj.updateDynamic("onTilesloaded")(js.Any.fromFunction3(onTilesloaded))
-    if (onTiltChanged != null) __obj.updateDynamic("onTiltChanged")(js.Any.fromFunction3(onTiltChanged))
-    if (onZoomChanged != null) __obj.updateDynamic("onZoomChanged")(js.Any.fromFunction3(onZoomChanged))
-    if (!js.isUndefined(panControl)) __obj.updateDynamic("panControl")(panControl.asInstanceOf[js.Any])
-    if (panControlOptions != null) __obj.updateDynamic("panControlOptions")(panControlOptions.asInstanceOf[js.Any])
-    if (restriction != null) __obj.updateDynamic("restriction")(restriction.asInstanceOf[js.Any])
-    if (!js.isUndefined(rotateControl)) __obj.updateDynamic("rotateControl")(rotateControl.asInstanceOf[js.Any])
-    if (rotateControlOptions != null) __obj.updateDynamic("rotateControlOptions")(rotateControlOptions.asInstanceOf[js.Any])
-    if (!js.isUndefined(scaleControl)) __obj.updateDynamic("scaleControl")(scaleControl.asInstanceOf[js.Any])
-    if (scaleControlOptions != null) __obj.updateDynamic("scaleControlOptions")(scaleControlOptions.asInstanceOf[js.Any])
-    if (!js.isUndefined(scrollwheel)) __obj.updateDynamic("scrollwheel")(scrollwheel.asInstanceOf[js.Any])
-    if (streetView != null) __obj.updateDynamic("streetView")(streetView.asInstanceOf[js.Any])
-    if (!js.isUndefined(streetViewControl)) __obj.updateDynamic("streetViewControl")(streetViewControl.asInstanceOf[js.Any])
-    if (streetViewControlOptions != null) __obj.updateDynamic("streetViewControlOptions")(streetViewControlOptions.asInstanceOf[js.Any])
-    if (styles != null) __obj.updateDynamic("styles")(styles.asInstanceOf[js.Any])
-    if (tilt != null) __obj.updateDynamic("tilt")(tilt.asInstanceOf[js.Any])
-    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.asInstanceOf[js.Any])
-    if (zoom != null) __obj.updateDynamic("zoom")(zoom.asInstanceOf[js.Any])
-    if (!js.isUndefined(zoomControl)) __obj.updateDynamic("zoomControl")(zoomControl.asInstanceOf[js.Any])
-    if (zoomControlOptions != null) __obj.updateDynamic("zoomControlOptions")(zoomControlOptions.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.googleMapsReact.mod.Map] {
+    @scala.inline
+    def backgroundColor(value: String): this.type = set("backgroundColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def bounds(value: LatLngBounds | LatLngBoundsLiteral): this.type = set("bounds", value.asInstanceOf[js.Any])
+    @scala.inline
+    def center(value: LatLng | LatLngLiteral): this.type = set("center", value.asInstanceOf[js.Any])
+    @scala.inline
+    def centerAroundCurrentLocation(value: Boolean): this.type = set("centerAroundCurrentLocation", value.asInstanceOf[js.Any])
+    @scala.inline
+    def clickableIcons(value: Boolean): this.type = set("clickableIcons", value.asInstanceOf[js.Any])
+    @scala.inline
+    def controlSize(value: Double): this.type = set("controlSize", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disableDefaultUI(value: Boolean): this.type = set("disableDefaultUI", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disableDoubleClickZoom(value: Boolean): this.type = set("disableDoubleClickZoom", value.asInstanceOf[js.Any])
+    @scala.inline
+    def draggable(value: Boolean): this.type = set("draggable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def draggableCursor(value: String): this.type = set("draggableCursor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def draggingCursor(value: String): this.type = set("draggingCursor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def fullscreenControl(value: Boolean): this.type = set("fullscreenControl", value.asInstanceOf[js.Any])
+    @scala.inline
+    def fullscreenControlOptions(value: FullscreenControlOptions): this.type = set("fullscreenControlOptions", value.asInstanceOf[js.Any])
+    @scala.inline
+    def gestureHandling(value: GestureHandlingOptions): this.type = set("gestureHandling", value.asInstanceOf[js.Any])
+    @scala.inline
+    def heading(value: Double): this.type = set("heading", value.asInstanceOf[js.Any])
+    @scala.inline
+    def initialCenter(value: LatLngLiteral): this.type = set("initialCenter", value.asInstanceOf[js.Any])
+    @scala.inline
+    def keyboardShortcuts(value: Boolean): this.type = set("keyboardShortcuts", value.asInstanceOf[js.Any])
+    @scala.inline
+    def loaded(value: Boolean): this.type = set("loaded", value.asInstanceOf[js.Any])
+    @scala.inline
+    def mapTypeControl(value: Boolean): this.type = set("mapTypeControl", value.asInstanceOf[js.Any])
+    @scala.inline
+    def mapTypeControlOptions(value: MapTypeControlOptions): this.type = set("mapTypeControlOptions", value.asInstanceOf[js.Any])
+    @scala.inline
+    def mapTypeId(value: MapTypeId | String): this.type = set("mapTypeId", value.asInstanceOf[js.Any])
+    @scala.inline
+    def maxZoom(value: Double): this.type = set("maxZoom", value.asInstanceOf[js.Any])
+    @scala.inline
+    def minZoom(value: Double): this.type = set("minZoom", value.asInstanceOf[js.Any])
+    @scala.inline
+    def noClear(value: Boolean): this.type = set("noClear", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onBoundsChanged(
+      value: (/* mapProps */ js.UndefOr[MapProps], /* map */ js.UndefOr[typingsSlinky.googlemaps.google.maps.Map[Element]], /* event */ js.UndefOr[js.Any]) => js.Any
+    ): this.type = set("onBoundsChanged", js.Any.fromFunction3(value))
+    @scala.inline
+    def onCenterChanged(
+      value: (/* mapProps */ js.UndefOr[MapProps], /* map */ js.UndefOr[typingsSlinky.googlemaps.google.maps.Map[Element]], /* event */ js.UndefOr[js.Any]) => js.Any
+    ): this.type = set("onCenterChanged", js.Any.fromFunction3(value))
+    @scala.inline
+    def onClick(
+      value: (/* mapProps */ js.UndefOr[MapProps], /* map */ js.UndefOr[typingsSlinky.googlemaps.google.maps.Map[Element]], /* event */ js.UndefOr[js.Any]) => js.Any
+    ): this.type = set("onClick", js.Any.fromFunction3(value))
+    @scala.inline
+    def onDblclick(
+      value: (/* mapProps */ js.UndefOr[MapProps], /* map */ js.UndefOr[typingsSlinky.googlemaps.google.maps.Map[Element]], /* event */ js.UndefOr[js.Any]) => js.Any
+    ): this.type = set("onDblclick", js.Any.fromFunction3(value))
+    @scala.inline
+    def onDragend(
+      value: (/* mapProps */ js.UndefOr[MapProps], /* map */ js.UndefOr[typingsSlinky.googlemaps.google.maps.Map[Element]], /* event */ js.UndefOr[js.Any]) => js.Any
+    ): this.type = set("onDragend", js.Any.fromFunction3(value))
+    @scala.inline
+    def onDragstart(
+      value: (/* mapProps */ js.UndefOr[MapProps], /* map */ js.UndefOr[typingsSlinky.googlemaps.google.maps.Map[Element]], /* event */ js.UndefOr[js.Any]) => js.Any
+    ): this.type = set("onDragstart", js.Any.fromFunction3(value))
+    @scala.inline
+    def onHeadingChange(
+      value: (/* mapProps */ js.UndefOr[MapProps], /* map */ js.UndefOr[typingsSlinky.googlemaps.google.maps.Map[Element]], /* event */ js.UndefOr[js.Any]) => js.Any
+    ): this.type = set("onHeadingChange", js.Any.fromFunction3(value))
+    @scala.inline
+    def onIdle(
+      value: (/* mapProps */ js.UndefOr[MapProps], /* map */ js.UndefOr[typingsSlinky.googlemaps.google.maps.Map[Element]], /* event */ js.UndefOr[js.Any]) => js.Any
+    ): this.type = set("onIdle", js.Any.fromFunction3(value))
+    @scala.inline
+    def onMaptypeidChanged(
+      value: (/* mapProps */ js.UndefOr[MapProps], /* map */ js.UndefOr[typingsSlinky.googlemaps.google.maps.Map[Element]], /* event */ js.UndefOr[js.Any]) => js.Any
+    ): this.type = set("onMaptypeidChanged", js.Any.fromFunction3(value))
+    @scala.inline
+    def onMousemove(
+      value: (/* mapProps */ js.UndefOr[MapProps], /* map */ js.UndefOr[typingsSlinky.googlemaps.google.maps.Map[Element]], /* event */ js.UndefOr[js.Any]) => js.Any
+    ): this.type = set("onMousemove", js.Any.fromFunction3(value))
+    @scala.inline
+    def onMouseout(
+      value: (/* mapProps */ js.UndefOr[MapProps], /* map */ js.UndefOr[typingsSlinky.googlemaps.google.maps.Map[Element]], /* event */ js.UndefOr[js.Any]) => js.Any
+    ): this.type = set("onMouseout", js.Any.fromFunction3(value))
+    @scala.inline
+    def onMouseover(
+      value: (/* mapProps */ js.UndefOr[MapProps], /* map */ js.UndefOr[typingsSlinky.googlemaps.google.maps.Map[Element]], /* event */ js.UndefOr[js.Any]) => js.Any
+    ): this.type = set("onMouseover", js.Any.fromFunction3(value))
+    @scala.inline
+    def onProjectionChanged(
+      value: (/* mapProps */ js.UndefOr[MapProps], /* map */ js.UndefOr[typingsSlinky.googlemaps.google.maps.Map[Element]], /* event */ js.UndefOr[js.Any]) => js.Any
+    ): this.type = set("onProjectionChanged", js.Any.fromFunction3(value))
+    @scala.inline
+    def onReady(
+      value: (/* mapProps */ js.UndefOr[MapProps], /* map */ js.UndefOr[typingsSlinky.googlemaps.google.maps.Map[Element]], /* event */ js.UndefOr[js.Any]) => js.Any
+    ): this.type = set("onReady", js.Any.fromFunction3(value))
+    @scala.inline
+    def onRecenter(
+      value: (/* mapProps */ js.UndefOr[MapProps], /* map */ js.UndefOr[typingsSlinky.googlemaps.google.maps.Map[Element]], /* event */ js.UndefOr[js.Any]) => js.Any
+    ): this.type = set("onRecenter", js.Any.fromFunction3(value))
+    @scala.inline
+    def onResize(
+      value: (/* mapProps */ js.UndefOr[MapProps], /* map */ js.UndefOr[typingsSlinky.googlemaps.google.maps.Map[Element]], /* event */ js.UndefOr[js.Any]) => js.Any
+    ): this.type = set("onResize", js.Any.fromFunction3(value))
+    @scala.inline
+    def onRightclick(
+      value: (/* mapProps */ js.UndefOr[MapProps], /* map */ js.UndefOr[typingsSlinky.googlemaps.google.maps.Map[Element]], /* event */ js.UndefOr[js.Any]) => js.Any
+    ): this.type = set("onRightclick", js.Any.fromFunction3(value))
+    @scala.inline
+    def onTilesloaded(
+      value: (/* mapProps */ js.UndefOr[MapProps], /* map */ js.UndefOr[typingsSlinky.googlemaps.google.maps.Map[Element]], /* event */ js.UndefOr[js.Any]) => js.Any
+    ): this.type = set("onTilesloaded", js.Any.fromFunction3(value))
+    @scala.inline
+    def onTiltChanged(
+      value: (/* mapProps */ js.UndefOr[MapProps], /* map */ js.UndefOr[typingsSlinky.googlemaps.google.maps.Map[Element]], /* event */ js.UndefOr[js.Any]) => js.Any
+    ): this.type = set("onTiltChanged", js.Any.fromFunction3(value))
+    @scala.inline
+    def onZoomChanged(
+      value: (/* mapProps */ js.UndefOr[MapProps], /* map */ js.UndefOr[typingsSlinky.googlemaps.google.maps.Map[Element]], /* event */ js.UndefOr[js.Any]) => js.Any
+    ): this.type = set("onZoomChanged", js.Any.fromFunction3(value))
+    @scala.inline
+    def panControl(value: Boolean): this.type = set("panControl", value.asInstanceOf[js.Any])
+    @scala.inline
+    def panControlOptions(value: PanControlOptions): this.type = set("panControlOptions", value.asInstanceOf[js.Any])
+    @scala.inline
+    def restriction(value: MapRestriction): this.type = set("restriction", value.asInstanceOf[js.Any])
+    @scala.inline
+    def rotateControl(value: Boolean): this.type = set("rotateControl", value.asInstanceOf[js.Any])
+    @scala.inline
+    def rotateControlOptions(value: RotateControlOptions): this.type = set("rotateControlOptions", value.asInstanceOf[js.Any])
+    @scala.inline
+    def scaleControl(value: Boolean): this.type = set("scaleControl", value.asInstanceOf[js.Any])
+    @scala.inline
+    def scaleControlOptions(value: ScaleControlOptions): this.type = set("scaleControlOptions", value.asInstanceOf[js.Any])
+    @scala.inline
+    def scrollwheel(value: Boolean): this.type = set("scrollwheel", value.asInstanceOf[js.Any])
+    @scala.inline
+    def streetView(value: StreetViewPanorama): this.type = set("streetView", value.asInstanceOf[js.Any])
+    @scala.inline
+    def streetViewControl(value: Boolean): this.type = set("streetViewControl", value.asInstanceOf[js.Any])
+    @scala.inline
+    def streetViewControlOptions(value: StreetViewControlOptions): this.type = set("streetViewControlOptions", value.asInstanceOf[js.Any])
+    @scala.inline
+    def styles(value: js.Array[MapTypeStyle]): this.type = set("styles", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tilt(value: Double): this.type = set("tilt", value.asInstanceOf[js.Any])
+    @scala.inline
+    def visible(value: Boolean): this.type = set("visible", value.asInstanceOf[js.Any])
+    @scala.inline
+    def zoom(value: Double): this.type = set("zoom", value.asInstanceOf[js.Any])
+    @scala.inline
+    def zoomControl(value: Boolean): this.type = set("zoomControl", value.asInstanceOf[js.Any])
+    @scala.inline
+    def zoomControlOptions(value: ZoomControlOptions): this.type = set("zoomControlOptions", value.asInstanceOf[js.Any])
   }
-  type Props = MapProps
+  
+  def withProps(p: MapProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(google: GoogleAPI): Builder = {
+    val __props = js.Dynamic.literal(google = google.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[MapProps]))
+  }
 }
 

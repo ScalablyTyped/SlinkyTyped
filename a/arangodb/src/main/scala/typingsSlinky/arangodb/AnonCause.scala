@@ -4,18 +4,49 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonCause extends js.Object {
-  var cause: js.UndefOr[js.Error] = js.undefined
-  var extra: js.UndefOr[js.Any] = js.undefined
+  var cause: js.UndefOr[js.Error] = js.native
+  var extra: js.UndefOr[js.Any] = js.native
 }
 
 object AnonCause {
   @scala.inline
-  def apply(cause: js.Error = null, extra: js.Any = null): AnonCause = {
+  def apply(): AnonCause = {
     val __obj = js.Dynamic.literal()
-    if (cause != null) __obj.updateDynamic("cause")(cause.asInstanceOf[js.Any])
-    if (extra != null) __obj.updateDynamic("extra")(extra.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonCause]
   }
+  @scala.inline
+  implicit class AnonCauseOps[Self <: AnonCause] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCause(value: js.Error): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cause")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCause: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cause")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExtra(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extra")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExtra: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extra")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

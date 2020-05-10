@@ -1,6 +1,6 @@
 package typingsSlinky.node.osMod
 
-import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.node.NodeJS.Dict
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,6 +8,6 @@ import scala.scalajs.js.annotation._
 @JSImport("os", "networkInterfaces")
 @js.native
 object networkInterfaces extends js.Object {
-  def apply(): StringDictionary[js.Array[NetworkInterfaceInfo]] = js.native
+  def apply(): Dict[js.Array[NetworkInterfaceInfo]] = js.native
 }
 

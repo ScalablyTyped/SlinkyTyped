@@ -35,8 +35,6 @@ class SkeletonDebugRenderer protected () extends Disposable {
   var temp: js.Any = js.native
   var triangleLineColor: Color = js.native
   var vertices: js.Any = js.native
-  /* CompleteClass */
-  override def dispose(): Unit = js.native
   def draw(shapes: ShapeRenderer, skeleton: Skeleton): Unit = js.native
   def draw(shapes: ShapeRenderer, skeleton: Skeleton, ignoredBones: js.Array[String]): Unit = js.native
 }

@@ -4,7 +4,6 @@ import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.HTMLTextAreaElement
 import org.scalajs.dom.raw.KeyboardEvent
 import org.scalajs.dom.raw.MouseEvent
-import typingsSlinky.std.Uint8Array
 import typingsSlinky.xterm.AnonCols
 import typingsSlinky.xterm.AnonDomEvent
 import typingsSlinky.xterm.AnonEnd
@@ -218,8 +217,6 @@ class Terminal () extends IDisposable {
     * @param matcherId The link matcher's ID (returned after register)
     */
   def deregisterLinkMatcher(matcherId: Double): Unit = js.native
-  /* CompleteClass */
-  override def dispose(): Unit = js.native
   /**
     * Focus the terminal.
     */
@@ -582,16 +579,16 @@ class Terminal () extends IDisposable {
     */
   def write(data: String): Unit = js.native
   def write(data: String, callback: js.Function0[Unit]): Unit = js.native
-  def write(data: Uint8Array): Unit = js.native
-  def write(data: Uint8Array, callback: js.Function0[Unit]): Unit = js.native
+  def write(data: js.typedarray.Uint8Array): Unit = js.native
+  def write(data: js.typedarray.Uint8Array, callback: js.Function0[Unit]): Unit = js.native
   /**
     * Write UTF8 data to the terminal.
     * @param data The data to write to the terminal.
     * @param callback Optional callback when data was processed.
     * @deprecated use `write` instead
     */
-  def writeUtf8(data: scala.scalajs.js.typedarray.Uint8Array): Unit = js.native
-  def writeUtf8(data: scala.scalajs.js.typedarray.Uint8Array, callback: js.Function0[Unit]): Unit = js.native
+  def writeUtf8(data: js.typedarray.Uint8Array): Unit = js.native
+  def writeUtf8(data: js.typedarray.Uint8Array, callback: js.Function0[Unit]): Unit = js.native
   /**
     * Writes data to the terminal, followed by a break line character (\n).
     * @param data The data to write to the terminal. This can either be raw
@@ -602,8 +599,8 @@ class Terminal () extends IDisposable {
     */
   def writeln(data: String): Unit = js.native
   def writeln(data: String, callback: js.Function0[Unit]): Unit = js.native
-  def writeln(data: Uint8Array): Unit = js.native
-  def writeln(data: Uint8Array, callback: js.Function0[Unit]): Unit = js.native
+  def writeln(data: js.typedarray.Uint8Array): Unit = js.native
+  def writeln(data: js.typedarray.Uint8Array, callback: js.Function0[Unit]): Unit = js.native
 }
 
 /* static members */

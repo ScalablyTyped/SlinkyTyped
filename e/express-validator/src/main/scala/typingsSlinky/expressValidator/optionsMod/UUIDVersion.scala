@@ -20,23 +20,21 @@ trait UUIDVersion extends js.Object
 
 object UUIDVersion {
   @scala.inline
-  def `3`: typingsSlinky.expressValidator.expressValidatorNumbers.`3` = this.cast(3)
+  def `3`: typingsSlinky.expressValidator.expressValidatorNumbers.`3` = 3.asInstanceOf[typingsSlinky.expressValidator.expressValidatorNumbers.`3`]
   @JSName("3")
   @scala.inline
-  def `3_3`: `3` = this.cast("3")
+  def `3_3`: `3` = "3".asInstanceOf[`3`]
   @scala.inline
-  def `4`: typingsSlinky.expressValidator.expressValidatorStrings.`4` = this.cast("4")
+  def `4`: typingsSlinky.expressValidator.expressValidatorStrings.`4` = "4".asInstanceOf[typingsSlinky.expressValidator.expressValidatorStrings.`4`]
   @JSName("4")
   @scala.inline
-  def `4_4`: `4` = this.cast(4)
+  def `4_4`: `4` = 4.asInstanceOf[`4`]
   @scala.inline
-  def `5`: typingsSlinky.expressValidator.expressValidatorNumbers.`5` = this.cast(5)
+  def `5`: typingsSlinky.expressValidator.expressValidatorNumbers.`5` = 5.asInstanceOf[typingsSlinky.expressValidator.expressValidatorNumbers.`5`]
   @JSName("5")
   @scala.inline
-  def `5_5`: `5` = this.cast("5")
+  def `5_5`: `5` = "5".asInstanceOf[`5`]
   @scala.inline
-  def all: typingsSlinky.expressValidator.expressValidatorStrings.all = this.cast("all")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def all: typingsSlinky.expressValidator.expressValidatorStrings.all = "all".asInstanceOf[typingsSlinky.expressValidator.expressValidatorStrings.all]
 }
 

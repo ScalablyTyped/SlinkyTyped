@@ -15,12 +15,53 @@ trait PartialStyleRulesStepButt extends js.Object {
 
 object PartialStyleRulesStepButt {
   @scala.inline
-  def apply(root: CSSProperties = null, touchRipple: CSSProperties = null, vertical: CSSProperties = null): PartialStyleRulesStepButt = {
+  def apply(): PartialStyleRulesStepButt = {
     val __obj = js.Dynamic.literal()
-    if (root != null) __obj.updateDynamic("root")(root.asInstanceOf[js.Any])
-    if (touchRipple != null) __obj.updateDynamic("touchRipple")(touchRipple.asInstanceOf[js.Any])
-    if (vertical != null) __obj.updateDynamic("vertical")(vertical.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialStyleRulesStepButt]
   }
+  @scala.inline
+  implicit class PartialStyleRulesStepButtOps[Self <: PartialStyleRulesStepButt] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRoot(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRoot: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTouchRipple(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("touchRipple")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTouchRipple: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("touchRipple")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVertical(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vertical")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVertical: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vertical")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

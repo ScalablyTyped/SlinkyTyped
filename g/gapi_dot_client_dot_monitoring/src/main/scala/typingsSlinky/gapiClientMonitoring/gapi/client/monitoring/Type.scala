@@ -4,39 +4,107 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Type extends js.Object {
   /** The list of fields. */
-  var fields: js.UndefOr[js.Array[Field]] = js.undefined
+  var fields: js.UndefOr[js.Array[Field]] = js.native
   /** The fully qualified message name. */
-  var name: js.UndefOr[String] = js.undefined
+  var name: js.UndefOr[String] = js.native
   /** The list of types appearing in oneof definitions in this type. */
-  var oneofs: js.UndefOr[js.Array[String]] = js.undefined
+  var oneofs: js.UndefOr[js.Array[String]] = js.native
   /** The protocol buffer options. */
-  var options: js.UndefOr[js.Array[Option]] = js.undefined
+  var options: js.UndefOr[js.Array[Option]] = js.native
   /** The source context. */
-  var sourceContext: js.UndefOr[SourceContext] = js.undefined
+  var sourceContext: js.UndefOr[SourceContext] = js.native
   /** The source syntax. */
-  var syntax: js.UndefOr[String] = js.undefined
+  var syntax: js.UndefOr[String] = js.native
 }
 
 object Type {
   @scala.inline
-  def apply(
-    fields: js.Array[Field] = null,
-    name: String = null,
-    oneofs: js.Array[String] = null,
-    options: js.Array[Option] = null,
-    sourceContext: SourceContext = null,
-    syntax: String = null
-  ): Type = {
+  def apply(): Type = {
     val __obj = js.Dynamic.literal()
-    if (fields != null) __obj.updateDynamic("fields")(fields.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (oneofs != null) __obj.updateDynamic("oneofs")(oneofs.asInstanceOf[js.Any])
-    if (options != null) __obj.updateDynamic("options")(options.asInstanceOf[js.Any])
-    if (sourceContext != null) __obj.updateDynamic("sourceContext")(sourceContext.asInstanceOf[js.Any])
-    if (syntax != null) __obj.updateDynamic("syntax")(syntax.asInstanceOf[js.Any])
     __obj.asInstanceOf[Type]
   }
+  @scala.inline
+  implicit class TypeOps[Self <: Type] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFields(value: js.Array[Field]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fields")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFields: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fields")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOneofs(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("oneofs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOneofs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("oneofs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOptions(value: js.Array[Option]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSourceContext(value: SourceContext): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceContext")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSourceContext: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceContext")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSyntax(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("syntax")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSyntax: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("syntax")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

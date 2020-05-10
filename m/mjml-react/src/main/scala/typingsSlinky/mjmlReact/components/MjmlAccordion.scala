@@ -1,10 +1,7 @@
 package typingsSlinky.mjmlReact.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.csstype.mod.BackgroundColorProperty
 import typingsSlinky.mjmlReact.mjmlReactStrings.left
 import typingsSlinky.mjmlReact.mjmlReactStrings.right
@@ -14,41 +11,38 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object MjmlAccordion
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.mjmlReact.mod.MjmlAccordion] {
+object MjmlAccordion {
   @JSImport("mjml-react", "MjmlAccordion")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    backgroundColor: BackgroundColorProperty = null,
-    fontFamily: String = null,
-    iconAlign: String = null,
-    iconHeight: String = null,
-    iconPosition: left | right = null,
-    iconUnwrappedAlt: String = null,
-    iconUnwrappedUrl: String = null,
-    iconWidth: String = null,
-    iconWrappedAlt: String = null,
-    iconWrappedUrl: String = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.mjmlReact.mod.MjmlAccordion] = {
-    val __obj = js.Dynamic.literal()
-    if (backgroundColor != null) __obj.updateDynamic("backgroundColor")(backgroundColor.asInstanceOf[js.Any])
-    if (fontFamily != null) __obj.updateDynamic("fontFamily")(fontFamily.asInstanceOf[js.Any])
-    if (iconAlign != null) __obj.updateDynamic("iconAlign")(iconAlign.asInstanceOf[js.Any])
-    if (iconHeight != null) __obj.updateDynamic("iconHeight")(iconHeight.asInstanceOf[js.Any])
-    if (iconPosition != null) __obj.updateDynamic("iconPosition")(iconPosition.asInstanceOf[js.Any])
-    if (iconUnwrappedAlt != null) __obj.updateDynamic("iconUnwrappedAlt")(iconUnwrappedAlt.asInstanceOf[js.Any])
-    if (iconUnwrappedUrl != null) __obj.updateDynamic("iconUnwrappedUrl")(iconUnwrappedUrl.asInstanceOf[js.Any])
-    if (iconWidth != null) __obj.updateDynamic("iconWidth")(iconWidth.asInstanceOf[js.Any])
-    if (iconWrappedAlt != null) __obj.updateDynamic("iconWrappedAlt")(iconWrappedAlt.asInstanceOf[js.Any])
-    if (iconWrappedUrl != null) __obj.updateDynamic("iconWrappedUrl")(iconWrappedUrl.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.mjmlReact.mod.MjmlAccordion] {
+    @scala.inline
+    def backgroundColor(value: BackgroundColorProperty): this.type = set("backgroundColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def fontFamily(value: String): this.type = set("fontFamily", value.asInstanceOf[js.Any])
+    @scala.inline
+    def iconAlign(value: String): this.type = set("iconAlign", value.asInstanceOf[js.Any])
+    @scala.inline
+    def iconHeight(value: String): this.type = set("iconHeight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def iconPosition(value: left | right): this.type = set("iconPosition", value.asInstanceOf[js.Any])
+    @scala.inline
+    def iconUnwrappedAlt(value: String): this.type = set("iconUnwrappedAlt", value.asInstanceOf[js.Any])
+    @scala.inline
+    def iconUnwrappedUrl(value: String): this.type = set("iconUnwrappedUrl", value.asInstanceOf[js.Any])
+    @scala.inline
+    def iconWidth(value: String): this.type = set("iconWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def iconWrappedAlt(value: String): this.type = set("iconWrappedAlt", value.asInstanceOf[js.Any])
+    @scala.inline
+    def iconWrappedUrl(value: String): this.type = set("iconWrappedUrl", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.mjmlReact.mod.MjmlAccordion] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.mjmlReact.mod.MjmlAccordion](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = RequiredChildrenProps with MjmlAccordionElementProps
+  
+  def withProps(p: RequiredChildrenProps with MjmlAccordionElementProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: MjmlAccordion.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

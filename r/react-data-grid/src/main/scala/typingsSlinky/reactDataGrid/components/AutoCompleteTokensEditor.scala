@@ -1,9 +1,7 @@
 package typingsSlinky.reactDataGrid.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactDataGrid.AdazzleReactDataGrid.ExcelColumn
 import typingsSlinky.reactDataGrid.AdazzleReactDataGridPlugins.AutoCompleteTokensEditorProps
 import typingsSlinky.reactDataGrid.AnonCaption
@@ -11,31 +9,29 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object AutoCompleteTokensEditor
-  extends ExternalComponentWithAttributesWithRefType[
-      tag.type, 
-      typingsSlinky.reactDataGrid.AdazzleReactDataGridPlugins.Editors.AutoCompleteTokensEditor
-    ] {
+object AutoCompleteTokensEditor {
   @JSGlobal("AdazzleReactDataGridPlugins.Editors.AutoCompleteTokensEditor")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    options: js.Array[String | AnonCaption],
-    column: ExcelColumn = null,
-    value: js.Array[_] = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[
-    tag.type, 
-    typingsSlinky.reactDataGrid.AdazzleReactDataGridPlugins.Editors.AutoCompleteTokensEditor
-  ] = {
-    val __obj = js.Dynamic.literal(options = options.asInstanceOf[js.Any])
-    if (column != null) __obj.updateDynamic("column")(column.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[
+          tag.type, 
+          typingsSlinky.reactDataGrid.AdazzleReactDataGridPlugins.Editors.AutoCompleteTokensEditor
+        ] {
+    @scala.inline
+    def column(value: ExcelColumn): this.type = set("column", value.asInstanceOf[js.Any])
+    @scala.inline
+    def value(value: js.Array[_]): this.type = set("value", value.asInstanceOf[js.Any])
   }
-  type Props = AutoCompleteTokensEditorProps
+  
+  def withProps(p: AutoCompleteTokensEditorProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(options: js.Array[String | AnonCaption]): Builder = {
+    val __props = js.Dynamic.literal(options = options.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[AutoCompleteTokensEditorProps]))
+  }
 }
 

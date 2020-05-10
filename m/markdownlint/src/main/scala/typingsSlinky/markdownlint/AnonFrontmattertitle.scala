@@ -4,18 +4,49 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonFrontmattertitle extends js.Object {
-  var front_matter_title: js.UndefOr[String] = js.undefined
-  var level: js.UndefOr[Double] = js.undefined
+  var front_matter_title: js.UndefOr[String] = js.native
+  var level: js.UndefOr[Double] = js.native
 }
 
 object AnonFrontmattertitle {
   @scala.inline
-  def apply(front_matter_title: String = null, level: Int | Double = null): AnonFrontmattertitle = {
+  def apply(): AnonFrontmattertitle = {
     val __obj = js.Dynamic.literal()
-    if (front_matter_title != null) __obj.updateDynamic("front_matter_title")(front_matter_title.asInstanceOf[js.Any])
-    if (level != null) __obj.updateDynamic("level")(level.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonFrontmattertitle]
   }
+  @scala.inline
+  implicit class AnonFrontmattertitleOps[Self <: AnonFrontmattertitle] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFront_matter_title(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("front_matter_title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFront_matter_title: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("front_matter_title")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLevel(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("level")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLevel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("level")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

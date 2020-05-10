@@ -8,11 +8,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ConversionsCollection extends js.Object {
   // Inserts conversions.
-  def batchinsert(resource: ConversionsBatchInsertRequest, profileId: String): ConversionsBatchInsertResponse
+  def batchinsert(resource: ConversionsBatchInsertRequest, profileId: String): ConversionsBatchInsertResponse = js.native
   // Updates existing conversions.
-  def batchupdate(resource: ConversionsBatchUpdateRequest, profileId: String): ConversionsBatchUpdateResponse
+  def batchupdate(resource: ConversionsBatchUpdateRequest, profileId: String): ConversionsBatchUpdateResponse = js.native
 }
 
 object ConversionsCollection {
@@ -22,8 +23,27 @@ object ConversionsCollection {
     batchupdate: (ConversionsBatchUpdateRequest, String) => ConversionsBatchUpdateResponse
   ): ConversionsCollection = {
     val __obj = js.Dynamic.literal(batchinsert = js.Any.fromFunction2(batchinsert), batchupdate = js.Any.fromFunction2(batchupdate))
-  
     __obj.asInstanceOf[ConversionsCollection]
   }
+  @scala.inline
+  implicit class ConversionsCollectionOps[Self <: ConversionsCollection] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBatchinsert(value: (ConversionsBatchInsertRequest, String) => ConversionsBatchInsertResponse): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("batchinsert")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withBatchupdate(value: (ConversionsBatchUpdateRequest, String) => ConversionsBatchUpdateResponse): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("batchupdate")(js.Any.fromFunction2(value))
+        ret
+    }
+  }
+  
 }
 

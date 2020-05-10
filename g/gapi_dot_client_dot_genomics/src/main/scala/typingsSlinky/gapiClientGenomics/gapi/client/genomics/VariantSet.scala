@@ -4,22 +4,23 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait VariantSet extends js.Object {
   /** The dataset to which this variant set belongs. */
-  var datasetId: js.UndefOr[String] = js.undefined
+  var datasetId: js.UndefOr[String] = js.native
   /** A textual description of this variant set. */
-  var description: js.UndefOr[String] = js.undefined
+  var description: js.UndefOr[String] = js.native
   /** The server-generated variant set ID, unique across all variant sets. */
-  var id: js.UndefOr[String] = js.undefined
+  var id: js.UndefOr[String] = js.native
   /** The metadata associated with this variant set. */
-  var metadata: js.UndefOr[js.Array[VariantSetMetadata]] = js.undefined
+  var metadata: js.UndefOr[js.Array[VariantSetMetadata]] = js.native
   /** User-specified, mutable name. */
-  var name: js.UndefOr[String] = js.undefined
+  var name: js.UndefOr[String] = js.native
   /**
     * A list of all references used by the variants in a variant set
     * with associated coordinate upper bounds for each one.
     */
-  var referenceBounds: js.UndefOr[js.Array[ReferenceBound]] = js.undefined
+  var referenceBounds: js.UndefOr[js.Array[ReferenceBound]] = js.native
   /**
     * The reference set to which the variant set is mapped. The reference set
     * describes the alignment provenance of the variant set, while the
@@ -32,29 +33,106 @@ trait VariantSet extends js.Object {
     * contain only an entry for 'X', while the associated reference set
     * enumerates all possible references: '1', '2', 'X', 'Y', 'MT', etc.
     */
-  var referenceSetId: js.UndefOr[String] = js.undefined
+  var referenceSetId: js.UndefOr[String] = js.native
 }
 
 object VariantSet {
   @scala.inline
-  def apply(
-    datasetId: String = null,
-    description: String = null,
-    id: String = null,
-    metadata: js.Array[VariantSetMetadata] = null,
-    name: String = null,
-    referenceBounds: js.Array[ReferenceBound] = null,
-    referenceSetId: String = null
-  ): VariantSet = {
+  def apply(): VariantSet = {
     val __obj = js.Dynamic.literal()
-    if (datasetId != null) __obj.updateDynamic("datasetId")(datasetId.asInstanceOf[js.Any])
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (metadata != null) __obj.updateDynamic("metadata")(metadata.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (referenceBounds != null) __obj.updateDynamic("referenceBounds")(referenceBounds.asInstanceOf[js.Any])
-    if (referenceSetId != null) __obj.updateDynamic("referenceSetId")(referenceSetId.asInstanceOf[js.Any])
     __obj.asInstanceOf[VariantSet]
   }
+  @scala.inline
+  implicit class VariantSetOps[Self <: VariantSet] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDatasetId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("datasetId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDatasetId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("datasetId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDescription(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMetadata(value: js.Array[VariantSetMetadata]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMetadata: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReferenceBounds(value: js.Array[ReferenceBound]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("referenceBounds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReferenceBounds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("referenceBounds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReferenceSetId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("referenceSetId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReferenceSetId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("referenceSetId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

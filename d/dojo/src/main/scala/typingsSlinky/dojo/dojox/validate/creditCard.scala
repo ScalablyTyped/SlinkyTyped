@@ -11,5 +11,6 @@ import scala.scalajs.js.annotation._
   * rules in conjunction with the Luhn algorigthm, with a pluggable card info database.
   *
   */
+@js.native
 trait creditCard extends js.Object
 

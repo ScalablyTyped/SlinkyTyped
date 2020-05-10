@@ -9,72 +9,150 @@ import scala.scalajs.js.annotation._
   * 
   * 参考: [http://www.html5plus.org/doc/zh_cn/bluetooth.html](http://www.html5plus.org/doc/zh_cn/bluetooth.html)
   */
+@js.native
 trait PlusBluetoothBluetoothDeviceInfo extends js.Object {
   /**
     * 蓝牙设备的信号强度
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/bluetooth.html](http://www.html5plus.org/doc/zh_cn/bluetooth.html)
     */
-  var RSSI: js.UndefOr[String] = js.undefined
+  var RSSI: js.UndefOr[String] = js.native
   /**
     * 蓝牙设备的广播数据段中的ManufacturerData数据段
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/bluetooth.html](http://www.html5plus.org/doc/zh_cn/bluetooth.html)
     */
-  var advertisData: js.UndefOr[scala.scalajs.js.typedarray.ArrayBuffer] = js.undefined
+  var advertisData: js.UndefOr[js.typedarray.ArrayBuffer] = js.native
   /**
     * 蓝牙设备的广播数据段中的ServiceUUIDs数据段
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/bluetooth.html](http://www.html5plus.org/doc/zh_cn/bluetooth.html)
     */
-  var advertisServiceUUIDs: js.UndefOr[js.Array[_]] = js.undefined
+  var advertisServiceUUIDs: js.UndefOr[js.Array[_]] = js.native
   /**
     * 蓝牙设备的id
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/bluetooth.html](http://www.html5plus.org/doc/zh_cn/bluetooth.html)
     */
-  var deviceId: js.UndefOr[String] = js.undefined
+  var deviceId: js.UndefOr[String] = js.native
   /**
     * 蓝牙设备的广播数据段中的LocalName数据段
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/bluetooth.html](http://www.html5plus.org/doc/zh_cn/bluetooth.html)
     */
-  var localName: js.UndefOr[String] = js.undefined
+  var localName: js.UndefOr[String] = js.native
   /**
     * 蓝牙设备名称
     * 某些设备可能没有此字段值。
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/bluetooth.html](http://www.html5plus.org/doc/zh_cn/bluetooth.html)
     */
-  var name: js.UndefOr[String] = js.undefined
+  var name: js.UndefOr[String] = js.native
   /**
     * 蓝牙设备的广播数据段中的ServiceData数据段
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/bluetooth.html](http://www.html5plus.org/doc/zh_cn/bluetooth.html)
     */
-  var serviceData: js.UndefOr[js.Any] = js.undefined
+  var serviceData: js.UndefOr[js.Any] = js.native
 }
 
 object PlusBluetoothBluetoothDeviceInfo {
   @scala.inline
-  def apply(
-    RSSI: String = null,
-    advertisData: scala.scalajs.js.typedarray.ArrayBuffer = null,
-    advertisServiceUUIDs: js.Array[_] = null,
-    deviceId: String = null,
-    localName: String = null,
-    name: String = null,
-    serviceData: js.Any = null
-  ): PlusBluetoothBluetoothDeviceInfo = {
+  def apply(): PlusBluetoothBluetoothDeviceInfo = {
     val __obj = js.Dynamic.literal()
-    if (RSSI != null) __obj.updateDynamic("RSSI")(RSSI.asInstanceOf[js.Any])
-    if (advertisData != null) __obj.updateDynamic("advertisData")(advertisData.asInstanceOf[js.Any])
-    if (advertisServiceUUIDs != null) __obj.updateDynamic("advertisServiceUUIDs")(advertisServiceUUIDs.asInstanceOf[js.Any])
-    if (deviceId != null) __obj.updateDynamic("deviceId")(deviceId.asInstanceOf[js.Any])
-    if (localName != null) __obj.updateDynamic("localName")(localName.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (serviceData != null) __obj.updateDynamic("serviceData")(serviceData.asInstanceOf[js.Any])
     __obj.asInstanceOf[PlusBluetoothBluetoothDeviceInfo]
   }
+  @scala.inline
+  implicit class PlusBluetoothBluetoothDeviceInfoOps[Self <: PlusBluetoothBluetoothDeviceInfo] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRSSI(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RSSI")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRSSI: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RSSI")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAdvertisData(value: js.typedarray.ArrayBuffer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("advertisData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAdvertisData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("advertisData")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAdvertisServiceUUIDs(value: js.Array[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("advertisServiceUUIDs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAdvertisServiceUUIDs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("advertisServiceUUIDs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeviceId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeviceId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocalName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("localName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocalName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("localName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withServiceData(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutServiceData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceData")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

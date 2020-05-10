@@ -25,13 +25,13 @@ trait DragControl extends js.Object {
   def $drop(source: HTMLElement, target: HTMLElement, ev: Event_): Unit = js.native
   def addDrag(node: String, ctrl: js.Any): Unit = js.native
   def addDrag(node: Double, ctrl: js.Any): Unit = js.native
-  def addDrag(node: typingsSlinky.std.HTMLElement, ctrl: js.Any): Unit = js.native
+  def addDrag(node: HTMLElement, ctrl: js.Any): Unit = js.native
   def addDrop(node: String, ctrl: js.Any): Unit = js.native
   def addDrop(node: String, ctrl: js.Any, master_mode: Boolean): Unit = js.native
   def addDrop(node: Double, ctrl: js.Any): Unit = js.native
   def addDrop(node: Double, ctrl: js.Any, master_mode: Boolean): Unit = js.native
-  def addDrop(node: typingsSlinky.std.HTMLElement, ctrl: js.Any): Unit = js.native
-  def addDrop(node: typingsSlinky.std.HTMLElement, ctrl: js.Any, master_mode: Boolean): Unit = js.native
+  def addDrop(node: HTMLElement, ctrl: js.Any): Unit = js.native
+  def addDrop(node: HTMLElement, ctrl: js.Any, master_mode: Boolean): Unit = js.native
   def createDrag(event: Event_): Unit = js.native
   def destroyDrag(): Unit = js.native
   def getContext(): js.Any = js.native

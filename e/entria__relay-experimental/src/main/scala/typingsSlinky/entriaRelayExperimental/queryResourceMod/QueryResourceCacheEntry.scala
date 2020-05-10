@@ -2,7 +2,6 @@ package typingsSlinky.entriaRelayExperimental.queryResourceMod
 
 import typingsSlinky.relayRuntime.relayRuntimeTypesMod.Disposable
 import typingsSlinky.relayRuntime.relayStoreTypesMod.Environment
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,7 +14,7 @@ trait QueryResourceCacheEntry extends js.Object {
   def permanentRetain(environment: Environment): Disposable = js.native
   def setValue(value: js.Promise[Unit]): Unit = js.native
   def setValue(value: QueryResult): Unit = js.native
-  def setValue(value: Error): Unit = js.native
+  def setValue(value: js.Error): Unit = js.native
   def temporaryRetain(environment: Environment): Unit = js.native
 }
 

@@ -15,8 +15,8 @@ object _Global_ extends js.Object {
     def dom(target: String): default = js.native
     def dom(target: String, rootElement: Element): default = js.native
     def dom(target: Null, rootElement: Element): default = js.native
-    def dom(target: typingsSlinky.std.Element): default = js.native
-    def dom(target: typingsSlinky.std.Element, rootElement: Element): default = js.native
+    def dom(target: Element): default = js.native
+    def dom(target: Element, rootElement: Element): default = js.native
   }
   
 }

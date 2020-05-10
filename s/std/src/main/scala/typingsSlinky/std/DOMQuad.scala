@@ -9,13 +9,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait DOMQuad extends js.Object {
-  val p1: DOMPoint
-  val p2: DOMPoint
-  val p3: DOMPoint
-  val p4: DOMPoint
-  def getBounds(): DOMRect
-  def toJSON(): js.Any
+  val p1: DOMPoint = js.native
+  val p2: DOMPoint = js.native
+  val p3: DOMPoint = js.native
+  val p4: DOMPoint = js.native
+  def getBounds(): DOMRect = js.native
+  def toJSON(): js.Any = js.native
 }
 
 @JSGlobal("DOMQuad")

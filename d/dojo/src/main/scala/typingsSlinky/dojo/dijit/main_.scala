@@ -94,7 +94,7 @@ trait main_ extends js.Object {
     * @param root             
     * @param doc               Optional            
     */
-  def getFirstInTabbingOrder(root: typingsSlinky.std.HTMLElement, doc: HTMLDocument): js.Any = js.native
+  def getFirstInTabbingOrder(root: HTMLElement, doc: HTMLDocument): js.Any = js.native
   /**
     * Called as getFocus(), this returns an Object showing the current focus
     * and selected text.
@@ -124,7 +124,7 @@ trait main_ extends js.Object {
     * @param root             
     * @param doc               Optional            
     */
-  def getLastInTabbingOrder(root: typingsSlinky.std.HTMLElement, doc: HTMLDocument): js.Any = js.native
+  def getLastInTabbingOrder(root: HTMLElement, doc: HTMLDocument): js.Any = js.native
   /**
     * Deprecated method, unneeded when using dijit/place directly.
     * Transforms the passed array of preferred positions into a format suitable for

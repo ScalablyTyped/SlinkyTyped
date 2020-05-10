@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait MapContext
   extends BaseOptions[js.Any, js.Any] {
   /**
@@ -11,27 +12,38 @@ trait MapContext
   		 *
   		 * @param options
   		 */
-  def getCenterLocation(options: GetCenterLocationOptions): Unit
+  def getCenterLocation(options: GetCenterLocationOptions): Unit = js.native
   /**
   		 * 将地图中心移动到当前定位点，需要配合 map 组件的 show-location 使用
   		 */
-  def moveToLocation(): Unit
+  def moveToLocation(): Unit = js.native
 }
 
 object MapContext {
   @scala.inline
-  def apply(
-    getCenterLocation: GetCenterLocationOptions => Unit,
-    moveToLocation: () => Unit,
-    complete: /* res */ js.Any => Unit = null,
-    fail: js.Any => Unit = null,
-    success: js.Any => Unit = null
-  ): MapContext = {
+  def apply(getCenterLocation: GetCenterLocationOptions => Unit, moveToLocation: () => Unit): MapContext = {
     val __obj = js.Dynamic.literal(getCenterLocation = js.Any.fromFunction1(getCenterLocation), moveToLocation = js.Any.fromFunction0(moveToLocation))
-    if (complete != null) __obj.updateDynamic("complete")(js.Any.fromFunction1(complete))
-    if (fail != null) __obj.updateDynamic("fail")(js.Any.fromFunction1(fail))
-    if (success != null) __obj.updateDynamic("success")(js.Any.fromFunction1(success))
     __obj.asInstanceOf[MapContext]
   }
+  @scala.inline
+  implicit class MapContextOps[Self <: MapContext] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetCenterLocation(value: GetCenterLocationOptions => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getCenterLocation")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMoveToLocation(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("moveToLocation")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

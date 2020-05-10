@@ -2,8 +2,8 @@ package typingsSlinky.jsdom
 
 import org.scalablytyped.runtime.Instantiable2
 import org.scalablytyped.runtime.Instantiable3
+import org.scalajs.dom.raw.File
 import typingsSlinky.std.BlobPart
-import typingsSlinky.std.File
 import typingsSlinky.std.FilePropertyBag
 import scala.scalajs.js
 import scala.scalajs.js.`|`

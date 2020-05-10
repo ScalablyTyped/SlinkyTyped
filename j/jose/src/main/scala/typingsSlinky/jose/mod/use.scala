@@ -12,10 +12,8 @@ trait use extends js.Object
 
 object use {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def enc: typingsSlinky.jose.joseStrings.enc = "enc".asInstanceOf[typingsSlinky.jose.joseStrings.enc]
   @scala.inline
-  def enc: typingsSlinky.jose.joseStrings.enc = this.cast("enc")
-  @scala.inline
-  def sig: typingsSlinky.jose.joseStrings.sig = this.cast("sig")
+  def sig: typingsSlinky.jose.joseStrings.sig = "sig".asInstanceOf[typingsSlinky.jose.joseStrings.sig]
 }
 

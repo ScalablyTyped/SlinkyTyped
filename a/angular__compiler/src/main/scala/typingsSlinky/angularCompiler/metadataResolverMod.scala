@@ -1,6 +1,5 @@
 package typingsSlinky.angularCompiler
 
-import typingsSlinky.angularCompiler.angularCompilerStrings.ngComponentType
 import typingsSlinky.angularCompiler.compileMetadataMod.CompileDirectiveMetadata
 import typingsSlinky.angularCompiler.compileMetadataMod.CompileDirectiveSummary
 import typingsSlinky.angularCompiler.compileMetadataMod.CompileInjectableMetadata
@@ -155,7 +154,7 @@ object metadataResolverMod extends js.Object {
     def loadNgModuleDirectiveAndPipeMetadata(moduleType: js.Any, isSync: Boolean, throwIfNotFound: Boolean): js.Promise[_] = js.native
   }
   
-  val ERROR_COMPONENT_TYPE: ngComponentType = js.native
+  val ERROR_COMPONENT_TYPE: /* "ngComponentType" */ String = js.native
   type ErrorCollector = js.Function2[/* error */ js.Any, /* type */ js.UndefOr[js.Any], Unit]
 }
 

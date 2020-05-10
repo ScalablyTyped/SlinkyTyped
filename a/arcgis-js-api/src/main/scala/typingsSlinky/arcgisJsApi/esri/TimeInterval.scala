@@ -15,6 +15,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait TimeInterval extends JSONSupport {
   /**
     * Temporal units.
@@ -23,7 +24,7 @@ trait TimeInterval extends JSONSupport {
     *
     * @default milliseconds
     */
-  var unit: milliseconds | seconds | minutes | hours | days | weeks | months | years | decades | centuries
+  var unit: milliseconds | seconds | minutes | hours | days | weeks | months | years | decades | centuries = js.native
   /**
     * The numerical value of the time extent.
     *
@@ -31,7 +32,7 @@ trait TimeInterval extends JSONSupport {
     *
     * @default 0
     */
-  var value: Double
+  var value: Double = js.native
 }
 
 @JSGlobal("__esri.TimeInterval")

@@ -21,28 +21,26 @@ trait DateTimeFormatPartTypes extends js.Object
 
 object DateTimeFormatPartTypes {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def day: typingsSlinky.std.stdStrings.day = "day".asInstanceOf[typingsSlinky.std.stdStrings.day]
   @scala.inline
-  def day: typingsSlinky.std.stdStrings.day = this.cast("day")
+  def dayPeriod: typingsSlinky.std.stdStrings.dayPeriod = "dayPeriod".asInstanceOf[typingsSlinky.std.stdStrings.dayPeriod]
   @scala.inline
-  def dayPeriod: typingsSlinky.std.stdStrings.dayPeriod = this.cast("dayPeriod")
+  def era: typingsSlinky.std.stdStrings.era = "era".asInstanceOf[typingsSlinky.std.stdStrings.era]
   @scala.inline
-  def era: typingsSlinky.std.stdStrings.era = this.cast("era")
+  def hour: typingsSlinky.std.stdStrings.hour = "hour".asInstanceOf[typingsSlinky.std.stdStrings.hour]
   @scala.inline
-  def hour: typingsSlinky.std.stdStrings.hour = this.cast("hour")
+  def literal: typingsSlinky.std.stdStrings.literal = "literal".asInstanceOf[typingsSlinky.std.stdStrings.literal]
   @scala.inline
-  def literal: typingsSlinky.std.stdStrings.literal = this.cast("literal")
+  def minute: typingsSlinky.std.stdStrings.minute = "minute".asInstanceOf[typingsSlinky.std.stdStrings.minute]
   @scala.inline
-  def minute: typingsSlinky.std.stdStrings.minute = this.cast("minute")
+  def month: typingsSlinky.std.stdStrings.month = "month".asInstanceOf[typingsSlinky.std.stdStrings.month]
   @scala.inline
-  def month: typingsSlinky.std.stdStrings.month = this.cast("month")
+  def second: typingsSlinky.std.stdStrings.second = "second".asInstanceOf[typingsSlinky.std.stdStrings.second]
   @scala.inline
-  def second: typingsSlinky.std.stdStrings.second = this.cast("second")
+  def timeZoneName: typingsSlinky.std.stdStrings.timeZoneName = "timeZoneName".asInstanceOf[typingsSlinky.std.stdStrings.timeZoneName]
   @scala.inline
-  def timeZoneName: typingsSlinky.std.stdStrings.timeZoneName = this.cast("timeZoneName")
+  def weekday: typingsSlinky.std.stdStrings.weekday = "weekday".asInstanceOf[typingsSlinky.std.stdStrings.weekday]
   @scala.inline
-  def weekday: typingsSlinky.std.stdStrings.weekday = this.cast("weekday")
-  @scala.inline
-  def year: typingsSlinky.std.stdStrings.year = this.cast("year")
+  def year: typingsSlinky.std.stdStrings.year = "year".asInstanceOf[typingsSlinky.std.stdStrings.year]
 }
 

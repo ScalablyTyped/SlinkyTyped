@@ -13,12 +13,10 @@ trait Type extends js.Object
 
 object Type {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def dir: typingsSlinky.node.nodeStrings.dir = "dir".asInstanceOf[typingsSlinky.node.nodeStrings.dir]
   @scala.inline
-  def dir: typingsSlinky.node.nodeStrings.dir = this.cast("dir")
+  def file: typingsSlinky.node.nodeStrings.file = "file".asInstanceOf[typingsSlinky.node.nodeStrings.file]
   @scala.inline
-  def file: typingsSlinky.node.nodeStrings.file = this.cast("file")
-  @scala.inline
-  def junction: typingsSlinky.node.nodeStrings.junction = this.cast("junction")
+  def junction: typingsSlinky.node.nodeStrings.junction = "junction".asInstanceOf[typingsSlinky.node.nodeStrings.junction]
 }
 

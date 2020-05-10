@@ -24,3 +24,115 @@ trait OptionListProps extends BaseMenuPropsT {
   def getItemLabel(item: js.Any): TagMod[Any] = js.native
 }
 
+object OptionListProps {
+  @scala.inline
+  def apply(getItemLabel: js.Any => TagMod[Any], item: js.Any): OptionListProps = {
+    val __obj = js.Dynamic.literal(getItemLabel = js.Any.fromFunction1(getItemLabel), item = item.asInstanceOf[js.Any])
+    __obj.asInstanceOf[OptionListProps]
+  }
+  @scala.inline
+  implicit class OptionListPropsOps[Self <: OptionListProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetItemLabel(value: js.Any => TagMod[Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getItemLabel")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withItem(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("item")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with$isFocused(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$isFocused")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without$isFocused: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$isFocused")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with$isHighlighted(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$isHighlighted")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without$isHighlighted: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$isHighlighted")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetChildMenu(value: /* item */ js.Any => TagMod[Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getChildMenu")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetChildMenu: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getChildMenu")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnMouseEnter(value: /* event */ MouseEvent => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseEnter")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnMouseEnter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseEnter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOverrides(value: AnonListItem): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overrides")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOverrides: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overrides")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResetMenu(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resetMenu")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutResetMenu: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resetMenu")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSize(value: default_ | compact): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
+        ret
+    }
+  }
+  
+}
+

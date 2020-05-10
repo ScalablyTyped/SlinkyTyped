@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation._
 /**
   * In version 6.0.0: deprecated
   */
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.mendixmodelsdk.structuresMod.IStructure because Already inherited
 - typingsSlinky.mendixmodelsdk.elementsMod.IAbstractElement because Already inherited
 - typingsSlinky.mendixmodelsdk.elementsMod.IElement because Already inherited
@@ -34,7 +34,7 @@ class CurrencyAttributeType protected () extends FloatAttributeTypeBase {
   @JSName("model")
   var model_FCurrencyAttributeType: IModel = js.native
   @JSName("containerAsAttribute")
-  def containerAsAttribute_MCurrencyAttributeType(): Attribute = js.native
+  def containerAsAttribute_MCurrencyAttributeType: Attribute = js.native
 }
 
 /* static members */

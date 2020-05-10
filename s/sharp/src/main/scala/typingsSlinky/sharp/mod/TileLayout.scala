@@ -6,6 +6,7 @@ import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.sharp.sharpStrings.dz
+  - typingsSlinky.sharp.sharpStrings.iiif
   - typingsSlinky.sharp.sharpStrings.zoomify
   - typingsSlinky.sharp.sharpStrings.google
 */
@@ -13,12 +14,12 @@ trait TileLayout extends js.Object
 
 object TileLayout {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def dz: typingsSlinky.sharp.sharpStrings.dz = "dz".asInstanceOf[typingsSlinky.sharp.sharpStrings.dz]
   @scala.inline
-  def dz: typingsSlinky.sharp.sharpStrings.dz = this.cast("dz")
+  def google: typingsSlinky.sharp.sharpStrings.google = "google".asInstanceOf[typingsSlinky.sharp.sharpStrings.google]
   @scala.inline
-  def google: typingsSlinky.sharp.sharpStrings.google = this.cast("google")
+  def iiif: typingsSlinky.sharp.sharpStrings.iiif = "iiif".asInstanceOf[typingsSlinky.sharp.sharpStrings.iiif]
   @scala.inline
-  def zoomify: typingsSlinky.sharp.sharpStrings.zoomify = this.cast("zoomify")
+  def zoomify: typingsSlinky.sharp.sharpStrings.zoomify = "zoomify".asInstanceOf[typingsSlinky.sharp.sharpStrings.zoomify]
 }
 

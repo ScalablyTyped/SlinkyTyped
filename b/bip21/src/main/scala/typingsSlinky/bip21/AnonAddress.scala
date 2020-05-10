@@ -4,17 +4,43 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonAddress extends js.Object {
-  var address: String
-  var amount: js.UndefOr[Double] = js.undefined
+  var address: String = js.native
+  var amount: js.UndefOr[Double] = js.native
 }
 
 object AnonAddress {
   @scala.inline
-  def apply(address: String, amount: Int | Double = null): AnonAddress = {
+  def apply(address: String): AnonAddress = {
     val __obj = js.Dynamic.literal(address = address.asInstanceOf[js.Any])
-    if (amount != null) __obj.updateDynamic("amount")(amount.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonAddress]
   }
+  @scala.inline
+  implicit class AnonAddressOps[Self <: AnonAddress] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAddress(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("address")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAmount(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("amount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAmount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("amount")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

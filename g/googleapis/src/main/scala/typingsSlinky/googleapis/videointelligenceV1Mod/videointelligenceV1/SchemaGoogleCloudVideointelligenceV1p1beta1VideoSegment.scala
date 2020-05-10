@@ -23,11 +23,41 @@ trait SchemaGoogleCloudVideointelligenceV1p1beta1VideoSegment extends js.Object 
 
 object SchemaGoogleCloudVideointelligenceV1p1beta1VideoSegment {
   @scala.inline
-  def apply(endTimeOffset: String = null, startTimeOffset: String = null): SchemaGoogleCloudVideointelligenceV1p1beta1VideoSegment = {
+  def apply(): SchemaGoogleCloudVideointelligenceV1p1beta1VideoSegment = {
     val __obj = js.Dynamic.literal()
-    if (endTimeOffset != null) __obj.updateDynamic("endTimeOffset")(endTimeOffset.asInstanceOf[js.Any])
-    if (startTimeOffset != null) __obj.updateDynamic("startTimeOffset")(startTimeOffset.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudVideointelligenceV1p1beta1VideoSegment]
   }
+  @scala.inline
+  implicit class SchemaGoogleCloudVideointelligenceV1p1beta1VideoSegmentOps[Self <: SchemaGoogleCloudVideointelligenceV1p1beta1VideoSegment] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEndTimeOffset(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endTimeOffset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEndTimeOffset: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endTimeOffset")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartTimeOffset(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startTimeOffset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartTimeOffset: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startTimeOffset")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

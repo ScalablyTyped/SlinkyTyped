@@ -22,16 +22,53 @@ trait LookupDeveloperIdentityResponse extends js.Object {
 
 object LookupDeveloperIdentityResponse {
   @scala.inline
-  def apply(
-    DeveloperUserIdentifierList: DeveloperUserIdentifierList = null,
-    IdentityId: IdentityId = null,
-    NextToken: PaginationKey = null
-  ): LookupDeveloperIdentityResponse = {
+  def apply(): LookupDeveloperIdentityResponse = {
     val __obj = js.Dynamic.literal()
-    if (DeveloperUserIdentifierList != null) __obj.updateDynamic("DeveloperUserIdentifierList")(DeveloperUserIdentifierList.asInstanceOf[js.Any])
-    if (IdentityId != null) __obj.updateDynamic("IdentityId")(IdentityId.asInstanceOf[js.Any])
-    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[LookupDeveloperIdentityResponse]
   }
+  @scala.inline
+  implicit class LookupDeveloperIdentityResponseOps[Self <: LookupDeveloperIdentityResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDeveloperUserIdentifierList(value: DeveloperUserIdentifierList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeveloperUserIdentifierList")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeveloperUserIdentifierList: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeveloperUserIdentifierList")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIdentityId(value: IdentityId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IdentityId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIdentityId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IdentityId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextToken(value: PaginationKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

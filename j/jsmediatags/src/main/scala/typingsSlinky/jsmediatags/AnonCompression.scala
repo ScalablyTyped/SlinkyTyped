@@ -4,12 +4,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonCompression extends js.Object {
-  var compression: Boolean
-  var data_length_indicator: Boolean
-  var encryption: Boolean
-  var grouping_identity: Boolean
-  var unsynchronisation: Boolean
+  var compression: Boolean = js.native
+  var data_length_indicator: Boolean = js.native
+  var encryption: Boolean = js.native
+  var grouping_identity: Boolean = js.native
+  var unsynchronisation: Boolean = js.native
 }
 
 object AnonCompression {
@@ -22,8 +23,45 @@ object AnonCompression {
     unsynchronisation: Boolean
   ): AnonCompression = {
     val __obj = js.Dynamic.literal(compression = compression.asInstanceOf[js.Any], data_length_indicator = data_length_indicator.asInstanceOf[js.Any], encryption = encryption.asInstanceOf[js.Any], grouping_identity = grouping_identity.asInstanceOf[js.Any], unsynchronisation = unsynchronisation.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[AnonCompression]
   }
+  @scala.inline
+  implicit class AnonCompressionOps[Self <: AnonCompression] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCompression(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("compression")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withData_length_indicator(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data_length_indicator")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEncryption(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encryption")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGrouping_identity(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("grouping_identity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUnsynchronisation(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unsynchronisation")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

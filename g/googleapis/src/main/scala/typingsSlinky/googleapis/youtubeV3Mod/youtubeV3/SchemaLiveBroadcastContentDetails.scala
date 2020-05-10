@@ -99,42 +99,209 @@ trait SchemaLiveBroadcastContentDetails extends js.Object {
 
 object SchemaLiveBroadcastContentDetails {
   @scala.inline
-  def apply(
-    boundStreamId: String = null,
-    boundStreamLastUpdateTimeMs: String = null,
-    closedCaptionsType: String = null,
-    enableAutoStart: js.UndefOr[Boolean] = js.undefined,
-    enableClosedCaptions: js.UndefOr[Boolean] = js.undefined,
-    enableContentEncryption: js.UndefOr[Boolean] = js.undefined,
-    enableDvr: js.UndefOr[Boolean] = js.undefined,
-    enableEmbed: js.UndefOr[Boolean] = js.undefined,
-    enableLowLatency: js.UndefOr[Boolean] = js.undefined,
-    latencyPreference: String = null,
-    mesh: String = null,
-    monitorStream: SchemaMonitorStreamInfo = null,
-    projection: String = null,
-    recordFromStart: js.UndefOr[Boolean] = js.undefined,
-    startWithSlate: js.UndefOr[Boolean] = js.undefined,
-    stereoLayout: String = null
-  ): SchemaLiveBroadcastContentDetails = {
+  def apply(): SchemaLiveBroadcastContentDetails = {
     val __obj = js.Dynamic.literal()
-    if (boundStreamId != null) __obj.updateDynamic("boundStreamId")(boundStreamId.asInstanceOf[js.Any])
-    if (boundStreamLastUpdateTimeMs != null) __obj.updateDynamic("boundStreamLastUpdateTimeMs")(boundStreamLastUpdateTimeMs.asInstanceOf[js.Any])
-    if (closedCaptionsType != null) __obj.updateDynamic("closedCaptionsType")(closedCaptionsType.asInstanceOf[js.Any])
-    if (!js.isUndefined(enableAutoStart)) __obj.updateDynamic("enableAutoStart")(enableAutoStart.asInstanceOf[js.Any])
-    if (!js.isUndefined(enableClosedCaptions)) __obj.updateDynamic("enableClosedCaptions")(enableClosedCaptions.asInstanceOf[js.Any])
-    if (!js.isUndefined(enableContentEncryption)) __obj.updateDynamic("enableContentEncryption")(enableContentEncryption.asInstanceOf[js.Any])
-    if (!js.isUndefined(enableDvr)) __obj.updateDynamic("enableDvr")(enableDvr.asInstanceOf[js.Any])
-    if (!js.isUndefined(enableEmbed)) __obj.updateDynamic("enableEmbed")(enableEmbed.asInstanceOf[js.Any])
-    if (!js.isUndefined(enableLowLatency)) __obj.updateDynamic("enableLowLatency")(enableLowLatency.asInstanceOf[js.Any])
-    if (latencyPreference != null) __obj.updateDynamic("latencyPreference")(latencyPreference.asInstanceOf[js.Any])
-    if (mesh != null) __obj.updateDynamic("mesh")(mesh.asInstanceOf[js.Any])
-    if (monitorStream != null) __obj.updateDynamic("monitorStream")(monitorStream.asInstanceOf[js.Any])
-    if (projection != null) __obj.updateDynamic("projection")(projection.asInstanceOf[js.Any])
-    if (!js.isUndefined(recordFromStart)) __obj.updateDynamic("recordFromStart")(recordFromStart.asInstanceOf[js.Any])
-    if (!js.isUndefined(startWithSlate)) __obj.updateDynamic("startWithSlate")(startWithSlate.asInstanceOf[js.Any])
-    if (stereoLayout != null) __obj.updateDynamic("stereoLayout")(stereoLayout.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaLiveBroadcastContentDetails]
   }
+  @scala.inline
+  implicit class SchemaLiveBroadcastContentDetailsOps[Self <: SchemaLiveBroadcastContentDetails] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBoundStreamId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("boundStreamId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBoundStreamId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("boundStreamId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBoundStreamLastUpdateTimeMs(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("boundStreamLastUpdateTimeMs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBoundStreamLastUpdateTimeMs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("boundStreamLastUpdateTimeMs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClosedCaptionsType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("closedCaptionsType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClosedCaptionsType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("closedCaptionsType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnableAutoStart(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableAutoStart")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnableAutoStart: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableAutoStart")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnableClosedCaptions(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableClosedCaptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnableClosedCaptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableClosedCaptions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnableContentEncryption(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableContentEncryption")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnableContentEncryption: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableContentEncryption")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnableDvr(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableDvr")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnableDvr: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableDvr")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnableEmbed(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableEmbed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnableEmbed: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableEmbed")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnableLowLatency(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableLowLatency")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnableLowLatency: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableLowLatency")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLatencyPreference(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("latencyPreference")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLatencyPreference: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("latencyPreference")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMesh(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mesh")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMesh: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mesh")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMonitorStream(value: SchemaMonitorStreamInfo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("monitorStream")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMonitorStream: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("monitorStream")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProjection(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("projection")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProjection: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("projection")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRecordFromStart(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("recordFromStart")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRecordFromStart: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("recordFromStart")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartWithSlate(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startWithSlate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartWithSlate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startWithSlate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStereoLayout(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stereoLayout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStereoLayout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stereoLayout")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

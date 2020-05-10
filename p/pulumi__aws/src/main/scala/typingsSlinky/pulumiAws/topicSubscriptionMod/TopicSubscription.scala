@@ -1,6 +1,5 @@
 package typingsSlinky.pulumiAws.topicSubscriptionMod
 
-import typingsSlinky.pulumiAws.topicMod.Topic
 import typingsSlinky.pulumiPulumi.mod.CustomResource
 import typingsSlinky.pulumiPulumi.outputMod.Input
 import typingsSlinky.pulumiPulumi.outputMod.Output_
@@ -57,7 +56,7 @@ class TopicSubscription protected () extends CustomResource {
   /**
     * The ARN of the SNS topic to subscribe to
     */
-  val topic: Output_[Topic] = js.native
+  val topic: Output_[String] = js.native
 }
 
 /* static members */

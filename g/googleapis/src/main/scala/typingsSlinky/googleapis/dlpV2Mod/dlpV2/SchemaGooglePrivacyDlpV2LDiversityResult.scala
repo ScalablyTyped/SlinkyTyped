@@ -17,12 +17,29 @@ trait SchemaGooglePrivacyDlpV2LDiversityResult extends js.Object {
 
 object SchemaGooglePrivacyDlpV2LDiversityResult {
   @scala.inline
-  def apply(
-    sensitiveValueFrequencyHistogramBuckets: js.Array[SchemaGooglePrivacyDlpV2LDiversityHistogramBucket] = null
-  ): SchemaGooglePrivacyDlpV2LDiversityResult = {
+  def apply(): SchemaGooglePrivacyDlpV2LDiversityResult = {
     val __obj = js.Dynamic.literal()
-    if (sensitiveValueFrequencyHistogramBuckets != null) __obj.updateDynamic("sensitiveValueFrequencyHistogramBuckets")(sensitiveValueFrequencyHistogramBuckets.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGooglePrivacyDlpV2LDiversityResult]
   }
+  @scala.inline
+  implicit class SchemaGooglePrivacyDlpV2LDiversityResultOps[Self <: SchemaGooglePrivacyDlpV2LDiversityResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSensitiveValueFrequencyHistogramBuckets(value: js.Array[SchemaGooglePrivacyDlpV2LDiversityHistogramBucket]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sensitiveValueFrequencyHistogramBuckets")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSensitiveValueFrequencyHistogramBuckets: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sensitiveValueFrequencyHistogramBuckets")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

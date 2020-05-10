@@ -28,8 +28,6 @@ class LokiMemoryAdapter () extends LokiPersistenceAdapter {
     */
   @JSName("deleteDatabase")
   def deleteDatabase_MLokiMemoryAdapter(dbname: String, callback: js.Function1[/* err */ js.UndefOr[js.Error | Null], Unit]): Unit = js.native
-  /* CompleteClass */
-  override def loadDatabase(dbname: String, callback: js.Function1[/* value */ js.Any, Unit]): Unit = js.native
   /**
     * Saves a serialized database to its in-memory store.
     * (Loki persistence adapter interface function)

@@ -18,22 +18,20 @@ trait BuiltinHelperName extends js.Object
 
 object BuiltinHelperName {
   @scala.inline
-  def blockHelperMissing: typingsSlinky.handlebars.handlebarsStrings.blockHelperMissing = this.cast("blockHelperMissing")
+  def blockHelperMissing: typingsSlinky.handlebars.handlebarsStrings.blockHelperMissing = "blockHelperMissing".asInstanceOf[typingsSlinky.handlebars.handlebarsStrings.blockHelperMissing]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def each: typingsSlinky.handlebars.handlebarsStrings.each = "each".asInstanceOf[typingsSlinky.handlebars.handlebarsStrings.each]
   @scala.inline
-  def each: typingsSlinky.handlebars.handlebarsStrings.each = this.cast("each")
+  def helperMissing: typingsSlinky.handlebars.handlebarsStrings.helperMissing = "helperMissing".asInstanceOf[typingsSlinky.handlebars.handlebarsStrings.helperMissing]
   @scala.inline
-  def helperMissing: typingsSlinky.handlebars.handlebarsStrings.helperMissing = this.cast("helperMissing")
+  def `if`: typingsSlinky.handlebars.handlebarsStrings.`if` = "if".asInstanceOf[typingsSlinky.handlebars.handlebarsStrings.`if`]
   @scala.inline
-  def `if`: typingsSlinky.handlebars.handlebarsStrings.`if` = this.cast("if")
+  def log: typingsSlinky.handlebars.handlebarsStrings.log = "log".asInstanceOf[typingsSlinky.handlebars.handlebarsStrings.log]
   @scala.inline
-  def log: typingsSlinky.handlebars.handlebarsStrings.log = this.cast("log")
+  def lookup: typingsSlinky.handlebars.handlebarsStrings.lookup = "lookup".asInstanceOf[typingsSlinky.handlebars.handlebarsStrings.lookup]
   @scala.inline
-  def lookup: typingsSlinky.handlebars.handlebarsStrings.lookup = this.cast("lookup")
+  def unless: typingsSlinky.handlebars.handlebarsStrings.unless = "unless".asInstanceOf[typingsSlinky.handlebars.handlebarsStrings.unless]
   @scala.inline
-  def unless: typingsSlinky.handlebars.handlebarsStrings.unless = this.cast("unless")
-  @scala.inline
-  def `with`: typingsSlinky.handlebars.handlebarsStrings.`with` = this.cast("with")
+  def `with`: typingsSlinky.handlebars.handlebarsStrings.`with` = "with".asInstanceOf[typingsSlinky.handlebars.handlebarsStrings.`with`]
 }
 

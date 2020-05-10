@@ -28,8 +28,33 @@ object AllocateTransitVirtualInterfaceRequest {
     ownerAccount: OwnerAccount
   ): AllocateTransitVirtualInterfaceRequest = {
     val __obj = js.Dynamic.literal(connectionId = connectionId.asInstanceOf[js.Any], newTransitVirtualInterfaceAllocation = newTransitVirtualInterfaceAllocation.asInstanceOf[js.Any], ownerAccount = ownerAccount.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[AllocateTransitVirtualInterfaceRequest]
   }
+  @scala.inline
+  implicit class AllocateTransitVirtualInterfaceRequestOps[Self <: AllocateTransitVirtualInterfaceRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConnectionId(value: ConnectionId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("connectionId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNewTransitVirtualInterfaceAllocation(value: NewTransitVirtualInterfaceAllocation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newTransitVirtualInterfaceAllocation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOwnerAccount(value: OwnerAccount): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ownerAccount")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

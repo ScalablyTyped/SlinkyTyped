@@ -21,8 +21,33 @@ object UpdateSegmentRequest {
   @scala.inline
   def apply(ApplicationId: string, SegmentId: string, WriteSegmentRequest: WriteSegmentRequest): UpdateSegmentRequest = {
     val __obj = js.Dynamic.literal(ApplicationId = ApplicationId.asInstanceOf[js.Any], SegmentId = SegmentId.asInstanceOf[js.Any], WriteSegmentRequest = WriteSegmentRequest.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[UpdateSegmentRequest]
   }
+  @scala.inline
+  implicit class UpdateSegmentRequestOps[Self <: UpdateSegmentRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withApplicationId(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ApplicationId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSegmentId(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SegmentId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withWriteSegmentRequest(value: WriteSegmentRequest): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WriteSegmentRequest")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

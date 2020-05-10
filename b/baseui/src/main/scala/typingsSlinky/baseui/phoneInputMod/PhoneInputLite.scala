@@ -1,12 +1,12 @@
 package typingsSlinky.baseui.phoneInputMod
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.react.mod.FC
+import slinky.core.ReactComponentClass
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSImport("baseui/phone-input", "PhoneInputLite")
 @js.native
-object PhoneInputLite extends TopLevel[FC[PhoneInputLiteProps]]
+object PhoneInputLite extends TopLevel[ReactComponentClass[PhoneInputLiteProps]]
 

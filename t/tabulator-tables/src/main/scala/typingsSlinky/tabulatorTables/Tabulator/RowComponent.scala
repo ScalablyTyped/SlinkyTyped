@@ -1,6 +1,6 @@
 package typingsSlinky.tabulatorTables.Tabulator
 
-import typingsSlinky.std.HTMLElement
+import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.tabulatorTables.tabulatorTablesBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -26,7 +26,7 @@ trait RowComponent extends js.Object {
   /** The getData function returns the data object for the row.*/
   def getData(): js.Any = js.native
   /** The getElement function returns the DOM node for the row.*/
-  def getElement(): org.scalajs.dom.raw.HTMLElement = js.native
+  def getElement(): HTMLElement = js.native
   /** When using grouped rows, you can retrieve the group component for the current row using the getGroup function. */
   def getGroup(): GroupComponent = js.native
   /** The getIndex function returns the index value for the row. (this is the value from the defined index column, NOT the row's position in the table)*/

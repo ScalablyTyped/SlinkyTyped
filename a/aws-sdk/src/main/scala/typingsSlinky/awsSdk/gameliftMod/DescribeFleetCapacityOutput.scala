@@ -18,11 +18,41 @@ trait DescribeFleetCapacityOutput extends js.Object {
 
 object DescribeFleetCapacityOutput {
   @scala.inline
-  def apply(FleetCapacity: FleetCapacityList = null, NextToken: NonZeroAndMaxString = null): DescribeFleetCapacityOutput = {
+  def apply(): DescribeFleetCapacityOutput = {
     val __obj = js.Dynamic.literal()
-    if (FleetCapacity != null) __obj.updateDynamic("FleetCapacity")(FleetCapacity.asInstanceOf[js.Any])
-    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeFleetCapacityOutput]
   }
+  @scala.inline
+  implicit class DescribeFleetCapacityOutputOps[Self <: DescribeFleetCapacityOutput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFleetCapacity(value: FleetCapacityList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FleetCapacity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFleetCapacity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FleetCapacity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextToken(value: NonZeroAndMaxString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

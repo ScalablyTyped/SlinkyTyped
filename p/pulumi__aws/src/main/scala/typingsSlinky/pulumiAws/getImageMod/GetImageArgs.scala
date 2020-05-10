@@ -26,17 +26,59 @@ trait GetImageArgs extends js.Object {
 
 object GetImageArgs {
   @scala.inline
-  def apply(
-    repositoryName: String,
-    imageDigest: String = null,
-    imageTag: String = null,
-    registryId: String = null
-  ): GetImageArgs = {
+  def apply(repositoryName: String): GetImageArgs = {
     val __obj = js.Dynamic.literal(repositoryName = repositoryName.asInstanceOf[js.Any])
-    if (imageDigest != null) __obj.updateDynamic("imageDigest")(imageDigest.asInstanceOf[js.Any])
-    if (imageTag != null) __obj.updateDynamic("imageTag")(imageTag.asInstanceOf[js.Any])
-    if (registryId != null) __obj.updateDynamic("registryId")(registryId.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetImageArgs]
   }
+  @scala.inline
+  implicit class GetImageArgsOps[Self <: GetImageArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRepositoryName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("repositoryName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withImageDigest(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imageDigest")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImageDigest: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imageDigest")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withImageTag(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imageTag")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImageTag: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imageTag")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRegistryId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("registryId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRegistryId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("registryId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

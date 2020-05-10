@@ -13,12 +13,10 @@ trait InventoryType extends js.Object
 
 object InventoryType {
   @scala.inline
-  def ADJUSTMENT: typingsSlinky.squareConnect.squareConnectStrings.ADJUSTMENT = this.cast("ADJUSTMENT")
+  def ADJUSTMENT: typingsSlinky.squareConnect.squareConnectStrings.ADJUSTMENT = "ADJUSTMENT".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.ADJUSTMENT]
   @scala.inline
-  def PHYSICAL_COUNT: typingsSlinky.squareConnect.squareConnectStrings.PHYSICAL_COUNT = this.cast("PHYSICAL_COUNT")
+  def PHYSICAL_COUNT: typingsSlinky.squareConnect.squareConnectStrings.PHYSICAL_COUNT = "PHYSICAL_COUNT".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.PHYSICAL_COUNT]
   @scala.inline
-  def TRANSFER: typingsSlinky.squareConnect.squareConnectStrings.TRANSFER = this.cast("TRANSFER")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def TRANSFER: typingsSlinky.squareConnect.squareConnectStrings.TRANSFER = "TRANSFER".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.TRANSFER]
 }
 

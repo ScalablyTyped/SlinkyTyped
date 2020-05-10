@@ -11,5 +11,6 @@ trait HTMLAudioElement extends HTMLMediaElement
 
 @JSGlobal("HTMLAudioElement")
 @js.native
-object HTMLAudioElement extends Instantiable0[HTMLAudioElement]
+object HTMLAudioElement
+  extends Instantiable0[org.scalajs.dom.raw.HTMLAudioElement]
 

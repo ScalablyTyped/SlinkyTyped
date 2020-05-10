@@ -1,15 +1,20 @@
 package typingsSlinky.reactCollapse.components
 
+import typingsSlinky.reactCollapse.mod.CollapseProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object UnmountClosed
-  extends SharedApply_CollapseProps_766291571[typingsSlinky.reactCollapse.mod.UnmountClosed] {
+object UnmountClosed {
   @JSImport("react-collapse", "UnmountClosed")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: CollapseProps): SharedBuilder_CollapseProps301323921[typingsSlinky.reactCollapse.mod.UnmountClosed] = new SharedBuilder_CollapseProps301323921[typingsSlinky.reactCollapse.mod.UnmountClosed](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(isOpened: Boolean): SharedBuilder_CollapseProps301323921[typingsSlinky.reactCollapse.mod.UnmountClosed] = {
+    val __props = js.Dynamic.literal(isOpened = isOpened.asInstanceOf[js.Any])
+    new SharedBuilder_CollapseProps301323921[typingsSlinky.reactCollapse.mod.UnmountClosed](js.Array(this.component, __props.asInstanceOf[CollapseProps]))
+  }
 }
 

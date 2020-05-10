@@ -19,8 +19,8 @@ object rawSha256Mod extends js.Object {
     var hashBuffer: js.Any = js.native
     var state: js.Any = js.native
     var temp: js.Any = js.native
-    def digest(): scala.scalajs.js.typedarray.Uint8Array = js.native
-    def update(data: scala.scalajs.js.typedarray.Uint8Array): Unit = js.native
+    def digest(): js.typedarray.Uint8Array = js.native
+    def update(data: js.typedarray.Uint8Array): Unit = js.native
   }
   
 }

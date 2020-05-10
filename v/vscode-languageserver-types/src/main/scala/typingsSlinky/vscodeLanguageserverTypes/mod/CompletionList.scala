@@ -4,15 +4,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait CompletionList extends js.Object {
   /**
     * This list it not complete. Further typing results in recomputing this list.
     */
-  var isIncomplete: Boolean
+  var isIncomplete: Boolean = js.native
   /**
     * The completion items.
     */
-  var items: js.Array[CompletionItem]
+  var items: js.Array[CompletionItem] = js.native
 }
 
 @JSImport("vscode-languageserver-types", "CompletionList")

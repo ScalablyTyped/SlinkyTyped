@@ -4,19 +4,33 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait CordovaPlugins extends js.Object {
   /**
     * cordova_app_version_plugin interface
     */
-  var version: typingsSlinky.cordovaAppVersionPlugin.CordovaAppVersionPlugin.CordovaAppVersionPlugin
+  var version: typingsSlinky.cordovaAppVersionPlugin.CordovaAppVersionPlugin.CordovaAppVersionPlugin = js.native
 }
 
 object CordovaPlugins {
   @scala.inline
   def apply(version: typingsSlinky.cordovaAppVersionPlugin.CordovaAppVersionPlugin.CordovaAppVersionPlugin): CordovaPlugins = {
     val __obj = js.Dynamic.literal(version = version.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[CordovaPlugins]
   }
+  @scala.inline
+  implicit class CordovaPluginsOps[Self <: CordovaPlugins] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withVersion(value: typingsSlinky.cordovaAppVersionPlugin.CordovaAppVersionPlugin.CordovaAppVersionPlugin): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

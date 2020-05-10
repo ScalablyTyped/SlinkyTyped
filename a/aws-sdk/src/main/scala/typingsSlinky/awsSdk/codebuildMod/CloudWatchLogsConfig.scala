@@ -22,11 +22,47 @@ trait CloudWatchLogsConfig extends js.Object {
 
 object CloudWatchLogsConfig {
   @scala.inline
-  def apply(status: LogsConfigStatusType, groupName: String = null, streamName: String = null): CloudWatchLogsConfig = {
+  def apply(status: LogsConfigStatusType): CloudWatchLogsConfig = {
     val __obj = js.Dynamic.literal(status = status.asInstanceOf[js.Any])
-    if (groupName != null) __obj.updateDynamic("groupName")(groupName.asInstanceOf[js.Any])
-    if (streamName != null) __obj.updateDynamic("streamName")(streamName.asInstanceOf[js.Any])
     __obj.asInstanceOf[CloudWatchLogsConfig]
   }
+  @scala.inline
+  implicit class CloudWatchLogsConfigOps[Self <: CloudWatchLogsConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withStatus(value: LogsConfigStatusType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGroupName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("groupName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGroupName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("groupName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStreamName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("streamName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStreamName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("streamName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

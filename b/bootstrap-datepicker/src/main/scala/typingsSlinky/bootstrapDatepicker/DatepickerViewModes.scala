@@ -21,28 +21,26 @@ trait DatepickerViewModes extends js.Object
 
 object DatepickerViewModes {
   @scala.inline
-  def `0`: typingsSlinky.bootstrapDatepicker.bootstrapDatepickerNumbers.`0` = this.cast(0)
+  def `0`: typingsSlinky.bootstrapDatepicker.bootstrapDatepickerNumbers.`0` = 0.asInstanceOf[typingsSlinky.bootstrapDatepicker.bootstrapDatepickerNumbers.`0`]
   @scala.inline
-  def `1`: typingsSlinky.bootstrapDatepicker.bootstrapDatepickerNumbers.`1` = this.cast(1)
+  def `1`: typingsSlinky.bootstrapDatepicker.bootstrapDatepickerNumbers.`1` = 1.asInstanceOf[typingsSlinky.bootstrapDatepicker.bootstrapDatepickerNumbers.`1`]
   @scala.inline
-  def `2`: typingsSlinky.bootstrapDatepicker.bootstrapDatepickerNumbers.`2` = this.cast(2)
+  def `2`: typingsSlinky.bootstrapDatepicker.bootstrapDatepickerNumbers.`2` = 2.asInstanceOf[typingsSlinky.bootstrapDatepicker.bootstrapDatepickerNumbers.`2`]
   @scala.inline
-  def `3`: typingsSlinky.bootstrapDatepicker.bootstrapDatepickerNumbers.`3` = this.cast(3)
+  def `3`: typingsSlinky.bootstrapDatepicker.bootstrapDatepickerNumbers.`3` = 3.asInstanceOf[typingsSlinky.bootstrapDatepicker.bootstrapDatepickerNumbers.`3`]
   @scala.inline
-  def `4`: typingsSlinky.bootstrapDatepicker.bootstrapDatepickerNumbers.`4` = this.cast(4)
+  def `4`: typingsSlinky.bootstrapDatepicker.bootstrapDatepickerNumbers.`4` = 4.asInstanceOf[typingsSlinky.bootstrapDatepicker.bootstrapDatepickerNumbers.`4`]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def centuries: typingsSlinky.bootstrapDatepicker.bootstrapDatepickerStrings.centuries = "centuries".asInstanceOf[typingsSlinky.bootstrapDatepicker.bootstrapDatepickerStrings.centuries]
   @scala.inline
-  def centuries: typingsSlinky.bootstrapDatepicker.bootstrapDatepickerStrings.centuries = this.cast("centuries")
+  def days: typingsSlinky.bootstrapDatepicker.bootstrapDatepickerStrings.days = "days".asInstanceOf[typingsSlinky.bootstrapDatepicker.bootstrapDatepickerStrings.days]
   @scala.inline
-  def days: typingsSlinky.bootstrapDatepicker.bootstrapDatepickerStrings.days = this.cast("days")
+  def decades: typingsSlinky.bootstrapDatepicker.bootstrapDatepickerStrings.decades = "decades".asInstanceOf[typingsSlinky.bootstrapDatepicker.bootstrapDatepickerStrings.decades]
   @scala.inline
-  def decades: typingsSlinky.bootstrapDatepicker.bootstrapDatepickerStrings.decades = this.cast("decades")
+  def millenium: typingsSlinky.bootstrapDatepicker.bootstrapDatepickerStrings.millenium = "millenium".asInstanceOf[typingsSlinky.bootstrapDatepicker.bootstrapDatepickerStrings.millenium]
   @scala.inline
-  def millenium: typingsSlinky.bootstrapDatepicker.bootstrapDatepickerStrings.millenium = this.cast("millenium")
+  def months: typingsSlinky.bootstrapDatepicker.bootstrapDatepickerStrings.months = "months".asInstanceOf[typingsSlinky.bootstrapDatepicker.bootstrapDatepickerStrings.months]
   @scala.inline
-  def months: typingsSlinky.bootstrapDatepicker.bootstrapDatepickerStrings.months = this.cast("months")
-  @scala.inline
-  def years: typingsSlinky.bootstrapDatepicker.bootstrapDatepickerStrings.years = this.cast("years")
+  def years: typingsSlinky.bootstrapDatepicker.bootstrapDatepickerStrings.years = "years".asInstanceOf[typingsSlinky.bootstrapDatepicker.bootstrapDatepickerStrings.years]
 }
 

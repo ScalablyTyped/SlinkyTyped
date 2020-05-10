@@ -4,45 +4,103 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonClientid extends js.Object {
   /**
     * The user to sign in as. -1 to toggle a multi-account chooser, 0 to default to the user's current account, and 1 to automatically sign in if the user is signed into Google Plus.
     */
-  var authuser: js.UndefOr[Double] = js.undefined
+  var authuser: js.UndefOr[Double] = js.native
   /**
     * The application's client ID.
     */
-  var client_id: js.UndefOr[String] = js.undefined
+  var client_id: js.UndefOr[String] = js.native
   /**
     * If true, then login uses "immediate mode", which means that the token is refreshed behind the scenes, and no UI is shown to the user.
     */
-  var immediate: js.UndefOr[Boolean] = js.undefined
+  var immediate: js.UndefOr[Boolean] = js.native
   /**
     * The OAuth 2.0 response type property. Default: token
     */
-  var response_type: js.UndefOr[String] = js.undefined
+  var response_type: js.UndefOr[String] = js.native
   /**
     * The auth scope or scopes to authorize. Auth scopes for individual APIs can be found in their documentation.
     */
-  var scope: js.UndefOr[js.Any] = js.undefined
+  var scope: js.UndefOr[js.Any] = js.native
 }
 
 object AnonClientid {
   @scala.inline
-  def apply(
-    authuser: Int | Double = null,
-    client_id: String = null,
-    immediate: js.UndefOr[Boolean] = js.undefined,
-    response_type: String = null,
-    scope: js.Any = null
-  ): AnonClientid = {
+  def apply(): AnonClientid = {
     val __obj = js.Dynamic.literal()
-    if (authuser != null) __obj.updateDynamic("authuser")(authuser.asInstanceOf[js.Any])
-    if (client_id != null) __obj.updateDynamic("client_id")(client_id.asInstanceOf[js.Any])
-    if (!js.isUndefined(immediate)) __obj.updateDynamic("immediate")(immediate.asInstanceOf[js.Any])
-    if (response_type != null) __obj.updateDynamic("response_type")(response_type.asInstanceOf[js.Any])
-    if (scope != null) __obj.updateDynamic("scope")(scope.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonClientid]
   }
+  @scala.inline
+  implicit class AnonClientidOps[Self <: AnonClientid] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAuthuser(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("authuser")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAuthuser: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("authuser")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClient_id(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("client_id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClient_id: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("client_id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withImmediate(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("immediate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImmediate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("immediate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResponse_type(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("response_type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResponse_type: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("response_type")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScope(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scope")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScope: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scope")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

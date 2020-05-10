@@ -19,22 +19,20 @@ trait uDistance extends js.Object
 
 object uDistance {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def cm: typingsSlinky.convertUnits.convertUnitsStrings.cm = "cm".asInstanceOf[typingsSlinky.convertUnits.convertUnitsStrings.cm]
   @scala.inline
-  def cm: typingsSlinky.convertUnits.convertUnitsStrings.cm = this.cast("cm")
+  def ft: typingsSlinky.convertUnits.convertUnitsStrings.ft = "ft".asInstanceOf[typingsSlinky.convertUnits.convertUnitsStrings.ft]
   @scala.inline
-  def ft: typingsSlinky.convertUnits.convertUnitsStrings.ft = this.cast("ft")
+  def `ft-us`: typingsSlinky.convertUnits.convertUnitsStrings.`ft-us` = "ft-us".asInstanceOf[typingsSlinky.convertUnits.convertUnitsStrings.`ft-us`]
   @scala.inline
-  def `ft-us`: typingsSlinky.convertUnits.convertUnitsStrings.`ft-us` = this.cast("ft-us")
+  def in: typingsSlinky.convertUnits.convertUnitsStrings.in = "in".asInstanceOf[typingsSlinky.convertUnits.convertUnitsStrings.in]
   @scala.inline
-  def in: typingsSlinky.convertUnits.convertUnitsStrings.in = this.cast("in")
+  def km: km_ = "km".asInstanceOf[km_]
   @scala.inline
-  def km: km_ = this.cast("km")
+  def m: typingsSlinky.convertUnits.convertUnitsStrings.m = "m".asInstanceOf[typingsSlinky.convertUnits.convertUnitsStrings.m]
   @scala.inline
-  def m: typingsSlinky.convertUnits.convertUnitsStrings.m = this.cast("m")
+  def mi: typingsSlinky.convertUnits.convertUnitsStrings.mi = "mi".asInstanceOf[typingsSlinky.convertUnits.convertUnitsStrings.mi]
   @scala.inline
-  def mi: typingsSlinky.convertUnits.convertUnitsStrings.mi = this.cast("mi")
-  @scala.inline
-  def mm: typingsSlinky.convertUnits.convertUnitsStrings.mm = this.cast("mm")
+  def mm: typingsSlinky.convertUnits.convertUnitsStrings.mm = "mm".asInstanceOf[typingsSlinky.convertUnits.convertUnitsStrings.mm]
 }
 

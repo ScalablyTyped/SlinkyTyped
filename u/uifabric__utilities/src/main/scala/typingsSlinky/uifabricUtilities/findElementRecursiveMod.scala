@@ -9,9 +9,6 @@ import scala.scalajs.js.annotation._
 @js.native
 object findElementRecursiveMod extends js.Object {
   def findElementRecursive(element: Null, matchFunction: js.Function1[/* element */ HTMLElement, Boolean]): HTMLElement | Null = js.native
-  def findElementRecursive(
-    element: typingsSlinky.std.HTMLElement,
-    matchFunction: js.Function1[/* element */ HTMLElement, Boolean]
-  ): HTMLElement | Null = js.native
+  def findElementRecursive(element: HTMLElement, matchFunction: js.Function1[/* element */ HTMLElement, Boolean]): HTMLElement | Null = js.native
 }
 

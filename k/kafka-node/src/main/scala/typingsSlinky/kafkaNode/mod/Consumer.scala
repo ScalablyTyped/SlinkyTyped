@@ -4,7 +4,6 @@ import typingsSlinky.kafkaNode.kafkaNodeStrings.error
 import typingsSlinky.kafkaNode.kafkaNodeStrings.message
 import typingsSlinky.kafkaNode.kafkaNodeStrings.offsetOutOfRange
 import typingsSlinky.node.eventsMod.EventEmitter
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -27,7 +26,7 @@ class Consumer protected () extends EventEmitter {
     cb: js.Function2[/* error */ js.Any, /* added */ js.Array[String | Topic], _],
     fromOffset: Boolean
   ): Unit = js.native
-  def close(cb: js.Function1[/* error */ Error, _]): Unit = js.native
+  def close(cb: js.Function1[/* error */ js.Error, _]): Unit = js.native
   def close(force: Boolean, cb: js.Function1[/* error */ js.Error, _]): Unit = js.native
   def commit(cb: js.Function2[/* error */ js.Any, /* data */ js.Any, _]): Unit = js.native
   def commit(force: Boolean, cb: js.Function2[/* error */ js.Any, /* data */ js.Any, _]): Unit = js.native

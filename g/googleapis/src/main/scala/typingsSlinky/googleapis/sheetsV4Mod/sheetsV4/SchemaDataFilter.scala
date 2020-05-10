@@ -27,16 +27,53 @@ trait SchemaDataFilter extends js.Object {
 
 object SchemaDataFilter {
   @scala.inline
-  def apply(
-    a1Range: String = null,
-    developerMetadataLookup: SchemaDeveloperMetadataLookup = null,
-    gridRange: SchemaGridRange = null
-  ): SchemaDataFilter = {
+  def apply(): SchemaDataFilter = {
     val __obj = js.Dynamic.literal()
-    if (a1Range != null) __obj.updateDynamic("a1Range")(a1Range.asInstanceOf[js.Any])
-    if (developerMetadataLookup != null) __obj.updateDynamic("developerMetadataLookup")(developerMetadataLookup.asInstanceOf[js.Any])
-    if (gridRange != null) __obj.updateDynamic("gridRange")(gridRange.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDataFilter]
   }
+  @scala.inline
+  implicit class SchemaDataFilterOps[Self <: SchemaDataFilter] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withA1Range(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("a1Range")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutA1Range: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("a1Range")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeveloperMetadataLookup(value: SchemaDeveloperMetadataLookup): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("developerMetadataLookup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeveloperMetadataLookup: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("developerMetadataLookup")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGridRange(value: SchemaGridRange): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gridRange")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGridRange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gridRange")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

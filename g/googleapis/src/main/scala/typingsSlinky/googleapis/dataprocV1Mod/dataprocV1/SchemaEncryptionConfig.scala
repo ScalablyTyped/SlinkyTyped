@@ -18,10 +18,29 @@ trait SchemaEncryptionConfig extends js.Object {
 
 object SchemaEncryptionConfig {
   @scala.inline
-  def apply(gcePdKmsKeyName: String = null): SchemaEncryptionConfig = {
+  def apply(): SchemaEncryptionConfig = {
     val __obj = js.Dynamic.literal()
-    if (gcePdKmsKeyName != null) __obj.updateDynamic("gcePdKmsKeyName")(gcePdKmsKeyName.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaEncryptionConfig]
   }
+  @scala.inline
+  implicit class SchemaEncryptionConfigOps[Self <: SchemaEncryptionConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGcePdKmsKeyName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gcePdKmsKeyName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGcePdKmsKeyName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gcePdKmsKeyName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

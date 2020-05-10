@@ -13,12 +13,10 @@ trait FlexWrapType extends js.Object
 
 object FlexWrapType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def nowrap: typingsSlinky.azdata.azdataStrings.nowrap = "nowrap".asInstanceOf[typingsSlinky.azdata.azdataStrings.nowrap]
   @scala.inline
-  def nowrap: typingsSlinky.azdata.azdataStrings.nowrap = this.cast("nowrap")
+  def wrap: typingsSlinky.azdata.azdataStrings.wrap = "wrap".asInstanceOf[typingsSlinky.azdata.azdataStrings.wrap]
   @scala.inline
-  def wrap: typingsSlinky.azdata.azdataStrings.wrap = this.cast("wrap")
-  @scala.inline
-  def `wrap-reverse`: typingsSlinky.azdata.azdataStrings.`wrap-reverse` = this.cast("wrap-reverse")
+  def `wrap-reverse`: typingsSlinky.azdata.azdataStrings.`wrap-reverse` = "wrap-reverse".asInstanceOf[typingsSlinky.azdata.azdataStrings.`wrap-reverse`]
 }
 

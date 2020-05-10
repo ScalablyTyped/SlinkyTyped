@@ -28,8 +28,33 @@ object CreateScalingPlanRequest {
     ScalingPlanName: ScalingPlanName
   ): CreateScalingPlanRequest = {
     val __obj = js.Dynamic.literal(ApplicationSource = ApplicationSource.asInstanceOf[js.Any], ScalingInstructions = ScalingInstructions.asInstanceOf[js.Any], ScalingPlanName = ScalingPlanName.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[CreateScalingPlanRequest]
   }
+  @scala.inline
+  implicit class CreateScalingPlanRequestOps[Self <: CreateScalingPlanRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withApplicationSource(value: ApplicationSource): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ApplicationSource")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withScalingInstructions(value: ScalingInstructions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ScalingInstructions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withScalingPlanName(value: ScalingPlanName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ScalingPlanName")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -22,16 +22,53 @@ trait CacheParameterGroupDetails extends js.Object {
 
 object CacheParameterGroupDetails {
   @scala.inline
-  def apply(
-    CacheNodeTypeSpecificParameters: CacheNodeTypeSpecificParametersList = null,
-    Marker: String = null,
-    Parameters: ParametersList = null
-  ): CacheParameterGroupDetails = {
+  def apply(): CacheParameterGroupDetails = {
     val __obj = js.Dynamic.literal()
-    if (CacheNodeTypeSpecificParameters != null) __obj.updateDynamic("CacheNodeTypeSpecificParameters")(CacheNodeTypeSpecificParameters.asInstanceOf[js.Any])
-    if (Marker != null) __obj.updateDynamic("Marker")(Marker.asInstanceOf[js.Any])
-    if (Parameters != null) __obj.updateDynamic("Parameters")(Parameters.asInstanceOf[js.Any])
     __obj.asInstanceOf[CacheParameterGroupDetails]
   }
+  @scala.inline
+  implicit class CacheParameterGroupDetailsOps[Self <: CacheParameterGroupDetails] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCacheNodeTypeSpecificParameters(value: CacheNodeTypeSpecificParametersList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CacheNodeTypeSpecificParameters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCacheNodeTypeSpecificParameters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CacheNodeTypeSpecificParameters")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMarker(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMarker: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParameters(value: ParametersList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Parameters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParameters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Parameters")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -49,6 +49,10 @@ trait Numeral_ extends js.Object {
   	 */
   def register(what: RegisterType, key: String, value: NumeralJSLocale): NumeralJSLocale | NumeralJsFormat = js.native
   def register(what: RegisterType, key: String, value: NumeralJsFormat): NumeralJSLocale | NumeralJsFormat = js.native
+  /**
+  	 * This function resets the configuration to all the defaults
+  	 */
+  def reset(): Unit = js.native
   def set(value: js.Any): Numeral_ = js.native
   def subtract(value: js.Any): Numeral_ = js.native
   def unformat(inputString: String): Double = js.native

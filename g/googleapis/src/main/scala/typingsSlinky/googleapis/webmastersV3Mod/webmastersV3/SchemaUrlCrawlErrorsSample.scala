@@ -33,20 +33,77 @@ trait SchemaUrlCrawlErrorsSample extends js.Object {
 
 object SchemaUrlCrawlErrorsSample {
   @scala.inline
-  def apply(
-    first_detected: String = null,
-    last_crawled: String = null,
-    pageUrl: String = null,
-    responseCode: Int | Double = null,
-    urlDetails: SchemaUrlSampleDetails = null
-  ): SchemaUrlCrawlErrorsSample = {
+  def apply(): SchemaUrlCrawlErrorsSample = {
     val __obj = js.Dynamic.literal()
-    if (first_detected != null) __obj.updateDynamic("first_detected")(first_detected.asInstanceOf[js.Any])
-    if (last_crawled != null) __obj.updateDynamic("last_crawled")(last_crawled.asInstanceOf[js.Any])
-    if (pageUrl != null) __obj.updateDynamic("pageUrl")(pageUrl.asInstanceOf[js.Any])
-    if (responseCode != null) __obj.updateDynamic("responseCode")(responseCode.asInstanceOf[js.Any])
-    if (urlDetails != null) __obj.updateDynamic("urlDetails")(urlDetails.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaUrlCrawlErrorsSample]
   }
+  @scala.inline
+  implicit class SchemaUrlCrawlErrorsSampleOps[Self <: SchemaUrlCrawlErrorsSample] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFirst_detected(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("first_detected")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFirst_detected: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("first_detected")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLast_crawled(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("last_crawled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLast_crawled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("last_crawled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPageUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pageUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPageUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pageUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResponseCode(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("responseCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResponseCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("responseCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUrlDetails(value: SchemaUrlSampleDetails): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("urlDetails")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUrlDetails: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("urlDetails")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -13,12 +13,10 @@ trait Lang extends js.Object
 
 object Lang {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def en: typingsSlinky.amapJsApi.amapJsApiStrings.en = "en".asInstanceOf[typingsSlinky.amapJsApi.amapJsApiStrings.en]
   @scala.inline
-  def en: typingsSlinky.amapJsApi.amapJsApiStrings.en = this.cast("en")
+  def zh_cn: typingsSlinky.amapJsApi.amapJsApiStrings.zh_cn = "zh_cn".asInstanceOf[typingsSlinky.amapJsApi.amapJsApiStrings.zh_cn]
   @scala.inline
-  def zh_cn: typingsSlinky.amapJsApi.amapJsApiStrings.zh_cn = this.cast("zh_cn")
-  @scala.inline
-  def zh_en: typingsSlinky.amapJsApi.amapJsApiStrings.zh_en = this.cast("zh_en")
+  def zh_en: typingsSlinky.amapJsApi.amapJsApiStrings.zh_en = "zh_en".asInstanceOf[typingsSlinky.amapJsApi.amapJsApiStrings.zh_en]
 }
 

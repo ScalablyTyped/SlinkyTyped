@@ -16,18 +16,16 @@ trait JustifyContentType extends js.Object
 
 object JustifyContentType {
   @scala.inline
-  def around: typingsSlinky.grommet.grommetStrings.around = this.cast("around")
+  def around: typingsSlinky.grommet.grommetStrings.around = "around".asInstanceOf[typingsSlinky.grommet.grommetStrings.around]
   @scala.inline
-  def between: typingsSlinky.grommet.grommetStrings.between = this.cast("between")
+  def between: typingsSlinky.grommet.grommetStrings.between = "between".asInstanceOf[typingsSlinky.grommet.grommetStrings.between]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def center: typingsSlinky.grommet.grommetStrings.center = "center".asInstanceOf[typingsSlinky.grommet.grommetStrings.center]
   @scala.inline
-  def center: typingsSlinky.grommet.grommetStrings.center = this.cast("center")
+  def end: typingsSlinky.grommet.grommetStrings.end = "end".asInstanceOf[typingsSlinky.grommet.grommetStrings.end]
   @scala.inline
-  def end: typingsSlinky.grommet.grommetStrings.end = this.cast("end")
+  def start: typingsSlinky.grommet.grommetStrings.start = "start".asInstanceOf[typingsSlinky.grommet.grommetStrings.start]
   @scala.inline
-  def start: typingsSlinky.grommet.grommetStrings.start = this.cast("start")
-  @scala.inline
-  def stretch: typingsSlinky.grommet.grommetStrings.stretch = this.cast("stretch")
+  def stretch: typingsSlinky.grommet.grommetStrings.stretch = "stretch".asInstanceOf[typingsSlinky.grommet.grommetStrings.stretch]
 }
 

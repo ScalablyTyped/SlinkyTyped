@@ -4,14 +4,22 @@ import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.chromeApps.AnonDISCONNECTED
 import typingsSlinky.chromeApps.chrome.ToStringLiteral
 import typingsSlinky.chromeApps.chrome.events.Event
-import typingsSlinky.chromeApps.chromeAppsStrings.connected_
-import typingsSlinky.chromeApps.chromeAppsStrings.disconnected_
-import typingsSlinky.chromeApps.chromeAppsStrings.error
+import typingsSlinky.chromeApps.chromeAppsStrings.CONNECTED
+import typingsSlinky.chromeApps.chromeAppsStrings.DISCONNECTED
+import typingsSlinky.chromeApps.chromeAppsStrings.ERROR
+import typingsSlinky.chromeApps.chromeAppsStrings.LINK_CHANGED
+import typingsSlinky.chromeApps.chromeAppsStrings.LINK_DOWN
+import typingsSlinky.chromeApps.chromeAppsStrings.LINK_UP
+import typingsSlinky.chromeApps.chromeAppsStrings.RESUME
+import typingsSlinky.chromeApps.chromeAppsStrings.SUSPEND
+import typingsSlinky.chromeApps.chromeAppsStrings.connected__
+import typingsSlinky.chromeApps.chromeAppsStrings.disconnected__
+import typingsSlinky.chromeApps.chromeAppsStrings.error_
 import typingsSlinky.chromeApps.chromeAppsStrings.linkChanged
 import typingsSlinky.chromeApps.chromeAppsStrings.linkDown
 import typingsSlinky.chromeApps.chromeAppsStrings.linkUp
-import typingsSlinky.chromeApps.chromeAppsStrings.resume
-import typingsSlinky.chromeApps.chromeAppsStrings.suspend
+import typingsSlinky.chromeApps.chromeAppsStrings.resume_
+import typingsSlinky.chromeApps.chromeAppsStrings.suspend_
 import typingsSlinky.std.Exclude
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -27,10 +35,10 @@ object onPlatformMessage
           /* id */ String, 
           /* message */ ToStringLiteral[
             AnonDISCONNECTED, 
-            String, 
+            /* keyof chrome-apps.AnonDISCONNECTED */ CONNECTED | DISCONNECTED | ERROR | LINK_DOWN | LINK_UP | LINK_CHANGED | SUSPEND | RESUME, 
             Exclude[
-              String, 
-              linkUp | linkChanged | suspend | resume | linkDown | connected_ | error | disconnected_
+              /* keyof chrome-apps.AnonDISCONNECTED */ CONNECTED | DISCONNECTED | ERROR | LINK_DOWN | LINK_UP | LINK_CHANGED | SUSPEND | RESUME, 
+              linkUp | linkChanged | suspend_ | resume_ | linkDown | connected__ | error_ | disconnected__
             ]
           ], 
           /* error */ String, 

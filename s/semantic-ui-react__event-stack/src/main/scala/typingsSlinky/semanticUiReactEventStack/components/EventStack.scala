@@ -1,37 +1,42 @@
 package typingsSlinky.semanticUiReactEventStack.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
+import org.scalajs.dom.raw.HTMLElement
+import slinky.core.facade.ReactRef
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.semanticUiReactEventStack.mod.default
 import typingsSlinky.semanticUiReactEventStack.typesEventStackMod.EventStackProps
 import typingsSlinky.semanticUiReactEventStack.typesMod.InputEventListener
 import typingsSlinky.semanticUiReactEventStack.typesMod.InputTargetElement
+import typingsSlinky.semanticUiReactEventStack.typesMod.TargetElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object EventStack
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object EventStack {
   @JSImport("@semantic-ui-react/event-stack", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    name: String,
-    on: InputEventListener,
-    pool: String = null,
-    target: InputTargetElement = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], on = on.asInstanceOf[js.Any])
-    if (pool != null) __obj.updateDynamic("pool")(pool.asInstanceOf[js.Any])
-    if (target != null) __obj.updateDynamic("target")(target.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def pool(value: String): this.type = set("pool", value.asInstanceOf[js.Any])
+    @scala.inline
+    def targetRefObject(value: ReactRef[TargetElement]): this.type = set("target", value.asInstanceOf[js.Any])
+    @scala.inline
+    def targetHTMLElement(value: HTMLElement): this.type = set("target", value.asInstanceOf[js.Any])
+    @scala.inline
+    def target(value: InputTargetElement): this.type = set("target", value.asInstanceOf[js.Any])
   }
-  type Props = EventStackProps
+  
+  def withProps(p: EventStackProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(name: String, on: InputEventListener): Builder = {
+    val __props = js.Dynamic.literal(name = name.asInstanceOf[js.Any], on = on.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[EventStackProps]))
+  }
 }
 

@@ -7,48 +7,168 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait RouterOutletOptions extends js.Object {
-  var animated: js.UndefOr[Boolean] = js.undefined
-  var animationBuilder: js.UndefOr[AnimationBuilder] = js.undefined
-  var deepWait: js.UndefOr[Boolean] = js.undefined
-  var direction: js.UndefOr[NavDirection] = js.undefined
-  var duration: js.UndefOr[Double] = js.undefined
-  var easing: js.UndefOr[String] = js.undefined
-  var keyboardClose: js.UndefOr[Boolean] = js.undefined
-  var mode: js.UndefOr[Mode] = js.undefined
-  var progressAnimation: js.UndefOr[Boolean] = js.undefined
-  var showGoBack: js.UndefOr[Boolean] = js.undefined
-  var skipIfBusy: js.UndefOr[Boolean] = js.undefined
+  var animated: js.UndefOr[Boolean] = js.native
+  var animationBuilder: js.UndefOr[AnimationBuilder] = js.native
+  var deepWait: js.UndefOr[Boolean] = js.native
+  var direction: js.UndefOr[NavDirection] = js.native
+  var duration: js.UndefOr[Double] = js.native
+  var easing: js.UndefOr[String] = js.native
+  var keyboardClose: js.UndefOr[Boolean] = js.native
+  var mode: js.UndefOr[Mode] = js.native
+  var progressAnimation: js.UndefOr[Boolean] = js.native
+  var showGoBack: js.UndefOr[Boolean] = js.native
+  var skipIfBusy: js.UndefOr[Boolean] = js.native
 }
 
 object RouterOutletOptions {
   @scala.inline
-  def apply(
-    animated: js.UndefOr[Boolean] = js.undefined,
-    animationBuilder: (/* Animation */ Animation, /* baseEl */ js.Any, /* opts */ js.UndefOr[js.Any]) => js.Promise[Animation] = null,
-    deepWait: js.UndefOr[Boolean] = js.undefined,
-    direction: NavDirection = null,
-    duration: Int | Double = null,
-    easing: String = null,
-    keyboardClose: js.UndefOr[Boolean] = js.undefined,
-    mode: Mode = null,
-    progressAnimation: js.UndefOr[Boolean] = js.undefined,
-    showGoBack: js.UndefOr[Boolean] = js.undefined,
-    skipIfBusy: js.UndefOr[Boolean] = js.undefined
-  ): RouterOutletOptions = {
+  def apply(): RouterOutletOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(animated)) __obj.updateDynamic("animated")(animated.asInstanceOf[js.Any])
-    if (animationBuilder != null) __obj.updateDynamic("animationBuilder")(js.Any.fromFunction3(animationBuilder))
-    if (!js.isUndefined(deepWait)) __obj.updateDynamic("deepWait")(deepWait.asInstanceOf[js.Any])
-    if (direction != null) __obj.updateDynamic("direction")(direction.asInstanceOf[js.Any])
-    if (duration != null) __obj.updateDynamic("duration")(duration.asInstanceOf[js.Any])
-    if (easing != null) __obj.updateDynamic("easing")(easing.asInstanceOf[js.Any])
-    if (!js.isUndefined(keyboardClose)) __obj.updateDynamic("keyboardClose")(keyboardClose.asInstanceOf[js.Any])
-    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
-    if (!js.isUndefined(progressAnimation)) __obj.updateDynamic("progressAnimation")(progressAnimation.asInstanceOf[js.Any])
-    if (!js.isUndefined(showGoBack)) __obj.updateDynamic("showGoBack")(showGoBack.asInstanceOf[js.Any])
-    if (!js.isUndefined(skipIfBusy)) __obj.updateDynamic("skipIfBusy")(skipIfBusy.asInstanceOf[js.Any])
     __obj.asInstanceOf[RouterOutletOptions]
   }
+  @scala.inline
+  implicit class RouterOutletOptionsOps[Self <: RouterOutletOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAnimated(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animated")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimated: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animated")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAnimationBuilder(
+      value: (/* Animation */ Animation, /* baseEl */ js.Any, /* opts */ js.UndefOr[js.Any]) => js.Promise[Animation]
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationBuilder")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutAnimationBuilder: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationBuilder")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeepWait(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deepWait")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeepWait: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deepWait")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDirection(value: NavDirection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDirection: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDuration(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDuration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEasing(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("easing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEasing: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("easing")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKeyboardClose(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keyboardClose")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKeyboardClose: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keyboardClose")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMode(value: Mode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProgressAnimation(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("progressAnimation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProgressAnimation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("progressAnimation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowGoBack(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showGoBack")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowGoBack: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showGoBack")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSkipIfBusy(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("skipIfBusy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSkipIfBusy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("skipIfBusy")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

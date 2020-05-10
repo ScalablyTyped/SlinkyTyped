@@ -13,12 +13,10 @@ trait OnAuthRequiredOptions extends js.Object
 
 object OnAuthRequiredOptions {
   @scala.inline
-  def asyncBlocking: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.asyncBlocking = this.cast("asyncBlocking")
+  def asyncBlocking: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.asyncBlocking = "asyncBlocking".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.asyncBlocking]
   @scala.inline
-  def blocking: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.blocking = this.cast("blocking")
+  def blocking: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.blocking = "blocking".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.blocking]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
-  @scala.inline
-  def responseHeaders: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.responseHeaders = this.cast("responseHeaders")
+  def responseHeaders: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.responseHeaders = "responseHeaders".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.responseHeaders]
 }
 

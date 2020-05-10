@@ -18,22 +18,20 @@ trait MozUserModifyProperty extends js.Object
 
 object MozUserModifyProperty {
   @scala.inline
-  def `-moz-initial`: typingsSlinky.csstype.csstypeStrings.`-moz-initial` = this.cast("-moz-initial")
+  def `-moz-initial`: typingsSlinky.csstype.csstypeStrings.`-moz-initial` = "-moz-initial".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`-moz-initial`]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def inherit: typingsSlinky.csstype.csstypeStrings.inherit = "inherit".asInstanceOf[typingsSlinky.csstype.csstypeStrings.inherit]
   @scala.inline
-  def inherit: typingsSlinky.csstype.csstypeStrings.inherit = this.cast("inherit")
+  def initial: typingsSlinky.csstype.csstypeStrings.initial = "initial".asInstanceOf[typingsSlinky.csstype.csstypeStrings.initial]
   @scala.inline
-  def initial: typingsSlinky.csstype.csstypeStrings.initial = this.cast("initial")
+  def `read-only`: typingsSlinky.csstype.csstypeStrings.`read-only` = "read-only".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`read-only`]
   @scala.inline
-  def `read-only`: typingsSlinky.csstype.csstypeStrings.`read-only` = this.cast("read-only")
+  def `read-write`: typingsSlinky.csstype.csstypeStrings.`read-write` = "read-write".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`read-write`]
   @scala.inline
-  def `read-write`: typingsSlinky.csstype.csstypeStrings.`read-write` = this.cast("read-write")
+  def revert: typingsSlinky.csstype.csstypeStrings.revert = "revert".asInstanceOf[typingsSlinky.csstype.csstypeStrings.revert]
   @scala.inline
-  def revert: typingsSlinky.csstype.csstypeStrings.revert = this.cast("revert")
+  def unset: typingsSlinky.csstype.csstypeStrings.unset = "unset".asInstanceOf[typingsSlinky.csstype.csstypeStrings.unset]
   @scala.inline
-  def unset: typingsSlinky.csstype.csstypeStrings.unset = this.cast("unset")
-  @scala.inline
-  def `write-only`: typingsSlinky.csstype.csstypeStrings.`write-only` = this.cast("write-only")
+  def `write-only`: typingsSlinky.csstype.csstypeStrings.`write-only` = "write-only".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`write-only`]
 }
 

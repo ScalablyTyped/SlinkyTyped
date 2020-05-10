@@ -1,10 +1,7 @@
 package typingsSlinky.reduxRouter.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactRouter.mod.StaticRouterContext
 import typingsSlinky.reactRouter.mod.StaticRouterProps
 import typingsSlinky.reduxRouter.mod.ReduxRouter.StaticRouter
@@ -12,29 +9,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReduxRouterStaticRouter
-  extends ExternalComponentWithAttributesWithRefType[tag.type, StaticRouter] {
+object ReduxRouterStaticRouter {
   @JSImport("redux-router", "ReduxRouter.StaticRouter")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    basename: String = null,
-    context: StaticRouterContext = null,
-    location: String | js.Object = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, StaticRouter] = {
-    val __obj = js.Dynamic.literal()
-    if (basename != null) __obj.updateDynamic("basename")(basename.asInstanceOf[js.Any])
-    if (context != null) __obj.updateDynamic("context")(context.asInstanceOf[js.Any])
-    if (location != null) __obj.updateDynamic("location")(location.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, StaticRouter] {
+    @scala.inline
+    def basename(value: String): this.type = set("basename", value.asInstanceOf[js.Any])
+    @scala.inline
+    def context(value: StaticRouterContext): this.type = set("context", value.asInstanceOf[js.Any])
+    @scala.inline
+    def location(value: String | js.Object): this.type = set("location", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, StaticRouter] = new slinky.core.BuildingComponent[
-  slinky.web.html.`*`.tag.type, 
-  typingsSlinky.reduxRouter.mod.ReduxRouter.StaticRouter](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = StaticRouterProps
+  
+  def withProps(p: StaticRouterProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: ReduxRouterStaticRouter.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

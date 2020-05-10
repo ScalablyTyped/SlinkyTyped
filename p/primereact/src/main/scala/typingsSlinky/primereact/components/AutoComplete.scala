@@ -1,11 +1,8 @@
 package typingsSlinky.primereact.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.primereact.AnonOriginalEvent
 import typingsSlinky.primereact.AnonValue
 import typingsSlinky.primereact.autocompleteAutoCompleteMod.AutoCompleteProps
@@ -15,94 +12,106 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object AutoComplete
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.primereact.autocompleteMod.AutoComplete] {
+object AutoComplete {
   @JSImport("primereact/autocomplete", "AutoComplete")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: autoFocus, className, disabled, id, multiple, name, placeholder, size, type */
-  def apply(
-    appendTo: js.Any = null,
-    ariaLabelledBy: String = null,
-    completeMethod: /* e */ AnonOriginalEvent => Unit = null,
-    delay: Int | Double = null,
-    dropdown: js.UndefOr[Boolean] = js.undefined,
-    dropdownMode: String = null,
-    field: String = null,
-    inputClassName: String = null,
-    inputId: String = null,
-    inputStyle: js.Object = null,
-    itemTemplate: /* data */ js.Any => js.UndefOr[ReactElement] = null,
-    maxlength: Int | Double = null,
-    minLength: Int | Double = null,
-    onBlur: /* event */ Event_ => Unit = null,
-    onChange: /* e */ AnonValue => Unit = null,
-    onClear: /* event */ Event_ => Unit = null,
-    onClick: /* event */ Event_ => Unit = null,
-    onContextMenu: /* event */ Event_ => Unit = null,
-    onDblClick: /* event */ Event_ => Unit = null,
-    onDropdownClick: /* e */ AnonOriginalEvent => Unit = null,
-    onFocus: /* event */ Event_ => Unit = null,
-    onKeyPress: /* event */ Event_ => Unit = null,
-    onKeyUp: /* event */ Event_ => Unit = null,
-    onMouseDown: /* event */ Event_ => Unit = null,
-    onSelect: /* e */ AnonValue => Unit = null,
-    onUnselect: /* e */ AnonValue => Unit = null,
-    readonly: js.UndefOr[Boolean] = js.undefined,
-    scrollHeight: String = null,
-    selectedItemTemplate: /* data */ js.Any => js.UndefOr[ReactElement] = null,
-    style: js.Object = null,
-    suggestions: js.Array[_] = null,
-    tabindex: Int | Double = null,
-    tooltip: js.Any = null,
-    tooltipOptions: TooltipOptions = null,
-    value: js.Any = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.primereact.autocompleteMod.AutoComplete] = {
-    val __obj = js.Dynamic.literal()
-    if (appendTo != null) __obj.updateDynamic("appendTo")(appendTo.asInstanceOf[js.Any])
-    if (ariaLabelledBy != null) __obj.updateDynamic("ariaLabelledBy")(ariaLabelledBy.asInstanceOf[js.Any])
-    if (completeMethod != null) __obj.updateDynamic("completeMethod")(js.Any.fromFunction1(completeMethod))
-    if (delay != null) __obj.updateDynamic("delay")(delay.asInstanceOf[js.Any])
-    if (!js.isUndefined(dropdown)) __obj.updateDynamic("dropdown")(dropdown.asInstanceOf[js.Any])
-    if (dropdownMode != null) __obj.updateDynamic("dropdownMode")(dropdownMode.asInstanceOf[js.Any])
-    if (field != null) __obj.updateDynamic("field")(field.asInstanceOf[js.Any])
-    if (inputClassName != null) __obj.updateDynamic("inputClassName")(inputClassName.asInstanceOf[js.Any])
-    if (inputId != null) __obj.updateDynamic("inputId")(inputId.asInstanceOf[js.Any])
-    if (inputStyle != null) __obj.updateDynamic("inputStyle")(inputStyle.asInstanceOf[js.Any])
-    if (itemTemplate != null) __obj.updateDynamic("itemTemplate")(js.Any.fromFunction1(itemTemplate))
-    if (maxlength != null) __obj.updateDynamic("maxlength")(maxlength.asInstanceOf[js.Any])
-    if (minLength != null) __obj.updateDynamic("minLength")(minLength.asInstanceOf[js.Any])
-    if (onBlur != null) __obj.updateDynamic("onBlur")(js.Any.fromFunction1(onBlur))
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
-    if (onClear != null) __obj.updateDynamic("onClear")(js.Any.fromFunction1(onClear))
-    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction1(onClick))
-    if (onContextMenu != null) __obj.updateDynamic("onContextMenu")(js.Any.fromFunction1(onContextMenu))
-    if (onDblClick != null) __obj.updateDynamic("onDblClick")(js.Any.fromFunction1(onDblClick))
-    if (onDropdownClick != null) __obj.updateDynamic("onDropdownClick")(js.Any.fromFunction1(onDropdownClick))
-    if (onFocus != null) __obj.updateDynamic("onFocus")(js.Any.fromFunction1(onFocus))
-    if (onKeyPress != null) __obj.updateDynamic("onKeyPress")(js.Any.fromFunction1(onKeyPress))
-    if (onKeyUp != null) __obj.updateDynamic("onKeyUp")(js.Any.fromFunction1(onKeyUp))
-    if (onMouseDown != null) __obj.updateDynamic("onMouseDown")(js.Any.fromFunction1(onMouseDown))
-    if (onSelect != null) __obj.updateDynamic("onSelect")(js.Any.fromFunction1(onSelect))
-    if (onUnselect != null) __obj.updateDynamic("onUnselect")(js.Any.fromFunction1(onUnselect))
-    if (!js.isUndefined(readonly)) __obj.updateDynamic("readonly")(readonly.asInstanceOf[js.Any])
-    if (scrollHeight != null) __obj.updateDynamic("scrollHeight")(scrollHeight.asInstanceOf[js.Any])
-    if (selectedItemTemplate != null) __obj.updateDynamic("selectedItemTemplate")(js.Any.fromFunction1(selectedItemTemplate))
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (suggestions != null) __obj.updateDynamic("suggestions")(suggestions.asInstanceOf[js.Any])
-    if (tabindex != null) __obj.updateDynamic("tabindex")(tabindex.asInstanceOf[js.Any])
-    if (tooltip != null) __obj.updateDynamic("tooltip")(tooltip.asInstanceOf[js.Any])
-    if (tooltipOptions != null) __obj.updateDynamic("tooltipOptions")(tooltipOptions.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.primereact.autocompleteMod.AutoComplete] {
+    @scala.inline
+    def appendTo(value: js.Any): this.type = set("appendTo", value.asInstanceOf[js.Any])
+    @scala.inline
+    def ariaLabelledBy(value: String): this.type = set("ariaLabelledBy", value.asInstanceOf[js.Any])
+    @scala.inline
+    def autoFocus(value: Boolean): this.type = set("autoFocus", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def completeMethod(value: /* e */ AnonOriginalEvent => Unit): this.type = set("completeMethod", js.Any.fromFunction1(value))
+    @scala.inline
+    def delay(value: Double): this.type = set("delay", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dropdown(value: Boolean): this.type = set("dropdown", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dropdownMode(value: String): this.type = set("dropdownMode", value.asInstanceOf[js.Any])
+    @scala.inline
+    def field(value: String): this.type = set("field", value.asInstanceOf[js.Any])
+    @scala.inline
+    def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
+    @scala.inline
+    def inputClassName(value: String): this.type = set("inputClassName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def inputId(value: String): this.type = set("inputId", value.asInstanceOf[js.Any])
+    @scala.inline
+    def inputStyle(value: js.Object): this.type = set("inputStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def itemTemplate(value: /* data */ js.Any => js.UndefOr[ReactElement]): this.type = set("itemTemplate", js.Any.fromFunction1(value))
+    @scala.inline
+    def maxlength(value: Double): this.type = set("maxlength", value.asInstanceOf[js.Any])
+    @scala.inline
+    def minLength(value: Double): this.type = set("minLength", value.asInstanceOf[js.Any])
+    @scala.inline
+    def multiple(value: Boolean): this.type = set("multiple", value.asInstanceOf[js.Any])
+    @scala.inline
+    def name(value: String): this.type = set("name", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onBlur(value: /* event */ Event_ => Unit): this.type = set("onBlur", js.Any.fromFunction1(value))
+    @scala.inline
+    def onChange(value: /* e */ AnonValue => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def onClear(value: /* event */ Event_ => Unit): this.type = set("onClear", js.Any.fromFunction1(value))
+    @scala.inline
+    def onClick(value: /* event */ Event_ => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
+    @scala.inline
+    def onContextMenu(value: /* event */ Event_ => Unit): this.type = set("onContextMenu", js.Any.fromFunction1(value))
+    @scala.inline
+    def onDblClick(value: /* event */ Event_ => Unit): this.type = set("onDblClick", js.Any.fromFunction1(value))
+    @scala.inline
+    def onDropdownClick(value: /* e */ AnonOriginalEvent => Unit): this.type = set("onDropdownClick", js.Any.fromFunction1(value))
+    @scala.inline
+    def onFocus(value: /* event */ Event_ => Unit): this.type = set("onFocus", js.Any.fromFunction1(value))
+    @scala.inline
+    def onKeyPress(value: /* event */ Event_ => Unit): this.type = set("onKeyPress", js.Any.fromFunction1(value))
+    @scala.inline
+    def onKeyUp(value: /* event */ Event_ => Unit): this.type = set("onKeyUp", js.Any.fromFunction1(value))
+    @scala.inline
+    def onMouseDown(value: /* event */ Event_ => Unit): this.type = set("onMouseDown", js.Any.fromFunction1(value))
+    @scala.inline
+    def onSelect(value: /* e */ AnonValue => Unit): this.type = set("onSelect", js.Any.fromFunction1(value))
+    @scala.inline
+    def onUnselect(value: /* e */ AnonValue => Unit): this.type = set("onUnselect", js.Any.fromFunction1(value))
+    @scala.inline
+    def placeholder(value: String): this.type = set("placeholder", value.asInstanceOf[js.Any])
+    @scala.inline
+    def readonly(value: Boolean): this.type = set("readonly", value.asInstanceOf[js.Any])
+    @scala.inline
+    def scrollHeight(value: String): this.type = set("scrollHeight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def selectedItemTemplate(value: /* data */ js.Any => js.UndefOr[ReactElement]): this.type = set("selectedItemTemplate", js.Any.fromFunction1(value))
+    @scala.inline
+    def size(value: Double): this.type = set("size", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: js.Object): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def suggestions(value: js.Array[_]): this.type = set("suggestions", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tabindex(value: Double): this.type = set("tabindex", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tooltip(value: js.Any): this.type = set("tooltip", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tooltipOptions(value: TooltipOptions): this.type = set("tooltipOptions", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `type`(value: String): this.type = set("type", value.asInstanceOf[js.Any])
+    @scala.inline
+    def value(value: js.Any): this.type = set("value", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.primereact.autocompleteMod.AutoComplete] = new slinky.core.BuildingComponent[
-  slinky.web.html.`*`.tag.type, 
-  typingsSlinky.primereact.autocompleteMod.AutoComplete](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = AutoCompleteProps
+  
+  def withProps(p: AutoCompleteProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: AutoComplete.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

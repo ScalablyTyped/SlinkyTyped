@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 package object lexruntimeMod {
   type Accept = java.lang.String
   type AttributesString = java.lang.String
-  type BlobStream = typingsSlinky.node.Buffer | scala.scalajs.js.typedarray.Uint8Array | typingsSlinky.awsSdk.lexruntimeMod.Blob | java.lang.String | typingsSlinky.node.streamMod.Readable
+  type BlobStream = typingsSlinky.node.Buffer | js.typedarray.Uint8Array | typingsSlinky.awsSdk.lexruntimeMod.Blob | java.lang.String | typingsSlinky.node.streamMod.Readable
   type BotAlias = java.lang.String
   type BotName = java.lang.String
   type ButtonTextStringWithLength = java.lang.String

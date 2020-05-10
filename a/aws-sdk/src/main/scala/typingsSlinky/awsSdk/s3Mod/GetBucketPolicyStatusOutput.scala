@@ -14,10 +14,29 @@ trait GetBucketPolicyStatusOutput extends js.Object {
 
 object GetBucketPolicyStatusOutput {
   @scala.inline
-  def apply(PolicyStatus: PolicyStatus = null): GetBucketPolicyStatusOutput = {
+  def apply(): GetBucketPolicyStatusOutput = {
     val __obj = js.Dynamic.literal()
-    if (PolicyStatus != null) __obj.updateDynamic("PolicyStatus")(PolicyStatus.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetBucketPolicyStatusOutput]
   }
+  @scala.inline
+  implicit class GetBucketPolicyStatusOutputOps[Self <: GetBucketPolicyStatusOutput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPolicyStatus(value: PolicyStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PolicyStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPolicyStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PolicyStatus")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

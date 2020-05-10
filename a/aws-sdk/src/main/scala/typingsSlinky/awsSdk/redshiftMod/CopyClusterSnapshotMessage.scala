@@ -26,16 +26,53 @@ trait CopyClusterSnapshotMessage extends js.Object {
 
 object CopyClusterSnapshotMessage {
   @scala.inline
-  def apply(
-    SourceSnapshotIdentifier: String,
-    TargetSnapshotIdentifier: String,
-    ManualSnapshotRetentionPeriod: Int | scala.Double = null,
-    SourceSnapshotClusterIdentifier: String = null
-  ): CopyClusterSnapshotMessage = {
+  def apply(SourceSnapshotIdentifier: String, TargetSnapshotIdentifier: String): CopyClusterSnapshotMessage = {
     val __obj = js.Dynamic.literal(SourceSnapshotIdentifier = SourceSnapshotIdentifier.asInstanceOf[js.Any], TargetSnapshotIdentifier = TargetSnapshotIdentifier.asInstanceOf[js.Any])
-    if (ManualSnapshotRetentionPeriod != null) __obj.updateDynamic("ManualSnapshotRetentionPeriod")(ManualSnapshotRetentionPeriod.asInstanceOf[js.Any])
-    if (SourceSnapshotClusterIdentifier != null) __obj.updateDynamic("SourceSnapshotClusterIdentifier")(SourceSnapshotClusterIdentifier.asInstanceOf[js.Any])
     __obj.asInstanceOf[CopyClusterSnapshotMessage]
   }
+  @scala.inline
+  implicit class CopyClusterSnapshotMessageOps[Self <: CopyClusterSnapshotMessage] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSourceSnapshotIdentifier(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceSnapshotIdentifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTargetSnapshotIdentifier(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetSnapshotIdentifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withManualSnapshotRetentionPeriod(value: IntegerOptional): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ManualSnapshotRetentionPeriod")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutManualSnapshotRetentionPeriod: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ManualSnapshotRetentionPeriod")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSourceSnapshotClusterIdentifier(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceSnapshotClusterIdentifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSourceSnapshotClusterIdentifier: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceSnapshotClusterIdentifier")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

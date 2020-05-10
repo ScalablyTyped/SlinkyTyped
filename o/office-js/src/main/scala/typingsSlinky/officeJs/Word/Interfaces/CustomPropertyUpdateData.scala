@@ -5,6 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** An interface for updating data on the CustomProperty object, for use in "customProperty.set({ ... })". */
+@js.native
 trait CustomPropertyUpdateData extends js.Object {
   /**
     *
@@ -12,15 +13,34 @@ trait CustomPropertyUpdateData extends js.Object {
     *
     * [Api set: WordApi 1.3]
     */
-  var value: js.UndefOr[js.Any] = js.undefined
+  var value: js.UndefOr[js.Any] = js.native
 }
 
 object CustomPropertyUpdateData {
   @scala.inline
-  def apply(value: js.Any = null): CustomPropertyUpdateData = {
+  def apply(): CustomPropertyUpdateData = {
     val __obj = js.Dynamic.literal()
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     __obj.asInstanceOf[CustomPropertyUpdateData]
   }
+  @scala.inline
+  implicit class CustomPropertyUpdateDataOps[Self <: CustomPropertyUpdateData] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withValue(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

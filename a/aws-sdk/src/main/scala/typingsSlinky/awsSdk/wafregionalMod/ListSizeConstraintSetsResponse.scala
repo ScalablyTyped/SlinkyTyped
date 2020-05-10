@@ -18,11 +18,41 @@ trait ListSizeConstraintSetsResponse extends js.Object {
 
 object ListSizeConstraintSetsResponse {
   @scala.inline
-  def apply(NextMarker: NextMarker = null, SizeConstraintSets: SizeConstraintSetSummaries = null): ListSizeConstraintSetsResponse = {
+  def apply(): ListSizeConstraintSetsResponse = {
     val __obj = js.Dynamic.literal()
-    if (NextMarker != null) __obj.updateDynamic("NextMarker")(NextMarker.asInstanceOf[js.Any])
-    if (SizeConstraintSets != null) __obj.updateDynamic("SizeConstraintSets")(SizeConstraintSets.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListSizeConstraintSetsResponse]
   }
+  @scala.inline
+  implicit class ListSizeConstraintSetsResponseOps[Self <: ListSizeConstraintSetsResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNextMarker(value: NextMarker): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextMarker")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextMarker: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextMarker")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSizeConstraintSets(value: SizeConstraintSetSummaries): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SizeConstraintSets")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSizeConstraintSets: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SizeConstraintSets")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

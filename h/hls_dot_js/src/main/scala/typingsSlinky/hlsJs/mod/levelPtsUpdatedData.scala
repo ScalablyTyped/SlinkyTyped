@@ -4,18 +4,44 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait levelPtsUpdatedData extends js.Object {
-  var details: LevelDetails
-  var drift: Double
-  var level: Double
+  var details: LevelDetails = js.native
+  var drift: Double = js.native
+  var level: Double = js.native
 }
 
 object levelPtsUpdatedData {
   @scala.inline
   def apply(details: LevelDetails, drift: Double, level: Double): levelPtsUpdatedData = {
     val __obj = js.Dynamic.literal(details = details.asInstanceOf[js.Any], drift = drift.asInstanceOf[js.Any], level = level.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[levelPtsUpdatedData]
   }
+  @scala.inline
+  implicit class levelPtsUpdatedDataOps[Self <: levelPtsUpdatedData] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDetails(value: LevelDetails): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("details")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDrift(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("drift")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLevel(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("level")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

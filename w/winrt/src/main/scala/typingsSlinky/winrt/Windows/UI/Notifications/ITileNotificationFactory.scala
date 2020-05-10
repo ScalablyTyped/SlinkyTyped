@@ -5,16 +5,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ITileNotificationFactory extends js.Object {
-  def createTileNotification(content: XmlDocument): TileNotification
+  def createTileNotification(content: XmlDocument): TileNotification = js.native
 }
 
 object ITileNotificationFactory {
   @scala.inline
   def apply(createTileNotification: XmlDocument => TileNotification): ITileNotificationFactory = {
     val __obj = js.Dynamic.literal(createTileNotification = js.Any.fromFunction1(createTileNotification))
-  
     __obj.asInstanceOf[ITileNotificationFactory]
   }
+  @scala.inline
+  implicit class ITileNotificationFactoryOps[Self <: ITileNotificationFactory] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCreateTileNotification(value: XmlDocument => TileNotification): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createTileNotification")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

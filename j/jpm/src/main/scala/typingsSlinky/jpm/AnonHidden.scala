@@ -6,34 +6,102 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonHidden extends js.Object {
-  var hidden: js.UndefOr[Boolean] = js.undefined
-  var items: js.Array[ToolbarItem]
-  var onAttach: js.UndefOr[js.Function1[/* toolbar */ Toolbar, _]] = js.undefined
-  var onDetach: js.UndefOr[js.Function1[/* toolbar */ Toolbar, _]] = js.undefined
-  var onHide: js.UndefOr[js.Function1[/* toolbar */ Toolbar, _]] = js.undefined
-  var onShow: js.UndefOr[js.Function1[/* toolbar */ Toolbar, _]] = js.undefined
-  var title: String
+  var hidden: js.UndefOr[Boolean] = js.native
+  var items: js.Array[ToolbarItem] = js.native
+  var onAttach: js.UndefOr[js.Function1[/* toolbar */ Toolbar, _]] = js.native
+  var onDetach: js.UndefOr[js.Function1[/* toolbar */ Toolbar, _]] = js.native
+  var onHide: js.UndefOr[js.Function1[/* toolbar */ Toolbar, _]] = js.native
+  var onShow: js.UndefOr[js.Function1[/* toolbar */ Toolbar, _]] = js.native
+  var title: String = js.native
 }
 
 object AnonHidden {
   @scala.inline
-  def apply(
-    items: js.Array[ToolbarItem],
-    title: String,
-    hidden: js.UndefOr[Boolean] = js.undefined,
-    onAttach: /* toolbar */ Toolbar => _ = null,
-    onDetach: /* toolbar */ Toolbar => _ = null,
-    onHide: /* toolbar */ Toolbar => _ = null,
-    onShow: /* toolbar */ Toolbar => _ = null
-  ): AnonHidden = {
+  def apply(items: js.Array[ToolbarItem], title: String): AnonHidden = {
     val __obj = js.Dynamic.literal(items = items.asInstanceOf[js.Any], title = title.asInstanceOf[js.Any])
-    if (!js.isUndefined(hidden)) __obj.updateDynamic("hidden")(hidden.asInstanceOf[js.Any])
-    if (onAttach != null) __obj.updateDynamic("onAttach")(js.Any.fromFunction1(onAttach))
-    if (onDetach != null) __obj.updateDynamic("onDetach")(js.Any.fromFunction1(onDetach))
-    if (onHide != null) __obj.updateDynamic("onHide")(js.Any.fromFunction1(onHide))
-    if (onShow != null) __obj.updateDynamic("onShow")(js.Any.fromFunction1(onShow))
     __obj.asInstanceOf[AnonHidden]
   }
+  @scala.inline
+  implicit class AnonHiddenOps[Self <: AnonHidden] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withItems(value: js.Array[ToolbarItem]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTitle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHidden(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hidden")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHidden: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hidden")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnAttach(value: /* toolbar */ Toolbar => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onAttach")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnAttach: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onAttach")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnDetach(value: /* toolbar */ Toolbar => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onDetach")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnDetach: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onDetach")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnHide(value: /* toolbar */ Toolbar => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onHide")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnHide: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onHide")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnShow(value: /* toolbar */ Toolbar => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onShow")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnShow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onShow")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

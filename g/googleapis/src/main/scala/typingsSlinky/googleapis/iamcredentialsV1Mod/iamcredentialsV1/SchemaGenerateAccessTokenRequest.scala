@@ -35,12 +35,53 @@ trait SchemaGenerateAccessTokenRequest extends js.Object {
 
 object SchemaGenerateAccessTokenRequest {
   @scala.inline
-  def apply(delegates: js.Array[String] = null, lifetime: String = null, scope: js.Array[String] = null): SchemaGenerateAccessTokenRequest = {
+  def apply(): SchemaGenerateAccessTokenRequest = {
     val __obj = js.Dynamic.literal()
-    if (delegates != null) __obj.updateDynamic("delegates")(delegates.asInstanceOf[js.Any])
-    if (lifetime != null) __obj.updateDynamic("lifetime")(lifetime.asInstanceOf[js.Any])
-    if (scope != null) __obj.updateDynamic("scope")(scope.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGenerateAccessTokenRequest]
   }
+  @scala.inline
+  implicit class SchemaGenerateAccessTokenRequestOps[Self <: SchemaGenerateAccessTokenRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDelegates(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("delegates")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDelegates: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("delegates")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLifetime(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lifetime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLifetime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lifetime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScope(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scope")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScope: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scope")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

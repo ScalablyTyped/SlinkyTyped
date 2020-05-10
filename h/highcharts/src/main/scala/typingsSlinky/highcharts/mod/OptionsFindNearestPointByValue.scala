@@ -12,10 +12,8 @@ trait OptionsFindNearestPointByValue extends js.Object
 
 object OptionsFindNearestPointByValue {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def x: typingsSlinky.highcharts.highchartsStrings.x = "x".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.x]
   @scala.inline
-  def x: typingsSlinky.highcharts.highchartsStrings.x = this.cast("x")
-  @scala.inline
-  def xy: typingsSlinky.highcharts.highchartsStrings.xy = this.cast("xy")
+  def xy: typingsSlinky.highcharts.highchartsStrings.xy = "xy".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.xy]
 }
 

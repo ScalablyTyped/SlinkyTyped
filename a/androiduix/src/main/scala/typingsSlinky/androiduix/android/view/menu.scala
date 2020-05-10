@@ -3,7 +3,6 @@ package typingsSlinky.androiduix.android.view
 import typingsSlinky.androiduix.android.content.Context
 import typingsSlinky.androiduix.android.view.View.OnKeyListener
 import typingsSlinky.androiduix.android.view.ViewTreeObserver.OnGlobalLayoutListener
-import typingsSlinky.androiduix.android.widget.AdapterView
 import typingsSlinky.androiduix.android.widget.AdapterView.OnItemClickListener
 import typingsSlinky.androiduix.android.widget.BaseAdapter
 import typingsSlinky.androiduix.android.widget.PopupWindow.OnDismissListener
@@ -34,14 +33,6 @@ object menu extends js.Object {
     def dismiss(): Unit = js.native
     def isShowing(): Boolean = js.native
     /* private */ def measureContentWidth(adapter: js.Any): js.Any = js.native
-    /* CompleteClass */
-    override def onDismiss(): Unit = js.native
-    /* CompleteClass */
-    override def onGlobalLayout(): js.Any = js.native
-    /* CompleteClass */
-    override def onItemClick(parent: AdapterView[_], view: View, position: Double, id: Double): Unit = js.native
-    /* CompleteClass */
-    override def onKey(v: View, keyCode: Double, event: KeyEvent): Unit = js.native
     def setAnchorView(anchor: View): Unit = js.native
     def show(): Unit = js.native
     def tryShow(): Boolean = js.native

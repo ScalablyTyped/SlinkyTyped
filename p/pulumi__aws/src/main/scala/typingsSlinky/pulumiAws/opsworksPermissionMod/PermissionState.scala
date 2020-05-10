@@ -31,20 +31,77 @@ trait PermissionState extends js.Object {
 
 object PermissionState {
   @scala.inline
-  def apply(
-    allowSsh: Input[Boolean] = null,
-    allowSudo: Input[Boolean] = null,
-    level: Input[String] = null,
-    stackId: Input[String] = null,
-    userArn: Input[String] = null
-  ): PermissionState = {
+  def apply(): PermissionState = {
     val __obj = js.Dynamic.literal()
-    if (allowSsh != null) __obj.updateDynamic("allowSsh")(allowSsh.asInstanceOf[js.Any])
-    if (allowSudo != null) __obj.updateDynamic("allowSudo")(allowSudo.asInstanceOf[js.Any])
-    if (level != null) __obj.updateDynamic("level")(level.asInstanceOf[js.Any])
-    if (stackId != null) __obj.updateDynamic("stackId")(stackId.asInstanceOf[js.Any])
-    if (userArn != null) __obj.updateDynamic("userArn")(userArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[PermissionState]
   }
+  @scala.inline
+  implicit class PermissionStateOps[Self <: PermissionState] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAllowSsh(value: Input[Boolean]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowSsh")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowSsh: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowSsh")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAllowSudo(value: Input[Boolean]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowSudo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowSudo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowSudo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLevel(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("level")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLevel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("level")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStackId(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stackId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStackId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stackId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUserArn(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUserArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userArn")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

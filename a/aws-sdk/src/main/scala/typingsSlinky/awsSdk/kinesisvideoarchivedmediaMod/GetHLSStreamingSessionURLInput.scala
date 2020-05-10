@@ -46,28 +46,125 @@ trait GetHLSStreamingSessionURLInput extends js.Object {
 
 object GetHLSStreamingSessionURLInput {
   @scala.inline
-  def apply(
-    ContainerFormat: ContainerFormat = null,
-    DiscontinuityMode: HLSDiscontinuityMode = null,
-    DisplayFragmentTimestamp: HLSDisplayFragmentTimestamp = null,
-    Expires: Int | Double = null,
-    HLSFragmentSelector: HLSFragmentSelector = null,
-    MaxMediaPlaylistFragmentResults: Int | Double = null,
-    PlaybackMode: HLSPlaybackMode = null,
-    StreamARN: ResourceARN = null,
-    StreamName: StreamName = null
-  ): GetHLSStreamingSessionURLInput = {
+  def apply(): GetHLSStreamingSessionURLInput = {
     val __obj = js.Dynamic.literal()
-    if (ContainerFormat != null) __obj.updateDynamic("ContainerFormat")(ContainerFormat.asInstanceOf[js.Any])
-    if (DiscontinuityMode != null) __obj.updateDynamic("DiscontinuityMode")(DiscontinuityMode.asInstanceOf[js.Any])
-    if (DisplayFragmentTimestamp != null) __obj.updateDynamic("DisplayFragmentTimestamp")(DisplayFragmentTimestamp.asInstanceOf[js.Any])
-    if (Expires != null) __obj.updateDynamic("Expires")(Expires.asInstanceOf[js.Any])
-    if (HLSFragmentSelector != null) __obj.updateDynamic("HLSFragmentSelector")(HLSFragmentSelector.asInstanceOf[js.Any])
-    if (MaxMediaPlaylistFragmentResults != null) __obj.updateDynamic("MaxMediaPlaylistFragmentResults")(MaxMediaPlaylistFragmentResults.asInstanceOf[js.Any])
-    if (PlaybackMode != null) __obj.updateDynamic("PlaybackMode")(PlaybackMode.asInstanceOf[js.Any])
-    if (StreamARN != null) __obj.updateDynamic("StreamARN")(StreamARN.asInstanceOf[js.Any])
-    if (StreamName != null) __obj.updateDynamic("StreamName")(StreamName.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetHLSStreamingSessionURLInput]
   }
+  @scala.inline
+  implicit class GetHLSStreamingSessionURLInputOps[Self <: GetHLSStreamingSessionURLInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withContainerFormat(value: ContainerFormat): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ContainerFormat")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContainerFormat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ContainerFormat")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDiscontinuityMode(value: HLSDiscontinuityMode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DiscontinuityMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDiscontinuityMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DiscontinuityMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisplayFragmentTimestamp(value: HLSDisplayFragmentTimestamp): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DisplayFragmentTimestamp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisplayFragmentTimestamp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DisplayFragmentTimestamp")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExpires(value: Expires): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Expires")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExpires: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Expires")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHLSFragmentSelector(value: HLSFragmentSelector): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HLSFragmentSelector")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHLSFragmentSelector: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HLSFragmentSelector")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxMediaPlaylistFragmentResults(value: PageLimit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxMediaPlaylistFragmentResults")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxMediaPlaylistFragmentResults: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxMediaPlaylistFragmentResults")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlaybackMode(value: HLSPlaybackMode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PlaybackMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlaybackMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PlaybackMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStreamARN(value: ResourceARN): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StreamARN")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStreamARN: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StreamARN")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStreamName(value: StreamName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StreamName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStreamName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StreamName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

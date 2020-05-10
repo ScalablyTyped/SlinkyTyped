@@ -28,16 +28,53 @@ trait RecorderRecordingGroup extends js.Object {
 
 object RecorderRecordingGroup {
   @scala.inline
-  def apply(
-    allSupported: Input[Boolean] = null,
-    includeGlobalResourceTypes: Input[Boolean] = null,
-    resourceTypes: Input[js.Array[Input[String]]] = null
-  ): RecorderRecordingGroup = {
+  def apply(): RecorderRecordingGroup = {
     val __obj = js.Dynamic.literal()
-    if (allSupported != null) __obj.updateDynamic("allSupported")(allSupported.asInstanceOf[js.Any])
-    if (includeGlobalResourceTypes != null) __obj.updateDynamic("includeGlobalResourceTypes")(includeGlobalResourceTypes.asInstanceOf[js.Any])
-    if (resourceTypes != null) __obj.updateDynamic("resourceTypes")(resourceTypes.asInstanceOf[js.Any])
     __obj.asInstanceOf[RecorderRecordingGroup]
   }
+  @scala.inline
+  implicit class RecorderRecordingGroupOps[Self <: RecorderRecordingGroup] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAllSupported(value: Input[Boolean]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allSupported")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllSupported: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allSupported")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIncludeGlobalResourceTypes(value: Input[Boolean]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("includeGlobalResourceTypes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIncludeGlobalResourceTypes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("includeGlobalResourceTypes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResourceTypes(value: Input[js.Array[Input[String]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceTypes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResourceTypes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceTypes")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

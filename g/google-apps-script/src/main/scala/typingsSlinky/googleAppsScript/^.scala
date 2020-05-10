@@ -45,7 +45,6 @@ object ^ extends js.Object {
   var DriveActivity: typingsSlinky.googleAppsScript.GoogleAppsScript.DriveActivity = js.native
   var DriveApp: typingsSlinky.googleAppsScript.GoogleAppsScript.Drive.DriveApp = js.native
   var FormApp: typingsSlinky.googleAppsScript.GoogleAppsScript.Forms.FormApp = js.native
-  var FusionTables: typingsSlinky.googleAppsScript.GoogleAppsScript.FusionTables = js.native
   var Gmail: typingsSlinky.googleAppsScript.GoogleAppsScript.Gmail = js.native
   var GmailApp: typingsSlinky.googleAppsScript.GoogleAppsScript.Gmail.GmailApp = js.native
   var GroupsApp: typingsSlinky.googleAppsScript.GoogleAppsScript.Groups.GroupsApp = js.native
@@ -75,7 +74,6 @@ object ^ extends js.Object {
   var TagManager: typingsSlinky.googleAppsScript.GoogleAppsScript.TagManager = js.native
   var Tasks: typingsSlinky.googleAppsScript.GoogleAppsScript.Tasks = js.native
   var UrlFetchApp: typingsSlinky.googleAppsScript.GoogleAppsScript.URLFetch.UrlFetchApp = js.native
-  var UrlShortener: typingsSlinky.googleAppsScript.GoogleAppsScript.UrlShortener = js.native
   var UserProperties: typingsSlinky.googleAppsScript.GoogleAppsScript.Properties.UserProperties = js.native
   var Utilities: typingsSlinky.googleAppsScript.GoogleAppsScript.Utilities.Utilities = js.native
   var XmlService: typingsSlinky.googleAppsScript.GoogleAppsScript.XMLService.XmlService = js.native

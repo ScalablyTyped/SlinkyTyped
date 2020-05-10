@@ -1,8 +1,10 @@
 package typingsSlinky.mongooseDelete
 
 import typingsSlinky.mongodb.mod.FindAndModifyWriteOpResultObject
+import typingsSlinky.mongoose.mod.FilterQuery
 import typingsSlinky.mongoose.mod.QueryFindOneAndUpdateOptions
-import typingsSlinky.mongoose.rawResulttrueQueryFindOneContext
+import typingsSlinky.mongoose.mod.UpdateQuery
+import typingsSlinky.mongoose.rawResulttrueQueryFindOneArrayFilters
 import typingsSlinky.mongoose.rawResulttrueupserttruene
 import typingsSlinky.mongoose.upserttruenewtrueQueryFin
 import scala.scalajs.js
@@ -12,24 +14,24 @@ import scala.scalajs.js.annotation._
 @js.native
 trait FnCallConditionsUpdateOptionsCallback extends js.Object {
   def apply(): DocumentQueryanynullanyAll = js.native
-  def apply(conditions: js.Any, update: js.Any): DocumentQueryanynullanyAll = js.native
+  def apply(conditions: FilterQuery[_], update: UpdateQuery[_]): DocumentQueryanynullanyAll = js.native
   def apply(
-    conditions: js.Any,
-    update: js.Any,
+    conditions: FilterQuery[_],
+    update: UpdateQuery[_],
     callback: js.Function3[/* err */ js.Any, /* doc */ js.Any | Null, /* res */ js.Any, Unit]
   ): DocumentQueryanynullanyAll = js.native
-  def apply(conditions: js.Any, update: js.Any, options: QueryFindOneAndUpdateOptions): DocumentQueryanynullanyAll = js.native
+  def apply(conditions: FilterQuery[_], update: UpdateQuery[_], options: QueryFindOneAndUpdateOptions): DocumentQueryanynullanyAll = js.native
   def apply(
-    conditions: js.Any,
-    update: js.Any,
+    conditions: FilterQuery[_],
+    update: UpdateQuery[_],
     options: QueryFindOneAndUpdateOptions,
     callback: js.Function3[/* err */ js.Any, /* doc */ js.Any | Null, /* res */ js.Any, Unit]
   ): DocumentQueryanynullanyAll = js.native
-  def apply(conditions: js.Any, update: js.Any, options: rawResulttrueQueryFindOneContext): QueryFindAndModifyWriteOpBatchSize = js.native
+  def apply(conditions: FilterQuery[_], update: UpdateQuery[_], options: rawResulttrueQueryFindOneArrayFilters): QueryFindAndModifyWriteOpBatchSize = js.native
   def apply(
-    conditions: js.Any,
-    update: js.Any,
-    options: rawResulttrueQueryFindOneContext,
+    conditions: FilterQuery[_],
+    update: UpdateQuery[_],
+    options: rawResulttrueQueryFindOneArrayFilters,
     callback: js.Function3[
       /* err */ js.Any, 
       /* doc */ FindAndModifyWriteOpResultObject[_ | Null], 
@@ -37,10 +39,10 @@ trait FnCallConditionsUpdateOptionsCallback extends js.Object {
       Unit
     ]
   ): QueryFindAndModifyWriteOpBatchSize = js.native
-  def apply(conditions: js.Any, update: js.Any, options: rawResulttrueupserttruene): QueryFindAndModifyWriteOpAnd = js.native
+  def apply(conditions: FilterQuery[_], update: UpdateQuery[_], options: rawResulttrueupserttruene): QueryFindAndModifyWriteOpAnd = js.native
   def apply(
-    conditions: js.Any,
-    update: js.Any,
+    conditions: FilterQuery[_],
+    update: UpdateQuery[_],
     options: rawResulttrueupserttruene,
     callback: js.Function3[
       /* err */ js.Any, 
@@ -49,10 +51,10 @@ trait FnCallConditionsUpdateOptionsCallback extends js.Object {
       Unit
     ]
   ): QueryFindAndModifyWriteOpAnd = js.native
-  def apply(conditions: js.Any, update: js.Any, options: upserttruenewtrueQueryFin): DocumentQueryanyanyAll = js.native
+  def apply(conditions: FilterQuery[_], update: UpdateQuery[_], options: upserttruenewtrueQueryFin): DocumentQueryanyanyAll = js.native
   def apply(
-    conditions: js.Any,
-    update: js.Any,
+    conditions: FilterQuery[_],
+    update: UpdateQuery[_],
     options: upserttruenewtrueQueryFin,
     callback: js.Function3[/* err */ js.Any, /* doc */ js.Any, /* res */ js.Any, Unit]
   ): DocumentQueryanyanyAll = js.native

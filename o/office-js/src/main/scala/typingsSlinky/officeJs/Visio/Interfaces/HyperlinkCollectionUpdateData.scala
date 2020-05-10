@@ -5,16 +5,36 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** An interface for updating data on the HyperlinkCollection object, for use in "hyperlinkCollection.set({ ... })". */
+@js.native
 trait HyperlinkCollectionUpdateData extends js.Object {
-  var items: js.UndefOr[js.Array[HyperlinkData]] = js.undefined
+  var items: js.UndefOr[js.Array[HyperlinkData]] = js.native
 }
 
 object HyperlinkCollectionUpdateData {
   @scala.inline
-  def apply(items: js.Array[HyperlinkData] = null): HyperlinkCollectionUpdateData = {
+  def apply(): HyperlinkCollectionUpdateData = {
     val __obj = js.Dynamic.literal()
-    if (items != null) __obj.updateDynamic("items")(items.asInstanceOf[js.Any])
     __obj.asInstanceOf[HyperlinkCollectionUpdateData]
   }
+  @scala.inline
+  implicit class HyperlinkCollectionUpdateDataOps[Self <: HyperlinkCollectionUpdateData] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withItems(value: js.Array[HyperlinkData]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutItems: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

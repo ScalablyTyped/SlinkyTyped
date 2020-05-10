@@ -27,16 +27,53 @@ trait SchemaCredential extends js.Object {
 
 object SchemaCredential {
   @scala.inline
-  def apply(
-    basicAuth: SchemaBasicAuth = null,
-    serviceAccount: SchemaServiceAccount = null,
-    useProjectDefault: js.UndefOr[Boolean] = js.undefined
-  ): SchemaCredential = {
+  def apply(): SchemaCredential = {
     val __obj = js.Dynamic.literal()
-    if (basicAuth != null) __obj.updateDynamic("basicAuth")(basicAuth.asInstanceOf[js.Any])
-    if (serviceAccount != null) __obj.updateDynamic("serviceAccount")(serviceAccount.asInstanceOf[js.Any])
-    if (!js.isUndefined(useProjectDefault)) __obj.updateDynamic("useProjectDefault")(useProjectDefault.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaCredential]
   }
+  @scala.inline
+  implicit class SchemaCredentialOps[Self <: SchemaCredential] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBasicAuth(value: SchemaBasicAuth): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("basicAuth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBasicAuth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("basicAuth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withServiceAccount(value: SchemaServiceAccount): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceAccount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutServiceAccount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceAccount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUseProjectDefault(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useProjectDefault")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUseProjectDefault: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useProjectDefault")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

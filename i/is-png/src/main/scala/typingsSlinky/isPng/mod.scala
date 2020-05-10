@@ -1,7 +1,6 @@
 package typingsSlinky.isPng
 
 import typingsSlinky.node.Buffer
-import typingsSlinky.std.Uint8Array
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,6 +30,6 @@ object mod extends js.Object {
   })();
   ```
   */
-  def apply(buffer: Uint8Array): Boolean = js.native
+  def apply(buffer: js.typedarray.Uint8Array): Boolean = js.native
 }
 

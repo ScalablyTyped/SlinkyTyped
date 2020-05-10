@@ -1,72 +1,75 @@
 package typingsSlinky.reactCountup.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
+import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.reactCountup.AnonPauseResume
 import typingsSlinky.reactCountup.AnonPauseResumeReset
 import typingsSlinky.reactCountup.AnonReset
 import typingsSlinky.reactCountup.AnonStart
 import typingsSlinky.reactCountup.AnonUpdate
+import typingsSlinky.reactCountup.mod.Props
 import typingsSlinky.reactCountup.mod.^
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactCountup
-  extends ExternalComponentWithAttributesWithRefType[tag.type, ^] {
+object ReactCountup {
   @JSImport("react-countup", JSImport.Namespace)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, start, style */
-  def apply(
-    decimal: String = null,
-    decimals: Int | Double = null,
-    delay: Int | Double = null,
-    duration: Int | Double = null,
-    easingFn: (/* t */ Double, /* b */ Double, /* c */ Double, /* d */ Double) => Unit = null,
-    end: Int | Double = null,
-    formattingFn: /* value */ Double => String = null,
-    onComplete: () => Unit = null,
-    onEnd: /* providedFn */ AnonPauseResume => Unit = null,
-    onPauseResume: () => js.Function1[/* providedFn */ AnonStart, Unit] = null,
-    onReset: () => js.Function1[/* providedFn */ AnonUpdate, Unit] = null,
-    onStart: /* providedFn */ AnonReset => Unit = null,
-    onUpdate: /* providedFn */ AnonPauseResumeReset => Unit = null,
-    prefix: String = null,
-    redraw: js.UndefOr[Boolean] = js.undefined,
-    separator: String = null,
-    suffix: String = null,
-    useEasing: js.UndefOr[Boolean] = js.undefined,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, ^] = {
-    val __obj = js.Dynamic.literal()
-    if (decimal != null) __obj.updateDynamic("decimal")(decimal.asInstanceOf[js.Any])
-    if (decimals != null) __obj.updateDynamic("decimals")(decimals.asInstanceOf[js.Any])
-    if (delay != null) __obj.updateDynamic("delay")(delay.asInstanceOf[js.Any])
-    if (duration != null) __obj.updateDynamic("duration")(duration.asInstanceOf[js.Any])
-    if (easingFn != null) __obj.updateDynamic("easingFn")(js.Any.fromFunction4(easingFn))
-    if (end != null) __obj.updateDynamic("end")(end.asInstanceOf[js.Any])
-    if (formattingFn != null) __obj.updateDynamic("formattingFn")(js.Any.fromFunction1(formattingFn))
-    if (onComplete != null) __obj.updateDynamic("onComplete")(js.Any.fromFunction0(onComplete))
-    if (onEnd != null) __obj.updateDynamic("onEnd")(js.Any.fromFunction1(onEnd))
-    if (onPauseResume != null) __obj.updateDynamic("onPauseResume")(js.Any.fromFunction0(onPauseResume))
-    if (onReset != null) __obj.updateDynamic("onReset")(js.Any.fromFunction0(onReset))
-    if (onStart != null) __obj.updateDynamic("onStart")(js.Any.fromFunction1(onStart))
-    if (onUpdate != null) __obj.updateDynamic("onUpdate")(js.Any.fromFunction1(onUpdate))
-    if (prefix != null) __obj.updateDynamic("prefix")(prefix.asInstanceOf[js.Any])
-    if (!js.isUndefined(redraw)) __obj.updateDynamic("redraw")(redraw.asInstanceOf[js.Any])
-    if (separator != null) __obj.updateDynamic("separator")(separator.asInstanceOf[js.Any])
-    if (suffix != null) __obj.updateDynamic("suffix")(suffix.asInstanceOf[js.Any])
-    if (!js.isUndefined(useEasing)) __obj.updateDynamic("useEasing")(useEasing.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, ^] {
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def decimal(value: String): this.type = set("decimal", value.asInstanceOf[js.Any])
+    @scala.inline
+    def decimals(value: Double): this.type = set("decimals", value.asInstanceOf[js.Any])
+    @scala.inline
+    def delay(value: Double): this.type = set("delay", value.asInstanceOf[js.Any])
+    @scala.inline
+    def duration(value: Double): this.type = set("duration", value.asInstanceOf[js.Any])
+    @scala.inline
+    def easingFn(value: (/* t */ Double, /* b */ Double, /* c */ Double, /* d */ Double) => Unit): this.type = set("easingFn", js.Any.fromFunction4(value))
+    @scala.inline
+    def end(value: Double): this.type = set("end", value.asInstanceOf[js.Any])
+    @scala.inline
+    def formattingFn(value: /* value */ Double => String): this.type = set("formattingFn", js.Any.fromFunction1(value))
+    @scala.inline
+    def onEnd(value: /* providedFn */ AnonPauseResume => Unit): this.type = set("onEnd", js.Any.fromFunction1(value))
+    @scala.inline
+    def onPauseResume(value: () => js.Function1[/* providedFn */ AnonStart, Unit]): this.type = set("onPauseResume", js.Any.fromFunction0(value))
+    @scala.inline
+    def onReset(value: () => js.Function1[/* providedFn */ AnonUpdate, Unit]): this.type = set("onReset", js.Any.fromFunction0(value))
+    @scala.inline
+    def onStart(value: /* providedFn */ AnonReset => Unit): this.type = set("onStart", js.Any.fromFunction1(value))
+    @scala.inline
+    def onUpdate(value: /* providedFn */ AnonPauseResumeReset => Unit): this.type = set("onUpdate", js.Any.fromFunction1(value))
+    @scala.inline
+    def prefix(value: String): this.type = set("prefix", value.asInstanceOf[js.Any])
+    @scala.inline
+    def preserveValue(value: Boolean): this.type = set("preserveValue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def redraw(value: Boolean): this.type = set("redraw", value.asInstanceOf[js.Any])
+    @scala.inline
+    def separator(value: String): this.type = set("separator", value.asInstanceOf[js.Any])
+    @scala.inline
+    def start(value: Double): this.type = set("start", value.asInstanceOf[js.Any])
+    @scala.inline
+    def startOnMount(value: Boolean): this.type = set("startOnMount", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def suffix(value: String): this.type = set("suffix", value.asInstanceOf[js.Any])
+    @scala.inline
+    def useEasing(value: Boolean): this.type = set("useEasing", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, ^] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactCountup.mod.^](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = typingsSlinky.reactCountup.mod.Props
+  
+  def withProps(p: Props): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: ReactCountup.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

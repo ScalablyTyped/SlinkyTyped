@@ -4,16 +4,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait EnvConfiguration extends js.Object {
-  var environmentVariableName: js.UndefOr[String] = js.undefined
+  var environmentVariableName: js.UndefOr[String] = js.native
 }
 
 object EnvConfiguration {
   @scala.inline
-  def apply(environmentVariableName: String = null): EnvConfiguration = {
+  def apply(): EnvConfiguration = {
     val __obj = js.Dynamic.literal()
-    if (environmentVariableName != null) __obj.updateDynamic("environmentVariableName")(environmentVariableName.asInstanceOf[js.Any])
     __obj.asInstanceOf[EnvConfiguration]
   }
+  @scala.inline
+  implicit class EnvConfigurationOps[Self <: EnvConfiguration] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEnvironmentVariableName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("environmentVariableName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnvironmentVariableName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("environmentVariableName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

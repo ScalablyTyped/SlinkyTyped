@@ -18,8 +18,8 @@ object foundationMod extends js.Object {
       */
     def addChip(text: String): Element = js.native
     def addChip(text: String, leadingIcon: Null, trailingIcon: Element): Element = js.native
-    def addChip(text: String, leadingIcon: typingsSlinky.std.Element): Element = js.native
-    def addChip(text: String, leadingIcon: typingsSlinky.std.Element, trailingIcon: Element): Element = js.native
+    def addChip(text: String, leadingIcon: Element): Element = js.native
+    def addChip(text: String, leadingIcon: Element, trailingIcon: Element): Element = js.native
     /**
       * Deselects the given chip.
       */

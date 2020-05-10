@@ -5,30 +5,43 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IgResponsiveContainer
   extends /**
-	 * Option for igResponsiveContainer
+	 * Option for JSONPDataSourceSettings
 	 */
 /* optionName */ StringDictionary[js.Any] {
   /**
   	 * The time between two resize checks in milliseconds.
   	 */
-  var pollingInterval: js.UndefOr[Double] = js.undefined
+  var pollingInterval: js.UndefOr[Double] = js.native
 }
 
 object IgResponsiveContainer {
   @scala.inline
-  def apply(
-    StringDictionary: /**
-  	 * Option for igResponsiveContainer
-  	 */
-  /* optionName */ StringDictionary[js.Any] = null,
-    pollingInterval: Int | Double = null
-  ): IgResponsiveContainer = {
+  def apply(): IgResponsiveContainer = {
     val __obj = js.Dynamic.literal()
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
-    if (pollingInterval != null) __obj.updateDynamic("pollingInterval")(pollingInterval.asInstanceOf[js.Any])
     __obj.asInstanceOf[IgResponsiveContainer]
   }
+  @scala.inline
+  implicit class IgResponsiveContainerOps[Self <: IgResponsiveContainer] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPollingInterval(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pollingInterval")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPollingInterval: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pollingInterval")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

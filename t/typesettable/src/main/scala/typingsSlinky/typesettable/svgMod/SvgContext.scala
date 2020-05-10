@@ -1,7 +1,7 @@
 package typingsSlinky.typesettable.svgMod
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.std.SVGElement
+import org.scalajs.dom.raw.SVGElement
 import typingsSlinky.typesettable.AnonWrite
 import typingsSlinky.typesettable.contextsMod.IPenFactoryContext
 import typingsSlinky.typesettable.contextsMod.IRulerFactoryContext
@@ -15,9 +15,9 @@ import scala.scalajs.js.annotation._
 class SvgContext protected ()
   extends IPenFactoryContext[SVGElement]
      with IRulerFactoryContext {
-  def this(element: org.scalajs.dom.raw.SVGElement) = this()
-  def this(element: org.scalajs.dom.raw.SVGElement, className: String) = this()
-  def this(element: org.scalajs.dom.raw.SVGElement, className: String, addTitleElement: Boolean) = this()
+  def this(element: SVGElement) = this()
+  def this(element: SVGElement, className: String) = this()
+  def this(element: SVGElement, className: String, addTitleElement: Boolean) = this()
   var addTitleElement: js.Any = js.native
   var className: js.Any = js.native
   var element: js.Any = js.native

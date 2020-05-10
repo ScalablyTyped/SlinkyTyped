@@ -30,11 +30,41 @@ trait SchemaBuildBazelRemoteExecutionV2OutputSymlink extends js.Object {
 
 object SchemaBuildBazelRemoteExecutionV2OutputSymlink {
   @scala.inline
-  def apply(path: String = null, target: String = null): SchemaBuildBazelRemoteExecutionV2OutputSymlink = {
+  def apply(): SchemaBuildBazelRemoteExecutionV2OutputSymlink = {
     val __obj = js.Dynamic.literal()
-    if (path != null) __obj.updateDynamic("path")(path.asInstanceOf[js.Any])
-    if (target != null) __obj.updateDynamic("target")(target.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaBuildBazelRemoteExecutionV2OutputSymlink]
   }
+  @scala.inline
+  implicit class SchemaBuildBazelRemoteExecutionV2OutputSymlinkOps[Self <: SchemaBuildBazelRemoteExecutionV2OutputSymlink] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPath(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTarget(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTarget: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

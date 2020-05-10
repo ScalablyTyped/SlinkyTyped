@@ -14,10 +14,29 @@ trait ObjectReference extends js.Object {
 
 object ObjectReference {
   @scala.inline
-  def apply(Selector: SelectorObjectReference = null): ObjectReference = {
+  def apply(): ObjectReference = {
     val __obj = js.Dynamic.literal()
-    if (Selector != null) __obj.updateDynamic("Selector")(Selector.asInstanceOf[js.Any])
     __obj.asInstanceOf[ObjectReference]
   }
+  @scala.inline
+  implicit class ObjectReferenceOps[Self <: ObjectReference] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSelector(value: SelectorObjectReference): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Selector")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelector: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Selector")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

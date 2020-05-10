@@ -4,52 +4,166 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait BaseIconOptions extends LayerOptions {
-  var className: js.UndefOr[String] = js.undefined
-  var iconAnchor: js.UndefOr[PointExpression] = js.undefined
-  var iconRetinaUrl: js.UndefOr[String] = js.undefined
-  var iconSize: js.UndefOr[PointExpression] = js.undefined
-  var iconUrl: js.UndefOr[String] = js.undefined
-  var popupAnchor: js.UndefOr[PointExpression] = js.undefined
-  var shadowAnchor: js.UndefOr[PointExpression] = js.undefined
-  var shadowRetinaUrl: js.UndefOr[String] = js.undefined
-  var shadowSize: js.UndefOr[PointExpression] = js.undefined
-  var shadowUrl: js.UndefOr[String] = js.undefined
-  var tooltipAnchor: js.UndefOr[PointExpression] = js.undefined
+  var className: js.UndefOr[String] = js.native
+  var iconAnchor: js.UndefOr[PointExpression] = js.native
+  var iconRetinaUrl: js.UndefOr[String] = js.native
+  var iconSize: js.UndefOr[PointExpression] = js.native
+  var iconUrl: js.UndefOr[String] = js.native
+  var popupAnchor: js.UndefOr[PointExpression] = js.native
+  var shadowAnchor: js.UndefOr[PointExpression] = js.native
+  var shadowRetinaUrl: js.UndefOr[String] = js.native
+  var shadowSize: js.UndefOr[PointExpression] = js.native
+  var shadowUrl: js.UndefOr[String] = js.native
+  var tooltipAnchor: js.UndefOr[PointExpression] = js.native
 }
 
 object BaseIconOptions {
   @scala.inline
-  def apply(
-    attribution: String = null,
-    className: String = null,
-    iconAnchor: PointExpression = null,
-    iconRetinaUrl: String = null,
-    iconSize: PointExpression = null,
-    iconUrl: String = null,
-    pane: String = null,
-    popupAnchor: PointExpression = null,
-    shadowAnchor: PointExpression = null,
-    shadowRetinaUrl: String = null,
-    shadowSize: PointExpression = null,
-    shadowUrl: String = null,
-    tooltipAnchor: PointExpression = null
-  ): BaseIconOptions = {
+  def apply(): BaseIconOptions = {
     val __obj = js.Dynamic.literal()
-    if (attribution != null) __obj.updateDynamic("attribution")(attribution.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (iconAnchor != null) __obj.updateDynamic("iconAnchor")(iconAnchor.asInstanceOf[js.Any])
-    if (iconRetinaUrl != null) __obj.updateDynamic("iconRetinaUrl")(iconRetinaUrl.asInstanceOf[js.Any])
-    if (iconSize != null) __obj.updateDynamic("iconSize")(iconSize.asInstanceOf[js.Any])
-    if (iconUrl != null) __obj.updateDynamic("iconUrl")(iconUrl.asInstanceOf[js.Any])
-    if (pane != null) __obj.updateDynamic("pane")(pane.asInstanceOf[js.Any])
-    if (popupAnchor != null) __obj.updateDynamic("popupAnchor")(popupAnchor.asInstanceOf[js.Any])
-    if (shadowAnchor != null) __obj.updateDynamic("shadowAnchor")(shadowAnchor.asInstanceOf[js.Any])
-    if (shadowRetinaUrl != null) __obj.updateDynamic("shadowRetinaUrl")(shadowRetinaUrl.asInstanceOf[js.Any])
-    if (shadowSize != null) __obj.updateDynamic("shadowSize")(shadowSize.asInstanceOf[js.Any])
-    if (shadowUrl != null) __obj.updateDynamic("shadowUrl")(shadowUrl.asInstanceOf[js.Any])
-    if (tooltipAnchor != null) __obj.updateDynamic("tooltipAnchor")(tooltipAnchor.asInstanceOf[js.Any])
     __obj.asInstanceOf[BaseIconOptions]
   }
+  @scala.inline
+  implicit class BaseIconOptionsOps[Self <: BaseIconOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClassName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClassName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIconAnchor(value: PointExpression): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iconAnchor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIconAnchor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iconAnchor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIconRetinaUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iconRetinaUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIconRetinaUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iconRetinaUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIconSize(value: PointExpression): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iconSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIconSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iconSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIconUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iconUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIconUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iconUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPopupAnchor(value: PointExpression): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("popupAnchor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPopupAnchor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("popupAnchor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShadowAnchor(value: PointExpression): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shadowAnchor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShadowAnchor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shadowAnchor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShadowRetinaUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shadowRetinaUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShadowRetinaUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shadowRetinaUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShadowSize(value: PointExpression): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shadowSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShadowSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shadowSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShadowUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shadowUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShadowUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shadowUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTooltipAnchor(value: PointExpression): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltipAnchor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTooltipAnchor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltipAnchor")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

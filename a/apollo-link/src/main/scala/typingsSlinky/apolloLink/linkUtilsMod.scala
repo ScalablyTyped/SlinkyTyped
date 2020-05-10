@@ -18,10 +18,6 @@ object linkUtilsMod extends js.Object {
     def this(message: String) = this()
     def this(message: String, link: ApolloLink) = this()
     var link: ApolloLink = js.native
-    /* CompleteClass */
-    override var message: String = js.native
-    /* CompleteClass */
-    override var name: String = js.native
   }
   
   def createOperation(starting: js.Any, operation: GraphQLRequest): Operation = js.native

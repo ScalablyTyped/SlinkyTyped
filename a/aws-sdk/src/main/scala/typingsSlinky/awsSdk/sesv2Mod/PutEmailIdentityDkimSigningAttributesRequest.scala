@@ -22,14 +22,41 @@ trait PutEmailIdentityDkimSigningAttributesRequest extends js.Object {
 
 object PutEmailIdentityDkimSigningAttributesRequest {
   @scala.inline
-  def apply(
-    EmailIdentity: Identity,
-    SigningAttributesOrigin: DkimSigningAttributesOrigin,
-    SigningAttributes: DkimSigningAttributes = null
-  ): PutEmailIdentityDkimSigningAttributesRequest = {
+  def apply(EmailIdentity: Identity, SigningAttributesOrigin: DkimSigningAttributesOrigin): PutEmailIdentityDkimSigningAttributesRequest = {
     val __obj = js.Dynamic.literal(EmailIdentity = EmailIdentity.asInstanceOf[js.Any], SigningAttributesOrigin = SigningAttributesOrigin.asInstanceOf[js.Any])
-    if (SigningAttributes != null) __obj.updateDynamic("SigningAttributes")(SigningAttributes.asInstanceOf[js.Any])
     __obj.asInstanceOf[PutEmailIdentityDkimSigningAttributesRequest]
   }
+  @scala.inline
+  implicit class PutEmailIdentityDkimSigningAttributesRequestOps[Self <: PutEmailIdentityDkimSigningAttributesRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEmailIdentity(value: Identity): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EmailIdentity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSigningAttributesOrigin(value: DkimSigningAttributesOrigin): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SigningAttributesOrigin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSigningAttributes(value: DkimSigningAttributes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SigningAttributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSigningAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SigningAttributes")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

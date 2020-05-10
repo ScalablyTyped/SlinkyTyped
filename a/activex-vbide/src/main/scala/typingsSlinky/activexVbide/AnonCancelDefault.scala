@@ -4,18 +4,44 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonCancelDefault extends js.Object {
-  val CancelDefault: Boolean
-  val CommandBarControl: js.Any
-  val handled: Boolean
+  val CancelDefault: Boolean = js.native
+  val CommandBarControl: js.Any = js.native
+  val handled: Boolean = js.native
 }
 
 object AnonCancelDefault {
   @scala.inline
   def apply(CancelDefault: Boolean, CommandBarControl: js.Any, handled: Boolean): AnonCancelDefault = {
     val __obj = js.Dynamic.literal(CancelDefault = CancelDefault.asInstanceOf[js.Any], CommandBarControl = CommandBarControl.asInstanceOf[js.Any], handled = handled.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[AnonCancelDefault]
   }
+  @scala.inline
+  implicit class AnonCancelDefaultOps[Self <: AnonCancelDefault] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCancelDefault(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CancelDefault")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCommandBarControl(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CommandBarControl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHandled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("handled")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

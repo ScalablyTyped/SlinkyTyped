@@ -1,11 +1,9 @@
 package typingsSlinky.reactNativeElements.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.ReactComponentClass
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.TextStyle
 import typingsSlinky.reactNative.mod.ViewStyle
@@ -16,62 +14,76 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object CheckBox
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactNativeElements.mod.CheckBox] {
+object CheckBox {
   @JSImport("react-native-elements", "CheckBox")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: size */
-  def apply(
-    checked: Boolean,
-    Component: ReactComponentClass[js.Object] = null,
-    center: js.UndefOr[Boolean] = js.undefined,
-    checkedColor: String = null,
-    checkedIcon: String | ReactElement = null,
-    checkedTitle: String = null,
-    containerStyle: StyleProp[ViewStyle] = null,
-    fontFamily: String = null,
-    iconRight: js.UndefOr[Boolean] = js.undefined,
-    iconType: IconType = null,
-    onIconPress: () => Unit = null,
-    onLongIconPress: () => Unit = null,
-    onLongPress: () => Unit = null,
-    onPress: () => Unit = null,
-    right: js.UndefOr[Boolean] = js.undefined,
-    textStyle: StyleProp[TextStyle] = null,
-    title: String | ReactElement = null,
-    titleProps: PartialTextProperties = null,
-    uncheckedColor: String = null,
-    uncheckedIcon: String | ReactElement = null,
-    wrapperStyle: StyleProp[ViewStyle] = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactNativeElements.mod.CheckBox] = {
-    val __obj = js.Dynamic.literal(checked = checked.asInstanceOf[js.Any])
-    if (Component != null) __obj.updateDynamic("Component")(Component.asInstanceOf[js.Any])
-    if (!js.isUndefined(center)) __obj.updateDynamic("center")(center.asInstanceOf[js.Any])
-    if (checkedColor != null) __obj.updateDynamic("checkedColor")(checkedColor.asInstanceOf[js.Any])
-    if (checkedIcon != null) __obj.updateDynamic("checkedIcon")(checkedIcon.asInstanceOf[js.Any])
-    if (checkedTitle != null) __obj.updateDynamic("checkedTitle")(checkedTitle.asInstanceOf[js.Any])
-    if (containerStyle != null) __obj.updateDynamic("containerStyle")(containerStyle.asInstanceOf[js.Any])
-    if (fontFamily != null) __obj.updateDynamic("fontFamily")(fontFamily.asInstanceOf[js.Any])
-    if (!js.isUndefined(iconRight)) __obj.updateDynamic("iconRight")(iconRight.asInstanceOf[js.Any])
-    if (iconType != null) __obj.updateDynamic("iconType")(iconType.asInstanceOf[js.Any])
-    if (onIconPress != null) __obj.updateDynamic("onIconPress")(js.Any.fromFunction0(onIconPress))
-    if (onLongIconPress != null) __obj.updateDynamic("onLongIconPress")(js.Any.fromFunction0(onLongIconPress))
-    if (onLongPress != null) __obj.updateDynamic("onLongPress")(js.Any.fromFunction0(onLongPress))
-    if (onPress != null) __obj.updateDynamic("onPress")(js.Any.fromFunction0(onPress))
-    if (!js.isUndefined(right)) __obj.updateDynamic("right")(right.asInstanceOf[js.Any])
-    if (textStyle != null) __obj.updateDynamic("textStyle")(textStyle.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
-    if (titleProps != null) __obj.updateDynamic("titleProps")(titleProps.asInstanceOf[js.Any])
-    if (uncheckedColor != null) __obj.updateDynamic("uncheckedColor")(uncheckedColor.asInstanceOf[js.Any])
-    if (uncheckedIcon != null) __obj.updateDynamic("uncheckedIcon")(uncheckedIcon.asInstanceOf[js.Any])
-    if (wrapperStyle != null) __obj.updateDynamic("wrapperStyle")(wrapperStyle.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactNativeElements.mod.CheckBox] {
+    @scala.inline
+    def Component(value: ReactComponentClass[js.Object]): this.type = set("Component", value.asInstanceOf[js.Any])
+    @scala.inline
+    def center(value: Boolean): this.type = set("center", value.asInstanceOf[js.Any])
+    @scala.inline
+    def checkedColor(value: String): this.type = set("checkedColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def checkedIconReactElement(value: ReactElement): this.type = set("checkedIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def checkedIcon(value: String | ReactElement): this.type = set("checkedIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def checkedTitle(value: String): this.type = set("checkedTitle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def containerStyle(value: StyleProp[ViewStyle]): this.type = set("containerStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def containerStyleNull: this.type = set("containerStyle", null)
+    @scala.inline
+    def fontFamily(value: String): this.type = set("fontFamily", value.asInstanceOf[js.Any])
+    @scala.inline
+    def iconRight(value: Boolean): this.type = set("iconRight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def iconType(value: IconType): this.type = set("iconType", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onIconPress(value: () => Unit): this.type = set("onIconPress", js.Any.fromFunction0(value))
+    @scala.inline
+    def onLongIconPress(value: () => Unit): this.type = set("onLongIconPress", js.Any.fromFunction0(value))
+    @scala.inline
+    def onLongPress(value: () => Unit): this.type = set("onLongPress", js.Any.fromFunction0(value))
+    @scala.inline
+    def onPress(value: () => Unit): this.type = set("onPress", js.Any.fromFunction0(value))
+    @scala.inline
+    def right(value: Boolean): this.type = set("right", value.asInstanceOf[js.Any])
+    @scala.inline
+    def size(value: Double): this.type = set("size", value.asInstanceOf[js.Any])
+    @scala.inline
+    def textStyle(value: StyleProp[TextStyle]): this.type = set("textStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def textStyleNull: this.type = set("textStyle", null)
+    @scala.inline
+    def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
+    @scala.inline
+    def title(value: String | ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
+    @scala.inline
+    def titleProps(value: PartialTextProperties): this.type = set("titleProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def uncheckedColor(value: String): this.type = set("uncheckedColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def uncheckedIconReactElement(value: ReactElement): this.type = set("uncheckedIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def uncheckedIcon(value: String | ReactElement): this.type = set("uncheckedIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def wrapperStyle(value: StyleProp[ViewStyle]): this.type = set("wrapperStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def wrapperStyleNull: this.type = set("wrapperStyle", null)
   }
-  type Props = CheckBoxProps
+  
+  def withProps(p: CheckBoxProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(checked: Boolean): Builder = {
+    val __props = js.Dynamic.literal(checked = checked.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[CheckBoxProps]))
+  }
 }
 

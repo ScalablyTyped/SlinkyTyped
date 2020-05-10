@@ -1,35 +1,39 @@
 package typingsSlinky.semanticUiReact.components
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLElement
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
+import slinky.core.facade.ReactRef
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.semanticUiReact.mountNodeMod.default
 import typingsSlinky.semanticUiReact.mountNodeMountNodeMod.MountNodeProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object MountNode
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object MountNode {
   @JSImport("semantic-ui-react/dist/commonjs/addons/MountNode", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className */
-  def apply(
-    node: HTMLElement | typingsSlinky.react.mod.Ref[_] = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (node != null) __obj.updateDynamic("node")(node.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def nodeRefObject(value: ReactRef[_]): this.type = set("node", value.asInstanceOf[js.Any])
+    @scala.inline
+    def nodeFunction1(value: /* instance */ _ | Null => Unit): this.type = set("node", js.Any.fromFunction1(value))
+    @scala.inline
+    def nodeHTMLElement(value: HTMLElement): this.type = set("node", value.asInstanceOf[js.Any])
+    @scala.inline
+    def node(value: HTMLElement | typingsSlinky.react.mod.Ref[_]): this.type = set("node", value.asInstanceOf[js.Any])
+    @scala.inline
+    def nodeNull: this.type = set("node", null)
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.semanticUiReact.mountNodeMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = MountNodeProps
+  
+  def withProps(p: MountNodeProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: MountNode.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

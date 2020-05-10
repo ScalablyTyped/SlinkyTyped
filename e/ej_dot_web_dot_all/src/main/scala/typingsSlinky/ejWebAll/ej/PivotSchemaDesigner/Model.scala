@@ -4,114 +4,292 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Model extends js.Object {
   /** Triggers when it reaches client-side after any AJAX request.
     */
-  var afterServiceInvoke: js.UndefOr[js.Function1[/* e */ AfterServiceInvokeEventArgs, Unit]] = js.undefined
+  var afterServiceInvoke: js.UndefOr[js.Function1[/* e */ AfterServiceInvokeEventArgs, Unit]] = js.native
   /** Triggers before any AJAX request is passed from PivotSchemaDesigner to service methods.
     */
-  var beforeServiceInvoke: js.UndefOr[js.Function1[/* e */ BeforeServiceInvokeEventArgs, Unit]] = js.undefined
+  var beforeServiceInvoke: js.UndefOr[js.Function1[/* e */ BeforeServiceInvokeEventArgs, Unit]] = js.native
   /** Specifies the CSS class to PivotSchemaDesigner to achieve custom theme.
     * @Default {â€œâ€}
     */
-  var cssClass: js.UndefOr[String] = js.undefined
+  var cssClass: js.UndefOr[String] = js.native
   /** Object utilized to pass additional information between client-end and service-end.
     * @Default {{}}
     */
-  var customObject: js.UndefOr[js.Any] = js.undefined
+  var customObject: js.UndefOr[js.Any] = js.native
   /** Triggers when we start dragging any field from PivotSchemaDesigner.
     */
-  var dragMove: js.UndefOr[js.Function1[/* e */ DragMoveEventArgs, Unit]] = js.undefined
+  var dragMove: js.UndefOr[js.Function1[/* e */ DragMoveEventArgs, Unit]] = js.native
   /** Allows the user to enable/disable drag and drop operations within the PivotTable Field List.
     * @Default {true}
     */
-  var enableDragDrop: js.UndefOr[Boolean] = js.undefined
+  var enableDragDrop: js.UndefOr[Boolean] = js.native
   /** Allows the user to view PivotTable Field List from right to left.
     * @Default {false}
     */
-  var enableRTL: js.UndefOr[Boolean] = js.undefined
+  var enableRTL: js.UndefOr[Boolean] = js.native
   /** For ASP.NET and MVC Wrapper, PivotSchemaDesigner will be initialized and rendered empty initially. Once the connected pivot control widget is rendered completely,
     * PivotSchemaDesigner will just be populated with data source by setting this property to â€œtrueâ€.
     * @Default {false}
     */
-  var enableWrapper: js.UndefOr[Boolean] = js.undefined
+  var enableWrapper: js.UndefOr[Boolean] = js.native
   /** Sets the height for PivotSchemaDesigner.
     * @Default {â€œâ€}
     */
-  var height: js.UndefOr[String] = js.undefined
+  var height: js.UndefOr[String] = js.native
   /** Sets the layout for PivotSchemaDesigner.
     * @Default {ej.PivotSchemaDesigner.Layouts.Excel}
     */
-  var layout: js.UndefOr[Layouts | String] = js.undefined
+  var layout: js.UndefOr[Layouts | String] = js.native
   /** Triggers when PivotSchemaDesigner loading is initiated.
     */
-  var load: js.UndefOr[js.Function1[/* e */ LoadEventArgs, Unit]] = js.undefined
+  var load: js.UndefOr[js.Function1[/* e */ LoadEventArgs, Unit]] = js.native
   /** Allows the user to set the localized language for the widget.
     * @Default {en-US}
     */
-  var locale: js.UndefOr[String] = js.undefined
+  var locale: js.UndefOr[String] = js.native
   /** Sets the visibility of OLAP elements in PivotTable Field List. This is only applicable for OLAP datasource.
     * @Default {null}
     */
-  var olap: js.UndefOr[Olap] = js.undefined
+  var olap: js.UndefOr[Olap] = js.native
   /** Sets the Pivot control bound with this PivotSchemaDesigner.
     * @Default {null}
     */
-  var pivotControl: js.UndefOr[js.Any] = js.undefined
+  var pivotControl: js.UndefOr[js.Any] = js.native
   /** Allows the user to set custom name for the methods at service-end, communicated during AJAX post.
     * @Default {{}}
     */
-  var serviceMethods: js.UndefOr[js.Any] = js.undefined
+  var serviceMethods: js.UndefOr[js.Any] = js.native
   /** Connects the service using the specified URL for any server updates.
     * @Default {â€œâ€}
     */
-  var url: js.UndefOr[String] = js.undefined
+  var url: js.UndefOr[String] = js.native
   /** Sets the width for PivotSchemaDesigner.
     * @Default {â€œâ€}
     */
-  var width: js.UndefOr[String] = js.undefined
+  var width: js.UndefOr[String] = js.native
 }
 
 object Model {
   @scala.inline
-  def apply(
-    afterServiceInvoke: /* e */ AfterServiceInvokeEventArgs => Unit = null,
-    beforeServiceInvoke: /* e */ BeforeServiceInvokeEventArgs => Unit = null,
-    cssClass: String = null,
-    customObject: js.Any = null,
-    dragMove: /* e */ DragMoveEventArgs => Unit = null,
-    enableDragDrop: js.UndefOr[Boolean] = js.undefined,
-    enableRTL: js.UndefOr[Boolean] = js.undefined,
-    enableWrapper: js.UndefOr[Boolean] = js.undefined,
-    height: String = null,
-    layout: Layouts | String = null,
-    load: /* e */ LoadEventArgs => Unit = null,
-    locale: String = null,
-    olap: Olap = null,
-    pivotControl: js.Any = null,
-    serviceMethods: js.Any = null,
-    url: String = null,
-    width: String = null
-  ): Model = {
+  def apply(): Model = {
     val __obj = js.Dynamic.literal()
-    if (afterServiceInvoke != null) __obj.updateDynamic("afterServiceInvoke")(js.Any.fromFunction1(afterServiceInvoke))
-    if (beforeServiceInvoke != null) __obj.updateDynamic("beforeServiceInvoke")(js.Any.fromFunction1(beforeServiceInvoke))
-    if (cssClass != null) __obj.updateDynamic("cssClass")(cssClass.asInstanceOf[js.Any])
-    if (customObject != null) __obj.updateDynamic("customObject")(customObject.asInstanceOf[js.Any])
-    if (dragMove != null) __obj.updateDynamic("dragMove")(js.Any.fromFunction1(dragMove))
-    if (!js.isUndefined(enableDragDrop)) __obj.updateDynamic("enableDragDrop")(enableDragDrop.asInstanceOf[js.Any])
-    if (!js.isUndefined(enableRTL)) __obj.updateDynamic("enableRTL")(enableRTL.asInstanceOf[js.Any])
-    if (!js.isUndefined(enableWrapper)) __obj.updateDynamic("enableWrapper")(enableWrapper.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (layout != null) __obj.updateDynamic("layout")(layout.asInstanceOf[js.Any])
-    if (load != null) __obj.updateDynamic("load")(js.Any.fromFunction1(load))
-    if (locale != null) __obj.updateDynamic("locale")(locale.asInstanceOf[js.Any])
-    if (olap != null) __obj.updateDynamic("olap")(olap.asInstanceOf[js.Any])
-    if (pivotControl != null) __obj.updateDynamic("pivotControl")(pivotControl.asInstanceOf[js.Any])
-    if (serviceMethods != null) __obj.updateDynamic("serviceMethods")(serviceMethods.asInstanceOf[js.Any])
-    if (url != null) __obj.updateDynamic("url")(url.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     __obj.asInstanceOf[Model]
   }
+  @scala.inline
+  implicit class ModelOps[Self <: Model] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAfterServiceInvoke(value: /* e */ AfterServiceInvokeEventArgs => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("afterServiceInvoke")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutAfterServiceInvoke: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("afterServiceInvoke")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBeforeServiceInvoke(value: /* e */ BeforeServiceInvokeEventArgs => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeServiceInvoke")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutBeforeServiceInvoke: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeServiceInvoke")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCssClass(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cssClass")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCssClass: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cssClass")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCustomObject(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customObject")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCustomObject: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customObject")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDragMove(value: /* e */ DragMoveEventArgs => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dragMove")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutDragMove: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dragMove")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnableDragDrop(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableDragDrop")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnableDragDrop: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableDragDrop")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnableRTL(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableRTL")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnableRTL: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableRTL")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnableWrapper(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableWrapper")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnableWrapper: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableWrapper")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeight(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLayout(value: Layouts | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("layout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLayout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("layout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLoad(value: /* e */ LoadEventArgs => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("load")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutLoad: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("load")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocale(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocale: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOlap(value: Olap): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("olap")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOlap: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("olap")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPivotControl(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pivotControl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPivotControl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pivotControl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withServiceMethods(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceMethods")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutServiceMethods: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceMethods")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWidth(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

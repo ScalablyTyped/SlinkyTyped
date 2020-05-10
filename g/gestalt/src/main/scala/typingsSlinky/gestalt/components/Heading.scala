@@ -1,10 +1,7 @@
 package typingsSlinky.gestalt.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.gestalt.gestaltNumbers.`1`
 import typingsSlinky.gestalt.gestaltNumbers.`2`
 import typingsSlinky.gestalt.gestaltNumbers.`3`
@@ -33,45 +30,37 @@ import typingsSlinky.gestalt.gestaltStrings.red
 import typingsSlinky.gestalt.gestaltStrings.sm
 import typingsSlinky.gestalt.gestaltStrings.watermelon
 import typingsSlinky.gestalt.gestaltStrings.white
-import typingsSlinky.gestalt.gestaltStrings.xl
-import typingsSlinky.gestalt.gestaltStrings.xs
 import typingsSlinky.gestalt.mod.HeaderProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Heading
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.gestalt.mod.Heading] {
+object Heading {
   @JSImport("gestalt", "Heading")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: id */
-  def apply(
-    accessibilityLevel: `1` | `2` | `3` | `4` | `5` | `6` = null,
-    color: blue | darkGray | eggplant | gray | green | lightGray | maroon | midnight | navy | olive | orange | orchid | pine | purple | red | watermelon | white = null,
-    lgSize: xs | sm | md | lg | xl = null,
-    mdSize: xs | sm | md | lg | xl = null,
-    overflow: normal | breakWord = null,
-    size: xs | sm | md | lg | xl = null,
-    smSize: xs | sm | md | lg | xl = null,
-    truncate: js.UndefOr[Boolean] = js.undefined,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.gestalt.mod.Heading] = {
-    val __obj = js.Dynamic.literal()
-    if (accessibilityLevel != null) __obj.updateDynamic("accessibilityLevel")(accessibilityLevel.asInstanceOf[js.Any])
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (lgSize != null) __obj.updateDynamic("lgSize")(lgSize.asInstanceOf[js.Any])
-    if (mdSize != null) __obj.updateDynamic("mdSize")(mdSize.asInstanceOf[js.Any])
-    if (overflow != null) __obj.updateDynamic("overflow")(overflow.asInstanceOf[js.Any])
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
-    if (smSize != null) __obj.updateDynamic("smSize")(smSize.asInstanceOf[js.Any])
-    if (!js.isUndefined(truncate)) __obj.updateDynamic("truncate")(truncate.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.gestalt.mod.Heading] {
+    @scala.inline
+    def accessibilityLevel(value: `1` | `2` | `3` | `4` | `5` | `6`): this.type = set("accessibilityLevel", value.asInstanceOf[js.Any])
+    @scala.inline
+    def color(
+      value: blue | darkGray | eggplant | gray | green | lightGray | maroon | midnight | navy | olive | orange | orchid | pine | purple | red | watermelon | white
+    ): this.type = set("color", value.asInstanceOf[js.Any])
+    @scala.inline
+    def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
+    @scala.inline
+    def overflow(value: normal | breakWord): this.type = set("overflow", value.asInstanceOf[js.Any])
+    @scala.inline
+    def size(value: sm | md | lg): this.type = set("size", value.asInstanceOf[js.Any])
+    @scala.inline
+    def truncate(value: Boolean): this.type = set("truncate", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.gestalt.mod.Heading] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.gestalt.mod.Heading](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = HeaderProps
+  
+  def withProps(p: HeaderProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Heading.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

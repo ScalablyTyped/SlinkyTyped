@@ -1,9 +1,7 @@
 package typingsSlinky.antd.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.antd.actionButtonMod.ActionButtonProps
 import typingsSlinky.antd.actionButtonMod.default
 import typingsSlinky.antd.buttonButtonMod.ButtonType
@@ -12,28 +10,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ActionButton
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object ActionButton {
   @JSImport("antd/lib/modal/ActionButton", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: autoFocus */
-  def apply(
-    closeModal: js.Function,
-    actionFn: /* repeated */ js.Any => _ | js.Thenable[_] = null,
-    buttonProps: NativeButtonProps = null,
-    `type`: ButtonType = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(closeModal = closeModal.asInstanceOf[js.Any])
-    if (actionFn != null) __obj.updateDynamic("actionFn")(js.Any.fromFunction1(actionFn))
-    if (buttonProps != null) __obj.updateDynamic("buttonProps")(buttonProps.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def actionFn(value: /* repeated */ js.Any => _ | js.Thenable[_]): this.type = set("actionFn", js.Any.fromFunction1(value))
+    @scala.inline
+    def autoFocus(value: Boolean): this.type = set("autoFocus", value.asInstanceOf[js.Any])
+    @scala.inline
+    def buttonProps(value: NativeButtonProps): this.type = set("buttonProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `type`(value: ButtonType): this.type = set("type", value.asInstanceOf[js.Any])
   }
-  type Props = ActionButtonProps
+  
+  def withProps(p: ActionButtonProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(closeModal: js.Function): Builder = {
+    val __props = js.Dynamic.literal(closeModal = closeModal.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ActionButtonProps]))
+  }
 }
 

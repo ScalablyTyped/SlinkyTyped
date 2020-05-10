@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation._
 @JSImport("parchment/dist/src/blot/abstract/parent", JSImport.Namespace)
 @js.native
 object parentMod extends js.Object {
-  /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+  /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
   - typingsSlinky.parchment.linkedNodeMod.LinkedNode because Already inherited
   - typingsSlinky.parchment.blotMod.Blot because Already inherited
   - typingsSlinky.parchment.blotMod.Parent because var conflicts: domNode, next, parent, prev, scroll. Inlined children, appendChild, descendant, descendant, descendants, descendants, insertBefore, insertBefore, moveChildren, moveChildren, path, path, removeChild, unwrap */ @js.native

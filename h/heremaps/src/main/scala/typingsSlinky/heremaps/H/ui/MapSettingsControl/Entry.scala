@@ -10,17 +10,37 @@ import scala.scalajs.js.annotation._
   * @property name {string} - label which describes the map type
   * @property mapType {H.service.MapType} - reference to map type
   */
+@js.native
 trait Entry extends js.Object {
-  var mapType: MapType
-  var name: String
+  var mapType: MapType = js.native
+  var name: String = js.native
 }
 
 object Entry {
   @scala.inline
   def apply(mapType: MapType, name: String): Entry = {
     val __obj = js.Dynamic.literal(mapType = mapType.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[Entry]
   }
+  @scala.inline
+  implicit class EntryOps[Self <: Entry] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMapType(value: MapType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mapType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

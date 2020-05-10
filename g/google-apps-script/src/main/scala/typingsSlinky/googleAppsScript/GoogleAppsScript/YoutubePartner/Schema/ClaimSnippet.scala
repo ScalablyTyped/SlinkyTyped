@@ -4,54 +4,192 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ClaimSnippet extends js.Object {
-  var assetId: js.UndefOr[String] = js.undefined
-  var contentType: js.UndefOr[String] = js.undefined
-  var id: js.UndefOr[String] = js.undefined
-  var isPartnerUploaded: js.UndefOr[Boolean] = js.undefined
-  var kind: js.UndefOr[String] = js.undefined
-  var origin: js.UndefOr[ClaimSnippetOrigin] = js.undefined
-  var status: js.UndefOr[String] = js.undefined
-  var thirdPartyClaim: js.UndefOr[Boolean] = js.undefined
-  var timeCreated: js.UndefOr[String] = js.undefined
-  var timeStatusLastModified: js.UndefOr[String] = js.undefined
-  var videoId: js.UndefOr[String] = js.undefined
-  var videoTitle: js.UndefOr[String] = js.undefined
-  var videoViews: js.UndefOr[String] = js.undefined
+  var assetId: js.UndefOr[String] = js.native
+  var contentType: js.UndefOr[String] = js.native
+  var id: js.UndefOr[String] = js.native
+  var isPartnerUploaded: js.UndefOr[Boolean] = js.native
+  var kind: js.UndefOr[String] = js.native
+  var origin: js.UndefOr[ClaimSnippetOrigin] = js.native
+  var status: js.UndefOr[String] = js.native
+  var thirdPartyClaim: js.UndefOr[Boolean] = js.native
+  var timeCreated: js.UndefOr[String] = js.native
+  var timeStatusLastModified: js.UndefOr[String] = js.native
+  var videoId: js.UndefOr[String] = js.native
+  var videoTitle: js.UndefOr[String] = js.native
+  var videoViews: js.UndefOr[String] = js.native
 }
 
 object ClaimSnippet {
   @scala.inline
-  def apply(
-    assetId: String = null,
-    contentType: String = null,
-    id: String = null,
-    isPartnerUploaded: js.UndefOr[Boolean] = js.undefined,
-    kind: String = null,
-    origin: ClaimSnippetOrigin = null,
-    status: String = null,
-    thirdPartyClaim: js.UndefOr[Boolean] = js.undefined,
-    timeCreated: String = null,
-    timeStatusLastModified: String = null,
-    videoId: String = null,
-    videoTitle: String = null,
-    videoViews: String = null
-  ): ClaimSnippet = {
+  def apply(): ClaimSnippet = {
     val __obj = js.Dynamic.literal()
-    if (assetId != null) __obj.updateDynamic("assetId")(assetId.asInstanceOf[js.Any])
-    if (contentType != null) __obj.updateDynamic("contentType")(contentType.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (!js.isUndefined(isPartnerUploaded)) __obj.updateDynamic("isPartnerUploaded")(isPartnerUploaded.asInstanceOf[js.Any])
-    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
-    if (origin != null) __obj.updateDynamic("origin")(origin.asInstanceOf[js.Any])
-    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
-    if (!js.isUndefined(thirdPartyClaim)) __obj.updateDynamic("thirdPartyClaim")(thirdPartyClaim.asInstanceOf[js.Any])
-    if (timeCreated != null) __obj.updateDynamic("timeCreated")(timeCreated.asInstanceOf[js.Any])
-    if (timeStatusLastModified != null) __obj.updateDynamic("timeStatusLastModified")(timeStatusLastModified.asInstanceOf[js.Any])
-    if (videoId != null) __obj.updateDynamic("videoId")(videoId.asInstanceOf[js.Any])
-    if (videoTitle != null) __obj.updateDynamic("videoTitle")(videoTitle.asInstanceOf[js.Any])
-    if (videoViews != null) __obj.updateDynamic("videoViews")(videoViews.asInstanceOf[js.Any])
     __obj.asInstanceOf[ClaimSnippet]
   }
+  @scala.inline
+  implicit class ClaimSnippetOps[Self <: ClaimSnippet] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAssetId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("assetId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAssetId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("assetId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContentType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContentType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsPartnerUploaded(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isPartnerUploaded")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsPartnerUploaded: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isPartnerUploaded")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKind(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOrigin(value: ClaimSnippetOrigin): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("origin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOrigin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("origin")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatus(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withThirdPartyClaim(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thirdPartyClaim")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutThirdPartyClaim: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thirdPartyClaim")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimeCreated(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeCreated")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimeCreated: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeCreated")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimeStatusLastModified(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeStatusLastModified")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimeStatusLastModified: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeStatusLastModified")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVideoId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("videoId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVideoId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("videoId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVideoTitle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("videoTitle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVideoTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("videoTitle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVideoViews(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("videoViews")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVideoViews: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("videoViews")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

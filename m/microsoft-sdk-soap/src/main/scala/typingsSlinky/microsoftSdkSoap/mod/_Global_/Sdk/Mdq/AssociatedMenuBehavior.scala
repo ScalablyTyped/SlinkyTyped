@@ -13,12 +13,10 @@ trait AssociatedMenuBehavior extends js.Object
 
 object AssociatedMenuBehavior {
   @scala.inline
-  def DoNotDisplay: typingsSlinky.microsoftSdkSoap.microsoftSdkSoapStrings.DoNotDisplay = this.cast("DoNotDisplay")
+  def DoNotDisplay: typingsSlinky.microsoftSdkSoap.microsoftSdkSoapStrings.DoNotDisplay = "DoNotDisplay".asInstanceOf[typingsSlinky.microsoftSdkSoap.microsoftSdkSoapStrings.DoNotDisplay]
   @scala.inline
-  def UseCollectionName: typingsSlinky.microsoftSdkSoap.microsoftSdkSoapStrings.UseCollectionName = this.cast("UseCollectionName")
+  def UseCollectionName: typingsSlinky.microsoftSdkSoap.microsoftSdkSoapStrings.UseCollectionName = "UseCollectionName".asInstanceOf[typingsSlinky.microsoftSdkSoap.microsoftSdkSoapStrings.UseCollectionName]
   @scala.inline
-  def UseLabel: typingsSlinky.microsoftSdkSoap.microsoftSdkSoapStrings.UseLabel = this.cast("UseLabel")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def UseLabel: typingsSlinky.microsoftSdkSoap.microsoftSdkSoapStrings.UseLabel = "UseLabel".asInstanceOf[typingsSlinky.microsoftSdkSoap.microsoftSdkSoapStrings.UseLabel]
 }
 

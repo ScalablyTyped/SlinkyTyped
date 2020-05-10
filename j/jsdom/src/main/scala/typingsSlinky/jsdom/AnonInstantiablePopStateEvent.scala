@@ -2,7 +2,7 @@ package typingsSlinky.jsdom
 
 import org.scalablytyped.runtime.Instantiable1
 import org.scalablytyped.runtime.Instantiable2
-import typingsSlinky.std.PopStateEvent
+import org.scalajs.dom.raw.PopStateEvent
 import typingsSlinky.std.PopStateEventInit
 import scala.scalajs.js
 import scala.scalajs.js.`|`

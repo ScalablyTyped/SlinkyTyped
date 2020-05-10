@@ -16,18 +16,16 @@ trait DataLabelsFilterOperatorValue extends js.Object
 
 object DataLabelsFilterOperatorValue {
   @scala.inline
-  def EqualssignEqualssign: typingsSlinky.highcharts.highchartsStrings.EqualssignEqualssign = this.cast("==")
+  def EqualssignEqualssign: typingsSlinky.highcharts.highchartsStrings.EqualssignEqualssign = "==".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.EqualssignEqualssign]
   @scala.inline
-  def EqualssignEqualssignEqualssign: typingsSlinky.highcharts.highchartsStrings.EqualssignEqualssignEqualssign = this.cast("===")
+  def EqualssignEqualssignEqualssign: typingsSlinky.highcharts.highchartsStrings.EqualssignEqualssignEqualssign = "===".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.EqualssignEqualssignEqualssign]
   @scala.inline
-  def Greaterthansign: typingsSlinky.highcharts.highchartsStrings.Greaterthansign = this.cast(">")
+  def Greaterthansign: typingsSlinky.highcharts.highchartsStrings.Greaterthansign = ">".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.Greaterthansign]
   @scala.inline
-  def GreaterthansignEqualssign: typingsSlinky.highcharts.highchartsStrings.GreaterthansignEqualssign = this.cast(">=")
+  def GreaterthansignEqualssign: typingsSlinky.highcharts.highchartsStrings.GreaterthansignEqualssign = ">=".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.GreaterthansignEqualssign]
   @scala.inline
-  def Lessthansign: typingsSlinky.highcharts.highchartsStrings.Lessthansign = this.cast("<")
+  def Lessthansign: typingsSlinky.highcharts.highchartsStrings.Lessthansign = "<".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.Lessthansign]
   @scala.inline
-  def LessthansignEqualssign: typingsSlinky.highcharts.highchartsStrings.LessthansignEqualssign = this.cast("<=")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def LessthansignEqualssign: typingsSlinky.highcharts.highchartsStrings.LessthansignEqualssign = "<=".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.LessthansignEqualssign]
 }
 

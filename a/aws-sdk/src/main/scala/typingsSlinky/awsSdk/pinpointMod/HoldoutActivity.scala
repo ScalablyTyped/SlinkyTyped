@@ -18,10 +18,35 @@ trait HoldoutActivity extends js.Object {
 
 object HoldoutActivity {
   @scala.inline
-  def apply(Percentage: integer, NextActivity: string = null): HoldoutActivity = {
+  def apply(Percentage: integer): HoldoutActivity = {
     val __obj = js.Dynamic.literal(Percentage = Percentage.asInstanceOf[js.Any])
-    if (NextActivity != null) __obj.updateDynamic("NextActivity")(NextActivity.asInstanceOf[js.Any])
     __obj.asInstanceOf[HoldoutActivity]
   }
+  @scala.inline
+  implicit class HoldoutActivityOps[Self <: HoldoutActivity] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPercentage(value: integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Percentage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNextActivity(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextActivity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextActivity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextActivity")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

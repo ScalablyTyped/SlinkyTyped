@@ -42,26 +42,113 @@ trait CacheNodeUpdateStatus extends js.Object {
 
 object CacheNodeUpdateStatus {
   @scala.inline
-  def apply(
-    CacheNodeId: String = null,
-    NodeDeletionDate: js.Date = null,
-    NodeUpdateEndDate: js.Date = null,
-    NodeUpdateInitiatedBy: NodeUpdateInitiatedBy = null,
-    NodeUpdateInitiatedDate: js.Date = null,
-    NodeUpdateStartDate: js.Date = null,
-    NodeUpdateStatus: NodeUpdateStatus = null,
-    NodeUpdateStatusModifiedDate: js.Date = null
-  ): CacheNodeUpdateStatus = {
+  def apply(): CacheNodeUpdateStatus = {
     val __obj = js.Dynamic.literal()
-    if (CacheNodeId != null) __obj.updateDynamic("CacheNodeId")(CacheNodeId.asInstanceOf[js.Any])
-    if (NodeDeletionDate != null) __obj.updateDynamic("NodeDeletionDate")(NodeDeletionDate.asInstanceOf[js.Any])
-    if (NodeUpdateEndDate != null) __obj.updateDynamic("NodeUpdateEndDate")(NodeUpdateEndDate.asInstanceOf[js.Any])
-    if (NodeUpdateInitiatedBy != null) __obj.updateDynamic("NodeUpdateInitiatedBy")(NodeUpdateInitiatedBy.asInstanceOf[js.Any])
-    if (NodeUpdateInitiatedDate != null) __obj.updateDynamic("NodeUpdateInitiatedDate")(NodeUpdateInitiatedDate.asInstanceOf[js.Any])
-    if (NodeUpdateStartDate != null) __obj.updateDynamic("NodeUpdateStartDate")(NodeUpdateStartDate.asInstanceOf[js.Any])
-    if (NodeUpdateStatus != null) __obj.updateDynamic("NodeUpdateStatus")(NodeUpdateStatus.asInstanceOf[js.Any])
-    if (NodeUpdateStatusModifiedDate != null) __obj.updateDynamic("NodeUpdateStatusModifiedDate")(NodeUpdateStatusModifiedDate.asInstanceOf[js.Any])
     __obj.asInstanceOf[CacheNodeUpdateStatus]
   }
+  @scala.inline
+  implicit class CacheNodeUpdateStatusOps[Self <: CacheNodeUpdateStatus] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCacheNodeId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CacheNodeId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCacheNodeId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CacheNodeId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNodeDeletionDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NodeDeletionDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNodeDeletionDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NodeDeletionDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNodeUpdateEndDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NodeUpdateEndDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNodeUpdateEndDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NodeUpdateEndDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNodeUpdateInitiatedBy(value: NodeUpdateInitiatedBy): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NodeUpdateInitiatedBy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNodeUpdateInitiatedBy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NodeUpdateInitiatedBy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNodeUpdateInitiatedDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NodeUpdateInitiatedDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNodeUpdateInitiatedDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NodeUpdateInitiatedDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNodeUpdateStartDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NodeUpdateStartDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNodeUpdateStartDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NodeUpdateStartDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNodeUpdateStatus(value: NodeUpdateStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NodeUpdateStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNodeUpdateStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NodeUpdateStatus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNodeUpdateStatusModifiedDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NodeUpdateStatusModifiedDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNodeUpdateStatusModifiedDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NodeUpdateStatusModifiedDate")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

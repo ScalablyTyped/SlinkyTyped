@@ -23,6 +23,7 @@ object mod extends js.Object {
   @js.native
   class Counter protected () extends js.Object {
     def this(initialValue: Double) = this()
+    def this(initialValue: ByteSource) = this()
     def increment(): Unit = js.native
     def setBytes(bytes: ByteSource): Unit = js.native
     def setValue(value: Double): Unit = js.native
@@ -38,8 +39,8 @@ object mod extends js.Object {
         * @param iv The cipher initialization vector.
         */
       def this(key: ByteSource, iv: ByteSource) = this()
-      def decrypt(v: ByteSource): scala.scalajs.js.typedarray.Uint8Array = js.native
-      def encrypt(v: ByteSource): scala.scalajs.js.typedarray.Uint8Array = js.native
+      def decrypt(v: ByteSource): js.typedarray.Uint8Array = js.native
+      def encrypt(v: ByteSource): js.typedarray.Uint8Array = js.native
     }
     
     @js.native
@@ -51,8 +52,8 @@ object mod extends js.Object {
         * @param segmentSize The cipher segment size.
         */
       def this(key: ByteSource, iv: ByteSource, segmentSize: Double) = this()
-      def decrypt(v: ByteSource): scala.scalajs.js.typedarray.Uint8Array = js.native
-      def encrypt(v: ByteSource): scala.scalajs.js.typedarray.Uint8Array = js.native
+      def decrypt(v: ByteSource): js.typedarray.Uint8Array = js.native
+      def encrypt(v: ByteSource): js.typedarray.Uint8Array = js.native
     }
     
     @js.native
@@ -64,8 +65,8 @@ object mod extends js.Object {
         */
       def this(key: ByteSource) = this()
       def this(key: ByteSource, counter: Counter) = this()
-      def decrypt(v: ByteSource): scala.scalajs.js.typedarray.Uint8Array = js.native
-      def encrypt(v: ByteSource): scala.scalajs.js.typedarray.Uint8Array = js.native
+      def decrypt(v: ByteSource): js.typedarray.Uint8Array = js.native
+      def encrypt(v: ByteSource): js.typedarray.Uint8Array = js.native
     }
     
     @js.native
@@ -75,8 +76,8 @@ object mod extends js.Object {
         * @param key The cipher key.
         */
       def this(key: ByteSource) = this()
-      def decrypt(v: ByteSource): scala.scalajs.js.typedarray.Uint8Array = js.native
-      def encrypt(v: ByteSource): scala.scalajs.js.typedarray.Uint8Array = js.native
+      def decrypt(v: ByteSource): js.typedarray.Uint8Array = js.native
+      def encrypt(v: ByteSource): js.typedarray.Uint8Array = js.native
     }
     
     @js.native
@@ -87,8 +88,8 @@ object mod extends js.Object {
         * @param iv The cipher initialization vector.
         */
       def this(key: ByteSource, iv: ByteSource) = this()
-      def decrypt(v: ByteSource): scala.scalajs.js.typedarray.Uint8Array = js.native
-      def encrypt(v: ByteSource): scala.scalajs.js.typedarray.Uint8Array = js.native
+      def decrypt(v: ByteSource): js.typedarray.Uint8Array = js.native
+      def encrypt(v: ByteSource): js.typedarray.Uint8Array = js.native
     }
     
     val cbc: Instantiable2[/* key */ ByteSource, /* iv */ ByteSource, ModeOfOperationCBC] = js.native
@@ -111,12 +112,12 @@ object mod extends js.Object {
         * Add standard PKCS7 padding to an array.
         * @param data The input data.
         */
-      def pad(data: ByteSource): scala.scalajs.js.typedarray.Uint8Array = js.native
+      def pad(data: ByteSource): js.typedarray.Uint8Array = js.native
       /**
         * Remove standard PKCS7 padding from an array.
         * @param data The input data.
         */
-      def strip(data: ByteSource): scala.scalajs.js.typedarray.Uint8Array = js.native
+      def strip(data: ByteSource): js.typedarray.Uint8Array = js.native
     }
     
   }
@@ -134,7 +135,7 @@ object mod extends js.Object {
         * Convert a hexadecimal string to a Uint8Array.
         * @param data The input string.
         */
-      def toBytes(data: String): scala.scalajs.js.typedarray.Uint8Array = js.native
+      def toBytes(data: String): js.typedarray.Uint8Array = js.native
     }
     
     @js.native
@@ -148,11 +149,11 @@ object mod extends js.Object {
         * Convert a UTF8 encoded string to a Uint8Array.
         * @param data The input string.
         */
-      def toBytes(data: String): scala.scalajs.js.typedarray.Uint8Array = js.native
+      def toBytes(data: String): js.typedarray.Uint8Array = js.native
     }
     
   }
   
-  type ByteSource = scala.scalajs.js.typedarray.ArrayBuffer | scala.scalajs.js.typedarray.Uint8Array | js.Array[Double]
+  type ByteSource = js.typedarray.ArrayBuffer | js.typedarray.Uint8Array | js.Array[Double]
 }
 

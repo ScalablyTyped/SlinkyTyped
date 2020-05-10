@@ -1,38 +1,55 @@
 package typingsSlinky.actionsOnGoogle.v1Mod
 
 import typingsSlinky.actionsOnGoogle.actionsOnGoogleNumbers.`2`
-import typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.facebook_
-import typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.kik_
-import typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.line_
-import typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.skype_
-import typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.slack_
-import typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.telegram_
-import typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.viber_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait DialogflowV1MessageQuickReplies
   extends DialogflowV1BaseMessage[`2`]
      with DialogflowV1Message {
-  var replies: js.UndefOr[js.Array[String]] = js.undefined
-  var title: js.UndefOr[String] = js.undefined
+  var replies: js.UndefOr[js.Array[String]] = js.native
+  var title: js.UndefOr[String] = js.native
 }
 
 object DialogflowV1MessageQuickReplies {
   @scala.inline
-  def apply(
-    platform: facebook_ | kik_ | line_ | skype_ | slack_ | telegram_ | viber_ = null,
-    replies: js.Array[String] = null,
-    title: String = null,
-    `type`: `2` = null
-  ): DialogflowV1MessageQuickReplies = {
+  def apply(): DialogflowV1MessageQuickReplies = {
     val __obj = js.Dynamic.literal()
-    if (platform != null) __obj.updateDynamic("platform")(platform.asInstanceOf[js.Any])
-    if (replies != null) __obj.updateDynamic("replies")(replies.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[DialogflowV1MessageQuickReplies]
   }
+  @scala.inline
+  implicit class DialogflowV1MessageQuickRepliesOps[Self <: DialogflowV1MessageQuickReplies] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withReplies(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("replies")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReplies: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("replies")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

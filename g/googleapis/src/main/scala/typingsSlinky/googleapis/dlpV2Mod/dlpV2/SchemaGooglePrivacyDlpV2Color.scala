@@ -25,12 +25,53 @@ trait SchemaGooglePrivacyDlpV2Color extends js.Object {
 
 object SchemaGooglePrivacyDlpV2Color {
   @scala.inline
-  def apply(blue: Int | Double = null, green: Int | Double = null, red: Int | Double = null): SchemaGooglePrivacyDlpV2Color = {
+  def apply(): SchemaGooglePrivacyDlpV2Color = {
     val __obj = js.Dynamic.literal()
-    if (blue != null) __obj.updateDynamic("blue")(blue.asInstanceOf[js.Any])
-    if (green != null) __obj.updateDynamic("green")(green.asInstanceOf[js.Any])
-    if (red != null) __obj.updateDynamic("red")(red.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGooglePrivacyDlpV2Color]
   }
+  @scala.inline
+  implicit class SchemaGooglePrivacyDlpV2ColorOps[Self <: SchemaGooglePrivacyDlpV2Color] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBlue(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("blue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBlue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("blue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGreen(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("green")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGreen: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("green")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRed(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("red")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRed: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("red")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

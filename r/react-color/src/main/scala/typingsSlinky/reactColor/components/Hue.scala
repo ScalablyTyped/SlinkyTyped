@@ -1,15 +1,17 @@
 package typingsSlinky.reactColor.components
 
+import typingsSlinky.reactColor.hueHueMod.HuePickerProps
 import typingsSlinky.reactColor.hueHueMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Hue extends SharedApply_HuePickerProps_628931521[default] {
+object Hue {
   @JSImport("react-color/lib/components/hue/Hue", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: HuePickerProps): SharedBuilder_HuePickerProps_222923074[default] = new SharedBuilder_HuePickerProps_222923074[default](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Hue.type): SharedBuilder_HuePickerProps_222923074[default] = new SharedBuilder_HuePickerProps_222923074[default](js.Array(this.component, js.Dictionary.empty))()
 }
 

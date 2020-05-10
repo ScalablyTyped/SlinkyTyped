@@ -13,5 +13,6 @@ trait HTMLMenuElement extends HTMLElement {
 
 @JSGlobal("HTMLMenuElement")
 @js.native
-object HTMLMenuElement extends Instantiable0[HTMLMenuElement]
+object HTMLMenuElement
+  extends Instantiable0[org.scalajs.dom.raw.HTMLMenuElement]
 

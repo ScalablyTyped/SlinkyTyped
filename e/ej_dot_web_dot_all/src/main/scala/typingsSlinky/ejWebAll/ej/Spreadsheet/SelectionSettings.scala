@@ -4,44 +4,102 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SelectionSettings extends js.Object {
   /** Gets or sets a value that indicates to define active cell in spreadsheet.
     */
-  var activeCell: js.UndefOr[String] = js.undefined
+  var activeCell: js.UndefOr[String] = js.native
   /** Gets or sets a value that indicates to define animation time while selection in the Spreadsheet.
     * @Default {0.001}
     */
-  var animationTime: js.UndefOr[Double] = js.undefined
+  var animationTime: js.UndefOr[Double] = js.native
   /** Gets or sets a value that indicates to enable or disable animation while selection.
     * @Default {false}
     */
-  var enableAnimation: js.UndefOr[Boolean] = js.undefined
+  var enableAnimation: js.UndefOr[Boolean] = js.native
   /** Gets or sets a value that indicates to set selection type in Spreadsheet. It has three types which are Column, Row and Default.
     * @Default {ej.Spreadsheet.SelectionType.Default}
     */
-  var selectionType: js.UndefOr[SelectionType | String] = js.undefined
+  var selectionType: js.UndefOr[SelectionType | String] = js.native
   /** Gets or sets a value that indicates to set selection unit in Spreadsheet. It has three types which are Single, Range and MultiRange.
     * @Default {ej.Spreadsheet.SelectionUnit.MultiRange}
     */
-  var selectionUnit: js.UndefOr[SelectionUnit | String] = js.undefined
+  var selectionUnit: js.UndefOr[SelectionUnit | String] = js.native
 }
 
 object SelectionSettings {
   @scala.inline
-  def apply(
-    activeCell: String = null,
-    animationTime: Int | Double = null,
-    enableAnimation: js.UndefOr[Boolean] = js.undefined,
-    selectionType: SelectionType | String = null,
-    selectionUnit: SelectionUnit | String = null
-  ): SelectionSettings = {
+  def apply(): SelectionSettings = {
     val __obj = js.Dynamic.literal()
-    if (activeCell != null) __obj.updateDynamic("activeCell")(activeCell.asInstanceOf[js.Any])
-    if (animationTime != null) __obj.updateDynamic("animationTime")(animationTime.asInstanceOf[js.Any])
-    if (!js.isUndefined(enableAnimation)) __obj.updateDynamic("enableAnimation")(enableAnimation.asInstanceOf[js.Any])
-    if (selectionType != null) __obj.updateDynamic("selectionType")(selectionType.asInstanceOf[js.Any])
-    if (selectionUnit != null) __obj.updateDynamic("selectionUnit")(selectionUnit.asInstanceOf[js.Any])
     __obj.asInstanceOf[SelectionSettings]
   }
+  @scala.inline
+  implicit class SelectionSettingsOps[Self <: SelectionSettings] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withActiveCell(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("activeCell")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutActiveCell: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("activeCell")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAnimationTime(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimationTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnableAnimation(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableAnimation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnableAnimation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableAnimation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelectionType(value: SelectionType | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelectionType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelectionUnit(value: SelectionUnit | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionUnit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelectionUnit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionUnit")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -4,18 +4,49 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait InsertPageBreakRequest extends js.Object {
-  var endOfSegmentLocation: js.UndefOr[EndOfSegmentLocation] = js.undefined
-  var location: js.UndefOr[Location] = js.undefined
+  var endOfSegmentLocation: js.UndefOr[EndOfSegmentLocation] = js.native
+  var location: js.UndefOr[Location] = js.native
 }
 
 object InsertPageBreakRequest {
   @scala.inline
-  def apply(endOfSegmentLocation: EndOfSegmentLocation = null, location: Location = null): InsertPageBreakRequest = {
+  def apply(): InsertPageBreakRequest = {
     val __obj = js.Dynamic.literal()
-    if (endOfSegmentLocation != null) __obj.updateDynamic("endOfSegmentLocation")(endOfSegmentLocation.asInstanceOf[js.Any])
-    if (location != null) __obj.updateDynamic("location")(location.asInstanceOf[js.Any])
     __obj.asInstanceOf[InsertPageBreakRequest]
   }
+  @scala.inline
+  implicit class InsertPageBreakRequestOps[Self <: InsertPageBreakRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEndOfSegmentLocation(value: EndOfSegmentLocation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endOfSegmentLocation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEndOfSegmentLocation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endOfSegmentLocation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocation(value: Location): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

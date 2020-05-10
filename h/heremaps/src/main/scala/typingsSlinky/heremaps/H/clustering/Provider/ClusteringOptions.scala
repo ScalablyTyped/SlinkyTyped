@@ -13,27 +13,75 @@ import scala.scalajs.js.annotation._
   * @property projection {H.geo.IProjection=} - projection to use for clustering, default is H.geo.mercator
   * @property strategy {H.clustering.Provider.Strategy=} - clustering stretegy, defaults to H.clustering.Provider.Strategy.FASTGRID
   */
+@js.native
 trait ClusteringOptions extends js.Object {
-  var eps: js.UndefOr[Double] = js.undefined
-  var minWeight: js.UndefOr[Double] = js.undefined
-  var projection: js.UndefOr[IProjection] = js.undefined
-  var strategy: js.UndefOr[Strategy] = js.undefined
+  var eps: js.UndefOr[Double] = js.native
+  var minWeight: js.UndefOr[Double] = js.native
+  var projection: js.UndefOr[IProjection] = js.native
+  var strategy: js.UndefOr[Strategy] = js.native
 }
 
 object ClusteringOptions {
   @scala.inline
-  def apply(
-    eps: Int | Double = null,
-    minWeight: Int | Double = null,
-    projection: IProjection = null,
-    strategy: Strategy = null
-  ): ClusteringOptions = {
+  def apply(): ClusteringOptions = {
     val __obj = js.Dynamic.literal()
-    if (eps != null) __obj.updateDynamic("eps")(eps.asInstanceOf[js.Any])
-    if (minWeight != null) __obj.updateDynamic("minWeight")(minWeight.asInstanceOf[js.Any])
-    if (projection != null) __obj.updateDynamic("projection")(projection.asInstanceOf[js.Any])
-    if (strategy != null) __obj.updateDynamic("strategy")(strategy.asInstanceOf[js.Any])
     __obj.asInstanceOf[ClusteringOptions]
   }
+  @scala.inline
+  implicit class ClusteringOptionsOps[Self <: ClusteringOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEps(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("eps")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEps: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("eps")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinWeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minWeight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinWeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minWeight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProjection(value: IProjection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("projection")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProjection: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("projection")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStrategy(value: Strategy): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strategy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStrategy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strategy")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

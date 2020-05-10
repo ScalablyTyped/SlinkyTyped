@@ -12,5 +12,6 @@ import scala.scalajs.js.annotation._
   * And some other stuff that we tend to pull in all the time anyway
   * 
   */
+@js.native
 trait dijit extends js.Object
 

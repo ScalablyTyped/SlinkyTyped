@@ -18,10 +18,29 @@ trait SchemaAsymmetricDecryptRequest extends js.Object {
 
 object SchemaAsymmetricDecryptRequest {
   @scala.inline
-  def apply(ciphertext: String = null): SchemaAsymmetricDecryptRequest = {
+  def apply(): SchemaAsymmetricDecryptRequest = {
     val __obj = js.Dynamic.literal()
-    if (ciphertext != null) __obj.updateDynamic("ciphertext")(ciphertext.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAsymmetricDecryptRequest]
   }
+  @scala.inline
+  implicit class SchemaAsymmetricDecryptRequestOps[Self <: SchemaAsymmetricDecryptRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCiphertext(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ciphertext")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCiphertext: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ciphertext")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -6,55 +6,56 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait TypeofbrowsingData extends js.Object {
   /**
     * Clears various types of browsing data stored in a user's profile.
     * @param dataToRemove The set of data types to remove.
     */
-  def remove(options: RemovalOptions, dataToRemove: DataTypeSet): js.Promise[Unit]
+  def remove(options: RemovalOptions, dataToRemove: DataTypeSet): js.Promise[Unit] = js.native
   /**
     * Clears websites' appcache data.
     * @deprecated Unsupported on Firefox at this time.
     */
-  def removeAppcache(options: RemovalOptions): js.Promise[Unit]
+  def removeAppcache(options: RemovalOptions): js.Promise[Unit] = js.native
   /** Clears the browser's cache. */
-  def removeCache(options: RemovalOptions): js.Promise[Unit]
+  def removeCache(options: RemovalOptions): js.Promise[Unit] = js.native
   /** Clears the browser's cookies and server-bound certificates modified within a particular timeframe. */
-  def removeCookies(options: RemovalOptions): js.Promise[Unit]
+  def removeCookies(options: RemovalOptions): js.Promise[Unit] = js.native
   /** Clears the browser's list of downloaded files (_not_ the downloaded files themselves). */
-  def removeDownloads(options: RemovalOptions): js.Promise[Unit]
+  def removeDownloads(options: RemovalOptions): js.Promise[Unit] = js.native
   /**
     * Clears websites' file system data.
     * @deprecated Unsupported on Firefox at this time.
     */
-  def removeFileSystems(options: RemovalOptions): js.Promise[Unit]
+  def removeFileSystems(options: RemovalOptions): js.Promise[Unit] = js.native
   /** Clears the browser's stored form data (autofill). */
-  def removeFormData(options: RemovalOptions): js.Promise[Unit]
+  def removeFormData(options: RemovalOptions): js.Promise[Unit] = js.native
   /** Clears the browser's history. */
-  def removeHistory(options: RemovalOptions): js.Promise[Unit]
+  def removeHistory(options: RemovalOptions): js.Promise[Unit] = js.native
   /**
     * Clears websites' IndexedDB data.
     * @deprecated Unsupported on Firefox at this time.
     */
-  def removeIndexedDB(options: RemovalOptions): js.Promise[Unit]
+  def removeIndexedDB(options: RemovalOptions): js.Promise[Unit] = js.native
   /** Clears websites' local storage data. */
-  def removeLocalStorage(options: RemovalOptions): js.Promise[Unit]
+  def removeLocalStorage(options: RemovalOptions): js.Promise[Unit] = js.native
   /** Clears the browser's stored passwords. */
-  def removePasswords(options: RemovalOptions): js.Promise[Unit]
+  def removePasswords(options: RemovalOptions): js.Promise[Unit] = js.native
   /** Clears plugins' data. */
-  def removePluginData(options: RemovalOptions): js.Promise[Unit]
+  def removePluginData(options: RemovalOptions): js.Promise[Unit] = js.native
   /**
     * Clears websites' WebSQL data.
     * @deprecated Unsupported on Firefox at this time.
     */
-  def removeWebSQL(options: RemovalOptions): js.Promise[Unit]
+  def removeWebSQL(options: RemovalOptions): js.Promise[Unit] = js.native
   /* browsingData functions */
   /**
     * Reports which types of data are currently selected in the 'Clear browsing data' settings UI. Note: some of the
     * data types included in this API are not available in the settings UI, and some UI settings control more than one
     * data type listed here.
     */
-  def settings(): js.Promise[AnonDataRemovalPermitted]
+  def settings(): js.Promise[AnonDataRemovalPermitted] = js.native
 }
 
 object TypeofbrowsingData {
@@ -76,8 +77,99 @@ object TypeofbrowsingData {
     settings: () => js.Promise[AnonDataRemovalPermitted]
   ): TypeofbrowsingData = {
     val __obj = js.Dynamic.literal(remove = js.Any.fromFunction2(remove), removeAppcache = js.Any.fromFunction1(removeAppcache), removeCache = js.Any.fromFunction1(removeCache), removeCookies = js.Any.fromFunction1(removeCookies), removeDownloads = js.Any.fromFunction1(removeDownloads), removeFileSystems = js.Any.fromFunction1(removeFileSystems), removeFormData = js.Any.fromFunction1(removeFormData), removeHistory = js.Any.fromFunction1(removeHistory), removeIndexedDB = js.Any.fromFunction1(removeIndexedDB), removeLocalStorage = js.Any.fromFunction1(removeLocalStorage), removePasswords = js.Any.fromFunction1(removePasswords), removePluginData = js.Any.fromFunction1(removePluginData), removeWebSQL = js.Any.fromFunction1(removeWebSQL), settings = js.Any.fromFunction0(settings))
-  
     __obj.asInstanceOf[TypeofbrowsingData]
   }
+  @scala.inline
+  implicit class TypeofbrowsingDataOps[Self <: TypeofbrowsingData] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRemove(value: (RemovalOptions, DataTypeSet) => js.Promise[Unit]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("remove")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withRemoveAppcache(value: RemovalOptions => js.Promise[Unit]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeAppcache")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withRemoveCache(value: RemovalOptions => js.Promise[Unit]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeCache")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withRemoveCookies(value: RemovalOptions => js.Promise[Unit]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeCookies")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withRemoveDownloads(value: RemovalOptions => js.Promise[Unit]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeDownloads")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withRemoveFileSystems(value: RemovalOptions => js.Promise[Unit]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeFileSystems")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withRemoveFormData(value: RemovalOptions => js.Promise[Unit]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeFormData")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withRemoveHistory(value: RemovalOptions => js.Promise[Unit]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeHistory")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withRemoveIndexedDB(value: RemovalOptions => js.Promise[Unit]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeIndexedDB")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withRemoveLocalStorage(value: RemovalOptions => js.Promise[Unit]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeLocalStorage")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withRemovePasswords(value: RemovalOptions => js.Promise[Unit]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removePasswords")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withRemovePluginData(value: RemovalOptions => js.Promise[Unit]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removePluginData")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withRemoveWebSQL(value: RemovalOptions => js.Promise[Unit]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeWebSQL")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSettings(value: () => js.Promise[AnonDataRemovalPermitted]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("settings")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

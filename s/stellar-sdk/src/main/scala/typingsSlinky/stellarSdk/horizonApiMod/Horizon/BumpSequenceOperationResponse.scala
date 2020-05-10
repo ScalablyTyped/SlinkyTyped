@@ -1,16 +1,18 @@
 package typingsSlinky.stellarSdk.horizonApiMod.Horizon
 
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.stellarSdk.horizonApiMod.Horizon.OperationResponseType.bumpSequence
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait BumpSequenceOperationResponse
   extends BaseOperationResponse[
       bumpSequence, 
       typingsSlinky.stellarSdk.horizonApiMod.Horizon.OperationResponseTypeI.bumpSequence
     ] {
-  var bump_to: String
+  var bump_to: String = js.native
 }
 
 object BumpSequenceOperationResponse {
@@ -18,7 +20,7 @@ object BumpSequenceOperationResponse {
   def apply(
     _links: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ key in T | 'self' ]: stellar-sdk.stellar-sdk/lib/horizon_api.Horizon.ResponseLink}
-    */ typingsSlinky.stellarSdk.stellarSdkStrings.BaseResponse with js.Any,
+    */ typingsSlinky.stellarSdk.stellarSdkStrings.BaseResponse with TopLevel[js.Any],
     bump_to: String,
     created_at: String,
     id: String,
@@ -32,5 +34,19 @@ object BumpSequenceOperationResponse {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[BumpSequenceOperationResponse]
   }
+  @scala.inline
+  implicit class BumpSequenceOperationResponseOps[Self <: BumpSequenceOperationResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBump_to(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bump_to")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

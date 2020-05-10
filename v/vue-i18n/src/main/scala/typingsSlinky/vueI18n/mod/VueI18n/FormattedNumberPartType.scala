@@ -21,28 +21,26 @@ trait FormattedNumberPartType extends js.Object
 
 object FormattedNumberPartType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def currency: typingsSlinky.vueI18n.vueI18nStrings.currency = "currency".asInstanceOf[typingsSlinky.vueI18n.vueI18nStrings.currency]
   @scala.inline
-  def currency: typingsSlinky.vueI18n.vueI18nStrings.currency = this.cast("currency")
+  def decimal: typingsSlinky.vueI18n.vueI18nStrings.decimal = "decimal".asInstanceOf[typingsSlinky.vueI18n.vueI18nStrings.decimal]
   @scala.inline
-  def decimal: typingsSlinky.vueI18n.vueI18nStrings.decimal = this.cast("decimal")
+  def fraction: typingsSlinky.vueI18n.vueI18nStrings.fraction = "fraction".asInstanceOf[typingsSlinky.vueI18n.vueI18nStrings.fraction]
   @scala.inline
-  def fraction: typingsSlinky.vueI18n.vueI18nStrings.fraction = this.cast("fraction")
+  def group: typingsSlinky.vueI18n.vueI18nStrings.group = "group".asInstanceOf[typingsSlinky.vueI18n.vueI18nStrings.group]
   @scala.inline
-  def group: typingsSlinky.vueI18n.vueI18nStrings.group = this.cast("group")
+  def infinity: typingsSlinky.vueI18n.vueI18nStrings.infinity = "infinity".asInstanceOf[typingsSlinky.vueI18n.vueI18nStrings.infinity]
   @scala.inline
-  def infinity: typingsSlinky.vueI18n.vueI18nStrings.infinity = this.cast("infinity")
+  def integer: typingsSlinky.vueI18n.vueI18nStrings.integer = "integer".asInstanceOf[typingsSlinky.vueI18n.vueI18nStrings.integer]
   @scala.inline
-  def integer: typingsSlinky.vueI18n.vueI18nStrings.integer = this.cast("integer")
+  def literal: typingsSlinky.vueI18n.vueI18nStrings.literal = "literal".asInstanceOf[typingsSlinky.vueI18n.vueI18nStrings.literal]
   @scala.inline
-  def literal: typingsSlinky.vueI18n.vueI18nStrings.literal = this.cast("literal")
+  def minusSign: typingsSlinky.vueI18n.vueI18nStrings.minusSign = "minusSign".asInstanceOf[typingsSlinky.vueI18n.vueI18nStrings.minusSign]
   @scala.inline
-  def minusSign: typingsSlinky.vueI18n.vueI18nStrings.minusSign = this.cast("minusSign")
+  def nan: typingsSlinky.vueI18n.vueI18nStrings.nan = "nan".asInstanceOf[typingsSlinky.vueI18n.vueI18nStrings.nan]
   @scala.inline
-  def nan: typingsSlinky.vueI18n.vueI18nStrings.nan = this.cast("nan")
+  def percentSign: typingsSlinky.vueI18n.vueI18nStrings.percentSign = "percentSign".asInstanceOf[typingsSlinky.vueI18n.vueI18nStrings.percentSign]
   @scala.inline
-  def percentSign: typingsSlinky.vueI18n.vueI18nStrings.percentSign = this.cast("percentSign")
-  @scala.inline
-  def plusSign: typingsSlinky.vueI18n.vueI18nStrings.plusSign = this.cast("plusSign")
+  def plusSign: typingsSlinky.vueI18n.vueI18nStrings.plusSign = "plusSign".asInstanceOf[typingsSlinky.vueI18n.vueI18nStrings.plusSign]
 }
 

@@ -4,16 +4,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ISensorRotationMatrix extends js.Object {
-  var m11: Double
-  var m12: Double
-  var m13: Double
-  var m21: Double
-  var m22: Double
-  var m23: Double
-  var m31: Double
-  var m32: Double
-  var m33: Double
+  var m11: Double = js.native
+  var m12: Double = js.native
+  var m13: Double = js.native
+  var m21: Double = js.native
+  var m22: Double = js.native
+  var m23: Double = js.native
+  var m31: Double = js.native
+  var m32: Double = js.native
+  var m33: Double = js.native
 }
 
 object ISensorRotationMatrix {
@@ -30,8 +31,69 @@ object ISensorRotationMatrix {
     m33: Double
   ): ISensorRotationMatrix = {
     val __obj = js.Dynamic.literal(m11 = m11.asInstanceOf[js.Any], m12 = m12.asInstanceOf[js.Any], m13 = m13.asInstanceOf[js.Any], m21 = m21.asInstanceOf[js.Any], m22 = m22.asInstanceOf[js.Any], m23 = m23.asInstanceOf[js.Any], m31 = m31.asInstanceOf[js.Any], m32 = m32.asInstanceOf[js.Any], m33 = m33.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[ISensorRotationMatrix]
   }
+  @scala.inline
+  implicit class ISensorRotationMatrixOps[Self <: ISensorRotationMatrix] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withM11(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("m11")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withM12(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("m12")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withM13(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("m13")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withM21(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("m21")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withM22(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("m22")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withM23(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("m23")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withM31(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("m31")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withM32(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("m32")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withM33(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("m33")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -11,10 +11,29 @@ trait DeleteDomainResponse extends js.Object {
 
 object DeleteDomainResponse {
   @scala.inline
-  def apply(DomainStatus: DomainStatus = null): DeleteDomainResponse = {
+  def apply(): DeleteDomainResponse = {
     val __obj = js.Dynamic.literal()
-    if (DomainStatus != null) __obj.updateDynamic("DomainStatus")(DomainStatus.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeleteDomainResponse]
   }
+  @scala.inline
+  implicit class DeleteDomainResponseOps[Self <: DeleteDomainResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDomainStatus(value: DomainStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DomainStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDomainStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DomainStatus")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

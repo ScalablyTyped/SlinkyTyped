@@ -38,21 +38,83 @@ trait PutSessionRequest extends js.Object {
 
 object PutSessionRequest {
   @scala.inline
-  def apply(
-    botAlias: BotAlias,
-    botName: BotName,
-    userId: UserId,
-    accept: Accept = null,
-    dialogAction: DialogAction = null,
-    recentIntentSummaryView: IntentSummaryList = null,
-    sessionAttributes: StringMap = null
-  ): PutSessionRequest = {
+  def apply(botAlias: BotAlias, botName: BotName, userId: UserId): PutSessionRequest = {
     val __obj = js.Dynamic.literal(botAlias = botAlias.asInstanceOf[js.Any], botName = botName.asInstanceOf[js.Any], userId = userId.asInstanceOf[js.Any])
-    if (accept != null) __obj.updateDynamic("accept")(accept.asInstanceOf[js.Any])
-    if (dialogAction != null) __obj.updateDynamic("dialogAction")(dialogAction.asInstanceOf[js.Any])
-    if (recentIntentSummaryView != null) __obj.updateDynamic("recentIntentSummaryView")(recentIntentSummaryView.asInstanceOf[js.Any])
-    if (sessionAttributes != null) __obj.updateDynamic("sessionAttributes")(sessionAttributes.asInstanceOf[js.Any])
     __obj.asInstanceOf[PutSessionRequest]
   }
+  @scala.inline
+  implicit class PutSessionRequestOps[Self <: PutSessionRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBotAlias(value: BotAlias): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("botAlias")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBotName(value: BotName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("botName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUserId(value: UserId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAccept(value: Accept): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accept")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccept: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accept")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDialogAction(value: DialogAction): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dialogAction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDialogAction: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dialogAction")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRecentIntentSummaryView(value: IntentSummaryList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("recentIntentSummaryView")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRecentIntentSummaryView: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("recentIntentSummaryView")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSessionAttributes(value: StringMap): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sessionAttributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSessionAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sessionAttributes")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

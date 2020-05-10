@@ -2,7 +2,6 @@ package typingsSlinky.react.mod
 
 import typingsSlinky.react.reactStrings.backwards
 import typingsSlinky.react.reactStrings.forwards
-import typingsSlinky.std.Exclude
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,23 +16,14 @@ object SuspenseListProps {
   @scala.inline
   def DirectionalSuspenseListProps(
     children: slinky.core.facade.ReactElement | js.Iterable[slinky.core.facade.ReactElement],
-    revealOrder: forwards | backwards,
-    tail: typingsSlinky.react.experimentalMod.reactAugmentingMod.SuspenseListTailMode = null
+    revealOrder: forwards | backwards
   ): SuspenseListProps = {
     val __obj = js.Dynamic.literal(children = children.asInstanceOf[js.Any], revealOrder = revealOrder.asInstanceOf[js.Any])
-    if (tail != null) __obj.updateDynamic("tail")(tail.asInstanceOf[js.Any])
     __obj.asInstanceOf[SuspenseListProps]
   }
   @scala.inline
-  def NonDirectionalSuspenseListProps(
-    children: slinky.core.facade.ReactElement | js.Iterable[slinky.core.facade.ReactElement],
-    revealOrder: Exclude[
-      typingsSlinky.react.experimentalMod.reactAugmentingMod.SuspenseListRevealOrder, 
-      forwards | backwards
-    ] = null
-  ): SuspenseListProps = {
+  def NonDirectionalSuspenseListProps(children: slinky.core.facade.ReactElement | js.Iterable[slinky.core.facade.ReactElement]): SuspenseListProps = {
     val __obj = js.Dynamic.literal(children = children.asInstanceOf[js.Any])
-    if (revealOrder != null) __obj.updateDynamic("revealOrder")(revealOrder.asInstanceOf[js.Any])
     __obj.asInstanceOf[SuspenseListProps]
   }
 }

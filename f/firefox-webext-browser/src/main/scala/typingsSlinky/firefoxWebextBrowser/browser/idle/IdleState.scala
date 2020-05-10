@@ -13,10 +13,8 @@ trait IdleState extends js.Object
 
 object IdleState {
   @scala.inline
-  def active: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.active = this.cast("active")
+  def active: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.active = "active".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.active]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
-  @scala.inline
-  def idle: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.idle = this.cast("idle")
+  def idle: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.idle = "idle".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.idle]
 }
 

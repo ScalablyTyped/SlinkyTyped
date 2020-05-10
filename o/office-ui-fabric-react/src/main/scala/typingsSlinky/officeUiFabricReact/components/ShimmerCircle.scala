@@ -1,14 +1,16 @@
 package typingsSlinky.officeUiFabricReact.components
 
+import typingsSlinky.officeUiFabricReact.shimmerCircleTypesMod.IShimmerCircleProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ShimmerCircle extends SharedApply_IShimmerCircleProps_1696550858 {
+object ShimmerCircle {
   @JSImport("office-ui-fabric-react", "ShimmerCircle")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: IShimmerCircleProps): SharedBuilder_IShimmerCircleProps176458435 = new SharedBuilder_IShimmerCircleProps176458435(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: ShimmerCircle.type): SharedBuilder_IShimmerCircleProps176458435 = new SharedBuilder_IShimmerCircleProps176458435(js.Array(this.component, js.Dictionary.empty))()
 }
 

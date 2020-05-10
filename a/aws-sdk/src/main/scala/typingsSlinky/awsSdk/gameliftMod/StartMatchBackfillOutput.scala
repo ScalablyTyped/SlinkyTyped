@@ -14,10 +14,29 @@ trait StartMatchBackfillOutput extends js.Object {
 
 object StartMatchBackfillOutput {
   @scala.inline
-  def apply(MatchmakingTicket: MatchmakingTicket = null): StartMatchBackfillOutput = {
+  def apply(): StartMatchBackfillOutput = {
     val __obj = js.Dynamic.literal()
-    if (MatchmakingTicket != null) __obj.updateDynamic("MatchmakingTicket")(MatchmakingTicket.asInstanceOf[js.Any])
     __obj.asInstanceOf[StartMatchBackfillOutput]
   }
+  @scala.inline
+  implicit class StartMatchBackfillOutputOps[Self <: StartMatchBackfillOutput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMatchmakingTicket(value: MatchmakingTicket): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MatchmakingTicket")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMatchmakingTicket: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MatchmakingTicket")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,37 +1,31 @@
 package typingsSlinky.reactInspector.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactInspector.mod.InspectorTheme
 import typingsSlinky.reactInspector.mod.TableInspectorProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object TableInspector
-  extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+object TableInspector {
   @JSImport("react-inspector", "TableInspector")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    columns: js.Array[String] = null,
-    data: js.Any = null,
-    theme: InspectorTheme = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, js.Object] = {
-    val __obj = js.Dynamic.literal()
-    if (columns != null) __obj.updateDynamic("columns")(columns.asInstanceOf[js.Any])
-    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
-    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, js.Object] {
+    @scala.inline
+    def columns(value: js.Array[String]): this.type = set("columns", value.asInstanceOf[js.Any])
+    @scala.inline
+    def data(value: js.Any): this.type = set("data", value.asInstanceOf[js.Any])
+    @scala.inline
+    def theme(value: InspectorTheme): this.type = set("theme", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, js.Object] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, js.Object](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = TableInspectorProps
+  
+  def withProps(p: TableInspectorProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: TableInspector.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

@@ -39,7 +39,7 @@ trait DropboxFileSystem
     * Returns a BrowserFS object representing the type of a Dropbox.js stat object
     */
   def _statType(stat: Stat): FileType = js.native
-  def _writeFileStrict(p: String, data: scala.scalajs.js.typedarray.ArrayBuffer, cb: BFSCallback[Stat]): Unit = js.native
+  def _writeFileStrict(p: String, data: js.typedarray.ArrayBuffer, cb: BFSCallback[Stat]): Unit = js.native
   /* InferMemberOverrides */
   override def chmod(p: String, isLchmod: Boolean, mode: Double, cb: BFSOneArgCallback): Unit = js.native
   /* InferMemberOverrides */

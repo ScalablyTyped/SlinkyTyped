@@ -1,8 +1,5 @@
 package typingsSlinky.fibjs
 
-import typingsSlinky.fibjs.fibjsNumbers.`10`
-import typingsSlinky.fibjs.fibjsNumbers.`1`
-import typingsSlinky.fibjs.fibjsNumbers.`2`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -27,10 +24,10 @@ object netMod extends js.Object {
   @js.native
   class Url () extends ClassUrlObject
   
-  val AF_INET: `2` = js.native
-  val AF_INET6: `10` = js.native
-  val SOCK_DGRAM: `2` = js.native
-  val SOCK_STREAM: `1` = js.native
+  val AF_INET: /* 2 */ Double = js.native
+  val AF_INET6: /* 10 */ Double = js.native
+  val SOCK_DGRAM: /* 2 */ Double = js.native
+  val SOCK_STREAM: /* 1 */ Double = js.native
   def backend(): String = js.native
   def connect(url: String): ClassStream = js.native
   def connect(url: String, timeout: Double): ClassStream = js.native

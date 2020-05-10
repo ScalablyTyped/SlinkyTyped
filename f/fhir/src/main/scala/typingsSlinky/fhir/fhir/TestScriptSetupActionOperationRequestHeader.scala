@@ -7,49 +7,75 @@ import scala.scalajs.js.annotation._
 /**
   * Each operation can have one or more header elements
   */
+@js.native
 trait TestScriptSetupActionOperationRequestHeader extends BackboneElement {
   /**
     * Contains extended information for property 'field'.
     */
-  var _field: js.UndefOr[Element] = js.undefined
+  var _field: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'value'.
     */
-  var _value: js.UndefOr[Element] = js.undefined
+  var _value: js.UndefOr[Element] = js.native
   /**
     * HTTP header field name
     */
-  var field: String
+  var field: String = js.native
   /**
     * HTTP headerfield value
     */
-  var value: String
+  var value: String = js.native
 }
 
 object TestScriptSetupActionOperationRequestHeader {
   @scala.inline
-  def apply(
-    field: String,
-    value: String,
-    _fhir_comments: js.Array[Element] = null,
-    _field: Element = null,
-    _id: Element = null,
-    _value: Element = null,
-    extension: js.Array[Extension] = null,
-    fhir_comments: js.Array[String] = null,
-    id: String = null,
-    modifierExtension: js.Array[Extension] = null
-  ): TestScriptSetupActionOperationRequestHeader = {
+  def apply(field: String, value: String): TestScriptSetupActionOperationRequestHeader = {
     val __obj = js.Dynamic.literal(field = field.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
-    if (_fhir_comments != null) __obj.updateDynamic("_fhir_comments")(_fhir_comments.asInstanceOf[js.Any])
-    if (_field != null) __obj.updateDynamic("_field")(_field.asInstanceOf[js.Any])
-    if (_id != null) __obj.updateDynamic("_id")(_id.asInstanceOf[js.Any])
-    if (_value != null) __obj.updateDynamic("_value")(_value.asInstanceOf[js.Any])
-    if (extension != null) __obj.updateDynamic("extension")(extension.asInstanceOf[js.Any])
-    if (fhir_comments != null) __obj.updateDynamic("fhir_comments")(fhir_comments.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (modifierExtension != null) __obj.updateDynamic("modifierExtension")(modifierExtension.asInstanceOf[js.Any])
     __obj.asInstanceOf[TestScriptSetupActionOperationRequestHeader]
   }
+  @scala.inline
+  implicit class TestScriptSetupActionOperationRequestHeaderOps[Self <: TestScriptSetupActionOperationRequestHeader] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withField(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("field")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withValue(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_field(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_field")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_field: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_field")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_value(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_value")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_value: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_value")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

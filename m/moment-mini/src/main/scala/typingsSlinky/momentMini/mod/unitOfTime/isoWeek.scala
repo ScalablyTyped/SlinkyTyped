@@ -13,12 +13,10 @@ trait isoWeek extends js.Object
 
 object isoWeek {
   @scala.inline
-  def W: typingsSlinky.momentMini.momentMiniStrings.W = this.cast("W")
+  def W: typingsSlinky.momentMini.momentMiniStrings.W = "W".asInstanceOf[typingsSlinky.momentMini.momentMiniStrings.W]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def isoWeek: typingsSlinky.momentMini.momentMiniStrings.isoWeek = "isoWeek".asInstanceOf[typingsSlinky.momentMini.momentMiniStrings.isoWeek]
   @scala.inline
-  def isoWeek: typingsSlinky.momentMini.momentMiniStrings.isoWeek = this.cast("isoWeek")
-  @scala.inline
-  def isoWeeks: typingsSlinky.momentMini.momentMiniStrings.isoWeeks = this.cast("isoWeeks")
+  def isoWeeks: typingsSlinky.momentMini.momentMiniStrings.isoWeeks = "isoWeeks".asInstanceOf[typingsSlinky.momentMini.momentMiniStrings.isoWeeks]
 }
 

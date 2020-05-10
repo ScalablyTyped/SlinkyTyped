@@ -21,28 +21,26 @@ trait ListTypes extends js.Object
 
 object ListTypes {
   @scala.inline
-  def BookmarkList: typingsSlinky.qlik.qlikStrings.BookmarkList = this.cast("BookmarkList")
+  def BookmarkList: typingsSlinky.qlik.qlikStrings.BookmarkList = "BookmarkList".asInstanceOf[typingsSlinky.qlik.qlikStrings.BookmarkList]
   @scala.inline
-  def DimensionList: typingsSlinky.qlik.qlikStrings.DimensionList = this.cast("DimensionList")
+  def DimensionList: typingsSlinky.qlik.qlikStrings.DimensionList = "DimensionList".asInstanceOf[typingsSlinky.qlik.qlikStrings.DimensionList]
   @scala.inline
-  def FieldList: typingsSlinky.qlik.qlikStrings.FieldList = this.cast("FieldList")
+  def FieldList: typingsSlinky.qlik.qlikStrings.FieldList = "FieldList".asInstanceOf[typingsSlinky.qlik.qlikStrings.FieldList]
   @scala.inline
-  def Materobject: typingsSlinky.qlik.qlikStrings.Materobject = this.cast("Materobject")
+  def Materobject: typingsSlinky.qlik.qlikStrings.Materobject = "Materobject".asInstanceOf[typingsSlinky.qlik.qlikStrings.Materobject]
   @scala.inline
-  def MeasureList: typingsSlinky.qlik.qlikStrings.MeasureList = this.cast("MeasureList")
+  def MeasureList: typingsSlinky.qlik.qlikStrings.MeasureList = "MeasureList".asInstanceOf[typingsSlinky.qlik.qlikStrings.MeasureList]
   @scala.inline
-  def MediaList: typingsSlinky.qlik.qlikStrings.MediaList = this.cast("MediaList")
+  def MediaList: typingsSlinky.qlik.qlikStrings.MediaList = "MediaList".asInstanceOf[typingsSlinky.qlik.qlikStrings.MediaList]
   @scala.inline
-  def Selectionobject: typingsSlinky.qlik.qlikStrings.Selectionobject = this.cast("Selectionobject")
+  def Selectionobject: typingsSlinky.qlik.qlikStrings.Selectionobject = "Selectionobject".asInstanceOf[typingsSlinky.qlik.qlikStrings.Selectionobject]
   @scala.inline
-  def SnapshotList: typingsSlinky.qlik.qlikStrings.SnapshotList = this.cast("SnapshotList")
+  def SnapshotList: typingsSlinky.qlik.qlikStrings.SnapshotList = "SnapshotList".asInstanceOf[typingsSlinky.qlik.qlikStrings.SnapshotList]
   @scala.inline
-  def VariableList: typingsSlinky.qlik.qlikStrings.VariableList = this.cast("VariableList")
+  def VariableList: typingsSlinky.qlik.qlikStrings.VariableList = "VariableList".asInstanceOf[typingsSlinky.qlik.qlikStrings.VariableList]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def sheet: typingsSlinky.qlik.qlikStrings.sheet = "sheet".asInstanceOf[typingsSlinky.qlik.qlikStrings.sheet]
   @scala.inline
-  def sheet: typingsSlinky.qlik.qlikStrings.sheet = this.cast("sheet")
-  @scala.inline
-  def story: typingsSlinky.qlik.qlikStrings.story = this.cast("story")
+  def story: typingsSlinky.qlik.qlikStrings.story = "story".asInstanceOf[typingsSlinky.qlik.qlikStrings.story]
 }
 

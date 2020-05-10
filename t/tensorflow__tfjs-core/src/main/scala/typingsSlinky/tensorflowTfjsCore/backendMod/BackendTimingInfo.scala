@@ -1,20 +1,47 @@
 package typingsSlinky.tensorflowTfjsCore.backendMod
 
+import typingsSlinky.tensorflowTfjsCore.AnonError
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait BackendTimingInfo extends js.Object {
-  var getExtraProfileInfo: js.UndefOr[js.Function0[String]] = js.undefined
-  var kernelMs: Double
+  var getExtraProfileInfo: js.UndefOr[js.Function0[String]] = js.native
+  var kernelMs: Double | AnonError = js.native
 }
 
 object BackendTimingInfo {
   @scala.inline
-  def apply(kernelMs: Double, getExtraProfileInfo: () => String = null): BackendTimingInfo = {
+  def apply(kernelMs: Double | AnonError): BackendTimingInfo = {
     val __obj = js.Dynamic.literal(kernelMs = kernelMs.asInstanceOf[js.Any])
-    if (getExtraProfileInfo != null) __obj.updateDynamic("getExtraProfileInfo")(js.Any.fromFunction0(getExtraProfileInfo))
     __obj.asInstanceOf[BackendTimingInfo]
   }
+  @scala.inline
+  implicit class BackendTimingInfoOps[Self <: BackendTimingInfo] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withKernelMs(value: Double | AnonError): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kernelMs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGetExtraProfileInfo(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getExtraProfileInfo")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetExtraProfileInfo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getExtraProfileInfo")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

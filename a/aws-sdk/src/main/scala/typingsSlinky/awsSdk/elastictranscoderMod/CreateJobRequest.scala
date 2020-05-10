@@ -42,25 +42,107 @@ trait CreateJobRequest extends js.Object {
 
 object CreateJobRequest {
   @scala.inline
-  def apply(
-    PipelineId: Id,
-    Input: JobInput = null,
-    Inputs: JobInputs = null,
-    Output: CreateJobOutput = null,
-    OutputKeyPrefix: Key = null,
-    Outputs: CreateJobOutputs = null,
-    Playlists: CreateJobPlaylists = null,
-    UserMetadata: UserMetadata = null
-  ): CreateJobRequest = {
+  def apply(PipelineId: Id): CreateJobRequest = {
     val __obj = js.Dynamic.literal(PipelineId = PipelineId.asInstanceOf[js.Any])
-    if (Input != null) __obj.updateDynamic("Input")(Input.asInstanceOf[js.Any])
-    if (Inputs != null) __obj.updateDynamic("Inputs")(Inputs.asInstanceOf[js.Any])
-    if (Output != null) __obj.updateDynamic("Output")(Output.asInstanceOf[js.Any])
-    if (OutputKeyPrefix != null) __obj.updateDynamic("OutputKeyPrefix")(OutputKeyPrefix.asInstanceOf[js.Any])
-    if (Outputs != null) __obj.updateDynamic("Outputs")(Outputs.asInstanceOf[js.Any])
-    if (Playlists != null) __obj.updateDynamic("Playlists")(Playlists.asInstanceOf[js.Any])
-    if (UserMetadata != null) __obj.updateDynamic("UserMetadata")(UserMetadata.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateJobRequest]
   }
+  @scala.inline
+  implicit class CreateJobRequestOps[Self <: CreateJobRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPipelineId(value: Id): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PipelineId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInput(value: JobInput): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Input")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInput: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Input")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInputs(value: JobInputs): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Inputs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInputs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Inputs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOutput(value: CreateJobOutput): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Output")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOutput: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Output")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOutputKeyPrefix(value: Key): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OutputKeyPrefix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOutputKeyPrefix: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OutputKeyPrefix")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOutputs(value: CreateJobOutputs): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Outputs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOutputs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Outputs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlaylists(value: CreateJobPlaylists): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Playlists")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlaylists: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Playlists")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUserMetadata(value: UserMetadata): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UserMetadata")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUserMetadata: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UserMetadata")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

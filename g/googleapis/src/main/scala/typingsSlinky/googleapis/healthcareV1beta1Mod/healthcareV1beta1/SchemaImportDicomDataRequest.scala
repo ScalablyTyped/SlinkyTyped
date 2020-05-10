@@ -22,10 +22,29 @@ trait SchemaImportDicomDataRequest extends js.Object {
 
 object SchemaImportDicomDataRequest {
   @scala.inline
-  def apply(gcsSource: SchemaGoogleCloudHealthcareV1beta1DicomGcsSource = null): SchemaImportDicomDataRequest = {
+  def apply(): SchemaImportDicomDataRequest = {
     val __obj = js.Dynamic.literal()
-    if (gcsSource != null) __obj.updateDynamic("gcsSource")(gcsSource.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaImportDicomDataRequest]
   }
+  @scala.inline
+  implicit class SchemaImportDicomDataRequestOps[Self <: SchemaImportDicomDataRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGcsSource(value: SchemaGoogleCloudHealthcareV1beta1DicomGcsSource): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gcsSource")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGcsSource: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gcsSource")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

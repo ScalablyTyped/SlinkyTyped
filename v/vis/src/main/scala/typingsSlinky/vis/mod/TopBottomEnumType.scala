@@ -12,10 +12,8 @@ trait TopBottomEnumType extends js.Object
 
 object TopBottomEnumType {
   @scala.inline
-  def bottom: typingsSlinky.vis.visStrings.bottom = this.cast("bottom")
+  def bottom: typingsSlinky.vis.visStrings.bottom = "bottom".asInstanceOf[typingsSlinky.vis.visStrings.bottom]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
-  @scala.inline
-  def top: typingsSlinky.vis.visStrings.top = this.cast("top")
+  def top: typingsSlinky.vis.visStrings.top = "top".asInstanceOf[typingsSlinky.vis.visStrings.top]
 }
 

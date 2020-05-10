@@ -6,30 +6,88 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonComplete extends js.Object {
-  var base: js.UndefOr[Style] = js.undefined
-  var complete: js.UndefOr[Style] = js.undefined
-  var empty: js.UndefOr[Style] = js.undefined
-  var invalid: js.UndefOr[Style] = js.undefined
-  var paymentRequestButton: js.UndefOr[PaymentRequestButtonStyleOptions] = js.undefined
+  var base: js.UndefOr[Style] = js.native
+  var complete: js.UndefOr[Style] = js.native
+  var empty: js.UndefOr[Style] = js.native
+  var invalid: js.UndefOr[Style] = js.native
+  var paymentRequestButton: js.UndefOr[PaymentRequestButtonStyleOptions] = js.native
 }
 
 object AnonComplete {
   @scala.inline
-  def apply(
-    base: Style = null,
-    complete: Style = null,
-    empty: Style = null,
-    invalid: Style = null,
-    paymentRequestButton: PaymentRequestButtonStyleOptions = null
-  ): AnonComplete = {
+  def apply(): AnonComplete = {
     val __obj = js.Dynamic.literal()
-    if (base != null) __obj.updateDynamic("base")(base.asInstanceOf[js.Any])
-    if (complete != null) __obj.updateDynamic("complete")(complete.asInstanceOf[js.Any])
-    if (empty != null) __obj.updateDynamic("empty")(empty.asInstanceOf[js.Any])
-    if (invalid != null) __obj.updateDynamic("invalid")(invalid.asInstanceOf[js.Any])
-    if (paymentRequestButton != null) __obj.updateDynamic("paymentRequestButton")(paymentRequestButton.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonComplete]
   }
+  @scala.inline
+  implicit class AnonCompleteOps[Self <: AnonComplete] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBase(value: Style): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("base")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBase: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("base")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withComplete(value: Style): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("complete")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutComplete: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("complete")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEmpty(value: Style): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("empty")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEmpty: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("empty")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInvalid(value: Style): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("invalid")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInvalid: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("invalid")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPaymentRequestButton(value: PaymentRequestButtonStyleOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paymentRequestButton")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPaymentRequestButton: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paymentRequestButton")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

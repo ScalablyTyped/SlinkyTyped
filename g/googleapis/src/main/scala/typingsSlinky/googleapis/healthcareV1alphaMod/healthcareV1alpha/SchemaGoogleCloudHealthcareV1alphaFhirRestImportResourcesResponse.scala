@@ -33,18 +33,65 @@ trait SchemaGoogleCloudHealthcareV1alphaFhirRestImportResourcesResponse extends 
 
 object SchemaGoogleCloudHealthcareV1alphaFhirRestImportResourcesResponse {
   @scala.inline
-  def apply(
-    errorCount: String = null,
-    inputSize: String = null,
-    name: String = null,
-    successCount: String = null
-  ): SchemaGoogleCloudHealthcareV1alphaFhirRestImportResourcesResponse = {
+  def apply(): SchemaGoogleCloudHealthcareV1alphaFhirRestImportResourcesResponse = {
     val __obj = js.Dynamic.literal()
-    if (errorCount != null) __obj.updateDynamic("errorCount")(errorCount.asInstanceOf[js.Any])
-    if (inputSize != null) __obj.updateDynamic("inputSize")(inputSize.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (successCount != null) __obj.updateDynamic("successCount")(successCount.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudHealthcareV1alphaFhirRestImportResourcesResponse]
   }
+  @scala.inline
+  implicit class SchemaGoogleCloudHealthcareV1alphaFhirRestImportResourcesResponseOps[Self <: SchemaGoogleCloudHealthcareV1alphaFhirRestImportResourcesResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withErrorCount(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errorCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutErrorCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errorCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInputSize(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInputSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSuccessCount(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("successCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSuccessCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("successCount")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

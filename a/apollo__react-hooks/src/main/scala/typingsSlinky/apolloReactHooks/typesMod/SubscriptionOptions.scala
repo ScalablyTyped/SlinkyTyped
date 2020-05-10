@@ -1,46 +1,58 @@
 package typingsSlinky.apolloReactHooks.typesMod
 
 import slinky.core.facade.ReactElement
-import typingsSlinky.apolloClient.mod.default
-import typingsSlinky.apolloClient.watchQueryOptionsMod.FetchPolicy
 import typingsSlinky.apolloReactCommon.typesMod.BaseSubscriptionOptions
-import typingsSlinky.apolloReactCommon.typesMod.OnSubscriptionDataOptions
 import typingsSlinky.apolloReactCommon.typesMod.SubscriptionResult
 import typingsSlinky.graphql.astMod.DocumentNode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SubscriptionOptions[TData, TVariables] extends BaseSubscriptionOptions[TData, TVariables] {
   var children: js.UndefOr[
     Null | (js.Function1[/* result */ SubscriptionResult[TData], ReactElement | Null])
-  ] = js.undefined
-  var subscription: DocumentNode
+  ] = js.native
+  var subscription: DocumentNode = js.native
 }
 
 object SubscriptionOptions {
   @scala.inline
-  def apply[TData, TVariables](
-    subscription: DocumentNode,
-    children: /* result */ SubscriptionResult[TData] => ReactElement | Null = null,
-    client: default[js.Object] = null,
-    fetchPolicy: FetchPolicy = null,
-    onSubscriptionComplete: () => Unit = null,
-    onSubscriptionData: /* options */ OnSubscriptionDataOptions[TData] => _ = null,
-    shouldResubscribe: Boolean | (js.Function1[/* options */ BaseSubscriptionOptions[TData, TVariables], Boolean]) = null,
-    skip: js.UndefOr[Boolean] = js.undefined,
-    variables: TVariables = null
-  ): SubscriptionOptions[TData, TVariables] = {
+  def apply[TData, TVariables](subscription: DocumentNode): SubscriptionOptions[TData, TVariables] = {
     val __obj = js.Dynamic.literal(subscription = subscription.asInstanceOf[js.Any])
-    if (children != null) __obj.updateDynamic("children")(js.Any.fromFunction1(children))
-    if (client != null) __obj.updateDynamic("client")(client.asInstanceOf[js.Any])
-    if (fetchPolicy != null) __obj.updateDynamic("fetchPolicy")(fetchPolicy.asInstanceOf[js.Any])
-    if (onSubscriptionComplete != null) __obj.updateDynamic("onSubscriptionComplete")(js.Any.fromFunction0(onSubscriptionComplete))
-    if (onSubscriptionData != null) __obj.updateDynamic("onSubscriptionData")(js.Any.fromFunction1(onSubscriptionData))
-    if (shouldResubscribe != null) __obj.updateDynamic("shouldResubscribe")(shouldResubscribe.asInstanceOf[js.Any])
-    if (!js.isUndefined(skip)) __obj.updateDynamic("skip")(skip.asInstanceOf[js.Any])
-    if (variables != null) __obj.updateDynamic("variables")(variables.asInstanceOf[js.Any])
     __obj.asInstanceOf[SubscriptionOptions[TData, TVariables]]
   }
+  @scala.inline
+  implicit class SubscriptionOptionsOps[Self[tdata, tvariables] <: SubscriptionOptions[tdata, tvariables], TData, TVariables] (val x: Self[TData, TVariables]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[TData, TVariables] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[TData, TVariables]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): (Self[TData, TVariables]) with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[(Self[TData, TVariables]) with Other]
+    @scala.inline
+    def withSubscription(value: DocumentNode): Self[TData, TVariables] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subscription")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withChildren(value: /* result */ SubscriptionResult[TData] => ReactElement | Null): Self[TData, TVariables] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutChildren: Self[TData, TVariables] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withChildrenNull: Self[TData, TVariables] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(null)
+        ret
+    }
+  }
+  
 }
 

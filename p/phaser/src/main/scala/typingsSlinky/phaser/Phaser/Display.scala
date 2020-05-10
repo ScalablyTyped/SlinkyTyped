@@ -1,5 +1,6 @@
 package typingsSlinky.phaser.Phaser
 
+import org.scalajs.dom.raw.CanvasRenderingContext2D
 import org.scalajs.dom.raw.HTMLCanvasElement
 import org.scalajs.dom.raw.WebGLFramebuffer
 import org.scalajs.dom.raw.WebGLRenderingContext
@@ -13,7 +14,6 @@ import typingsSlinky.phaser.Phaser.Types.Display.ColorObject
 import typingsSlinky.phaser.Phaser.Types.Display.HSVColorObject
 import typingsSlinky.phaser.Phaser.Types.Display.InputColorObject
 import typingsSlinky.phaser.integer
-import typingsSlinky.std.CanvasRenderingContext2D
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -732,8 +732,8 @@ object Display extends js.Object {
         * patchy on earlier browsers, especially on mobile.
         * @param context The context on which to disable smoothing.
         */
-      def disable(context: CanvasRenderingContext2D): org.scalajs.dom.raw.CanvasRenderingContext2D | WebGLRenderingContext = js.native
-      def disable(context: typingsSlinky.std.WebGLRenderingContext): org.scalajs.dom.raw.CanvasRenderingContext2D | WebGLRenderingContext = js.native
+      def disable(context: CanvasRenderingContext2D): CanvasRenderingContext2D | WebGLRenderingContext = js.native
+      def disable(context: WebGLRenderingContext): CanvasRenderingContext2D | WebGLRenderingContext = js.native
       /**
         * Sets the Image Smoothing property on the given context. Set to false to disable image smoothing.
         * By default browsers have image smoothing enabled, which isn't always what you visually want, especially
@@ -742,21 +742,21 @@ object Display extends js.Object {
         * patchy on earlier browsers, especially on mobile.
         * @param context The context on which to enable smoothing.
         */
-      def enable(context: CanvasRenderingContext2D): org.scalajs.dom.raw.CanvasRenderingContext2D | WebGLRenderingContext = js.native
-      def enable(context: typingsSlinky.std.WebGLRenderingContext): org.scalajs.dom.raw.CanvasRenderingContext2D | WebGLRenderingContext = js.native
+      def enable(context: CanvasRenderingContext2D): CanvasRenderingContext2D | WebGLRenderingContext = js.native
+      def enable(context: WebGLRenderingContext): CanvasRenderingContext2D | WebGLRenderingContext = js.native
       /**
         * Gets the Smoothing Enabled vendor prefix being used on the given context, or null if not set.
         * @param context The canvas context to check.
         */
       def getPrefix(context: CanvasRenderingContext2D): String = js.native
-      def getPrefix(context: typingsSlinky.std.WebGLRenderingContext): String = js.native
+      def getPrefix(context: WebGLRenderingContext): String = js.native
       /**
         * Returns `true` if the given context has image smoothing enabled, otherwise returns `false`.
         * Returns null if no smoothing prefix is available.
         * @param context The context to check.
         */
       def isEnabled(context: CanvasRenderingContext2D): Boolean = js.native
-      def isEnabled(context: typingsSlinky.std.WebGLRenderingContext): Boolean = js.native
+      def isEnabled(context: WebGLRenderingContext): Boolean = js.native
     }
     
   }

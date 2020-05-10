@@ -1,10 +1,7 @@
 package typingsSlinky.materialUi.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.materialUi.MaterialUI.DrawerProps
 import typingsSlinky.materialUi.drawerMod.default
 import typingsSlinky.react.mod.CSSProperties
@@ -12,42 +9,46 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Drawer
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object Drawer {
   @JSImport("material-ui/Drawer", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, open, style, width */
-  def apply(
-    containerClassName: String = null,
-    containerStyle: CSSProperties = null,
-    disableSwipeToOpen: js.UndefOr[Boolean] = js.undefined,
-    docked: js.UndefOr[Boolean] = js.undefined,
-    onRequestChange: (/* opening */ Boolean, /* reason */ String) => Unit = null,
-    openSecondary: js.UndefOr[Boolean] = js.undefined,
-    overlayClassName: String = null,
-    overlayStyle: CSSProperties = null,
-    swipeAreaWidth: Int | Double = null,
-    zDepth: Int | Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (containerClassName != null) __obj.updateDynamic("containerClassName")(containerClassName.asInstanceOf[js.Any])
-    if (containerStyle != null) __obj.updateDynamic("containerStyle")(containerStyle.asInstanceOf[js.Any])
-    if (!js.isUndefined(disableSwipeToOpen)) __obj.updateDynamic("disableSwipeToOpen")(disableSwipeToOpen.asInstanceOf[js.Any])
-    if (!js.isUndefined(docked)) __obj.updateDynamic("docked")(docked.asInstanceOf[js.Any])
-    if (onRequestChange != null) __obj.updateDynamic("onRequestChange")(js.Any.fromFunction2(onRequestChange))
-    if (!js.isUndefined(openSecondary)) __obj.updateDynamic("openSecondary")(openSecondary.asInstanceOf[js.Any])
-    if (overlayClassName != null) __obj.updateDynamic("overlayClassName")(overlayClassName.asInstanceOf[js.Any])
-    if (overlayStyle != null) __obj.updateDynamic("overlayStyle")(overlayStyle.asInstanceOf[js.Any])
-    if (swipeAreaWidth != null) __obj.updateDynamic("swipeAreaWidth")(swipeAreaWidth.asInstanceOf[js.Any])
-    if (zDepth != null) __obj.updateDynamic("zDepth")(zDepth.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def containerClassName(value: String): this.type = set("containerClassName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def containerStyle(value: CSSProperties): this.type = set("containerStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disableSwipeToOpen(value: Boolean): this.type = set("disableSwipeToOpen", value.asInstanceOf[js.Any])
+    @scala.inline
+    def docked(value: Boolean): this.type = set("docked", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onRequestChange(value: (/* opening */ Boolean, /* reason */ String) => Unit): this.type = set("onRequestChange", js.Any.fromFunction2(value))
+    @scala.inline
+    def open(value: Boolean): this.type = set("open", value.asInstanceOf[js.Any])
+    @scala.inline
+    def openSecondary(value: Boolean): this.type = set("openSecondary", value.asInstanceOf[js.Any])
+    @scala.inline
+    def overlayClassName(value: String): this.type = set("overlayClassName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def overlayStyle(value: CSSProperties): this.type = set("overlayStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def swipeAreaWidth(value: Double): this.type = set("swipeAreaWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def width(value: Double | String): this.type = set("width", value.asInstanceOf[js.Any])
+    @scala.inline
+    def zDepth(value: Double): this.type = set("zDepth", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.materialUi.drawerMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = DrawerProps
+  
+  def withProps(p: DrawerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Drawer.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

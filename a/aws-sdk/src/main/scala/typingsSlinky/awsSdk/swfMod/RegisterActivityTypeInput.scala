@@ -50,27 +50,119 @@ trait RegisterActivityTypeInput extends js.Object {
 
 object RegisterActivityTypeInput {
   @scala.inline
-  def apply(
-    domain: DomainName,
-    name: Name,
-    version: Version,
-    defaultTaskHeartbeatTimeout: DurationInSecondsOptional = null,
-    defaultTaskList: TaskList = null,
-    defaultTaskPriority: TaskPriority = null,
-    defaultTaskScheduleToCloseTimeout: DurationInSecondsOptional = null,
-    defaultTaskScheduleToStartTimeout: DurationInSecondsOptional = null,
-    defaultTaskStartToCloseTimeout: DurationInSecondsOptional = null,
-    description: Description = null
-  ): RegisterActivityTypeInput = {
+  def apply(domain: DomainName, name: Name, version: Version): RegisterActivityTypeInput = {
     val __obj = js.Dynamic.literal(domain = domain.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], version = version.asInstanceOf[js.Any])
-    if (defaultTaskHeartbeatTimeout != null) __obj.updateDynamic("defaultTaskHeartbeatTimeout")(defaultTaskHeartbeatTimeout.asInstanceOf[js.Any])
-    if (defaultTaskList != null) __obj.updateDynamic("defaultTaskList")(defaultTaskList.asInstanceOf[js.Any])
-    if (defaultTaskPriority != null) __obj.updateDynamic("defaultTaskPriority")(defaultTaskPriority.asInstanceOf[js.Any])
-    if (defaultTaskScheduleToCloseTimeout != null) __obj.updateDynamic("defaultTaskScheduleToCloseTimeout")(defaultTaskScheduleToCloseTimeout.asInstanceOf[js.Any])
-    if (defaultTaskScheduleToStartTimeout != null) __obj.updateDynamic("defaultTaskScheduleToStartTimeout")(defaultTaskScheduleToStartTimeout.asInstanceOf[js.Any])
-    if (defaultTaskStartToCloseTimeout != null) __obj.updateDynamic("defaultTaskStartToCloseTimeout")(defaultTaskStartToCloseTimeout.asInstanceOf[js.Any])
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
     __obj.asInstanceOf[RegisterActivityTypeInput]
   }
+  @scala.inline
+  implicit class RegisterActivityTypeInputOps[Self <: RegisterActivityTypeInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDomain(value: DomainName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("domain")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withName(value: Name): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVersion(value: Version): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDefaultTaskHeartbeatTimeout(value: DurationInSecondsOptional): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultTaskHeartbeatTimeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultTaskHeartbeatTimeout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultTaskHeartbeatTimeout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultTaskList(value: TaskList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultTaskList")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultTaskList: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultTaskList")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultTaskPriority(value: TaskPriority): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultTaskPriority")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultTaskPriority: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultTaskPriority")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultTaskScheduleToCloseTimeout(value: DurationInSecondsOptional): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultTaskScheduleToCloseTimeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultTaskScheduleToCloseTimeout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultTaskScheduleToCloseTimeout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultTaskScheduleToStartTimeout(value: DurationInSecondsOptional): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultTaskScheduleToStartTimeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultTaskScheduleToStartTimeout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultTaskScheduleToStartTimeout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultTaskStartToCloseTimeout(value: DurationInSecondsOptional): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultTaskStartToCloseTimeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultTaskStartToCloseTimeout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultTaskStartToCloseTimeout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDescription(value: Description): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

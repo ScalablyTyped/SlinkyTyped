@@ -1,12 +1,9 @@
 package typingsSlinky.reactDayPicker.components
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLDivElement
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.SyntheticFocusEvent
 import slinky.web.html.div.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactDayPicker.commonMod.DayModifiers
 import typingsSlinky.reactDayPicker.commonMod.InputClassNames
 import typingsSlinky.reactDayPicker.propsMod.DayPickerInputProps
@@ -15,64 +12,66 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object DayPickerInput
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactDayPicker.dayPickerInputMod.DayPickerInput] {
+object DayPickerInput {
   @JSImport("react-day-picker/types/DayPickerInput", "DayPickerInput")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: onBlur, onFocus */
-  def apply(
-    classNames: InputClassNames = null,
-    clickUnselectsDay: js.UndefOr[Boolean] = js.undefined,
-    component: js.Any = null,
-    dayPickerProps: DayPickerProps = null,
-    format: String | js.Array[String] = null,
-    formatDate: (/* date */ js.Date, /* format */ String, /* locale */ String) => String = null,
-    hideOnDayClick: js.UndefOr[Boolean] = js.undefined,
-    inputProps: js.Object = null,
-    keepFocus: js.UndefOr[Boolean] = js.undefined,
-    onChange: /* e */ SyntheticFocusEvent[HTMLDivElement] => Unit = null,
-    onClick: /* e */ SyntheticFocusEvent[HTMLDivElement] => Unit = null,
-    onDayChange: (/* day */ js.Date, /* DayModifiers */ DayModifiers, /* dayPickerInput */ typingsSlinky.reactDayPicker.dayPickerInputMod.DayPickerInput) => Unit = null,
-    onDayPickerHide: () => Unit = null,
-    onDayPickerShow: () => Unit = null,
-    onKeyUp: /* e */ SyntheticFocusEvent[HTMLDivElement] => Unit = null,
-    overlayComponent: js.Any = null,
-    parseDate: (/* str */ String, /* format */ String, /* locale */ String) => js.Date | Unit = null,
-    placeholder: String = null,
-    showOverlay: js.UndefOr[Boolean] = js.undefined,
-    value: String | js.Date = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactDayPicker.dayPickerInputMod.DayPickerInput] = {
-    val __obj = js.Dynamic.literal()
-    if (classNames != null) __obj.updateDynamic("classNames")(classNames.asInstanceOf[js.Any])
-    if (!js.isUndefined(clickUnselectsDay)) __obj.updateDynamic("clickUnselectsDay")(clickUnselectsDay.asInstanceOf[js.Any])
-    if (component != null) __obj.updateDynamic("component")(component.asInstanceOf[js.Any])
-    if (dayPickerProps != null) __obj.updateDynamic("dayPickerProps")(dayPickerProps.asInstanceOf[js.Any])
-    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
-    if (formatDate != null) __obj.updateDynamic("formatDate")(js.Any.fromFunction3(formatDate))
-    if (!js.isUndefined(hideOnDayClick)) __obj.updateDynamic("hideOnDayClick")(hideOnDayClick.asInstanceOf[js.Any])
-    if (inputProps != null) __obj.updateDynamic("inputProps")(inputProps.asInstanceOf[js.Any])
-    if (!js.isUndefined(keepFocus)) __obj.updateDynamic("keepFocus")(keepFocus.asInstanceOf[js.Any])
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
-    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction1(onClick))
-    if (onDayChange != null) __obj.updateDynamic("onDayChange")(js.Any.fromFunction3(onDayChange))
-    if (onDayPickerHide != null) __obj.updateDynamic("onDayPickerHide")(js.Any.fromFunction0(onDayPickerHide))
-    if (onDayPickerShow != null) __obj.updateDynamic("onDayPickerShow")(js.Any.fromFunction0(onDayPickerShow))
-    if (onKeyUp != null) __obj.updateDynamic("onKeyUp")(js.Any.fromFunction1(onKeyUp))
-    if (overlayComponent != null) __obj.updateDynamic("overlayComponent")(overlayComponent.asInstanceOf[js.Any])
-    if (parseDate != null) __obj.updateDynamic("parseDate")(js.Any.fromFunction3(parseDate))
-    if (placeholder != null) __obj.updateDynamic("placeholder")(placeholder.asInstanceOf[js.Any])
-    if (!js.isUndefined(showOverlay)) __obj.updateDynamic("showOverlay")(showOverlay.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactDayPicker.dayPickerInputMod.DayPickerInput] {
+    @scala.inline
+    def classNames(value: InputClassNames): this.type = set("classNames", value.asInstanceOf[js.Any])
+    @scala.inline
+    def clickUnselectsDay(value: Boolean): this.type = set("clickUnselectsDay", value.asInstanceOf[js.Any])
+    @scala.inline
+    def component(value: js.Any): this.type = set("component", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dayPickerProps(value: DayPickerProps): this.type = set("dayPickerProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def format(value: String | js.Array[String]): this.type = set("format", value.asInstanceOf[js.Any])
+    @scala.inline
+    def formatDate(value: (/* date */ js.Date, /* format */ String, /* locale */ String) => String): this.type = set("formatDate", js.Any.fromFunction3(value))
+    @scala.inline
+    def hideOnDayClick(value: Boolean): this.type = set("hideOnDayClick", value.asInstanceOf[js.Any])
+    @scala.inline
+    def inputProps(value: js.Object): this.type = set("inputProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def keepFocus(value: Boolean): this.type = set("keepFocus", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onBlur(value: /* e */ SyntheticFocusEvent[HTMLDivElement] => Unit): this.type = set("onBlur", js.Any.fromFunction1(value))
+    @scala.inline
+    def onChange(value: /* e */ SyntheticFocusEvent[HTMLDivElement] => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def onClick(value: /* e */ SyntheticFocusEvent[HTMLDivElement] => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
+    @scala.inline
+    def onDayChange(
+      value: (/* day */ js.Date, /* DayModifiers */ DayModifiers, /* dayPickerInput */ typingsSlinky.reactDayPicker.dayPickerInputMod.DayPickerInput) => Unit
+    ): this.type = set("onDayChange", js.Any.fromFunction3(value))
+    @scala.inline
+    def onDayPickerHide(value: () => Unit): this.type = set("onDayPickerHide", js.Any.fromFunction0(value))
+    @scala.inline
+    def onDayPickerShow(value: () => Unit): this.type = set("onDayPickerShow", js.Any.fromFunction0(value))
+    @scala.inline
+    def onFocus(value: /* e */ SyntheticFocusEvent[HTMLDivElement] => Unit): this.type = set("onFocus", js.Any.fromFunction1(value))
+    @scala.inline
+    def onKeyUp(value: /* e */ SyntheticFocusEvent[HTMLDivElement] => Unit): this.type = set("onKeyUp", js.Any.fromFunction1(value))
+    @scala.inline
+    def overlayComponent(value: js.Any): this.type = set("overlayComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def parseDate(value: (/* str */ String, /* format */ String, /* locale */ String) => js.Date | Unit): this.type = set("parseDate", js.Any.fromFunction3(value))
+    @scala.inline
+    def placeholder(value: String): this.type = set("placeholder", value.asInstanceOf[js.Any])
+    @scala.inline
+    def showOverlay(value: Boolean): this.type = set("showOverlay", value.asInstanceOf[js.Any])
+    @scala.inline
+    def valueDate(value: js.Date): this.type = set("value", value.asInstanceOf[js.Any])
+    @scala.inline
+    def value(value: String | js.Date): this.type = set("value", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.reactDayPicker.dayPickerInputMod.DayPickerInput] = new slinky.core.BuildingComponent[
-  slinky.web.html.div.tag.type, 
-  typingsSlinky.reactDayPicker.dayPickerInputMod.DayPickerInput](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = DayPickerInputProps
+  
+  def withProps(p: DayPickerInputProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: DayPickerInput.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

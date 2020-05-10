@@ -34,54 +34,52 @@ trait DisplayType extends js.Object
 
 object DisplayType {
   @scala.inline
-  def `Spacetable-column-group`: typingsSlinky.azdata.azdataStrings.`Spacetable-column-group` = this.cast(" table-column-group")
+  def `Spacetable-column-group`: typingsSlinky.azdata.azdataStrings.`Spacetable-column-group` = (" table-column-group").asInstanceOf[typingsSlinky.azdata.azdataStrings.`Spacetable-column-group`]
   @scala.inline
-  def _empty: typingsSlinky.azdata.azdataStrings._empty = this.cast("")
+  def _empty: typingsSlinky.azdata.azdataStrings._empty = "".asInstanceOf[typingsSlinky.azdata.azdataStrings._empty]
   @scala.inline
-  def block: typingsSlinky.azdata.azdataStrings.block = this.cast("block")
+  def block: typingsSlinky.azdata.azdataStrings.block = "block".asInstanceOf[typingsSlinky.azdata.azdataStrings.block]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def contents: typingsSlinky.azdata.azdataStrings.contents = "contents".asInstanceOf[typingsSlinky.azdata.azdataStrings.contents]
   @scala.inline
-  def contents: typingsSlinky.azdata.azdataStrings.contents = this.cast("contents")
+  def flex: typingsSlinky.azdata.azdataStrings.flex = "flex".asInstanceOf[typingsSlinky.azdata.azdataStrings.flex]
   @scala.inline
-  def flex: typingsSlinky.azdata.azdataStrings.flex = this.cast("flex")
+  def grid: typingsSlinky.azdata.azdataStrings.grid = "grid".asInstanceOf[typingsSlinky.azdata.azdataStrings.grid]
   @scala.inline
-  def grid: typingsSlinky.azdata.azdataStrings.grid = this.cast("grid")
+  def inherit: typingsSlinky.azdata.azdataStrings.inherit = "inherit".asInstanceOf[typingsSlinky.azdata.azdataStrings.inherit]
   @scala.inline
-  def inherit: typingsSlinky.azdata.azdataStrings.inherit = this.cast("inherit")
+  def initial: typingsSlinky.azdata.azdataStrings.initial = "initial".asInstanceOf[typingsSlinky.azdata.azdataStrings.initial]
   @scala.inline
-  def initial: typingsSlinky.azdata.azdataStrings.initial = this.cast("initial")
+  def `inline`: typingsSlinky.azdata.azdataStrings.`inline` = "inline".asInstanceOf[typingsSlinky.azdata.azdataStrings.`inline`]
   @scala.inline
-  def `inline`: typingsSlinky.azdata.azdataStrings.`inline` = this.cast("inline")
+  def `inline-block`: typingsSlinky.azdata.azdataStrings.`inline-block` = "inline-block".asInstanceOf[typingsSlinky.azdata.azdataStrings.`inline-block`]
   @scala.inline
-  def `inline-block`: typingsSlinky.azdata.azdataStrings.`inline-block` = this.cast("inline-block")
+  def `inline-flex`: typingsSlinky.azdata.azdataStrings.`inline-flex` = "inline-flex".asInstanceOf[typingsSlinky.azdata.azdataStrings.`inline-flex`]
   @scala.inline
-  def `inline-flex`: typingsSlinky.azdata.azdataStrings.`inline-flex` = this.cast("inline-flex")
+  def `inline-grid`: typingsSlinky.azdata.azdataStrings.`inline-grid` = "inline-grid".asInstanceOf[typingsSlinky.azdata.azdataStrings.`inline-grid`]
   @scala.inline
-  def `inline-grid`: typingsSlinky.azdata.azdataStrings.`inline-grid` = this.cast("inline-grid")
+  def `inline-table`: typingsSlinky.azdata.azdataStrings.`inline-table` = "inline-table".asInstanceOf[typingsSlinky.azdata.azdataStrings.`inline-table`]
   @scala.inline
-  def `inline-table`: typingsSlinky.azdata.azdataStrings.`inline-table` = this.cast("inline-table")
+  def `list-item`: typingsSlinky.azdata.azdataStrings.`list-item` = "list-item".asInstanceOf[typingsSlinky.azdata.azdataStrings.`list-item`]
   @scala.inline
-  def `list-item`: typingsSlinky.azdata.azdataStrings.`list-item` = this.cast("list-item")
+  def none: typingsSlinky.azdata.azdataStrings.none = "none".asInstanceOf[typingsSlinky.azdata.azdataStrings.none]
   @scala.inline
-  def none: typingsSlinky.azdata.azdataStrings.none = this.cast("none")
+  def `run-in`: typingsSlinky.azdata.azdataStrings.`run-in` = "run-in".asInstanceOf[typingsSlinky.azdata.azdataStrings.`run-in`]
   @scala.inline
-  def `run-in`: typingsSlinky.azdata.azdataStrings.`run-in` = this.cast("run-in")
+  def table: typingsSlinky.azdata.azdataStrings.table = "table".asInstanceOf[typingsSlinky.azdata.azdataStrings.table]
   @scala.inline
-  def table: typingsSlinky.azdata.azdataStrings.table = this.cast("table")
+  def `table-caption`: typingsSlinky.azdata.azdataStrings.`table-caption` = "table-caption".asInstanceOf[typingsSlinky.azdata.azdataStrings.`table-caption`]
   @scala.inline
-  def `table-caption`: typingsSlinky.azdata.azdataStrings.`table-caption` = this.cast("table-caption")
+  def `table-cell`: typingsSlinky.azdata.azdataStrings.`table-cell` = "table-cell".asInstanceOf[typingsSlinky.azdata.azdataStrings.`table-cell`]
   @scala.inline
-  def `table-cell`: typingsSlinky.azdata.azdataStrings.`table-cell` = this.cast("table-cell")
+  def `table-column`: typingsSlinky.azdata.azdataStrings.`table-column` = "table-column".asInstanceOf[typingsSlinky.azdata.azdataStrings.`table-column`]
   @scala.inline
-  def `table-column`: typingsSlinky.azdata.azdataStrings.`table-column` = this.cast("table-column")
+  def `table-footer-group`: typingsSlinky.azdata.azdataStrings.`table-footer-group` = "table-footer-group".asInstanceOf[typingsSlinky.azdata.azdataStrings.`table-footer-group`]
   @scala.inline
-  def `table-footer-group`: typingsSlinky.azdata.azdataStrings.`table-footer-group` = this.cast("table-footer-group")
+  def `table-header-group`: typingsSlinky.azdata.azdataStrings.`table-header-group` = "table-header-group".asInstanceOf[typingsSlinky.azdata.azdataStrings.`table-header-group`]
   @scala.inline
-  def `table-header-group`: typingsSlinky.azdata.azdataStrings.`table-header-group` = this.cast("table-header-group")
+  def `table-row`: typingsSlinky.azdata.azdataStrings.`table-row` = "table-row".asInstanceOf[typingsSlinky.azdata.azdataStrings.`table-row`]
   @scala.inline
-  def `table-row`: typingsSlinky.azdata.azdataStrings.`table-row` = this.cast("table-row")
-  @scala.inline
-  def `table-row-group`: typingsSlinky.azdata.azdataStrings.`table-row-group` = this.cast("table-row-group")
+  def `table-row-group`: typingsSlinky.azdata.azdataStrings.`table-row-group` = "table-row-group".asInstanceOf[typingsSlinky.azdata.azdataStrings.`table-row-group`]
 }
 

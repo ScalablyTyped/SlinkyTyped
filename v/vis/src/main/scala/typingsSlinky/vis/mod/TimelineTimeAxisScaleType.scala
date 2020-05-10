@@ -19,24 +19,22 @@ trait TimelineTimeAxisScaleType extends js.Object
 
 object TimelineTimeAxisScaleType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def day: typingsSlinky.vis.visStrings.day = "day".asInstanceOf[typingsSlinky.vis.visStrings.day]
   @scala.inline
-  def day: typingsSlinky.vis.visStrings.day = this.cast("day")
+  def hour: typingsSlinky.vis.visStrings.hour = "hour".asInstanceOf[typingsSlinky.vis.visStrings.hour]
   @scala.inline
-  def hour: typingsSlinky.vis.visStrings.hour = this.cast("hour")
+  def millisecond: typingsSlinky.vis.visStrings.millisecond = "millisecond".asInstanceOf[typingsSlinky.vis.visStrings.millisecond]
   @scala.inline
-  def millisecond: typingsSlinky.vis.visStrings.millisecond = this.cast("millisecond")
+  def minute: typingsSlinky.vis.visStrings.minute = "minute".asInstanceOf[typingsSlinky.vis.visStrings.minute]
   @scala.inline
-  def minute: typingsSlinky.vis.visStrings.minute = this.cast("minute")
+  def month: typingsSlinky.vis.visStrings.month = "month".asInstanceOf[typingsSlinky.vis.visStrings.month]
   @scala.inline
-  def month: typingsSlinky.vis.visStrings.month = this.cast("month")
+  def second: typingsSlinky.vis.visStrings.second = "second".asInstanceOf[typingsSlinky.vis.visStrings.second]
   @scala.inline
-  def second: typingsSlinky.vis.visStrings.second = this.cast("second")
+  def week: typingsSlinky.vis.visStrings.week = "week".asInstanceOf[typingsSlinky.vis.visStrings.week]
   @scala.inline
-  def week: typingsSlinky.vis.visStrings.week = this.cast("week")
+  def weekday: typingsSlinky.vis.visStrings.weekday = "weekday".asInstanceOf[typingsSlinky.vis.visStrings.weekday]
   @scala.inline
-  def weekday: typingsSlinky.vis.visStrings.weekday = this.cast("weekday")
-  @scala.inline
-  def year: typingsSlinky.vis.visStrings.year = this.cast("year")
+  def year: typingsSlinky.vis.visStrings.year = "year".asInstanceOf[typingsSlinky.vis.visStrings.year]
 }
 

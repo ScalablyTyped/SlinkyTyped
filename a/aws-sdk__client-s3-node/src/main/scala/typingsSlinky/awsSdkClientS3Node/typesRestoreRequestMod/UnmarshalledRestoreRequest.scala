@@ -1,9 +1,5 @@
 package typingsSlinky.awsSdkClientS3Node.typesRestoreRequestMod
 
-import typingsSlinky.awsSdkClientS3Node.awsSdkClientS3NodeStrings.Bulk
-import typingsSlinky.awsSdkClientS3Node.awsSdkClientS3NodeStrings.Expedited
-import typingsSlinky.awsSdkClientS3Node.awsSdkClientS3NodeStrings.SELECT
-import typingsSlinky.awsSdkClientS3Node.awsSdkClientS3NodeStrings.Standard_
 import typingsSlinky.awsSdkClientS3Node.typesGlacierJobParametersMod.UnmarshalledGlacierJobParameters
 import typingsSlinky.awsSdkClientS3Node.typesOutputLocationMod.UnmarshalledOutputLocation
 import typingsSlinky.awsSdkClientS3Node.typesSelectParametersMod.UnmarshalledSelectParameters
@@ -11,44 +7,74 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait UnmarshalledRestoreRequest extends RestoreRequest {
   /**
     * <p>Glacier related parameters pertaining to this job. Do not use with restores that specify OutputLocation.</p>
     */
   @JSName("GlacierJobParameters")
-  var GlacierJobParameters_UnmarshalledRestoreRequest: js.UndefOr[UnmarshalledGlacierJobParameters] = js.undefined
+  var GlacierJobParameters_UnmarshalledRestoreRequest: js.UndefOr[UnmarshalledGlacierJobParameters] = js.native
   /**
     * <p>Describes the location where the restore job's output is stored.</p>
     */
   @JSName("OutputLocation")
-  var OutputLocation_UnmarshalledRestoreRequest: js.UndefOr[UnmarshalledOutputLocation] = js.undefined
+  var OutputLocation_UnmarshalledRestoreRequest: js.UndefOr[UnmarshalledOutputLocation] = js.native
   /**
     * <p>Describes the parameters for Select job types.</p>
     */
   @JSName("SelectParameters")
-  var SelectParameters_UnmarshalledRestoreRequest: js.UndefOr[UnmarshalledSelectParameters] = js.undefined
+  var SelectParameters_UnmarshalledRestoreRequest: js.UndefOr[UnmarshalledSelectParameters] = js.native
 }
 
 object UnmarshalledRestoreRequest {
   @scala.inline
-  def apply(
-    Days: Int | Double = null,
-    Description: String = null,
-    GlacierJobParameters: UnmarshalledGlacierJobParameters = null,
-    OutputLocation: UnmarshalledOutputLocation = null,
-    SelectParameters: UnmarshalledSelectParameters = null,
-    Tier: Standard_ | Bulk | Expedited | String = null,
-    Type: SELECT | String = null
-  ): UnmarshalledRestoreRequest = {
+  def apply(): UnmarshalledRestoreRequest = {
     val __obj = js.Dynamic.literal()
-    if (Days != null) __obj.updateDynamic("Days")(Days.asInstanceOf[js.Any])
-    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
-    if (GlacierJobParameters != null) __obj.updateDynamic("GlacierJobParameters")(GlacierJobParameters.asInstanceOf[js.Any])
-    if (OutputLocation != null) __obj.updateDynamic("OutputLocation")(OutputLocation.asInstanceOf[js.Any])
-    if (SelectParameters != null) __obj.updateDynamic("SelectParameters")(SelectParameters.asInstanceOf[js.Any])
-    if (Tier != null) __obj.updateDynamic("Tier")(Tier.asInstanceOf[js.Any])
-    if (Type != null) __obj.updateDynamic("Type")(Type.asInstanceOf[js.Any])
     __obj.asInstanceOf[UnmarshalledRestoreRequest]
   }
+  @scala.inline
+  implicit class UnmarshalledRestoreRequestOps[Self <: UnmarshalledRestoreRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGlacierJobParameters(value: UnmarshalledGlacierJobParameters): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GlacierJobParameters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGlacierJobParameters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GlacierJobParameters")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOutputLocation(value: UnmarshalledOutputLocation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OutputLocation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOutputLocation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OutputLocation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelectParameters(value: UnmarshalledSelectParameters): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SelectParameters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelectParameters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SelectParameters")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

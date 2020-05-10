@@ -19,10 +19,29 @@ trait SchemaMoveFolderRequest extends js.Object {
 
 object SchemaMoveFolderRequest {
   @scala.inline
-  def apply(destinationParent: String = null): SchemaMoveFolderRequest = {
+  def apply(): SchemaMoveFolderRequest = {
     val __obj = js.Dynamic.literal()
-    if (destinationParent != null) __obj.updateDynamic("destinationParent")(destinationParent.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaMoveFolderRequest]
   }
+  @scala.inline
+  implicit class SchemaMoveFolderRequestOps[Self <: SchemaMoveFolderRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDestinationParent(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("destinationParent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDestinationParent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("destinationParent")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

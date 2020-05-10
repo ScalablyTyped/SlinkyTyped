@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
 @js.native
 class HeightmapTerrainData protected () extends js.Object {
   def this(options: AnonBuffer) = this()
-  var waterMask: scala.scalajs.js.typedarray.Uint8Array | HTMLImageElement | HTMLCanvasElement = js.native
+  var waterMask: js.typedarray.Uint8Array | HTMLImageElement | HTMLCanvasElement = js.native
   def createMesh(tilingScheme: TilingScheme, x: Double, y: Double, level: Double): js.Promise[TerrainMesh] = js.native
   def interpolateHeight(rectangle: Rectangle, longitude: Double, latitude: Double): Double = js.native
   def isChildAvailable(thisX: Double, thisY: Double, childX: Double, childY: Double): Boolean = js.native

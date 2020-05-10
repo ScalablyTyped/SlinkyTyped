@@ -1,9 +1,7 @@
 package typingsSlinky.baseui.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.baseui.AnonEventItem
 import typingsSlinky.baseui.sideNavigationMod.Item
 import typingsSlinky.baseui.sideNavigationMod.NavigationOverrides
@@ -12,31 +10,32 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Navigation
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.baseui.sideNavigationMod.Navigation] {
+object Navigation {
   @JSImport("baseui/side-navigation", "Navigation")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    activeItemId: String,
-    activePredicate: (/* item */ js.Any, /* activeItemId */ String) => Boolean = null,
-    items: js.Array[Item] = null,
-    mapItem: /* item */ Item => Item = null,
-    onChange: /* args */ AnonEventItem => _ = null,
-    overrides: NavigationOverrides = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.baseui.sideNavigationMod.Navigation] = {
-    val __obj = js.Dynamic.literal(activeItemId = activeItemId.asInstanceOf[js.Any])
-    if (activePredicate != null) __obj.updateDynamic("activePredicate")(js.Any.fromFunction2(activePredicate))
-    if (items != null) __obj.updateDynamic("items")(items.asInstanceOf[js.Any])
-    if (mapItem != null) __obj.updateDynamic("mapItem")(js.Any.fromFunction1(mapItem))
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
-    if (overrides != null) __obj.updateDynamic("overrides")(overrides.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.baseui.sideNavigationMod.Navigation] {
+    @scala.inline
+    def activePredicate(value: (/* item */ js.Any, /* activeItemId */ String) => Boolean): this.type = set("activePredicate", js.Any.fromFunction2(value))
+    @scala.inline
+    def items(value: js.Array[Item]): this.type = set("items", value.asInstanceOf[js.Any])
+    @scala.inline
+    def mapItem(value: /* item */ Item => Item): this.type = set("mapItem", js.Any.fromFunction1(value))
+    @scala.inline
+    def onChange(value: /* args */ AnonEventItem => _): this.type = set("onChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def overrides(value: NavigationOverrides): this.type = set("overrides", value.asInstanceOf[js.Any])
   }
-  type Props = NavigationProps
+  
+  def withProps(p: NavigationProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(activeItemId: String): Builder = {
+    val __props = js.Dynamic.literal(activeItemId = activeItemId.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[NavigationProps]))
+  }
 }
 

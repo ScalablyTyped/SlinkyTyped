@@ -26,17 +26,59 @@ trait UpdateCustomKeyStoreRequest extends js.Object {
 
 object UpdateCustomKeyStoreRequest {
   @scala.inline
-  def apply(
-    CustomKeyStoreId: CustomKeyStoreIdType,
-    CloudHsmClusterId: CloudHsmClusterIdType = null,
-    KeyStorePassword: KeyStorePasswordType = null,
-    NewCustomKeyStoreName: CustomKeyStoreNameType = null
-  ): UpdateCustomKeyStoreRequest = {
+  def apply(CustomKeyStoreId: CustomKeyStoreIdType): UpdateCustomKeyStoreRequest = {
     val __obj = js.Dynamic.literal(CustomKeyStoreId = CustomKeyStoreId.asInstanceOf[js.Any])
-    if (CloudHsmClusterId != null) __obj.updateDynamic("CloudHsmClusterId")(CloudHsmClusterId.asInstanceOf[js.Any])
-    if (KeyStorePassword != null) __obj.updateDynamic("KeyStorePassword")(KeyStorePassword.asInstanceOf[js.Any])
-    if (NewCustomKeyStoreName != null) __obj.updateDynamic("NewCustomKeyStoreName")(NewCustomKeyStoreName.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateCustomKeyStoreRequest]
   }
+  @scala.inline
+  implicit class UpdateCustomKeyStoreRequestOps[Self <: UpdateCustomKeyStoreRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCustomKeyStoreId(value: CustomKeyStoreIdType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CustomKeyStoreId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCloudHsmClusterId(value: CloudHsmClusterIdType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CloudHsmClusterId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCloudHsmClusterId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CloudHsmClusterId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKeyStorePassword(value: KeyStorePasswordType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyStorePassword")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKeyStorePassword: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyStorePassword")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNewCustomKeyStoreName(value: CustomKeyStoreNameType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NewCustomKeyStoreName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNewCustomKeyStoreName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NewCustomKeyStoreName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

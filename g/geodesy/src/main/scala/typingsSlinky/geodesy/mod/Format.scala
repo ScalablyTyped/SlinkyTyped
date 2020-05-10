@@ -13,12 +13,10 @@ trait Format extends js.Object
 
 object Format {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def d: typingsSlinky.geodesy.geodesyStrings.d = "d".asInstanceOf[typingsSlinky.geodesy.geodesyStrings.d]
   @scala.inline
-  def d: typingsSlinky.geodesy.geodesyStrings.d = this.cast("d")
+  def dm: typingsSlinky.geodesy.geodesyStrings.dm = "dm".asInstanceOf[typingsSlinky.geodesy.geodesyStrings.dm]
   @scala.inline
-  def dm: typingsSlinky.geodesy.geodesyStrings.dm = this.cast("dm")
-  @scala.inline
-  def dms: typingsSlinky.geodesy.geodesyStrings.dms = this.cast("dms")
+  def dms: typingsSlinky.geodesy.geodesyStrings.dms = "dms".asInstanceOf[typingsSlinky.geodesy.geodesyStrings.dms]
 }
 

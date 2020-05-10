@@ -4,35 +4,93 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait WindowsInformationProtectionApp extends js.Object {
   // If true, app is denied protection or exemption.
-  var denied: js.UndefOr[Boolean] = js.undefined
+  var denied: js.UndefOr[Boolean] = js.native
   // The app's description.
-  var description: js.UndefOr[String] = js.undefined
+  var description: js.UndefOr[String] = js.native
   // App display name.
-  var displayName: js.UndefOr[String] = js.undefined
+  var displayName: js.UndefOr[String] = js.native
   // The product name.
-  var productName: js.UndefOr[String] = js.undefined
+  var productName: js.UndefOr[String] = js.native
   // The publisher name
-  var publisherName: js.UndefOr[String] = js.undefined
+  var publisherName: js.UndefOr[String] = js.native
 }
 
 object WindowsInformationProtectionApp {
   @scala.inline
-  def apply(
-    denied: js.UndefOr[Boolean] = js.undefined,
-    description: String = null,
-    displayName: String = null,
-    productName: String = null,
-    publisherName: String = null
-  ): WindowsInformationProtectionApp = {
+  def apply(): WindowsInformationProtectionApp = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(denied)) __obj.updateDynamic("denied")(denied.asInstanceOf[js.Any])
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (displayName != null) __obj.updateDynamic("displayName")(displayName.asInstanceOf[js.Any])
-    if (productName != null) __obj.updateDynamic("productName")(productName.asInstanceOf[js.Any])
-    if (publisherName != null) __obj.updateDynamic("publisherName")(publisherName.asInstanceOf[js.Any])
     __obj.asInstanceOf[WindowsInformationProtectionApp]
   }
+  @scala.inline
+  implicit class WindowsInformationProtectionAppOps[Self <: WindowsInformationProtectionApp] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDenied(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("denied")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDenied: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("denied")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDescription(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisplayName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisplayName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProductName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("productName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProductName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("productName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPublisherName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("publisherName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPublisherName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("publisherName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,62 +1,62 @@
 package typingsSlinky.reactBootstrap.components
 
-import org.scalablytyped.runtime.StringDictionary
+import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.HTMLElement
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
+import slinky.core.ReactComponentClass
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.ReactInstance
 import typingsSlinky.reactBootstrap.overlayMod.OverlayProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Overlay
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactBootstrap.mod.Overlay] {
+object Overlay {
   @JSImport("react-bootstrap", "Overlay")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    animation: js.Any = null,
-    container: js.Any = null,
-    containerPadding: Int | Double = null,
-    onEnter: /* node */ HTMLElement => _ = null,
-    onEntered: /* node */ HTMLElement => _ = null,
-    onEntering: /* node */ HTMLElement => _ = null,
-    onExit: /* node */ HTMLElement => _ = null,
-    onExited: /* node */ HTMLElement => _ = null,
-    onExiting: /* node */ HTMLElement => _ = null,
-    onHide: js.Function = null,
-    placement: String = null,
-    rootClose: js.UndefOr[Boolean] = js.undefined,
-    shouldUpdatePosition: js.UndefOr[Boolean] = js.undefined,
-    show: js.UndefOr[Boolean] = js.undefined,
-    target: js.Function | ReactInstance = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactBootstrap.mod.Overlay] = {
-    val __obj = js.Dynamic.literal()
-    if (animation != null) __obj.updateDynamic("animation")(animation.asInstanceOf[js.Any])
-    if (container != null) __obj.updateDynamic("container")(container.asInstanceOf[js.Any])
-    if (containerPadding != null) __obj.updateDynamic("containerPadding")(containerPadding.asInstanceOf[js.Any])
-    if (onEnter != null) __obj.updateDynamic("onEnter")(js.Any.fromFunction1(onEnter))
-    if (onEntered != null) __obj.updateDynamic("onEntered")(js.Any.fromFunction1(onEntered))
-    if (onEntering != null) __obj.updateDynamic("onEntering")(js.Any.fromFunction1(onEntering))
-    if (onExit != null) __obj.updateDynamic("onExit")(js.Any.fromFunction1(onExit))
-    if (onExited != null) __obj.updateDynamic("onExited")(js.Any.fromFunction1(onExited))
-    if (onExiting != null) __obj.updateDynamic("onExiting")(js.Any.fromFunction1(onExiting))
-    if (onHide != null) __obj.updateDynamic("onHide")(onHide.asInstanceOf[js.Any])
-    if (placement != null) __obj.updateDynamic("placement")(placement.asInstanceOf[js.Any])
-    if (!js.isUndefined(rootClose)) __obj.updateDynamic("rootClose")(rootClose.asInstanceOf[js.Any])
-    if (!js.isUndefined(shouldUpdatePosition)) __obj.updateDynamic("shouldUpdatePosition")(shouldUpdatePosition.asInstanceOf[js.Any])
-    if (!js.isUndefined(show)) __obj.updateDynamic("show")(show.asInstanceOf[js.Any])
-    if (target != null) __obj.updateDynamic("target")(target.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactBootstrap.mod.Overlay] {
+    @scala.inline
+    def animation(value: js.Any): this.type = set("animation", value.asInstanceOf[js.Any])
+    @scala.inline
+    def container(value: js.Any): this.type = set("container", value.asInstanceOf[js.Any])
+    @scala.inline
+    def containerPadding(value: Double): this.type = set("containerPadding", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onEnter(value: /* node */ HTMLElement => _): this.type = set("onEnter", js.Any.fromFunction1(value))
+    @scala.inline
+    def onEntered(value: /* node */ HTMLElement => _): this.type = set("onEntered", js.Any.fromFunction1(value))
+    @scala.inline
+    def onEntering(value: /* node */ HTMLElement => _): this.type = set("onEntering", js.Any.fromFunction1(value))
+    @scala.inline
+    def onExit(value: /* node */ HTMLElement => _): this.type = set("onExit", js.Any.fromFunction1(value))
+    @scala.inline
+    def onExited(value: /* node */ HTMLElement => _): this.type = set("onExited", js.Any.fromFunction1(value))
+    @scala.inline
+    def onExiting(value: /* node */ HTMLElement => _): this.type = set("onExiting", js.Any.fromFunction1(value))
+    @scala.inline
+    def onHide(value: js.Function): this.type = set("onHide", value.asInstanceOf[js.Any])
+    @scala.inline
+    def placement(value: String): this.type = set("placement", value.asInstanceOf[js.Any])
+    @scala.inline
+    def rootClose(value: Boolean): this.type = set("rootClose", value.asInstanceOf[js.Any])
+    @scala.inline
+    def shouldUpdatePosition(value: Boolean): this.type = set("shouldUpdatePosition", value.asInstanceOf[js.Any])
+    @scala.inline
+    def show(value: Boolean): this.type = set("show", value.asInstanceOf[js.Any])
+    @scala.inline
+    def targetElement(value: Element): this.type = set("target", value.asInstanceOf[js.Any])
+    @scala.inline
+    def targetComponent(value: ReactComponentClass[js.Any]): this.type = set("target", value.asInstanceOf[js.Any])
+    @scala.inline
+    def target(value: js.Function | ReactInstance): this.type = set("target", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.reactBootstrap.mod.Overlay] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactBootstrap.mod.Overlay](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = OverlayProps
+  
+  def withProps(p: OverlayProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Overlay.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

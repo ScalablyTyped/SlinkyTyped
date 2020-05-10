@@ -28,8 +28,6 @@ object MKRadioButton extends js.Object {
             Unit
           ]
     ) = this()
-    /* CompleteClass */
-    override var buttons: js.Array[_] = js.native
     def add(btn: typingsSlinky.reactNativeMaterialKit.mod.MKRadioButton.MKRadioButton): Unit = js.native
     def onChecked(btn: typingsSlinky.reactNativeMaterialKit.mod.MKRadioButton.MKRadioButton, checked: Boolean): Unit = js.native
     def onRemoved(btn: typingsSlinky.reactNativeMaterialKit.mod.MKRadioButton.MKRadioButton): Unit = js.native

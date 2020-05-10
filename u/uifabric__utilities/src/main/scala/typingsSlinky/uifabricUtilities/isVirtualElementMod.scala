@@ -1,6 +1,6 @@
 package typingsSlinky.uifabricUtilities
 
-import typingsSlinky.std.HTMLElement
+import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.uifabricUtilities.ivirtualelementMod.IVirtualElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`

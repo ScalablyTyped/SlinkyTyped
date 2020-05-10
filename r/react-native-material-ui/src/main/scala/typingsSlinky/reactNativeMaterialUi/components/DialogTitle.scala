@@ -1,10 +1,7 @@
 package typingsSlinky.reactNativeMaterialUi.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactNativeMaterialUi.AnonTitleContainer
 import typingsSlinky.reactNativeMaterialUi.mod.Dialog.Title
 import typingsSlinky.reactNativeMaterialUi.mod.DialogTitleProps
@@ -12,20 +9,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object DialogTitle
-  extends ExternalComponentWithAttributesWithRefType[tag.type, Title] {
+object DialogTitle {
   @JSImport("react-native-material-ui", "Dialog.Title")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(style: AnonTitleContainer = null, _overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, Title] = {
-    val __obj = js.Dynamic.literal()
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, Title] {
+    @scala.inline
+    def style(value: AnonTitleContainer): this.type = set("style", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, Title] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactNativeMaterialUi.mod.Dialog.Title](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = DialogTitleProps
+  
+  def withProps(p: DialogTitleProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: DialogTitle.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

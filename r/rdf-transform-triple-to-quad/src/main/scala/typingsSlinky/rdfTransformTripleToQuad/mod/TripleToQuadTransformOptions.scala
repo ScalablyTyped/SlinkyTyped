@@ -6,16 +6,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait TripleToQuadTransformOptions extends js.Object {
-  var factory: DataFactory[Quad]
+  var factory: DataFactory[Quad, Quad] = js.native
 }
 
 object TripleToQuadTransformOptions {
   @scala.inline
-  def apply(factory: DataFactory[Quad]): TripleToQuadTransformOptions = {
+  def apply(factory: DataFactory[Quad, Quad]): TripleToQuadTransformOptions = {
     val __obj = js.Dynamic.literal(factory = factory.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[TripleToQuadTransformOptions]
   }
+  @scala.inline
+  implicit class TripleToQuadTransformOptionsOps[Self <: TripleToQuadTransformOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFactory(value: DataFactory[Quad, Quad]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("factory")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

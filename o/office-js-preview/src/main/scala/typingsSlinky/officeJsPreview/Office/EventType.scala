@@ -37,7 +37,8 @@ object EventType extends js.Object {
   /**
     * Triggers when any date or time of the selected appointment or series is changed in Outlook. Supported with task pane only.
     * 
-    * The event handler receives an argument of type `Office.AppointmentTimeChangedEventArgs`.
+    * The event handler receives an argument of type
+    * {@link https://docs.microsoft.com/javascript/api/outlook/office.appointmenttimechangedeventargs?view=outlook-js-1.7 | Office.AppointmentTimeChangedEventArgs}.
     * 
     * [Api set: Mailbox 1.7]
     */
@@ -47,7 +48,8 @@ object EventType extends js.Object {
   /**
     * Triggers when an attachment is added to or removed from an item. Supported with task pane only.
     * 
-    * The event handler receives an argument of type `Office.AttachmentsChangedEventArgs`.
+    * The event handler receives an argument of type
+    * {@link https://docs.microsoft.com/javascript/api/outlook/office.attachmentschangedeventargs?view=outlook-js-1.8 | Office.AttachmentsChangedEventArgs}.
     * 
     * [Api set: Mailbox 1.8]
     */
@@ -84,10 +86,18 @@ object EventType extends js.Object {
   sealed trait DialogEventReceived extends EventType
   
   /**
-    * Triggers when Dialog sends a message via MessageParent.
+    * Triggers when a dialog sends a message via `messageParent`.
     */
   @js.native
   sealed trait DialogMessageReceived extends EventType
+  
+  /**
+    * Triggers when a host page sends a message to a child dialog box with `messageChild`.
+    * 
+    * @beta 
+    */
+  @js.native
+  sealed trait DialogParentMessageReceived extends EventType
   
   /**
     * Triggers when a document-level selection happens.
@@ -102,7 +112,8 @@ object EventType extends js.Object {
   /**
     * Triggers when the appointment location is changed in Outlook. Supported with task pane only.
     * 
-    * The event handler receives an argument of type `Office.EnhancedLocationsChangedEventArgs`.
+    * The event handler receives an argument of type
+    * {@link https://docs.microsoft.com/javascript/api/outlook/office.enhancedlocationschangedeventargs?view=outlook-js-1.8 | Office.EnhancedLocationsChangedEventArgs}.
     * 
     * [Api set: Mailbox 1.8]
     */
@@ -138,7 +149,8 @@ object EventType extends js.Object {
   /**
     * Triggers when the OfficeTheme is changed in Outlook. Supported with task pane only.
     * 
-    * The event handler receives an argument of type `Office.OfficeThemeChangedEventArgs`.
+    * The event handler receives an argument of type
+    * {@link https://docs.microsoft.com/javascript/api/outlook/office.officethemechangedeventargs?view=outlook-js-preview | Office.OfficeThemeChangedEventArgs}.
     * 
     * [Api set: Mailbox Preview]
     * 
@@ -150,7 +162,8 @@ object EventType extends js.Object {
   /**
     * Triggers when the recipient list of the selected item or the appointment location is changed in Outlook. Supported with task pane only.
     * 
-    * The event handler receives an argument of type `Office.RecipientsChangedEventArgs`.
+    * The event handler receives an argument of type
+    * {@link https://docs.microsoft.com/javascript/api/outlook/office.recipientschangedeventargs?view=outlook-js-1.7 | Office.RecipientsChangedEventArgs}.
     * 
     * [Api set: Mailbox 1.7]
     */
@@ -160,7 +173,8 @@ object EventType extends js.Object {
   /**
     * Triggers when the recurrence pattern of the selected series is changed in Outlook. Supported with task pane only.
     * 
-    * The event handler receives an argument of type `Office.RecurrenceChangedEventArgs`.
+    * The event handler receives an argument of type
+    * {@link https://docs.microsoft.com/javascript/api/outlook/office.recurrencechangedeventargs?view=outlook-js-1.7 | Office.RecurrenceChangedEventArgs}.
     * 
     * [Api set: Mailbox 1.7]
     */
@@ -219,42 +233,45 @@ object EventType extends js.Object {
   object DialogMessageReceived extends TopLevel[DialogMessageReceived with Double]
   
   /* 7 */ @js.native
-  object DocumentSelectionChanged extends TopLevel[DocumentSelectionChanged with Double]
+  object DialogParentMessageReceived extends TopLevel[DialogParentMessageReceived with Double]
   
   /* 8 */ @js.native
-  object EnhancedLocationsChanged extends TopLevel[EnhancedLocationsChanged with Double]
+  object DocumentSelectionChanged extends TopLevel[DocumentSelectionChanged with Double]
   
   /* 9 */ @js.native
-  object ItemChanged extends TopLevel[ItemChanged with Double]
+  object EnhancedLocationsChanged extends TopLevel[EnhancedLocationsChanged with Double]
   
   /* 10 */ @js.native
-  object NodeDeleted extends TopLevel[NodeDeleted with Double]
+  object ItemChanged extends TopLevel[ItemChanged with Double]
   
   /* 11 */ @js.native
-  object NodeInserted extends TopLevel[NodeInserted with Double]
+  object NodeDeleted extends TopLevel[NodeDeleted with Double]
   
   /* 12 */ @js.native
-  object NodeReplaced extends TopLevel[NodeReplaced with Double]
+  object NodeInserted extends TopLevel[NodeInserted with Double]
   
   /* 13 */ @js.native
-  object OfficeThemeChanged extends TopLevel[OfficeThemeChanged with Double]
+  object NodeReplaced extends TopLevel[NodeReplaced with Double]
   
   /* 14 */ @js.native
-  object RecipientsChanged extends TopLevel[RecipientsChanged with Double]
+  object OfficeThemeChanged extends TopLevel[OfficeThemeChanged with Double]
   
   /* 15 */ @js.native
-  object RecurrenceChanged extends TopLevel[RecurrenceChanged with Double]
+  object RecipientsChanged extends TopLevel[RecipientsChanged with Double]
   
   /* 16 */ @js.native
-  object ResourceSelectionChanged extends TopLevel[ResourceSelectionChanged with Double]
+  object RecurrenceChanged extends TopLevel[RecurrenceChanged with Double]
   
   /* 17 */ @js.native
-  object SettingsChanged extends TopLevel[SettingsChanged with Double]
+  object ResourceSelectionChanged extends TopLevel[ResourceSelectionChanged with Double]
   
   /* 18 */ @js.native
-  object TaskSelectionChanged extends TopLevel[TaskSelectionChanged with Double]
+  object SettingsChanged extends TopLevel[SettingsChanged with Double]
   
   /* 19 */ @js.native
+  object TaskSelectionChanged extends TopLevel[TaskSelectionChanged with Double]
+  
+  /* 20 */ @js.native
   object ViewSelectionChanged extends TopLevel[ViewSelectionChanged with Double]
   
 }

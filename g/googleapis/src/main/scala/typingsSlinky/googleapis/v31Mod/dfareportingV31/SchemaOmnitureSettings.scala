@@ -23,14 +23,41 @@ trait SchemaOmnitureSettings extends js.Object {
 
 object SchemaOmnitureSettings {
   @scala.inline
-  def apply(
-    omnitureCostDataEnabled: js.UndefOr[Boolean] = js.undefined,
-    omnitureIntegrationEnabled: js.UndefOr[Boolean] = js.undefined
-  ): SchemaOmnitureSettings = {
+  def apply(): SchemaOmnitureSettings = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(omnitureCostDataEnabled)) __obj.updateDynamic("omnitureCostDataEnabled")(omnitureCostDataEnabled.asInstanceOf[js.Any])
-    if (!js.isUndefined(omnitureIntegrationEnabled)) __obj.updateDynamic("omnitureIntegrationEnabled")(omnitureIntegrationEnabled.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaOmnitureSettings]
   }
+  @scala.inline
+  implicit class SchemaOmnitureSettingsOps[Self <: SchemaOmnitureSettings] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOmnitureCostDataEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("omnitureCostDataEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOmnitureCostDataEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("omnitureCostDataEnabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOmnitureIntegrationEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("omnitureIntegrationEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOmnitureIntegrationEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("omnitureIntegrationEnabled")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

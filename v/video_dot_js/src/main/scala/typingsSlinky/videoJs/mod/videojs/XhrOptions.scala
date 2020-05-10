@@ -17,60 +17,218 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait XhrOptions extends js.Object {
-  var beforeSend: js.UndefOr[js.Function1[/* xhrObject */ XMLHttpRequest, Unit]] = js.undefined
-  var body: js.UndefOr[js.Any] = js.undefined
-  var headers: js.UndefOr[js.Any] = js.undefined
-  var json: js.UndefOr[Boolean] = js.undefined
-  var method: js.UndefOr[DELETE | GET | HEAD | OPTIONS | POST | PUT] = js.undefined
-  var password: js.UndefOr[String] = js.undefined
-  var responseType: js.UndefOr[_empty | arraybuffer | blob | document | json | text] = js.undefined
-  var sync: js.UndefOr[Boolean] = js.undefined
-  var timeout: js.UndefOr[Double] = js.undefined
-  var uri: js.UndefOr[String] = js.undefined
-  var url: js.UndefOr[String] = js.undefined
-  var useXDR: js.UndefOr[Boolean] = js.undefined
-  var username: js.UndefOr[String] = js.undefined
-  var withCredentials: js.UndefOr[Boolean] = js.undefined
-  var xhr: js.UndefOr[XMLHttpRequest] = js.undefined
+  var beforeSend: js.UndefOr[js.Function1[/* xhrObject */ XMLHttpRequest, Unit]] = js.native
+  var body: js.UndefOr[js.Any] = js.native
+  var headers: js.UndefOr[js.Any] = js.native
+  var json: js.UndefOr[Boolean] = js.native
+  var method: js.UndefOr[DELETE | GET | HEAD | OPTIONS | POST | PUT] = js.native
+  var password: js.UndefOr[String] = js.native
+  var responseType: js.UndefOr[_empty | arraybuffer | blob | document | json | text] = js.native
+  var sync: js.UndefOr[Boolean] = js.native
+  var timeout: js.UndefOr[Double] = js.native
+  var uri: js.UndefOr[String] = js.native
+  var url: js.UndefOr[String] = js.native
+  var useXDR: js.UndefOr[Boolean] = js.native
+  var username: js.UndefOr[String] = js.native
+  var withCredentials: js.UndefOr[Boolean] = js.native
+  var xhr: js.UndefOr[XMLHttpRequest] = js.native
 }
 
 object XhrOptions {
   @scala.inline
-  def apply(
-    beforeSend: /* xhrObject */ XMLHttpRequest => Unit = null,
-    body: js.Any = null,
-    headers: js.Any = null,
-    json: js.UndefOr[Boolean] = js.undefined,
-    method: DELETE | GET | HEAD | OPTIONS | POST | PUT = null,
-    password: String = null,
-    responseType: _empty | arraybuffer | blob | document | json | text = null,
-    sync: js.UndefOr[Boolean] = js.undefined,
-    timeout: Int | Double = null,
-    uri: String = null,
-    url: String = null,
-    useXDR: js.UndefOr[Boolean] = js.undefined,
-    username: String = null,
-    withCredentials: js.UndefOr[Boolean] = js.undefined,
-    xhr: XMLHttpRequest = null
-  ): XhrOptions = {
+  def apply(): XhrOptions = {
     val __obj = js.Dynamic.literal()
-    if (beforeSend != null) __obj.updateDynamic("beforeSend")(js.Any.fromFunction1(beforeSend))
-    if (body != null) __obj.updateDynamic("body")(body.asInstanceOf[js.Any])
-    if (headers != null) __obj.updateDynamic("headers")(headers.asInstanceOf[js.Any])
-    if (!js.isUndefined(json)) __obj.updateDynamic("json")(json.asInstanceOf[js.Any])
-    if (method != null) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
-    if (password != null) __obj.updateDynamic("password")(password.asInstanceOf[js.Any])
-    if (responseType != null) __obj.updateDynamic("responseType")(responseType.asInstanceOf[js.Any])
-    if (!js.isUndefined(sync)) __obj.updateDynamic("sync")(sync.asInstanceOf[js.Any])
-    if (timeout != null) __obj.updateDynamic("timeout")(timeout.asInstanceOf[js.Any])
-    if (uri != null) __obj.updateDynamic("uri")(uri.asInstanceOf[js.Any])
-    if (url != null) __obj.updateDynamic("url")(url.asInstanceOf[js.Any])
-    if (!js.isUndefined(useXDR)) __obj.updateDynamic("useXDR")(useXDR.asInstanceOf[js.Any])
-    if (username != null) __obj.updateDynamic("username")(username.asInstanceOf[js.Any])
-    if (!js.isUndefined(withCredentials)) __obj.updateDynamic("withCredentials")(withCredentials.asInstanceOf[js.Any])
-    if (xhr != null) __obj.updateDynamic("xhr")(xhr.asInstanceOf[js.Any])
     __obj.asInstanceOf[XhrOptions]
   }
+  @scala.inline
+  implicit class XhrOptionsOps[Self <: XhrOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBeforeSend(value: /* xhrObject */ XMLHttpRequest => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeSend")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutBeforeSend: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeSend")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBody(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBody: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeaders(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeaders: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withJson(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("json")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutJson: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("json")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMethod(value: DELETE | GET | HEAD | OPTIONS | POST | PUT): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMethod: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPassword(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("password")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPassword: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("password")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResponseType(value: _empty | arraybuffer | blob | document | json | text): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("responseType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResponseType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("responseType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSync(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sync")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSync: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sync")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimeout(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimeout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUri(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("uri")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUri: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("uri")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUseXDR(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useXDR")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUseXDR: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useXDR")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUsername(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("username")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUsername: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("username")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWithCredentials(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("withCredentials")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWithCredentials: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("withCredentials")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withXhr(value: XMLHttpRequest): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("xhr")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutXhr: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("xhr")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,20 +1,20 @@
 organization := "org.scalablytyped.slinky"
 name := "activex-access"
-version := "14.0-dt-20200225Z-e0185c"
+version := "14.0-dt-20200225Z-78bc0e"
 scalaVersion := "2.13.1"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
-  "me.shadaj" %%% "slinky-web" % "0.6.4",
-  "org.scalablytyped.slinky" %%% "activex-adodb" % "6.1-dt-20200225Z-895317",
-  "org.scalablytyped.slinky" %%% "activex-dao" % "16.0-dt-20200225Z-8bf872",
-  "org.scalablytyped.slinky" %%% "activex-office" % "16.0-dt-20200225Z-48205c",
-  "org.scalablytyped.slinky" %%% "activex-outlook" % "14.0-dt-20200225Z-9ebe1a",
-  "org.scalablytyped.slinky" %%% "activex-stdole" % "2.0-dt-20200225Z-c95855",
-  "org.scalablytyped.slinky" %%% "activex-vbide" % "14.0-dt-20200225Z-021f47",
-  "org.scalablytyped.slinky" %%% "std" % "3.8-16327f")
+  "me.shadaj" %%% "slinky-web" % "0.6.5",
+  "org.scalablytyped.slinky" %%% "activex-adodb" % "6.1-dt-20200225Z-4f6409",
+  "org.scalablytyped.slinky" %%% "activex-dao" % "16.0-dt-20200225Z-92178c",
+  "org.scalablytyped.slinky" %%% "activex-office" % "16.0-dt-20200225Z-41ca24",
+  "org.scalablytyped.slinky" %%% "activex-outlook" % "14.0-dt-20200225Z-930cb9",
+  "org.scalablytyped.slinky" %%% "activex-stdole" % "2.0-dt-20200225Z-9879c5",
+  "org.scalablytyped.slinky" %%% "activex-vbide" % "14.0-dt-20200225Z-790053",
+  "org.scalablytyped.slinky" %%% "std" % "3.8-8ac92e")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-g:notailcalls", "-P:scalajs:sjsDefinedByDefault")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
-bintrayRepository := "SlinkyTyped"
-resolvers += Resolver.bintrayRepo("oyvindberg", "SlinkyTyped")
+bintrayRepository := "ScalablyTyped"
+resolvers += Resolver.bintrayRepo("oyvindberg", "ScalablyTyped")

@@ -1,61 +1,56 @@
 package typingsSlinky.reactVisibilitySensor.components
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLElement
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
+import typingsSlinky.reactVisibilitySensor.mod.Props
 import typingsSlinky.reactVisibilitySensor.mod.Shape
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactVisibilitySensor
-  extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+object ReactVisibilitySensor {
   @JSImport("react-visibility-sensor", JSImport.Namespace)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    active: js.UndefOr[Boolean] = js.undefined,
-    containment: HTMLElement = null,
-    delayedCall: js.UndefOr[Boolean] = js.undefined,
-    intervalCheck: js.UndefOr[Boolean] = js.undefined,
-    intervalDelay: Int | Double = null,
-    minTopValue: Int | Double = null,
-    offset: Shape = null,
-    onChange: /* isVisible */ Boolean => Unit = null,
-    partialVisibility: js.UndefOr[Boolean] = js.undefined,
-    resizeCheck: js.UndefOr[Boolean] = js.undefined,
-    resizeDelay: Int | Double = null,
-    resizeThrottle: Int | Double = null,
-    scrollCheck: js.UndefOr[Boolean] = js.undefined,
-    scrollDelay: Int | Double = null,
-    scrollThrottle: Int | Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, js.Object] = {
-    val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(active)) __obj.updateDynamic("active")(active.asInstanceOf[js.Any])
-    if (containment != null) __obj.updateDynamic("containment")(containment.asInstanceOf[js.Any])
-    if (!js.isUndefined(delayedCall)) __obj.updateDynamic("delayedCall")(delayedCall.asInstanceOf[js.Any])
-    if (!js.isUndefined(intervalCheck)) __obj.updateDynamic("intervalCheck")(intervalCheck.asInstanceOf[js.Any])
-    if (intervalDelay != null) __obj.updateDynamic("intervalDelay")(intervalDelay.asInstanceOf[js.Any])
-    if (minTopValue != null) __obj.updateDynamic("minTopValue")(minTopValue.asInstanceOf[js.Any])
-    if (offset != null) __obj.updateDynamic("offset")(offset.asInstanceOf[js.Any])
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
-    if (!js.isUndefined(partialVisibility)) __obj.updateDynamic("partialVisibility")(partialVisibility.asInstanceOf[js.Any])
-    if (!js.isUndefined(resizeCheck)) __obj.updateDynamic("resizeCheck")(resizeCheck.asInstanceOf[js.Any])
-    if (resizeDelay != null) __obj.updateDynamic("resizeDelay")(resizeDelay.asInstanceOf[js.Any])
-    if (resizeThrottle != null) __obj.updateDynamic("resizeThrottle")(resizeThrottle.asInstanceOf[js.Any])
-    if (!js.isUndefined(scrollCheck)) __obj.updateDynamic("scrollCheck")(scrollCheck.asInstanceOf[js.Any])
-    if (scrollDelay != null) __obj.updateDynamic("scrollDelay")(scrollDelay.asInstanceOf[js.Any])
-    if (scrollThrottle != null) __obj.updateDynamic("scrollThrottle")(scrollThrottle.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, js.Object] {
+    @scala.inline
+    def active(value: Boolean): this.type = set("active", value.asInstanceOf[js.Any])
+    @scala.inline
+    def containment(value: HTMLElement): this.type = set("containment", value.asInstanceOf[js.Any])
+    @scala.inline
+    def delayedCall(value: Boolean): this.type = set("delayedCall", value.asInstanceOf[js.Any])
+    @scala.inline
+    def intervalCheck(value: Boolean): this.type = set("intervalCheck", value.asInstanceOf[js.Any])
+    @scala.inline
+    def intervalDelay(value: Double): this.type = set("intervalDelay", value.asInstanceOf[js.Any])
+    @scala.inline
+    def minTopValue(value: Double): this.type = set("minTopValue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def offset(value: Shape): this.type = set("offset", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onChange(value: /* isVisible */ Boolean => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def partialVisibility(value: Boolean): this.type = set("partialVisibility", value.asInstanceOf[js.Any])
+    @scala.inline
+    def resizeCheck(value: Boolean): this.type = set("resizeCheck", value.asInstanceOf[js.Any])
+    @scala.inline
+    def resizeDelay(value: Double): this.type = set("resizeDelay", value.asInstanceOf[js.Any])
+    @scala.inline
+    def resizeThrottle(value: Double): this.type = set("resizeThrottle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def scrollCheck(value: Boolean): this.type = set("scrollCheck", value.asInstanceOf[js.Any])
+    @scala.inline
+    def scrollDelay(value: Double): this.type = set("scrollDelay", value.asInstanceOf[js.Any])
+    @scala.inline
+    def scrollThrottle(value: Double): this.type = set("scrollThrottle", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, js.Object] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, js.Object](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = typingsSlinky.reactVisibilitySensor.mod.Props
+  
+  def withProps(p: Props): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: ReactVisibilitySensor.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

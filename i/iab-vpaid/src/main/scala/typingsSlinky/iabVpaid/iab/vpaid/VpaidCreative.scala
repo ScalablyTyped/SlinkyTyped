@@ -18,7 +18,7 @@ import typingsSlinky.iabVpaid.iabVpaidStrings.AdUserClose
 import typingsSlinky.iabVpaid.iabVpaidStrings.AdUserMinimize
 import typingsSlinky.iabVpaid.iabVpaidStrings.AdVideoComplete
 import typingsSlinky.iabVpaid.iabVpaidStrings.AdVideoFirstQuartile
-import typingsSlinky.iabVpaid.iabVpaidStrings.AdVideoMidPoint
+import typingsSlinky.iabVpaid.iabVpaidStrings.AdVideoMidpoint
 import typingsSlinky.iabVpaid.iabVpaidStrings.AdVideoStart
 import typingsSlinky.iabVpaid.iabVpaidStrings.AdVideoThirdQuartile
 import typingsSlinky.iabVpaid.iabVpaidStrings.AdVolumeChange
@@ -492,9 +492,9 @@ trait VpaidCreative extends js.Object {
   @JSName("subscribe")
   def subscribe_AdVideoFirstQuartile(fn: js.Function0[Unit], event: AdVideoFirstQuartile, listenerScope: js.Object): Unit = js.native
   @JSName("subscribe")
-  def subscribe_AdVideoMidPoint(fn: js.Function0[Unit], event: AdVideoMidPoint): Unit = js.native
+  def subscribe_AdVideoMidpoint(fn: js.Function0[Unit], event: AdVideoMidpoint): Unit = js.native
   @JSName("subscribe")
-  def subscribe_AdVideoMidPoint(fn: js.Function0[Unit], event: AdVideoMidPoint, listenerScope: js.Object): Unit = js.native
+  def subscribe_AdVideoMidpoint(fn: js.Function0[Unit], event: AdVideoMidpoint, listenerScope: js.Object): Unit = js.native
   @JSName("subscribe")
   def subscribe_AdVideoStart(fn: js.Function0[Unit], event: AdVideoStart): Unit = js.native
   @JSName("subscribe")
@@ -550,7 +550,7 @@ trait VpaidCreative extends js.Object {
   @JSName("unsubscribe")
   def unsubscribe_AdVideoFirstQuartile(fn: js.Function0[Unit], event: AdVideoFirstQuartile): Unit = js.native
   @JSName("unsubscribe")
-  def unsubscribe_AdVideoMidPoint(fn: js.Function0[Unit], event: AdVideoMidPoint): Unit = js.native
+  def unsubscribe_AdVideoMidpoint(fn: js.Function0[Unit], event: AdVideoMidpoint): Unit = js.native
   @JSName("unsubscribe")
   def unsubscribe_AdVideoStart(fn: js.Function0[Unit], event: AdVideoStart): Unit = js.native
   @JSName("unsubscribe")

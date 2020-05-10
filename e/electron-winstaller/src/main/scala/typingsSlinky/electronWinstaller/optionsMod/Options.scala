@@ -4,180 +4,443 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Options extends js.Object {
   /**
     * The folder path of your Electron app
     */
-  var appDirectory: String
+  var appDirectory: String = js.native
   /**
     * The authors value for the nuget package metadata.
     *
     * Defaults to the `author` field from your app's package.json file when unspecified.
     */
-  var authors: js.UndefOr[String] = js.undefined
+  var authors: js.UndefOr[String] = js.native
   /**
     * The path to an Authenticode Code Signing Certificate
     */
-  var certificateFile: js.UndefOr[String] = js.undefined
+  var certificateFile: js.UndefOr[String] = js.native
   /**
     * The password to decrypt the certificate given in `certificateFile`
     */
-  var certificatePassword: js.UndefOr[String] = js.undefined
+  var certificatePassword: js.UndefOr[String] = js.native
   /**
     * The copyright value for the nuget package metadata.
     *
     * Defaults to a generated copyright with `authors` or `owners`.
     */
-  var copyright: js.UndefOr[String] = js.undefined
+  var copyright: js.UndefOr[String] = js.native
   /**
     * The description value for the nuget package metadata.
     *
     * Defaults to the `description` field from your app's package.json file when unspecified.
     */
-  var description: js.UndefOr[String] = js.undefined
+  var description: js.UndefOr[String] = js.native
   /**
     * The name of your app's main `.exe` file.
     *
     * This uses the `name` field in your app's package.json file with an added `.exe` extension when unspecified.
     */
-  var exe: js.UndefOr[String] = js.undefined
-  var fixUpPaths: js.UndefOr[Boolean] = js.undefined
-  var frameworkVersion: js.UndefOr[String] = js.undefined
+  var exe: js.UndefOr[String] = js.native
+  var fixUpPaths: js.UndefOr[Boolean] = js.native
+  var frameworkVersion: js.UndefOr[String] = js.native
   /**
     * A URL to an ICO file to use as the application icon (displayed in Control Panel > Programs and Features).
     *
     * Defaults to the Atom icon.
     */
-  var iconUrl: js.UndefOr[String] = js.undefined
+  var iconUrl: js.UndefOr[String] = js.native
   /**
     * The local path to a `.gif` file to display during install.
     */
-  var loadingGif: js.UndefOr[String] = js.undefined
+  var loadingGif: js.UndefOr[String] = js.native
   /**
     * Windows Application Model ID (appId).
     *
     * Defaults to the name field in your app's package.json file.
     */
-  var name: js.UndefOr[String] = js.undefined
+  var name: js.UndefOr[String] = js.native
   /**
     * Should Squirrel.Windows delta packages? (disable only if necessary, they are a Good Thing)
     */
-  var noDelta: js.UndefOr[Boolean] = js.undefined
+  var noDelta: js.UndefOr[Boolean] = js.native
   /**
     * Should Squirrel.Windows create an MSI installer?
     */
-  var noMsi: js.UndefOr[Boolean] = js.undefined
+  var noMsi: js.UndefOr[Boolean] = js.native
   /**
     * The folder path to create the .exe installer in.
     *
     * Defaults to the installer folder at the project root.
     */
-  var outputDirectory: js.UndefOr[String] = js.undefined
+  var outputDirectory: js.UndefOr[String] = js.native
   /**
     * The owners value for the nuget package metadata.
     *
     * Defaults to the `authors` field when unspecified.
     */
-  var owners: js.UndefOr[String] = js.undefined
+  var owners: js.UndefOr[String] = js.native
   /**
     * A URL to your existing updates. If given, these will be downloaded to create delta updates
     */
-  var remoteReleases: js.UndefOr[String] = js.undefined
+  var remoteReleases: js.UndefOr[String] = js.native
   /**
     * Authentication token for remote updates
     */
-  var remoteToken: js.UndefOr[String] = js.undefined
+  var remoteToken: js.UndefOr[String] = js.native
   /**
     * The name to use for the generated Setup.exe file
     */
-  var setupExe: js.UndefOr[String] = js.undefined
+  var setupExe: js.UndefOr[String] = js.native
   /**
     * The ICO file to use as the icon for the generated Setup.exe
     */
-  var setupIcon: js.UndefOr[String] = js.undefined
+  var setupIcon: js.UndefOr[String] = js.native
   /**
     * The name to use for the generated Setup.msi file
     */
-  var setupMsi: js.UndefOr[String] = js.undefined
+  var setupMsi: js.UndefOr[String] = js.native
   /**
     * Params to pass to signtool.
     *
     * Overrides `certificateFile` and `certificatePassword`.
     */
-  var signWithParams: js.UndefOr[String] = js.undefined
-  var skipUpdateIcon: js.UndefOr[Boolean] = js.undefined
+  var signWithParams: js.UndefOr[String] = js.native
+  var skipUpdateIcon: js.UndefOr[Boolean] = js.native
   /**
     * The title value for the nuget package metadata.
     *
     * Defaults to the `productName` field and then the `name` field from your app's package.json file when unspecified.
     */
-  var title: js.UndefOr[String] = js.undefined
-  var usePackageJson: js.UndefOr[Boolean] = js.undefined
+  var title: js.UndefOr[String] = js.native
+  var usePackageJson: js.UndefOr[Boolean] = js.native
   /**
     * The version value for the nuget package metadata.
     *
     * Defaults to the `version` field from your app's package.json file when unspecified.
     */
-  var version: js.UndefOr[String] = js.undefined
+  var version: js.UndefOr[String] = js.native
 }
 
 object Options {
   @scala.inline
-  def apply(
-    appDirectory: String,
-    authors: String = null,
-    certificateFile: String = null,
-    certificatePassword: String = null,
-    copyright: String = null,
-    description: String = null,
-    exe: String = null,
-    fixUpPaths: js.UndefOr[Boolean] = js.undefined,
-    frameworkVersion: String = null,
-    iconUrl: String = null,
-    loadingGif: String = null,
-    name: String = null,
-    noDelta: js.UndefOr[Boolean] = js.undefined,
-    noMsi: js.UndefOr[Boolean] = js.undefined,
-    outputDirectory: String = null,
-    owners: String = null,
-    remoteReleases: String = null,
-    remoteToken: String = null,
-    setupExe: String = null,
-    setupIcon: String = null,
-    setupMsi: String = null,
-    signWithParams: String = null,
-    skipUpdateIcon: js.UndefOr[Boolean] = js.undefined,
-    title: String = null,
-    usePackageJson: js.UndefOr[Boolean] = js.undefined,
-    version: String = null
-  ): Options = {
+  def apply(appDirectory: String): Options = {
     val __obj = js.Dynamic.literal(appDirectory = appDirectory.asInstanceOf[js.Any])
-    if (authors != null) __obj.updateDynamic("authors")(authors.asInstanceOf[js.Any])
-    if (certificateFile != null) __obj.updateDynamic("certificateFile")(certificateFile.asInstanceOf[js.Any])
-    if (certificatePassword != null) __obj.updateDynamic("certificatePassword")(certificatePassword.asInstanceOf[js.Any])
-    if (copyright != null) __obj.updateDynamic("copyright")(copyright.asInstanceOf[js.Any])
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (exe != null) __obj.updateDynamic("exe")(exe.asInstanceOf[js.Any])
-    if (!js.isUndefined(fixUpPaths)) __obj.updateDynamic("fixUpPaths")(fixUpPaths.asInstanceOf[js.Any])
-    if (frameworkVersion != null) __obj.updateDynamic("frameworkVersion")(frameworkVersion.asInstanceOf[js.Any])
-    if (iconUrl != null) __obj.updateDynamic("iconUrl")(iconUrl.asInstanceOf[js.Any])
-    if (loadingGif != null) __obj.updateDynamic("loadingGif")(loadingGif.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (!js.isUndefined(noDelta)) __obj.updateDynamic("noDelta")(noDelta.asInstanceOf[js.Any])
-    if (!js.isUndefined(noMsi)) __obj.updateDynamic("noMsi")(noMsi.asInstanceOf[js.Any])
-    if (outputDirectory != null) __obj.updateDynamic("outputDirectory")(outputDirectory.asInstanceOf[js.Any])
-    if (owners != null) __obj.updateDynamic("owners")(owners.asInstanceOf[js.Any])
-    if (remoteReleases != null) __obj.updateDynamic("remoteReleases")(remoteReleases.asInstanceOf[js.Any])
-    if (remoteToken != null) __obj.updateDynamic("remoteToken")(remoteToken.asInstanceOf[js.Any])
-    if (setupExe != null) __obj.updateDynamic("setupExe")(setupExe.asInstanceOf[js.Any])
-    if (setupIcon != null) __obj.updateDynamic("setupIcon")(setupIcon.asInstanceOf[js.Any])
-    if (setupMsi != null) __obj.updateDynamic("setupMsi")(setupMsi.asInstanceOf[js.Any])
-    if (signWithParams != null) __obj.updateDynamic("signWithParams")(signWithParams.asInstanceOf[js.Any])
-    if (!js.isUndefined(skipUpdateIcon)) __obj.updateDynamic("skipUpdateIcon")(skipUpdateIcon.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
-    if (!js.isUndefined(usePackageJson)) __obj.updateDynamic("usePackageJson")(usePackageJson.asInstanceOf[js.Any])
-    if (version != null) __obj.updateDynamic("version")(version.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
+  @scala.inline
+  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAppDirectory(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appDirectory")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAuthors(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("authors")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAuthors: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("authors")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCertificateFile(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("certificateFile")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCertificateFile: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("certificateFile")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCertificatePassword(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("certificatePassword")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCertificatePassword: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("certificatePassword")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCopyright(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("copyright")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCopyright: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("copyright")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDescription(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExe(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exe")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExe: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exe")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFixUpPaths(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixUpPaths")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFixUpPaths: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixUpPaths")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFrameworkVersion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("frameworkVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFrameworkVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("frameworkVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIconUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iconUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIconUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iconUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLoadingGif(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loadingGif")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLoadingGif: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loadingGif")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNoDelta(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noDelta")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNoDelta: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noDelta")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNoMsi(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noMsi")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNoMsi: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noMsi")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOutputDirectory(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outputDirectory")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOutputDirectory: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outputDirectory")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOwners(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("owners")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOwners: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("owners")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRemoteReleases(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("remoteReleases")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRemoteReleases: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("remoteReleases")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRemoteToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("remoteToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRemoteToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("remoteToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSetupExe(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setupExe")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSetupExe: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setupExe")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSetupIcon(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setupIcon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSetupIcon: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setupIcon")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSetupMsi(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setupMsi")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSetupMsi: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setupMsi")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSignWithParams(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("signWithParams")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSignWithParams: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("signWithParams")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSkipUpdateIcon(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("skipUpdateIcon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSkipUpdateIcon: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("skipUpdateIcon")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUsePackageJson(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("usePackageJson")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUsePackageJson: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("usePackageJson")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVersion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

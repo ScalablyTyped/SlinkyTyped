@@ -5,16 +5,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait VerticalAlignProps[TLength] extends js.Object {
-  val verticalAlign: js.UndefOr[ResponsiveValue[VerticalAlignProperty[TLength]]] = js.undefined
+  val verticalAlign: js.UndefOr[ResponsiveValue[VerticalAlignProperty[TLength]]] = js.native
 }
 
 object VerticalAlignProps {
   @scala.inline
-  def apply[TLength](verticalAlign: ResponsiveValue[VerticalAlignProperty[TLength]] = null): VerticalAlignProps[TLength] = {
+  def apply[TLength](): VerticalAlignProps[TLength] = {
     val __obj = js.Dynamic.literal()
-    if (verticalAlign != null) __obj.updateDynamic("verticalAlign")(verticalAlign.asInstanceOf[js.Any])
     __obj.asInstanceOf[VerticalAlignProps[TLength]]
   }
+  @scala.inline
+  implicit class VerticalAlignPropsOps[Self[tlength] <: VerticalAlignProps[tlength], TLength] (val x: Self[TLength]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[TLength] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[TLength]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self[TLength] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[TLength] with Other]
+    @scala.inline
+    def withVerticalAlign(value: ResponsiveValue[VerticalAlignProperty[TLength]]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("verticalAlign")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVerticalAlign: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("verticalAlign")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

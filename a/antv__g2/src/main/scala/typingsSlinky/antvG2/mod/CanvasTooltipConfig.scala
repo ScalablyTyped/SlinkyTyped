@@ -1,74 +1,119 @@
 package typingsSlinky.antvG2.mod
 
-import typingsSlinky.antvG2.AnonStyle
 import typingsSlinky.antvG2.antvG2Booleans.`false`
-import typingsSlinky.antvG2.antvG2Strings.bottom
-import typingsSlinky.antvG2.antvG2Strings.click
 import typingsSlinky.antvG2.antvG2Strings.default
-import typingsSlinky.antvG2.antvG2Strings.left
-import typingsSlinky.antvG2.antvG2Strings.mousemove
-import typingsSlinky.antvG2.antvG2Strings.none
-import typingsSlinky.antvG2.antvG2Strings.right
-import typingsSlinky.antvG2.antvG2Strings.top
 import typingsSlinky.antvG2.mod.Styles.background
 import typingsSlinky.antvG2.mod.Styles.text
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait CanvasTooltipConfig
   extends CommonTooltipConfig
      with TooltipConfig {
-  var boardStyle: js.UndefOr[background] = js.undefined
-  var itemGap: js.UndefOr[Double] = js.undefined
-  var nameStyle: js.UndefOr[text] = js.undefined
-  var titleStyle: js.UndefOr[text] = js.undefined
+  var boardStyle: js.UndefOr[background] = js.native
+  var itemGap: js.UndefOr[Double] = js.native
+  var nameStyle: js.UndefOr[text] = js.native
+  var titleStyle: js.UndefOr[text] = js.native
   @JSName("type")
-  var type_CanvasTooltipConfig: js.UndefOr[default] = js.undefined
+  var type_CanvasTooltipConfig: js.UndefOr[default] = js.native
   @JSName("useHtml")
-  var useHtml_CanvasTooltipConfig: `false`
-  var valueStyle: js.UndefOr[text] = js.undefined
+  var useHtml_CanvasTooltipConfig: `false` = js.native
+  var valueStyle: js.UndefOr[text] = js.native
 }
 
 object CanvasTooltipConfig {
   @scala.inline
-  def apply(
-    useHtml: `false`,
-    boardStyle: background = null,
-    crosshairs: AnonStyle = null,
-    follow: js.UndefOr[Boolean] = js.undefined,
-    hideMarkers: js.UndefOr[Boolean] = js.undefined,
-    inPlot: js.UndefOr[Boolean] = js.undefined,
-    itemGap: Int | Double = null,
-    nameStyle: text = null,
-    offset: Int | Double = null,
-    position: left | right | top | bottom = null,
-    shared: js.UndefOr[Boolean] = js.undefined,
-    showTitle: js.UndefOr[Boolean] = js.undefined,
-    title: String = null,
-    titleStyle: text = null,
-    triggerOn: mousemove | click | none = null,
-    `type`: default = null,
-    valueStyle: text = null
-  ): CanvasTooltipConfig = {
+  def apply(useHtml: `false`): CanvasTooltipConfig = {
     val __obj = js.Dynamic.literal(useHtml = useHtml.asInstanceOf[js.Any])
-    if (boardStyle != null) __obj.updateDynamic("boardStyle")(boardStyle.asInstanceOf[js.Any])
-    if (crosshairs != null) __obj.updateDynamic("crosshairs")(crosshairs.asInstanceOf[js.Any])
-    if (!js.isUndefined(follow)) __obj.updateDynamic("follow")(follow.asInstanceOf[js.Any])
-    if (!js.isUndefined(hideMarkers)) __obj.updateDynamic("hideMarkers")(hideMarkers.asInstanceOf[js.Any])
-    if (!js.isUndefined(inPlot)) __obj.updateDynamic("inPlot")(inPlot.asInstanceOf[js.Any])
-    if (itemGap != null) __obj.updateDynamic("itemGap")(itemGap.asInstanceOf[js.Any])
-    if (nameStyle != null) __obj.updateDynamic("nameStyle")(nameStyle.asInstanceOf[js.Any])
-    if (offset != null) __obj.updateDynamic("offset")(offset.asInstanceOf[js.Any])
-    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
-    if (!js.isUndefined(shared)) __obj.updateDynamic("shared")(shared.asInstanceOf[js.Any])
-    if (!js.isUndefined(showTitle)) __obj.updateDynamic("showTitle")(showTitle.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
-    if (titleStyle != null) __obj.updateDynamic("titleStyle")(titleStyle.asInstanceOf[js.Any])
-    if (triggerOn != null) __obj.updateDynamic("triggerOn")(triggerOn.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (valueStyle != null) __obj.updateDynamic("valueStyle")(valueStyle.asInstanceOf[js.Any])
     __obj.asInstanceOf[CanvasTooltipConfig]
   }
+  @scala.inline
+  implicit class CanvasTooltipConfigOps[Self <: CanvasTooltipConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withUseHtml(value: `false`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useHtml")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBoardStyle(value: background): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("boardStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBoardStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("boardStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withItemGap(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemGap")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutItemGap: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemGap")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNameStyle(value: text): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nameStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNameStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nameStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitleStyle(value: text): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("titleStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTitleStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("titleStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: default): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValueStyle(value: text): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valueStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValueStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valueStyle")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

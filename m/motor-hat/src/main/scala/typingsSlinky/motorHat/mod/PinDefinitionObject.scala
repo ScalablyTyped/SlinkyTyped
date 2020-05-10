@@ -4,27 +4,53 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait PinDefinitionObject extends js.Object {
   /**
     * Pin number of the first coil output
     */
-  var IN1: Double
+  var IN1: Double = js.native
   /**
     * Pin number of the second coil output
     */
-  var IN2: Double
+  var IN2: Double = js.native
   /**
     * Pin number of the PWM output
     */
-  var PWM: Double
+  var PWM: Double = js.native
 }
 
 object PinDefinitionObject {
   @scala.inline
   def apply(IN1: Double, IN2: Double, PWM: Double): PinDefinitionObject = {
     val __obj = js.Dynamic.literal(IN1 = IN1.asInstanceOf[js.Any], IN2 = IN2.asInstanceOf[js.Any], PWM = PWM.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[PinDefinitionObject]
   }
+  @scala.inline
+  implicit class PinDefinitionObjectOps[Self <: PinDefinitionObject] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIN1(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IN1")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIN2(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IN2")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPWM(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PWM")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

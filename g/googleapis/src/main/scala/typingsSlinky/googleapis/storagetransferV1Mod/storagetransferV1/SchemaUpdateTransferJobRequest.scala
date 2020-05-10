@@ -34,16 +34,53 @@ trait SchemaUpdateTransferJobRequest extends js.Object {
 
 object SchemaUpdateTransferJobRequest {
   @scala.inline
-  def apply(
-    projectId: String = null,
-    transferJob: SchemaTransferJob = null,
-    updateTransferJobFieldMask: String = null
-  ): SchemaUpdateTransferJobRequest = {
+  def apply(): SchemaUpdateTransferJobRequest = {
     val __obj = js.Dynamic.literal()
-    if (projectId != null) __obj.updateDynamic("projectId")(projectId.asInstanceOf[js.Any])
-    if (transferJob != null) __obj.updateDynamic("transferJob")(transferJob.asInstanceOf[js.Any])
-    if (updateTransferJobFieldMask != null) __obj.updateDynamic("updateTransferJobFieldMask")(updateTransferJobFieldMask.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaUpdateTransferJobRequest]
   }
+  @scala.inline
+  implicit class SchemaUpdateTransferJobRequestOps[Self <: SchemaUpdateTransferJobRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withProjectId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("projectId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProjectId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("projectId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTransferJob(value: SchemaTransferJob): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transferJob")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTransferJob: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transferJob")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUpdateTransferJobFieldMask(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateTransferJobFieldMask")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUpdateTransferJobFieldMask: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateTransferJobFieldMask")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -18,11 +18,41 @@ trait ResolvedTargets extends js.Object {
 
 object ResolvedTargets {
   @scala.inline
-  def apply(ParameterValues: TargetParameterList = null, Truncated: js.UndefOr[scala.Boolean] = js.undefined): ResolvedTargets = {
+  def apply(): ResolvedTargets = {
     val __obj = js.Dynamic.literal()
-    if (ParameterValues != null) __obj.updateDynamic("ParameterValues")(ParameterValues.asInstanceOf[js.Any])
-    if (!js.isUndefined(Truncated)) __obj.updateDynamic("Truncated")(Truncated.asInstanceOf[js.Any])
     __obj.asInstanceOf[ResolvedTargets]
   }
+  @scala.inline
+  implicit class ResolvedTargetsOps[Self <: ResolvedTargets] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withParameterValues(value: TargetParameterList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ParameterValues")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParameterValues: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ParameterValues")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTruncated(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Truncated")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTruncated: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Truncated")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

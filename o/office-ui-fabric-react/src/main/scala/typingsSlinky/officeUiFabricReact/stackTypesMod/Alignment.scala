@@ -18,22 +18,20 @@ trait Alignment extends js.Object
 
 object Alignment {
   @scala.inline
-  def baseline: typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.baseline = this.cast("baseline")
+  def baseline: typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.baseline = "baseline".asInstanceOf[typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.baseline]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def center: typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.center = "center".asInstanceOf[typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.center]
   @scala.inline
-  def center: typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.center = this.cast("center")
+  def end: typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.end = "end".asInstanceOf[typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.end]
   @scala.inline
-  def end: typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.end = this.cast("end")
+  def `space-around`: typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.`space-around` = "space-around".asInstanceOf[typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.`space-around`]
   @scala.inline
-  def `space-around`: typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.`space-around` = this.cast("space-around")
+  def `space-between`: typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.`space-between` = "space-between".asInstanceOf[typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.`space-between`]
   @scala.inline
-  def `space-between`: typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.`space-between` = this.cast("space-between")
+  def `space-evenly`: typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.`space-evenly` = "space-evenly".asInstanceOf[typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.`space-evenly`]
   @scala.inline
-  def `space-evenly`: typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.`space-evenly` = this.cast("space-evenly")
+  def start: typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.start = "start".asInstanceOf[typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.start]
   @scala.inline
-  def start: typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.start = this.cast("start")
-  @scala.inline
-  def stretch: typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.stretch = this.cast("stretch")
+  def stretch: typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.stretch = "stretch".asInstanceOf[typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.stretch]
 }
 

@@ -9,12 +9,12 @@ import scala.scalajs.js.annotation._
 /** Provides a way to easily construct a set of key/value pairs representing form fields and their values, which can then be easily sent using the XMLHttpRequest.send() method. It uses the same format a form would use if the encoding type were set to "multipart/form-data". */
 @js.native
 trait FormData extends _BodyInit {
-  @JSName(scala.scalajs.js.Symbol.iterator)
+  @JSName(js.Symbol.iterator)
   var iterator: js.Function0[IterableIterator[js.Tuple2[java.lang.String, FormDataEntryValue]]] = js.native
   def append(name: java.lang.String, value: java.lang.String): Unit = js.native
   def append(name: java.lang.String, value: java.lang.String, fileName: java.lang.String): Unit = js.native
-  def append(name: java.lang.String, value: Blob): Unit = js.native
-  def append(name: java.lang.String, value: Blob, fileName: java.lang.String): Unit = js.native
+  def append(name: java.lang.String, value: org.scalajs.dom.raw.Blob): Unit = js.native
+  def append(name: java.lang.String, value: org.scalajs.dom.raw.Blob, fileName: java.lang.String): Unit = js.native
   def delete(name: java.lang.String): Unit = js.native
   /**
     * Returns an array of key, value pairs for every entry in the list.
@@ -46,8 +46,8 @@ trait FormData extends _BodyInit {
   def keys(): IterableIterator[java.lang.String] = js.native
   def set(name: java.lang.String, value: java.lang.String): Unit = js.native
   def set(name: java.lang.String, value: java.lang.String, fileName: java.lang.String): Unit = js.native
-  def set(name: java.lang.String, value: Blob): Unit = js.native
-  def set(name: java.lang.String, value: Blob, fileName: java.lang.String): Unit = js.native
+  def set(name: java.lang.String, value: org.scalajs.dom.raw.Blob): Unit = js.native
+  def set(name: java.lang.String, value: org.scalajs.dom.raw.Blob, fileName: java.lang.String): Unit = js.native
   /**
     * Returns a list of values in the list.
     */
@@ -57,6 +57,6 @@ trait FormData extends _BodyInit {
 @JSGlobal("FormData")
 @js.native
 object FormData
-  extends Instantiable0[FormData]
-     with Instantiable1[/* form */ HTMLFormElement, FormData]
+  extends Instantiable0[org.scalajs.dom.raw.FormData]
+     with Instantiable1[/* form */ org.scalajs.dom.raw.HTMLFormElement, org.scalajs.dom.raw.FormData]
 

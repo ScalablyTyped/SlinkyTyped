@@ -14,14 +14,12 @@ trait TypeaheadBsSizes extends js.Object
 
 object TypeaheadBsSizes {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def large: typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.large = "large".asInstanceOf[typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.large]
   @scala.inline
-  def large: typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.large = this.cast("large")
+  def lg: typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.lg = "lg".asInstanceOf[typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.lg]
   @scala.inline
-  def lg: typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.lg = this.cast("lg")
+  def sm: typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.sm = "sm".asInstanceOf[typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.sm]
   @scala.inline
-  def sm: typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.sm = this.cast("sm")
-  @scala.inline
-  def small: typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.small = this.cast("small")
+  def small: typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.small = "small".asInstanceOf[typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.small]
 }
 

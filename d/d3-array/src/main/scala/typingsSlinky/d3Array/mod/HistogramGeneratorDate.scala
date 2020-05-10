@@ -1,16 +1,16 @@
 package typingsSlinky.d3Array.mod
 
 import typingsSlinky.std.ArrayLike
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait HistogramGeneratorDate[Datum, Value /* <: js.UndefOr[js.Date] */] extends HistogramCommon[Datum, Date] {
+trait HistogramGeneratorDate[Datum, Value /* <: js.UndefOr[js.Date] */]
+  extends HistogramCommon[Datum, js.Date] {
   def domain(): js.Function1[/* values */ ArrayLike[Value], js.Tuple2[js.Date, js.Date]] = js.native
-  def domain(domainAccessor: js.Function1[/* values */ ArrayLike[Value], js.Tuple2[Date, Date]]): this.type = js.native
-  def domain(domain: js.Tuple2[Date, Date]): this.type = js.native
+  def domain(domainAccessor: js.Function1[/* values */ ArrayLike[Value], js.Tuple2[js.Date, js.Date]]): this.type = js.native
+  def domain(domain: js.Tuple2[js.Date, js.Date]): this.type = js.native
   def thresholds(): ThresholdDateArrayGenerator[Value] = js.native
   /**
     * Set a threshold accessor function, which returns the array of values to be used as

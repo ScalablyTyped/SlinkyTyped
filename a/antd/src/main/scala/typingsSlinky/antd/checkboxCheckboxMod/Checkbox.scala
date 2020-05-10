@@ -2,7 +2,6 @@ package typingsSlinky.antd.checkboxCheckboxMod
 
 import slinky.core.facade.ReactElement
 import typingsSlinky.antd.contextMod.ConfigConsumerProps
-import typingsSlinky.antd.groupMod.CheckboxGroupContext
 import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -22,7 +21,5 @@ trait Checkbox
   def focus(): Unit = js.native
   def renderCheckbox(hasGetPrefixCls: ConfigConsumerProps): ReactElement = js.native
   def saveCheckbox(node: js.Any): Unit = js.native
-  @JSName("shouldComponentUpdate")
-  def shouldComponentUpdate_MCheckbox(nextProps: CheckboxProps, nextState: js.Object, nextContext: CheckboxGroupContext): Boolean = js.native
 }
 

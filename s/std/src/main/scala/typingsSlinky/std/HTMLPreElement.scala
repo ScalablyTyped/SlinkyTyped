@@ -17,5 +17,6 @@ trait HTMLPreElement extends HTMLElement {
 
 @JSGlobal("HTMLPreElement")
 @js.native
-object HTMLPreElement extends Instantiable0[HTMLPreElement]
+object HTMLPreElement
+  extends Instantiable0[org.scalajs.dom.raw.HTMLPreElement]
 

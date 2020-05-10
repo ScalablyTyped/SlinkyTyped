@@ -17,7 +17,7 @@ package object objectTypeComposerMod {
   ])
   type ComposeFieldConfigArgumentMap[TArgs] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ argName in keyof TArgs ]: graphql-compose.graphql-compose/lib/ObjectTypeComposer.ComposeArgumentConfig}
-    */ typingsSlinky.graphqlCompose.graphqlComposeStrings.ComposeFieldConfigArgumentMap with js.Any
+    */ typingsSlinky.graphqlCompose.graphqlComposeStrings.ComposeFieldConfigArgumentMap with org.scalablytyped.runtime.TopLevel[js.Any]
   type ComposeFieldConfigMap[TSource, TContext] = typingsSlinky.graphqlCompose.definitionsMod.ObjMap[
     typingsSlinky.graphqlCompose.objectTypeComposerMod.ComposeFieldConfig[TSource, TContext, typingsSlinky.graphqlCompose.objectTypeComposerMod.ArgsMap]
   ]

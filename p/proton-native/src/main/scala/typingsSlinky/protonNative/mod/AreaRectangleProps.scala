@@ -1,76 +1,66 @@
 package typingsSlinky.protonNative.mod
 
-import typingsSlinky.protonNative.AnonH
-import typingsSlinky.protonNative.AnonX
-import typingsSlinky.protonNative.protonNativeStrings.bevel
-import typingsSlinky.protonNative.protonNativeStrings.flat
-import typingsSlinky.protonNative.protonNativeStrings.miter
-import typingsSlinky.protonNative.protonNativeStrings.round
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AreaRectangleProps extends AreaBaseProps {
   /**
     * The height of the rectangle.
     */
-  var height: Double | String
+  var height: Double | String = js.native
   /**
     * The width of the rectangle.
     */
-  var width: Double | String
+  var width: Double | String = js.native
   /**
     * The x coordinate of the rectangles top left corner.
     */
-  var x: Double | String
+  var x: Double | String = js.native
   /**
     * The y coordinate of the rectangles top left corner.
     */
-  var y: Double | String
+  var y: Double | String = js.native
 }
 
 object AreaRectangleProps {
   @scala.inline
-  def apply(
-    height: Double | String,
-    width: Double | String,
-    x: Double | String,
-    y: Double | String,
-    align: AnonH = null,
-    column: Int | Double = null,
-    expand: AnonH = null,
-    fill: String = null,
-    fillOpacity: Int | Double = null,
-    label: String = null,
-    row: Int | Double = null,
-    span: AnonX = null,
-    stretchy: js.UndefOr[Boolean] = js.undefined,
-    stroke: String = null,
-    strokeLinecap: flat | round | bevel = null,
-    strokeLinejoin: miter | round | bevel = null,
-    strokeMiterlimit: Int | Double = null,
-    strokeOpacity: Int | Double = null,
-    strokeWidth: Int | Double = null,
-    transform: String = null
-  ): AreaRectangleProps = {
+  def apply(height: Double | String, width: Double | String, x: Double | String, y: Double | String): AreaRectangleProps = {
     val __obj = js.Dynamic.literal(height = height.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any], x = x.asInstanceOf[js.Any], y = y.asInstanceOf[js.Any])
-    if (align != null) __obj.updateDynamic("align")(align.asInstanceOf[js.Any])
-    if (column != null) __obj.updateDynamic("column")(column.asInstanceOf[js.Any])
-    if (expand != null) __obj.updateDynamic("expand")(expand.asInstanceOf[js.Any])
-    if (fill != null) __obj.updateDynamic("fill")(fill.asInstanceOf[js.Any])
-    if (fillOpacity != null) __obj.updateDynamic("fillOpacity")(fillOpacity.asInstanceOf[js.Any])
-    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
-    if (row != null) __obj.updateDynamic("row")(row.asInstanceOf[js.Any])
-    if (span != null) __obj.updateDynamic("span")(span.asInstanceOf[js.Any])
-    if (!js.isUndefined(stretchy)) __obj.updateDynamic("stretchy")(stretchy.asInstanceOf[js.Any])
-    if (stroke != null) __obj.updateDynamic("stroke")(stroke.asInstanceOf[js.Any])
-    if (strokeLinecap != null) __obj.updateDynamic("strokeLinecap")(strokeLinecap.asInstanceOf[js.Any])
-    if (strokeLinejoin != null) __obj.updateDynamic("strokeLinejoin")(strokeLinejoin.asInstanceOf[js.Any])
-    if (strokeMiterlimit != null) __obj.updateDynamic("strokeMiterlimit")(strokeMiterlimit.asInstanceOf[js.Any])
-    if (strokeOpacity != null) __obj.updateDynamic("strokeOpacity")(strokeOpacity.asInstanceOf[js.Any])
-    if (strokeWidth != null) __obj.updateDynamic("strokeWidth")(strokeWidth.asInstanceOf[js.Any])
-    if (transform != null) __obj.updateDynamic("transform")(transform.asInstanceOf[js.Any])
     __obj.asInstanceOf[AreaRectangleProps]
   }
+  @scala.inline
+  implicit class AreaRectanglePropsOps[Self <: AreaRectangleProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHeight(value: Double | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withWidth(value: Double | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withX(value: Double | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withY(value: Double | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

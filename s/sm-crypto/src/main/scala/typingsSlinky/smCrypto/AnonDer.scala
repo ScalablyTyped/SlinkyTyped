@@ -5,27 +5,75 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonDer extends js.Object {
-  var der: js.UndefOr[Boolean] = js.undefined
-  var hash: js.UndefOr[Boolean] = js.undefined
-  var pointPool: js.UndefOr[js.Array[KeyPairPoint]] = js.undefined
-  var publicKey: js.UndefOr[String] = js.undefined
+  var der: js.UndefOr[Boolean] = js.native
+  var hash: js.UndefOr[Boolean] = js.native
+  var pointPool: js.UndefOr[js.Array[KeyPairPoint]] = js.native
+  var publicKey: js.UndefOr[String] = js.native
 }
 
 object AnonDer {
   @scala.inline
-  def apply(
-    der: js.UndefOr[Boolean] = js.undefined,
-    hash: js.UndefOr[Boolean] = js.undefined,
-    pointPool: js.Array[KeyPairPoint] = null,
-    publicKey: String = null
-  ): AnonDer = {
+  def apply(): AnonDer = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(der)) __obj.updateDynamic("der")(der.asInstanceOf[js.Any])
-    if (!js.isUndefined(hash)) __obj.updateDynamic("hash")(hash.asInstanceOf[js.Any])
-    if (pointPool != null) __obj.updateDynamic("pointPool")(pointPool.asInstanceOf[js.Any])
-    if (publicKey != null) __obj.updateDynamic("publicKey")(publicKey.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonDer]
   }
+  @scala.inline
+  implicit class AnonDerOps[Self <: AnonDer] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDer(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("der")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("der")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHash(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hash")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHash: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hash")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPointPool(value: js.Array[KeyPairPoint]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pointPool")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPointPool: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pointPool")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPublicKey(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("publicKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPublicKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("publicKey")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,11 +1,9 @@
 package typingsSlinky.reactNativeHtmlview.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.ReactComponentClass
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactNative.mod.TextProperties
 import typingsSlinky.reactNative.mod.ViewProperties
 import typingsSlinky.reactNativeHtmlview.mod.HTMLViewNode
@@ -15,47 +13,62 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactNativeHtmlview
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object ReactNativeHtmlview {
   @JSImport("react-native-htmlview", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    value: String,
-    NodeComponent: ReactComponentClass[js.Object] = null,
-    RootComponent: ReactComponentClass[js.Object] = null,
-    TextComponent: ReactComponentClass[js.Object] = null,
-    addLineBreaks: js.UndefOr[Boolean] = js.undefined,
-    bullet: String = null,
-    lineBreak: String = null,
-    nodeComponentProps: TextProperties = null,
-    onLinkLongPress: /* url */ String => Unit = null,
-    onLinkPress: /* url */ String => Unit = null,
-    paragraphBreak: String = null,
-    renderNode: (/* node */ HTMLViewNode, /* index */ Double, /* siblings */ HTMLViewNode, /* parent */ HTMLViewNode, /* defaultRenderer */ js.Function2[/* node */ HTMLViewNode, /* parent */ HTMLViewNode, TagMod[Any]]) => TagMod[Any] = null,
-    rootComponentProps: ViewProperties = null,
-    textComponentProps: TextProperties = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
-    if (NodeComponent != null) __obj.updateDynamic("NodeComponent")(NodeComponent.asInstanceOf[js.Any])
-    if (RootComponent != null) __obj.updateDynamic("RootComponent")(RootComponent.asInstanceOf[js.Any])
-    if (TextComponent != null) __obj.updateDynamic("TextComponent")(TextComponent.asInstanceOf[js.Any])
-    if (!js.isUndefined(addLineBreaks)) __obj.updateDynamic("addLineBreaks")(addLineBreaks.asInstanceOf[js.Any])
-    if (bullet != null) __obj.updateDynamic("bullet")(bullet.asInstanceOf[js.Any])
-    if (lineBreak != null) __obj.updateDynamic("lineBreak")(lineBreak.asInstanceOf[js.Any])
-    if (nodeComponentProps != null) __obj.updateDynamic("nodeComponentProps")(nodeComponentProps.asInstanceOf[js.Any])
-    if (onLinkLongPress != null) __obj.updateDynamic("onLinkLongPress")(js.Any.fromFunction1(onLinkLongPress))
-    if (onLinkPress != null) __obj.updateDynamic("onLinkPress")(js.Any.fromFunction1(onLinkPress))
-    if (paragraphBreak != null) __obj.updateDynamic("paragraphBreak")(paragraphBreak.asInstanceOf[js.Any])
-    if (renderNode != null) __obj.updateDynamic("renderNode")(js.Any.fromFunction5(renderNode))
-    if (rootComponentProps != null) __obj.updateDynamic("rootComponentProps")(rootComponentProps.asInstanceOf[js.Any])
-    if (textComponentProps != null) __obj.updateDynamic("textComponentProps")(textComponentProps.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def NodeComponentFunctionComponent(value: ReactComponentClass[js.Object]): this.type = set("NodeComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def NodeComponentComponentClass(value: ReactComponentClass[js.Object]): this.type = set("NodeComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def NodeComponent(value: ReactComponentClass[js.Object]): this.type = set("NodeComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def RootComponentFunctionComponent(value: ReactComponentClass[js.Object]): this.type = set("RootComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def RootComponentComponentClass(value: ReactComponentClass[js.Object]): this.type = set("RootComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def RootComponent(value: ReactComponentClass[js.Object]): this.type = set("RootComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def TextComponentFunctionComponent(value: ReactComponentClass[js.Object]): this.type = set("TextComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def TextComponentComponentClass(value: ReactComponentClass[js.Object]): this.type = set("TextComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def TextComponent(value: ReactComponentClass[js.Object]): this.type = set("TextComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def addLineBreaks(value: Boolean): this.type = set("addLineBreaks", value.asInstanceOf[js.Any])
+    @scala.inline
+    def bullet(value: String): this.type = set("bullet", value.asInstanceOf[js.Any])
+    @scala.inline
+    def lineBreak(value: String): this.type = set("lineBreak", value.asInstanceOf[js.Any])
+    @scala.inline
+    def nodeComponentProps(value: TextProperties): this.type = set("nodeComponentProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onLinkLongPress(value: /* url */ String => Unit): this.type = set("onLinkLongPress", js.Any.fromFunction1(value))
+    @scala.inline
+    def onLinkPress(value: /* url */ String => Unit): this.type = set("onLinkPress", js.Any.fromFunction1(value))
+    @scala.inline
+    def paragraphBreak(value: String): this.type = set("paragraphBreak", value.asInstanceOf[js.Any])
+    @scala.inline
+    def renderNode(
+      value: (/* node */ HTMLViewNode, /* index */ Double, /* siblings */ HTMLViewNode, /* parent */ HTMLViewNode, /* defaultRenderer */ js.Function2[/* node */ HTMLViewNode, /* parent */ HTMLViewNode, TagMod[Any]]) => TagMod[Any]
+    ): this.type = set("renderNode", js.Any.fromFunction5(value))
+    @scala.inline
+    def rootComponentProps(value: ViewProperties): this.type = set("rootComponentProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def textComponentProps(value: TextProperties): this.type = set("textComponentProps", value.asInstanceOf[js.Any])
   }
-  type Props = HTMLViewProps
+  
+  def withProps(p: HTMLViewProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(value: String): Builder = {
+    val __props = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[HTMLViewProps]))
+  }
 }
 

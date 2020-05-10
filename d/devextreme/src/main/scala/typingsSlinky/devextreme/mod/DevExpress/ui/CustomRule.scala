@@ -14,37 +14,95 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait CustomRule extends js.Object {
   /** If true, the validationCallback is not executed for null, undefined, false, and empty strings. */
-  var ignoreEmptyValue: js.UndefOr[Boolean] = js.undefined
+  var ignoreEmptyValue: js.UndefOr[Boolean] = js.native
   /** Specifies the message that is shown if the rule is broken. */
-  var message: js.UndefOr[String] = js.undefined
+  var message: js.UndefOr[String] = js.native
   /** Indicates whether the rule should be always checked for the target value or only when the target value changes. */
-  var reevaluate: js.UndefOr[Boolean] = js.undefined
+  var reevaluate: js.UndefOr[Boolean] = js.native
   /** Specifies the rule type. Set it to "custom" to use the CustomRule. */
   var `type`: js.UndefOr[
     required | numeric | range | stringLength | custom | compare | pattern | email | async
-  ] = js.undefined
+  ] = js.native
   /** A function that validates the target value. */
-  var validationCallback: js.UndefOr[js.Function1[/* options */ AnonColumn, Boolean]] = js.undefined
+  var validationCallback: js.UndefOr[js.Function1[/* options */ AnonColumn, Boolean]] = js.native
 }
 
 object CustomRule {
   @scala.inline
-  def apply(
-    ignoreEmptyValue: js.UndefOr[Boolean] = js.undefined,
-    message: String = null,
-    reevaluate: js.UndefOr[Boolean] = js.undefined,
-    `type`: required | numeric | range | stringLength | custom | compare | pattern | email | async = null,
-    validationCallback: /* options */ AnonColumn => Boolean = null
-  ): CustomRule = {
+  def apply(): CustomRule = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(ignoreEmptyValue)) __obj.updateDynamic("ignoreEmptyValue")(ignoreEmptyValue.asInstanceOf[js.Any])
-    if (message != null) __obj.updateDynamic("message")(message.asInstanceOf[js.Any])
-    if (!js.isUndefined(reevaluate)) __obj.updateDynamic("reevaluate")(reevaluate.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (validationCallback != null) __obj.updateDynamic("validationCallback")(js.Any.fromFunction1(validationCallback))
     __obj.asInstanceOf[CustomRule]
   }
+  @scala.inline
+  implicit class CustomRuleOps[Self <: CustomRule] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIgnoreEmptyValue(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreEmptyValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIgnoreEmptyValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreEmptyValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMessage(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMessage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReevaluate(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reevaluate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReevaluate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reevaluate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: required | numeric | range | stringLength | custom | compare | pattern | email | async): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValidationCallback(value: /* options */ AnonColumn => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("validationCallback")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutValidationCallback: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("validationCallback")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

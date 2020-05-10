@@ -14,10 +14,29 @@ trait LabelingJobResourceConfig extends js.Object {
 
 object LabelingJobResourceConfig {
   @scala.inline
-  def apply(VolumeKmsKeyId: KmsKeyId = null): LabelingJobResourceConfig = {
+  def apply(): LabelingJobResourceConfig = {
     val __obj = js.Dynamic.literal()
-    if (VolumeKmsKeyId != null) __obj.updateDynamic("VolumeKmsKeyId")(VolumeKmsKeyId.asInstanceOf[js.Any])
     __obj.asInstanceOf[LabelingJobResourceConfig]
   }
+  @scala.inline
+  implicit class LabelingJobResourceConfigOps[Self <: LabelingJobResourceConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withVolumeKmsKeyId(value: KmsKeyId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VolumeKmsKeyId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVolumeKmsKeyId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VolumeKmsKeyId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

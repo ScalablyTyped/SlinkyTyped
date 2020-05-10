@@ -1,5 +1,6 @@
 package typingsSlinky.uifabricStyling
 
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.uifabricStyling.iconsMod.IIconRecord
 import typingsSlinky.uifabricStyling.iconsMod.IIconSubset
 import scala.scalajs.js
@@ -11,7 +12,7 @@ import scala.scalajs.js.annotation._
 object utilitiesMod extends js.Object {
   def buildClassMap[T /* <: js.Object */](styles: T): /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ key in keyof T ]:? string}
-    */ typingsSlinky.uifabricStyling.uifabricStylingStrings.buildClassMap with js.Any = js.native
+    */ typingsSlinky.uifabricStyling.uifabricStylingStrings.buildClassMap with TopLevel[js.Any] = js.native
   def getIcon(): js.UndefOr[IIconRecord] = js.native
   def getIcon(name: String): js.UndefOr[IIconRecord] = js.native
   def getIconClassName(name: String): String = js.native

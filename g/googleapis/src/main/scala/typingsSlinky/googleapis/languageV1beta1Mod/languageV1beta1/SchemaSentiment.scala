@@ -31,12 +31,53 @@ trait SchemaSentiment extends js.Object {
 
 object SchemaSentiment {
   @scala.inline
-  def apply(magnitude: Int | Double = null, polarity: Int | Double = null, score: Int | Double = null): SchemaSentiment = {
+  def apply(): SchemaSentiment = {
     val __obj = js.Dynamic.literal()
-    if (magnitude != null) __obj.updateDynamic("magnitude")(magnitude.asInstanceOf[js.Any])
-    if (polarity != null) __obj.updateDynamic("polarity")(polarity.asInstanceOf[js.Any])
-    if (score != null) __obj.updateDynamic("score")(score.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSentiment]
   }
+  @scala.inline
+  implicit class SchemaSentimentOps[Self <: SchemaSentiment] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMagnitude(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("magnitude")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMagnitude: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("magnitude")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPolarity(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("polarity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPolarity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("polarity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScore(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("score")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScore: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("score")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

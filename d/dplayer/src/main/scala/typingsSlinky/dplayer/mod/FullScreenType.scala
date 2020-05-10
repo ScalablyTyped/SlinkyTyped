@@ -12,10 +12,8 @@ trait FullScreenType extends js.Object
 
 object FullScreenType {
   @scala.inline
-  def browser: typingsSlinky.dplayer.dplayerStrings.browser = this.cast("browser")
+  def browser: typingsSlinky.dplayer.dplayerStrings.browser = "browser".asInstanceOf[typingsSlinky.dplayer.dplayerStrings.browser]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
-  @scala.inline
-  def web: typingsSlinky.dplayer.dplayerStrings.web = this.cast("web")
+  def web: typingsSlinky.dplayer.dplayerStrings.web = "web".asInstanceOf[typingsSlinky.dplayer.dplayerStrings.web]
 }
 

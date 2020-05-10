@@ -4,10 +4,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonAuthorization extends js.Object {
-  var Authorization: String
-  var `Content-Type`: String
-  var `User-Agent`: String
+  var Authorization: String = js.native
+  var `Content-Type`: String = js.native
+  var `User-Agent`: String = js.native
 }
 
 object AnonAuthorization {
@@ -18,5 +19,31 @@ object AnonAuthorization {
     __obj.updateDynamic("User-Agent")(`User-Agent`.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonAuthorization]
   }
+  @scala.inline
+  implicit class AnonAuthorizationOps[Self <: AnonAuthorization] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAuthorization(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Authorization")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withContent-Type`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Content-Type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withUser-Agent`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("User-Agent")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

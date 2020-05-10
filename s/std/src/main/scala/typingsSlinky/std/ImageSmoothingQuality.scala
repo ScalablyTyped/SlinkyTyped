@@ -13,12 +13,10 @@ trait ImageSmoothingQuality extends js.Object
 
 object ImageSmoothingQuality {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def high: typingsSlinky.std.stdStrings.high = "high".asInstanceOf[typingsSlinky.std.stdStrings.high]
   @scala.inline
-  def high: typingsSlinky.std.stdStrings.high = this.cast("high")
+  def low: typingsSlinky.std.stdStrings.low = "low".asInstanceOf[typingsSlinky.std.stdStrings.low]
   @scala.inline
-  def low: typingsSlinky.std.stdStrings.low = this.cast("low")
-  @scala.inline
-  def medium: typingsSlinky.std.stdStrings.medium = this.cast("medium")
+  def medium: typingsSlinky.std.stdStrings.medium = "medium".asInstanceOf[typingsSlinky.std.stdStrings.medium]
 }
 

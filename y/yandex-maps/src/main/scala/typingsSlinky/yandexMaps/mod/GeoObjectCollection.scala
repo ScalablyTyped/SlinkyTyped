@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.yandexMaps.mod.IEventEmitter because Already inherited
 - typingsSlinky.yandexMaps.mod.IParentOnMap because Already inherited
 - typingsSlinky.yandexMaps.mod.ICustomizable because Already inherited
@@ -14,8 +14,6 @@ import scala.scalajs.js.annotation._
 class GeoObjectCollection () extends IGeoObject {
   def this(feature: AnonChildren) = this()
   def this(feature: AnonChildren, options: js.Object) = this()
-  /* CompleteClass */
-  override var events: IEventManager = js.native
   def add(child: IGeoObject): this.type = js.native
   def add(child: IGeoObject, index: Double): this.type = js.native
   def each(callback: js.Function1[/* object */ IGeoObject, Unit]): Unit = js.native
@@ -24,8 +22,6 @@ class GeoObjectCollection () extends IGeoObject {
   def getBounds(): js.Array[js.Array[Double]] | Null = js.native
   def getIterator(): IIterator = js.native
   def getLength(): Double = js.native
-  /* CompleteClass */
-  override def getMap(): Map_ = js.native
   def getPixelBounds(): js.Array[js.Array[Double]] | Null = js.native
   def indexOf(`object`: IGeoObject): Double = js.native
   def remove(child: IGeoObject): this.type = js.native

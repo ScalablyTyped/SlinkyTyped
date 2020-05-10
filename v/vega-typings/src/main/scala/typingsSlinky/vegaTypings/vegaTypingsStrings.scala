@@ -7,6 +7,7 @@ import typingsSlinky.vegaTypings.axisMod._LabelOverlap
 import typingsSlinky.vegaTypings.colorMod.ColorName
 import typingsSlinky.vegaTypings.configMod.AxisConfigKeys
 import typingsSlinky.vegaTypings.configMod.Cursor
+import typingsSlinky.vegaTypings.configMod.MarkConfigKeys
 import typingsSlinky.vegaTypings.dataMod.DataType
 import typingsSlinky.vegaTypings.encodeMod.Align
 import typingsSlinky.vegaTypings.encodeMod.Baseline
@@ -17,6 +18,7 @@ import typingsSlinky.vegaTypings.encodeMod.Orient
 import typingsSlinky.vegaTypings.encodeMod.Orientation
 import typingsSlinky.vegaTypings.encodeMod.TextBaseline
 import typingsSlinky.vegaTypings.encodeMod.TextDirection
+import typingsSlinky.vegaTypings.encodeMod._Blend
 import typingsSlinky.vegaTypings.encodeMod._FontStyle
 import typingsSlinky.vegaTypings.encodeMod._SymbolShape
 import typingsSlinky.vegaTypings.layoutMod.LayoutAlign
@@ -32,7 +34,7 @@ import typingsSlinky.vegaTypings.scaleMod.DiscreteScaleType
 import typingsSlinky.vegaTypings.scaleMod.DiscretizingScaleType
 import typingsSlinky.vegaTypings.scaleMod.QuantScaleType
 import typingsSlinky.vegaTypings.scaleMod.RangeEnum
-import typingsSlinky.vegaTypings.scaleMod.ScaleInterpolate
+import typingsSlinky.vegaTypings.scaleMod.ScaleInterpolateEnum
 import typingsSlinky.vegaTypings.scaleMod.ScaleType
 import typingsSlinky.vegaTypings.scaleMod.SortOrder
 import typingsSlinky.vegaTypings.scaleMod.TimeInterval
@@ -114,13 +116,16 @@ object vegaTypingsStrings {
   @js.native
   sealed trait arc
     extends LinkPathShape
+       with MarkConfigKeys
        with MarkType
   
   @js.native
   sealed trait archimedian extends WordcloudSpiral
   
   @js.native
-  sealed trait area extends MarkType
+  sealed trait area
+    extends MarkConfigKeys
+       with MarkType
   
   @js.native
   sealed trait argmax extends AggregateOp
@@ -189,6 +194,9 @@ object vegaTypingsStrings {
   
   @js.native
   sealed trait `basis-open` extends Interpolate
+  
+  @js.native
+  sealed trait begin extends js.Object
   
   @js.native
   sealed trait beige extends ColorName
@@ -528,6 +536,15 @@ object vegaTypingsStrings {
   sealed trait collide extends js.Object
   
   @js.native
+  sealed trait color extends _Blend
+  
+  @js.native
+  sealed trait `color-burn` extends _Blend
+  
+  @js.native
+  sealed trait `color-dodge` extends _Blend
+  
+  @js.native
   sealed trait conicConformal extends ProjectionType
   
   @js.native
@@ -582,10 +599,10 @@ object vegaTypingsStrings {
   sealed trait csv extends js.Object
   
   @js.native
-  sealed trait cubehelix extends ScaleInterpolate
+  sealed trait cubehelix extends ScaleInterpolateEnum
   
   @js.native
-  sealed trait `cubehelix-long` extends ScaleInterpolate
+  sealed trait `cubehelix-long` extends ScaleInterpolateEnum
   
   @js.native
   sealed trait cume_dist extends WindowOnlyOp
@@ -606,6 +623,9 @@ object vegaTypingsStrings {
   
   @js.native
   sealed trait darkcyan extends ColorName
+  
+  @js.native
+  sealed trait darken extends _Blend
   
   @js.native
   sealed trait darkgoldenrod extends ColorName
@@ -699,6 +719,9 @@ object vegaTypingsStrings {
   sealed trait dice extends TreemapMethod
   
   @js.native
+  sealed trait difference extends _Blend
+  
+  @js.native
   sealed trait dimgray extends ColorName
   
   @js.native
@@ -750,6 +773,9 @@ object vegaTypingsStrings {
   
   @js.native
   sealed trait `ew-resize` extends Cursor
+  
+  @js.native
+  sealed trait exclusion extends _Blend
   
   @js.native
   sealed trait exit extends EncodeEntryName
@@ -917,14 +943,18 @@ object vegaTypingsStrings {
   
   @js.native
   sealed trait group
-    extends MarkType
+    extends MarkConfigKeys
+       with MarkType
        with TitleFrame
   
   @js.native
-  sealed trait hcl extends ScaleInterpolate
+  sealed trait `hard-light` extends _Blend
   
   @js.native
-  sealed trait `hcl-long` extends ScaleInterpolate
+  sealed trait hcl extends ScaleInterpolateEnum
+  
+  @js.native
+  sealed trait `hcl-long` extends ScaleInterpolateEnum
   
   @js.native
   sealed trait heatmap extends RangeEnum
@@ -956,16 +986,19 @@ object vegaTypingsStrings {
   sealed trait hover extends EncodeEntryName
   
   @js.native
-  sealed trait hsl extends ScaleInterpolate
+  sealed trait hsl extends ScaleInterpolateEnum
   
   @js.native
-  sealed trait `hsl-long` extends ScaleInterpolate
+  sealed trait `hsl-long` extends ScaleInterpolateEnum
   
   @js.native
   sealed trait http extends js.Object
   
   @js.native
   sealed trait https extends js.Object
+  
+  @js.native
+  sealed trait hue extends _Blend
   
   @js.native
   sealed trait identifier extends js.Object
@@ -976,7 +1009,9 @@ object vegaTypingsStrings {
        with ScaleType
   
   @js.native
-  sealed trait image extends MarkType
+  sealed trait image
+    extends MarkConfigKeys
+       with MarkType
   
   @js.native
   sealed trait impute extends js.Object
@@ -1035,7 +1070,10 @@ object vegaTypingsStrings {
   sealed trait khaki extends ColorName
   
   @js.native
-  sealed trait lab extends ScaleInterpolate
+  sealed trait lab extends ScaleInterpolateEnum
+  
+  @js.native
+  sealed trait label extends js.Object
   
   @js.native
   sealed trait lag extends WindowOnlyOp
@@ -1086,6 +1124,9 @@ object vegaTypingsStrings {
   sealed trait lightcyan extends ColorName
   
   @js.native
+  sealed trait lighten extends _Blend
+  
+  @js.native
   sealed trait lighter extends FontWeight
   
   @js.native
@@ -1133,7 +1174,14 @@ object vegaTypingsStrings {
   @js.native
   sealed trait line
     extends LinkPathShape
+       with MarkConfigKeys
        with MarkType
+  
+  @js.native
+  sealed trait `line-bottom` extends TextBaseline
+  
+  @js.native
+  sealed trait `line-top` extends TextBaseline
   
   @js.native
   sealed trait linear
@@ -1176,6 +1224,9 @@ object vegaTypingsStrings {
   sealed trait ltr extends TextDirection
   
   @js.native
+  sealed trait luminosity extends _Blend
+  
+  @js.native
   sealed trait magenta extends ColorName
   
   @js.native
@@ -1184,7 +1235,7 @@ object vegaTypingsStrings {
        with SequentialMultiHue
   
   @js.native
-  sealed trait mark extends js.Object
+  sealed trait mark extends MarkConfigKeys
   
   @js.native
   sealed trait maroon extends ColorName
@@ -1304,6 +1355,9 @@ object vegaTypingsStrings {
   
   @js.native
   sealed trait move extends Cursor
+  
+  @js.native
+  sealed trait multiply extends _Blend
   
   @js.native
   sealed trait `n-resize` extends Cursor
@@ -1458,6 +1512,9 @@ object vegaTypingsStrings {
   sealed trait outer extends js.Object
   
   @js.native
+  sealed trait overlay extends _Blend
+  
+  @js.native
   sealed trait pack extends js.Object
   
   @js.native
@@ -1503,7 +1560,9 @@ object vegaTypingsStrings {
        with ColorScheme
   
   @js.native
-  sealed trait path extends MarkType
+  sealed trait path
+    extends MarkConfigKeys
+       with MarkType
   
   @js.native
   sealed trait pdf extends DensityMethod
@@ -1606,6 +1665,9 @@ object vegaTypingsStrings {
   
   @js.native
   sealed trait prev_value extends WindowOnlyOp
+  
+  @js.native
+  sealed trait product extends AggregateOp
   
   @js.native
   sealed trait progress extends Cursor
@@ -1887,7 +1949,9 @@ object vegaTypingsStrings {
   sealed trait rebeccapurple extends ColorName
   
   @js.native
-  sealed trait rect extends MarkType
+  sealed trait rect
+    extends MarkConfigKeys
+       with MarkType
   
   @js.native
   sealed trait rectangular extends WordcloudSpiral
@@ -2153,7 +2217,7 @@ object vegaTypingsStrings {
   sealed trait resquarify extends TreemapMethod
   
   @js.native
-  sealed trait rgb extends ScaleInterpolate
+  sealed trait rgb extends ScaleInterpolateEnum
   
   @js.native
   sealed trait right
@@ -2180,7 +2244,9 @@ object vegaTypingsStrings {
   sealed trait rtl extends TextDirection
   
   @js.native
-  sealed trait rule extends MarkType
+  sealed trait rule
+    extends MarkConfigKeys
+       with MarkType
   
   @js.native
   sealed trait `s-resize` extends Cursor
@@ -2198,7 +2264,13 @@ object vegaTypingsStrings {
   sealed trait sandybrown extends ColorName
   
   @js.native
+  sealed trait saturation extends _Blend
+  
+  @js.native
   sealed trait scope extends js.Object
+  
+  @js.native
+  sealed trait screen extends _Blend
   
   @js.native
   sealed trait `se-resize` extends Cursor
@@ -2242,7 +2314,9 @@ object vegaTypingsStrings {
        with ColorScheme
   
   @js.native
-  sealed trait shape extends MarkType
+  sealed trait shape
+    extends MarkConfigKeys
+       with MarkType
   
   @js.native
   sealed trait shared extends KDEResolve
@@ -2278,6 +2352,9 @@ object vegaTypingsStrings {
   
   @js.native
   sealed trait snow extends ColorName
+  
+  @js.native
+  sealed trait `soft-light` extends _Blend
   
   @js.native
   sealed trait spectral
@@ -2397,6 +2474,7 @@ object vegaTypingsStrings {
   sealed trait symbol
     extends RangeEnum
        with LegendType
+       with MarkConfigKeys
        with MarkType
   
   @js.native
@@ -2423,6 +2501,7 @@ object vegaTypingsStrings {
   @js.native
   sealed trait text
     extends Cursor
+       with MarkConfigKeys
        with MarkType
   
   @js.native
@@ -2480,7 +2559,9 @@ object vegaTypingsStrings {
   sealed trait touchstart extends EventType
   
   @js.native
-  sealed trait trail extends MarkType
+  sealed trait trail
+    extends MarkConfigKeys
+       with MarkType
   
   @js.native
   sealed trait transverseMercator extends ProjectionType
@@ -2863,6 +2944,8 @@ object vegaTypingsStrings {
   @scala.inline
   def `basis-open`: `basis-open` = "basis-open".asInstanceOf[`basis-open`]
   @scala.inline
+  def begin: begin = "begin".asInstanceOf[begin]
+  @scala.inline
   def beige: beige = "beige".asInstanceOf[beige]
   @scala.inline
   def bin: bin = "bin".asInstanceOf[bin]
@@ -3025,6 +3108,12 @@ object vegaTypingsStrings {
   @scala.inline
   def collide: collide = "collide".asInstanceOf[collide]
   @scala.inline
+  def color: color = "color".asInstanceOf[color]
+  @scala.inline
+  def `color-burn`: `color-burn` = "color-burn".asInstanceOf[`color-burn`]
+  @scala.inline
+  def `color-dodge`: `color-dodge` = "color-dodge".asInstanceOf[`color-dodge`]
+  @scala.inline
   def conicConformal: conicConformal = "conicConformal".asInstanceOf[conicConformal]
   @scala.inline
   def conicEqualArea: conicEqualArea = "conicEqualArea".asInstanceOf[conicEqualArea]
@@ -3076,6 +3165,8 @@ object vegaTypingsStrings {
   def darkblue: darkblue = "darkblue".asInstanceOf[darkblue]
   @scala.inline
   def darkcyan: darkcyan = "darkcyan".asInstanceOf[darkcyan]
+  @scala.inline
+  def darken: darken = "darken".asInstanceOf[darken]
   @scala.inline
   def darkgoldenrod: darkgoldenrod = "darkgoldenrod".asInstanceOf[darkgoldenrod]
   @scala.inline
@@ -3135,6 +3226,8 @@ object vegaTypingsStrings {
   @scala.inline
   def dice: dice = "dice".asInstanceOf[dice]
   @scala.inline
+  def difference: difference = "difference".asInstanceOf[difference]
+  @scala.inline
   def dimgray: dimgray = "dimgray".asInstanceOf[dimgray]
   @scala.inline
   def dimgrey: dimgrey = "dimgrey".asInstanceOf[dimgrey]
@@ -3168,6 +3261,8 @@ object vegaTypingsStrings {
   def equirectangular: equirectangular = "equirectangular".asInstanceOf[equirectangular]
   @scala.inline
   def `ew-resize`: `ew-resize` = "ew-resize".asInstanceOf[`ew-resize`]
+  @scala.inline
+  def exclusion: exclusion = "exclusion".asInstanceOf[exclusion]
   @scala.inline
   def exit: exit = "exit".asInstanceOf[exit]
   @scala.inline
@@ -3267,6 +3362,8 @@ object vegaTypingsStrings {
   @scala.inline
   def group: group = "group".asInstanceOf[group]
   @scala.inline
+  def `hard-light`: `hard-light` = "hard-light".asInstanceOf[`hard-light`]
+  @scala.inline
   def hcl: hcl = "hcl".asInstanceOf[hcl]
   @scala.inline
   def `hcl-long`: `hcl-long` = "hcl-long".asInstanceOf[`hcl-long`]
@@ -3296,6 +3393,8 @@ object vegaTypingsStrings {
   def http: http = "http".asInstanceOf[http]
   @scala.inline
   def https: https = "https".asInstanceOf[https]
+  @scala.inline
+  def hue: hue = "hue".asInstanceOf[hue]
   @scala.inline
   def identifier: identifier = "identifier".asInstanceOf[identifier]
   @scala.inline
@@ -3341,6 +3440,8 @@ object vegaTypingsStrings {
   @scala.inline
   def lab: lab = "lab".asInstanceOf[lab]
   @scala.inline
+  def label: label = "label".asInstanceOf[label]
+  @scala.inline
   def lag: lag = "lag".asInstanceOf[lag]
   @scala.inline
   def last_value: last_value = "last_value".asInstanceOf[last_value]
@@ -3368,6 +3469,8 @@ object vegaTypingsStrings {
   def lightcoral: lightcoral = "lightcoral".asInstanceOf[lightcoral]
   @scala.inline
   def lightcyan: lightcyan = "lightcyan".asInstanceOf[lightcyan]
+  @scala.inline
+  def lighten: lighten = "lighten".asInstanceOf[lighten]
   @scala.inline
   def lighter: lighter = "lighter".asInstanceOf[lighter]
   @scala.inline
@@ -3401,6 +3504,10 @@ object vegaTypingsStrings {
   @scala.inline
   def line: line = "line".asInstanceOf[line]
   @scala.inline
+  def `line-bottom`: `line-bottom` = "line-bottom".asInstanceOf[`line-bottom`]
+  @scala.inline
+  def `line-top`: `line-top` = "line-top".asInstanceOf[`line-top`]
+  @scala.inline
   def linear: linear = "linear".asInstanceOf[linear]
   @scala.inline
   def `linear-closed`: `linear-closed` = "linear-closed".asInstanceOf[`linear-closed`]
@@ -3422,6 +3529,8 @@ object vegaTypingsStrings {
   def lookup: lookup = "lookup".asInstanceOf[lookup]
   @scala.inline
   def ltr: ltr = "ltr".asInstanceOf[ltr]
+  @scala.inline
+  def luminosity: luminosity = "luminosity".asInstanceOf[luminosity]
   @scala.inline
   def magenta: magenta = "magenta".asInstanceOf[magenta]
   @scala.inline
@@ -3498,6 +3607,8 @@ object vegaTypingsStrings {
   def mousewheel: mousewheel = "mousewheel".asInstanceOf[mousewheel]
   @scala.inline
   def move: move = "move".asInstanceOf[move]
+  @scala.inline
+  def multiply: multiply = "multiply".asInstanceOf[multiply]
   @scala.inline
   def `n-resize`: `n-resize` = "n-resize".asInstanceOf[`n-resize`]
   @scala.inline
@@ -3579,6 +3690,8 @@ object vegaTypingsStrings {
   @scala.inline
   def outer: outer = "outer".asInstanceOf[outer]
   @scala.inline
+  def overlay: overlay = "overlay".asInstanceOf[overlay]
+  @scala.inline
   def pack: pack = "pack".asInstanceOf[pack]
   @scala.inline
   def pad: pad = "pad".asInstanceOf[pad]
@@ -3656,6 +3769,8 @@ object vegaTypingsStrings {
   def powderblue: powderblue = "powderblue".asInstanceOf[powderblue]
   @scala.inline
   def prev_value: prev_value = "prev_value".asInstanceOf[prev_value]
+  @scala.inline
+  def product: product = "product".asInstanceOf[product]
   @scala.inline
   def progress: progress = "progress".asInstanceOf[progress]
   @scala.inline
@@ -3917,7 +4032,11 @@ object vegaTypingsStrings {
   @scala.inline
   def sandybrown: sandybrown = "sandybrown".asInstanceOf[sandybrown]
   @scala.inline
+  def saturation: saturation = "saturation".asInstanceOf[saturation]
+  @scala.inline
   def scope: scope = "scope".asInstanceOf[scope]
+  @scala.inline
+  def screen: screen = "screen".asInstanceOf[screen]
   @scala.inline
   def `se-resize`: `se-resize` = "se-resize".asInstanceOf[`se-resize`]
   @scala.inline
@@ -3964,6 +4083,8 @@ object vegaTypingsStrings {
   def slicedice: slicedice = "slicedice".asInstanceOf[slicedice]
   @scala.inline
   def snow: snow = "snow".asInstanceOf[snow]
+  @scala.inline
+  def `soft-light`: `soft-light` = "soft-light".asInstanceOf[`soft-light`]
   @scala.inline
   def spectral: spectral = "spectral".asInstanceOf[spectral]
   @scala.inline

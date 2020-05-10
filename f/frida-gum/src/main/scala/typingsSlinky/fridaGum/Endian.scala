@@ -12,10 +12,8 @@ trait Endian extends js.Object
 
 object Endian {
   @scala.inline
-  def be: typingsSlinky.fridaGum.fridaGumStrings.be = this.cast("be")
+  def be: typingsSlinky.fridaGum.fridaGumStrings.be = "be".asInstanceOf[typingsSlinky.fridaGum.fridaGumStrings.be]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
-  @scala.inline
-  def le: typingsSlinky.fridaGum.fridaGumStrings.le = this.cast("le")
+  def le: typingsSlinky.fridaGum.fridaGumStrings.le = "le".asInstanceOf[typingsSlinky.fridaGum.fridaGumStrings.le]
 }
 

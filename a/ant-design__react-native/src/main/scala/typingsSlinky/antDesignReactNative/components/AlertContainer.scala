@@ -1,10 +1,8 @@
 package typingsSlinky.antDesignReactNative.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.antDesignReactNative.alertContainerMod.AlertContainerProps
 import typingsSlinky.antDesignReactNative.alertContainerMod.default
 import typingsSlinky.antDesignReactNative.modalPropsTypeMod.Action
@@ -13,27 +11,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object AlertContainer
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object AlertContainer {
   @JSImport("@ant-design/react-native/lib/modal/AlertContainer", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    actions: js.Array[Action[TextStyle]],
-    content: TagMod[Any],
-    title: TagMod[Any],
-    onAnimationEnd: /* visible */ Boolean => Unit = null,
-    onBackHandler: () => Boolean = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(actions = actions.asInstanceOf[js.Any], content = content.asInstanceOf[js.Any], title = title.asInstanceOf[js.Any])
-    if (onAnimationEnd != null) __obj.updateDynamic("onAnimationEnd")(js.Any.fromFunction1(onAnimationEnd))
-    if (onBackHandler != null) __obj.updateDynamic("onBackHandler")(js.Any.fromFunction0(onBackHandler))
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def content(value: TagMod[Any]): this.type = set("content", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onAnimationEnd(value: /* visible */ Boolean => Unit): this.type = set("onAnimationEnd", js.Any.fromFunction1(value))
+    @scala.inline
+    def onBackHandler(value: () => Boolean): this.type = set("onBackHandler", js.Any.fromFunction0(value))
+    @scala.inline
+    def title(value: TagMod[Any]): this.type = set("title", value.asInstanceOf[js.Any])
   }
-  type Props = AlertContainerProps
+  
+  def withProps(p: AlertContainerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(actions: js.Array[Action[TextStyle]]): Builder = {
+    val __props = js.Dynamic.literal(actions = actions.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[AlertContainerProps]))
+  }
 }
 

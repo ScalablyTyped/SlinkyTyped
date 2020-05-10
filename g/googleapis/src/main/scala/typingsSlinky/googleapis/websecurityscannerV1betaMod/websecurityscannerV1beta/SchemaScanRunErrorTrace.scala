@@ -30,16 +30,53 @@ trait SchemaScanRunErrorTrace extends js.Object {
 
 object SchemaScanRunErrorTrace {
   @scala.inline
-  def apply(
-    code: String = null,
-    mostCommonHttpErrorCode: Int | Double = null,
-    scanConfigError: SchemaScanConfigError = null
-  ): SchemaScanRunErrorTrace = {
+  def apply(): SchemaScanRunErrorTrace = {
     val __obj = js.Dynamic.literal()
-    if (code != null) __obj.updateDynamic("code")(code.asInstanceOf[js.Any])
-    if (mostCommonHttpErrorCode != null) __obj.updateDynamic("mostCommonHttpErrorCode")(mostCommonHttpErrorCode.asInstanceOf[js.Any])
-    if (scanConfigError != null) __obj.updateDynamic("scanConfigError")(scanConfigError.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaScanRunErrorTrace]
   }
+  @scala.inline
+  implicit class SchemaScanRunErrorTraceOps[Self <: SchemaScanRunErrorTrace] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("code")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("code")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMostCommonHttpErrorCode(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mostCommonHttpErrorCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMostCommonHttpErrorCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mostCommonHttpErrorCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScanConfigError(value: SchemaScanConfigError): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scanConfigError")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScanConfigError: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scanConfigError")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

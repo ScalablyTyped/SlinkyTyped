@@ -12,31 +12,32 @@ import scala.scalajs.js.annotation._
 /**
   * http://js.cytoscape.org/#layouts/concentric
   */
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typingsSlinky.cytoscape.mod.LayoutOptions because Already inherited */ trait ConcentricLayoutOptions extends ShapedLayoutOptions {
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
+- typingsSlinky.cytoscape.mod.LayoutOptions because Already inherited */ @js.native
+trait ConcentricLayoutOptions extends ShapedLayoutOptions {
   // whether the layout should go clockwise (true) or counterclockwise/anticlockwise (false)
-  var clockwise: js.UndefOr[Boolean] = js.undefined
+  var clockwise: js.UndefOr[Boolean] = js.native
   // whether levels have an equal radial distance betwen them, may cause bounding box overflow
-  var equidistant: `false`
+  var equidistant: `false` = js.native
    // min spacing between outside of nodes (used for radius adjustment)
   // height of layout area (overrides container height)
-  var height: js.UndefOr[scala.Nothing] = js.undefined
-  var minNodeSpacing: `10`
+  var height: js.UndefOr[scala.Nothing] = js.native
+  var minNodeSpacing: `10` = js.native
   @JSName("name")
-  var name_ConcentricLayoutOptions: concentric
+  var name_ConcentricLayoutOptions: concentric = js.native
   // Applies a multiplicative factor (>0) to expand or compress the overall area that the nodes take up
   @JSName("spacingFactor")
-  var spacingFactor_ConcentricLayoutOptions: js.UndefOr[scala.Nothing] = js.undefined
+  var spacingFactor_ConcentricLayoutOptions: js.UndefOr[scala.Nothing] = js.native
   // where nodes start in radians, e.g. 3 / 2 * Math.PI,
-  var startAngle: Double
+  var startAngle: Double = js.native
   // how many radians should be between the first and last node (defaults to full circle)
-  var sweep: js.UndefOr[Double] = js.undefined
+  var sweep: js.UndefOr[Double] = js.native
   // width of layout area (overrides container width)
-  var width: js.UndefOr[scala.Nothing] = js.undefined
+  var width: js.UndefOr[scala.Nothing] = js.native
   // returns numeric value for each node, placing higher nodes in levels towards the centre
-  def concentric(node: AnonDegree): Double
+  def concentric(node: AnonDegree): Double = js.native
   // the variation of concentric values in each level
-  def levelWidth(node: AnonMaxDegree): Double
+  def levelWidth(node: AnonMaxDegree): Double = js.native
 }
 
 object ConcentricLayoutOptions {
@@ -49,38 +50,114 @@ object ConcentricLayoutOptions {
     minNodeSpacing: `10`,
     name: concentric,
     nodeDimensionsIncludeLabels: Boolean,
-    startAngle: Double,
-    animate: js.UndefOr[Boolean] = js.undefined,
-    animationDuration: Int | Double = null,
-    animationEasing: js.UndefOr[Boolean] = js.undefined,
-    avoidOverlap: js.UndefOr[Boolean] = js.undefined,
-    boundingBox: BoundingBox12 | BoundingBoxWH = null,
-    clockwise: js.UndefOr[Boolean] = js.undefined,
-    height: js.UndefOr[scala.Nothing] = js.undefined,
-    padding: Int | Double = null,
-    ready: /* e */ LayoutEventObject => Unit = null,
-    sort: (/* a */ SortableNode, /* b */ SortableNode) => Double = null,
-    spacingFactor: js.UndefOr[scala.Nothing] = js.undefined,
-    stop: /* e */ LayoutEventObject => Unit = null,
-    sweep: Int | Double = null,
-    width: js.UndefOr[scala.Nothing] = js.undefined
+    startAngle: Double
   ): ConcentricLayoutOptions = {
     val __obj = js.Dynamic.literal(concentric = js.Any.fromFunction1(concentric), equidistant = equidistant.asInstanceOf[js.Any], fit = fit.asInstanceOf[js.Any], levelWidth = js.Any.fromFunction1(levelWidth), minNodeSpacing = minNodeSpacing.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], nodeDimensionsIncludeLabels = nodeDimensionsIncludeLabels.asInstanceOf[js.Any], startAngle = startAngle.asInstanceOf[js.Any])
-    if (!js.isUndefined(animate)) __obj.updateDynamic("animate")(animate.asInstanceOf[js.Any])
-    if (animationDuration != null) __obj.updateDynamic("animationDuration")(animationDuration.asInstanceOf[js.Any])
-    if (!js.isUndefined(animationEasing)) __obj.updateDynamic("animationEasing")(animationEasing.asInstanceOf[js.Any])
-    if (!js.isUndefined(avoidOverlap)) __obj.updateDynamic("avoidOverlap")(avoidOverlap.asInstanceOf[js.Any])
-    if (boundingBox != null) __obj.updateDynamic("boundingBox")(boundingBox.asInstanceOf[js.Any])
-    if (!js.isUndefined(clockwise)) __obj.updateDynamic("clockwise")(clockwise.asInstanceOf[js.Any])
-    if (!js.isUndefined(height)) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (padding != null) __obj.updateDynamic("padding")(padding.asInstanceOf[js.Any])
-    if (ready != null) __obj.updateDynamic("ready")(js.Any.fromFunction1(ready))
-    if (sort != null) __obj.updateDynamic("sort")(js.Any.fromFunction2(sort))
-    if (!js.isUndefined(spacingFactor)) __obj.updateDynamic("spacingFactor")(spacingFactor.asInstanceOf[js.Any])
-    if (stop != null) __obj.updateDynamic("stop")(js.Any.fromFunction1(stop))
-    if (sweep != null) __obj.updateDynamic("sweep")(sweep.asInstanceOf[js.Any])
-    if (!js.isUndefined(width)) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConcentricLayoutOptions]
   }
+  @scala.inline
+  implicit class ConcentricLayoutOptionsOps[Self <: ConcentricLayoutOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConcentric(value: AnonDegree => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("concentric")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withEquidistant(value: `false`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("equidistant")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLevelWidth(value: AnonMaxDegree => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("levelWidth")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMinNodeSpacing(value: `10`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minNodeSpacing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withName(value: concentric): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStartAngle(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startAngle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withClockwise(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clockwise")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClockwise: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clockwise")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeight(value: scala.Nothing): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSpacingFactor(value: scala.Nothing): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("spacingFactor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSpacingFactor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("spacingFactor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSweep(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sweep")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSweep: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sweep")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWidth(value: scala.Nothing): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -29,18 +29,65 @@ trait SchemaGooglePrivacyDlpV2InspectJobConfig extends js.Object {
 
 object SchemaGooglePrivacyDlpV2InspectJobConfig {
   @scala.inline
-  def apply(
-    actions: js.Array[SchemaGooglePrivacyDlpV2Action] = null,
-    inspectConfig: SchemaGooglePrivacyDlpV2InspectConfig = null,
-    inspectTemplateName: String = null,
-    storageConfig: SchemaGooglePrivacyDlpV2StorageConfig = null
-  ): SchemaGooglePrivacyDlpV2InspectJobConfig = {
+  def apply(): SchemaGooglePrivacyDlpV2InspectJobConfig = {
     val __obj = js.Dynamic.literal()
-    if (actions != null) __obj.updateDynamic("actions")(actions.asInstanceOf[js.Any])
-    if (inspectConfig != null) __obj.updateDynamic("inspectConfig")(inspectConfig.asInstanceOf[js.Any])
-    if (inspectTemplateName != null) __obj.updateDynamic("inspectTemplateName")(inspectTemplateName.asInstanceOf[js.Any])
-    if (storageConfig != null) __obj.updateDynamic("storageConfig")(storageConfig.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGooglePrivacyDlpV2InspectJobConfig]
   }
+  @scala.inline
+  implicit class SchemaGooglePrivacyDlpV2InspectJobConfigOps[Self <: SchemaGooglePrivacyDlpV2InspectJobConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withActions(value: js.Array[SchemaGooglePrivacyDlpV2Action]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("actions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutActions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("actions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInspectConfig(value: SchemaGooglePrivacyDlpV2InspectConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inspectConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInspectConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inspectConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInspectTemplateName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inspectTemplateName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInspectTemplateName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inspectTemplateName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStorageConfig(value: SchemaGooglePrivacyDlpV2StorageConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("storageConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStorageConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("storageConfig")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

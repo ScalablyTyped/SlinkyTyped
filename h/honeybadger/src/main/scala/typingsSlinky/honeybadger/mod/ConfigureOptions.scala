@@ -5,38 +5,121 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ConfigureOptions extends js.Object {
-  var apiKey: String
-  var developmentEnvironments: js.UndefOr[js.Array[String]] = js.undefined
-  var endpoint: js.UndefOr[String] = js.undefined
-  var environment: js.UndefOr[String] = js.undefined
-  var filters: js.UndefOr[js.Array[String]] = js.undefined
-  var hostname: js.UndefOr[String] = js.undefined
-  var logger: js.UndefOr[Console_] = js.undefined
-  var projectRoot: js.UndefOr[String] = js.undefined
+  var apiKey: String = js.native
+  var developmentEnvironments: js.UndefOr[js.Array[String]] = js.native
+  var endpoint: js.UndefOr[String] = js.native
+  var environment: js.UndefOr[String] = js.native
+  var filters: js.UndefOr[js.Array[String]] = js.native
+  var hostname: js.UndefOr[String] = js.native
+  var logger: js.UndefOr[Console_] = js.native
+  var projectRoot: js.UndefOr[String] = js.native
 }
 
 object ConfigureOptions {
   @scala.inline
-  def apply(
-    apiKey: String,
-    developmentEnvironments: js.Array[String] = null,
-    endpoint: String = null,
-    environment: String = null,
-    filters: js.Array[String] = null,
-    hostname: String = null,
-    logger: Console_ = null,
-    projectRoot: String = null
-  ): ConfigureOptions = {
+  def apply(apiKey: String): ConfigureOptions = {
     val __obj = js.Dynamic.literal(apiKey = apiKey.asInstanceOf[js.Any])
-    if (developmentEnvironments != null) __obj.updateDynamic("developmentEnvironments")(developmentEnvironments.asInstanceOf[js.Any])
-    if (endpoint != null) __obj.updateDynamic("endpoint")(endpoint.asInstanceOf[js.Any])
-    if (environment != null) __obj.updateDynamic("environment")(environment.asInstanceOf[js.Any])
-    if (filters != null) __obj.updateDynamic("filters")(filters.asInstanceOf[js.Any])
-    if (hostname != null) __obj.updateDynamic("hostname")(hostname.asInstanceOf[js.Any])
-    if (logger != null) __obj.updateDynamic("logger")(logger.asInstanceOf[js.Any])
-    if (projectRoot != null) __obj.updateDynamic("projectRoot")(projectRoot.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConfigureOptions]
   }
+  @scala.inline
+  implicit class ConfigureOptionsOps[Self <: ConfigureOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withApiKey(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("apiKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDevelopmentEnvironments(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("developmentEnvironments")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDevelopmentEnvironments: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("developmentEnvironments")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEndpoint(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endpoint")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEndpoint: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endpoint")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnvironment(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("environment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnvironment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("environment")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFilters(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFilters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filters")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHostname(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hostname")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHostname: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hostname")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLogger(value: Console_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("logger")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLogger: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("logger")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProjectRoot(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("projectRoot")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProjectRoot: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("projectRoot")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

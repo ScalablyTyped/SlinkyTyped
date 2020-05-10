@@ -1,0 +1,11 @@
+package typingsSlinky.babylonjs.indexMod
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/* augmented module */
+@JSImport("babylonjs/index", "babylonjs/Materials/Textures/baseTexture")
+@js.native
+object babylonjsMaterialsTexturesBaseTextureAugmentingMod extends js.Object
+

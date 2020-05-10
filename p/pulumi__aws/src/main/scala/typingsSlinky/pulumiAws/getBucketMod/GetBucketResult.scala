@@ -55,8 +55,69 @@ object GetBucketResult {
     websiteEndpoint: String
   ): GetBucketResult = {
     val __obj = js.Dynamic.literal(arn = arn.asInstanceOf[js.Any], bucket = bucket.asInstanceOf[js.Any], bucketDomainName = bucketDomainName.asInstanceOf[js.Any], bucketRegionalDomainName = bucketRegionalDomainName.asInstanceOf[js.Any], hostedZoneId = hostedZoneId.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], region = region.asInstanceOf[js.Any], websiteDomain = websiteDomain.asInstanceOf[js.Any], websiteEndpoint = websiteEndpoint.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[GetBucketResult]
   }
+  @scala.inline
+  implicit class GetBucketResultOps[Self <: GetBucketResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withArn(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBucket(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bucket")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBucketDomainName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bucketDomainName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBucketRegionalDomainName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bucketRegionalDomainName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHostedZoneId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hostedZoneId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRegion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("region")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withWebsiteDomain(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("websiteDomain")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withWebsiteEndpoint(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("websiteEndpoint")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

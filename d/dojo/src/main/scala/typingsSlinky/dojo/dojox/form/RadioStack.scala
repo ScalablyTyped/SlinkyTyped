@@ -10,5 +10,6 @@ import scala.scalajs.js.annotation._
   * A radio-based select stack.
   *
   */
+@js.native
 trait RadioStack extends js.Object
 

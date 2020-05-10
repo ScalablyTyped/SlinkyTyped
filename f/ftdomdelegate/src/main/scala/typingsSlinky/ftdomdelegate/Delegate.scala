@@ -20,41 +20,38 @@ class Delegate protected () extends js.Object {
     selector: String,
     handler: js.Function2[/* event */ Event_, /* targetElement */ Element, Unit]
   ): Unit = js.native
-  def off(eventType: String, selector: js.Function1[/* element */ typingsSlinky.std.Element, Boolean]): Unit = js.native
+  def off(eventType: String, selector: js.Function1[/* element */ Element, Boolean]): Unit = js.native
   def off(
     eventType: String,
-    selector: js.Function1[/* element */ typingsSlinky.std.Element, Boolean],
+    selector: js.Function1[/* element */ Element, Boolean],
+    handler: js.Function2[/* event */ Event_, /* targetElement */ Element, Unit]
+  ): Unit = js.native
+  def on(eventType: String, handler: js.Function2[/* event */ Event_, /* targetElement */ Element, Unit]): Unit = js.native
+  def on(
+    eventType: String,
+    handler: js.Function2[/* event */ Event_, /* targetElement */ Element, Unit],
+    eventData: js.Any
+  ): Unit = js.native
+  def on(
+    eventType: String,
+    selector: String,
     handler: js.Function2[/* event */ Event_, /* targetElement */ Element, Unit]
   ): Unit = js.native
   def on(
     eventType: String,
-    handler: js.Function2[/* event */ Event_, /* targetElement */ typingsSlinky.std.Element, Unit]
-  ): Unit = js.native
-  def on(
-    eventType: String,
-    handler: js.Function2[/* event */ Event_, /* targetElement */ typingsSlinky.std.Element, Unit],
+    selector: String,
+    handler: js.Function2[/* event */ Event_, /* targetElement */ Element, Unit],
     eventData: js.Any
   ): Unit = js.native
   def on(
     eventType: String,
-    selector: String,
-    handler: js.Function2[/* event */ Event_, /* targetElement */ typingsSlinky.std.Element, Unit]
+    selector: js.Function1[/* element */ Element, Boolean],
+    handler: js.Function2[/* event */ Event_, /* targetElement */ Element, Unit]
   ): Unit = js.native
   def on(
     eventType: String,
-    selector: String,
-    handler: js.Function2[/* event */ Event_, /* targetElement */ typingsSlinky.std.Element, Unit],
-    eventData: js.Any
-  ): Unit = js.native
-  def on(
-    eventType: String,
-    selector: js.Function1[/* element */ typingsSlinky.std.Element, Boolean],
-    handler: js.Function2[/* event */ Event_, /* targetElement */ typingsSlinky.std.Element, Unit]
-  ): Unit = js.native
-  def on(
-    eventType: String,
-    selector: js.Function1[/* element */ typingsSlinky.std.Element, Boolean],
-    handler: js.Function2[/* event */ Event_, /* targetElement */ typingsSlinky.std.Element, Unit],
+    selector: js.Function1[/* element */ Element, Boolean],
+    handler: js.Function2[/* event */ Event_, /* targetElement */ Element, Unit],
     eventData: js.Any
   ): Unit = js.native
   def root(): Unit = js.native

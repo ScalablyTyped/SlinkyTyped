@@ -5,20 +5,21 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IBalance extends IObject {
   /**
     * Funds that are available to be paid out automatically by Stripe or explicitly
     * via the transfers API. The available balance for each currency and payment
     * type can be found in the source_types property.
     */
-  var available: js.Array[ISourceType]
-  var livemode: Boolean
+  var available: js.Array[ISourceType] = js.native
+  var livemode: Boolean = js.native
   /**
     * Funds that are not available in the balance yet, due to the 7-day rolling pay
     * cycle. The pending balance for each currency and payment type can be
     * found in the source_types property
     */
-  var pending: js.Array[ISourceType]
+  var pending: js.Array[ISourceType] = js.native
 }
 
 object IBalance {
@@ -33,5 +34,31 @@ object IBalance {
     __obj.updateDynamic("object")(`object`.asInstanceOf[js.Any])
     __obj.asInstanceOf[IBalance]
   }
+  @scala.inline
+  implicit class IBalanceOps[Self <: IBalance] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAvailable(value: js.Array[ISourceType]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("available")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLivemode(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("livemode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPending(value: js.Array[ISourceType]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pending")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

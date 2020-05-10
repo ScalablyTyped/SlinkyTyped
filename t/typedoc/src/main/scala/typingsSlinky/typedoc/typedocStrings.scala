@@ -18,16 +18,10 @@ object typedocStrings {
   sealed trait function extends js.Object
   
   @js.native
-  sealed trait indexedAccess extends js.Object
-  
-  @js.native
   sealed trait intersection extends js.Object
   
   @js.native
   sealed trait intrinsic extends js.Object
-  
-  @js.native
-  sealed trait keyof extends js.Object
   
   @js.native
   sealed trait list extends js.Object
@@ -37,9 +31,6 @@ object typedocStrings {
   
   @js.native
   sealed trait object_ extends js.Object
-  
-  @js.native
-  sealed trait predicate extends js.Object
   
   @js.native
   sealed trait reference extends js.Object
@@ -80,21 +71,15 @@ object typedocStrings {
   @scala.inline
   def function: function = "function".asInstanceOf[function]
   @scala.inline
-  def indexedAccess: indexedAccess = "indexedAccess".asInstanceOf[indexedAccess]
-  @scala.inline
   def intersection: intersection = "intersection".asInstanceOf[intersection]
   @scala.inline
   def intrinsic: intrinsic = "intrinsic".asInstanceOf[intrinsic]
-  @scala.inline
-  def keyof: keyof = "keyof".asInstanceOf[keyof]
   @scala.inline
   def list: list = "list".asInstanceOf[list]
   @scala.inline
   def number: number = "number".asInstanceOf[number]
   @scala.inline
   def object_ : object_ = "object".asInstanceOf[object_]
-  @scala.inline
-  def predicate: predicate = "predicate".asInstanceOf[predicate]
   @scala.inline
   def reference: reference = "reference".asInstanceOf[reference]
   @scala.inline

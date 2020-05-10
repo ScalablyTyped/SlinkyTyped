@@ -29,16 +29,53 @@ trait SchemaCreateCollectdTimeSeriesRequest extends js.Object {
 
 object SchemaCreateCollectdTimeSeriesRequest {
   @scala.inline
-  def apply(
-    collectdPayloads: js.Array[SchemaCollectdPayload] = null,
-    collectdVersion: String = null,
-    resource: SchemaMonitoredResource = null
-  ): SchemaCreateCollectdTimeSeriesRequest = {
+  def apply(): SchemaCreateCollectdTimeSeriesRequest = {
     val __obj = js.Dynamic.literal()
-    if (collectdPayloads != null) __obj.updateDynamic("collectdPayloads")(collectdPayloads.asInstanceOf[js.Any])
-    if (collectdVersion != null) __obj.updateDynamic("collectdVersion")(collectdVersion.asInstanceOf[js.Any])
-    if (resource != null) __obj.updateDynamic("resource")(resource.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaCreateCollectdTimeSeriesRequest]
   }
+  @scala.inline
+  implicit class SchemaCreateCollectdTimeSeriesRequestOps[Self <: SchemaCreateCollectdTimeSeriesRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCollectdPayloads(value: js.Array[SchemaCollectdPayload]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("collectdPayloads")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCollectdPayloads: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("collectdPayloads")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCollectdVersion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("collectdVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCollectdVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("collectdVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResource(value: SchemaMonitoredResource): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resource")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResource: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resource")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

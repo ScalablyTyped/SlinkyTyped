@@ -4,20 +4,51 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonFamilyName extends js.Object {
   /** The family name ("last name") of the actor. */
-  var familyName: js.UndefOr[String] = js.undefined
+  var familyName: js.UndefOr[String] = js.native
   /** The given name ("first name") of the actor. */
-  var givenName: js.UndefOr[String] = js.undefined
+  var givenName: js.UndefOr[String] = js.native
 }
 
 object AnonFamilyName {
   @scala.inline
-  def apply(familyName: String = null, givenName: String = null): AnonFamilyName = {
+  def apply(): AnonFamilyName = {
     val __obj = js.Dynamic.literal()
-    if (familyName != null) __obj.updateDynamic("familyName")(familyName.asInstanceOf[js.Any])
-    if (givenName != null) __obj.updateDynamic("givenName")(givenName.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonFamilyName]
   }
+  @scala.inline
+  implicit class AnonFamilyNameOps[Self <: AnonFamilyName] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFamilyName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("familyName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFamilyName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("familyName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGivenName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("givenName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGivenName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("givenName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

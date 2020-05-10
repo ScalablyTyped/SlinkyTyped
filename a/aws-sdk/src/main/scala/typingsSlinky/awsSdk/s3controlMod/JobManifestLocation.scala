@@ -22,14 +22,41 @@ trait JobManifestLocation extends js.Object {
 
 object JobManifestLocation {
   @scala.inline
-  def apply(
-    ETag: NonEmptyMaxLength1024String,
-    ObjectArn: S3KeyArnString,
-    ObjectVersionId: S3ObjectVersionId = null
-  ): JobManifestLocation = {
+  def apply(ETag: NonEmptyMaxLength1024String, ObjectArn: S3KeyArnString): JobManifestLocation = {
     val __obj = js.Dynamic.literal(ETag = ETag.asInstanceOf[js.Any], ObjectArn = ObjectArn.asInstanceOf[js.Any])
-    if (ObjectVersionId != null) __obj.updateDynamic("ObjectVersionId")(ObjectVersionId.asInstanceOf[js.Any])
     __obj.asInstanceOf[JobManifestLocation]
   }
+  @scala.inline
+  implicit class JobManifestLocationOps[Self <: JobManifestLocation] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withETag(value: NonEmptyMaxLength1024String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ETag")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withObjectArn(value: S3KeyArnString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ObjectArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withObjectVersionId(value: S3ObjectVersionId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ObjectVersionId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutObjectVersionId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ObjectVersionId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

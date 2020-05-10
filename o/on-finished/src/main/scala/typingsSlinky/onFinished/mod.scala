@@ -2,7 +2,6 @@ package typingsSlinky.onFinished
 
 import typingsSlinky.node.httpMod.IncomingMessage
 import typingsSlinky.node.httpMod.OutgoingMessage
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,11 +11,11 @@ import scala.scalajs.js.annotation._
 object mod extends js.Object {
   def apply(
     msg: IncomingMessage,
-    listener: js.Function2[/* err */ Error | Null, /* msg */ IncomingMessage, Unit]
+    listener: js.Function2[/* err */ js.Error | Null, /* msg */ IncomingMessage, Unit]
   ): IncomingMessage = js.native
   def apply(
     msg: OutgoingMessage,
-    listener: js.Function2[/* err */ Error | Null, /* msg */ OutgoingMessage, Unit]
+    listener: js.Function2[/* err */ js.Error | Null, /* msg */ OutgoingMessage, Unit]
   ): OutgoingMessage = js.native
   def isFinished(msg: IncomingMessage): Boolean = js.native
   def isFinished(msg: OutgoingMessage): Boolean = js.native

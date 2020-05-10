@@ -26,17 +26,59 @@ trait UpdateDomainConfigurationRequest extends js.Object {
 
 object UpdateDomainConfigurationRequest {
   @scala.inline
-  def apply(
-    domainConfigurationName: ReservedDomainConfigurationName,
-    authorizerConfig: AuthorizerConfig = null,
-    domainConfigurationStatus: DomainConfigurationStatus = null,
-    removeAuthorizerConfig: js.UndefOr[scala.Boolean] = js.undefined
-  ): UpdateDomainConfigurationRequest = {
+  def apply(domainConfigurationName: ReservedDomainConfigurationName): UpdateDomainConfigurationRequest = {
     val __obj = js.Dynamic.literal(domainConfigurationName = domainConfigurationName.asInstanceOf[js.Any])
-    if (authorizerConfig != null) __obj.updateDynamic("authorizerConfig")(authorizerConfig.asInstanceOf[js.Any])
-    if (domainConfigurationStatus != null) __obj.updateDynamic("domainConfigurationStatus")(domainConfigurationStatus.asInstanceOf[js.Any])
-    if (!js.isUndefined(removeAuthorizerConfig)) __obj.updateDynamic("removeAuthorizerConfig")(removeAuthorizerConfig.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateDomainConfigurationRequest]
   }
+  @scala.inline
+  implicit class UpdateDomainConfigurationRequestOps[Self <: UpdateDomainConfigurationRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDomainConfigurationName(value: ReservedDomainConfigurationName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("domainConfigurationName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAuthorizerConfig(value: AuthorizerConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("authorizerConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAuthorizerConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("authorizerConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDomainConfigurationStatus(value: DomainConfigurationStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("domainConfigurationStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDomainConfigurationStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("domainConfigurationStatus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRemoveAuthorizerConfig(value: RemoveAuthorizerConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeAuthorizerConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRemoveAuthorizerConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeAuthorizerConfig")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

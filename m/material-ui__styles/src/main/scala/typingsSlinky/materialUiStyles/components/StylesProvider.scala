@@ -1,10 +1,7 @@
 package typingsSlinky.materialUiStyles.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.jss.mod.Jss
 import typingsSlinky.jss.mod.Rule
 import typingsSlinky.jss.mod.StyleSheet
@@ -14,37 +11,32 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object StylesProvider
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object StylesProvider {
   @JSImport("@material-ui/styles/StylesProvider", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    disableGeneration: js.UndefOr[Boolean] = js.undefined,
-    generateClassName: (/* rule */ Rule, /* sheet */ js.UndefOr[StyleSheet[String]]) => String = null,
-    injectFirst: js.UndefOr[Boolean] = js.undefined,
-    jss: Jss = null,
-    sheetsCache: js.Object = null,
-    sheetsManager: js.Object = null,
-    sheetsRegistry: js.Object = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(disableGeneration)) __obj.updateDynamic("disableGeneration")(disableGeneration.asInstanceOf[js.Any])
-    if (generateClassName != null) __obj.updateDynamic("generateClassName")(js.Any.fromFunction2(generateClassName))
-    if (!js.isUndefined(injectFirst)) __obj.updateDynamic("injectFirst")(injectFirst.asInstanceOf[js.Any])
-    if (jss != null) __obj.updateDynamic("jss")(jss.asInstanceOf[js.Any])
-    if (sheetsCache != null) __obj.updateDynamic("sheetsCache")(sheetsCache.asInstanceOf[js.Any])
-    if (sheetsManager != null) __obj.updateDynamic("sheetsManager")(sheetsManager.asInstanceOf[js.Any])
-    if (sheetsRegistry != null) __obj.updateDynamic("sheetsRegistry")(sheetsRegistry.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def disableGeneration(value: Boolean): this.type = set("disableGeneration", value.asInstanceOf[js.Any])
+    @scala.inline
+    def generateClassName(value: (/* rule */ Rule, /* sheet */ js.UndefOr[StyleSheet[String]]) => String): this.type = set("generateClassName", js.Any.fromFunction2(value))
+    @scala.inline
+    def injectFirst(value: Boolean): this.type = set("injectFirst", value.asInstanceOf[js.Any])
+    @scala.inline
+    def jss(value: Jss): this.type = set("jss", value.asInstanceOf[js.Any])
+    @scala.inline
+    def sheetsCache(value: js.Object): this.type = set("sheetsCache", value.asInstanceOf[js.Any])
+    @scala.inline
+    def sheetsManager(value: js.Object): this.type = set("sheetsManager", value.asInstanceOf[js.Any])
+    @scala.inline
+    def sheetsRegistry(value: js.Object): this.type = set("sheetsRegistry", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[
-  slinky.web.html.`*`.tag.type, 
-  typingsSlinky.materialUiStyles.stylesProviderMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = StylesProviderProps
+  
+  def withProps(p: StylesProviderProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: StylesProvider.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

@@ -2,7 +2,6 @@ package typingsSlinky.jenkins
 
 import typingsSlinky.jenkins.jenkinsStrings.list
 import typingsSlinky.jenkins.jenkinsStrings.my
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +9,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait AnonAdd extends js.Object {
   def add(name: String, job: String, callback: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
-  def config(name: String, callback: js.Function2[/* err */ Error, /* data */ js.Any, Unit]): Unit = js.native
+  def config(name: String, callback: js.Function2[/* err */ js.Error, /* data */ js.Any, Unit]): Unit = js.native
   def config(name: String, xml: String, callback: js.Function2[/* err */ js.Error, /* data */ js.Any, Unit]): Unit = js.native
   @JSName("create")
   def create_list(name: String, `type`: list, callback: js.Function1[/* err */ js.Error, Unit]): Unit = js.native

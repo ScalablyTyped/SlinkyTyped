@@ -1,5 +1,6 @@
 package typingsSlinky.reselect
 
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.reselect.reselectStrings.createStructuredSelector
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -2450,25 +2451,25 @@ object mod extends js.Object {
   def createStructuredSelector[S, T](
     selectors: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ K in keyof T ]: reselect.reselect.Selector<S, T[K]>}
-    */ typingsSlinky.reselect.reselectStrings.createStructuredSelector with T
+    */ typingsSlinky.reselect.reselectStrings.createStructuredSelector with TopLevel[T]
   ): Selector[S, T] = js.native
   def createStructuredSelector[S, T](
     selectors: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ K in keyof T ]: reselect.reselect.Selector<S, T[K]>}
-    */ typingsSlinky.reselect.reselectStrings.createStructuredSelector with T,
+    */ typingsSlinky.reselect.reselectStrings.createStructuredSelector with TopLevel[T],
     selectorCreator: FnCall
   ): Selector[S, T] = js.native
   @JSName("createStructuredSelector")
   def createStructuredSelector_SPT_ParametricSelector[S, P, T](
     selectors: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ K in keyof T ]: reselect.reselect.ParametricSelector<S, P, T[K]>}
-    */ createStructuredSelector with T
+    */ createStructuredSelector with TopLevel[T]
   ): ParametricSelector[S, P, T] = js.native
   @JSName("createStructuredSelector")
   def createStructuredSelector_SPT_ParametricSelector[S, P, T](
     selectors: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ K in keyof T ]: reselect.reselect.ParametricSelector<S, P, T[K]>}
-    */ createStructuredSelector with T,
+    */ createStructuredSelector with TopLevel[T],
     selectorCreator: FnCall
   ): ParametricSelector[S, P, T] = js.native
   def defaultMemoize[F /* <: js.Function */](func: F): F = js.native

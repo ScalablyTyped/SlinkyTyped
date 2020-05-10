@@ -18,11 +18,41 @@ trait ListEnabledProductsForImportResponse extends js.Object {
 
 object ListEnabledProductsForImportResponse {
   @scala.inline
-  def apply(NextToken: NextToken = null, ProductSubscriptions: ProductSubscriptionArnList = null): ListEnabledProductsForImportResponse = {
+  def apply(): ListEnabledProductsForImportResponse = {
     val __obj = js.Dynamic.literal()
-    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
-    if (ProductSubscriptions != null) __obj.updateDynamic("ProductSubscriptions")(ProductSubscriptions.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListEnabledProductsForImportResponse]
   }
+  @scala.inline
+  implicit class ListEnabledProductsForImportResponseOps[Self <: ListEnabledProductsForImportResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNextToken(value: NextToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProductSubscriptions(value: ProductSubscriptionArnList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProductSubscriptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProductSubscriptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProductSubscriptions")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

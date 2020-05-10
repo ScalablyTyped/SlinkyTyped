@@ -1,9 +1,7 @@
 package typingsSlinky.antDesignReactNative.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.antDesignReactNative.toastContainerMod.ToastProps
 import typingsSlinky.antDesignReactNative.toastContainerMod.default
 import typingsSlinky.antDesignReactNative.toastStyleMod.ToastStyle
@@ -12,32 +10,34 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ToastContainer
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object ToastContainer {
   @JSImport("@ant-design/react-native/lib/toast/ToastContainer", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: type */
-  def apply(
-    content: String,
-    duration: Int | Double = null,
-    mask: js.UndefOr[Boolean] = js.undefined,
-    onAnimationEnd: () => Unit = null,
-    onClose: () => Unit = null,
-    styles: Partial[ToastStyle] = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(content = content.asInstanceOf[js.Any])
-    if (duration != null) __obj.updateDynamic("duration")(duration.asInstanceOf[js.Any])
-    if (!js.isUndefined(mask)) __obj.updateDynamic("mask")(mask.asInstanceOf[js.Any])
-    if (onAnimationEnd != null) __obj.updateDynamic("onAnimationEnd")(js.Any.fromFunction0(onAnimationEnd))
-    if (onClose != null) __obj.updateDynamic("onClose")(js.Any.fromFunction0(onClose))
-    if (styles != null) __obj.updateDynamic("styles")(styles.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def duration(value: Double): this.type = set("duration", value.asInstanceOf[js.Any])
+    @scala.inline
+    def mask(value: Boolean): this.type = set("mask", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onAnimationEnd(value: () => Unit): this.type = set("onAnimationEnd", js.Any.fromFunction0(value))
+    @scala.inline
+    def onClose(value: () => Unit): this.type = set("onClose", js.Any.fromFunction0(value))
+    @scala.inline
+    def styles(value: Partial[ToastStyle]): this.type = set("styles", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `type`(value: String): this.type = set("type", value.asInstanceOf[js.Any])
   }
-  type Props = ToastProps
+  
+  def withProps(p: ToastProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(content: String): Builder = {
+    val __props = js.Dynamic.literal(content = content.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ToastProps]))
+  }
 }
 

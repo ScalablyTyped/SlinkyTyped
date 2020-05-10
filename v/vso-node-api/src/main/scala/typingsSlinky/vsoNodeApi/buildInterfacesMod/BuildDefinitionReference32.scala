@@ -6,29 +6,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait BuildDefinitionReference32 extends DefinitionReference {
-  var _links: js.Any
+  var _links: js.Any = js.native
   /**
     * The author of the definition.
     */
-  var authoredBy: IdentityRef
+  var authoredBy: IdentityRef = js.native
   /**
     * A reference to the definition that this definition is a draft of, if this is a draft definition.
     */
-  var draftOf: DefinitionReference
+  var draftOf: DefinitionReference = js.native
   /**
     * The list of drafts associated with this definition, if this is not a draft definition.
     */
-  var drafts: js.Array[DefinitionReference]
-  var metrics: js.Array[BuildMetric]
+  var drafts: js.Array[DefinitionReference] = js.native
+  var metrics: js.Array[BuildMetric] = js.native
   /**
     * The quality of the definition document (draft, etc.)
     */
-  var quality: DefinitionQuality
+  var quality: DefinitionQuality = js.native
   /**
     * The default queue for builds run against this definition.
     */
-  var queue: AgentPoolQueue
+  var queue: AgentPoolQueue = js.native
 }
 
 object BuildDefinitionReference32 {
@@ -56,5 +57,55 @@ object BuildDefinitionReference32 {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[BuildDefinitionReference32]
   }
+  @scala.inline
+  implicit class BuildDefinitionReference32Ops[Self <: BuildDefinitionReference32] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def with_links(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_links")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAuthoredBy(value: IdentityRef): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("authoredBy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDraftOf(value: DefinitionReference): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("draftOf")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDrafts(value: js.Array[DefinitionReference]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("drafts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMetrics(value: js.Array[BuildMetric]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metrics")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withQuality(value: DefinitionQuality): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("quality")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withQueue(value: AgentPoolQueue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("queue")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -1,10 +1,7 @@
 package typingsSlinky.primereact.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.primereact.AnonEvent
 import typingsSlinky.primereact.fieldsetMod.FieldsetProps
 import typingsSlinky.std.Event_
@@ -12,40 +9,38 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Fieldset
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.primereact.primereactFieldsetMod.Fieldset] {
+object Fieldset {
   @JSImport("primereact/fieldset", "Fieldset")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, id */
-  def apply(
-    collapsed: js.UndefOr[Boolean] = js.undefined,
-    legend: js.Any = null,
-    onClick: /* event */ Event_ => Unit = null,
-    onCollapse: /* event */ Event_ => Unit = null,
-    onExpand: /* event */ Event_ => Unit = null,
-    onToggle: /* e */ AnonEvent => Unit = null,
-    style: js.Object = null,
-    toggleable: js.UndefOr[Boolean] = js.undefined,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.primereact.primereactFieldsetMod.Fieldset] = {
-    val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(collapsed)) __obj.updateDynamic("collapsed")(collapsed.asInstanceOf[js.Any])
-    if (legend != null) __obj.updateDynamic("legend")(legend.asInstanceOf[js.Any])
-    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction1(onClick))
-    if (onCollapse != null) __obj.updateDynamic("onCollapse")(js.Any.fromFunction1(onCollapse))
-    if (onExpand != null) __obj.updateDynamic("onExpand")(js.Any.fromFunction1(onExpand))
-    if (onToggle != null) __obj.updateDynamic("onToggle")(js.Any.fromFunction1(onToggle))
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (!js.isUndefined(toggleable)) __obj.updateDynamic("toggleable")(toggleable.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.primereact.primereactFieldsetMod.Fieldset] {
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def collapsed(value: Boolean): this.type = set("collapsed", value.asInstanceOf[js.Any])
+    @scala.inline
+    def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
+    @scala.inline
+    def legend(value: js.Any): this.type = set("legend", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onClick(value: /* event */ Event_ => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
+    @scala.inline
+    def onCollapse(value: /* event */ Event_ => Unit): this.type = set("onCollapse", js.Any.fromFunction1(value))
+    @scala.inline
+    def onExpand(value: /* event */ Event_ => Unit): this.type = set("onExpand", js.Any.fromFunction1(value))
+    @scala.inline
+    def onToggle(value: /* e */ AnonEvent => Unit): this.type = set("onToggle", js.Any.fromFunction1(value))
+    @scala.inline
+    def style(value: js.Object): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def toggleable(value: Boolean): this.type = set("toggleable", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.primereact.primereactFieldsetMod.Fieldset] = new slinky.core.BuildingComponent[
-  slinky.web.html.`*`.tag.type, 
-  typingsSlinky.primereact.primereactFieldsetMod.Fieldset](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = FieldsetProps
+  
+  def withProps(p: FieldsetProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Fieldset.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

@@ -11,6 +11,7 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: OneNoteApi 1.5]
   */
+@js.native
 trait SectionSelectionChangedEventArgs extends js.Object {
   /**
     *
@@ -18,14 +19,14 @@ trait SectionSelectionChangedEventArgs extends js.Object {
     *
     * [Api set: OneNoteApi 1.5]
     */
-  var oldId: String
+  var oldId: String = js.native
   /**
     *
     * Gets the type of the event. See EventType for details.
     *
     * [Api set: OneNoteApi 1.5]
     */
-  var `type`: SectionSelectionChanged
+  var `type`: SectionSelectionChanged = js.native
 }
 
 object SectionSelectionChangedEventArgs {
@@ -35,5 +36,25 @@ object SectionSelectionChangedEventArgs {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[SectionSelectionChangedEventArgs]
   }
+  @scala.inline
+  implicit class SectionSelectionChangedEventArgsOps[Self <: SectionSelectionChangedEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOldId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("oldId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: SectionSelectionChanged): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -4,38 +4,62 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait LoaderHeightWidthRadiusProps extends LoaderHeightWidthProps {
-  var margin: js.UndefOr[String] = js.undefined
-  var radius: js.UndefOr[Double] = js.undefined
-  var radiusUnit: js.UndefOr[String] = js.undefined
+  var margin: js.UndefOr[String] = js.native
+  var radius: js.UndefOr[Double] = js.native
+  var radiusUnit: js.UndefOr[String] = js.native
 }
 
 object LoaderHeightWidthRadiusProps {
   @scala.inline
-  def apply(
-    color: String = null,
-    css: String | PrecompiledCss = null,
-    height: Int | Double = null,
-    heightUnit: String = null,
-    loading: js.UndefOr[Boolean] = js.undefined,
-    margin: String = null,
-    radius: Int | Double = null,
-    radiusUnit: String = null,
-    width: Int | Double = null,
-    widthUnit: String = null
-  ): LoaderHeightWidthRadiusProps = {
+  def apply(): LoaderHeightWidthRadiusProps = {
     val __obj = js.Dynamic.literal()
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (css != null) __obj.updateDynamic("css")(css.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (heightUnit != null) __obj.updateDynamic("heightUnit")(heightUnit.asInstanceOf[js.Any])
-    if (!js.isUndefined(loading)) __obj.updateDynamic("loading")(loading.asInstanceOf[js.Any])
-    if (margin != null) __obj.updateDynamic("margin")(margin.asInstanceOf[js.Any])
-    if (radius != null) __obj.updateDynamic("radius")(radius.asInstanceOf[js.Any])
-    if (radiusUnit != null) __obj.updateDynamic("radiusUnit")(radiusUnit.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
-    if (widthUnit != null) __obj.updateDynamic("widthUnit")(widthUnit.asInstanceOf[js.Any])
     __obj.asInstanceOf[LoaderHeightWidthRadiusProps]
   }
+  @scala.inline
+  implicit class LoaderHeightWidthRadiusPropsOps[Self <: LoaderHeightWidthRadiusProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMargin(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("margin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMargin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("margin")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRadius(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("radius")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRadius: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("radius")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRadiusUnit(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("radiusUnit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRadiusUnit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("radiusUnit")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

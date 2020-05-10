@@ -2,9 +2,9 @@ package typingsSlinky.dojo.timePickerMod
 
 import org.scalablytyped.runtime.Instantiable2
 import org.scalablytyped.runtime.TopLevel
+import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.dojo.TypeofTimePicker
 import typingsSlinky.dojo.dijit.TimePicker
-import typingsSlinky.std.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

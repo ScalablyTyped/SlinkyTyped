@@ -25,7 +25,7 @@ object TStylingConfigFlags {
     * The initial state of the styling context config
     */
   @scala.inline
-  def Initial: `0` = this.cast(0)
+  def Initial: `0` = 0.asInstanceOf[`0`]
   /**
     * A flag which marks the context as being locked.
     *
@@ -36,10 +36,10 @@ object TStylingConfigFlags {
     * bindings can be added to it).
     */
   @scala.inline
-  def Locked: `1` = this.cast(1)
+  def Locked: `1` = 1.asInstanceOf[`1`]
   /** A Mask of all the configurations */
   @scala.inline
-  def Mask: `3` = this.cast(3)
+  def Mask: `3` = 3.asInstanceOf[`3`]
   /**
     * Whether or not to store the state between updates in a global storage map.
     *
@@ -51,11 +51,9 @@ object TStylingConfigFlags {
     * between the template code running and the host binding code executing.
     */
   @scala.inline
-  def PersistStateValues: `2` = this.cast(2)
+  def PersistStateValues: `2` = 2.asInstanceOf[`2`]
   /** Total amount of configuration bits used */
   @scala.inline
-  def TotalBits: `2` = this.cast(2)
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def TotalBits: `2` = 2.asInstanceOf[`2`]
 }
 

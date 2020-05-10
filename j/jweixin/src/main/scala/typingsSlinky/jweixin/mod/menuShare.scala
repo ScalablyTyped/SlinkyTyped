@@ -18,20 +18,18 @@ trait menuShare extends js.Object
 
 object menuShare {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def menuItemColonfavorite: typingsSlinky.jweixin.jweixinStrings.menuItemColonfavorite = "menuItem:favorite".asInstanceOf[typingsSlinky.jweixin.jweixinStrings.menuItemColonfavorite]
   @scala.inline
-  def menuItemColonfavorite: typingsSlinky.jweixin.jweixinStrings.menuItemColonfavorite = this.cast("menuItem:favorite")
+  def menuItemColonshareColonQZone: typingsSlinky.jweixin.jweixinStrings.menuItemColonshareColonQZone = "menuItem:share:QZone".asInstanceOf[typingsSlinky.jweixin.jweixinStrings.menuItemColonshareColonQZone]
   @scala.inline
-  def menuItemColonshareColonQZone: typingsSlinky.jweixin.jweixinStrings.menuItemColonshareColonQZone = this.cast("menuItem:share:QZone")
+  def menuItemColonshareColonappMessage: typingsSlinky.jweixin.jweixinStrings.menuItemColonshareColonappMessage = "menuItem:share:appMessage".asInstanceOf[typingsSlinky.jweixin.jweixinStrings.menuItemColonshareColonappMessage]
   @scala.inline
-  def menuItemColonshareColonappMessage: typingsSlinky.jweixin.jweixinStrings.menuItemColonshareColonappMessage = this.cast("menuItem:share:appMessage")
+  def menuItemColonshareColonfacebook: typingsSlinky.jweixin.jweixinStrings.menuItemColonshareColonfacebook = "menuItem:share:facebook".asInstanceOf[typingsSlinky.jweixin.jweixinStrings.menuItemColonshareColonfacebook]
   @scala.inline
-  def menuItemColonshareColonfacebook: typingsSlinky.jweixin.jweixinStrings.menuItemColonshareColonfacebook = this.cast("menuItem:share:facebook")
+  def menuItemColonshareColonqq: typingsSlinky.jweixin.jweixinStrings.menuItemColonshareColonqq = "menuItem:share:qq".asInstanceOf[typingsSlinky.jweixin.jweixinStrings.menuItemColonshareColonqq]
   @scala.inline
-  def menuItemColonshareColonqq: typingsSlinky.jweixin.jweixinStrings.menuItemColonshareColonqq = this.cast("menuItem:share:qq")
+  def menuItemColonshareColontimeline: typingsSlinky.jweixin.jweixinStrings.menuItemColonshareColontimeline = "menuItem:share:timeline".asInstanceOf[typingsSlinky.jweixin.jweixinStrings.menuItemColonshareColontimeline]
   @scala.inline
-  def menuItemColonshareColontimeline: typingsSlinky.jweixin.jweixinStrings.menuItemColonshareColontimeline = this.cast("menuItem:share:timeline")
-  @scala.inline
-  def menuItemColonshareColonweiboApp: typingsSlinky.jweixin.jweixinStrings.menuItemColonshareColonweiboApp = this.cast("menuItem:share:weiboApp")
+  def menuItemColonshareColonweiboApp: typingsSlinky.jweixin.jweixinStrings.menuItemColonshareColonweiboApp = "menuItem:share:weiboApp".asInstanceOf[typingsSlinky.jweixin.jweixinStrings.menuItemColonshareColonweiboApp]
 }
 

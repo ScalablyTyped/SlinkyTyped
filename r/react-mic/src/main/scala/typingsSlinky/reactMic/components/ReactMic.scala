@@ -1,11 +1,8 @@
 package typingsSlinky.reactMic.components
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.Blob
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactMic.mod.ReactMicProps
 import typingsSlinky.reactMic.mod.ReactMicStopEvent
 import typingsSlinky.reactMic.reactMicStrings.frequencyBars
@@ -14,36 +11,34 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactMic
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactMic.mod.ReactMic] {
+object ReactMic {
   @JSImport("react-mic", "ReactMic")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className */
-  def apply(
-    backgroundColor: String = null,
-    onData: /* recordedData */ Blob => Unit = null,
-    onStop: /* recordedData */ ReactMicStopEvent => Unit = null,
-    pause: js.UndefOr[Boolean] = js.undefined,
-    record: js.UndefOr[Boolean] = js.undefined,
-    strokeColor: String = null,
-    visualSetting: sinewave | frequencyBars = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactMic.mod.ReactMic] = {
-    val __obj = js.Dynamic.literal()
-    if (backgroundColor != null) __obj.updateDynamic("backgroundColor")(backgroundColor.asInstanceOf[js.Any])
-    if (onData != null) __obj.updateDynamic("onData")(js.Any.fromFunction1(onData))
-    if (onStop != null) __obj.updateDynamic("onStop")(js.Any.fromFunction1(onStop))
-    if (!js.isUndefined(pause)) __obj.updateDynamic("pause")(pause.asInstanceOf[js.Any])
-    if (!js.isUndefined(record)) __obj.updateDynamic("record")(record.asInstanceOf[js.Any])
-    if (strokeColor != null) __obj.updateDynamic("strokeColor")(strokeColor.asInstanceOf[js.Any])
-    if (visualSetting != null) __obj.updateDynamic("visualSetting")(visualSetting.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactMic.mod.ReactMic] {
+    @scala.inline
+    def backgroundColor(value: String): this.type = set("backgroundColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onData(value: /* recordedData */ Blob => Unit): this.type = set("onData", js.Any.fromFunction1(value))
+    @scala.inline
+    def onStop(value: /* recordedData */ ReactMicStopEvent => Unit): this.type = set("onStop", js.Any.fromFunction1(value))
+    @scala.inline
+    def pause(value: Boolean): this.type = set("pause", value.asInstanceOf[js.Any])
+    @scala.inline
+    def record(value: Boolean): this.type = set("record", value.asInstanceOf[js.Any])
+    @scala.inline
+    def strokeColor(value: String): this.type = set("strokeColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def visualSetting(value: sinewave | frequencyBars): this.type = set("visualSetting", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.reactMic.mod.ReactMic] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactMic.mod.ReactMic](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = ReactMicProps
+  
+  def withProps(p: ReactMicProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: ReactMic.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

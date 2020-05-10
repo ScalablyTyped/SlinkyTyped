@@ -18,11 +18,41 @@ trait ProvisioningArtifactView extends js.Object {
 
 object ProvisioningArtifactView {
   @scala.inline
-  def apply(ProductViewSummary: ProductViewSummary = null, ProvisioningArtifact: ProvisioningArtifact = null): ProvisioningArtifactView = {
+  def apply(): ProvisioningArtifactView = {
     val __obj = js.Dynamic.literal()
-    if (ProductViewSummary != null) __obj.updateDynamic("ProductViewSummary")(ProductViewSummary.asInstanceOf[js.Any])
-    if (ProvisioningArtifact != null) __obj.updateDynamic("ProvisioningArtifact")(ProvisioningArtifact.asInstanceOf[js.Any])
     __obj.asInstanceOf[ProvisioningArtifactView]
   }
+  @scala.inline
+  implicit class ProvisioningArtifactViewOps[Self <: ProvisioningArtifactView] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withProductViewSummary(value: ProductViewSummary): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProductViewSummary")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProductViewSummary: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProductViewSummary")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProvisioningArtifact(value: ProvisioningArtifact): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProvisioningArtifact")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProvisioningArtifact: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProvisioningArtifact")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

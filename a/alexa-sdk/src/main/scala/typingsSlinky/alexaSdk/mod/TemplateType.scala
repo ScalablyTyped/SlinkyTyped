@@ -16,18 +16,16 @@ trait TemplateType extends js.Object
 
 object TemplateType {
   @scala.inline
-  def BodyTemplate1: typingsSlinky.alexaSdk.alexaSdkStrings.BodyTemplate1 = this.cast("BodyTemplate1")
+  def BodyTemplate1: typingsSlinky.alexaSdk.alexaSdkStrings.BodyTemplate1 = "BodyTemplate1".asInstanceOf[typingsSlinky.alexaSdk.alexaSdkStrings.BodyTemplate1]
   @scala.inline
-  def BodyTemplate2: typingsSlinky.alexaSdk.alexaSdkStrings.BodyTemplate2 = this.cast("BodyTemplate2")
+  def BodyTemplate2: typingsSlinky.alexaSdk.alexaSdkStrings.BodyTemplate2 = "BodyTemplate2".asInstanceOf[typingsSlinky.alexaSdk.alexaSdkStrings.BodyTemplate2]
   @scala.inline
-  def BodyTemplate3: typingsSlinky.alexaSdk.alexaSdkStrings.BodyTemplate3 = this.cast("BodyTemplate3")
+  def BodyTemplate3: typingsSlinky.alexaSdk.alexaSdkStrings.BodyTemplate3 = "BodyTemplate3".asInstanceOf[typingsSlinky.alexaSdk.alexaSdkStrings.BodyTemplate3]
   @scala.inline
-  def BodyTemplate6: typingsSlinky.alexaSdk.alexaSdkStrings.BodyTemplate6 = this.cast("BodyTemplate6")
+  def BodyTemplate6: typingsSlinky.alexaSdk.alexaSdkStrings.BodyTemplate6 = "BodyTemplate6".asInstanceOf[typingsSlinky.alexaSdk.alexaSdkStrings.BodyTemplate6]
   @scala.inline
-  def ListTemplate1: typingsSlinky.alexaSdk.alexaSdkStrings.ListTemplate1 = this.cast("ListTemplate1")
+  def ListTemplate1: typingsSlinky.alexaSdk.alexaSdkStrings.ListTemplate1 = "ListTemplate1".asInstanceOf[typingsSlinky.alexaSdk.alexaSdkStrings.ListTemplate1]
   @scala.inline
-  def ListTemplate2: typingsSlinky.alexaSdk.alexaSdkStrings.ListTemplate2 = this.cast("ListTemplate2")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def ListTemplate2: typingsSlinky.alexaSdk.alexaSdkStrings.ListTemplate2 = "ListTemplate2".asInstanceOf[typingsSlinky.alexaSdk.alexaSdkStrings.ListTemplate2]
 }
 

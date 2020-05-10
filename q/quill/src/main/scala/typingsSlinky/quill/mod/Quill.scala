@@ -26,8 +26,8 @@ class Quill protected () extends EventEmitter {
   var scroll: Blot = js.native
   def addContainer(classNameOrDomNode: String): js.Any = js.native
   def addContainer(classNameOrDomNode: String, refNode: Node): js.Any = js.native
-  def addContainer(classNameOrDomNode: typingsSlinky.std.Node): js.Any = js.native
-  def addContainer(classNameOrDomNode: typingsSlinky.std.Node, refNode: Node): js.Any = js.native
+  def addContainer(classNameOrDomNode: Node): js.Any = js.native
+  def addContainer(classNameOrDomNode: Node, refNode: Node): js.Any = js.native
   def blur(): Unit = js.native
   def deleteText(index: Double, length: Double): js.Any = js.native
   def deleteText(index: Double, length: Double, source: Sources): js.Any = js.native

@@ -4,16 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait WrappedSketchLayer extends js.Object {
-  var sketchObject: SketchLayer
+  var sketchObject: SketchLayer = js.native
 }
 
 object WrappedSketchLayer {
   @scala.inline
   def apply(sketchObject: SketchLayer): WrappedSketchLayer = {
     val __obj = js.Dynamic.literal(sketchObject = sketchObject.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[WrappedSketchLayer]
   }
+  @scala.inline
+  implicit class WrappedSketchLayerOps[Self <: WrappedSketchLayer] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSketchObject(value: SketchLayer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sketchObject")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

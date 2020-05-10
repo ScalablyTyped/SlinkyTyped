@@ -6,8 +6,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Global extends _ExportValue {
-  var value: js.Any
+  var value: js.Any = js.native
 }
 
 @JSGlobal("WebAssembly.Global")

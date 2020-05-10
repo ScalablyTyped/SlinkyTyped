@@ -1,6 +1,5 @@
 package typingsSlinky.parcelEnv.ParcelModuleApi
 
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,7 +30,7 @@ trait Hot extends js.Object {
     * @param callback
     */
   def accept(dependency: String, callback: js.Function0[Unit]): Unit = js.native
-  def accept(errHandler: js.Function1[/* err */ Error, Unit]): Unit = js.native
+  def accept(errHandler: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
   /**
     * Add a one time handler, which is executed when the current module code is replaced.
     * Here you should destroy/remove any persistent resource you have claimed/created.
@@ -50,7 +49,7 @@ trait Hot extends js.Object {
     * @param callback
     */
   @JSName("apply")
-  def apply(callback: js.Function2[/* err */ Error, /* outdatedModules */ js.Array[ModuleId], Unit]): Unit = js.native
+  def apply(callback: js.Function2[/* err */ js.Error, /* outdatedModules */ js.Array[ModuleId], Unit]): Unit = js.native
   /**
     * If status() != "ready" it throws an error.
     * Continue the update process.
@@ -83,7 +82,7 @@ trait Hot extends js.Object {
     * The callback will be called with all modules that will be disposed on apply().
     * @param callback
     */
-  def check(callback: js.Function2[/* err */ Error, /* outdatedModules */ js.Array[ModuleId], Unit]): Unit = js.native
+  def check(callback: js.Function2[/* err */ js.Error, /* outdatedModules */ js.Array[ModuleId], Unit]): Unit = js.native
   /**
     * Flag the current module as not update-able. If updated the update code would fail with code "decline".
     */

@@ -262,49 +262,40 @@ object navMod extends js.Object {
       opts: NavOptions,
       done: TransitionDoneFn
     ): js.Promise[Boolean] = js.native
-    def insert(insertIndex: Double, component: typingsSlinky.std.HTMLElement): js.Promise[Boolean] = js.native
+    def insert(insertIndex: Double, component: HTMLElement): js.Promise[Boolean] = js.native
     def insert(
       insertIndex: Double,
-      component: typingsSlinky.std.HTMLElement,
+      component: HTMLElement,
       componentProps: Null,
       opts: Null,
       done: TransitionDoneFn
     ): js.Promise[Boolean] = js.native
+    def insert(insertIndex: Double, component: HTMLElement, componentProps: Null, opts: NavOptions): js.Promise[Boolean] = js.native
     def insert(
       insertIndex: Double,
-      component: typingsSlinky.std.HTMLElement,
-      componentProps: Null,
-      opts: NavOptions
-    ): js.Promise[Boolean] = js.native
-    def insert(
-      insertIndex: Double,
-      component: typingsSlinky.std.HTMLElement,
+      component: HTMLElement,
       componentProps: Null,
       opts: NavOptions,
       done: TransitionDoneFn
     ): js.Promise[Boolean] = js.native
+    def insert(insertIndex: Double, component: HTMLElement, componentProps: ComponentProps[HTMLElement]): js.Promise[Boolean] = js.native
     def insert(
       insertIndex: Double,
-      component: typingsSlinky.std.HTMLElement,
-      componentProps: ComponentProps[typingsSlinky.std.HTMLElement]
-    ): js.Promise[Boolean] = js.native
-    def insert(
-      insertIndex: Double,
-      component: typingsSlinky.std.HTMLElement,
-      componentProps: ComponentProps[typingsSlinky.std.HTMLElement],
+      component: HTMLElement,
+      componentProps: ComponentProps[HTMLElement],
       opts: Null,
       done: TransitionDoneFn
     ): js.Promise[Boolean] = js.native
     def insert(
       insertIndex: Double,
-      component: typingsSlinky.std.HTMLElement,
-      componentProps: ComponentProps[typingsSlinky.std.HTMLElement],
+      component: HTMLElement,
+      componentProps: ComponentProps[HTMLElement],
       opts: NavOptions
     ): js.Promise[Boolean] = js.native
     def insert(
       insertIndex: Double,
-      component: typingsSlinky.std.HTMLElement,
-      componentProps: ComponentProps[typingsSlinky.std.HTMLElement],
+      component: HTMLElement,
+      componentProps: ComponentProps[HTMLElement],
       opts: NavOptions,
       done: TransitionDoneFn
     ): js.Promise[Boolean] = js.native
@@ -451,33 +442,21 @@ object navMod extends js.Object {
       opts: NavOptions,
       done: TransitionDoneFn
     ): js.Promise[Boolean] = js.native
-    def push(component: typingsSlinky.std.HTMLElement): js.Promise[Boolean] = js.native
-    def push(component: typingsSlinky.std.HTMLElement, componentProps: Null, opts: Null, done: TransitionDoneFn): js.Promise[Boolean] = js.native
-    def push(component: typingsSlinky.std.HTMLElement, componentProps: Null, opts: NavOptions): js.Promise[Boolean] = js.native
+    def push(component: HTMLElement): js.Promise[Boolean] = js.native
+    def push(component: HTMLElement, componentProps: Null, opts: Null, done: TransitionDoneFn): js.Promise[Boolean] = js.native
+    def push(component: HTMLElement, componentProps: Null, opts: NavOptions): js.Promise[Boolean] = js.native
+    def push(component: HTMLElement, componentProps: Null, opts: NavOptions, done: TransitionDoneFn): js.Promise[Boolean] = js.native
+    def push(component: HTMLElement, componentProps: ComponentProps[HTMLElement]): js.Promise[Boolean] = js.native
     def push(
-      component: typingsSlinky.std.HTMLElement,
-      componentProps: Null,
-      opts: NavOptions,
-      done: TransitionDoneFn
-    ): js.Promise[Boolean] = js.native
-    def push(
-      component: typingsSlinky.std.HTMLElement,
-      componentProps: ComponentProps[typingsSlinky.std.HTMLElement]
-    ): js.Promise[Boolean] = js.native
-    def push(
-      component: typingsSlinky.std.HTMLElement,
-      componentProps: ComponentProps[typingsSlinky.std.HTMLElement],
+      component: HTMLElement,
+      componentProps: ComponentProps[HTMLElement],
       opts: Null,
       done: TransitionDoneFn
     ): js.Promise[Boolean] = js.native
+    def push(component: HTMLElement, componentProps: ComponentProps[HTMLElement], opts: NavOptions): js.Promise[Boolean] = js.native
     def push(
-      component: typingsSlinky.std.HTMLElement,
-      componentProps: ComponentProps[typingsSlinky.std.HTMLElement],
-      opts: NavOptions
-    ): js.Promise[Boolean] = js.native
-    def push(
-      component: typingsSlinky.std.HTMLElement,
-      componentProps: ComponentProps[typingsSlinky.std.HTMLElement],
+      component: HTMLElement,
+      componentProps: ComponentProps[HTMLElement],
       opts: NavOptions,
       done: TransitionDoneFn
     ): js.Promise[Boolean] = js.native
@@ -596,33 +575,21 @@ object navMod extends js.Object {
       opts: NavOptions,
       done: TransitionDoneFn
     ): js.Promise[Boolean] = js.native
-    def setRoot(component: typingsSlinky.std.HTMLElement): js.Promise[Boolean] = js.native
-    def setRoot(component: typingsSlinky.std.HTMLElement, componentProps: Null, opts: Null, done: TransitionDoneFn): js.Promise[Boolean] = js.native
-    def setRoot(component: typingsSlinky.std.HTMLElement, componentProps: Null, opts: NavOptions): js.Promise[Boolean] = js.native
+    def setRoot(component: HTMLElement): js.Promise[Boolean] = js.native
+    def setRoot(component: HTMLElement, componentProps: Null, opts: Null, done: TransitionDoneFn): js.Promise[Boolean] = js.native
+    def setRoot(component: HTMLElement, componentProps: Null, opts: NavOptions): js.Promise[Boolean] = js.native
+    def setRoot(component: HTMLElement, componentProps: Null, opts: NavOptions, done: TransitionDoneFn): js.Promise[Boolean] = js.native
+    def setRoot(component: HTMLElement, componentProps: ComponentProps[HTMLElement]): js.Promise[Boolean] = js.native
     def setRoot(
-      component: typingsSlinky.std.HTMLElement,
-      componentProps: Null,
-      opts: NavOptions,
-      done: TransitionDoneFn
-    ): js.Promise[Boolean] = js.native
-    def setRoot(
-      component: typingsSlinky.std.HTMLElement,
-      componentProps: ComponentProps[typingsSlinky.std.HTMLElement]
-    ): js.Promise[Boolean] = js.native
-    def setRoot(
-      component: typingsSlinky.std.HTMLElement,
-      componentProps: ComponentProps[typingsSlinky.std.HTMLElement],
+      component: HTMLElement,
+      componentProps: ComponentProps[HTMLElement],
       opts: Null,
       done: TransitionDoneFn
     ): js.Promise[Boolean] = js.native
+    def setRoot(component: HTMLElement, componentProps: ComponentProps[HTMLElement], opts: NavOptions): js.Promise[Boolean] = js.native
     def setRoot(
-      component: typingsSlinky.std.HTMLElement,
-      componentProps: ComponentProps[typingsSlinky.std.HTMLElement],
-      opts: NavOptions
-    ): js.Promise[Boolean] = js.native
-    def setRoot(
-      component: typingsSlinky.std.HTMLElement,
-      componentProps: ComponentProps[typingsSlinky.std.HTMLElement],
+      component: HTMLElement,
+      componentProps: ComponentProps[HTMLElement],
       opts: NavOptions,
       done: TransitionDoneFn
     ): js.Promise[Boolean] = js.native

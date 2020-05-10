@@ -7,42 +7,140 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonCanvasSize extends js.Object {
-  var canvasSize: js.UndefOr[Double] = js.undefined
-  var cells: js.UndefOr[Double] = js.undefined
-  var color: js.UndefOr[Color] = js.undefined
-  var ellipsoid: js.UndefOr[Ellipsoid] = js.undefined
-  var glowColor: js.UndefOr[Color] = js.undefined
-  var glowWidth: js.UndefOr[Double] = js.undefined
-  var tileHeight: js.UndefOr[Double] = js.undefined
-  var tileWidth: js.UndefOr[Double] = js.undefined
-  var tilingScheme: js.UndefOr[TilingScheme] = js.undefined
+  var canvasSize: js.UndefOr[Double] = js.native
+  var cells: js.UndefOr[Double] = js.native
+  var color: js.UndefOr[Color] = js.native
+  var ellipsoid: js.UndefOr[Ellipsoid] = js.native
+  var glowColor: js.UndefOr[Color] = js.native
+  var glowWidth: js.UndefOr[Double] = js.native
+  var tileHeight: js.UndefOr[Double] = js.native
+  var tileWidth: js.UndefOr[Double] = js.native
+  var tilingScheme: js.UndefOr[TilingScheme] = js.native
 }
 
 object AnonCanvasSize {
   @scala.inline
-  def apply(
-    canvasSize: Int | Double = null,
-    cells: Int | Double = null,
-    color: Color = null,
-    ellipsoid: Ellipsoid = null,
-    glowColor: Color = null,
-    glowWidth: Int | Double = null,
-    tileHeight: Int | Double = null,
-    tileWidth: Int | Double = null,
-    tilingScheme: TilingScheme = null
-  ): AnonCanvasSize = {
+  def apply(): AnonCanvasSize = {
     val __obj = js.Dynamic.literal()
-    if (canvasSize != null) __obj.updateDynamic("canvasSize")(canvasSize.asInstanceOf[js.Any])
-    if (cells != null) __obj.updateDynamic("cells")(cells.asInstanceOf[js.Any])
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (ellipsoid != null) __obj.updateDynamic("ellipsoid")(ellipsoid.asInstanceOf[js.Any])
-    if (glowColor != null) __obj.updateDynamic("glowColor")(glowColor.asInstanceOf[js.Any])
-    if (glowWidth != null) __obj.updateDynamic("glowWidth")(glowWidth.asInstanceOf[js.Any])
-    if (tileHeight != null) __obj.updateDynamic("tileHeight")(tileHeight.asInstanceOf[js.Any])
-    if (tileWidth != null) __obj.updateDynamic("tileWidth")(tileWidth.asInstanceOf[js.Any])
-    if (tilingScheme != null) __obj.updateDynamic("tilingScheme")(tilingScheme.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonCanvasSize]
   }
+  @scala.inline
+  implicit class AnonCanvasSizeOps[Self <: AnonCanvasSize] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCanvasSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("canvasSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCanvasSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("canvasSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCells(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cells")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCells: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cells")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColor(value: Color): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEllipsoid(value: Ellipsoid): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ellipsoid")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEllipsoid: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ellipsoid")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGlowColor(value: Color): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("glowColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGlowColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("glowColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGlowWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("glowWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGlowWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("glowWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTileHeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tileHeight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTileHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tileHeight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTileWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tileWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTileWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tileWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTilingScheme(value: TilingScheme): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tilingScheme")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTilingScheme: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tilingScheme")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

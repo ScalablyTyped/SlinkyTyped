@@ -7,24 +7,38 @@ import scala.scalajs.js.annotation._
 
 //#endregion
 //#region 剪贴板 https://docs.alipay.com/mini/api/clipboard
+@js.native
 trait GetClipboardOptions
   extends BaseOptions[js.Any, js.Any] {
   @JSName("success")
-  var success_GetClipboardOptions: js.UndefOr[js.Function1[/* res */ AnonText, Unit]] = js.undefined
+  var success_GetClipboardOptions: js.UndefOr[js.Function1[/* res */ AnonText, Unit]] = js.native
 }
 
 object GetClipboardOptions {
   @scala.inline
-  def apply(
-    complete: /* res */ js.Any => Unit = null,
-    fail: js.Any => Unit = null,
-    success: /* res */ AnonText => Unit = null
-  ): GetClipboardOptions = {
+  def apply(): GetClipboardOptions = {
     val __obj = js.Dynamic.literal()
-    if (complete != null) __obj.updateDynamic("complete")(js.Any.fromFunction1(complete))
-    if (fail != null) __obj.updateDynamic("fail")(js.Any.fromFunction1(fail))
-    if (success != null) __obj.updateDynamic("success")(js.Any.fromFunction1(success))
     __obj.asInstanceOf[GetClipboardOptions]
   }
+  @scala.inline
+  implicit class GetClipboardOptionsOps[Self <: GetClipboardOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSuccess(value: /* res */ AnonText => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutSuccess: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

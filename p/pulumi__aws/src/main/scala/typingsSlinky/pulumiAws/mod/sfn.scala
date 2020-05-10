@@ -2,8 +2,13 @@ package typingsSlinky.pulumiAws.mod
 
 import typingsSlinky.pulumiAws.activityMod.ActivityArgs
 import typingsSlinky.pulumiAws.activityMod.ActivityState
+import typingsSlinky.pulumiAws.getActivityMod.GetActivityArgs
+import typingsSlinky.pulumiAws.getActivityMod.GetActivityResult
+import typingsSlinky.pulumiAws.getStateMachineMod.GetStateMachineArgs
+import typingsSlinky.pulumiAws.getStateMachineMod.GetStateMachineResult
 import typingsSlinky.pulumiAws.stateMachineMod.StateMachineArgs
 import typingsSlinky.pulumiAws.stateMachineMod.StateMachineState
+import typingsSlinky.pulumiPulumi.invokeMod.InvokeOptions
 import typingsSlinky.pulumiPulumi.outputMod.Input
 import typingsSlinky.pulumiPulumi.resourceMod.CustomResourceOptions
 import typingsSlinky.pulumiPulumi.resourceMod.ID
@@ -43,6 +48,11 @@ object sfn extends js.Object {
     def this(name: String, args: StateMachineArgs, opts: CustomResourceOptions) = this()
   }
   
+  def getActivity(): js.Promise[GetActivityResult] with GetActivityResult = js.native
+  def getActivity(args: GetActivityArgs): js.Promise[GetActivityResult] with GetActivityResult = js.native
+  def getActivity(args: GetActivityArgs, opts: InvokeOptions): js.Promise[GetActivityResult] with GetActivityResult = js.native
+  def getStateMachine(args: GetStateMachineArgs): js.Promise[GetStateMachineResult] with GetStateMachineResult = js.native
+  def getStateMachine(args: GetStateMachineArgs, opts: InvokeOptions): js.Promise[GetStateMachineResult] with GetStateMachineResult = js.native
   /* static members */
   @js.native
   object Activity extends js.Object {

@@ -1,45 +1,43 @@
 package typingsSlinky.reactTabsRedux.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactTabsRedux.tabContentMod.TabContentProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object TabContent
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactTabsRedux.mod.TabContent] {
+object TabContent {
   @JSImport("react-tabs-redux", "TabContent")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className */
-  def apply(
-    `for`: String | Double,
-    disableInlineStyles: js.UndefOr[Boolean] = js.undefined,
-    isVisible: js.UndefOr[Boolean] = js.undefined,
-    renderActiveTabContentOnly: js.UndefOr[Boolean] = js.undefined,
-    style: js.Object = null,
-    visibleClassName: String = null,
-    visibleStyle: js.Object = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactTabsRedux.mod.TabContent] = {
-    val __obj = js.Dynamic.literal()
-    __obj.updateDynamic("for")(`for`.asInstanceOf[js.Any])
-    if (!js.isUndefined(disableInlineStyles)) __obj.updateDynamic("disableInlineStyles")(disableInlineStyles.asInstanceOf[js.Any])
-    if (!js.isUndefined(isVisible)) __obj.updateDynamic("isVisible")(isVisible.asInstanceOf[js.Any])
-    if (!js.isUndefined(renderActiveTabContentOnly)) __obj.updateDynamic("renderActiveTabContentOnly")(renderActiveTabContentOnly.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (visibleClassName != null) __obj.updateDynamic("visibleClassName")(visibleClassName.asInstanceOf[js.Any])
-    if (visibleStyle != null) __obj.updateDynamic("visibleStyle")(visibleStyle.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactTabsRedux.mod.TabContent] {
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disableInlineStyles(value: Boolean): this.type = set("disableInlineStyles", value.asInstanceOf[js.Any])
+    @scala.inline
+    def isVisible(value: Boolean): this.type = set("isVisible", value.asInstanceOf[js.Any])
+    @scala.inline
+    def renderActiveTabContentOnly(value: Boolean): this.type = set("renderActiveTabContentOnly", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: js.Object): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def visibleClassName(value: String): this.type = set("visibleClassName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def visibleStyle(value: js.Object): this.type = set("visibleStyle", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.reactTabsRedux.mod.TabContent] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactTabsRedux.mod.TabContent](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = TabContentProps
+  
+  def withProps(p: TabContentProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(`for`: String | Double): Builder = {
+    val __props = js.Dynamic.literal()
+    __props.updateDynamic("for")(`for`.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[TabContentProps]))
+  }
 }
 

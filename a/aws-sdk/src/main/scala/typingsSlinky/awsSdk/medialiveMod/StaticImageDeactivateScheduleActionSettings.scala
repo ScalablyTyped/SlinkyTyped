@@ -18,11 +18,41 @@ trait StaticImageDeactivateScheduleActionSettings extends js.Object {
 
 object StaticImageDeactivateScheduleActionSettings {
   @scala.inline
-  def apply(FadeOut: Int | Double = null, Layer: Int | Double = null): StaticImageDeactivateScheduleActionSettings = {
+  def apply(): StaticImageDeactivateScheduleActionSettings = {
     val __obj = js.Dynamic.literal()
-    if (FadeOut != null) __obj.updateDynamic("FadeOut")(FadeOut.asInstanceOf[js.Any])
-    if (Layer != null) __obj.updateDynamic("Layer")(Layer.asInstanceOf[js.Any])
     __obj.asInstanceOf[StaticImageDeactivateScheduleActionSettings]
   }
+  @scala.inline
+  implicit class StaticImageDeactivateScheduleActionSettingsOps[Self <: StaticImageDeactivateScheduleActionSettings] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFadeOut(value: integerMin0): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FadeOut")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFadeOut: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FadeOut")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLayer(value: integerMin0Max7): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Layer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLayer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Layer")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

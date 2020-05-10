@@ -1,16 +1,17 @@
 package typingsSlinky.rcTreeSelect.components
 
 import typingsSlinky.rcTreeSelect.mod.default
+import typingsSlinky.rcTreeSelect.treeSelectMod.TreeSelectProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Lib
-  extends SharedApply_TreeSelectProps1188603901[default[js.Any]] {
+object Lib {
   @JSImport("rc-tree-select/lib", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps[ValueType](p: TreeSelectProps[ValueType]): SharedBuilder_TreeSelectProps_1571959893[default[js.Any], ValueType] = new SharedBuilder_TreeSelectProps_1571959893[default[js.Any], ValueType](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make[ValueType](companion: Lib.type): SharedBuilder_TreeSelectProps_1571959893[default[js.Any], ValueType] = new SharedBuilder_TreeSelectProps_1571959893[default[js.Any], ValueType](js.Array(this.component, js.Dictionary.empty))()
 }
 

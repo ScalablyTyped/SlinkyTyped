@@ -2,7 +2,7 @@ package typingsSlinky.jsdom
 
 import org.scalablytyped.runtime.Instantiable1
 import org.scalablytyped.runtime.Instantiable2
-import typingsSlinky.std.WheelEvent
+import org.scalajs.dom.raw.WheelEvent
 import typingsSlinky.std.WheelEventInit
 import scala.scalajs.js
 import scala.scalajs.js.`|`

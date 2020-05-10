@@ -1,14 +1,19 @@
 package typingsSlinky.blueprintjsCore.components
 
+import org.scalajs.dom.raw.HTMLElement
+import typingsSlinky.blueprintjsCore.htmlMod.IElementRefProps
+import typingsSlinky.react.mod.HTMLProps
+import typingsSlinky.react.mod.LegacyRef
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Code extends `SharedApply_<intersection>1554015933` {
+object Code {
   @JSImport("@blueprintjs/core", "Code")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: HTMLProps[HTMLElement] with IElementRefProps[HTMLElement]): `SharedBuilder_<intersection>_1717983003`[LegacyRef[js.Any] with js.Object] = new `SharedBuilder_<intersection>_1717983003`[LegacyRef[js.Any] with js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Code.type): `SharedBuilder_<intersection>_1717983003`[LegacyRef[js.Any] with js.Object] = new `SharedBuilder_<intersection>_1717983003`[LegacyRef[js.Any] with js.Object](js.Array(this.component, js.Dictionary.empty))()
 }
 

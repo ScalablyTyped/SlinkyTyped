@@ -17,6 +17,6 @@ class Headers ()
 @JSGlobal("_Headers")
 @js.native
 object Headers
-  extends Instantiable0[typingsSlinky.std.Headers]
-     with Instantiable1[/* init */ HeadersInit, typingsSlinky.std.Headers]
+  extends Instantiable0[org.scalajs.dom.experimental.Headers]
+     with Instantiable1[/* init */ HeadersInit, org.scalajs.dom.experimental.Headers]
 

@@ -22,12 +22,53 @@ trait MergeHunkDetail extends js.Object {
 
 object MergeHunkDetail {
   @scala.inline
-  def apply(endLine: Int | Double = null, hunkContent: HunkContent = null, startLine: Int | Double = null): MergeHunkDetail = {
+  def apply(): MergeHunkDetail = {
     val __obj = js.Dynamic.literal()
-    if (endLine != null) __obj.updateDynamic("endLine")(endLine.asInstanceOf[js.Any])
-    if (hunkContent != null) __obj.updateDynamic("hunkContent")(hunkContent.asInstanceOf[js.Any])
-    if (startLine != null) __obj.updateDynamic("startLine")(startLine.asInstanceOf[js.Any])
     __obj.asInstanceOf[MergeHunkDetail]
   }
+  @scala.inline
+  implicit class MergeHunkDetailOps[Self <: MergeHunkDetail] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEndLine(value: LineNumber): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endLine")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEndLine: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endLine")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHunkContent(value: HunkContent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hunkContent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHunkContent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hunkContent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartLine(value: LineNumber): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startLine")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartLine: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startLine")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

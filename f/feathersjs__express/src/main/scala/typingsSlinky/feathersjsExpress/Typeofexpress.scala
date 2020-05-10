@@ -6,15 +6,17 @@ import typingsSlinky.bodyParser.mod.OptionsText
 import typingsSlinky.bodyParser.mod.OptionsUrlencoded
 import typingsSlinky.connect.mod.NextHandleFunction
 import typingsSlinky.express.mod.Application_
+import typingsSlinky.express.mod.Handler
 import typingsSlinky.express.mod.Request_
 import typingsSlinky.express.mod.Response_
 import typingsSlinky.express.mod.RouterOptions
-import typingsSlinky.expressServeStaticCore.mod.Handler
 import typingsSlinky.expressServeStaticCore.mod.ParamsDictionary
+import typingsSlinky.expressServeStaticCore.mod.Query
 import typingsSlinky.expressServeStaticCore.mod.Request
 import typingsSlinky.expressServeStaticCore.mod.Response
 import typingsSlinky.node.httpMod.IncomingMessage
 import typingsSlinky.node.httpMod.ServerResponse
+import typingsSlinky.qs.mod.IParseOptions
 import typingsSlinky.serveStatic.mod.ServeStaticOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -39,8 +41,8 @@ trait Typeofexpress extends js.Object {
     */
   @JSName("raw")
   var raw_Original: Fn1 = js.native
-  var request: Request_[ParamsDictionary] = js.native
-  var response: Response_ = js.native
+  var request: Request_[ParamsDictionary, _, _, Query] = js.native
+  var response: Response_[_] = js.native
   /**
     * This is a built-in middleware function in Express. It serves static files and is based on serve-static.
     */
@@ -67,11 +69,11 @@ trait Typeofexpress extends js.Object {
   /**
     * These are the exposed prototypes.
     */
-  def application(req: Request[ParamsDictionary, _, _], res: Response[_]): js.Any = js.native
+  def application(req: Request[ParamsDictionary, _, _, Query], res: Response[_]): js.Any = js.native
   /**
     * These are the exposed prototypes.
     */
-  def application(req: Request[ParamsDictionary, _, _], res: ServerResponse): js.Any = js.native
+  def application(req: Request[ParamsDictionary, _, _, Query], res: ServerResponse): js.Any = js.native
   /**
     * These are the exposed prototypes.
     */
@@ -90,6 +92,8 @@ trait Typeofexpress extends js.Object {
     * @since 4.16.0
     */
   def json(options: OptionsJson): NextHandleFunction = js.native
+  def query(options: typingsSlinky.express.FnCall): Handler = js.native
+  def query(options: IParseOptions): Handler = js.native
   /**
     * This is a built-in middleware function in Express. It parses incoming requests with Buffer payloads and is based on body-parser.
     * @since 4.17.0
@@ -103,11 +107,11 @@ trait Typeofexpress extends js.Object {
   /**
     * This is a built-in middleware function in Express. It serves static files and is based on serve-static.
     */
-  def static(root: String): Handler = js.native
+  def static(root: String): typingsSlinky.expressServeStaticCore.mod.Handler = js.native
   /**
     * This is a built-in middleware function in Express. It serves static files and is based on serve-static.
     */
-  def static(root: String, options: ServeStaticOptions): Handler = js.native
+  def static(root: String, options: ServeStaticOptions): typingsSlinky.expressServeStaticCore.mod.Handler = js.native
   /**
     * This is a built-in middleware function in Express. It parses incoming requests with text payloads and is based on body-parser.
     * @since 4.17.0

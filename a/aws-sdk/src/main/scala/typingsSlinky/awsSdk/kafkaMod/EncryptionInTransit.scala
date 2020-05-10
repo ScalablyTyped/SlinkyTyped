@@ -30,11 +30,41 @@ trait EncryptionInTransit extends js.Object {
 
 object EncryptionInTransit {
   @scala.inline
-  def apply(ClientBroker: ClientBroker = null, InCluster: js.UndefOr[Boolean] = js.undefined): EncryptionInTransit = {
+  def apply(): EncryptionInTransit = {
     val __obj = js.Dynamic.literal()
-    if (ClientBroker != null) __obj.updateDynamic("ClientBroker")(ClientBroker.asInstanceOf[js.Any])
-    if (!js.isUndefined(InCluster)) __obj.updateDynamic("InCluster")(InCluster.asInstanceOf[js.Any])
     __obj.asInstanceOf[EncryptionInTransit]
   }
+  @scala.inline
+  implicit class EncryptionInTransitOps[Self <: EncryptionInTransit] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClientBroker(value: ClientBroker): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientBroker")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClientBroker: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientBroker")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInCluster(value: boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InCluster")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInCluster: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InCluster")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

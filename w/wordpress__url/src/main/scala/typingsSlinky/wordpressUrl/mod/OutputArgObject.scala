@@ -5,15 +5,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait OutputArgObject
   extends /* key */ StringDictionary[OutputArg]
      with _OutputArg
 
 object OutputArgObject {
   @scala.inline
-  def apply(StringDictionary: /* key */ StringDictionary[OutputArg] = null): OutputArgObject = {
+  def apply(): OutputArgObject = {
     val __obj = js.Dynamic.literal()
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
     __obj.asInstanceOf[OutputArgObject]
   }
 }

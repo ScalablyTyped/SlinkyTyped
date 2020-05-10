@@ -13,12 +13,10 @@ trait RTCBundlePolicy extends js.Object
 
 object RTCBundlePolicy {
   @scala.inline
-  def balanced: typingsSlinky.std.stdStrings.balanced = this.cast("balanced")
+  def balanced: typingsSlinky.std.stdStrings.balanced = "balanced".asInstanceOf[typingsSlinky.std.stdStrings.balanced]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def `max-bundle`: typingsSlinky.std.stdStrings.`max-bundle` = "max-bundle".asInstanceOf[typingsSlinky.std.stdStrings.`max-bundle`]
   @scala.inline
-  def `max-bundle`: typingsSlinky.std.stdStrings.`max-bundle` = this.cast("max-bundle")
-  @scala.inline
-  def `max-compat`: typingsSlinky.std.stdStrings.`max-compat` = this.cast("max-compat")
+  def `max-compat`: typingsSlinky.std.stdStrings.`max-compat` = "max-compat".asInstanceOf[typingsSlinky.std.stdStrings.`max-compat`]
 }
 

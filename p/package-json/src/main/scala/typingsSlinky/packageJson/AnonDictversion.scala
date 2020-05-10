@@ -5,17 +5,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-trait AnonDictversion extends /* version */ StringDictionary[String] {
-  val created: String
-  val modified: String
+@js.native
+trait AnonDictversion extends /* tagName */ StringDictionary[String] {
+  val created: String = js.native
+  val modified: String = js.native
 }
 
 object AnonDictversion {
   @scala.inline
-  def apply(created: String, modified: String, StringDictionary: /* version */ StringDictionary[String] = null): AnonDictversion = {
+  def apply(created: String, modified: String): AnonDictversion = {
     val __obj = js.Dynamic.literal(created = created.asInstanceOf[js.Any], modified = modified.asInstanceOf[js.Any])
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
     __obj.asInstanceOf[AnonDictversion]
   }
+  @scala.inline
+  implicit class AnonDictversionOps[Self <: AnonDictversion] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCreated(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("created")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withModified(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("modified")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

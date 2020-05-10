@@ -5,6 +5,7 @@ import typingsSlinky.uirouterCore.commonCommonMod.IInjectable
 import typingsSlinky.uirouterCore.paramsInterfaceMod.ParamDeclaration
 import typingsSlinky.uirouterCore.resolveInterfaceMod.ResolvePolicy
 import typingsSlinky.uirouterCore.stateObjectMod.StateObject
+import typingsSlinky.uirouterCore.transitionInterfaceMod.HookResult
 import typingsSlinky.uirouterCore.transitionInterfaceMod.TransitionStateHookFn
 import typingsSlinky.uirouterCore.transitionTransitionMod.Transition
 import scala.scalajs.js
@@ -587,5 +588,233 @@ trait StateDeclaration
     * ```
     */
   var views: js.UndefOr[StringDictionary[ViewDeclaration]] = js.native
+}
+
+object StateDeclaration {
+  @scala.inline
+  def apply(): StateDeclaration = {
+    val __obj = js.Dynamic.literal()
+    __obj.asInstanceOf[StateDeclaration]
+  }
+  @scala.inline
+  implicit class StateDeclarationOps[Self <: StateDeclaration] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDollarDollarstate(value: () => StateObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$$state")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutDollarDollarstate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$$state")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAbstract(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("abstract")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAbstract: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("abstract")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withData(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDynamic(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dynamic")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDynamic: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dynamic")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLazyLoad(value: (/* transition */ Transition, /* state */ StateDeclaration) => js.Promise[LazyLoadResult]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lazyLoad")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutLazyLoad: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lazyLoad")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnEnter(value: (/* transition */ Transition, /* state */ StateDeclaration) => HookResult): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onEnter")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnEnter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onEnter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnExit(value: (/* transition */ Transition, /* state */ StateDeclaration) => HookResult): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onExit")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnExit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onExit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnRetain(value: (/* transition */ Transition, /* state */ StateDeclaration) => HookResult): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onRetain")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnRetain: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onRetain")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParams(value: StringDictionary[ParamDeclaration | js.Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("params")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParams: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("params")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParent(value: String | StateDeclaration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRedirectToFunction1(value: /* transition */ Transition => js.Promise[RedirectToResult] | RedirectToResult): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("redirectTo")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withRedirectTo(
+      value: RedirectToResult | (js.Function1[/* transition */ Transition, js.Promise[RedirectToResult] | RedirectToResult])
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("redirectTo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRedirectTo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("redirectTo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReloadOnSearch(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reloadOnSearch")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReloadOnSearch: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reloadOnSearch")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResolve(value: js.Array[ResolveTypes] | StringDictionary[IInjectable]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resolve")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResolve: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resolve")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResolvePolicy(value: ResolvePolicy): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resolvePolicy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResolvePolicy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resolvePolicy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withViews(value: StringDictionary[ViewDeclaration]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("views")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutViews: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("views")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

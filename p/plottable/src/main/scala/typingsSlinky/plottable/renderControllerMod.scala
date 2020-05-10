@@ -9,6 +9,13 @@ import scala.scalajs.js.annotation._
 @JSImport("plottable/build/src/core/renderController", JSImport.Namespace)
 @js.native
 object renderControllerMod extends js.Object {
+  /* keyof plottable.AnonAnimationFrame */ /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.plottable.plottableStrings.immediate
+    - typingsSlinky.plottable.plottableStrings.animationFrame
+    - typingsSlinky.plottable.plottableStrings.timeout
+  */
+  trait Policy extends js.Object
+  
   def flush(): Unit = js.native
   def registerToComputeLayout(component: Component): Unit = js.native
   def registerToComputeLayoutAndRender(component: Component): Unit = js.native
@@ -22,6 +29,5 @@ object renderControllerMod extends js.Object {
     var timeout: typingsSlinky.plottable.plottableStrings.timeout = js.native
   }
   
-  type Policy = String
 }
 

@@ -13,12 +13,10 @@ trait ES2016Builtins extends js.Object
 
 object ES2016Builtins {
   @scala.inline
-  def ArrayDotprototypeDotincludes: typingsSlinky.esFeatureDetection.esFeatureDetectionStrings.ArrayDotprototypeDotincludes = this.cast("Array.prototype.includes")
+  def ArrayDotprototypeDotincludes: typingsSlinky.esFeatureDetection.esFeatureDetectionStrings.ArrayDotprototypeDotincludes = "Array.prototype.includes".asInstanceOf[typingsSlinky.esFeatureDetection.esFeatureDetectionStrings.ArrayDotprototypeDotincludes]
   @scala.inline
-  def TypedArrayDotprototypeDotincludes: typingsSlinky.esFeatureDetection.esFeatureDetectionStrings.TypedArrayDotprototypeDotincludes = this.cast("TypedArray.prototype.includes")
+  def TypedArrayDotprototypeDotincludes: typingsSlinky.esFeatureDetection.esFeatureDetectionStrings.TypedArrayDotprototypeDotincludes = "TypedArray.prototype.includes".asInstanceOf[typingsSlinky.esFeatureDetection.esFeatureDetectionStrings.TypedArrayDotprototypeDotincludes]
   @scala.inline
-  def __all: typingsSlinky.esFeatureDetection.esFeatureDetectionStrings.__all = this.cast("__all")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def __all: typingsSlinky.esFeatureDetection.esFeatureDetectionStrings.__all = "__all".asInstanceOf[typingsSlinky.esFeatureDetection.esFeatureDetectionStrings.__all]
 }
 

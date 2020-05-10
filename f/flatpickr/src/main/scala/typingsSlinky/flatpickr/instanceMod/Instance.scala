@@ -1,10 +1,12 @@
 package typingsSlinky.flatpickr.instanceMod
 
 import org.scalajs.dom.raw.Element
+import org.scalajs.dom.raw.FocusEvent
 import org.scalajs.dom.raw.HTMLDivElement
 import org.scalajs.dom.raw.HTMLInputElement
 import org.scalajs.dom.raw.HTMLSelectElement
 import org.scalajs.dom.raw.HTMLSpanElement
+import org.scalajs.dom.raw.MouseEvent
 import org.scalajs.dom.raw.Node
 import typingsSlinky.flatpickr.AnonElement
 import typingsSlinky.flatpickr.AnonGetDaysInMonth
@@ -17,8 +19,6 @@ import typingsSlinky.flatpickr.kinkeyofOptionsOptionsk
 import typingsSlinky.flatpickr.localeMod.Locale
 import typingsSlinky.flatpickr.optionsMod.DateOption
 import typingsSlinky.flatpickr.optionsMod.ParsedOptions
-import typingsSlinky.std.FocusEvent
-import typingsSlinky.std.MouseEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

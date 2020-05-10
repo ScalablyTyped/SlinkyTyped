@@ -4,27 +4,28 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait HttpStatusClasses extends js.Object {
-  val `1xx`: String
-  val `1xx_MESSAGE`: String
-  val `1xx_NAME`: String
-  val `2xx`: String
-  val `2xx_MESSAGE`: String
-  val `2xx_NAME`: String
-  val `3xx`: String
-  val `3xx_MESSAGE`: String
-  val `3xx_NAME`: String
-  val `4xx`: String
-  val `4xx_MESSAGE`: String
-  val `4xx_NAME`: String
-  val `5xx`: String
-  val `5xx_MESSAGE`: String
-  val `5xx_NAME`: String
-  val CLIENT_ERROR: String
-  val INFORMATIONAL: String
-  val REDIRECTION: String
-  val SERVER_ERROR: String
-  val SUCCESSFUL: String
+  val `1xx`: String = js.native
+  val `1xx_MESSAGE`: String = js.native
+  val `1xx_NAME`: String = js.native
+  val `2xx`: String = js.native
+  val `2xx_MESSAGE`: String = js.native
+  val `2xx_NAME`: String = js.native
+  val `3xx`: String = js.native
+  val `3xx_MESSAGE`: String = js.native
+  val `3xx_NAME`: String = js.native
+  val `4xx`: String = js.native
+  val `4xx_MESSAGE`: String = js.native
+  val `4xx_NAME`: String = js.native
+  val `5xx`: String = js.native
+  val `5xx_MESSAGE`: String = js.native
+  val `5xx_NAME`: String = js.native
+  val CLIENT_ERROR: String = js.native
+  val INFORMATIONAL: String = js.native
+  val REDIRECTION: String = js.native
+  val SERVER_ERROR: String = js.native
+  val SUCCESSFUL: String = js.native
 }
 
 object HttpStatusClasses {
@@ -69,5 +70,133 @@ object HttpStatusClasses {
     __obj.updateDynamic("5xx_NAME")(`5xx_NAME`.asInstanceOf[js.Any])
     __obj.asInstanceOf[HttpStatusClasses]
   }
+  @scala.inline
+  implicit class HttpStatusClassesOps[Self <: HttpStatusClasses] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def with1xx(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("1xx")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with1xx_MESSAGE(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("1xx_MESSAGE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with1xx_NAME(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("1xx_NAME")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with2xx(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("2xx")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with2xx_MESSAGE(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("2xx_MESSAGE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with2xx_NAME(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("2xx_NAME")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with3xx(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("3xx")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with3xx_MESSAGE(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("3xx_MESSAGE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with3xx_NAME(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("3xx_NAME")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with4xx(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("4xx")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with4xx_MESSAGE(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("4xx_MESSAGE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with4xx_NAME(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("4xx_NAME")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with5xx(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("5xx")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with5xx_MESSAGE(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("5xx_MESSAGE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with5xx_NAME(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("5xx_NAME")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCLIENT_ERROR(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CLIENT_ERROR")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withINFORMATIONAL(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("INFORMATIONAL")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withREDIRECTION(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("REDIRECTION")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSERVER_ERROR(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SERVER_ERROR")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSUCCESSFUL(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SUCCESSFUL")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

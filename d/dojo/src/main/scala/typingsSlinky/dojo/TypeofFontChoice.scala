@@ -10,6 +10,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait TypeofFontChoice extends js.Object {
   /**
     * Permalink: http://dojotoolkit.org/api/1.9/dijit/_editor/plugins/FontChoice._FontDropDown.html
@@ -25,7 +26,7 @@ trait TypeofFontChoice extends js.Object {
     js.UndefOr[/* params */ js.Object], 
     js.UndefOr[/* srcNodeRef */ HTMLElement], 
     FontDropDown
-  ]
+  ] = js.native
   /**
     * Permalink: http://dojotoolkit.org/api/1.9/dijit/_editor/plugins/FontChoice._FontNameDropDown.html
     *
@@ -38,7 +39,7 @@ trait TypeofFontChoice extends js.Object {
     js.UndefOr[/* params */ js.Object], 
     js.UndefOr[/* srcNodeRef */ HTMLElement], 
     FontNameDropDown
-  ]
+  ] = js.native
   /**
     * Permalink: http://dojotoolkit.org/api/1.9/dijit/_editor/plugins/FontChoice._FontSizeDropDown.html
     *
@@ -51,7 +52,7 @@ trait TypeofFontChoice extends js.Object {
     js.UndefOr[/* params */ js.Object], 
     js.UndefOr[/* srcNodeRef */ HTMLElement], 
     FontSizeDropDown
-  ]
+  ] = js.native
   /**
     * Permalink: http://dojotoolkit.org/api/1.9/dijit/_editor/plugins/FontChoice._FormatBlockDropDown.html
     *
@@ -64,7 +65,7 @@ trait TypeofFontChoice extends js.Object {
     js.UndefOr[/* params */ js.Object], 
     js.UndefOr[/* srcNodeRef */ HTMLElement], 
     FormatBlockDropDown
-  ]
+  ] = js.native
 }
 
 object TypeofFontChoice {
@@ -92,8 +93,63 @@ object TypeofFontChoice {
     ]
   ): TypeofFontChoice = {
     val __obj = js.Dynamic.literal(_FontDropDown = _FontDropDown.asInstanceOf[js.Any], _FontNameDropDown = _FontNameDropDown.asInstanceOf[js.Any], _FontSizeDropDown = _FontSizeDropDown.asInstanceOf[js.Any], _FormatBlockDropDown = _FormatBlockDropDown.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[TypeofFontChoice]
   }
+  @scala.inline
+  implicit class TypeofFontChoiceOps[Self <: TypeofFontChoice] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def with_FontDropDown(
+      value: Instantiable2[
+          js.UndefOr[/* params */ js.Object], 
+          js.UndefOr[/* srcNodeRef */ HTMLElement], 
+          FontDropDown
+        ]
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_FontDropDown")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_FontNameDropDown(
+      value: Instantiable2[
+          js.UndefOr[/* params */ js.Object], 
+          js.UndefOr[/* srcNodeRef */ HTMLElement], 
+          FontNameDropDown
+        ]
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_FontNameDropDown")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_FontSizeDropDown(
+      value: Instantiable2[
+          js.UndefOr[/* params */ js.Object], 
+          js.UndefOr[/* srcNodeRef */ HTMLElement], 
+          FontSizeDropDown
+        ]
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_FontSizeDropDown")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_FormatBlockDropDown(
+      value: Instantiable2[
+          js.UndefOr[/* params */ js.Object], 
+          js.UndefOr[/* srcNodeRef */ HTMLElement], 
+          FormatBlockDropDown
+        ]
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_FormatBlockDropDown")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

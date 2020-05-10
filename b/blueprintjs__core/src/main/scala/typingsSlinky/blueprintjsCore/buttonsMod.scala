@@ -1,10 +1,10 @@
 package typingsSlinky.blueprintjsCore
 
+import org.scalajs.dom.raw.HTMLAnchorElement
+import org.scalajs.dom.raw.HTMLButtonElement
 import typingsSlinky.blueprintjsCore.abstractButtonMod.AbstractButton
 import typingsSlinky.react.mod.AnchorHTMLAttributes
 import typingsSlinky.react.mod.ButtonHTMLAttributes
-import typingsSlinky.std.HTMLAnchorElement
-import typingsSlinky.std.HTMLButtonElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

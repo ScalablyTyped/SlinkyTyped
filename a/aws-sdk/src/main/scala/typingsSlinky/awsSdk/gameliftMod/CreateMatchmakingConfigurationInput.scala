@@ -71,28 +71,156 @@ object CreateMatchmakingConfigurationInput {
     GameSessionQueueArns: QueueArnsList,
     Name: MatchmakingIdStringModel,
     RequestTimeoutSeconds: MatchmakingRequestTimeoutInteger,
-    RuleSetName: MatchmakingRuleSetName,
-    AcceptanceTimeoutSeconds: Int | scala.Double = null,
-    AdditionalPlayerCount: Int | scala.Double = null,
-    BackfillMode: BackfillMode = null,
-    CustomEventData: CustomEventData = null,
-    Description: NonZeroAndMaxString = null,
-    GameProperties: GamePropertyList = null,
-    GameSessionData: GameSessionData = null,
-    NotificationTarget: SnsArnStringModel = null,
-    Tags: TagList = null
+    RuleSetName: MatchmakingRuleSetName
   ): CreateMatchmakingConfigurationInput = {
     val __obj = js.Dynamic.literal(AcceptanceRequired = AcceptanceRequired.asInstanceOf[js.Any], GameSessionQueueArns = GameSessionQueueArns.asInstanceOf[js.Any], Name = Name.asInstanceOf[js.Any], RequestTimeoutSeconds = RequestTimeoutSeconds.asInstanceOf[js.Any], RuleSetName = RuleSetName.asInstanceOf[js.Any])
-    if (AcceptanceTimeoutSeconds != null) __obj.updateDynamic("AcceptanceTimeoutSeconds")(AcceptanceTimeoutSeconds.asInstanceOf[js.Any])
-    if (AdditionalPlayerCount != null) __obj.updateDynamic("AdditionalPlayerCount")(AdditionalPlayerCount.asInstanceOf[js.Any])
-    if (BackfillMode != null) __obj.updateDynamic("BackfillMode")(BackfillMode.asInstanceOf[js.Any])
-    if (CustomEventData != null) __obj.updateDynamic("CustomEventData")(CustomEventData.asInstanceOf[js.Any])
-    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
-    if (GameProperties != null) __obj.updateDynamic("GameProperties")(GameProperties.asInstanceOf[js.Any])
-    if (GameSessionData != null) __obj.updateDynamic("GameSessionData")(GameSessionData.asInstanceOf[js.Any])
-    if (NotificationTarget != null) __obj.updateDynamic("NotificationTarget")(NotificationTarget.asInstanceOf[js.Any])
-    if (Tags != null) __obj.updateDynamic("Tags")(Tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateMatchmakingConfigurationInput]
   }
+  @scala.inline
+  implicit class CreateMatchmakingConfigurationInputOps[Self <: CreateMatchmakingConfigurationInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAcceptanceRequired(value: BooleanModel): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AcceptanceRequired")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGameSessionQueueArns(value: QueueArnsList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GameSessionQueueArns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withName(value: MatchmakingIdStringModel): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRequestTimeoutSeconds(value: MatchmakingRequestTimeoutInteger): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RequestTimeoutSeconds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRuleSetName(value: MatchmakingRuleSetName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RuleSetName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAcceptanceTimeoutSeconds(value: MatchmakingAcceptanceTimeoutInteger): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AcceptanceTimeoutSeconds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAcceptanceTimeoutSeconds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AcceptanceTimeoutSeconds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAdditionalPlayerCount(value: WholeNumber): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AdditionalPlayerCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAdditionalPlayerCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AdditionalPlayerCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBackfillMode(value: BackfillMode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BackfillMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackfillMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BackfillMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCustomEventData(value: CustomEventData): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CustomEventData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCustomEventData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CustomEventData")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDescription(value: NonZeroAndMaxString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGameProperties(value: GamePropertyList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GameProperties")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGameProperties: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GameProperties")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGameSessionData(value: GameSessionData): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GameSessionData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGameSessionData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GameSessionData")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNotificationTarget(value: SnsArnStringModel): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NotificationTarget")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNotificationTarget: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NotificationTarget")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTags(value: TagList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

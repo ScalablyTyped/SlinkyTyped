@@ -76,30 +76,137 @@ trait SchemaCellData extends js.Object {
 
 object SchemaCellData {
   @scala.inline
-  def apply(
-    dataValidation: SchemaDataValidationRule = null,
-    effectiveFormat: SchemaCellFormat = null,
-    effectiveValue: SchemaExtendedValue = null,
-    formattedValue: String = null,
-    hyperlink: String = null,
-    note: String = null,
-    pivotTable: SchemaPivotTable = null,
-    textFormatRuns: js.Array[SchemaTextFormatRun] = null,
-    userEnteredFormat: SchemaCellFormat = null,
-    userEnteredValue: SchemaExtendedValue = null
-  ): SchemaCellData = {
+  def apply(): SchemaCellData = {
     val __obj = js.Dynamic.literal()
-    if (dataValidation != null) __obj.updateDynamic("dataValidation")(dataValidation.asInstanceOf[js.Any])
-    if (effectiveFormat != null) __obj.updateDynamic("effectiveFormat")(effectiveFormat.asInstanceOf[js.Any])
-    if (effectiveValue != null) __obj.updateDynamic("effectiveValue")(effectiveValue.asInstanceOf[js.Any])
-    if (formattedValue != null) __obj.updateDynamic("formattedValue")(formattedValue.asInstanceOf[js.Any])
-    if (hyperlink != null) __obj.updateDynamic("hyperlink")(hyperlink.asInstanceOf[js.Any])
-    if (note != null) __obj.updateDynamic("note")(note.asInstanceOf[js.Any])
-    if (pivotTable != null) __obj.updateDynamic("pivotTable")(pivotTable.asInstanceOf[js.Any])
-    if (textFormatRuns != null) __obj.updateDynamic("textFormatRuns")(textFormatRuns.asInstanceOf[js.Any])
-    if (userEnteredFormat != null) __obj.updateDynamic("userEnteredFormat")(userEnteredFormat.asInstanceOf[js.Any])
-    if (userEnteredValue != null) __obj.updateDynamic("userEnteredValue")(userEnteredValue.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaCellData]
   }
+  @scala.inline
+  implicit class SchemaCellDataOps[Self <: SchemaCellData] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDataValidation(value: SchemaDataValidationRule): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataValidation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDataValidation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataValidation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEffectiveFormat(value: SchemaCellFormat): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("effectiveFormat")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEffectiveFormat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("effectiveFormat")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEffectiveValue(value: SchemaExtendedValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("effectiveValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEffectiveValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("effectiveValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFormattedValue(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formattedValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFormattedValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formattedValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHyperlink(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hyperlink")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHyperlink: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hyperlink")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNote(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("note")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNote: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("note")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPivotTable(value: SchemaPivotTable): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pivotTable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPivotTable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pivotTable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTextFormatRuns(value: js.Array[SchemaTextFormatRun]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textFormatRuns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTextFormatRuns: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textFormatRuns")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUserEnteredFormat(value: SchemaCellFormat): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userEnteredFormat")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUserEnteredFormat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userEnteredFormat")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUserEnteredValue(value: SchemaExtendedValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userEnteredValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUserEnteredValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userEnteredValue")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

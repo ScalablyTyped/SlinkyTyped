@@ -7,36 +7,114 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonHttpOnly extends js.Object {
-  var httpOnly: js.UndefOr[Boolean] = js.undefined
-  var maxAge: js.UndefOr[Double] = js.undefined
-  var path: js.UndefOr[String] = js.undefined
-  var rewrite: js.UndefOr[Boolean] = js.undefined
-  var sameSite: js.UndefOr[Boolean | lax | none | strict] = js.undefined
-  var secure: js.UndefOr[Boolean] = js.undefined
-  var signed: js.UndefOr[Boolean] = js.undefined
+  var httpOnly: js.UndefOr[Boolean] = js.native
+  var maxAge: js.UndefOr[Double] = js.native
+  var path: js.UndefOr[String] = js.native
+  var rewrite: js.UndefOr[Boolean] = js.native
+  var sameSite: js.UndefOr[Boolean | lax | none | strict] = js.native
+  var secure: js.UndefOr[Boolean] = js.native
+  var signed: js.UndefOr[Boolean] = js.native
 }
 
 object AnonHttpOnly {
   @scala.inline
-  def apply(
-    httpOnly: js.UndefOr[Boolean] = js.undefined,
-    maxAge: Int | Double = null,
-    path: String = null,
-    rewrite: js.UndefOr[Boolean] = js.undefined,
-    sameSite: Boolean | lax | none | strict = null,
-    secure: js.UndefOr[Boolean] = js.undefined,
-    signed: js.UndefOr[Boolean] = js.undefined
-  ): AnonHttpOnly = {
+  def apply(): AnonHttpOnly = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(httpOnly)) __obj.updateDynamic("httpOnly")(httpOnly.asInstanceOf[js.Any])
-    if (maxAge != null) __obj.updateDynamic("maxAge")(maxAge.asInstanceOf[js.Any])
-    if (path != null) __obj.updateDynamic("path")(path.asInstanceOf[js.Any])
-    if (!js.isUndefined(rewrite)) __obj.updateDynamic("rewrite")(rewrite.asInstanceOf[js.Any])
-    if (sameSite != null) __obj.updateDynamic("sameSite")(sameSite.asInstanceOf[js.Any])
-    if (!js.isUndefined(secure)) __obj.updateDynamic("secure")(secure.asInstanceOf[js.Any])
-    if (!js.isUndefined(signed)) __obj.updateDynamic("signed")(signed.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonHttpOnly]
   }
+  @scala.inline
+  implicit class AnonHttpOnlyOps[Self <: AnonHttpOnly] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHttpOnly(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("httpOnly")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHttpOnly: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("httpOnly")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxAge(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxAge")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxAge: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxAge")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPath(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRewrite(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rewrite")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRewrite: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rewrite")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSameSite(value: Boolean | lax | none | strict): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sameSite")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSameSite: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sameSite")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSecure(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("secure")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSecure: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("secure")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSigned(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("signed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSigned: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("signed")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

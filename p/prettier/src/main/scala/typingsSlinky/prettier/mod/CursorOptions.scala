@@ -1,83 +1,36 @@
 package typingsSlinky.prettier.mod
 
-import typingsSlinky.prettier.prettierStrings.`as-needed`
-import typingsSlinky.prettier.prettierStrings.all
-import typingsSlinky.prettier.prettierStrings.always
-import typingsSlinky.prettier.prettierStrings.auto
-import typingsSlinky.prettier.prettierStrings.avoid
-import typingsSlinky.prettier.prettierStrings.consistent
-import typingsSlinky.prettier.prettierStrings.cr
-import typingsSlinky.prettier.prettierStrings.crlf
-import typingsSlinky.prettier.prettierStrings.css
-import typingsSlinky.prettier.prettierStrings.es5
-import typingsSlinky.prettier.prettierStrings.ignore
-import typingsSlinky.prettier.prettierStrings.lf
-import typingsSlinky.prettier.prettierStrings.never
-import typingsSlinky.prettier.prettierStrings.none
-import typingsSlinky.prettier.prettierStrings.preserve
-import typingsSlinky.prettier.prettierStrings.strict
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait CursorOptions extends Options {
   /**
     * Specify where the cursor is.
     */
-  var cursorOffset: Double
+  var cursorOffset: Double = js.native
 }
 
 object CursorOptions {
   @scala.inline
-  def apply(
-    cursorOffset: Double,
-    arrowParens: avoid | always = null,
-    bracketSpacing: js.UndefOr[Boolean] = js.undefined,
-    endOfLine: auto | lf | crlf | cr = null,
-    filepath: String = null,
-    htmlWhitespaceSensitivity: css | strict | ignore = null,
-    insertPragma: js.UndefOr[Boolean] = js.undefined,
-    jsxBracketSameLine: js.UndefOr[Boolean] = js.undefined,
-    jsxSingleQuote: js.UndefOr[Boolean] = js.undefined,
-    parser: BuiltInParserName | CustomParser = null,
-    plugins: js.Array[String | Plugin] = null,
-    printWidth: Int | Double = null,
-    proseWrap: Boolean | always | never | preserve = null,
-    quoteProps: `as-needed` | consistent | preserve = null,
-    rangeEnd: Int | Double = null,
-    rangeStart: Int | Double = null,
-    requirePragma: js.UndefOr[Boolean] = js.undefined,
-    semi: js.UndefOr[Boolean] = js.undefined,
-    singleQuote: js.UndefOr[Boolean] = js.undefined,
-    tabWidth: Int | Double = null,
-    trailingComma: none | es5 | all = null,
-    useTabs: js.UndefOr[Boolean] = js.undefined,
-    vueIndentScriptAndStyle: js.UndefOr[Boolean] = js.undefined
-  ): CursorOptions = {
+  def apply(cursorOffset: Double): CursorOptions = {
     val __obj = js.Dynamic.literal(cursorOffset = cursorOffset.asInstanceOf[js.Any])
-    if (arrowParens != null) __obj.updateDynamic("arrowParens")(arrowParens.asInstanceOf[js.Any])
-    if (!js.isUndefined(bracketSpacing)) __obj.updateDynamic("bracketSpacing")(bracketSpacing.asInstanceOf[js.Any])
-    if (endOfLine != null) __obj.updateDynamic("endOfLine")(endOfLine.asInstanceOf[js.Any])
-    if (filepath != null) __obj.updateDynamic("filepath")(filepath.asInstanceOf[js.Any])
-    if (htmlWhitespaceSensitivity != null) __obj.updateDynamic("htmlWhitespaceSensitivity")(htmlWhitespaceSensitivity.asInstanceOf[js.Any])
-    if (!js.isUndefined(insertPragma)) __obj.updateDynamic("insertPragma")(insertPragma.asInstanceOf[js.Any])
-    if (!js.isUndefined(jsxBracketSameLine)) __obj.updateDynamic("jsxBracketSameLine")(jsxBracketSameLine.asInstanceOf[js.Any])
-    if (!js.isUndefined(jsxSingleQuote)) __obj.updateDynamic("jsxSingleQuote")(jsxSingleQuote.asInstanceOf[js.Any])
-    if (parser != null) __obj.updateDynamic("parser")(parser.asInstanceOf[js.Any])
-    if (plugins != null) __obj.updateDynamic("plugins")(plugins.asInstanceOf[js.Any])
-    if (printWidth != null) __obj.updateDynamic("printWidth")(printWidth.asInstanceOf[js.Any])
-    if (proseWrap != null) __obj.updateDynamic("proseWrap")(proseWrap.asInstanceOf[js.Any])
-    if (quoteProps != null) __obj.updateDynamic("quoteProps")(quoteProps.asInstanceOf[js.Any])
-    if (rangeEnd != null) __obj.updateDynamic("rangeEnd")(rangeEnd.asInstanceOf[js.Any])
-    if (rangeStart != null) __obj.updateDynamic("rangeStart")(rangeStart.asInstanceOf[js.Any])
-    if (!js.isUndefined(requirePragma)) __obj.updateDynamic("requirePragma")(requirePragma.asInstanceOf[js.Any])
-    if (!js.isUndefined(semi)) __obj.updateDynamic("semi")(semi.asInstanceOf[js.Any])
-    if (!js.isUndefined(singleQuote)) __obj.updateDynamic("singleQuote")(singleQuote.asInstanceOf[js.Any])
-    if (tabWidth != null) __obj.updateDynamic("tabWidth")(tabWidth.asInstanceOf[js.Any])
-    if (trailingComma != null) __obj.updateDynamic("trailingComma")(trailingComma.asInstanceOf[js.Any])
-    if (!js.isUndefined(useTabs)) __obj.updateDynamic("useTabs")(useTabs.asInstanceOf[js.Any])
-    if (!js.isUndefined(vueIndentScriptAndStyle)) __obj.updateDynamic("vueIndentScriptAndStyle")(vueIndentScriptAndStyle.asInstanceOf[js.Any])
     __obj.asInstanceOf[CursorOptions]
   }
+  @scala.inline
+  implicit class CursorOptionsOps[Self <: CursorOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCursorOffset(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cursorOffset")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

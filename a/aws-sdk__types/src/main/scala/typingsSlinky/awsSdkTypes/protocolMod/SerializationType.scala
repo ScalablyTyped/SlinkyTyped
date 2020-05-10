@@ -19,24 +19,22 @@ trait SerializationType extends js.Object
 
 object SerializationType {
   @scala.inline
-  def blob: typingsSlinky.awsSdkTypes.awsSdkTypesStrings.blob = this.cast("blob")
+  def blob: typingsSlinky.awsSdkTypes.awsSdkTypesStrings.blob = "blob".asInstanceOf[typingsSlinky.awsSdkTypes.awsSdkTypesStrings.blob]
   @scala.inline
-  def boolean: typingsSlinky.awsSdkTypes.awsSdkTypesStrings.boolean = this.cast("boolean")
+  def boolean: typingsSlinky.awsSdkTypes.awsSdkTypesStrings.boolean = "boolean".asInstanceOf[typingsSlinky.awsSdkTypes.awsSdkTypesStrings.boolean]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def float: typingsSlinky.awsSdkTypes.awsSdkTypesStrings.float = "float".asInstanceOf[typingsSlinky.awsSdkTypes.awsSdkTypesStrings.float]
   @scala.inline
-  def float: typingsSlinky.awsSdkTypes.awsSdkTypesStrings.float = this.cast("float")
+  def integer: typingsSlinky.awsSdkTypes.awsSdkTypesStrings.integer = "integer".asInstanceOf[typingsSlinky.awsSdkTypes.awsSdkTypesStrings.integer]
   @scala.inline
-  def integer: typingsSlinky.awsSdkTypes.awsSdkTypesStrings.integer = this.cast("integer")
+  def list: typingsSlinky.awsSdkTypes.awsSdkTypesStrings.list = "list".asInstanceOf[typingsSlinky.awsSdkTypes.awsSdkTypesStrings.list]
   @scala.inline
-  def list: typingsSlinky.awsSdkTypes.awsSdkTypesStrings.list = this.cast("list")
+  def map: typingsSlinky.awsSdkTypes.awsSdkTypesStrings.map = "map".asInstanceOf[typingsSlinky.awsSdkTypes.awsSdkTypesStrings.map]
   @scala.inline
-  def map: typingsSlinky.awsSdkTypes.awsSdkTypesStrings.map = this.cast("map")
+  def string: typingsSlinky.awsSdkTypes.awsSdkTypesStrings.string = "string".asInstanceOf[typingsSlinky.awsSdkTypes.awsSdkTypesStrings.string]
   @scala.inline
-  def string: typingsSlinky.awsSdkTypes.awsSdkTypesStrings.string = this.cast("string")
+  def structure: typingsSlinky.awsSdkTypes.awsSdkTypesStrings.structure = "structure".asInstanceOf[typingsSlinky.awsSdkTypes.awsSdkTypesStrings.structure]
   @scala.inline
-  def structure: typingsSlinky.awsSdkTypes.awsSdkTypesStrings.structure = this.cast("structure")
-  @scala.inline
-  def timestamp: typingsSlinky.awsSdkTypes.awsSdkTypesStrings.timestamp = this.cast("timestamp")
+  def timestamp: typingsSlinky.awsSdkTypes.awsSdkTypesStrings.timestamp = "timestamp".asInstanceOf[typingsSlinky.awsSdkTypes.awsSdkTypesStrings.timestamp]
 }
 

@@ -6,41 +6,42 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typingsSlinky.amapJsApiLineSearch.AMap.LineSearch.LineInfo because Already inherited */ trait LineInfoExt extends LineInfoBase {
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
+- typingsSlinky.amapJsApiLineSearch.AMap.LineSearch.LineInfo because Already inherited */ @js.native
+trait LineInfoExt extends LineInfoBase {
   /**
     * 起步票价，单位：元
     */
-  var basic_price: String
+  var basic_price: String = js.native
    // is string actually
   /**
     * 全程距离，单位：千米
     */
-  var bounds: Bounds
+  var bounds: Bounds = js.native
   /**
     * 所属公交公司
     */
-  var company: String
+  var company: String = js.native
   /**
     * 全程距离，单位：千米
     */
-  var distance: String
+  var distance: String = js.native
   /**
     * 末班车时间
     */
-  var etime: String
+  var etime: String = js.native
   /**
     * 首班车时间
     */
-  var stime: String
+  var stime: String = js.native
   /**
     * 全程票价，单位：元
     */
-  var total_price: String
+  var total_price: String = js.native
   /**
     * 途径站，包括首发站和终点站
     */
-  var via_stops: js.Array[BusStop]
+  var via_stops: js.Array[BusStop] = js.native
 }
 
 object LineInfoExt {
@@ -66,5 +67,61 @@ object LineInfoExt {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[LineInfoExt]
   }
+  @scala.inline
+  implicit class LineInfoExtOps[Self <: LineInfoExt] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBasic_price(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("basic_price")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBounds(value: Bounds): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bounds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCompany(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("company")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDistance(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("distance")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEtime(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("etime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStime(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTotal_price(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("total_price")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVia_stops(value: js.Array[BusStop]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("via_stops")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

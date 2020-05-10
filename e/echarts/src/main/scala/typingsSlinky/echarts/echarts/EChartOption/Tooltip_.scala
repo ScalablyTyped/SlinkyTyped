@@ -1,6 +1,9 @@
 package typingsSlinky.echarts.echarts.EChartOption
 
+import org.scalajs.dom.raw.HTMLElement
+import typingsSlinky.echarts.echarts.EChartOption.Tooltip.Format
 import typingsSlinky.echarts.echarts.EChartOption.Tooltip.Formatter
+import typingsSlinky.echarts.echarts.EChartOption.Tooltip.Position.Obj
 import typingsSlinky.echarts.echarts.EChartOption.Tooltip.Position.Type
 import typingsSlinky.echarts.echartsStrings.axis
 import typingsSlinky.echarts.echartsStrings.click
@@ -13,6 +16,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Tooltip_ extends js.Object {
   /**
     * Whether to show tooltip content all the time.
@@ -22,7 +26,7 @@ trait Tooltip_ extends js.Object {
     *
     * @default false
     */
-  var alwaysShowContent: js.UndefOr[Boolean] = js.undefined
+  var alwaysShowContent: js.UndefOr[Boolean] = js.native
   /**
     * `axisPointer` is a tool for displaying reference line
     * and axis value under mouse pointer.
@@ -40,25 +44,25 @@ trait Tooltip_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#tooltip.axisPointer
     */
-  var axisPointer: js.UndefOr[typingsSlinky.echarts.echarts.EChartOption.Tooltip.AxisPointer] = js.undefined
+  var axisPointer: js.UndefOr[typingsSlinky.echarts.echarts.EChartOption.Tooltip.AxisPointer] = js.native
   /**
     * The background color of tooltip's floating layer.
     *
     * @default 'rgba(50, 50, 50, 0.7)'
     */
-  var backgroundColor: js.UndefOr[String] = js.undefined
+  var backgroundColor: js.UndefOr[String] = js.native
   /**
     * The border color of tooltip's floating layer.
     *
     * @default '#333'
     */
-  var borderColor: js.UndefOr[String] = js.undefined
+  var borderColor: js.UndefOr[String] = js.native
   /**
     * The border width of tooltip's floating layer.
     *
     * @default 0
     */
-  var borderWidth: js.UndefOr[Double] = js.undefined
+  var borderWidth: js.UndefOr[Double] = js.native
   /**
     * Whether confine tooltip content in the view rect
     * of chart instance.
@@ -68,7 +72,7 @@ trait Tooltip_ extends js.Object {
     *
     * @default false
     */
-  var confine: js.UndefOr[Boolean] = js.undefined
+  var confine: js.UndefOr[Boolean] = js.native
   /**
     * Whether mouse is allowed to enter the floating layer
     * of tooltip, whose default value is false.
@@ -77,7 +81,7 @@ trait Tooltip_ extends js.Object {
     *
     * @default true
     */
-  var enterable: js.UndefOr[Boolean] = js.undefined
+  var enterable: js.UndefOr[Boolean] = js.native
   /**
     * Extra CSS style for floating layer.
     * The following is an example for adding shadow.
@@ -85,7 +89,7 @@ trait Tooltip_ extends js.Object {
     * @example
     * extraCssText: 'box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);'
     */
-  var extraCssText: js.UndefOr[String] = js.undefined
+  var extraCssText: js.UndefOr[String] = js.native
   /**
     * The content formatter of tooltip's floating layer
     * which supports string template and callback function.
@@ -150,14 +154,14 @@ trait Tooltip_ extends js.Object {
     * }
     * ```
     */
-  var formatter: js.UndefOr[String | Formatter] = js.undefined
+  var formatter: js.UndefOr[String | Formatter] = js.native
   /**
     * Delay time for hiding tooltip, in ms.
     * It will be invalid when `alwaysShowContent` is `true`.
     *
     * @default 100
     */
-  var hideDelay: js.UndefOr[Double] = js.undefined
+  var hideDelay: js.UndefOr[Double] = js.native
   /**
     * The floating layer of tooltip space around content.
     * The unit is px. Default values for each position are 5.
@@ -179,7 +183,7 @@ trait Tooltip_ extends js.Object {
     *
     * @default 5
     */
-  var padding: js.UndefOr[Double | js.Array[Double]] = js.undefined
+  var padding: js.UndefOr[Double | js.Array[Double]] = js.native
   /**
     * The position of the tooltip's floating layer,
     * which would follow the position of mouse by default.
@@ -221,7 +225,7 @@ trait Tooltip_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#tooltip.position
     */
-  var position: js.UndefOr[Type] = js.undefined
+  var position: js.UndefOr[Type] = js.native
   /**
     * Render mode for tooltip.
     * By default, it is set to be `'html'` so that extra DOM element
@@ -234,14 +238,14 @@ trait Tooltip_ extends js.Object {
     *
     * @default 'html'
     */
-  var renderMode: js.UndefOr[html] = js.undefined
+  var renderMode: js.UndefOr[html] = js.native
   /**
     * Whether to show the tooltip component,
     * including tooltip floating layer and `axisPointer`.
     *
     * @default true
     */
-  var show: js.UndefOr[Boolean] = js.undefined
+  var show: js.UndefOr[Boolean] = js.native
   /**
     * Whether to show the tooltip floating layer,
     * whose default value is true.
@@ -251,7 +255,7 @@ trait Tooltip_ extends js.Object {
     *
     * @default true
     */
-  var showContent: js.UndefOr[Boolean] = js.undefined
+  var showContent: js.UndefOr[Boolean] = js.native
   /**
     * Delay time for showing tooltip, in ms.
     * No delay by default, and it is not recommended to set.
@@ -259,18 +263,18 @@ trait Tooltip_ extends js.Object {
     *
     * @default 0
     */
-  var showDelay: js.UndefOr[Double] = js.undefined
+  var showDelay: js.UndefOr[Double] = js.native
   /**
     * The text style of tooltip's floating layer.
     */
-  var textStyle: js.UndefOr[BaseTextStyle] = js.undefined
+  var textStyle: js.UndefOr[BaseTextStyle] = js.native
   /**
     * The transition duration of tooltip's animation, in seconds.
     * When it is set to be 0, it would move closely with the mouse.
     *
     * @default 0.4
     */
-  var transitionDuration: js.UndefOr[Double] = js.undefined
+  var transitionDuration: js.UndefOr[Double] = js.native
   /**
     * Type of triggering.
     * Options:
@@ -287,7 +291,7 @@ trait Tooltip_ extends js.Object {
     *
     * @default 'item'
     */
-  var trigger: js.UndefOr[item | axis | none] = js.undefined
+  var trigger: js.UndefOr[item | axis | none] = js.native
   /**
     * Conditions to trigger tooltip.
     * Options:
@@ -303,55 +307,278 @@ trait Tooltip_ extends js.Object {
     *
     * @default 'mousemove|click'
     */
-  var triggerOn: js.UndefOr[mousemove | click | mousemoveVerticallineclick | none] = js.undefined
+  var triggerOn: js.UndefOr[mousemove | click | mousemoveVerticallineclick | none] = js.native
 }
 
 object Tooltip_ {
   @scala.inline
-  def apply(
-    alwaysShowContent: js.UndefOr[Boolean] = js.undefined,
-    axisPointer: typingsSlinky.echarts.echarts.EChartOption.Tooltip.AxisPointer = null,
-    backgroundColor: String = null,
-    borderColor: String = null,
-    borderWidth: Int | Double = null,
-    confine: js.UndefOr[Boolean] = js.undefined,
-    enterable: js.UndefOr[Boolean] = js.undefined,
-    extraCssText: String = null,
-    formatter: String | Formatter = null,
-    hideDelay: Int | Double = null,
-    padding: Double | js.Array[Double] = null,
-    position: Type = null,
-    renderMode: html = null,
-    show: js.UndefOr[Boolean] = js.undefined,
-    showContent: js.UndefOr[Boolean] = js.undefined,
-    showDelay: Int | Double = null,
-    textStyle: BaseTextStyle = null,
-    transitionDuration: Int | Double = null,
-    trigger: item | axis | none = null,
-    triggerOn: mousemove | click | mousemoveVerticallineclick | none = null
-  ): Tooltip_ = {
+  def apply(): Tooltip_ = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(alwaysShowContent)) __obj.updateDynamic("alwaysShowContent")(alwaysShowContent.asInstanceOf[js.Any])
-    if (axisPointer != null) __obj.updateDynamic("axisPointer")(axisPointer.asInstanceOf[js.Any])
-    if (backgroundColor != null) __obj.updateDynamic("backgroundColor")(backgroundColor.asInstanceOf[js.Any])
-    if (borderColor != null) __obj.updateDynamic("borderColor")(borderColor.asInstanceOf[js.Any])
-    if (borderWidth != null) __obj.updateDynamic("borderWidth")(borderWidth.asInstanceOf[js.Any])
-    if (!js.isUndefined(confine)) __obj.updateDynamic("confine")(confine.asInstanceOf[js.Any])
-    if (!js.isUndefined(enterable)) __obj.updateDynamic("enterable")(enterable.asInstanceOf[js.Any])
-    if (extraCssText != null) __obj.updateDynamic("extraCssText")(extraCssText.asInstanceOf[js.Any])
-    if (formatter != null) __obj.updateDynamic("formatter")(formatter.asInstanceOf[js.Any])
-    if (hideDelay != null) __obj.updateDynamic("hideDelay")(hideDelay.asInstanceOf[js.Any])
-    if (padding != null) __obj.updateDynamic("padding")(padding.asInstanceOf[js.Any])
-    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
-    if (renderMode != null) __obj.updateDynamic("renderMode")(renderMode.asInstanceOf[js.Any])
-    if (!js.isUndefined(show)) __obj.updateDynamic("show")(show.asInstanceOf[js.Any])
-    if (!js.isUndefined(showContent)) __obj.updateDynamic("showContent")(showContent.asInstanceOf[js.Any])
-    if (showDelay != null) __obj.updateDynamic("showDelay")(showDelay.asInstanceOf[js.Any])
-    if (textStyle != null) __obj.updateDynamic("textStyle")(textStyle.asInstanceOf[js.Any])
-    if (transitionDuration != null) __obj.updateDynamic("transitionDuration")(transitionDuration.asInstanceOf[js.Any])
-    if (trigger != null) __obj.updateDynamic("trigger")(trigger.asInstanceOf[js.Any])
-    if (triggerOn != null) __obj.updateDynamic("triggerOn")(triggerOn.asInstanceOf[js.Any])
     __obj.asInstanceOf[Tooltip_]
   }
+  @scala.inline
+  implicit class Tooltip_Ops[Self <: Tooltip_] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAlwaysShowContent(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alwaysShowContent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlwaysShowContent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alwaysShowContent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAxisPointer(value: typingsSlinky.echarts.echarts.EChartOption.Tooltip.AxisPointer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("axisPointer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAxisPointer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("axisPointer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBackgroundColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackgroundColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBorderColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorderColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBorderWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorderWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConfine(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("confine")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConfine: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("confine")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnterable(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enterable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnterable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enterable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExtraCssText(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extraCssText")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExtraCssText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extraCssText")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFormatterFunction3(
+      value: (/* params */ Format | js.Array[Format], /* ticket */ String, /* callback */ js.Function2[/* ticket */ String, /* html */ String, Unit]) => String
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formatter")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withFormatter(value: String | Formatter): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formatter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFormatter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formatter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHideDelay(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hideDelay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHideDelay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hideDelay")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPadding(value: Double | js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPadding: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPositionFunction5(
+      value: (/* point */ js.Array[Double | String], /* params */ js.Object | js.Array[js.Object], /* element */ HTMLElement, /* rect */ js.Object, /* size */ js.Object) => (js.Array[Double | String]) | Obj
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(js.Any.fromFunction5(value))
+        ret
+    }
+    @scala.inline
+    def withPosition(value: Type): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPosition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRenderMode(value: html): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("renderMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRenderMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("renderMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShow(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("show")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("show")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowContent(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showContent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowContent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showContent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowDelay(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showDelay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowDelay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showDelay")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTextStyle(value: BaseTextStyle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTextStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTransitionDuration(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transitionDuration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTransitionDuration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transitionDuration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTrigger(value: item | axis | none): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trigger")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTrigger: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trigger")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTriggerOn(value: mousemove | click | mousemoveVerticallineclick | none): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("triggerOn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTriggerOn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("triggerOn")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

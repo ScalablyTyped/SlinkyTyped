@@ -13,5 +13,6 @@ import scala.scalajs.js.annotation._
   * and ProgressIndicator.
   *
   */
+@js.native
 trait base extends js.Object
 

@@ -17,10 +17,29 @@ trait SchemaInstancesFailoverRequest extends js.Object {
 
 object SchemaInstancesFailoverRequest {
   @scala.inline
-  def apply(failoverContext: SchemaFailoverContext = null): SchemaInstancesFailoverRequest = {
+  def apply(): SchemaInstancesFailoverRequest = {
     val __obj = js.Dynamic.literal()
-    if (failoverContext != null) __obj.updateDynamic("failoverContext")(failoverContext.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaInstancesFailoverRequest]
   }
+  @scala.inline
+  implicit class SchemaInstancesFailoverRequestOps[Self <: SchemaInstancesFailoverRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFailoverContext(value: SchemaFailoverContext): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("failoverContext")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFailoverContext: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("failoverContext")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -5,29 +5,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait HSLA extends Node {
-  var a: Double
-  var h: Double
-  var hsla: HSLA
-  var l: Double
-  var rgba: RGBA
-  var s: Double
+  var a: Double = js.native
+  var h: Double = js.native
+  var hsla: HSLA = js.native
+  var l: Double = js.native
+  var rgba: RGBA = js.native
+  var s: Double = js.native
   /**
     * Add h,s,l to the current component values
     */
-  def add(h: Double, s: Double, l: Double): HSLA
+  def add(h: Double, s: Double, l: Double): HSLA = js.native
   /**
     * djust hue by `deg`.
     */
-  def adjustHue(deg: Double): HSLA
+  def adjustHue(deg: Double): HSLA = js.native
   /**
     * Adjust lightness by `percent`.
     */
-  def adjustLightness(percent: Double): HSLA
+  def adjustLightness(percent: Double): HSLA = js.native
   /**
     * Subtract h,s,l from the current component values
     */
-  def substract(h: Double, s: Double, l: Double): HSLA
+  def substract(h: Double, s: Double, l: Double): HSLA = js.native
 }
 
 object HSLA {
@@ -58,8 +59,75 @@ object HSLA {
     toJSON: () => AnonColumn
   ): HSLA = {
     val __obj = js.Dynamic.literal(a = a.asInstanceOf[js.Any], add = js.Any.fromFunction3(add), adjustHue = js.Any.fromFunction1(adjustHue), adjustLightness = js.Any.fromFunction1(adjustLightness), coerce = js.Any.fromFunction1(coerce), column = column.asInstanceOf[js.Any], eval = js.Any.fromFunction0(eval), filename = filename.asInstanceOf[js.Any], first = first.asInstanceOf[js.Any], h = h.asInstanceOf[js.Any], hash = hash.asInstanceOf[js.Any], hsla = hsla.asInstanceOf[js.Any], l = l.asInstanceOf[js.Any], lineno = lineno.asInstanceOf[js.Any], nodeName = nodeName.asInstanceOf[js.Any], operate = js.Any.fromFunction2(operate), rgba = rgba.asInstanceOf[js.Any], s = s.asInstanceOf[js.Any], shouldCoerce = js.Any.fromFunction1(shouldCoerce), substract = js.Any.fromFunction3(substract), toBoolean = js.Any.fromFunction0(toBoolean), toExpression = js.Any.fromFunction0(toExpression), toJSON = js.Any.fromFunction0(toJSON))
-  
     __obj.asInstanceOf[HSLA]
   }
+  @scala.inline
+  implicit class HSLAOps[Self <: HSLA] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withA(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("a")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAdd(value: (Double, Double, Double) => HSLA): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("add")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withAdjustHue(value: Double => HSLA): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("adjustHue")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withAdjustLightness(value: Double => HSLA): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("adjustLightness")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withH(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("h")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHsla(value: HSLA): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hsla")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withL(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("l")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRgba(value: RGBA): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rgba")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withS(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("s")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSubstract(value: (Double, Double, Double) => HSLA): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("substract")(js.Any.fromFunction3(value))
+        ret
+    }
+  }
+  
 }
 

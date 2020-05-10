@@ -16,7 +16,7 @@ import scala.scalajs.js.annotation._
 /**
   * See: {@link https://docs.mendix.com/refguide7/published-odata-services relevant section in reference guide}
   */
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.mendixmodelsdk.structuresMod.IStructure because Already inherited
 - typingsSlinky.mendixmodelsdk.elementsMod.IAbstractElement because Already inherited
 - typingsSlinky.mendixmodelsdk.unitsMod.IAbstractUnit because Already inherited
@@ -36,51 +36,51 @@ class PublishedODataService protected () extends Document {
   ) = this()
   @JSName("model")
   var model_FPublishedODataService: IModel = js.native
-  def allowedModuleRoles(): IList[IModuleRole] = js.native
-  def allowedModuleRolesQualifiedNames(): js.Array[String] = js.native
+  def allowedModuleRoles: IList[IModuleRole] = js.native
+  def allowedModuleRolesQualifiedNames: js.Array[String] = js.native
   def authenticationMicroflow(): js.Any = js.native
   def authenticationMicroflow(newValue: IMicroflow): js.Any = js.native
-  def authenticationMicroflowQualifiedName(): String | Null = js.native
+  def authenticationMicroflowQualifiedName: String | Null = js.native
   /**
     * In version 8.0.0: introduced
     */
   @JSName("authenticationMicroflow")
-  def authenticationMicroflow_Union(): IMicroflow | Null = js.native
+  def authenticationMicroflow_Union: IMicroflow | Null = js.native
   /**
     * In version 8.0.0: introduced
     */
-  def authenticationTypes(): IList[RestAuthenticationType] = js.native
+  def authenticationTypes: IList[RestAuthenticationType] = js.native
   @JSName("containerAsFolderBase")
-  def containerAsFolderBase_MPublishedODataService(): FolderBase = js.native
+  def containerAsFolderBase_MPublishedODataService: FolderBase = js.native
   /**
     * In version 8.4.0: introduced
     */
-  def description(): String = js.native
+  def description: String = js.native
   def description(newValue: String): js.Any = js.native
-  def namespace(): String = js.native
+  def namespace: String = js.native
   def namespace(newValue: String): js.Any = js.native
-  def path(): String = js.native
+  def path: String = js.native
   def path(newValue: String): js.Any = js.native
   /**
     * In version 7.19.0: introduced
     */
-  def publishAssociations(): Boolean = js.native
+  def publishAssociations: Boolean = js.native
   def publishAssociations(newValue: Boolean): js.Any = js.native
-  def resources(): IList[PublishedRestResource] = js.native
+  def resources: IList[PublishedRestResource] = js.native
   /**
     * In version 8.0.0: introduced
     */
-  def serviceName(): String = js.native
+  def serviceName: String = js.native
   def serviceName(newValue: String): js.Any = js.native
   /**
     * In version 8.4.0: introduced
     */
-  def summary(): String = js.native
+  def summary: String = js.native
   def summary(newValue: String): js.Any = js.native
   /**
     * In version 8.0.0: introduced
     */
-  def version(): String = js.native
+  def version: String = js.native
   def version(newValue: String): js.Any = js.native
 }
 

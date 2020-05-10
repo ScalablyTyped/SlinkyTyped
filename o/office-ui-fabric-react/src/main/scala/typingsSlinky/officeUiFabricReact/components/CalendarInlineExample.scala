@@ -1,9 +1,7 @@
 package typingsSlinky.officeUiFabricReact.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.officeUiFabricReact.calendarInlineExampleMod.ICalendarInlineExampleProps
 import typingsSlinky.officeUiFabricReact.dateValuesMod.DateRangeType
 import typingsSlinky.officeUiFabricReact.dateValuesMod.DayOfWeek
@@ -11,55 +9,51 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object CalendarInlineExample
-  extends ExternalComponentWithAttributesWithRefType[
-      tag.type, 
-      typingsSlinky.officeUiFabricReact.calendarInlineExampleMod.CalendarInlineExample
-    ] {
+object CalendarInlineExample {
   @JSImport("office-ui-fabric-react/lib/components/Calendar/examples/Calendar.Inline.Example", "CalendarInlineExample")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    autoNavigateOnSelection: Boolean,
-    dateRangeType: DateRangeType,
-    showGoToToday: Boolean,
-    firstDayOfWeek: DayOfWeek = null,
-    highlightCurrentMonth: js.UndefOr[Boolean] = js.undefined,
-    highlightSelectedMonth: js.UndefOr[Boolean] = js.undefined,
-    isDayPickerVisible: js.UndefOr[Boolean] = js.undefined,
-    isMonthPickerVisible: js.UndefOr[Boolean] = js.undefined,
-    maxDate: js.Date = null,
-    minDate: js.Date = null,
-    restrictedDates: js.Array[js.Date] = null,
-    showMonthPickerAsOverlay: js.UndefOr[Boolean] = js.undefined,
-    showNavigateButtons: js.UndefOr[Boolean] = js.undefined,
-    showSixWeeksByDefault: js.UndefOr[Boolean] = js.undefined,
-    showWeekNumbers: js.UndefOr[Boolean] = js.undefined,
-    workWeekDays: js.Array[DayOfWeek] = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[
-    tag.type, 
-    typingsSlinky.officeUiFabricReact.calendarInlineExampleMod.CalendarInlineExample
-  ] = {
-    val __obj = js.Dynamic.literal(autoNavigateOnSelection = autoNavigateOnSelection.asInstanceOf[js.Any], dateRangeType = dateRangeType.asInstanceOf[js.Any], showGoToToday = showGoToToday.asInstanceOf[js.Any])
-    if (firstDayOfWeek != null) __obj.updateDynamic("firstDayOfWeek")(firstDayOfWeek.asInstanceOf[js.Any])
-    if (!js.isUndefined(highlightCurrentMonth)) __obj.updateDynamic("highlightCurrentMonth")(highlightCurrentMonth.asInstanceOf[js.Any])
-    if (!js.isUndefined(highlightSelectedMonth)) __obj.updateDynamic("highlightSelectedMonth")(highlightSelectedMonth.asInstanceOf[js.Any])
-    if (!js.isUndefined(isDayPickerVisible)) __obj.updateDynamic("isDayPickerVisible")(isDayPickerVisible.asInstanceOf[js.Any])
-    if (!js.isUndefined(isMonthPickerVisible)) __obj.updateDynamic("isMonthPickerVisible")(isMonthPickerVisible.asInstanceOf[js.Any])
-    if (maxDate != null) __obj.updateDynamic("maxDate")(maxDate.asInstanceOf[js.Any])
-    if (minDate != null) __obj.updateDynamic("minDate")(minDate.asInstanceOf[js.Any])
-    if (restrictedDates != null) __obj.updateDynamic("restrictedDates")(restrictedDates.asInstanceOf[js.Any])
-    if (!js.isUndefined(showMonthPickerAsOverlay)) __obj.updateDynamic("showMonthPickerAsOverlay")(showMonthPickerAsOverlay.asInstanceOf[js.Any])
-    if (!js.isUndefined(showNavigateButtons)) __obj.updateDynamic("showNavigateButtons")(showNavigateButtons.asInstanceOf[js.Any])
-    if (!js.isUndefined(showSixWeeksByDefault)) __obj.updateDynamic("showSixWeeksByDefault")(showSixWeeksByDefault.asInstanceOf[js.Any])
-    if (!js.isUndefined(showWeekNumbers)) __obj.updateDynamic("showWeekNumbers")(showWeekNumbers.asInstanceOf[js.Any])
-    if (workWeekDays != null) __obj.updateDynamic("workWeekDays")(workWeekDays.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[
+          tag.type, 
+          typingsSlinky.officeUiFabricReact.calendarInlineExampleMod.CalendarInlineExample
+        ] {
+    @scala.inline
+    def firstDayOfWeek(value: DayOfWeek): this.type = set("firstDayOfWeek", value.asInstanceOf[js.Any])
+    @scala.inline
+    def highlightCurrentMonth(value: Boolean): this.type = set("highlightCurrentMonth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def highlightSelectedMonth(value: Boolean): this.type = set("highlightSelectedMonth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def isDayPickerVisible(value: Boolean): this.type = set("isDayPickerVisible", value.asInstanceOf[js.Any])
+    @scala.inline
+    def isMonthPickerVisible(value: Boolean): this.type = set("isMonthPickerVisible", value.asInstanceOf[js.Any])
+    @scala.inline
+    def maxDate(value: js.Date): this.type = set("maxDate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def minDate(value: js.Date): this.type = set("minDate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def restrictedDates(value: js.Array[js.Date]): this.type = set("restrictedDates", value.asInstanceOf[js.Any])
+    @scala.inline
+    def showMonthPickerAsOverlay(value: Boolean): this.type = set("showMonthPickerAsOverlay", value.asInstanceOf[js.Any])
+    @scala.inline
+    def showNavigateButtons(value: Boolean): this.type = set("showNavigateButtons", value.asInstanceOf[js.Any])
+    @scala.inline
+    def showSixWeeksByDefault(value: Boolean): this.type = set("showSixWeeksByDefault", value.asInstanceOf[js.Any])
+    @scala.inline
+    def showWeekNumbers(value: Boolean): this.type = set("showWeekNumbers", value.asInstanceOf[js.Any])
+    @scala.inline
+    def workWeekDays(value: js.Array[DayOfWeek]): this.type = set("workWeekDays", value.asInstanceOf[js.Any])
   }
-  type Props = ICalendarInlineExampleProps
+  
+  def withProps(p: ICalendarInlineExampleProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(autoNavigateOnSelection: Boolean, dateRangeType: DateRangeType, showGoToToday: Boolean): Builder = {
+    val __props = js.Dynamic.literal(autoNavigateOnSelection = autoNavigateOnSelection.asInstanceOf[js.Any], dateRangeType = dateRangeType.asInstanceOf[js.Any], showGoToToday = showGoToToday.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ICalendarInlineExampleProps]))
+  }
 }
 

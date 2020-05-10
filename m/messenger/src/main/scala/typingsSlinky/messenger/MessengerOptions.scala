@@ -4,19 +4,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait MessengerOptions extends js.Object {
   /**
     * Extra classes to be appended to the container.
     */
-  var extraClasses: js.UndefOr[String] = js.undefined
+  var extraClasses: js.UndefOr[String] = js.native
   /**
     * The maximum number of messages to show at once.
     */
-  var maxMessages: js.UndefOr[Double] = js.undefined
+  var maxMessages: js.UndefOr[Double] = js.native
   /**
     * Default options for created messages.
     */
-  var messageDefaults: js.UndefOr[MessageOptions] = js.undefined
+  var messageDefaults: js.UndefOr[MessageOptions] = js.native
   /**
     * Which locations should be tried when inserting the message container into the page.
     * The default is ['body']. It accepts a list to allow you to try a variety of places
@@ -24,29 +25,86 @@ trait MessengerOptions extends js.Object {
     * not need to be changed unless you are inserting the messages into the flow of the
     * document, rather than using messenger-fixed.
     */
-  var parentLocations: js.UndefOr[js.Array[String]] = js.undefined
+  var parentLocations: js.UndefOr[js.Array[String]] = js.native
   /**
     * What theme are you using? Some themes have associated javascript, specifing this allows that js to run.
     */
-  var theme: js.UndefOr[String] = js.undefined
+  var theme: js.UndefOr[String] = js.native
 }
 
 object MessengerOptions {
   @scala.inline
-  def apply(
-    extraClasses: String = null,
-    maxMessages: Int | Double = null,
-    messageDefaults: MessageOptions = null,
-    parentLocations: js.Array[String] = null,
-    theme: String = null
-  ): MessengerOptions = {
+  def apply(): MessengerOptions = {
     val __obj = js.Dynamic.literal()
-    if (extraClasses != null) __obj.updateDynamic("extraClasses")(extraClasses.asInstanceOf[js.Any])
-    if (maxMessages != null) __obj.updateDynamic("maxMessages")(maxMessages.asInstanceOf[js.Any])
-    if (messageDefaults != null) __obj.updateDynamic("messageDefaults")(messageDefaults.asInstanceOf[js.Any])
-    if (parentLocations != null) __obj.updateDynamic("parentLocations")(parentLocations.asInstanceOf[js.Any])
-    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
     __obj.asInstanceOf[MessengerOptions]
   }
+  @scala.inline
+  implicit class MessengerOptionsOps[Self <: MessengerOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withExtraClasses(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extraClasses")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExtraClasses: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extraClasses")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxMessages(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxMessages")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxMessages: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxMessages")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMessageDefaults(value: MessageOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("messageDefaults")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMessageDefaults: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("messageDefaults")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParentLocations(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parentLocations")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParentLocations: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parentLocations")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTheme(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTheme: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

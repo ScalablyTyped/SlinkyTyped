@@ -26,18 +26,65 @@ trait NFSFileShareDefaults extends js.Object {
 
 object NFSFileShareDefaults {
   @scala.inline
-  def apply(
-    DirectoryMode: PermissionMode = null,
-    FileMode: PermissionMode = null,
-    GroupId: Int | Double = null,
-    OwnerId: Int | Double = null
-  ): NFSFileShareDefaults = {
+  def apply(): NFSFileShareDefaults = {
     val __obj = js.Dynamic.literal()
-    if (DirectoryMode != null) __obj.updateDynamic("DirectoryMode")(DirectoryMode.asInstanceOf[js.Any])
-    if (FileMode != null) __obj.updateDynamic("FileMode")(FileMode.asInstanceOf[js.Any])
-    if (GroupId != null) __obj.updateDynamic("GroupId")(GroupId.asInstanceOf[js.Any])
-    if (OwnerId != null) __obj.updateDynamic("OwnerId")(OwnerId.asInstanceOf[js.Any])
     __obj.asInstanceOf[NFSFileShareDefaults]
   }
+  @scala.inline
+  implicit class NFSFileShareDefaultsOps[Self <: NFSFileShareDefaults] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDirectoryMode(value: PermissionMode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DirectoryMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDirectoryMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DirectoryMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFileMode(value: PermissionMode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FileMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFileMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FileMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGroupId(value: PermissionId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GroupId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGroupId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GroupId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOwnerId(value: PermissionId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OwnerId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOwnerId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OwnerId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

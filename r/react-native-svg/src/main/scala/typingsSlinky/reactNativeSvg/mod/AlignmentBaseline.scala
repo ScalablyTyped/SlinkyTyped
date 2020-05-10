@@ -26,38 +26,36 @@ trait AlignmentBaseline extends js.Object
 
 object AlignmentBaseline {
   @scala.inline
-  def `after-edge`: typingsSlinky.reactNativeSvg.reactNativeSvgStrings.`after-edge` = this.cast("after-edge")
+  def `after-edge`: typingsSlinky.reactNativeSvg.reactNativeSvgStrings.`after-edge` = "after-edge".asInstanceOf[typingsSlinky.reactNativeSvg.reactNativeSvgStrings.`after-edge`]
   @scala.inline
-  def alphabetic: typingsSlinky.reactNativeSvg.reactNativeSvgStrings.alphabetic = this.cast("alphabetic")
+  def alphabetic: typingsSlinky.reactNativeSvg.reactNativeSvgStrings.alphabetic = "alphabetic".asInstanceOf[typingsSlinky.reactNativeSvg.reactNativeSvgStrings.alphabetic]
   @scala.inline
-  def baseline: typingsSlinky.reactNativeSvg.reactNativeSvgStrings.baseline = this.cast("baseline")
+  def baseline: typingsSlinky.reactNativeSvg.reactNativeSvgStrings.baseline = "baseline".asInstanceOf[typingsSlinky.reactNativeSvg.reactNativeSvgStrings.baseline]
   @scala.inline
-  def `before-edge`: typingsSlinky.reactNativeSvg.reactNativeSvgStrings.`before-edge` = this.cast("before-edge")
+  def `before-edge`: typingsSlinky.reactNativeSvg.reactNativeSvgStrings.`before-edge` = "before-edge".asInstanceOf[typingsSlinky.reactNativeSvg.reactNativeSvgStrings.`before-edge`]
   @scala.inline
-  def bottom: typingsSlinky.reactNativeSvg.reactNativeSvgStrings.bottom = this.cast("bottom")
+  def bottom: typingsSlinky.reactNativeSvg.reactNativeSvgStrings.bottom = "bottom".asInstanceOf[typingsSlinky.reactNativeSvg.reactNativeSvgStrings.bottom]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def center: typingsSlinky.reactNativeSvg.reactNativeSvgStrings.center = "center".asInstanceOf[typingsSlinky.reactNativeSvg.reactNativeSvgStrings.center]
   @scala.inline
-  def center: typingsSlinky.reactNativeSvg.reactNativeSvgStrings.center = this.cast("center")
+  def central: typingsSlinky.reactNativeSvg.reactNativeSvgStrings.central = "central".asInstanceOf[typingsSlinky.reactNativeSvg.reactNativeSvgStrings.central]
   @scala.inline
-  def central: typingsSlinky.reactNativeSvg.reactNativeSvgStrings.central = this.cast("central")
+  def hanging: typingsSlinky.reactNativeSvg.reactNativeSvgStrings.hanging = "hanging".asInstanceOf[typingsSlinky.reactNativeSvg.reactNativeSvgStrings.hanging]
   @scala.inline
-  def hanging: typingsSlinky.reactNativeSvg.reactNativeSvgStrings.hanging = this.cast("hanging")
+  def ideographic: typingsSlinky.reactNativeSvg.reactNativeSvgStrings.ideographic = "ideographic".asInstanceOf[typingsSlinky.reactNativeSvg.reactNativeSvgStrings.ideographic]
   @scala.inline
-  def ideographic: typingsSlinky.reactNativeSvg.reactNativeSvgStrings.ideographic = this.cast("ideographic")
+  def mathematical: typingsSlinky.reactNativeSvg.reactNativeSvgStrings.mathematical = "mathematical".asInstanceOf[typingsSlinky.reactNativeSvg.reactNativeSvgStrings.mathematical]
   @scala.inline
-  def mathematical: typingsSlinky.reactNativeSvg.reactNativeSvgStrings.mathematical = this.cast("mathematical")
+  def middle: typingsSlinky.reactNativeSvg.reactNativeSvgStrings.middle = "middle".asInstanceOf[typingsSlinky.reactNativeSvg.reactNativeSvgStrings.middle]
   @scala.inline
-  def middle: typingsSlinky.reactNativeSvg.reactNativeSvgStrings.middle = this.cast("middle")
+  def `text-after-edge`: typingsSlinky.reactNativeSvg.reactNativeSvgStrings.`text-after-edge` = "text-after-edge".asInstanceOf[typingsSlinky.reactNativeSvg.reactNativeSvgStrings.`text-after-edge`]
   @scala.inline
-  def `text-after-edge`: typingsSlinky.reactNativeSvg.reactNativeSvgStrings.`text-after-edge` = this.cast("text-after-edge")
+  def `text-before-edge`: typingsSlinky.reactNativeSvg.reactNativeSvgStrings.`text-before-edge` = "text-before-edge".asInstanceOf[typingsSlinky.reactNativeSvg.reactNativeSvgStrings.`text-before-edge`]
   @scala.inline
-  def `text-before-edge`: typingsSlinky.reactNativeSvg.reactNativeSvgStrings.`text-before-edge` = this.cast("text-before-edge")
+  def `text-bottom`: typingsSlinky.reactNativeSvg.reactNativeSvgStrings.`text-bottom` = "text-bottom".asInstanceOf[typingsSlinky.reactNativeSvg.reactNativeSvgStrings.`text-bottom`]
   @scala.inline
-  def `text-bottom`: typingsSlinky.reactNativeSvg.reactNativeSvgStrings.`text-bottom` = this.cast("text-bottom")
+  def `text-top`: typingsSlinky.reactNativeSvg.reactNativeSvgStrings.`text-top` = "text-top".asInstanceOf[typingsSlinky.reactNativeSvg.reactNativeSvgStrings.`text-top`]
   @scala.inline
-  def `text-top`: typingsSlinky.reactNativeSvg.reactNativeSvgStrings.`text-top` = this.cast("text-top")
-  @scala.inline
-  def top: typingsSlinky.reactNativeSvg.reactNativeSvgStrings.top = this.cast("top")
+  def top: typingsSlinky.reactNativeSvg.reactNativeSvgStrings.top = "top".asInstanceOf[typingsSlinky.reactNativeSvg.reactNativeSvgStrings.top]
 }
 

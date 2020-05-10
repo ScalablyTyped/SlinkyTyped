@@ -22,15 +22,47 @@ trait ApproveAssignmentRequest extends js.Object {
 
 object ApproveAssignmentRequest {
   @scala.inline
-  def apply(
-    AssignmentId: EntityId,
-    OverrideRejection: js.UndefOr[scala.Boolean] = js.undefined,
-    RequesterFeedback: String = null
-  ): ApproveAssignmentRequest = {
+  def apply(AssignmentId: EntityId): ApproveAssignmentRequest = {
     val __obj = js.Dynamic.literal(AssignmentId = AssignmentId.asInstanceOf[js.Any])
-    if (!js.isUndefined(OverrideRejection)) __obj.updateDynamic("OverrideRejection")(OverrideRejection.asInstanceOf[js.Any])
-    if (RequesterFeedback != null) __obj.updateDynamic("RequesterFeedback")(RequesterFeedback.asInstanceOf[js.Any])
     __obj.asInstanceOf[ApproveAssignmentRequest]
   }
+  @scala.inline
+  implicit class ApproveAssignmentRequestOps[Self <: ApproveAssignmentRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAssignmentId(value: EntityId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AssignmentId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOverrideRejection(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OverrideRejection")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOverrideRejection: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OverrideRejection")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequesterFeedback(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RequesterFeedback")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequesterFeedback: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RequesterFeedback")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

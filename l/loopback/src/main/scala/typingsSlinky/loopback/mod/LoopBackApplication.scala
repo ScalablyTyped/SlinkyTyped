@@ -4,7 +4,6 @@ import typingsSlinky.expressServeStaticCore.mod.Handler
 import typingsSlinky.loopback.AnonDataSource
 import typingsSlinky.loopback.AnonEnabled
 import typingsSlinky.loopback.TypeofModel
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -98,8 +97,8 @@ trait LoopBackApplication
   def middleware(name: String, paths: String, handler: Handler): js.Any = js.native
   def middleware(name: String, paths: js.Array[_]): js.Any = js.native
   def middleware(name: String, paths: js.Array[_], handler: Handler): js.Any = js.native
-  def middleware(name: String, paths: RegExp): js.Any = js.native
-  def middleware(name: String, paths: RegExp, handler: Handler): js.Any = js.native
+  def middleware(name: String, paths: js.RegExp): js.Any = js.native
+  def middleware(name: String, paths: js.RegExp, handler: Handler): js.Any = js.native
   /**
     * Register a middleware using a factory function and a JSON config
     * **Example*

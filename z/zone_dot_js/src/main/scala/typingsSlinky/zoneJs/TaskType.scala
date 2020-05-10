@@ -16,12 +16,10 @@ trait TaskType extends js.Object
 
 object TaskType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def eventTask: typingsSlinky.zoneJs.zoneJsStrings.eventTask = "eventTask".asInstanceOf[typingsSlinky.zoneJs.zoneJsStrings.eventTask]
   @scala.inline
-  def eventTask: typingsSlinky.zoneJs.zoneJsStrings.eventTask = this.cast("eventTask")
+  def macroTask: typingsSlinky.zoneJs.zoneJsStrings.macroTask = "macroTask".asInstanceOf[typingsSlinky.zoneJs.zoneJsStrings.macroTask]
   @scala.inline
-  def macroTask: typingsSlinky.zoneJs.zoneJsStrings.macroTask = this.cast("macroTask")
-  @scala.inline
-  def microTask: typingsSlinky.zoneJs.zoneJsStrings.microTask = this.cast("microTask")
+  def microTask: typingsSlinky.zoneJs.zoneJsStrings.microTask = "microTask".asInstanceOf[typingsSlinky.zoneJs.zoneJsStrings.microTask]
 }
 

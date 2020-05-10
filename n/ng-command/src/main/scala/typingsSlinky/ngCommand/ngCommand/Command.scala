@@ -20,21 +20,6 @@ class Command protected () extends ICommand {
       ],
     canExecute: js.Function0[Boolean]
   ) = this()
-  /**
-  		* Determines whether the command can execute or not.
-  		*/
-  /* CompleteClass */
-  override var canExecute: Boolean = js.native
-  /**
-  		* Determines whether the command is currently executing.
-  		*/
-  /* CompleteClass */
-  override var isExecuting: Boolean = js.native
-  /**
-  		* Executes the command function.
-  		*/
-  /* CompleteClass */
-  override def execute(): js.Any = js.native
 }
 
 /* static members */

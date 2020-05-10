@@ -1,6 +1,5 @@
 package typingsSlinky.tensorflowTfjsNode.mod
 
-import typingsSlinky.std.Uint8Array
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.DataType
 import typingsSlinky.tensorflowTfjsCore.tensorMod.Scalar
 import scala.scalajs.js
@@ -30,7 +29,7 @@ object scalar extends js.Object {
   /** @doc {heading: 'Tensors', subheading: 'Creation'} */
   def apply(value: Double): Scalar = js.native
   def apply(value: Double, dtype: DataType): Scalar = js.native
-  def apply(value: Uint8Array): Scalar = js.native
-  def apply(value: Uint8Array, dtype: DataType): Scalar = js.native
+  def apply(value: js.typedarray.Uint8Array): Scalar = js.native
+  def apply(value: js.typedarray.Uint8Array, dtype: DataType): Scalar = js.native
 }
 

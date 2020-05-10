@@ -18,11 +18,41 @@ trait HttpHeader extends js.Object {
 
 object HttpHeader {
   @scala.inline
-  def apply(headerName: StringType = null, headerValue: StringType = null): HttpHeader = {
+  def apply(): HttpHeader = {
     val __obj = js.Dynamic.literal()
-    if (headerName != null) __obj.updateDynamic("headerName")(headerName.asInstanceOf[js.Any])
-    if (headerValue != null) __obj.updateDynamic("headerValue")(headerValue.asInstanceOf[js.Any])
     __obj.asInstanceOf[HttpHeader]
   }
+  @scala.inline
+  implicit class HttpHeaderOps[Self <: HttpHeader] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHeaderName(value: StringType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headerName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeaderName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headerName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeaderValue(value: StringType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headerValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeaderValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headerValue")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

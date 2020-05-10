@@ -1,15 +1,22 @@
 package typingsSlinky.antDesignIconsReactNative.components
 
+import typingsSlinky.antDesignIconsReactNative.fillMod.FillGlyphMapType
+import typingsSlinky.antDesignIconsReactNative.fillMod.IconFillProps
 import typingsSlinky.antDesignIconsReactNative.fillMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Fill extends SharedApply_IconFillProps1819448741[default] {
+object Fill {
   @JSImport("@ant-design/icons-react-native/lib/fill", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: IconFillProps): SharedBuilder_IconFillProps_867732494[default] = new SharedBuilder_IconFillProps_867732494[default](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(name: FillGlyphMapType): SharedBuilder_IconFillProps_867732494[default] = {
+    val __props = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
+    new SharedBuilder_IconFillProps_867732494[default](js.Array(this.component, __props.asInstanceOf[IconFillProps]))
+  }
 }
 

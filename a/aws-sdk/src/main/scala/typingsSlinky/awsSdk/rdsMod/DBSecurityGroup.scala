@@ -38,24 +38,101 @@ trait DBSecurityGroup extends js.Object {
 
 object DBSecurityGroup {
   @scala.inline
-  def apply(
-    DBSecurityGroupArn: String = null,
-    DBSecurityGroupDescription: String = null,
-    DBSecurityGroupName: String = null,
-    EC2SecurityGroups: EC2SecurityGroupList = null,
-    IPRanges: IPRangeList = null,
-    OwnerId: String = null,
-    VpcId: String = null
-  ): DBSecurityGroup = {
+  def apply(): DBSecurityGroup = {
     val __obj = js.Dynamic.literal()
-    if (DBSecurityGroupArn != null) __obj.updateDynamic("DBSecurityGroupArn")(DBSecurityGroupArn.asInstanceOf[js.Any])
-    if (DBSecurityGroupDescription != null) __obj.updateDynamic("DBSecurityGroupDescription")(DBSecurityGroupDescription.asInstanceOf[js.Any])
-    if (DBSecurityGroupName != null) __obj.updateDynamic("DBSecurityGroupName")(DBSecurityGroupName.asInstanceOf[js.Any])
-    if (EC2SecurityGroups != null) __obj.updateDynamic("EC2SecurityGroups")(EC2SecurityGroups.asInstanceOf[js.Any])
-    if (IPRanges != null) __obj.updateDynamic("IPRanges")(IPRanges.asInstanceOf[js.Any])
-    if (OwnerId != null) __obj.updateDynamic("OwnerId")(OwnerId.asInstanceOf[js.Any])
-    if (VpcId != null) __obj.updateDynamic("VpcId")(VpcId.asInstanceOf[js.Any])
     __obj.asInstanceOf[DBSecurityGroup]
   }
+  @scala.inline
+  implicit class DBSecurityGroupOps[Self <: DBSecurityGroup] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDBSecurityGroupArn(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DBSecurityGroupArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDBSecurityGroupArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DBSecurityGroupArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDBSecurityGroupDescription(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DBSecurityGroupDescription")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDBSecurityGroupDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DBSecurityGroupDescription")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDBSecurityGroupName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DBSecurityGroupName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDBSecurityGroupName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DBSecurityGroupName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEC2SecurityGroups(value: EC2SecurityGroupList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EC2SecurityGroups")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEC2SecurityGroups: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EC2SecurityGroups")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIPRanges(value: IPRangeList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IPRanges")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIPRanges: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IPRanges")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOwnerId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OwnerId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOwnerId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OwnerId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVpcId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVpcId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

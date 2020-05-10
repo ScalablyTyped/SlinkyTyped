@@ -24,3 +24,55 @@ trait ParamsResourceContactgroupsBatchget extends StandardParameters {
   var resourceNames: js.UndefOr[js.Array[String]] = js.native
 }
 
+object ParamsResourceContactgroupsBatchget {
+  @scala.inline
+  def apply(): ParamsResourceContactgroupsBatchget = {
+    val __obj = js.Dynamic.literal()
+    __obj.asInstanceOf[ParamsResourceContactgroupsBatchget]
+  }
+  @scala.inline
+  implicit class ParamsResourceContactgroupsBatchgetOps[Self <: ParamsResourceContactgroupsBatchget] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAuth(value: String | OAuth2Client | JWT | Compute | UserRefreshClient): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("auth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAuth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("auth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxMembers(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxMembers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxMembers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxMembers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResourceNames(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceNames")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResourceNames: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceNames")(js.undefined)
+        ret
+    }
+  }
+  
+}
+

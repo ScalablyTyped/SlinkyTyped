@@ -52,24 +52,101 @@ trait SchemaAggregateClassificationMetrics extends js.Object {
 
 object SchemaAggregateClassificationMetrics {
   @scala.inline
-  def apply(
-    accuracy: Int | Double = null,
-    f1Score: Int | Double = null,
-    logLoss: Int | Double = null,
-    precision: Int | Double = null,
-    recall: Int | Double = null,
-    rocAuc: Int | Double = null,
-    threshold: Int | Double = null
-  ): SchemaAggregateClassificationMetrics = {
+  def apply(): SchemaAggregateClassificationMetrics = {
     val __obj = js.Dynamic.literal()
-    if (accuracy != null) __obj.updateDynamic("accuracy")(accuracy.asInstanceOf[js.Any])
-    if (f1Score != null) __obj.updateDynamic("f1Score")(f1Score.asInstanceOf[js.Any])
-    if (logLoss != null) __obj.updateDynamic("logLoss")(logLoss.asInstanceOf[js.Any])
-    if (precision != null) __obj.updateDynamic("precision")(precision.asInstanceOf[js.Any])
-    if (recall != null) __obj.updateDynamic("recall")(recall.asInstanceOf[js.Any])
-    if (rocAuc != null) __obj.updateDynamic("rocAuc")(rocAuc.asInstanceOf[js.Any])
-    if (threshold != null) __obj.updateDynamic("threshold")(threshold.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAggregateClassificationMetrics]
   }
+  @scala.inline
+  implicit class SchemaAggregateClassificationMetricsOps[Self <: SchemaAggregateClassificationMetrics] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAccuracy(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accuracy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccuracy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accuracy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withF1Score(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("f1Score")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutF1Score: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("f1Score")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLogLoss(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("logLoss")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLogLoss: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("logLoss")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrecision(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("precision")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrecision: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("precision")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRecall(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("recall")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRecall: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("recall")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRocAuc(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rocAuc")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRocAuc: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rocAuc")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withThreshold(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("threshold")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutThreshold: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("threshold")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

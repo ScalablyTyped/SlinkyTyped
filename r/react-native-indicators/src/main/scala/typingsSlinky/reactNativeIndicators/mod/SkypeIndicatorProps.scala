@@ -1,67 +1,111 @@
 package typingsSlinky.reactNativeIndicators.mod
 
-import typingsSlinky.reactNative.mod.StyleProp
-import typingsSlinky.reactNative.mod.ViewStyle
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SkypeIndicatorProps extends BaseIndicatorProps {
   /**
     * Component color
     * @default 'rgb(0, 0, 0)'
     */
-  var color: js.UndefOr[String] = js.undefined
+  var color: js.UndefOr[String] = js.native
   /**
     * Component count
     * @default 5
     */
-  var count: js.UndefOr[Double] = js.undefined
+  var count: js.UndefOr[Double] = js.native
   /**
     * Maximum component scale
     * @default 1.0
     */
-  var maxScale: js.UndefOr[Double] = js.undefined
+  var maxScale: js.UndefOr[Double] = js.native
   /**
     * Minimum component scale
     * @default 0.2
     */
-  var minScale: js.UndefOr[Double] = js.undefined
+  var minScale: js.UndefOr[Double] = js.native
   /**
     * Base component size
     * @default 40
     */
-  var size: js.UndefOr[Double] = js.undefined
+  var size: js.UndefOr[Double] = js.native
 }
 
 object SkypeIndicatorProps {
   @scala.inline
-  def apply(
-    animating: js.UndefOr[Boolean] = js.undefined,
-    animationDuration: Int | Double = null,
-    animationEasing: /* value */ Double => Double = null,
-    color: String = null,
-    count: Int | Double = null,
-    hidesWhenStopped: js.UndefOr[Boolean] = js.undefined,
-    interaction: js.UndefOr[Boolean] = js.undefined,
-    maxScale: Int | Double = null,
-    minScale: Int | Double = null,
-    size: Int | Double = null,
-    style: StyleProp[ViewStyle] = null
-  ): SkypeIndicatorProps = {
+  def apply(): SkypeIndicatorProps = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(animating)) __obj.updateDynamic("animating")(animating.asInstanceOf[js.Any])
-    if (animationDuration != null) __obj.updateDynamic("animationDuration")(animationDuration.asInstanceOf[js.Any])
-    if (animationEasing != null) __obj.updateDynamic("animationEasing")(js.Any.fromFunction1(animationEasing))
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (count != null) __obj.updateDynamic("count")(count.asInstanceOf[js.Any])
-    if (!js.isUndefined(hidesWhenStopped)) __obj.updateDynamic("hidesWhenStopped")(hidesWhenStopped.asInstanceOf[js.Any])
-    if (!js.isUndefined(interaction)) __obj.updateDynamic("interaction")(interaction.asInstanceOf[js.Any])
-    if (maxScale != null) __obj.updateDynamic("maxScale")(maxScale.asInstanceOf[js.Any])
-    if (minScale != null) __obj.updateDynamic("minScale")(minScale.asInstanceOf[js.Any])
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     __obj.asInstanceOf[SkypeIndicatorProps]
   }
+  @scala.inline
+  implicit class SkypeIndicatorPropsOps[Self <: SkypeIndicatorProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCount(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("count")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("count")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxScale(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxScale")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxScale: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxScale")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinScale(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minScale")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinScale: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minScale")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -23,16 +23,53 @@ trait MaintenanceWindowTaskTaskInvocationParametersLambdaParameters extends js.O
 
 object MaintenanceWindowTaskTaskInvocationParametersLambdaParameters {
   @scala.inline
-  def apply(
-    clientContext: Input[String] = null,
-    payload: Input[String] = null,
-    qualifier: Input[String] = null
-  ): MaintenanceWindowTaskTaskInvocationParametersLambdaParameters = {
+  def apply(): MaintenanceWindowTaskTaskInvocationParametersLambdaParameters = {
     val __obj = js.Dynamic.literal()
-    if (clientContext != null) __obj.updateDynamic("clientContext")(clientContext.asInstanceOf[js.Any])
-    if (payload != null) __obj.updateDynamic("payload")(payload.asInstanceOf[js.Any])
-    if (qualifier != null) __obj.updateDynamic("qualifier")(qualifier.asInstanceOf[js.Any])
     __obj.asInstanceOf[MaintenanceWindowTaskTaskInvocationParametersLambdaParameters]
   }
+  @scala.inline
+  implicit class MaintenanceWindowTaskTaskInvocationParametersLambdaParametersOps[Self <: MaintenanceWindowTaskTaskInvocationParametersLambdaParameters] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClientContext(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clientContext")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClientContext: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clientContext")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPayload(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("payload")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPayload: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("payload")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQualifier(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("qualifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQualifier: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("qualifier")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

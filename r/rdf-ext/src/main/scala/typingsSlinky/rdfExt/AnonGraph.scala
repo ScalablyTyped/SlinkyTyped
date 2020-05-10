@@ -12,13 +12,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonGraph extends js.Object {
-  var graph: ReturnType[PropType[PropType[QuadExt, typingsSlinky.rdfExt.rdfExtStrings.graph], toJSON]]
-  var `object`: ReturnType[PropType[PropType[QuadExt, typingsSlinky.rdfExt.rdfExtStrings.`object`], toJSON]]
+  var graph: ReturnType[PropType[PropType[QuadExt, typingsSlinky.rdfExt.rdfExtStrings.graph], toJSON]] = js.native
+  var `object`: ReturnType[PropType[PropType[QuadExt, typingsSlinky.rdfExt.rdfExtStrings.`object`], toJSON]] = js.native
   var predicate: ReturnType[
     PropType[PropType[QuadExt, typingsSlinky.rdfExt.rdfExtStrings.predicate], toJSON]
-  ]
-  var subject: ReturnType[PropType[PropType[QuadExt, typingsSlinky.rdfExt.rdfExtStrings.subject], toJSON]]
+  ] = js.native
+  var subject: ReturnType[PropType[PropType[QuadExt, typingsSlinky.rdfExt.rdfExtStrings.subject], toJSON]] = js.native
 }
 
 object AnonGraph {
@@ -33,5 +34,37 @@ object AnonGraph {
     __obj.updateDynamic("object")(`object`.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonGraph]
   }
+  @scala.inline
+  implicit class AnonGraphOps[Self <: AnonGraph] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGraph(value: ReturnType[PropType[PropType[QuadExt, graph], toJSON]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("graph")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withObject(value: ReturnType[PropType[PropType[QuadExt, `object`], toJSON]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("object")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPredicate(value: ReturnType[PropType[PropType[QuadExt, predicate], toJSON]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("predicate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSubject(value: ReturnType[PropType[PropType[QuadExt, subject], toJSON]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subject")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

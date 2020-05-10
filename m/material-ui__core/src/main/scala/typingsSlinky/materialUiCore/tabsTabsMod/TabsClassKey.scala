@@ -19,24 +19,22 @@ trait TabsClassKey extends js.Object
 
 object TabsClassKey {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def centered: typingsSlinky.materialUiCore.materialUiCoreStrings.centered = "centered".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.centered]
   @scala.inline
-  def centered: typingsSlinky.materialUiCore.materialUiCoreStrings.centered = this.cast("centered")
+  def fixed: typingsSlinky.materialUiCore.materialUiCoreStrings.fixed = "fixed".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.fixed]
   @scala.inline
-  def fixed: typingsSlinky.materialUiCore.materialUiCoreStrings.fixed = this.cast("fixed")
+  def flexContainer: typingsSlinky.materialUiCore.materialUiCoreStrings.flexContainer = "flexContainer".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.flexContainer]
   @scala.inline
-  def flexContainer: typingsSlinky.materialUiCore.materialUiCoreStrings.flexContainer = this.cast("flexContainer")
+  def indicator: typingsSlinky.materialUiCore.materialUiCoreStrings.indicator = "indicator".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.indicator]
   @scala.inline
-  def indicator: typingsSlinky.materialUiCore.materialUiCoreStrings.indicator = this.cast("indicator")
+  def root: typingsSlinky.materialUiCore.materialUiCoreStrings.root = "root".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.root]
   @scala.inline
-  def root: typingsSlinky.materialUiCore.materialUiCoreStrings.root = this.cast("root")
+  def scrollButtons: typingsSlinky.materialUiCore.materialUiCoreStrings.scrollButtons = "scrollButtons".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.scrollButtons]
   @scala.inline
-  def scrollButtons: typingsSlinky.materialUiCore.materialUiCoreStrings.scrollButtons = this.cast("scrollButtons")
+  def scrollButtonsAuto: typingsSlinky.materialUiCore.materialUiCoreStrings.scrollButtonsAuto = "scrollButtonsAuto".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.scrollButtonsAuto]
   @scala.inline
-  def scrollButtonsAuto: typingsSlinky.materialUiCore.materialUiCoreStrings.scrollButtonsAuto = this.cast("scrollButtonsAuto")
+  def scrollable: typingsSlinky.materialUiCore.materialUiCoreStrings.scrollable = "scrollable".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.scrollable]
   @scala.inline
-  def scrollable: typingsSlinky.materialUiCore.materialUiCoreStrings.scrollable = this.cast("scrollable")
-  @scala.inline
-  def scroller: typingsSlinky.materialUiCore.materialUiCoreStrings.scroller = this.cast("scroller")
+  def scroller: typingsSlinky.materialUiCore.materialUiCoreStrings.scroller = "scroller".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.scroller]
 }
 

@@ -6,9 +6,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait FetchStrategy extends IEnum {
-  var FromLocalCache: FetchStrategySymbol
-  var FromServer: FetchStrategySymbol
+  var FromLocalCache: FetchStrategySymbol = js.native
+  var FromServer: FetchStrategySymbol = js.native
 }
 
 @JSGlobal("breeze.FetchStrategy")

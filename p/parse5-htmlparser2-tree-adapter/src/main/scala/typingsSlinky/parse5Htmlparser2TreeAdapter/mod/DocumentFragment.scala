@@ -8,16 +8,17 @@ import scala.scalajs.js.annotation._
 /**
   * htmlparser2 tree adapter DocumentFragment interface.
   */
+@js.native
 trait DocumentFragment extends ParentNode {
   /**
     * The name of the node.
     */
-  var name: root
+  var name: root = js.native
   /**
     * The type of the node.
     */
   @JSName("type")
-  var type_DocumentFragment: root
+  var type_DocumentFragment: root = js.native
 }
 
 object DocumentFragment {
@@ -41,5 +42,25 @@ object DocumentFragment {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[DocumentFragment]
   }
+  @scala.inline
+  implicit class DocumentFragmentOps[Self <: DocumentFragment] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withName(value: root): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: root): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

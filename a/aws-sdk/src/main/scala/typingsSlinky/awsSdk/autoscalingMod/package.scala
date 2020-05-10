@@ -140,6 +140,7 @@ package object autoscalingMod {
   */
   type ScalingActivityStatusCode = typingsSlinky.awsSdk.autoscalingMod._ScalingActivityStatusCode | java.lang.String
   type ScalingPolicies = js.Array[typingsSlinky.awsSdk.autoscalingMod.ScalingPolicy]
+  type ScalingPolicyEnabled = scala.Boolean
   type ScheduledActionNames = js.Array[typingsSlinky.awsSdk.autoscalingMod.ResourceName]
   type ScheduledUpdateGroupActionRequests = js.Array[typingsSlinky.awsSdk.autoscalingMod.ScheduledUpdateGroupActionRequest]
   type ScheduledUpdateGroupActions = js.Array[typingsSlinky.awsSdk.autoscalingMod.ScheduledUpdateGroupAction]

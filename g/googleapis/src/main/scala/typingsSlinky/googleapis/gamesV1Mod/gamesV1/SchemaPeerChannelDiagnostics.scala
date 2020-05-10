@@ -46,26 +46,113 @@ trait SchemaPeerChannelDiagnostics extends js.Object {
 
 object SchemaPeerChannelDiagnostics {
   @scala.inline
-  def apply(
-    bytesReceived: SchemaAggregateStats = null,
-    bytesSent: SchemaAggregateStats = null,
-    kind: String = null,
-    numMessagesLost: Int | Double = null,
-    numMessagesReceived: Int | Double = null,
-    numMessagesSent: Int | Double = null,
-    numSendFailures: Int | Double = null,
-    roundtripLatencyMillis: SchemaAggregateStats = null
-  ): SchemaPeerChannelDiagnostics = {
+  def apply(): SchemaPeerChannelDiagnostics = {
     val __obj = js.Dynamic.literal()
-    if (bytesReceived != null) __obj.updateDynamic("bytesReceived")(bytesReceived.asInstanceOf[js.Any])
-    if (bytesSent != null) __obj.updateDynamic("bytesSent")(bytesSent.asInstanceOf[js.Any])
-    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
-    if (numMessagesLost != null) __obj.updateDynamic("numMessagesLost")(numMessagesLost.asInstanceOf[js.Any])
-    if (numMessagesReceived != null) __obj.updateDynamic("numMessagesReceived")(numMessagesReceived.asInstanceOf[js.Any])
-    if (numMessagesSent != null) __obj.updateDynamic("numMessagesSent")(numMessagesSent.asInstanceOf[js.Any])
-    if (numSendFailures != null) __obj.updateDynamic("numSendFailures")(numSendFailures.asInstanceOf[js.Any])
-    if (roundtripLatencyMillis != null) __obj.updateDynamic("roundtripLatencyMillis")(roundtripLatencyMillis.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaPeerChannelDiagnostics]
   }
+  @scala.inline
+  implicit class SchemaPeerChannelDiagnosticsOps[Self <: SchemaPeerChannelDiagnostics] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBytesReceived(value: SchemaAggregateStats): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bytesReceived")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBytesReceived: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bytesReceived")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBytesSent(value: SchemaAggregateStats): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bytesSent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBytesSent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bytesSent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKind(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNumMessagesLost(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numMessagesLost")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNumMessagesLost: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numMessagesLost")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNumMessagesReceived(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numMessagesReceived")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNumMessagesReceived: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numMessagesReceived")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNumMessagesSent(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numMessagesSent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNumMessagesSent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numMessagesSent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNumSendFailures(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numSendFailures")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNumSendFailures: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numSendFailures")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRoundtripLatencyMillis(value: SchemaAggregateStats): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("roundtripLatencyMillis")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRoundtripLatencyMillis: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("roundtripLatencyMillis")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

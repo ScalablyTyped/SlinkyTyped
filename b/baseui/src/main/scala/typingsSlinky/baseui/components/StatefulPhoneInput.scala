@@ -1,12 +1,9 @@
 package typingsSlinky.baseui.components
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLInputElement
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
 import slinky.web.html.input.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.baseui.phoneInputMod.PhoneInputOverrides
 import typingsSlinky.baseui.phoneInputMod.State
 import typingsSlinky.baseui.phoneInputMod.StateChange
@@ -17,35 +14,32 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object StatefulPhoneInput
-  extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+object StatefulPhoneInput {
   @JSImport("baseui/phone-input", "StatefulPhoneInput")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    `aria-label`: String = null,
-    initialState: State = null,
-    mapIsoToLabel: /* iso */ String => String = null,
-    onCountryChange: /* event */ OnChangeParams => _ = null,
-    onTextChange: /* event */ SyntheticEvent[Event_, HTMLInputElement] => _ = null,
-    overrides: PhoneInputOverrides = null,
-    stateReducer: (/* type */ StateChange, /* nextState */ State, /* currentState */ State) => State = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, js.Object] = {
-    val __obj = js.Dynamic.literal()
-    if (`aria-label` != null) __obj.updateDynamic("aria-label")(`aria-label`.asInstanceOf[js.Any])
-    if (initialState != null) __obj.updateDynamic("initialState")(initialState.asInstanceOf[js.Any])
-    if (mapIsoToLabel != null) __obj.updateDynamic("mapIsoToLabel")(js.Any.fromFunction1(mapIsoToLabel))
-    if (onCountryChange != null) __obj.updateDynamic("onCountryChange")(js.Any.fromFunction1(onCountryChange))
-    if (onTextChange != null) __obj.updateDynamic("onTextChange")(js.Any.fromFunction1(onTextChange))
-    if (overrides != null) __obj.updateDynamic("overrides")(overrides.asInstanceOf[js.Any])
-    if (stateReducer != null) __obj.updateDynamic("stateReducer")(js.Any.fromFunction3(stateReducer))
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, js.Object] {
+    @scala.inline
+    def `aria-label`(value: String): this.type = set("aria-label", value.asInstanceOf[js.Any])
+    @scala.inline
+    def initialState(value: State): this.type = set("initialState", value.asInstanceOf[js.Any])
+    @scala.inline
+    def mapIsoToLabel(value: /* iso */ String => String): this.type = set("mapIsoToLabel", js.Any.fromFunction1(value))
+    @scala.inline
+    def onCountryChange(value: /* event */ OnChangeParams => _): this.type = set("onCountryChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def onTextChange(value: /* event */ SyntheticEvent[Event_, HTMLInputElement] => _): this.type = set("onTextChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def overrides(value: PhoneInputOverrides): this.type = set("overrides", value.asInstanceOf[js.Any])
+    @scala.inline
+    def stateReducer(value: (/* type */ StateChange, /* nextState */ State, /* currentState */ State) => State): this.type = set("stateReducer", js.Any.fromFunction3(value))
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, js.Object] = new slinky.core.BuildingComponent[slinky.web.html.input.tag.type, js.Object](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = StatefulPhoneInputProps
+  
+  def withProps(p: StatefulPhoneInputProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: StatefulPhoneInput.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

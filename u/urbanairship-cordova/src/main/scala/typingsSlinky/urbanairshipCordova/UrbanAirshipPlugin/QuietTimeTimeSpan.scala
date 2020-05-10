@@ -10,19 +10,51 @@ import scala.scalajs.js.annotation._
   * For example, 10PM - 6AM would be:
   * { startHour: 22, startMinute: 0, endHour: 6, endMinute: 0 }
   */
+@js.native
 trait QuietTimeTimeSpan extends js.Object {
-  var endHour: Double
-  var endMinute: Double
-  var startHour: Double
-  var startMinute: Double
+  var endHour: Double = js.native
+  var endMinute: Double = js.native
+  var startHour: Double = js.native
+  var startMinute: Double = js.native
 }
 
 object QuietTimeTimeSpan {
   @scala.inline
   def apply(endHour: Double, endMinute: Double, startHour: Double, startMinute: Double): QuietTimeTimeSpan = {
     val __obj = js.Dynamic.literal(endHour = endHour.asInstanceOf[js.Any], endMinute = endMinute.asInstanceOf[js.Any], startHour = startHour.asInstanceOf[js.Any], startMinute = startMinute.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[QuietTimeTimeSpan]
   }
+  @scala.inline
+  implicit class QuietTimeTimeSpanOps[Self <: QuietTimeTimeSpan] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEndHour(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endHour")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEndMinute(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endMinute")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStartHour(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startHour")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStartMinute(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startMinute")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

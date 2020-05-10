@@ -18,11 +18,41 @@ trait DescribeHostReservationOfferingsResult extends js.Object {
 
 object DescribeHostReservationOfferingsResult {
   @scala.inline
-  def apply(NextToken: String = null, OfferingSet: HostOfferingSet = null): DescribeHostReservationOfferingsResult = {
+  def apply(): DescribeHostReservationOfferingsResult = {
     val __obj = js.Dynamic.literal()
-    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
-    if (OfferingSet != null) __obj.updateDynamic("OfferingSet")(OfferingSet.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeHostReservationOfferingsResult]
   }
+  @scala.inline
+  implicit class DescribeHostReservationOfferingsResultOps[Self <: DescribeHostReservationOfferingsResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNextToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOfferingSet(value: HostOfferingSet): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OfferingSet")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOfferingSet: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OfferingSet")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

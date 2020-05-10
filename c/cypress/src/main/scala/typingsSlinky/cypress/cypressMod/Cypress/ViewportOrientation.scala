@@ -12,10 +12,8 @@ trait ViewportOrientation extends js.Object
 
 object ViewportOrientation {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def landscape: typingsSlinky.cypress.cypressStrings.landscape = "landscape".asInstanceOf[typingsSlinky.cypress.cypressStrings.landscape]
   @scala.inline
-  def landscape: typingsSlinky.cypress.cypressStrings.landscape = this.cast("landscape")
-  @scala.inline
-  def portrait: typingsSlinky.cypress.cypressStrings.portrait = this.cast("portrait")
+  def portrait: typingsSlinky.cypress.cypressStrings.portrait = "portrait".asInstanceOf[typingsSlinky.cypress.cypressStrings.portrait]
 }
 

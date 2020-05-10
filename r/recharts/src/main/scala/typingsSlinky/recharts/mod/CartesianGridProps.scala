@@ -1,5 +1,6 @@
 package typingsSlinky.recharts.mod
 
+import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.recharts.AnonHeight
 import typingsSlinky.recharts.rechartsNumbers.`100`
@@ -27,270 +28,1108 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined parent std.Partial<recharts.recharts.PresentationAttributes<number, number>> */
+@js.native
 trait CartesianGridProps extends js.Object {
-  var alignmentBaseline: js.UndefOr[String] = js.undefined
-  var angle: js.UndefOr[Double] = js.undefined
-  var baselineShift: js.UndefOr[String] = js.undefined
-  var chartHeight: js.UndefOr[Double] = js.undefined
-  var chartWidth: js.UndefOr[Double] = js.undefined
-  var clip: js.UndefOr[String] = js.undefined
-  var clipPath: js.UndefOr[String] = js.undefined
-  var clipRule: js.UndefOr[String] = js.undefined
-  var color: js.UndefOr[String] = js.undefined
-  var colorInterpolation: js.UndefOr[String] = js.undefined
-  var colorInterpolationFilters: js.UndefOr[String] = js.undefined
-  var colorProfile: js.UndefOr[String] = js.undefined
-  var colorRendering: js.UndefOr[String] = js.undefined
-  var cursor: js.UndefOr[String] = js.undefined
-  var direction: js.UndefOr[String] = js.undefined
-  var display: js.UndefOr[String] = js.undefined
-  var dominantBaseline: js.UndefOr[String] = js.undefined
-  var dx: js.UndefOr[Double] = js.undefined
-  var dy: js.UndefOr[Double] = js.undefined
-  var enableBackground: js.UndefOr[String] = js.undefined
-  var fill: js.UndefOr[String] = js.undefined
-  var fillOpacity: js.UndefOr[Double | String] = js.undefined
-  var fillRule: js.UndefOr[String] = js.undefined
-  var filter: js.UndefOr[String] = js.undefined
-  var floodColor: js.UndefOr[String] = js.undefined
-  var floodOpacity: js.UndefOr[String] = js.undefined
-  var font: js.UndefOr[String] = js.undefined
-  var fontFamily: js.UndefOr[String] = js.undefined
-  var fontSize: js.UndefOr[Double | String] = js.undefined
-  var fontSizeAdjust: js.UndefOr[Double | String] = js.undefined
-  var fontStretch: js.UndefOr[String] = js.undefined
-  var fontStyle: js.UndefOr[String] = js.undefined
-  var fontVariant: js.UndefOr[String] = js.undefined
+  var alignmentBaseline: js.UndefOr[String] = js.native
+  var angle: js.UndefOr[Double] = js.native
+  var baselineShift: js.UndefOr[String] = js.native
+  var chartHeight: js.UndefOr[Double] = js.native
+  var chartWidth: js.UndefOr[Double] = js.native
+  var clip: js.UndefOr[String] = js.native
+  var clipPath: js.UndefOr[String] = js.native
+  var clipRule: js.UndefOr[String] = js.native
+  var color: js.UndefOr[String] = js.native
+  var colorInterpolation: js.UndefOr[String] = js.native
+  var colorInterpolationFilters: js.UndefOr[String] = js.native
+  var colorProfile: js.UndefOr[String] = js.native
+  var colorRendering: js.UndefOr[String] = js.native
+  var cursor: js.UndefOr[String] = js.native
+  var direction: js.UndefOr[String] = js.native
+  var display: js.UndefOr[String] = js.native
+  var dominantBaseline: js.UndefOr[String] = js.native
+  var dx: js.UndefOr[Double] = js.native
+  var dy: js.UndefOr[Double] = js.native
+  var fill: js.UndefOr[String] = js.native
+  var fillOpacity: js.UndefOr[Double | String] = js.native
+  var fillRule: js.UndefOr[String] = js.native
+  var filter: js.UndefOr[String] = js.native
+  var floodColor: js.UndefOr[String] = js.native
+  var floodOpacity: js.UndefOr[String] = js.native
+  var font: js.UndefOr[String] = js.native
+  var fontFamily: js.UndefOr[String] = js.native
+  var fontSize: js.UndefOr[Double | String] = js.native
+  var fontSizeAdjust: js.UndefOr[Double | String] = js.native
+  var fontStretch: js.UndefOr[String] = js.native
+  var fontStyle: js.UndefOr[String] = js.native
+  var fontVariant: js.UndefOr[String] = js.native
   var fontWeight: js.UndefOr[
     normal | bold | bolder | lighter | `100` | `200` | `300` | `400` | `500` | `600` | `700` | `800` | `900` | inherit
-  ] = js.undefined
-  var glyphOrientationHorizontal: js.UndefOr[String] = js.undefined
-  var glyphOrientationVertical: js.UndefOr[String] = js.undefined
-  var height: js.UndefOr[Double] = js.undefined
+  ] = js.native
+  var glyphOrientationVertical: js.UndefOr[String] = js.native
+  var height: js.UndefOr[Double] = js.native
   var horizontal: js.UndefOr[
     js.Object | ReactElement | (ContentRenderer[LineProps with CartesianGridProps]) | Boolean
-  ] = js.undefined
-  var horizontalCoordinatesGenerator: js.UndefOr[CoordinatesGenerator] = js.undefined
-  var horizontalFill: js.UndefOr[js.Array[String]] = js.undefined
-  var horizontalPoints: js.UndefOr[js.Array[Double]] = js.undefined
-  var imageRendering: js.UndefOr[auto | optimizeSpeed | optimizeQuality | inherit] = js.undefined
-  var kerning: js.UndefOr[Double | String] = js.undefined
-  var letterSpacing: js.UndefOr[String] = js.undefined
-  var lightingColor: js.UndefOr[String] = js.undefined
-  var markerEnd: js.UndefOr[String] = js.undefined
-  var markerMid: js.UndefOr[String] = js.undefined
-  var markerStart: js.UndefOr[String] = js.undefined
-  var mask: js.UndefOr[String] = js.undefined
-  var offset: js.UndefOr[js.Object] = js.undefined
-  var opacity: js.UndefOr[Double | String] = js.undefined
-  var overflow: js.UndefOr[String] = js.undefined
-  var pointerEvents: js.UndefOr[String] = js.undefined
-  var r: js.UndefOr[Double] = js.undefined
-  var shapeRendering: js.UndefOr[auto | optimizeSpeed | crispEdges | geometricPrecision | inherit] = js.undefined
-  var stopColor: js.UndefOr[String] = js.undefined
-  var stopOpacity: js.UndefOr[Double | String] = js.undefined
-  var stroke: js.UndefOr[Double | String] = js.undefined
-  var strokeDasharray: js.UndefOr[String] = js.undefined
-  var strokeDashoffset: js.UndefOr[Double | String] = js.undefined
-  var strokeLinecap: js.UndefOr[String] = js.undefined
-  var strokeLinejoin: js.UndefOr[String] = js.undefined
-  var strokeMiterlimit: js.UndefOr[Double | String] = js.undefined
-  var strokeOpacity: js.UndefOr[Double | String] = js.undefined
-  var strokeWidth: js.UndefOr[Double | String] = js.undefined
-  var style: js.UndefOr[js.Object] = js.undefined
-  var textAnchor: js.UndefOr[String] = js.undefined
-  var textDecoration: js.UndefOr[String] = js.undefined
-  var textRendering: js.UndefOr[auto | optimizeSpeed | optimizeLegibility | geometricPrecision | inherit] = js.undefined
-  var transform: js.UndefOr[String] = js.undefined
-  var unicodeBidi: js.UndefOr[String] = js.undefined
+  ] = js.native
+  var horizontalCoordinatesGenerator: js.UndefOr[CoordinatesGenerator] = js.native
+  var horizontalFill: js.UndefOr[js.Array[String]] = js.native
+  var horizontalPoints: js.UndefOr[js.Array[Double]] = js.native
+  var imageRendering: js.UndefOr[auto | optimizeSpeed | optimizeQuality | inherit] = js.native
+  var kerning: js.UndefOr[Double | String] = js.native
+  var letterSpacing: js.UndefOr[String] = js.native
+  var lightingColor: js.UndefOr[String] = js.native
+  var markerEnd: js.UndefOr[String] = js.native
+  var markerMid: js.UndefOr[String] = js.native
+  var markerStart: js.UndefOr[String] = js.native
+  var mask: js.UndefOr[String] = js.native
+  var offset: js.UndefOr[js.Object] = js.native
+  var opacity: js.UndefOr[Double | String] = js.native
+  var overflow: js.UndefOr[String] = js.native
+  var pointerEvents: js.UndefOr[String] = js.native
+  var r: js.UndefOr[Double] = js.native
+  var shapeRendering: js.UndefOr[auto | optimizeSpeed | crispEdges | geometricPrecision | inherit] = js.native
+  var stopColor: js.UndefOr[String] = js.native
+  var stopOpacity: js.UndefOr[Double | String] = js.native
+  var stroke: js.UndefOr[Double | String] = js.native
+  var strokeDasharray: js.UndefOr[String] = js.native
+  var strokeDashoffset: js.UndefOr[Double | String] = js.native
+  var strokeLinecap: js.UndefOr[String] = js.native
+  var strokeLinejoin: js.UndefOr[String] = js.native
+  var strokeMiterlimit: js.UndefOr[Double | String] = js.native
+  var strokeOpacity: js.UndefOr[Double | String] = js.native
+  var strokeWidth: js.UndefOr[Double | String] = js.native
+  var style: js.UndefOr[js.Object] = js.native
+  var textAnchor: js.UndefOr[String] = js.native
+  var textDecoration: js.UndefOr[String] = js.native
+  var textRendering: js.UndefOr[auto | optimizeSpeed | optimizeLegibility | geometricPrecision | inherit] = js.native
+  var transform: js.UndefOr[String] = js.native
+  var unicodeBidi: js.UndefOr[String] = js.native
   var vertical: js.UndefOr[
     js.Object | ReactElement | (ContentRenderer[LineProps with CartesianGridProps]) | Boolean
-  ] = js.undefined
-  var verticalCoordinatesGenerator: js.UndefOr[CoordinatesGenerator] = js.undefined
-  var verticalFill: js.UndefOr[js.Array[String]] = js.undefined
-  var verticalPoints: js.UndefOr[js.Array[Double]] = js.undefined
-  var visibility: js.UndefOr[String] = js.undefined
-  var width: js.UndefOr[Double] = js.undefined
-  var wordSpacing: js.UndefOr[Double | String] = js.undefined
-  var writingMode: js.UndefOr[String] = js.undefined
-  var x: js.UndefOr[Double] = js.undefined
-  var xAxis: js.UndefOr[js.Object] = js.undefined
-  var y: js.UndefOr[Double] = js.undefined
-  var yAxis: js.UndefOr[js.Object] = js.undefined
+  ] = js.native
+  var verticalCoordinatesGenerator: js.UndefOr[CoordinatesGenerator] = js.native
+  var verticalFill: js.UndefOr[js.Array[String]] = js.native
+  var verticalPoints: js.UndefOr[js.Array[Double]] = js.native
+  var visibility: js.UndefOr[String] = js.native
+  var width: js.UndefOr[Double] = js.native
+  var wordSpacing: js.UndefOr[Double | String] = js.native
+  var writingMode: js.UndefOr[String] = js.native
+  var x: js.UndefOr[Double] = js.native
+  var xAxis: js.UndefOr[js.Object] = js.native
+  var y: js.UndefOr[Double] = js.native
+  var yAxis: js.UndefOr[js.Object] = js.native
 }
 
 object CartesianGridProps {
   @scala.inline
-  def apply(
-    alignmentBaseline: String = null,
-    angle: Int | Double = null,
-    baselineShift: String = null,
-    chartHeight: Int | Double = null,
-    chartWidth: Int | Double = null,
-    clip: String = null,
-    clipPath: String = null,
-    clipRule: String = null,
-    color: String = null,
-    colorInterpolation: String = null,
-    colorInterpolationFilters: String = null,
-    colorProfile: String = null,
-    colorRendering: String = null,
-    cursor: String = null,
-    direction: String = null,
-    display: String = null,
-    dominantBaseline: String = null,
-    dx: Int | Double = null,
-    dy: Int | Double = null,
-    enableBackground: String = null,
-    fill: String = null,
-    fillOpacity: Double | String = null,
-    fillRule: String = null,
-    filter: String = null,
-    floodColor: String = null,
-    floodOpacity: String = null,
-    font: String = null,
-    fontFamily: String = null,
-    fontSize: Double | String = null,
-    fontSizeAdjust: Double | String = null,
-    fontStretch: String = null,
-    fontStyle: String = null,
-    fontVariant: String = null,
-    fontWeight: normal | bold | bolder | lighter | `100` | `200` | `300` | `400` | `500` | `600` | `700` | `800` | `900` | inherit = null,
-    glyphOrientationHorizontal: String = null,
-    glyphOrientationVertical: String = null,
-    height: Int | Double = null,
-    horizontal: js.Object | ReactElement | (ContentRenderer[LineProps with CartesianGridProps]) | Boolean = null,
-    horizontalCoordinatesGenerator: /* arg */ AnonHeight => js.Array[Double] = null,
-    horizontalFill: js.Array[String] = null,
-    horizontalPoints: js.Array[Double] = null,
-    imageRendering: auto | optimizeSpeed | optimizeQuality | inherit = null,
-    kerning: Double | String = null,
-    letterSpacing: String = null,
-    lightingColor: String = null,
-    markerEnd: String = null,
-    markerMid: String = null,
-    markerStart: String = null,
-    mask: String = null,
-    offset: js.Object = null,
-    opacity: Double | String = null,
-    overflow: String = null,
-    pointerEvents: String = null,
-    r: Int | Double = null,
-    shapeRendering: auto | optimizeSpeed | crispEdges | geometricPrecision | inherit = null,
-    stopColor: String = null,
-    stopOpacity: Double | String = null,
-    stroke: Double | String = null,
-    strokeDasharray: String = null,
-    strokeDashoffset: Double | String = null,
-    strokeLinecap: String = null,
-    strokeLinejoin: String = null,
-    strokeMiterlimit: Double | String = null,
-    strokeOpacity: Double | String = null,
-    strokeWidth: Double | String = null,
-    style: js.Object = null,
-    textAnchor: String = null,
-    textDecoration: String = null,
-    textRendering: auto | optimizeSpeed | optimizeLegibility | geometricPrecision | inherit = null,
-    transform: String = null,
-    unicodeBidi: String = null,
-    vertical: js.Object | ReactElement | (ContentRenderer[LineProps with CartesianGridProps]) | Boolean = null,
-    verticalCoordinatesGenerator: /* arg */ AnonHeight => js.Array[Double] = null,
-    verticalFill: js.Array[String] = null,
-    verticalPoints: js.Array[Double] = null,
-    visibility: String = null,
-    width: Int | Double = null,
-    wordSpacing: Double | String = null,
-    writingMode: String = null,
-    x: Int | Double = null,
-    xAxis: js.Object = null,
-    y: Int | Double = null,
-    yAxis: js.Object = null
-  ): CartesianGridProps = {
+  def apply(): CartesianGridProps = {
     val __obj = js.Dynamic.literal()
-    if (alignmentBaseline != null) __obj.updateDynamic("alignmentBaseline")(alignmentBaseline.asInstanceOf[js.Any])
-    if (angle != null) __obj.updateDynamic("angle")(angle.asInstanceOf[js.Any])
-    if (baselineShift != null) __obj.updateDynamic("baselineShift")(baselineShift.asInstanceOf[js.Any])
-    if (chartHeight != null) __obj.updateDynamic("chartHeight")(chartHeight.asInstanceOf[js.Any])
-    if (chartWidth != null) __obj.updateDynamic("chartWidth")(chartWidth.asInstanceOf[js.Any])
-    if (clip != null) __obj.updateDynamic("clip")(clip.asInstanceOf[js.Any])
-    if (clipPath != null) __obj.updateDynamic("clipPath")(clipPath.asInstanceOf[js.Any])
-    if (clipRule != null) __obj.updateDynamic("clipRule")(clipRule.asInstanceOf[js.Any])
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (colorInterpolation != null) __obj.updateDynamic("colorInterpolation")(colorInterpolation.asInstanceOf[js.Any])
-    if (colorInterpolationFilters != null) __obj.updateDynamic("colorInterpolationFilters")(colorInterpolationFilters.asInstanceOf[js.Any])
-    if (colorProfile != null) __obj.updateDynamic("colorProfile")(colorProfile.asInstanceOf[js.Any])
-    if (colorRendering != null) __obj.updateDynamic("colorRendering")(colorRendering.asInstanceOf[js.Any])
-    if (cursor != null) __obj.updateDynamic("cursor")(cursor.asInstanceOf[js.Any])
-    if (direction != null) __obj.updateDynamic("direction")(direction.asInstanceOf[js.Any])
-    if (display != null) __obj.updateDynamic("display")(display.asInstanceOf[js.Any])
-    if (dominantBaseline != null) __obj.updateDynamic("dominantBaseline")(dominantBaseline.asInstanceOf[js.Any])
-    if (dx != null) __obj.updateDynamic("dx")(dx.asInstanceOf[js.Any])
-    if (dy != null) __obj.updateDynamic("dy")(dy.asInstanceOf[js.Any])
-    if (enableBackground != null) __obj.updateDynamic("enableBackground")(enableBackground.asInstanceOf[js.Any])
-    if (fill != null) __obj.updateDynamic("fill")(fill.asInstanceOf[js.Any])
-    if (fillOpacity != null) __obj.updateDynamic("fillOpacity")(fillOpacity.asInstanceOf[js.Any])
-    if (fillRule != null) __obj.updateDynamic("fillRule")(fillRule.asInstanceOf[js.Any])
-    if (filter != null) __obj.updateDynamic("filter")(filter.asInstanceOf[js.Any])
-    if (floodColor != null) __obj.updateDynamic("floodColor")(floodColor.asInstanceOf[js.Any])
-    if (floodOpacity != null) __obj.updateDynamic("floodOpacity")(floodOpacity.asInstanceOf[js.Any])
-    if (font != null) __obj.updateDynamic("font")(font.asInstanceOf[js.Any])
-    if (fontFamily != null) __obj.updateDynamic("fontFamily")(fontFamily.asInstanceOf[js.Any])
-    if (fontSize != null) __obj.updateDynamic("fontSize")(fontSize.asInstanceOf[js.Any])
-    if (fontSizeAdjust != null) __obj.updateDynamic("fontSizeAdjust")(fontSizeAdjust.asInstanceOf[js.Any])
-    if (fontStretch != null) __obj.updateDynamic("fontStretch")(fontStretch.asInstanceOf[js.Any])
-    if (fontStyle != null) __obj.updateDynamic("fontStyle")(fontStyle.asInstanceOf[js.Any])
-    if (fontVariant != null) __obj.updateDynamic("fontVariant")(fontVariant.asInstanceOf[js.Any])
-    if (fontWeight != null) __obj.updateDynamic("fontWeight")(fontWeight.asInstanceOf[js.Any])
-    if (glyphOrientationHorizontal != null) __obj.updateDynamic("glyphOrientationHorizontal")(glyphOrientationHorizontal.asInstanceOf[js.Any])
-    if (glyphOrientationVertical != null) __obj.updateDynamic("glyphOrientationVertical")(glyphOrientationVertical.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (horizontal != null) __obj.updateDynamic("horizontal")(horizontal.asInstanceOf[js.Any])
-    if (horizontalCoordinatesGenerator != null) __obj.updateDynamic("horizontalCoordinatesGenerator")(js.Any.fromFunction1(horizontalCoordinatesGenerator))
-    if (horizontalFill != null) __obj.updateDynamic("horizontalFill")(horizontalFill.asInstanceOf[js.Any])
-    if (horizontalPoints != null) __obj.updateDynamic("horizontalPoints")(horizontalPoints.asInstanceOf[js.Any])
-    if (imageRendering != null) __obj.updateDynamic("imageRendering")(imageRendering.asInstanceOf[js.Any])
-    if (kerning != null) __obj.updateDynamic("kerning")(kerning.asInstanceOf[js.Any])
-    if (letterSpacing != null) __obj.updateDynamic("letterSpacing")(letterSpacing.asInstanceOf[js.Any])
-    if (lightingColor != null) __obj.updateDynamic("lightingColor")(lightingColor.asInstanceOf[js.Any])
-    if (markerEnd != null) __obj.updateDynamic("markerEnd")(markerEnd.asInstanceOf[js.Any])
-    if (markerMid != null) __obj.updateDynamic("markerMid")(markerMid.asInstanceOf[js.Any])
-    if (markerStart != null) __obj.updateDynamic("markerStart")(markerStart.asInstanceOf[js.Any])
-    if (mask != null) __obj.updateDynamic("mask")(mask.asInstanceOf[js.Any])
-    if (offset != null) __obj.updateDynamic("offset")(offset.asInstanceOf[js.Any])
-    if (opacity != null) __obj.updateDynamic("opacity")(opacity.asInstanceOf[js.Any])
-    if (overflow != null) __obj.updateDynamic("overflow")(overflow.asInstanceOf[js.Any])
-    if (pointerEvents != null) __obj.updateDynamic("pointerEvents")(pointerEvents.asInstanceOf[js.Any])
-    if (r != null) __obj.updateDynamic("r")(r.asInstanceOf[js.Any])
-    if (shapeRendering != null) __obj.updateDynamic("shapeRendering")(shapeRendering.asInstanceOf[js.Any])
-    if (stopColor != null) __obj.updateDynamic("stopColor")(stopColor.asInstanceOf[js.Any])
-    if (stopOpacity != null) __obj.updateDynamic("stopOpacity")(stopOpacity.asInstanceOf[js.Any])
-    if (stroke != null) __obj.updateDynamic("stroke")(stroke.asInstanceOf[js.Any])
-    if (strokeDasharray != null) __obj.updateDynamic("strokeDasharray")(strokeDasharray.asInstanceOf[js.Any])
-    if (strokeDashoffset != null) __obj.updateDynamic("strokeDashoffset")(strokeDashoffset.asInstanceOf[js.Any])
-    if (strokeLinecap != null) __obj.updateDynamic("strokeLinecap")(strokeLinecap.asInstanceOf[js.Any])
-    if (strokeLinejoin != null) __obj.updateDynamic("strokeLinejoin")(strokeLinejoin.asInstanceOf[js.Any])
-    if (strokeMiterlimit != null) __obj.updateDynamic("strokeMiterlimit")(strokeMiterlimit.asInstanceOf[js.Any])
-    if (strokeOpacity != null) __obj.updateDynamic("strokeOpacity")(strokeOpacity.asInstanceOf[js.Any])
-    if (strokeWidth != null) __obj.updateDynamic("strokeWidth")(strokeWidth.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (textAnchor != null) __obj.updateDynamic("textAnchor")(textAnchor.asInstanceOf[js.Any])
-    if (textDecoration != null) __obj.updateDynamic("textDecoration")(textDecoration.asInstanceOf[js.Any])
-    if (textRendering != null) __obj.updateDynamic("textRendering")(textRendering.asInstanceOf[js.Any])
-    if (transform != null) __obj.updateDynamic("transform")(transform.asInstanceOf[js.Any])
-    if (unicodeBidi != null) __obj.updateDynamic("unicodeBidi")(unicodeBidi.asInstanceOf[js.Any])
-    if (vertical != null) __obj.updateDynamic("vertical")(vertical.asInstanceOf[js.Any])
-    if (verticalCoordinatesGenerator != null) __obj.updateDynamic("verticalCoordinatesGenerator")(js.Any.fromFunction1(verticalCoordinatesGenerator))
-    if (verticalFill != null) __obj.updateDynamic("verticalFill")(verticalFill.asInstanceOf[js.Any])
-    if (verticalPoints != null) __obj.updateDynamic("verticalPoints")(verticalPoints.asInstanceOf[js.Any])
-    if (visibility != null) __obj.updateDynamic("visibility")(visibility.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
-    if (wordSpacing != null) __obj.updateDynamic("wordSpacing")(wordSpacing.asInstanceOf[js.Any])
-    if (writingMode != null) __obj.updateDynamic("writingMode")(writingMode.asInstanceOf[js.Any])
-    if (x != null) __obj.updateDynamic("x")(x.asInstanceOf[js.Any])
-    if (xAxis != null) __obj.updateDynamic("xAxis")(xAxis.asInstanceOf[js.Any])
-    if (y != null) __obj.updateDynamic("y")(y.asInstanceOf[js.Any])
-    if (yAxis != null) __obj.updateDynamic("yAxis")(yAxis.asInstanceOf[js.Any])
     __obj.asInstanceOf[CartesianGridProps]
   }
+  @scala.inline
+  implicit class CartesianGridPropsOps[Self <: CartesianGridProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAlignmentBaseline(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alignmentBaseline")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlignmentBaseline: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alignmentBaseline")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAngle(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("angle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAngle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("angle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBaselineShift(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("baselineShift")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBaselineShift: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("baselineShift")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withChartHeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("chartHeight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChartHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("chartHeight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withChartWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("chartWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChartWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("chartWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClip(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clip")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClip: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clip")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClipPath(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clipPath")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClipPath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clipPath")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClipRule(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clipRule")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClipRule: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clipRule")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColorInterpolation(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colorInterpolation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColorInterpolation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colorInterpolation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColorInterpolationFilters(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colorInterpolationFilters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColorInterpolationFilters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colorInterpolationFilters")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColorProfile(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colorProfile")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColorProfile: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colorProfile")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColorRendering(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colorRendering")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColorRendering: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colorRendering")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCursor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cursor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCursor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cursor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDirection(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDirection: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisplay(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("display")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisplay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("display")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDominantBaseline(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dominantBaseline")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDominantBaseline: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dominantBaseline")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDx(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dx")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDx: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dx")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDy(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFill(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fill")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFill: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fill")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFillOpacity(value: Double | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fillOpacity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFillOpacity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fillOpacity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFillRule(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fillRule")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFillRule: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fillRule")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFilter(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFilter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFloodColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("floodColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFloodColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("floodColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFloodOpacity(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("floodOpacity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFloodOpacity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("floodOpacity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFont(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("font")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFont: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("font")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFontFamily(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontFamily")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFontFamily: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontFamily")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFontSize(value: Double | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFontSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFontSizeAdjust(value: Double | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontSizeAdjust")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFontSizeAdjust: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontSizeAdjust")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFontStretch(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontStretch")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFontStretch: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontStretch")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFontStyle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFontStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFontVariant(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontVariant")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFontVariant: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontVariant")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFontWeight(
+      value: normal | bold | bolder | lighter | `100` | `200` | `300` | `400` | `500` | `600` | `700` | `800` | `900` | inherit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontWeight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFontWeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontWeight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGlyphOrientationVertical(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("glyphOrientationVertical")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGlyphOrientationVertical: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("glyphOrientationVertical")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHorizontalReactElement(value: ReactElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("horizontal")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHorizontalFunction1(value: LineProps with CartesianGridProps => TagMod[Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("horizontal")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withHorizontal(value: js.Object | ReactElement | (ContentRenderer[LineProps with CartesianGridProps]) | Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("horizontal")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHorizontal: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("horizontal")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHorizontalCoordinatesGenerator(value: /* arg */ AnonHeight => js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("horizontalCoordinatesGenerator")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutHorizontalCoordinatesGenerator: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("horizontalCoordinatesGenerator")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHorizontalFill(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("horizontalFill")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHorizontalFill: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("horizontalFill")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHorizontalPoints(value: js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("horizontalPoints")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHorizontalPoints: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("horizontalPoints")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withImageRendering(value: auto | optimizeSpeed | optimizeQuality | inherit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imageRendering")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImageRendering: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imageRendering")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKerning(value: Double | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kerning")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKerning: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kerning")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLetterSpacing(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("letterSpacing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLetterSpacing: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("letterSpacing")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLightingColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lightingColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLightingColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lightingColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMarkerEnd(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("markerEnd")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMarkerEnd: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("markerEnd")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMarkerMid(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("markerMid")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMarkerMid: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("markerMid")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMarkerStart(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("markerStart")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMarkerStart: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("markerStart")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMask(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mask")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMask: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mask")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOffset(value: js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOffset: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOpacity(value: Double | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("opacity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOpacity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("opacity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOverflow(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overflow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOverflow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overflow")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPointerEvents(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pointerEvents")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPointerEvents: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pointerEvents")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withR(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("r")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutR: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("r")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShapeRendering(value: auto | optimizeSpeed | crispEdges | geometricPrecision | inherit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shapeRendering")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShapeRendering: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shapeRendering")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStopColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stopColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStopColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stopColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStopOpacity(value: Double | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stopOpacity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStopOpacity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stopOpacity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStroke(value: Double | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stroke")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStroke: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stroke")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStrokeDasharray(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeDasharray")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStrokeDasharray: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeDasharray")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStrokeDashoffset(value: Double | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeDashoffset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStrokeDashoffset: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeDashoffset")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStrokeLinecap(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeLinecap")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStrokeLinecap: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeLinecap")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStrokeLinejoin(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeLinejoin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStrokeLinejoin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeLinejoin")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStrokeMiterlimit(value: Double | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeMiterlimit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStrokeMiterlimit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeMiterlimit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStrokeOpacity(value: Double | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeOpacity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStrokeOpacity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeOpacity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStrokeWidth(value: Double | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStrokeWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyle(value: js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTextAnchor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textAnchor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTextAnchor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textAnchor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTextDecoration(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textDecoration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTextDecoration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textDecoration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTextRendering(value: auto | optimizeSpeed | optimizeLegibility | geometricPrecision | inherit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textRendering")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTextRendering: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textRendering")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTransform(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transform")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTransform: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transform")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUnicodeBidi(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unicodeBidi")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUnicodeBidi: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unicodeBidi")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVerticalReactElement(value: ReactElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vertical")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVerticalFunction1(value: LineProps with CartesianGridProps => TagMod[Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vertical")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withVertical(value: js.Object | ReactElement | (ContentRenderer[LineProps with CartesianGridProps]) | Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vertical")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVertical: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vertical")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVerticalCoordinatesGenerator(value: /* arg */ AnonHeight => js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("verticalCoordinatesGenerator")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutVerticalCoordinatesGenerator: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("verticalCoordinatesGenerator")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVerticalFill(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("verticalFill")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVerticalFill: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("verticalFill")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVerticalPoints(value: js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("verticalPoints")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVerticalPoints: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("verticalPoints")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVisibility(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visibility")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVisibility: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visibility")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWordSpacing(value: Double | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wordSpacing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWordSpacing: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wordSpacing")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWritingMode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("writingMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWritingMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("writingMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withX(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutX: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withXAxis(value: js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("xAxis")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutXAxis: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("xAxis")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withY(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutY: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withYAxis(value: js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("yAxis")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutYAxis: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("yAxis")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,11 +1,11 @@
 package typingsSlinky.devextreme.mod.DevExpress.ui
 
+import org.scalajs.dom.raw.Element
 import typingsSlinky.devextreme.mod.DevExpress.core.dxElement
 import typingsSlinky.devextreme.mod.DevExpress.data.DataSource
 import typingsSlinky.devextreme.mod._Global_.JQuery
 import typingsSlinky.devextreme.mod._Global_.JQueryPromise
 import typingsSlinky.devextreme.mod._Global_.Promise
-import typingsSlinky.std.Element
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -93,7 +93,7 @@ trait GridBase extends Widget {
   /** Gets the key of a row with a specific index. */
   def getKeyByRowIndex(rowIndex: Double): js.Any = js.native
   /** Gets the container of a row with a specific index. */
-  def getRowElement(rowIndex: Double): js.UndefOr[js.Array[org.scalajs.dom.raw.Element] with JQuery] = js.native
+  def getRowElement(rowIndex: Double): js.UndefOr[js.Array[Element] with JQuery] = js.native
   def getRowIndexByKey(key: String): Double = js.native
   /** Gets the index of a row with a specific key. */
   def getRowIndexByKey(key: js.Any): Double = js.native

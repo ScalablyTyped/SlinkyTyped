@@ -15,8 +15,8 @@ object parserMod extends js.Object {
   /* static members */
   @js.native
   object Parser extends js.Object {
-    def createPacket(header: Header): scala.scalajs.js.typedarray.ArrayBuffer = js.native
-    def createPacket(header: Header, payloadString: String): scala.scalajs.js.typedarray.ArrayBuffer = js.native
+    def createPacket(header: Header): js.typedarray.ArrayBuffer = js.native
+    def createPacket(header: Header, payloadString: String): js.typedarray.ArrayBuffer = js.native
     def parse(message: ArrayBufferLike): js.Any = js.native
   }
   

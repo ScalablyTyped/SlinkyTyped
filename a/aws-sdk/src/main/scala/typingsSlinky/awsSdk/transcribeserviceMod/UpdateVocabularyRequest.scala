@@ -26,16 +26,53 @@ trait UpdateVocabularyRequest extends js.Object {
 
 object UpdateVocabularyRequest {
   @scala.inline
-  def apply(
-    LanguageCode: LanguageCode,
-    VocabularyName: VocabularyName,
-    Phrases: Phrases = null,
-    VocabularyFileUri: Uri = null
-  ): UpdateVocabularyRequest = {
+  def apply(LanguageCode: LanguageCode, VocabularyName: VocabularyName): UpdateVocabularyRequest = {
     val __obj = js.Dynamic.literal(LanguageCode = LanguageCode.asInstanceOf[js.Any], VocabularyName = VocabularyName.asInstanceOf[js.Any])
-    if (Phrases != null) __obj.updateDynamic("Phrases")(Phrases.asInstanceOf[js.Any])
-    if (VocabularyFileUri != null) __obj.updateDynamic("VocabularyFileUri")(VocabularyFileUri.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateVocabularyRequest]
   }
+  @scala.inline
+  implicit class UpdateVocabularyRequestOps[Self <: UpdateVocabularyRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLanguageCode(value: LanguageCode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LanguageCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVocabularyName(value: VocabularyName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VocabularyName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPhrases(value: Phrases): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Phrases")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPhrases: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Phrases")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVocabularyFileUri(value: Uri): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VocabularyFileUri")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVocabularyFileUri: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VocabularyFileUri")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

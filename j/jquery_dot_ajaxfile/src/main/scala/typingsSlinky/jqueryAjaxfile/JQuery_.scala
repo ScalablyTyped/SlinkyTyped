@@ -3,9 +3,9 @@ package typingsSlinky.jqueryAjaxfile
 import org.scalablytyped.runtime.NumberDictionary
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.Element
+import org.scalajs.dom.raw.HTMLElement
+import org.scalajs.dom.raw.Text
 import org.scalajs.dom.raw.XMLHttpRequest
-import typingsSlinky.std.HTMLElement
-import typingsSlinky.std.Text
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -36,7 +36,7 @@ trait JQuery_
     * 
     * @param elements One or more elements to add to the set of matched elements.
     */
-  def add(elements: typingsSlinky.std.Element*): JQuery_ = js.native
+  def add(elements: Element*): JQuery_ = js.native
   /**
     * Add elements to the set of matched elements.
     * 
@@ -82,20 +82,14 @@ trait JQuery_
     * param content2 One or more additional DOM elements, arrays of elements, HTML strings, or jQuery objects to insert after each element in the set of matched elements.
     */
   def after(content1: JQuery_, content2: js.Any*): JQuery_ = js.native
-  def after(content1: typingsSlinky.std.Element, content2: js.Any*): JQuery_ = js.native
+  def after(content1: Element, content2: js.Any*): JQuery_ = js.native
   def after(content1: Text, content2: js.Any*): JQuery_ = js.native
   /**
     * Insert content, specified by the parameter, after each element in the set of matched elements.
     * 
     * param func A function that returns an HTML string, DOM element(s), or jQuery object to insert after each element in the set of matched elements. Receives the index position of the element in the set as an argument. Within the function, this refers to the current element in the set.
     */
-  def after(
-    func: js.Function2[
-      /* index */ Double, 
-      /* html */ String, 
-      String | typingsSlinky.std.Element | this.type
-    ]
-  ): JQuery_ = js.native
+  def after(func: js.Function2[/* index */ Double, /* html */ String, String | Element | this.type]): JQuery_ = js.native
   /**
     * Register a handler to be called when Ajax requests complete. This is an AjaxEvent.
     *
@@ -193,20 +187,14 @@ trait JQuery_
     * param content2 One or more additional DOM elements, arrays of elements, HTML strings, or jQuery objects to insert at the end of each element in the set of matched elements.
     */
   def append(content1: JQuery_, content2: js.Any*): JQuery_ = js.native
-  def append(content1: typingsSlinky.std.Element, content2: js.Any*): JQuery_ = js.native
+  def append(content1: Element, content2: js.Any*): JQuery_ = js.native
   def append(content1: Text, content2: js.Any*): JQuery_ = js.native
   /**
     * Insert content, specified by the parameter, to the end of each element in the set of matched elements.
     * 
     * param func A function that returns an HTML string, DOM element(s), or jQuery object to insert at the end of each element in the set of matched elements. Receives the index position of the element in the set and the old HTML value of the element as arguments. Within the function, this refers to the current element in the set.
     */
-  def append(
-    func: js.Function2[
-      /* index */ Double, 
-      /* html */ String, 
-      String | typingsSlinky.std.Element | this.type
-    ]
-  ): JQuery_ = js.native
+  def append(func: js.Function2[/* index */ Double, /* html */ String, String | Element | this.type]): JQuery_ = js.native
   def appendTo(target: String): JQuery_ = js.native
   def appendTo(target: js.Array[_]): JQuery_ = js.native
   /**
@@ -215,7 +203,7 @@ trait JQuery_
     * @param target A selector, element, HTML string, array of elements, or jQuery object; the matched set of elements will be inserted at the end of the element(s) specified by this parameter.
     */
   def appendTo(target: JQuery_): JQuery_ = js.native
-  def appendTo(target: typingsSlinky.std.Element): JQuery_ = js.native
+  def appendTo(target: Element): JQuery_ = js.native
   /**
     * Get the value of an attribute for the first element in the set of matched elements.
     *
@@ -252,20 +240,14 @@ trait JQuery_
     * param content2 One or more additional DOM elements, arrays of elements, HTML strings, or jQuery objects to insert before each element in the set of matched elements.
     */
   def before(content1: JQuery_, content2: js.Any*): JQuery_ = js.native
-  def before(content1: typingsSlinky.std.Element, content2: js.Any*): JQuery_ = js.native
+  def before(content1: Element, content2: js.Any*): JQuery_ = js.native
   def before(content1: Text, content2: js.Any*): JQuery_ = js.native
   /**
     * Insert content, specified by the parameter, before each element in the set of matched elements.
     * 
     * param func A function that returns an HTML string, DOM element(s), or jQuery object to insert before each element in the set of matched elements. Receives the index position of the element in the set as an argument. Within the function, this refers to the current element in the set.
     */
-  def before(
-    func: js.Function2[
-      /* index */ Double, 
-      /* html */ String, 
-      String | typingsSlinky.std.Element | this.type
-    ]
-  ): JQuery_ = js.native
+  def before(func: js.Function2[/* index */ Double, /* html */ String, String | Element | this.type]): JQuery_ = js.native
   /**
     * Attach a handler to an event for the elements.
     * 
@@ -363,7 +345,7 @@ trait JQuery_
     * 
     * @param element An element to match elements against.
     */
-  def closest(element: typingsSlinky.std.Element): JQuery_ = js.native
+  def closest(element: Element): JQuery_ = js.native
   /**
     * For each element in the set, get the first element that matches the selector by testing the element itself and traversing up through its ancestors in the DOM tree.
     * 
@@ -597,13 +579,13 @@ trait JQuery_
     * 
     * @param element An element to match the current set of elements against.
     */
-  def filter(element: typingsSlinky.std.Element): JQuery_ = js.native
+  def filter(element: Element): JQuery_ = js.native
   /**
     * Reduce the set of matched elements to those that match the selector or pass the function's test.
     * 
     * @param func A function used as a test for each element in the set. this is the current DOM element.
     */
-  def filter(func: js.Function2[/* index */ Double, /* element */ typingsSlinky.std.Element, _]): JQuery_ = js.native
+  def filter(func: js.Function2[/* index */ Double, /* element */ Element, _]): JQuery_ = js.native
   /**
     * Reduce the set of matched elements to those that match the selector or pass the function's test.
     * 
@@ -621,7 +603,7 @@ trait JQuery_
     * 
     * @param element An element to match elements against.
     */
-  def find(element: typingsSlinky.std.Element): JQuery_ = js.native
+  def find(element: Element): JQuery_ = js.native
   /**
     * Get the descendants of each element in the current set of matched elements, filtered by a selector, jQuery object, or element.
     * 
@@ -692,13 +674,13 @@ trait JQuery_
     * 
     * @param index A zero-based integer indicating which element to retrieve.
     */
-  def get(index: Double): org.scalajs.dom.raw.HTMLElement = js.native
+  def get(index: Double): HTMLElement = js.native
   /**
     * Reduce the set of matched elements to those that have a descendant that matches the selector or DOM element.
     * 
     * @param contained A DOM element to match elements against.
     */
-  def has(contained: typingsSlinky.std.Element): JQuery_ = js.native
+  def has(contained: Element): JQuery_ = js.native
   /**
     * Reduce the set of matched elements to those that have a descendant that matches the selector or DOM element.
     * 
@@ -792,7 +774,7 @@ trait JQuery_
     */
   def index(selector: String): Double = js.native
   def index(selector: JQuery_): Double = js.native
-  def index(selector: typingsSlinky.std.Element): Double = js.native
+  def index(selector: Element): Double = js.native
   /**
     * Get the current computed height for the first element in the set of matched elements, including padding but not border.
     */
@@ -823,7 +805,7 @@ trait JQuery_
     * param target A selector, element, array of elements, HTML string, or jQuery object; the matched set of elements will be inserted after the element(s) specified by this parameter.
     */
   def insertAfter(target: JQuery_): JQuery_ = js.native
-  def insertAfter(target: typingsSlinky.std.Element): JQuery_ = js.native
+  def insertAfter(target: Element): JQuery_ = js.native
   def insertAfter(target: Text): JQuery_ = js.native
   def insertBefore(target: String): JQuery_ = js.native
   def insertBefore(target: js.Array[_]): JQuery_ = js.native
@@ -833,7 +815,7 @@ trait JQuery_
     * param target A selector, element, array of elements, HTML string, or jQuery object; the matched set of elements will be inserted before the element(s) specified by this parameter.
     */
   def insertBefore(target: JQuery_): JQuery_ = js.native
-  def insertBefore(target: typingsSlinky.std.Element): JQuery_ = js.native
+  def insertBefore(target: Element): JQuery_ = js.native
   def insertBefore(target: Text): JQuery_ = js.native
   /**
     * Check the current matched set of elements against a selector, element, or jQuery object and return true if at least one of these elements matches the given arguments.
@@ -846,7 +828,7 @@ trait JQuery_
     * 
     * @param func A function used as a test for the set of elements. It accepts one argument, index, which is the element's index in the jQuery collection.Within the function, this refers to the current DOM element.
     */
-  def is(func: js.Function2[/* index */ Double, /* element */ typingsSlinky.std.Element, Boolean]): Boolean = js.native
+  def is(func: js.Function2[/* index */ Double, /* element */ Element, Boolean]): Boolean = js.native
   /**
     * Check the current matched set of elements against a selector, element, or jQuery object and return true if at least one of these elements matches the given arguments.
     * 
@@ -1090,8 +1072,8 @@ trait JQuery_
     * @param filter A string containing a selector expression to match elements against.
     */
   def nextUntil(): JQuery_ = js.native
-  def nextUntil(element: typingsSlinky.std.Element): JQuery_ = js.native
-  def nextUntil(element: typingsSlinky.std.Element, filter: String): JQuery_ = js.native
+  def nextUntil(element: Element): JQuery_ = js.native
+  def nextUntil(element: Element, filter: String): JQuery_ = js.native
   def nextUntil(obj: JQuery_): JQuery_ = js.native
   def nextUntil(obj: JQuery_, filter: String): JQuery_ = js.native
   def nextUntil(selector: String): JQuery_ = js.native
@@ -1101,13 +1083,13 @@ trait JQuery_
     * 
     * @param elements One or more DOM elements to remove from the matched set.
     */
-  def not(elements: typingsSlinky.std.Element*): JQuery_ = js.native
+  def not(elements: Element*): JQuery_ = js.native
   /**
     * Remove elements from the set of matched elements.
     * 
     * @param func A function used as a test for each element in the set. this is the current DOM element.
     */
-  def not(func: js.Function2[/* index */ Double, /* element */ typingsSlinky.std.Element, Boolean]): JQuery_ = js.native
+  def not(func: js.Function2[/* index */ Double, /* element */ Element, Boolean]): JQuery_ = js.native
   /**
     * Remove elements from the set of matched elements.
     * 
@@ -1325,8 +1307,8 @@ trait JQuery_
     * @param filter A string containing a selector expression to match elements against.
     */
   def parentsUntil(): JQuery_ = js.native
-  def parentsUntil(element: typingsSlinky.std.Element): JQuery_ = js.native
-  def parentsUntil(element: typingsSlinky.std.Element, filter: String): JQuery_ = js.native
+  def parentsUntil(element: Element): JQuery_ = js.native
+  def parentsUntil(element: Element, filter: String): JQuery_ = js.native
   def parentsUntil(obj: JQuery_): JQuery_ = js.native
   def parentsUntil(obj: JQuery_, filter: String): JQuery_ = js.native
   def parentsUntil(selector: String): JQuery_ = js.native
@@ -1344,20 +1326,14 @@ trait JQuery_
     * param content2 One or more additional DOM elements, arrays of elements, HTML strings, or jQuery objects to insert at the beginning of each element in the set of matched elements.
     */
   def prepend(content1: JQuery_, content2: js.Any*): JQuery_ = js.native
-  def prepend(content1: typingsSlinky.std.Element, content2: js.Any*): JQuery_ = js.native
+  def prepend(content1: Element, content2: js.Any*): JQuery_ = js.native
   def prepend(content1: Text, content2: js.Any*): JQuery_ = js.native
   /**
     * Insert content, specified by the parameter, to the beginning of each element in the set of matched elements.
     * 
     * param func A function that returns an HTML string, DOM element(s), or jQuery object to insert at the beginning of each element in the set of matched elements. Receives the index position of the element in the set and the old HTML value of the element as arguments. Within the function, this refers to the current element in the set.
     */
-  def prepend(
-    func: js.Function2[
-      /* index */ Double, 
-      /* html */ String, 
-      String | typingsSlinky.std.Element | this.type
-    ]
-  ): JQuery_ = js.native
+  def prepend(func: js.Function2[/* index */ Double, /* html */ String, String | Element | this.type]): JQuery_ = js.native
   def prependTo(target: String): JQuery_ = js.native
   def prependTo(target: js.Array[_]): JQuery_ = js.native
   /**
@@ -1366,7 +1342,7 @@ trait JQuery_
     * @param target A selector, element, HTML string, array of elements, or jQuery object; the matched set of elements will be inserted at the beginning of the element(s) specified by this parameter.
     */
   def prependTo(target: JQuery_): JQuery_ = js.native
-  def prependTo(target: typingsSlinky.std.Element): JQuery_ = js.native
+  def prependTo(target: Element): JQuery_ = js.native
   /**
     * Get the immediately preceding sibling of each element in the set of matched elements, optionally filtered by a selector.
     * 
@@ -1388,8 +1364,8 @@ trait JQuery_
     * @param filter A string containing a selector expression to match elements against.
     */
   def prevUntil(): JQuery_ = js.native
-  def prevUntil(element: typingsSlinky.std.Element): JQuery_ = js.native
-  def prevUntil(element: typingsSlinky.std.Element, filter: String): JQuery_ = js.native
+  def prevUntil(element: Element): JQuery_ = js.native
+  def prevUntil(element: Element, filter: String): JQuery_ = js.native
   def prevUntil(obj: JQuery_): JQuery_ = js.native
   def prevUntil(obj: JQuery_, filter: String): JQuery_ = js.native
   def prevUntil(selector: String): JQuery_ = js.native
@@ -1541,13 +1517,13 @@ trait JQuery_
     * @param target A selector string, jQuery object, DOM element, or array of elements indicating which element(s) to replace.
     */
   def replaceAll(target: JQuery_): JQuery_ = js.native
-  def replaceAll(target: typingsSlinky.std.Element): JQuery_ = js.native
+  def replaceAll(target: Element): JQuery_ = js.native
   /**
     * Replace each element in the set of matched elements with the provided new content and return the set of elements that was removed.
     * 
     * param func A function that returns content with which to replace the set of matched elements.
     */
-  def replaceWith(func: js.Function0[typingsSlinky.std.Element | this.type]): JQuery_ = js.native
+  def replaceWith(func: js.Function0[Element | this.type]): JQuery_ = js.native
   def replaceWith(newContent: String): JQuery_ = js.native
   def replaceWith(newContent: js.Array[_]): JQuery_ = js.native
   /**
@@ -1556,7 +1532,7 @@ trait JQuery_
     * param newContent The content to insert. May be an HTML string, DOM element, array of DOM elements, or jQuery object.
     */
   def replaceWith(newContent: JQuery_): JQuery_ = js.native
-  def replaceWith(newContent: typingsSlinky.std.Element): JQuery_ = js.native
+  def replaceWith(newContent: Element): JQuery_ = js.native
   def replaceWith(newContent: Text): JQuery_ = js.native
   /**
     * Trigger the "resize" event on an element.
@@ -1981,7 +1957,7 @@ trait JQuery_
     * @param wrappingElement A selector, element, HTML string, or jQuery object specifying the structure to wrap around the matched elements.
     */
   def wrap(wrappingElement: JQuery_): JQuery_ = js.native
-  def wrap(wrappingElement: typingsSlinky.std.Element): JQuery_ = js.native
+  def wrap(wrappingElement: Element): JQuery_ = js.native
   def wrapAll(func: js.Function1[/* index */ Double, String]): JQuery_ = js.native
   def wrapAll(wrappingElement: String): JQuery_ = js.native
   /**
@@ -1990,7 +1966,7 @@ trait JQuery_
     * @param wrappingElement A selector, element, HTML string, or jQuery object specifying the structure to wrap around the matched elements.
     */
   def wrapAll(wrappingElement: JQuery_): JQuery_ = js.native
-  def wrapAll(wrappingElement: typingsSlinky.std.Element): JQuery_ = js.native
+  def wrapAll(wrappingElement: Element): JQuery_ = js.native
   /**
     * Wrap an HTML structure around the content of each element in the set of matched elements.
     * 
@@ -2004,6 +1980,6 @@ trait JQuery_
     * @param wrappingElement An HTML snippet, selector expression, jQuery object, or DOM element specifying the structure to wrap around the content of the matched elements.
     */
   def wrapInner(wrappingElement: JQuery_): JQuery_ = js.native
-  def wrapInner(wrappingElement: typingsSlinky.std.Element): JQuery_ = js.native
+  def wrapInner(wrappingElement: Element): JQuery_ = js.native
 }
 

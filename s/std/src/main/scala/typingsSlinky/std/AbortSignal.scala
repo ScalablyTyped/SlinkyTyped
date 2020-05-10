@@ -40,11 +40,12 @@ trait AbortSignal extends EventTarget {
   def removeEventListener_abort(
     `type`: abort,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
 }
 
 @JSGlobal("AbortSignal")
 @js.native
-object AbortSignal extends Instantiable0[AbortSignal]
+object AbortSignal
+  extends Instantiable0[org.scalajs.dom.experimental.AbortSignal]
 

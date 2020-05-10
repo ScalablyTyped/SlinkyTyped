@@ -16,18 +16,16 @@ trait Status extends js.Object
 
 object Status {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def closed: typingsSlinky.nodeZendesk.nodeZendeskStrings.closed = "closed".asInstanceOf[typingsSlinky.nodeZendesk.nodeZendeskStrings.closed]
   @scala.inline
-  def closed: typingsSlinky.nodeZendesk.nodeZendeskStrings.closed = this.cast("closed")
+  def hold: typingsSlinky.nodeZendesk.nodeZendeskStrings.hold = "hold".asInstanceOf[typingsSlinky.nodeZendesk.nodeZendeskStrings.hold]
   @scala.inline
-  def hold: typingsSlinky.nodeZendesk.nodeZendeskStrings.hold = this.cast("hold")
+  def `new`: typingsSlinky.nodeZendesk.nodeZendeskStrings.`new` = "new".asInstanceOf[typingsSlinky.nodeZendesk.nodeZendeskStrings.`new`]
   @scala.inline
-  def `new`: typingsSlinky.nodeZendesk.nodeZendeskStrings.`new` = this.cast("new")
+  def open: typingsSlinky.nodeZendesk.nodeZendeskStrings.open = "open".asInstanceOf[typingsSlinky.nodeZendesk.nodeZendeskStrings.open]
   @scala.inline
-  def open: typingsSlinky.nodeZendesk.nodeZendeskStrings.open = this.cast("open")
+  def pending: typingsSlinky.nodeZendesk.nodeZendeskStrings.pending = "pending".asInstanceOf[typingsSlinky.nodeZendesk.nodeZendeskStrings.pending]
   @scala.inline
-  def pending: typingsSlinky.nodeZendesk.nodeZendeskStrings.pending = this.cast("pending")
-  @scala.inline
-  def solved: typingsSlinky.nodeZendesk.nodeZendeskStrings.solved = this.cast("solved")
+  def solved: typingsSlinky.nodeZendesk.nodeZendeskStrings.solved = "solved".asInstanceOf[typingsSlinky.nodeZendesk.nodeZendeskStrings.solved]
 }
 

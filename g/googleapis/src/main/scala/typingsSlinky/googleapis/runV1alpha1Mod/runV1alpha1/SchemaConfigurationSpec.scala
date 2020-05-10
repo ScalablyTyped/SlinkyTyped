@@ -32,11 +32,41 @@ trait SchemaConfigurationSpec extends js.Object {
 
 object SchemaConfigurationSpec {
   @scala.inline
-  def apply(generation: Int | Double = null, revisionTemplate: SchemaRevisionTemplate = null): SchemaConfigurationSpec = {
+  def apply(): SchemaConfigurationSpec = {
     val __obj = js.Dynamic.literal()
-    if (generation != null) __obj.updateDynamic("generation")(generation.asInstanceOf[js.Any])
-    if (revisionTemplate != null) __obj.updateDynamic("revisionTemplate")(revisionTemplate.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaConfigurationSpec]
   }
+  @scala.inline
+  implicit class SchemaConfigurationSpecOps[Self <: SchemaConfigurationSpec] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGeneration(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("generation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGeneration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("generation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRevisionTemplate(value: SchemaRevisionTemplate): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("revisionTemplate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRevisionTemplate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("revisionTemplate")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

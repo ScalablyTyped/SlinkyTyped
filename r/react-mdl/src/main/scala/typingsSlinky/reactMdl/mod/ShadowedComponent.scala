@@ -4,16 +4,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ShadowedComponent extends js.Object {
-  var shadow: js.UndefOr[Double] = js.undefined
+  var shadow: js.UndefOr[Double] = js.native
 }
 
 object ShadowedComponent {
   @scala.inline
-  def apply(shadow: Int | Double = null): ShadowedComponent = {
+  def apply(): ShadowedComponent = {
     val __obj = js.Dynamic.literal()
-    if (shadow != null) __obj.updateDynamic("shadow")(shadow.asInstanceOf[js.Any])
     __obj.asInstanceOf[ShadowedComponent]
   }
+  @scala.inline
+  implicit class ShadowedComponentOps[Self <: ShadowedComponent] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withShadow(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shadow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShadow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shadow")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

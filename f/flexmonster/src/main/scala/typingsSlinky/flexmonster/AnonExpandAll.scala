@@ -4,24 +4,62 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonExpandAll extends js.Object {
-  var columns: js.UndefOr[js.Array[AnonMeasure]] = js.undefined
-  var expandAll: js.UndefOr[Boolean] = js.undefined
-  var rows: js.UndefOr[js.Array[AnonMeasure]] = js.undefined
+  var columns: js.UndefOr[js.Array[AnonMeasure]] = js.native
+  var expandAll: js.UndefOr[Boolean] = js.native
+  var rows: js.UndefOr[js.Array[AnonMeasure]] = js.native
 }
 
 object AnonExpandAll {
   @scala.inline
-  def apply(
-    columns: js.Array[AnonMeasure] = null,
-    expandAll: js.UndefOr[Boolean] = js.undefined,
-    rows: js.Array[AnonMeasure] = null
-  ): AnonExpandAll = {
+  def apply(): AnonExpandAll = {
     val __obj = js.Dynamic.literal()
-    if (columns != null) __obj.updateDynamic("columns")(columns.asInstanceOf[js.Any])
-    if (!js.isUndefined(expandAll)) __obj.updateDynamic("expandAll")(expandAll.asInstanceOf[js.Any])
-    if (rows != null) __obj.updateDynamic("rows")(rows.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonExpandAll]
   }
+  @scala.inline
+  implicit class AnonExpandAllOps[Self <: AnonExpandAll] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withColumns(value: js.Array[AnonMeasure]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColumns: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columns")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExpandAll(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expandAll")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExpandAll: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expandAll")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRows(value: js.Array[AnonMeasure]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rows")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRows: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rows")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

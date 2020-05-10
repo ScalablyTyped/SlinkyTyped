@@ -1,15 +1,17 @@
 package typingsSlinky.reactColor.components
 
+import typingsSlinky.reactColor.alphaMod.AlphaPickerProps
 import typingsSlinky.reactColor.alphaMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Alpha extends SharedApply_AlphaPickerProps_1550378975[default] {
+object Alpha {
   @JSImport("react-color/lib/components/alpha/Alpha", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: AlphaPickerProps): SharedBuilder_AlphaPickerProps1179989143[default] = new SharedBuilder_AlphaPickerProps1179989143[default](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Alpha.type): SharedBuilder_AlphaPickerProps1179989143[default] = new SharedBuilder_AlphaPickerProps1179989143[default](js.Array(this.component, js.Dictionary.empty))()
 }
 

@@ -13,8 +13,6 @@ trait AnonOauthtoken extends js.Object {
   var access_token: js.UndefOr[String] = js.native
   /** Data format for response. */
   var alt: js.UndefOr[String] = js.native
-  /** OAuth bearer token. */
-  var bearer_token: js.UndefOr[String] = js.native
   /** JSONP */
   var callback: js.UndefOr[String] = js.native
   /** Selector specifying which fields to include in a partial response. */
@@ -24,72 +22,22 @@ trait AnonOauthtoken extends js.Object {
   /** OAuth 2.0 token for the current user. */
   var oauth_token: js.UndefOr[String] = js.native
   /**
-    * The number of connections to include in the response. Valid values are
-    * between 1 and 2000, inclusive. Defaults to 100.
+    * Optional. The maximum number of resources to return. Valid values are between 1 and
+    * 1000, inclusive. Defaults to 30 if not set or set to 0.
     */
   var pageSize: js.UndefOr[Double] = js.native
-  /** The token of the page to be returned. */
-  var pageToken: js.UndefOr[String] = js.native
   /**
-    * &#42;&#42;Required.&#42;&#42; A field mask to restrict which fields on each person are
-    * returned. Valid values are:
-    *
-    * &#42; addresses
-    * &#42; ageRanges
-    * &#42; biographies
-    * &#42; birthdays
-    * &#42; braggingRights
-    * &#42; coverPhotos
-    * &#42; emailAddresses
-    * &#42; events
-    * &#42; genders
-    * &#42; imClients
-    * &#42; interests
-    * &#42; locales
-    * &#42; memberships
-    * &#42; metadata
-    * &#42; names
-    * &#42; nicknames
-    * &#42; occupations
-    * &#42; organizations
-    * &#42; phoneNumbers
-    * &#42; photos
-    * &#42; relations
-    * &#42; relationshipInterests
-    * &#42; relationshipStatuses
-    * &#42; residences
-    * &#42; skills
-    * &#42; taglines
-    * &#42; urls
+    * Optional. The next_page_token value returned from a previous call to
+    * [ListContactGroups](/people/api/rest/v1/contactgroups/list).
+    * Requests the next page of resources.
     */
-  var personFields: js.UndefOr[String] = js.native
-  /** Pretty-print response. */
-  var pp: js.UndefOr[Boolean] = js.native
+  var pageToken: js.UndefOr[String] = js.native
   /** Returns response with indentations and line breaks. */
   var prettyPrint: js.UndefOr[Boolean] = js.native
   /** Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters. */
   var quotaUser: js.UndefOr[String] = js.native
   /**
-    * &#42;&#42;Required.&#42;&#42; Comma-separated list of person fields to be included in the
-    * response. Each path should start with `person.`: for example,
-    * `person.names` or `person.photos`.
-    */
-  @JSName("requestMask.includeField")
-  var requestMaskDotincludeField: js.UndefOr[String] = js.native
-  /**
-    * Whether the response should include a sync token, which can be used to get
-    * all changes since the last request.
-    */
-  var requestSyncToken: js.UndefOr[Boolean] = js.native
-  /** The resource name to return connections for. Only `people/me` is valid. */
-  var resourceName: String = js.native
-  /**
-    * The order in which the connections should be sorted. Defaults to
-    * `LAST_MODIFIED_ASCENDING`.
-    */
-  var sortOrder: js.UndefOr[String] = js.native
-  /**
-    * A sync token, returned by a previous call to `people.connections.list`.
+    * Optional. A sync token, returned by a previous call to `contactgroups.list`.
     * Only resources changed since the sync token was created will be returned.
     */
   var syncToken: js.UndefOr[String] = js.native
@@ -97,5 +45,189 @@ trait AnonOauthtoken extends js.Object {
   var uploadType: js.UndefOr[String] = js.native
   /** Upload protocol for media (e.g. "raw", "multipart"). */
   var upload_protocol: js.UndefOr[String] = js.native
+}
+
+object AnonOauthtoken {
+  @scala.inline
+  def apply(): AnonOauthtoken = {
+    val __obj = js.Dynamic.literal()
+    __obj.asInstanceOf[AnonOauthtoken]
+  }
+  @scala.inline
+  implicit class AnonOauthtokenOps[Self <: AnonOauthtoken] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def with$Dotxgafv(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$.xgafv")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without$Dotxgafv: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$.xgafv")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAccess_token(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("access_token")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccess_token: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("access_token")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAlt(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlt: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alt")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCallback(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("callback")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCallback: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("callback")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFields(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fields")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFields: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fields")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKey(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOauth_token(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("oauth_token")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOauth_token: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("oauth_token")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPageSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pageSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPageSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pageSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPageToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pageToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPageToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pageToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrettyPrint(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prettyPrint")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrettyPrint: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prettyPrint")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQuotaUser(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("quotaUser")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQuotaUser: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("quotaUser")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSyncToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("syncToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSyncToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("syncToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUploadType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("uploadType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUploadType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("uploadType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUpload_protocol(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("upload_protocol")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUpload_protocol: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("upload_protocol")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

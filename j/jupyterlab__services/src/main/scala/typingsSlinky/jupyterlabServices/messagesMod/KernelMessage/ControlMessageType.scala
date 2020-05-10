@@ -20,10 +20,8 @@ trait ControlMessageType extends js.Object
 
 object ControlMessageType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def debug_reply: typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.debug_reply = "debug_reply".asInstanceOf[typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.debug_reply]
   @scala.inline
-  def debug_reply: typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.debug_reply = this.cast("debug_reply")
-  @scala.inline
-  def debug_request: typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.debug_request = this.cast("debug_request")
+  def debug_request: typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.debug_request = "debug_request".asInstanceOf[typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.debug_request]
 }
 

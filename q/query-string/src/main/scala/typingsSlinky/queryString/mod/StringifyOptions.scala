@@ -6,11 +6,11 @@ import typingsSlinky.queryString.queryStringStrings.comma
 import typingsSlinky.queryString.queryStringStrings.index
 import typingsSlinky.queryString.queryStringStrings.none
 import typingsSlinky.queryString.queryStringStrings.separator
-import typingsSlinky.queryString.queryStringStrings.string
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait StringifyOptions extends js.Object {
   /**
   	@default 'none'
@@ -45,17 +45,17 @@ trait StringifyOptions extends js.Object {
   		//=> 'foo=1&foo=2&foo=3'
   		```
   	*/
-  val arrayFormat: js.UndefOr[bracket | index | comma | separator | none] = js.undefined
+  val arrayFormat: js.UndefOr[bracket | index | comma | separator | none] = js.native
   /**
   	The character used to separate array elements when using `{arrayFormat: 'separator'}`.
   	@default ,
   	*/
-  val arrayFormatSeparator: js.UndefOr[string] = js.undefined
+  val arrayFormatSeparator: js.UndefOr[String] = js.native
   /**
   	[URL encode](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent) the keys and values.
   	@default true
   	*/
-  val encode: js.UndefOr[Boolean] = js.undefined
+  val encode: js.UndefOr[Boolean] = js.native
   /**
   	Skip keys with `null` as the value.
   	Note that keys with `undefined` as the value are always skipped.
@@ -73,7 +73,7 @@ trait StringifyOptions extends js.Object {
   	//=> ''
   	```
   	*/
-  val skipNull: js.UndefOr[Boolean] = js.undefined
+  val skipNull: js.UndefOr[Boolean] = js.native
   /**
   	Supports both `Function` as a custom sorting function or `false` to disable sorting.
   	If omitted, keys are sorted using `Array#sort`, which means, converting them to strings and comparing strings in Unicode code point order.
@@ -94,32 +94,105 @@ trait StringifyOptions extends js.Object {
   	//=> 'b=1&c=2&a=3'
   	```
   	*/
-  val sort: js.UndefOr[(js.Function2[/* itemLeft */ String, /* itemRight */ String, Double]) | `false`] = js.undefined
+  val sort: js.UndefOr[(js.Function2[/* itemLeft */ String, /* itemRight */ String, Double]) | `false`] = js.native
   /**
   	Strictly encode URI components with [`strict-uri-encode`](https://github.com/kevva/strict-uri-encode). It uses [`encodeURIComponent`](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent) if set to `false`. You probably [don't care](https://github.com/sindresorhus/query-string/issues/42) about this option.
   	@default true
   	*/
-  val strict: js.UndefOr[Boolean] = js.undefined
+  val strict: js.UndefOr[Boolean] = js.native
 }
 
 object StringifyOptions {
   @scala.inline
-  def apply(
-    arrayFormat: bracket | index | comma | separator | none = null,
-    arrayFormatSeparator: string = null,
-    encode: js.UndefOr[Boolean] = js.undefined,
-    skipNull: js.UndefOr[Boolean] = js.undefined,
-    sort: (js.Function2[/* itemLeft */ String, /* itemRight */ String, Double]) | `false` = null,
-    strict: js.UndefOr[Boolean] = js.undefined
-  ): StringifyOptions = {
+  def apply(): StringifyOptions = {
     val __obj = js.Dynamic.literal()
-    if (arrayFormat != null) __obj.updateDynamic("arrayFormat")(arrayFormat.asInstanceOf[js.Any])
-    if (arrayFormatSeparator != null) __obj.updateDynamic("arrayFormatSeparator")(arrayFormatSeparator.asInstanceOf[js.Any])
-    if (!js.isUndefined(encode)) __obj.updateDynamic("encode")(encode.asInstanceOf[js.Any])
-    if (!js.isUndefined(skipNull)) __obj.updateDynamic("skipNull")(skipNull.asInstanceOf[js.Any])
-    if (sort != null) __obj.updateDynamic("sort")(sort.asInstanceOf[js.Any])
-    if (!js.isUndefined(strict)) __obj.updateDynamic("strict")(strict.asInstanceOf[js.Any])
     __obj.asInstanceOf[StringifyOptions]
   }
+  @scala.inline
+  implicit class StringifyOptionsOps[Self <: StringifyOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withArrayFormat(value: bracket | index | comma | separator | none): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arrayFormat")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutArrayFormat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arrayFormat")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withArrayFormatSeparator(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arrayFormatSeparator")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutArrayFormatSeparator: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arrayFormatSeparator")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEncode(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEncode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSkipNull(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("skipNull")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSkipNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("skipNull")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSortFunction2(value: (/* itemLeft */ String, /* itemRight */ String) => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sort")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withSort(value: (js.Function2[/* itemLeft */ String, /* itemRight */ String, Double]) | `false`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sort")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSort: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sort")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStrict(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strict")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStrict: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strict")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

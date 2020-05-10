@@ -39,21 +39,83 @@ trait AssumeRoleWithWebIdentityRequest extends CognitoIdentityCredentialsInputs 
 
 object AssumeRoleWithWebIdentityRequest {
   @scala.inline
-  def apply(
-    RoleArn: arnType,
-    RoleSessionName: roleSessionNameType,
-    WebIdentityToken: clientTokenType,
-    DurationSeconds: Int | Double = null,
-    Policy: sessionPolicyDocumentType = null,
-    PolicyArns: policyDescriptorListType = null,
-    ProviderId: urlType = null
-  ): AssumeRoleWithWebIdentityRequest = {
+  def apply(RoleArn: arnType, RoleSessionName: roleSessionNameType, WebIdentityToken: clientTokenType): AssumeRoleWithWebIdentityRequest = {
     val __obj = js.Dynamic.literal(RoleArn = RoleArn.asInstanceOf[js.Any], RoleSessionName = RoleSessionName.asInstanceOf[js.Any], WebIdentityToken = WebIdentityToken.asInstanceOf[js.Any])
-    if (DurationSeconds != null) __obj.updateDynamic("DurationSeconds")(DurationSeconds.asInstanceOf[js.Any])
-    if (Policy != null) __obj.updateDynamic("Policy")(Policy.asInstanceOf[js.Any])
-    if (PolicyArns != null) __obj.updateDynamic("PolicyArns")(PolicyArns.asInstanceOf[js.Any])
-    if (ProviderId != null) __obj.updateDynamic("ProviderId")(ProviderId.asInstanceOf[js.Any])
     __obj.asInstanceOf[AssumeRoleWithWebIdentityRequest]
   }
+  @scala.inline
+  implicit class AssumeRoleWithWebIdentityRequestOps[Self <: AssumeRoleWithWebIdentityRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRoleArn(value: arnType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RoleArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRoleSessionName(value: roleSessionNameType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RoleSessionName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withWebIdentityToken(value: clientTokenType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebIdentityToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDurationSeconds(value: roleDurationSecondsType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DurationSeconds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDurationSeconds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DurationSeconds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPolicy(value: sessionPolicyDocumentType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Policy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPolicy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Policy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPolicyArns(value: policyDescriptorListType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PolicyArns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPolicyArns: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PolicyArns")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProviderId(value: urlType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProviderId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProviderId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProviderId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

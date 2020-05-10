@@ -7,45 +7,153 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ChartTrendlineOptions extends js.Object {
-  var color: js.UndefOr[String] = js.undefined
-  var degree: js.UndefOr[Double] = js.undefined
-  var labelInLegend: js.UndefOr[String] = js.undefined
-  var lineWidth: js.UndefOr[Double] = js.undefined
-  var opacity: js.UndefOr[Double] = js.undefined
-  var pointSize: js.UndefOr[Double] = js.undefined
-  var pointsVisible: js.UndefOr[Boolean] = js.undefined
-  var showR2: js.UndefOr[Boolean] = js.undefined
-  var `type`: js.UndefOr[linear | exponential | polynomial] = js.undefined
-  var visibleInLegend: js.UndefOr[Boolean] = js.undefined
+  var color: js.UndefOr[String] = js.native
+  var degree: js.UndefOr[Double] = js.native
+  var labelInLegend: js.UndefOr[String] = js.native
+  var lineWidth: js.UndefOr[Double] = js.native
+  var opacity: js.UndefOr[Double] = js.native
+  var pointSize: js.UndefOr[Double] = js.native
+  var pointsVisible: js.UndefOr[Boolean] = js.native
+  var showR2: js.UndefOr[Boolean] = js.native
+  var `type`: js.UndefOr[linear | exponential | polynomial] = js.native
+  var visibleInLegend: js.UndefOr[Boolean] = js.native
 }
 
 object ChartTrendlineOptions {
   @scala.inline
-  def apply(
-    color: String = null,
-    degree: Int | Double = null,
-    labelInLegend: String = null,
-    lineWidth: Int | Double = null,
-    opacity: Int | Double = null,
-    pointSize: Int | Double = null,
-    pointsVisible: js.UndefOr[Boolean] = js.undefined,
-    showR2: js.UndefOr[Boolean] = js.undefined,
-    `type`: linear | exponential | polynomial = null,
-    visibleInLegend: js.UndefOr[Boolean] = js.undefined
-  ): ChartTrendlineOptions = {
+  def apply(): ChartTrendlineOptions = {
     val __obj = js.Dynamic.literal()
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (degree != null) __obj.updateDynamic("degree")(degree.asInstanceOf[js.Any])
-    if (labelInLegend != null) __obj.updateDynamic("labelInLegend")(labelInLegend.asInstanceOf[js.Any])
-    if (lineWidth != null) __obj.updateDynamic("lineWidth")(lineWidth.asInstanceOf[js.Any])
-    if (opacity != null) __obj.updateDynamic("opacity")(opacity.asInstanceOf[js.Any])
-    if (pointSize != null) __obj.updateDynamic("pointSize")(pointSize.asInstanceOf[js.Any])
-    if (!js.isUndefined(pointsVisible)) __obj.updateDynamic("pointsVisible")(pointsVisible.asInstanceOf[js.Any])
-    if (!js.isUndefined(showR2)) __obj.updateDynamic("showR2")(showR2.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (!js.isUndefined(visibleInLegend)) __obj.updateDynamic("visibleInLegend")(visibleInLegend.asInstanceOf[js.Any])
     __obj.asInstanceOf[ChartTrendlineOptions]
   }
+  @scala.inline
+  implicit class ChartTrendlineOptionsOps[Self <: ChartTrendlineOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDegree(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("degree")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDegree: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("degree")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabelInLegend(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelInLegend")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabelInLegend: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelInLegend")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLineWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLineWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOpacity(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("opacity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOpacity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("opacity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPointSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pointSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPointSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pointSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPointsVisible(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pointsVisible")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPointsVisible: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pointsVisible")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowR2(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showR2")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowR2: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showR2")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: linear | exponential | polynomial): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVisibleInLegend(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visibleInLegend")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVisibleInLegend: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visibleInLegend")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -22,13 +22,14 @@ import scala.scalajs.js.annotation._
   *       }
   *     }
   */
+@js.native
 trait ItemResponse extends js.Object {
-  def getFeedback(): QuizFeedback
-  def getItem(): Item
-  def getResponse(): (js.Array[js.Array[String] | String]) | String
-  def getScore(): Double
-  def setFeedback(feedback: js.Any): ItemResponse
-  def setScore(score: js.Any): ItemResponse
+  def getFeedback(): QuizFeedback = js.native
+  def getItem(): Item = js.native
+  def getResponse(): (js.Array[js.Array[String] | String]) | String = js.native
+  def getScore(): Double = js.native
+  def setFeedback(feedback: js.Any): ItemResponse = js.native
+  def setScore(score: js.Any): ItemResponse = js.native
 }
 
 object ItemResponse {
@@ -42,8 +43,51 @@ object ItemResponse {
     setScore: js.Any => ItemResponse
   ): ItemResponse = {
     val __obj = js.Dynamic.literal(getFeedback = js.Any.fromFunction0(getFeedback), getItem = js.Any.fromFunction0(getItem), getResponse = js.Any.fromFunction0(getResponse), getScore = js.Any.fromFunction0(getScore), setFeedback = js.Any.fromFunction1(setFeedback), setScore = js.Any.fromFunction1(setScore))
-  
     __obj.asInstanceOf[ItemResponse]
   }
+  @scala.inline
+  implicit class ItemResponseOps[Self <: ItemResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetFeedback(value: () => QuizFeedback): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getFeedback")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetItem(value: () => Item): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getItem")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetResponse(value: () => (js.Array[js.Array[String] | String]) | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getResponse")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetScore(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getScore")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withSetFeedback(value: js.Any => ItemResponse): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setFeedback")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetScore(value: js.Any => ItemResponse): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setScore")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

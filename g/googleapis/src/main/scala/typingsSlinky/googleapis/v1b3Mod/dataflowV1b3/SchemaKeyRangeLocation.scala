@@ -40,20 +40,77 @@ trait SchemaKeyRangeLocation extends js.Object {
 
 object SchemaKeyRangeLocation {
   @scala.inline
-  def apply(
-    dataDisk: String = null,
-    deliveryEndpoint: String = null,
-    deprecatedPersistentDirectory: String = null,
-    end: String = null,
-    start: String = null
-  ): SchemaKeyRangeLocation = {
+  def apply(): SchemaKeyRangeLocation = {
     val __obj = js.Dynamic.literal()
-    if (dataDisk != null) __obj.updateDynamic("dataDisk")(dataDisk.asInstanceOf[js.Any])
-    if (deliveryEndpoint != null) __obj.updateDynamic("deliveryEndpoint")(deliveryEndpoint.asInstanceOf[js.Any])
-    if (deprecatedPersistentDirectory != null) __obj.updateDynamic("deprecatedPersistentDirectory")(deprecatedPersistentDirectory.asInstanceOf[js.Any])
-    if (end != null) __obj.updateDynamic("end")(end.asInstanceOf[js.Any])
-    if (start != null) __obj.updateDynamic("start")(start.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaKeyRangeLocation]
   }
+  @scala.inline
+  implicit class SchemaKeyRangeLocationOps[Self <: SchemaKeyRangeLocation] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDataDisk(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataDisk")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDataDisk: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataDisk")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeliveryEndpoint(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deliveryEndpoint")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeliveryEndpoint: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deliveryEndpoint")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeprecatedPersistentDirectory(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deprecatedPersistentDirectory")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeprecatedPersistentDirectory: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deprecatedPersistentDirectory")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnd(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("end")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnd: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("end")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStart(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStart: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

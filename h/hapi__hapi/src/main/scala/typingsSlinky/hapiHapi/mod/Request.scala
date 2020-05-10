@@ -140,7 +140,7 @@ trait Request extends Podium {
     * Access: read only and the public server interface.
     * The server object.
     */
-  var server: Server = js.native
+  var server: Server_ = js.native
   /**
     * An object containing parsed HTTP state information (cookies) where each key is the cookie name and value is the matching cookie content after processing using any registered cookie definition.
     */

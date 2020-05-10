@@ -17,35 +17,103 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ParseOptions extends js.Object {
-  var comment: js.UndefOr[Boolean] = js.undefined
-  var ecmaFeatures: js.UndefOr[AnonGlobalReturn] = js.undefined
+  var comment: js.UndefOr[Boolean] = js.native
+  var ecmaFeatures: js.UndefOr[AnonGlobalReturn] = js.native
   var ecmaVersion: js.UndefOr[
     `3` | `5` | `6` | `7` | `8` | `9` | `10` | `2015` | `2016` | `2017` | `2018` | `2019`
-  ] = js.undefined
-  var loc: js.UndefOr[Boolean] = js.undefined
-  var range: js.UndefOr[Boolean] = js.undefined
-  var sourceType: js.UndefOr[SourceType] = js.undefined
+  ] = js.native
+  var loc: js.UndefOr[Boolean] = js.native
+  var range: js.UndefOr[Boolean] = js.native
+  var sourceType: js.UndefOr[SourceType] = js.native
 }
 
 object ParseOptions {
   @scala.inline
-  def apply(
-    comment: js.UndefOr[Boolean] = js.undefined,
-    ecmaFeatures: AnonGlobalReturn = null,
-    ecmaVersion: `3` | `5` | `6` | `7` | `8` | `9` | `10` | `2015` | `2016` | `2017` | `2018` | `2019` = null,
-    loc: js.UndefOr[Boolean] = js.undefined,
-    range: js.UndefOr[Boolean] = js.undefined,
-    sourceType: SourceType = null
-  ): ParseOptions = {
+  def apply(): ParseOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(comment)) __obj.updateDynamic("comment")(comment.asInstanceOf[js.Any])
-    if (ecmaFeatures != null) __obj.updateDynamic("ecmaFeatures")(ecmaFeatures.asInstanceOf[js.Any])
-    if (ecmaVersion != null) __obj.updateDynamic("ecmaVersion")(ecmaVersion.asInstanceOf[js.Any])
-    if (!js.isUndefined(loc)) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
-    if (!js.isUndefined(range)) __obj.updateDynamic("range")(range.asInstanceOf[js.Any])
-    if (sourceType != null) __obj.updateDynamic("sourceType")(sourceType.asInstanceOf[js.Any])
     __obj.asInstanceOf[ParseOptions]
   }
+  @scala.inline
+  implicit class ParseOptionsOps[Self <: ParseOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withComment(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("comment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutComment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("comment")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEcmaFeatures(value: AnonGlobalReturn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ecmaFeatures")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEcmaFeatures: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ecmaFeatures")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEcmaVersion(value: `3` | `5` | `6` | `7` | `8` | `9` | `10` | `2015` | `2016` | `2017` | `2018` | `2019`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ecmaVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEcmaVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ecmaVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLoc(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loc")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLoc: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loc")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRange(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("range")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("range")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSourceType(value: SourceType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSourceType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceType")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

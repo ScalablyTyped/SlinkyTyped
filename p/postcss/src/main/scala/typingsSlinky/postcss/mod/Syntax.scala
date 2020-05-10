@@ -5,27 +5,55 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Syntax extends js.Object {
   /**
     * Function to generate AST by string.
     */
-  var parse: js.UndefOr[Parser] = js.undefined
+  var parse: js.UndefOr[Parser] = js.native
   /**
     * Class to generate string by AST.
     */
-  var stringify: js.UndefOr[Stringifier] = js.undefined
+  var stringify: js.UndefOr[Stringifier] = js.native
 }
 
 object Syntax {
   @scala.inline
-  def apply(
-    parse: (/* css */ ParserInput, /* opts */ js.UndefOr[PickProcessOptionsmapfrom]) => Root_ = null,
-    stringify: (/* node */ Node, /* builder */ Builder) => Unit = null
-  ): Syntax = {
+  def apply(): Syntax = {
     val __obj = js.Dynamic.literal()
-    if (parse != null) __obj.updateDynamic("parse")(js.Any.fromFunction2(parse))
-    if (stringify != null) __obj.updateDynamic("stringify")(js.Any.fromFunction2(stringify))
     __obj.asInstanceOf[Syntax]
   }
+  @scala.inline
+  implicit class SyntaxOps[Self <: Syntax] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withParse(value: (/* css */ ParserInput, /* opts */ js.UndefOr[PickProcessOptionsmapfrom]) => Root_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parse")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutParse: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parse")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStringify(value: (/* node */ Node, /* builder */ Builder) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stringify")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutStringify: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stringify")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

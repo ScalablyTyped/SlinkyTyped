@@ -29,11 +29,41 @@ trait SchemaResourceLocation extends js.Object {
 
 object SchemaResourceLocation {
   @scala.inline
-  def apply(currentLocations: js.Array[String] = null, originalLocations: js.Array[String] = null): SchemaResourceLocation = {
+  def apply(): SchemaResourceLocation = {
     val __obj = js.Dynamic.literal()
-    if (currentLocations != null) __obj.updateDynamic("currentLocations")(currentLocations.asInstanceOf[js.Any])
-    if (originalLocations != null) __obj.updateDynamic("originalLocations")(originalLocations.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaResourceLocation]
   }
+  @scala.inline
+  implicit class SchemaResourceLocationOps[Self <: SchemaResourceLocation] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCurrentLocations(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currentLocations")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCurrentLocations: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currentLocations")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOriginalLocations(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("originalLocations")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOriginalLocations: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("originalLocations")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -5,6 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait TypeofdisplaySource extends js.Object {
   /**
     * @enum
@@ -16,7 +17,7 @@ trait TypeofdisplaySource extends js.Object {
     * **'PIN'**
     * PIN authentication method.
     */
-  val AuthenticationMethod: AnonPBC
+  val AuthenticationMethod: AnonPBC = js.native
   /**
     * @enum
     * @description
@@ -38,7 +39,7 @@ trait TypeofdisplaySource extends js.Object {
     * **'unknown_error'**
     * Unspecified error.
     */
-  val ErrorType: AnonCAPABILITIESNEGOTIATIONERROR
+  val ErrorType: AnonCAPABILITIESNEGOTIATIONERROR = js.native
   /**
     * @enum
     * @description
@@ -51,14 +52,14 @@ trait TypeofdisplaySource extends js.Object {
     * **'disconnected'**
     * Disconnected from this Display Source
     */
-  val SinkState: AnonCONNECTED
-  val getAvailableSinks: js.Function
-  val onSessionErrorOccured: Event[_]
-  val onSessionTerminated: Event[_]
-  val onSinksUpdated: Event[_]
-  val requestAuthentication: js.Function
-  val startSession: js.Function
-  val terminateSession: js.Function
+  val SinkState: AnonCONNECTED = js.native
+  val getAvailableSinks: js.Function = js.native
+  val onSessionErrorOccured: Event[_] = js.native
+  val onSessionTerminated: Event[_] = js.native
+  val onSinksUpdated: Event[_] = js.native
+  val requestAuthentication: js.Function = js.native
+  val startSession: js.Function = js.native
+  val terminateSession: js.Function = js.native
 }
 
 object TypeofdisplaySource {
@@ -76,8 +77,75 @@ object TypeofdisplaySource {
     terminateSession: js.Function
   ): TypeofdisplaySource = {
     val __obj = js.Dynamic.literal(AuthenticationMethod = AuthenticationMethod.asInstanceOf[js.Any], ErrorType = ErrorType.asInstanceOf[js.Any], SinkState = SinkState.asInstanceOf[js.Any], getAvailableSinks = getAvailableSinks.asInstanceOf[js.Any], onSessionErrorOccured = onSessionErrorOccured.asInstanceOf[js.Any], onSessionTerminated = onSessionTerminated.asInstanceOf[js.Any], onSinksUpdated = onSinksUpdated.asInstanceOf[js.Any], requestAuthentication = requestAuthentication.asInstanceOf[js.Any], startSession = startSession.asInstanceOf[js.Any], terminateSession = terminateSession.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[TypeofdisplaySource]
   }
+  @scala.inline
+  implicit class TypeofdisplaySourceOps[Self <: TypeofdisplaySource] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAuthenticationMethod(value: AnonPBC): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AuthenticationMethod")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withErrorType(value: AnonCAPABILITIESNEGOTIATIONERROR): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ErrorType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSinkState(value: AnonCONNECTED): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SinkState")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGetAvailableSinks(value: js.Function): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getAvailableSinks")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOnSessionErrorOccured(value: Event[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onSessionErrorOccured")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOnSessionTerminated(value: Event[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onSessionTerminated")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOnSinksUpdated(value: Event[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onSinksUpdated")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRequestAuthentication(value: js.Function): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requestAuthentication")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStartSession(value: js.Function): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startSession")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTerminateSession(value: js.Function): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("terminateSession")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

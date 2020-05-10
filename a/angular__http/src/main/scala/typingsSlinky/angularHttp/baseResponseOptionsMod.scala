@@ -19,7 +19,7 @@ object baseResponseOptionsMod extends js.Object {
     /**
       * String, Object, ArrayBuffer or Blob representing the body of the {@link Response}.
       */
-    var body: String | js.Object | scala.scalajs.js.typedarray.ArrayBuffer | Blob | Null = js.native
+    var body: String | js.Object | js.typedarray.ArrayBuffer | Blob | Null = js.native
     /**
       * Response {@link Headers headers}
       */

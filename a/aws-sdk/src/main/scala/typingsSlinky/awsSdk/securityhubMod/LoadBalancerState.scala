@@ -18,11 +18,41 @@ trait LoadBalancerState extends js.Object {
 
 object LoadBalancerState {
   @scala.inline
-  def apply(Code: NonEmptyString = null, Reason: NonEmptyString = null): LoadBalancerState = {
+  def apply(): LoadBalancerState = {
     val __obj = js.Dynamic.literal()
-    if (Code != null) __obj.updateDynamic("Code")(Code.asInstanceOf[js.Any])
-    if (Reason != null) __obj.updateDynamic("Reason")(Reason.asInstanceOf[js.Any])
     __obj.asInstanceOf[LoadBalancerState]
   }
+  @scala.inline
+  implicit class LoadBalancerStateOps[Self <: LoadBalancerState] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCode(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Code")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Code")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReason(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Reason")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReason: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Reason")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

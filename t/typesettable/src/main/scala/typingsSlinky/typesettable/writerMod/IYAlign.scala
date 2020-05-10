@@ -13,12 +13,10 @@ trait IYAlign extends js.Object
 
 object IYAlign {
   @scala.inline
-  def bottom: typingsSlinky.typesettable.typesettableStrings.bottom = this.cast("bottom")
+  def bottom: typingsSlinky.typesettable.typesettableStrings.bottom = "bottom".asInstanceOf[typingsSlinky.typesettable.typesettableStrings.bottom]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def center: typingsSlinky.typesettable.typesettableStrings.center = "center".asInstanceOf[typingsSlinky.typesettable.typesettableStrings.center]
   @scala.inline
-  def center: typingsSlinky.typesettable.typesettableStrings.center = this.cast("center")
-  @scala.inline
-  def top: typingsSlinky.typesettable.typesettableStrings.top = this.cast("top")
+  def top: typingsSlinky.typesettable.typesettableStrings.top = "top".asInstanceOf[typingsSlinky.typesettable.typesettableStrings.top]
 }
 

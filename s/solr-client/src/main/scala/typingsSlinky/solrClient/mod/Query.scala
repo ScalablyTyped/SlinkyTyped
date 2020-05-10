@@ -1,6 +1,5 @@
 package typingsSlinky.solrClient.mod
 
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,7 +24,7 @@ trait Query extends js.Object {
   def hl(options: HighlightOptions): Query = js.native
   def matchFilter(field: String, value: String): Query = js.native
   def matchFilter(field: String, value: Double): Query = js.native
-  def matchFilter(field: String, value: Date): Query = js.native
+  def matchFilter(field: String, value: js.Date): Query = js.native
   def mlt(options: MoreLikeThisOptions): Query = js.native
   def mm(minimum: String): Query = js.native
   def mm(minimum: Double): Query = js.native

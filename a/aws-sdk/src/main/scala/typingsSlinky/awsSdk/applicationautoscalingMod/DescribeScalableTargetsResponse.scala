@@ -18,11 +18,41 @@ trait DescribeScalableTargetsResponse extends js.Object {
 
 object DescribeScalableTargetsResponse {
   @scala.inline
-  def apply(NextToken: XmlString = null, ScalableTargets: ScalableTargets = null): DescribeScalableTargetsResponse = {
+  def apply(): DescribeScalableTargetsResponse = {
     val __obj = js.Dynamic.literal()
-    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
-    if (ScalableTargets != null) __obj.updateDynamic("ScalableTargets")(ScalableTargets.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeScalableTargetsResponse]
   }
+  @scala.inline
+  implicit class DescribeScalableTargetsResponseOps[Self <: DescribeScalableTargetsResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNextToken(value: XmlString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScalableTargets(value: ScalableTargets): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ScalableTargets")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScalableTargets: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ScalableTargets")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -4,18 +4,44 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonTintColor extends js.Object {
-  var focused: Boolean
-  var route: AnonKey
-  var tintColor: String
+  var focused: Boolean = js.native
+  var route: AnonKey = js.native
+  var tintColor: String = js.native
 }
 
 object AnonTintColor {
   @scala.inline
   def apply(focused: Boolean, route: AnonKey, tintColor: String): AnonTintColor = {
     val __obj = js.Dynamic.literal(focused = focused.asInstanceOf[js.Any], route = route.asInstanceOf[js.Any], tintColor = tintColor.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[AnonTintColor]
   }
+  @scala.inline
+  implicit class AnonTintColorOps[Self <: AnonTintColor] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFocused(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("focused")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRoute(value: AnonKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("route")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTintColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tintColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -121,6 +121,7 @@ import scala.scalajs.js.annotation._
   *
   * @see https://echarts.apache.org/en/option.html#series-parallel
   */
+@js.native
 trait SeriesParallel_ extends js.Object {
   /**
     * When perform brush selection, the selected lines will be set
@@ -131,7 +132,7 @@ trait SeriesParallel_ extends js.Object {
     * 1
     * @see https://echarts.apache.org/en/option.html#series-parallel.activeOpacity
     */
-  var activeOpacity: js.UndefOr[Double] = js.undefined
+  var activeOpacity: js.UndefOr[Double] = js.native
   /**
     * Whether to enable animation.
     *
@@ -140,7 +141,7 @@ trait SeriesParallel_ extends js.Object {
     * "true"
     * @see https://echarts.apache.org/en/option.html#series-parallel.animation
     */
-  var animation: js.UndefOr[Boolean] = js.undefined
+  var animation: js.UndefOr[Boolean] = js.native
   /**
     * Delay before updating the first animation, which supports callback
     * function for different data to have different animation effect.
@@ -156,7 +157,7 @@ trait SeriesParallel_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-parallel.animationDelay
     */
-  var animationDelay: js.UndefOr[js.Function | Double] = js.undefined
+  var animationDelay: js.UndefOr[js.Function | Double] = js.native
   /**
     * Delay before updating animation, which supports callback function
     * for different data to have different animation effect.
@@ -172,7 +173,7 @@ trait SeriesParallel_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-parallel.animationDelayUpdate
     */
-  var animationDelayUpdate: js.UndefOr[js.Function | Double] = js.undefined
+  var animationDelayUpdate: js.UndefOr[js.Function | Double] = js.native
   /**
     * Duration of the first animation, which supports callback function
     * for different data to have different animation effect:
@@ -184,7 +185,7 @@ trait SeriesParallel_ extends js.Object {
     * 1000
     * @see https://echarts.apache.org/en/option.html#series-parallel.animationDuration
     */
-  var animationDuration: js.UndefOr[js.Function | Double] = js.undefined
+  var animationDuration: js.UndefOr[js.Function | Double] = js.native
   /**
     * Time for animation to complete, which supports callback function
     * for different data to have different animation effect:
@@ -196,7 +197,7 @@ trait SeriesParallel_ extends js.Object {
     * 300
     * @see https://echarts.apache.org/en/option.html#series-parallel.animationDurationUpdate
     */
-  var animationDurationUpdate: js.UndefOr[js.Function | Double] = js.undefined
+  var animationDurationUpdate: js.UndefOr[js.Function | Double] = js.native
   /**
     * Easing method used for the first animation.
     * Varied easing effects can be found at
@@ -208,7 +209,7 @@ trait SeriesParallel_ extends js.Object {
     * "linear"
     * @see https://echarts.apache.org/en/option.html#series-parallel.animationEasing
     */
-  var animationEasing: js.UndefOr[String] = js.undefined
+  var animationEasing: js.UndefOr[String] = js.native
   /**
     * Easing method used for animation.
     *
@@ -217,7 +218,7 @@ trait SeriesParallel_ extends js.Object {
     * "cubicOut"
     * @see https://echarts.apache.org/en/option.html#series-parallel.animationEasingUpdate
     */
-  var animationEasingUpdate: js.UndefOr[String] = js.undefined
+  var animationEasingUpdate: js.UndefOr[String] = js.native
   /**
     * Whether to set graphic number threshold to animation.
     * Animation will be disabled when graphic number is larger than
@@ -228,7 +229,7 @@ trait SeriesParallel_ extends js.Object {
     * 2000
     * @see https://echarts.apache.org/en/option.html#series-parallel.animationThreshold
     */
-  var animationThreshold: js.UndefOr[Double] = js.undefined
+  var animationThreshold: js.UndefOr[Double] = js.native
   /**
     * The coordinate used in the series, whose options are:
     *
@@ -243,7 +244,7 @@ trait SeriesParallel_ extends js.Object {
     * "parallel"
     * @see https://echarts.apache.org/en/option.html#series-parallel.coordinateSystem
     */
-  var coordinateSystem: js.UndefOr[String] = js.undefined
+  var coordinateSystem: js.UndefOr[String] = js.native
   /**
     * For example,
     * [series-parallel.data](https://echarts.apache.org/en/option.html#series-parallel.data)
@@ -263,11 +264,11 @@ trait SeriesParallel_ extends js.Object {
     */
   var data: js.UndefOr[
     js.Array[(js.Array[Double | String | DataObject]) | DataObject | Double | String]
-  ] = js.undefined
+  ] = js.native
   /**
     * @see https://echarts.apache.org/en/option.html#series-parallel.emphasis
     */
-  var emphasis: js.UndefOr[AnonLineStyleAnonShadowBlur] = js.undefined
+  var emphasis: js.UndefOr[AnonLineStyleAnonShadowBlur] = js.native
   /**
     * Component ID, not specified by default.
     * If specified, it can be used to refer the component in option
@@ -276,7 +277,7 @@ trait SeriesParallel_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-parallel.id
     */
-  var id: js.UndefOr[String] = js.undefined
+  var id: js.UndefOr[String] = js.native
   /**
     * When perform brush selection, the unselected lines will be set
     * as this transparency rate (which could darken those lines).
@@ -286,14 +287,14 @@ trait SeriesParallel_ extends js.Object {
     * 0.05
     * @see https://echarts.apache.org/en/option.html#series-parallel.inactiveOpacity
     */
-  var inactiveOpacity: js.UndefOr[Double] = js.undefined
+  var inactiveOpacity: js.UndefOr[Double] = js.native
   /**
     * Line style.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-parallel.lineStyle
     */
-  var lineStyle: js.UndefOr[AnonShadowBlur] = js.undefined
+  var lineStyle: js.UndefOr[AnonShadowBlur] = js.native
   /**
     * Series name used for displaying in
     * [tooltip](https://echarts.apache.org/en/option.html#tooltip)
@@ -304,7 +305,7 @@ trait SeriesParallel_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-parallel.name
     */
-  var name: js.UndefOr[String] = js.undefined
+  var name: js.UndefOr[String] = js.native
   /**
     * Index of
     * [parallel coordinates](https://echarts.apache.org/en/option.html#parallel)
@@ -314,7 +315,7 @@ trait SeriesParallel_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-parallel.parallelIndex
     */
-  var parallelIndex: js.UndefOr[Double] = js.undefined
+  var parallelIndex: js.UndefOr[Double] = js.native
   /**
     * `progressive` specifies the amount of graphic elements that can
     * be rendered within a frame (about 16ms) if "progressive rendering"
@@ -331,7 +332,7 @@ trait SeriesParallel_ extends js.Object {
     * 500
     * @see https://echarts.apache.org/en/option.html#series-parallel.progressive
     */
-  var progressive: js.UndefOr[Double] = js.undefined
+  var progressive: js.UndefOr[Double] = js.native
   /**
     * Chunk approach, optional values:
     *
@@ -345,7 +346,7 @@ trait SeriesParallel_ extends js.Object {
     * "sequential"
     * @see https://echarts.apache.org/en/option.html#series-parallel.progressiveChunkMode
     */
-  var progressiveChunkMode: js.UndefOr[String] = js.undefined
+  var progressiveChunkMode: js.UndefOr[String] = js.native
   /**
     * If current data amount is over the threshold, "progressive rendering"
     * is enabled.
@@ -355,7 +356,7 @@ trait SeriesParallel_ extends js.Object {
     * 3000
     * @see https://echarts.apache.org/en/option.html#series-parallel.progressiveThreshold
     */
-  var progressiveThreshold: js.UndefOr[Double] = js.undefined
+  var progressiveThreshold: js.UndefOr[Double] = js.native
   /**
     * Whether to update view in realtime.
     *
@@ -364,7 +365,7 @@ trait SeriesParallel_ extends js.Object {
     * "true"
     * @see https://echarts.apache.org/en/option.html#series-parallel.realtime
     */
-  var realtime: js.UndefOr[Boolean] = js.undefined
+  var realtime: js.UndefOr[Boolean] = js.native
   /**
     * Whether to ignore mouse events.
     * Default value is false, for triggering and responding to mouse
@@ -373,7 +374,7 @@ trait SeriesParallel_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-parallel.silent
     */
-  var silent: js.UndefOr[Boolean] = js.undefined
+  var silent: js.UndefOr[Boolean] = js.native
   /**
     * Whether to smooth the line.
     * It defaults to be `false` and can be set as `true` or the values
@@ -382,20 +383,20 @@ trait SeriesParallel_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-parallel.smooth
     */
-  var smooth: js.UndefOr[Boolean | Double] = js.undefined
+  var smooth: js.UndefOr[Boolean | Double] = js.native
   /**
     * tooltip settings in this series.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-parallel.tooltip
     */
-  var tooltip: js.UndefOr[AnonExtraCssText] = js.undefined
+  var tooltip: js.UndefOr[AnonExtraCssText] = js.native
   /**
     * @default
     * "parallel"
     * @see https://echarts.apache.org/en/option.html#series-parallel.type
     */
-  var `type`: js.UndefOr[String] = js.undefined
+  var `type`: js.UndefOr[String] = js.native
   /**
     * `z` value of all graghical elements in parallel, which controls
     * order of drawing graphical components.
@@ -410,7 +411,7 @@ trait SeriesParallel_ extends js.Object {
     * 2
     * @see https://echarts.apache.org/en/option.html#series-parallel.z
     */
-  var z: js.UndefOr[Double] = js.undefined
+  var z: js.UndefOr[Double] = js.native
   /**
     * `zlevel` value of all graghical elements in parallel.
     *
@@ -428,69 +429,346 @@ trait SeriesParallel_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-parallel.zlevel
     */
-  var zlevel: js.UndefOr[Double] = js.undefined
+  var zlevel: js.UndefOr[Double] = js.native
 }
 
 object SeriesParallel_ {
   @scala.inline
-  def apply(
-    activeOpacity: Int | Double = null,
-    animation: js.UndefOr[Boolean] = js.undefined,
-    animationDelay: js.Function | Double = null,
-    animationDelayUpdate: js.Function | Double = null,
-    animationDuration: js.Function | Double = null,
-    animationDurationUpdate: js.Function | Double = null,
-    animationEasing: String = null,
-    animationEasingUpdate: String = null,
-    animationThreshold: Int | Double = null,
-    coordinateSystem: String = null,
-    data: js.Array[(js.Array[Double | String | DataObject]) | DataObject | Double | String] = null,
-    emphasis: AnonLineStyleAnonShadowBlur = null,
-    id: String = null,
-    inactiveOpacity: Int | Double = null,
-    lineStyle: AnonShadowBlur = null,
-    name: String = null,
-    parallelIndex: Int | Double = null,
-    progressive: Int | Double = null,
-    progressiveChunkMode: String = null,
-    progressiveThreshold: Int | Double = null,
-    realtime: js.UndefOr[Boolean] = js.undefined,
-    silent: js.UndefOr[Boolean] = js.undefined,
-    smooth: Boolean | Double = null,
-    tooltip: AnonExtraCssText = null,
-    `type`: String = null,
-    z: Int | Double = null,
-    zlevel: Int | Double = null
-  ): SeriesParallel_ = {
+  def apply(): SeriesParallel_ = {
     val __obj = js.Dynamic.literal()
-    if (activeOpacity != null) __obj.updateDynamic("activeOpacity")(activeOpacity.asInstanceOf[js.Any])
-    if (!js.isUndefined(animation)) __obj.updateDynamic("animation")(animation.asInstanceOf[js.Any])
-    if (animationDelay != null) __obj.updateDynamic("animationDelay")(animationDelay.asInstanceOf[js.Any])
-    if (animationDelayUpdate != null) __obj.updateDynamic("animationDelayUpdate")(animationDelayUpdate.asInstanceOf[js.Any])
-    if (animationDuration != null) __obj.updateDynamic("animationDuration")(animationDuration.asInstanceOf[js.Any])
-    if (animationDurationUpdate != null) __obj.updateDynamic("animationDurationUpdate")(animationDurationUpdate.asInstanceOf[js.Any])
-    if (animationEasing != null) __obj.updateDynamic("animationEasing")(animationEasing.asInstanceOf[js.Any])
-    if (animationEasingUpdate != null) __obj.updateDynamic("animationEasingUpdate")(animationEasingUpdate.asInstanceOf[js.Any])
-    if (animationThreshold != null) __obj.updateDynamic("animationThreshold")(animationThreshold.asInstanceOf[js.Any])
-    if (coordinateSystem != null) __obj.updateDynamic("coordinateSystem")(coordinateSystem.asInstanceOf[js.Any])
-    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
-    if (emphasis != null) __obj.updateDynamic("emphasis")(emphasis.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (inactiveOpacity != null) __obj.updateDynamic("inactiveOpacity")(inactiveOpacity.asInstanceOf[js.Any])
-    if (lineStyle != null) __obj.updateDynamic("lineStyle")(lineStyle.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (parallelIndex != null) __obj.updateDynamic("parallelIndex")(parallelIndex.asInstanceOf[js.Any])
-    if (progressive != null) __obj.updateDynamic("progressive")(progressive.asInstanceOf[js.Any])
-    if (progressiveChunkMode != null) __obj.updateDynamic("progressiveChunkMode")(progressiveChunkMode.asInstanceOf[js.Any])
-    if (progressiveThreshold != null) __obj.updateDynamic("progressiveThreshold")(progressiveThreshold.asInstanceOf[js.Any])
-    if (!js.isUndefined(realtime)) __obj.updateDynamic("realtime")(realtime.asInstanceOf[js.Any])
-    if (!js.isUndefined(silent)) __obj.updateDynamic("silent")(silent.asInstanceOf[js.Any])
-    if (smooth != null) __obj.updateDynamic("smooth")(smooth.asInstanceOf[js.Any])
-    if (tooltip != null) __obj.updateDynamic("tooltip")(tooltip.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (z != null) __obj.updateDynamic("z")(z.asInstanceOf[js.Any])
-    if (zlevel != null) __obj.updateDynamic("zlevel")(zlevel.asInstanceOf[js.Any])
     __obj.asInstanceOf[SeriesParallel_]
   }
+  @scala.inline
+  implicit class SeriesParallel_Ops[Self <: SeriesParallel_] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withActiveOpacity(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("activeOpacity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutActiveOpacity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("activeOpacity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAnimation(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAnimationDelay(value: js.Function | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDelay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimationDelay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDelay")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAnimationDelayUpdate(value: js.Function | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDelayUpdate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimationDelayUpdate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDelayUpdate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAnimationDuration(value: js.Function | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDuration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimationDuration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDuration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAnimationDurationUpdate(value: js.Function | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDurationUpdate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimationDurationUpdate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDurationUpdate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAnimationEasing(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationEasing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimationEasing: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationEasing")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAnimationEasingUpdate(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationEasingUpdate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimationEasingUpdate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationEasingUpdate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAnimationThreshold(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationThreshold")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimationThreshold: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationThreshold")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCoordinateSystem(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("coordinateSystem")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCoordinateSystem: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("coordinateSystem")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withData(value: js.Array[(js.Array[Double | String | DataObject]) | DataObject | Double | String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEmphasis(value: AnonLineStyleAnonShadowBlur): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("emphasis")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEmphasis: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("emphasis")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInactiveOpacity(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inactiveOpacity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInactiveOpacity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inactiveOpacity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLineStyle(value: AnonShadowBlur): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLineStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParallelIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parallelIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParallelIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parallelIndex")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProgressive(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("progressive")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProgressive: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("progressive")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProgressiveChunkMode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("progressiveChunkMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProgressiveChunkMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("progressiveChunkMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProgressiveThreshold(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("progressiveThreshold")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProgressiveThreshold: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("progressiveThreshold")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRealtime(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("realtime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRealtime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("realtime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSilent(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("silent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSilent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("silent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSmooth(value: Boolean | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("smooth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSmooth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("smooth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTooltip(value: AnonExtraCssText): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTooltip: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withZ(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("z")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutZ: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("z")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withZlevel(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zlevel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutZlevel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zlevel")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

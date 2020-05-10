@@ -1,7 +1,6 @@
 package typingsSlinky.mobx
 
 import typingsSlinky.mobx.interceptUtilsMod.IInterceptable
-import typingsSlinky.mobx.interceptUtilsMod.IInterceptor
 import typingsSlinky.mobx.listenUtilsMod.IListenable
 import typingsSlinky.mobx.modifiersMod.IEnhancer
 import typingsSlinky.mobx.utilsMod.Lambda
@@ -38,14 +37,12 @@ object observablesetMod extends js.Object {
     var dehanceValue: js.Any = js.native
     var dehancer: js.Any = js.native
     var name: String = js.native
-    @JSName(scala.scalajs.js.Symbol.toStringTag)
+    @JSName(js.Symbol.toStringTag)
     var toStringTag_ObservableSet: typingsSlinky.mobx.mobxStrings.Set = js.native
     def delete(value: js.Any): Boolean = js.native
     def enhancer(newV: js.Any): js.Any = js.native
     def enhancer(newV: js.Any, oldV: js.Any): js.Any = js.native
     def has(value: js.Any): Boolean = js.native
-    /* CompleteClass */
-    override def intercept(handler: IInterceptor[ISetWillChange[js.Any]]): Lambda = js.native
     def observe(listener: js.Function1[/* changes */ ISetDidChange[T], Unit]): Lambda = js.native
     def observe(listener: js.Function1[/* changes */ ISetDidChange[T], Unit], fireImmediately: Boolean): Lambda = js.native
     def replace(other: IObservableSetInitialValues[T]): ObservableSet[T] = js.native

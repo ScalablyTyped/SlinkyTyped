@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait CreateTaskRequest extends js.Object {
   /**
     * The response_view specifies which subset of the Task will be
@@ -19,7 +20,7 @@ trait CreateTaskRequest extends js.Object {
     * [Google IAM](/iam/) permission on the
     * Task.name resource.
     */
-  var responseView: js.UndefOr[String] = js.undefined
+  var responseView: js.UndefOr[String] = js.native
   /**
     * Required.
     *
@@ -57,16 +58,46 @@ trait CreateTaskRequest extends js.Object {
     * uniform distribution of task ids to store and serve tasks
     * efficiently.
     */
-  var task: js.UndefOr[Task] = js.undefined
+  var task: js.UndefOr[Task] = js.native
 }
 
 object CreateTaskRequest {
   @scala.inline
-  def apply(responseView: String = null, task: Task = null): CreateTaskRequest = {
+  def apply(): CreateTaskRequest = {
     val __obj = js.Dynamic.literal()
-    if (responseView != null) __obj.updateDynamic("responseView")(responseView.asInstanceOf[js.Any])
-    if (task != null) __obj.updateDynamic("task")(task.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateTaskRequest]
   }
+  @scala.inline
+  implicit class CreateTaskRequestOps[Self <: CreateTaskRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withResponseView(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("responseView")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResponseView: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("responseView")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTask(value: Task): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("task")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTask: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("task")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

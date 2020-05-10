@@ -14,14 +14,12 @@ trait Status extends js.Object
 
 object Status {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def invited: typingsSlinky.twilioChat.twilioChatStrings.invited = "invited".asInstanceOf[typingsSlinky.twilioChat.twilioChatStrings.invited]
   @scala.inline
-  def invited: typingsSlinky.twilioChat.twilioChatStrings.invited = this.cast("invited")
+  def joined: typingsSlinky.twilioChat.twilioChatStrings.joined = "joined".asInstanceOf[typingsSlinky.twilioChat.twilioChatStrings.joined]
   @scala.inline
-  def joined: typingsSlinky.twilioChat.twilioChatStrings.joined = this.cast("joined")
+  def known: typingsSlinky.twilioChat.twilioChatStrings.known = "known".asInstanceOf[typingsSlinky.twilioChat.twilioChatStrings.known]
   @scala.inline
-  def known: typingsSlinky.twilioChat.twilioChatStrings.known = this.cast("known")
-  @scala.inline
-  def unknown: typingsSlinky.twilioChat.twilioChatStrings.unknown = this.cast("unknown")
+  def unknown: typingsSlinky.twilioChat.twilioChatStrings.unknown = "unknown".asInstanceOf[typingsSlinky.twilioChat.twilioChatStrings.unknown]
 }
 

@@ -406,7 +406,6 @@ package object sagemakerMod {
   type ExecutionStatus = typingsSlinky.awsSdk.sagemakerMod._ExecutionStatus | java.lang.String
   type ExitMessage = java.lang.String
   type ExperimentArn = java.lang.String
-  type ExperimentConfigName = java.lang.String
   type ExperimentDescription = java.lang.String
   type ExperimentEntityName = java.lang.String
   type ExperimentSourceArn = java.lang.String
@@ -1159,7 +1158,9 @@ package object sagemakerMod {
     - typingsSlinky.awsSdk.awsSdkStrings.jetson_tx1
     - typingsSlinky.awsSdk.awsSdkStrings.jetson_tx2
     - typingsSlinky.awsSdk.awsSdkStrings.jetson_nano
+    - typingsSlinky.awsSdk.awsSdkStrings.jetson_xavier
     - typingsSlinky.awsSdk.awsSdkStrings.rasp3b
+    - typingsSlinky.awsSdk.awsSdkStrings.imx8qm
     - typingsSlinky.awsSdk.awsSdkStrings.deeplens
     - typingsSlinky.awsSdk.awsSdkStrings.rk3399
     - typingsSlinky.awsSdk.awsSdkStrings.rk3288
@@ -1167,6 +1168,7 @@ package object sagemakerMod {
     - typingsSlinky.awsSdk.awsSdkStrings.sbe_c
     - typingsSlinky.awsSdk.awsSdkStrings.qcs605
     - typingsSlinky.awsSdk.awsSdkStrings.qcs603
+    - typingsSlinky.awsSdk.awsSdkStrings.amba_cv22
     - java.lang.String
   */
   type TargetDevice = typingsSlinky.awsSdk.sagemakerMod._TargetDevice | java.lang.String
@@ -1344,6 +1346,14 @@ package object sagemakerMod {
   */
   type UserProfileStatus = typingsSlinky.awsSdk.sagemakerMod._UserProfileStatus | java.lang.String
   type VariantName = java.lang.String
+  type VariantPropertyList = js.Array[typingsSlinky.awsSdk.sagemakerMod.VariantProperty]
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.DesiredInstanceCount
+    - typingsSlinky.awsSdk.awsSdkStrings.DesiredWeight
+    - typingsSlinky.awsSdk.awsSdkStrings.DataCaptureConfig
+    - java.lang.String
+  */
+  type VariantPropertyType = typingsSlinky.awsSdk.sagemakerMod._VariantPropertyType | java.lang.String
   type VariantWeight = scala.Double
   type VolumeSizeInGB = scala.Double
   type VpcId = java.lang.String

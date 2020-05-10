@@ -1,6 +1,5 @@
 package typingsSlinky.typpy.mod
 
-import typingsSlinky.std.RegExp
 import typingsSlinky.typpy.typpyStrings.`null`
 import typingsSlinky.typpy.typpyStrings.array
 import typingsSlinky.typpy.typpyStrings.boolean
@@ -23,6 +22,6 @@ trait IsFn extends js.Object {
   def apply(input: Boolean): boolean = js.native
    // tslint:disable-line:ban-types
   def apply(input: Double): number | nan = js.native
-  def apply(input: RegExp): regexp = js.native
+  def apply(input: js.RegExp): regexp = js.native
 }
 

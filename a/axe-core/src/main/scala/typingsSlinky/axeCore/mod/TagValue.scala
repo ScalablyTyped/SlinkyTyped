@@ -14,14 +14,12 @@ trait TagValue extends js.Object
 
 object TagValue {
   @scala.inline
-  def `best-practice`: typingsSlinky.axeCore.axeCoreStrings.`best-practice` = this.cast("best-practice")
+  def `best-practice`: typingsSlinky.axeCore.axeCoreStrings.`best-practice` = "best-practice".asInstanceOf[typingsSlinky.axeCore.axeCoreStrings.`best-practice`]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def section508: typingsSlinky.axeCore.axeCoreStrings.section508 = "section508".asInstanceOf[typingsSlinky.axeCore.axeCoreStrings.section508]
   @scala.inline
-  def section508: typingsSlinky.axeCore.axeCoreStrings.section508 = this.cast("section508")
+  def wcag2a: typingsSlinky.axeCore.axeCoreStrings.wcag2a = "wcag2a".asInstanceOf[typingsSlinky.axeCore.axeCoreStrings.wcag2a]
   @scala.inline
-  def wcag2a: typingsSlinky.axeCore.axeCoreStrings.wcag2a = this.cast("wcag2a")
-  @scala.inline
-  def wcag2aa: typingsSlinky.axeCore.axeCoreStrings.wcag2aa = this.cast("wcag2aa")
+  def wcag2aa: typingsSlinky.axeCore.axeCoreStrings.wcag2aa = "wcag2aa".asInstanceOf[typingsSlinky.axeCore.axeCoreStrings.wcag2aa]
 }
 

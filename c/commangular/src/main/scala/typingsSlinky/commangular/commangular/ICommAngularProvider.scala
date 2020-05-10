@@ -11,30 +11,31 @@ import scala.scalajs.js.annotation._
 	 * can have multiple command config blocks to separate functional parts of your application.
 	 * see http://commangular.org/docs/#using-the-provider
 	 */
+@js.native
 trait ICommAngularProvider extends js.Object {
   /**
   		  * A command flow is a decision point inside the command group.You can have any number
   		  * of flows inside a command group and nesting them how you perfer.
   		  * see http://commangular.org/docs/#building-command-flows
   		  */
-  def asFlow(): ICommAngularDescriptor
+  def asFlow(): ICommAngularDescriptor = js.native
   /**
   		 * Used along with mapTo function. Maps commands to be executed parallel
   		 * see http://commangular.org/docs/#building-parallel-commands
   		 */
-  def asParallel(): ICommAngularDescriptor
+  def asParallel(): ICommAngularDescriptor = js.native
   /**
   		 * Used along with mapTo function. Creates a sequence of commands that
   		 * execute after one and other
   		 * see http://commangular.org/docs/#building-command-sequences
   		 */
-  def asSequence(): ICommAngularDescriptor
-  def findCommand(eventName: String): ICommAngularDescriptor
+  def asSequence(): ICommAngularDescriptor = js.native
+  def findCommand(eventName: String): ICommAngularDescriptor = js.native
   /**
   		 * This function lets you map a even name to a command sequence
   		 * @param eventName An event that will be watched by commangular
   		 */
-  def mapTo(eventName: String): ICommAngularDescriptor
+  def mapTo(eventName: String): ICommAngularDescriptor = js.native
 }
 
 object ICommAngularProvider {
@@ -47,8 +48,45 @@ object ICommAngularProvider {
     mapTo: String => ICommAngularDescriptor
   ): ICommAngularProvider = {
     val __obj = js.Dynamic.literal(asFlow = js.Any.fromFunction0(asFlow), asParallel = js.Any.fromFunction0(asParallel), asSequence = js.Any.fromFunction0(asSequence), findCommand = js.Any.fromFunction1(findCommand), mapTo = js.Any.fromFunction1(mapTo))
-  
     __obj.asInstanceOf[ICommAngularProvider]
   }
+  @scala.inline
+  implicit class ICommAngularProviderOps[Self <: ICommAngularProvider] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAsFlow(value: () => ICommAngularDescriptor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("asFlow")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withAsParallel(value: () => ICommAngularDescriptor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("asParallel")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withAsSequence(value: () => ICommAngularDescriptor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("asSequence")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withFindCommand(value: String => ICommAngularDescriptor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("findCommand")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMapTo(value: String => ICommAngularDescriptor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mapTo")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

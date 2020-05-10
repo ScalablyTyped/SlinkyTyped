@@ -5,38 +5,61 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IgTreeGridUpdatingLocale
   extends /**
-	 * Option for IgTreeGridUpdatingLocale
+	 * Option for JSONPDataSourceSettings
 	 */
 /* optionName */ StringDictionary[js.Any] {
   /**
   	 * Specifies the label of the add child button in touch environment.
   	 *
   	 */
-  var addChildButtonLabel: js.UndefOr[String] = js.undefined
+  var addChildButtonLabel: js.UndefOr[String] = js.native
   /**
   	 * Specifies the add child tooltip text.
   	 *
   	 */
-  var addChildTooltip: js.UndefOr[String] = js.undefined
+  var addChildTooltip: js.UndefOr[String] = js.native
 }
 
 object IgTreeGridUpdatingLocale {
   @scala.inline
-  def apply(
-    StringDictionary: /**
-  	 * Option for IgTreeGridUpdatingLocale
-  	 */
-  /* optionName */ StringDictionary[js.Any] = null,
-    addChildButtonLabel: String = null,
-    addChildTooltip: String = null
-  ): IgTreeGridUpdatingLocale = {
+  def apply(): IgTreeGridUpdatingLocale = {
     val __obj = js.Dynamic.literal()
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
-    if (addChildButtonLabel != null) __obj.updateDynamic("addChildButtonLabel")(addChildButtonLabel.asInstanceOf[js.Any])
-    if (addChildTooltip != null) __obj.updateDynamic("addChildTooltip")(addChildTooltip.asInstanceOf[js.Any])
     __obj.asInstanceOf[IgTreeGridUpdatingLocale]
   }
+  @scala.inline
+  implicit class IgTreeGridUpdatingLocaleOps[Self <: IgTreeGridUpdatingLocale] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAddChildButtonLabel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addChildButtonLabel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAddChildButtonLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addChildButtonLabel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAddChildTooltip(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addChildTooltip")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAddChildTooltip: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addChildTooltip")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

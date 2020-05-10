@@ -18,7 +18,12 @@ package object mod {
   ]
   type VerifyFunctionWithRequest = js.Function3[
     /* clientCert */ typingsSlinky.passportClientCert.mod.PeerCertificate, 
-    /* req */ typingsSlinky.express.mod.Request_[typingsSlinky.expressServeStaticCore.mod.ParamsDictionary], 
+    /* req */ typingsSlinky.express.mod.Request_[
+      typingsSlinky.expressServeStaticCore.mod.ParamsDictionary, 
+      js.Any, 
+      js.Any, 
+      typingsSlinky.expressServeStaticCore.mod.Query
+    ], 
     /* done */ typingsSlinky.passportClientCert.mod.VerifyCallback, 
     scala.Unit
   ]

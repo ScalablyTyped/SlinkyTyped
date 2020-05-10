@@ -4,20 +4,40 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait PlotSeriesAccessibilityKeyboardNavigationOptions extends js.Object {
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) Enable/disable keyboard
     * navigation support for a specific series.
     */
-  var enabled: js.UndefOr[Boolean] = js.undefined
+  var enabled: js.UndefOr[Boolean] = js.native
 }
 
 object PlotSeriesAccessibilityKeyboardNavigationOptions {
   @scala.inline
-  def apply(enabled: js.UndefOr[Boolean] = js.undefined): PlotSeriesAccessibilityKeyboardNavigationOptions = {
+  def apply(): PlotSeriesAccessibilityKeyboardNavigationOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(enabled)) __obj.updateDynamic("enabled")(enabled.asInstanceOf[js.Any])
     __obj.asInstanceOf[PlotSeriesAccessibilityKeyboardNavigationOptions]
   }
+  @scala.inline
+  implicit class PlotSeriesAccessibilityKeyboardNavigationOptionsOps[Self <: PlotSeriesAccessibilityKeyboardNavigationOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

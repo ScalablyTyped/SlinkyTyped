@@ -34,21 +34,83 @@ trait ReceiptRule extends js.Object {
 
 object ReceiptRule {
   @scala.inline
-  def apply(
-    Name: ReceiptRuleName,
-    Actions: ReceiptActionsList = null,
-    Enabled: js.UndefOr[Boolean] = js.undefined,
-    Recipients: RecipientsList = null,
-    ScanEnabled: js.UndefOr[Boolean] = js.undefined,
-    TlsPolicy: TlsPolicy = null
-  ): ReceiptRule = {
+  def apply(Name: ReceiptRuleName): ReceiptRule = {
     val __obj = js.Dynamic.literal(Name = Name.asInstanceOf[js.Any])
-    if (Actions != null) __obj.updateDynamic("Actions")(Actions.asInstanceOf[js.Any])
-    if (!js.isUndefined(Enabled)) __obj.updateDynamic("Enabled")(Enabled.asInstanceOf[js.Any])
-    if (Recipients != null) __obj.updateDynamic("Recipients")(Recipients.asInstanceOf[js.Any])
-    if (!js.isUndefined(ScanEnabled)) __obj.updateDynamic("ScanEnabled")(ScanEnabled.asInstanceOf[js.Any])
-    if (TlsPolicy != null) __obj.updateDynamic("TlsPolicy")(TlsPolicy.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReceiptRule]
   }
+  @scala.inline
+  implicit class ReceiptRuleOps[Self <: ReceiptRule] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withName(value: ReceiptRuleName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withActions(value: ReceiptActionsList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Actions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutActions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Actions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnabled(value: Enabled): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Enabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Enabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRecipients(value: RecipientsList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Recipients")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRecipients: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Recipients")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScanEnabled(value: Enabled): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ScanEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScanEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ScanEnabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTlsPolicy(value: TlsPolicy): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TlsPolicy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTlsPolicy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TlsPolicy")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

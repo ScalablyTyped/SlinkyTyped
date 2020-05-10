@@ -24,47 +24,170 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait LayerProps extends js.Object {
-  var animate: js.UndefOr[AnimateType] = js.undefined
-  var animation: js.UndefOr[none | slide | fadeIn | Boolean] = js.undefined
-  var full: js.UndefOr[Boolean | vertical | horizontal] = js.undefined
-  var margin: js.UndefOr[MarginType] = js.undefined
-  var modal: js.UndefOr[Boolean] = js.undefined
-  var onClickOutside: js.UndefOr[js.Function1[/* repeated */ js.Any, _]] = js.undefined
-  var onEsc: js.UndefOr[KeyboardType] = js.undefined
-  var plain: js.UndefOr[Boolean] = js.undefined
+  var animate: js.UndefOr[AnimateType] = js.native
+  var animation: js.UndefOr[none | slide | fadeIn | Boolean] = js.native
+  var full: js.UndefOr[Boolean | vertical | horizontal] = js.native
+  var margin: js.UndefOr[MarginType] = js.native
+  var modal: js.UndefOr[Boolean] = js.native
+  var onClickOutside: js.UndefOr[js.Function1[/* repeated */ js.Any, _]] = js.native
+  var onEsc: js.UndefOr[KeyboardType] = js.native
+  var plain: js.UndefOr[Boolean] = js.native
   var position: js.UndefOr[
     bottom | `bottom-left` | `bottom-right` | center | hidden | left | right | top | `top-left` | `top-right`
-  ] = js.undefined
-  var responsive: js.UndefOr[Boolean] = js.undefined
+  ] = js.native
+  var responsive: js.UndefOr[Boolean] = js.native
+  var target: js.UndefOr[js.Object] = js.native
 }
 
 object LayerProps {
   @scala.inline
-  def apply(
-    animate: js.UndefOr[Boolean] = js.undefined,
-    animation: none | slide | fadeIn | Boolean = null,
-    full: Boolean | vertical | horizontal = null,
-    margin: MarginType = null,
-    modal: js.UndefOr[Boolean] = js.undefined,
-    onClickOutside: /* repeated */ js.Any => _ = null,
-    onEsc: /* event */ SyntheticKeyboardEvent[HTMLElement] => Unit = null,
-    plain: js.UndefOr[Boolean] = js.undefined,
-    position: bottom | `bottom-left` | `bottom-right` | center | hidden | left | right | top | `top-left` | `top-right` = null,
-    responsive: js.UndefOr[Boolean] = js.undefined
-  ): LayerProps = {
+  def apply(): LayerProps = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(animate)) __obj.updateDynamic("animate")(animate.asInstanceOf[js.Any])
-    if (animation != null) __obj.updateDynamic("animation")(animation.asInstanceOf[js.Any])
-    if (full != null) __obj.updateDynamic("full")(full.asInstanceOf[js.Any])
-    if (margin != null) __obj.updateDynamic("margin")(margin.asInstanceOf[js.Any])
-    if (!js.isUndefined(modal)) __obj.updateDynamic("modal")(modal.asInstanceOf[js.Any])
-    if (onClickOutside != null) __obj.updateDynamic("onClickOutside")(js.Any.fromFunction1(onClickOutside))
-    if (onEsc != null) __obj.updateDynamic("onEsc")(js.Any.fromFunction1(onEsc))
-    if (!js.isUndefined(plain)) __obj.updateDynamic("plain")(plain.asInstanceOf[js.Any])
-    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
-    if (!js.isUndefined(responsive)) __obj.updateDynamic("responsive")(responsive.asInstanceOf[js.Any])
     __obj.asInstanceOf[LayerProps]
   }
+  @scala.inline
+  implicit class LayerPropsOps[Self <: LayerProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAnimate(value: AnimateType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAnimation(value: none | slide | fadeIn | Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFull(value: Boolean | vertical | horizontal): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("full")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("full")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMargin(value: MarginType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("margin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMargin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("margin")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withModal(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("modal")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutModal: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("modal")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnClickOutside(value: /* repeated */ js.Any => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onClickOutside")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnClickOutside: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onClickOutside")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnEsc(value: /* event */ SyntheticKeyboardEvent[HTMLElement] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onEsc")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnEsc: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onEsc")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlain(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("plain")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlain: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("plain")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPosition(
+      value: bottom | `bottom-left` | `bottom-right` | center | hidden | left | right | top | `top-left` | `top-right`
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPosition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResponsive(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("responsive")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResponsive: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("responsive")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTarget(value: js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTarget: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

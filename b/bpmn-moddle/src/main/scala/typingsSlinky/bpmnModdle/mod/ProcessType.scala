@@ -13,12 +13,10 @@ trait ProcessType extends js.Object
 
 object ProcessType {
   @scala.inline
-  def None: typingsSlinky.bpmnModdle.bpmnModdleStrings.None = this.cast("None")
+  def None: typingsSlinky.bpmnModdle.bpmnModdleStrings.None = "None".asInstanceOf[typingsSlinky.bpmnModdle.bpmnModdleStrings.None]
   @scala.inline
-  def Private: typingsSlinky.bpmnModdle.bpmnModdleStrings.Private = this.cast("Private")
+  def Private: typingsSlinky.bpmnModdle.bpmnModdleStrings.Private = "Private".asInstanceOf[typingsSlinky.bpmnModdle.bpmnModdleStrings.Private]
   @scala.inline
-  def Public: typingsSlinky.bpmnModdle.bpmnModdleStrings.Public = this.cast("Public")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def Public: typingsSlinky.bpmnModdle.bpmnModdleStrings.Public = "Public".asInstanceOf[typingsSlinky.bpmnModdle.bpmnModdleStrings.Public]
 }
 

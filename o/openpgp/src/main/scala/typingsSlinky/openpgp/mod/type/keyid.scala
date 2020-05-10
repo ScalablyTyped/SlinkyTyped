@@ -27,7 +27,7 @@ object keyid extends js.Object {
       * Parsing method for a key id
       * @param input Input to read the key id from
       */
-    def read(input: scala.scalajs.js.typedarray.Uint8Array): Unit = js.native
+    def read(input: js.typedarray.Uint8Array): Unit = js.native
   }
   
 }

@@ -31,18 +31,65 @@ trait SchemaGuardian extends js.Object {
 
 object SchemaGuardian {
   @scala.inline
-  def apply(
-    guardianId: String = null,
-    guardianProfile: SchemaUserProfile = null,
-    invitedEmailAddress: String = null,
-    studentId: String = null
-  ): SchemaGuardian = {
+  def apply(): SchemaGuardian = {
     val __obj = js.Dynamic.literal()
-    if (guardianId != null) __obj.updateDynamic("guardianId")(guardianId.asInstanceOf[js.Any])
-    if (guardianProfile != null) __obj.updateDynamic("guardianProfile")(guardianProfile.asInstanceOf[js.Any])
-    if (invitedEmailAddress != null) __obj.updateDynamic("invitedEmailAddress")(invitedEmailAddress.asInstanceOf[js.Any])
-    if (studentId != null) __obj.updateDynamic("studentId")(studentId.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGuardian]
   }
+  @scala.inline
+  implicit class SchemaGuardianOps[Self <: SchemaGuardian] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGuardianId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("guardianId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGuardianId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("guardianId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGuardianProfile(value: SchemaUserProfile): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("guardianProfile")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGuardianProfile: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("guardianProfile")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInvitedEmailAddress(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("invitedEmailAddress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInvitedEmailAddress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("invitedEmailAddress")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStudentId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("studentId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStudentId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("studentId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation._
 @JSImport("typed-github-api/dist/repository", JSImport.Namespace)
 @js.native
 object distRepositoryMod extends js.Object {
-  /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+  /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
   - typingsSlinky.typedGithubApi.interfacesRepositoryMod.RepositoryRef because Already inherited
   - typingsSlinky.typedGithubApi.interfacesRepositoryMod.Repository because var conflicts: owner. Inlined id, fullName, description, isPrivate, isFork, htmlUri, homePage, language, forksCount, starGazersCount, watchersCount, size, defaultBranch, openIssuesCount, topics, hasIssues, hasWiki, hasPages, hasDownloads, pushed, created, updated, permissions, allowRebasemerge, allowSquashMerge, allowMergeCommit, subscribersCount, networkCount */ @js.native
   class RepositoryClass protected () extends RepositoryRefClass {

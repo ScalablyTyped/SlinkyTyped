@@ -1,7 +1,7 @@
 package typingsSlinky.agGrid
 
-import typingsSlinky.std.MouseEvent
-import typingsSlinky.std.Touch
+import org.scalajs.dom.raw.MouseEvent
+import org.scalajs.dom.raw.Touch
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

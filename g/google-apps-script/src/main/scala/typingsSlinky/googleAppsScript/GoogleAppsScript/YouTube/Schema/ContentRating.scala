@@ -4,225 +4,933 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ContentRating extends js.Object {
-  var acbRating: js.UndefOr[String] = js.undefined
-  var agcomRating: js.UndefOr[String] = js.undefined
-  var anatelRating: js.UndefOr[String] = js.undefined
-  var bbfcRating: js.UndefOr[String] = js.undefined
-  var bfvcRating: js.UndefOr[String] = js.undefined
-  var bmukkRating: js.UndefOr[String] = js.undefined
-  var catvRating: js.UndefOr[String] = js.undefined
-  var catvfrRating: js.UndefOr[String] = js.undefined
-  var cbfcRating: js.UndefOr[String] = js.undefined
-  var cccRating: js.UndefOr[String] = js.undefined
-  var cceRating: js.UndefOr[String] = js.undefined
-  var chfilmRating: js.UndefOr[String] = js.undefined
-  var chvrsRating: js.UndefOr[String] = js.undefined
-  var cicfRating: js.UndefOr[String] = js.undefined
-  var cnaRating: js.UndefOr[String] = js.undefined
-  var cncRating: js.UndefOr[String] = js.undefined
-  var csaRating: js.UndefOr[String] = js.undefined
-  var cscfRating: js.UndefOr[String] = js.undefined
-  var czfilmRating: js.UndefOr[String] = js.undefined
-  var djctqRating: js.UndefOr[String] = js.undefined
-  var djctqRatingReasons: js.UndefOr[js.Array[String]] = js.undefined
-  var ecbmctRating: js.UndefOr[String] = js.undefined
-  var eefilmRating: js.UndefOr[String] = js.undefined
-  var egfilmRating: js.UndefOr[String] = js.undefined
-  var eirinRating: js.UndefOr[String] = js.undefined
-  var fcbmRating: js.UndefOr[String] = js.undefined
-  var fcoRating: js.UndefOr[String] = js.undefined
-  var fmocRating: js.UndefOr[String] = js.undefined
-  var fpbRating: js.UndefOr[String] = js.undefined
-  var fpbRatingReasons: js.UndefOr[js.Array[String]] = js.undefined
-  var fskRating: js.UndefOr[String] = js.undefined
-  var grfilmRating: js.UndefOr[String] = js.undefined
-  var icaaRating: js.UndefOr[String] = js.undefined
-  var ifcoRating: js.UndefOr[String] = js.undefined
-  var ilfilmRating: js.UndefOr[String] = js.undefined
-  var incaaRating: js.UndefOr[String] = js.undefined
-  var kfcbRating: js.UndefOr[String] = js.undefined
-  var kijkwijzerRating: js.UndefOr[String] = js.undefined
-  var kmrbRating: js.UndefOr[String] = js.undefined
-  var lsfRating: js.UndefOr[String] = js.undefined
-  var mccaaRating: js.UndefOr[String] = js.undefined
-  var mccypRating: js.UndefOr[String] = js.undefined
-  var mcstRating: js.UndefOr[String] = js.undefined
-  var mdaRating: js.UndefOr[String] = js.undefined
-  var medietilsynetRating: js.UndefOr[String] = js.undefined
-  var mekuRating: js.UndefOr[String] = js.undefined
-  var menaMpaaRating: js.UndefOr[String] = js.undefined
-  var mibacRating: js.UndefOr[String] = js.undefined
-  var mocRating: js.UndefOr[String] = js.undefined
-  var moctwRating: js.UndefOr[String] = js.undefined
-  var mpaaRating: js.UndefOr[String] = js.undefined
-  var mpaatRating: js.UndefOr[String] = js.undefined
-  var mtrcbRating: js.UndefOr[String] = js.undefined
-  var nbcRating: js.UndefOr[String] = js.undefined
-  var nbcplRating: js.UndefOr[String] = js.undefined
-  var nfrcRating: js.UndefOr[String] = js.undefined
-  var nfvcbRating: js.UndefOr[String] = js.undefined
-  var nkclvRating: js.UndefOr[String] = js.undefined
-  var oflcRating: js.UndefOr[String] = js.undefined
-  var pefilmRating: js.UndefOr[String] = js.undefined
-  var rcnofRating: js.UndefOr[String] = js.undefined
-  var resorteviolenciaRating: js.UndefOr[String] = js.undefined
-  var rtcRating: js.UndefOr[String] = js.undefined
-  var rteRating: js.UndefOr[String] = js.undefined
-  var russiaRating: js.UndefOr[String] = js.undefined
-  var skfilmRating: js.UndefOr[String] = js.undefined
-  var smaisRating: js.UndefOr[String] = js.undefined
-  var smsaRating: js.UndefOr[String] = js.undefined
-  var tvpgRating: js.UndefOr[String] = js.undefined
-  var ytRating: js.UndefOr[String] = js.undefined
+  var acbRating: js.UndefOr[String] = js.native
+  var agcomRating: js.UndefOr[String] = js.native
+  var anatelRating: js.UndefOr[String] = js.native
+  var bbfcRating: js.UndefOr[String] = js.native
+  var bfvcRating: js.UndefOr[String] = js.native
+  var bmukkRating: js.UndefOr[String] = js.native
+  var catvRating: js.UndefOr[String] = js.native
+  var catvfrRating: js.UndefOr[String] = js.native
+  var cbfcRating: js.UndefOr[String] = js.native
+  var cccRating: js.UndefOr[String] = js.native
+  var cceRating: js.UndefOr[String] = js.native
+  var chfilmRating: js.UndefOr[String] = js.native
+  var chvrsRating: js.UndefOr[String] = js.native
+  var cicfRating: js.UndefOr[String] = js.native
+  var cnaRating: js.UndefOr[String] = js.native
+  var cncRating: js.UndefOr[String] = js.native
+  var csaRating: js.UndefOr[String] = js.native
+  var cscfRating: js.UndefOr[String] = js.native
+  var czfilmRating: js.UndefOr[String] = js.native
+  var djctqRating: js.UndefOr[String] = js.native
+  var djctqRatingReasons: js.UndefOr[js.Array[String]] = js.native
+  var ecbmctRating: js.UndefOr[String] = js.native
+  var eefilmRating: js.UndefOr[String] = js.native
+  var egfilmRating: js.UndefOr[String] = js.native
+  var eirinRating: js.UndefOr[String] = js.native
+  var fcbmRating: js.UndefOr[String] = js.native
+  var fcoRating: js.UndefOr[String] = js.native
+  var fmocRating: js.UndefOr[String] = js.native
+  var fpbRating: js.UndefOr[String] = js.native
+  var fpbRatingReasons: js.UndefOr[js.Array[String]] = js.native
+  var fskRating: js.UndefOr[String] = js.native
+  var grfilmRating: js.UndefOr[String] = js.native
+  var icaaRating: js.UndefOr[String] = js.native
+  var ifcoRating: js.UndefOr[String] = js.native
+  var ilfilmRating: js.UndefOr[String] = js.native
+  var incaaRating: js.UndefOr[String] = js.native
+  var kfcbRating: js.UndefOr[String] = js.native
+  var kijkwijzerRating: js.UndefOr[String] = js.native
+  var kmrbRating: js.UndefOr[String] = js.native
+  var lsfRating: js.UndefOr[String] = js.native
+  var mccaaRating: js.UndefOr[String] = js.native
+  var mccypRating: js.UndefOr[String] = js.native
+  var mcstRating: js.UndefOr[String] = js.native
+  var mdaRating: js.UndefOr[String] = js.native
+  var medietilsynetRating: js.UndefOr[String] = js.native
+  var mekuRating: js.UndefOr[String] = js.native
+  var menaMpaaRating: js.UndefOr[String] = js.native
+  var mibacRating: js.UndefOr[String] = js.native
+  var mocRating: js.UndefOr[String] = js.native
+  var moctwRating: js.UndefOr[String] = js.native
+  var mpaaRating: js.UndefOr[String] = js.native
+  var mpaatRating: js.UndefOr[String] = js.native
+  var mtrcbRating: js.UndefOr[String] = js.native
+  var nbcRating: js.UndefOr[String] = js.native
+  var nbcplRating: js.UndefOr[String] = js.native
+  var nfrcRating: js.UndefOr[String] = js.native
+  var nfvcbRating: js.UndefOr[String] = js.native
+  var nkclvRating: js.UndefOr[String] = js.native
+  var oflcRating: js.UndefOr[String] = js.native
+  var pefilmRating: js.UndefOr[String] = js.native
+  var rcnofRating: js.UndefOr[String] = js.native
+  var resorteviolenciaRating: js.UndefOr[String] = js.native
+  var rtcRating: js.UndefOr[String] = js.native
+  var rteRating: js.UndefOr[String] = js.native
+  var russiaRating: js.UndefOr[String] = js.native
+  var skfilmRating: js.UndefOr[String] = js.native
+  var smaisRating: js.UndefOr[String] = js.native
+  var smsaRating: js.UndefOr[String] = js.native
+  var tvpgRating: js.UndefOr[String] = js.native
+  var ytRating: js.UndefOr[String] = js.native
 }
 
 object ContentRating {
   @scala.inline
-  def apply(
-    acbRating: String = null,
-    agcomRating: String = null,
-    anatelRating: String = null,
-    bbfcRating: String = null,
-    bfvcRating: String = null,
-    bmukkRating: String = null,
-    catvRating: String = null,
-    catvfrRating: String = null,
-    cbfcRating: String = null,
-    cccRating: String = null,
-    cceRating: String = null,
-    chfilmRating: String = null,
-    chvrsRating: String = null,
-    cicfRating: String = null,
-    cnaRating: String = null,
-    cncRating: String = null,
-    csaRating: String = null,
-    cscfRating: String = null,
-    czfilmRating: String = null,
-    djctqRating: String = null,
-    djctqRatingReasons: js.Array[String] = null,
-    ecbmctRating: String = null,
-    eefilmRating: String = null,
-    egfilmRating: String = null,
-    eirinRating: String = null,
-    fcbmRating: String = null,
-    fcoRating: String = null,
-    fmocRating: String = null,
-    fpbRating: String = null,
-    fpbRatingReasons: js.Array[String] = null,
-    fskRating: String = null,
-    grfilmRating: String = null,
-    icaaRating: String = null,
-    ifcoRating: String = null,
-    ilfilmRating: String = null,
-    incaaRating: String = null,
-    kfcbRating: String = null,
-    kijkwijzerRating: String = null,
-    kmrbRating: String = null,
-    lsfRating: String = null,
-    mccaaRating: String = null,
-    mccypRating: String = null,
-    mcstRating: String = null,
-    mdaRating: String = null,
-    medietilsynetRating: String = null,
-    mekuRating: String = null,
-    menaMpaaRating: String = null,
-    mibacRating: String = null,
-    mocRating: String = null,
-    moctwRating: String = null,
-    mpaaRating: String = null,
-    mpaatRating: String = null,
-    mtrcbRating: String = null,
-    nbcRating: String = null,
-    nbcplRating: String = null,
-    nfrcRating: String = null,
-    nfvcbRating: String = null,
-    nkclvRating: String = null,
-    oflcRating: String = null,
-    pefilmRating: String = null,
-    rcnofRating: String = null,
-    resorteviolenciaRating: String = null,
-    rtcRating: String = null,
-    rteRating: String = null,
-    russiaRating: String = null,
-    skfilmRating: String = null,
-    smaisRating: String = null,
-    smsaRating: String = null,
-    tvpgRating: String = null,
-    ytRating: String = null
-  ): ContentRating = {
+  def apply(): ContentRating = {
     val __obj = js.Dynamic.literal()
-    if (acbRating != null) __obj.updateDynamic("acbRating")(acbRating.asInstanceOf[js.Any])
-    if (agcomRating != null) __obj.updateDynamic("agcomRating")(agcomRating.asInstanceOf[js.Any])
-    if (anatelRating != null) __obj.updateDynamic("anatelRating")(anatelRating.asInstanceOf[js.Any])
-    if (bbfcRating != null) __obj.updateDynamic("bbfcRating")(bbfcRating.asInstanceOf[js.Any])
-    if (bfvcRating != null) __obj.updateDynamic("bfvcRating")(bfvcRating.asInstanceOf[js.Any])
-    if (bmukkRating != null) __obj.updateDynamic("bmukkRating")(bmukkRating.asInstanceOf[js.Any])
-    if (catvRating != null) __obj.updateDynamic("catvRating")(catvRating.asInstanceOf[js.Any])
-    if (catvfrRating != null) __obj.updateDynamic("catvfrRating")(catvfrRating.asInstanceOf[js.Any])
-    if (cbfcRating != null) __obj.updateDynamic("cbfcRating")(cbfcRating.asInstanceOf[js.Any])
-    if (cccRating != null) __obj.updateDynamic("cccRating")(cccRating.asInstanceOf[js.Any])
-    if (cceRating != null) __obj.updateDynamic("cceRating")(cceRating.asInstanceOf[js.Any])
-    if (chfilmRating != null) __obj.updateDynamic("chfilmRating")(chfilmRating.asInstanceOf[js.Any])
-    if (chvrsRating != null) __obj.updateDynamic("chvrsRating")(chvrsRating.asInstanceOf[js.Any])
-    if (cicfRating != null) __obj.updateDynamic("cicfRating")(cicfRating.asInstanceOf[js.Any])
-    if (cnaRating != null) __obj.updateDynamic("cnaRating")(cnaRating.asInstanceOf[js.Any])
-    if (cncRating != null) __obj.updateDynamic("cncRating")(cncRating.asInstanceOf[js.Any])
-    if (csaRating != null) __obj.updateDynamic("csaRating")(csaRating.asInstanceOf[js.Any])
-    if (cscfRating != null) __obj.updateDynamic("cscfRating")(cscfRating.asInstanceOf[js.Any])
-    if (czfilmRating != null) __obj.updateDynamic("czfilmRating")(czfilmRating.asInstanceOf[js.Any])
-    if (djctqRating != null) __obj.updateDynamic("djctqRating")(djctqRating.asInstanceOf[js.Any])
-    if (djctqRatingReasons != null) __obj.updateDynamic("djctqRatingReasons")(djctqRatingReasons.asInstanceOf[js.Any])
-    if (ecbmctRating != null) __obj.updateDynamic("ecbmctRating")(ecbmctRating.asInstanceOf[js.Any])
-    if (eefilmRating != null) __obj.updateDynamic("eefilmRating")(eefilmRating.asInstanceOf[js.Any])
-    if (egfilmRating != null) __obj.updateDynamic("egfilmRating")(egfilmRating.asInstanceOf[js.Any])
-    if (eirinRating != null) __obj.updateDynamic("eirinRating")(eirinRating.asInstanceOf[js.Any])
-    if (fcbmRating != null) __obj.updateDynamic("fcbmRating")(fcbmRating.asInstanceOf[js.Any])
-    if (fcoRating != null) __obj.updateDynamic("fcoRating")(fcoRating.asInstanceOf[js.Any])
-    if (fmocRating != null) __obj.updateDynamic("fmocRating")(fmocRating.asInstanceOf[js.Any])
-    if (fpbRating != null) __obj.updateDynamic("fpbRating")(fpbRating.asInstanceOf[js.Any])
-    if (fpbRatingReasons != null) __obj.updateDynamic("fpbRatingReasons")(fpbRatingReasons.asInstanceOf[js.Any])
-    if (fskRating != null) __obj.updateDynamic("fskRating")(fskRating.asInstanceOf[js.Any])
-    if (grfilmRating != null) __obj.updateDynamic("grfilmRating")(grfilmRating.asInstanceOf[js.Any])
-    if (icaaRating != null) __obj.updateDynamic("icaaRating")(icaaRating.asInstanceOf[js.Any])
-    if (ifcoRating != null) __obj.updateDynamic("ifcoRating")(ifcoRating.asInstanceOf[js.Any])
-    if (ilfilmRating != null) __obj.updateDynamic("ilfilmRating")(ilfilmRating.asInstanceOf[js.Any])
-    if (incaaRating != null) __obj.updateDynamic("incaaRating")(incaaRating.asInstanceOf[js.Any])
-    if (kfcbRating != null) __obj.updateDynamic("kfcbRating")(kfcbRating.asInstanceOf[js.Any])
-    if (kijkwijzerRating != null) __obj.updateDynamic("kijkwijzerRating")(kijkwijzerRating.asInstanceOf[js.Any])
-    if (kmrbRating != null) __obj.updateDynamic("kmrbRating")(kmrbRating.asInstanceOf[js.Any])
-    if (lsfRating != null) __obj.updateDynamic("lsfRating")(lsfRating.asInstanceOf[js.Any])
-    if (mccaaRating != null) __obj.updateDynamic("mccaaRating")(mccaaRating.asInstanceOf[js.Any])
-    if (mccypRating != null) __obj.updateDynamic("mccypRating")(mccypRating.asInstanceOf[js.Any])
-    if (mcstRating != null) __obj.updateDynamic("mcstRating")(mcstRating.asInstanceOf[js.Any])
-    if (mdaRating != null) __obj.updateDynamic("mdaRating")(mdaRating.asInstanceOf[js.Any])
-    if (medietilsynetRating != null) __obj.updateDynamic("medietilsynetRating")(medietilsynetRating.asInstanceOf[js.Any])
-    if (mekuRating != null) __obj.updateDynamic("mekuRating")(mekuRating.asInstanceOf[js.Any])
-    if (menaMpaaRating != null) __obj.updateDynamic("menaMpaaRating")(menaMpaaRating.asInstanceOf[js.Any])
-    if (mibacRating != null) __obj.updateDynamic("mibacRating")(mibacRating.asInstanceOf[js.Any])
-    if (mocRating != null) __obj.updateDynamic("mocRating")(mocRating.asInstanceOf[js.Any])
-    if (moctwRating != null) __obj.updateDynamic("moctwRating")(moctwRating.asInstanceOf[js.Any])
-    if (mpaaRating != null) __obj.updateDynamic("mpaaRating")(mpaaRating.asInstanceOf[js.Any])
-    if (mpaatRating != null) __obj.updateDynamic("mpaatRating")(mpaatRating.asInstanceOf[js.Any])
-    if (mtrcbRating != null) __obj.updateDynamic("mtrcbRating")(mtrcbRating.asInstanceOf[js.Any])
-    if (nbcRating != null) __obj.updateDynamic("nbcRating")(nbcRating.asInstanceOf[js.Any])
-    if (nbcplRating != null) __obj.updateDynamic("nbcplRating")(nbcplRating.asInstanceOf[js.Any])
-    if (nfrcRating != null) __obj.updateDynamic("nfrcRating")(nfrcRating.asInstanceOf[js.Any])
-    if (nfvcbRating != null) __obj.updateDynamic("nfvcbRating")(nfvcbRating.asInstanceOf[js.Any])
-    if (nkclvRating != null) __obj.updateDynamic("nkclvRating")(nkclvRating.asInstanceOf[js.Any])
-    if (oflcRating != null) __obj.updateDynamic("oflcRating")(oflcRating.asInstanceOf[js.Any])
-    if (pefilmRating != null) __obj.updateDynamic("pefilmRating")(pefilmRating.asInstanceOf[js.Any])
-    if (rcnofRating != null) __obj.updateDynamic("rcnofRating")(rcnofRating.asInstanceOf[js.Any])
-    if (resorteviolenciaRating != null) __obj.updateDynamic("resorteviolenciaRating")(resorteviolenciaRating.asInstanceOf[js.Any])
-    if (rtcRating != null) __obj.updateDynamic("rtcRating")(rtcRating.asInstanceOf[js.Any])
-    if (rteRating != null) __obj.updateDynamic("rteRating")(rteRating.asInstanceOf[js.Any])
-    if (russiaRating != null) __obj.updateDynamic("russiaRating")(russiaRating.asInstanceOf[js.Any])
-    if (skfilmRating != null) __obj.updateDynamic("skfilmRating")(skfilmRating.asInstanceOf[js.Any])
-    if (smaisRating != null) __obj.updateDynamic("smaisRating")(smaisRating.asInstanceOf[js.Any])
-    if (smsaRating != null) __obj.updateDynamic("smsaRating")(smsaRating.asInstanceOf[js.Any])
-    if (tvpgRating != null) __obj.updateDynamic("tvpgRating")(tvpgRating.asInstanceOf[js.Any])
-    if (ytRating != null) __obj.updateDynamic("ytRating")(ytRating.asInstanceOf[js.Any])
     __obj.asInstanceOf[ContentRating]
   }
+  @scala.inline
+  implicit class ContentRatingOps[Self <: ContentRating] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAcbRating(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("acbRating")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAcbRating: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("acbRating")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAgcomRating(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("agcomRating")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAgcomRating: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("agcomRating")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAnatelRating(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("anatelRating")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnatelRating: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("anatelRating")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBbfcRating(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bbfcRating")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBbfcRating: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bbfcRating")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBfvcRating(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bfvcRating")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBfvcRating: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bfvcRating")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBmukkRating(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bmukkRating")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBmukkRating: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bmukkRating")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCatvRating(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("catvRating")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCatvRating: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("catvRating")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCatvfrRating(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("catvfrRating")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCatvfrRating: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("catvfrRating")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCbfcRating(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cbfcRating")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCbfcRating: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cbfcRating")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCccRating(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cccRating")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCccRating: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cccRating")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCceRating(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cceRating")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCceRating: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cceRating")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withChfilmRating(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("chfilmRating")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChfilmRating: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("chfilmRating")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withChvrsRating(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("chvrsRating")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChvrsRating: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("chvrsRating")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCicfRating(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cicfRating")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCicfRating: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cicfRating")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCnaRating(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cnaRating")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCnaRating: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cnaRating")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCncRating(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cncRating")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCncRating: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cncRating")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCsaRating(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("csaRating")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCsaRating: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("csaRating")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCscfRating(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cscfRating")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCscfRating: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cscfRating")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCzfilmRating(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("czfilmRating")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCzfilmRating: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("czfilmRating")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDjctqRating(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("djctqRating")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDjctqRating: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("djctqRating")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDjctqRatingReasons(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("djctqRatingReasons")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDjctqRatingReasons: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("djctqRatingReasons")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEcbmctRating(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ecbmctRating")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEcbmctRating: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ecbmctRating")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEefilmRating(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("eefilmRating")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEefilmRating: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("eefilmRating")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEgfilmRating(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("egfilmRating")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEgfilmRating: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("egfilmRating")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEirinRating(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("eirinRating")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEirinRating: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("eirinRating")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFcbmRating(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fcbmRating")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFcbmRating: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fcbmRating")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFcoRating(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fcoRating")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFcoRating: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fcoRating")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFmocRating(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fmocRating")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFmocRating: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fmocRating")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFpbRating(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fpbRating")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFpbRating: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fpbRating")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFpbRatingReasons(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fpbRatingReasons")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFpbRatingReasons: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fpbRatingReasons")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFskRating(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fskRating")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFskRating: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fskRating")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGrfilmRating(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("grfilmRating")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGrfilmRating: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("grfilmRating")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIcaaRating(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icaaRating")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIcaaRating: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icaaRating")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIfcoRating(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ifcoRating")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIfcoRating: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ifcoRating")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIlfilmRating(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ilfilmRating")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIlfilmRating: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ilfilmRating")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIncaaRating(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("incaaRating")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIncaaRating: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("incaaRating")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKfcbRating(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kfcbRating")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKfcbRating: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kfcbRating")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKijkwijzerRating(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kijkwijzerRating")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKijkwijzerRating: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kijkwijzerRating")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKmrbRating(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kmrbRating")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKmrbRating: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kmrbRating")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLsfRating(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lsfRating")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLsfRating: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lsfRating")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMccaaRating(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mccaaRating")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMccaaRating: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mccaaRating")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMccypRating(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mccypRating")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMccypRating: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mccypRating")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMcstRating(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mcstRating")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMcstRating: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mcstRating")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMdaRating(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mdaRating")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMdaRating: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mdaRating")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMedietilsynetRating(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("medietilsynetRating")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMedietilsynetRating: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("medietilsynetRating")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMekuRating(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mekuRating")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMekuRating: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mekuRating")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMenaMpaaRating(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("menaMpaaRating")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMenaMpaaRating: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("menaMpaaRating")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMibacRating(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mibacRating")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMibacRating: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mibacRating")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMocRating(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mocRating")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMocRating: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mocRating")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMoctwRating(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("moctwRating")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMoctwRating: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("moctwRating")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMpaaRating(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mpaaRating")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMpaaRating: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mpaaRating")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMpaatRating(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mpaatRating")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMpaatRating: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mpaatRating")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMtrcbRating(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mtrcbRating")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMtrcbRating: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mtrcbRating")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNbcRating(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nbcRating")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNbcRating: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nbcRating")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNbcplRating(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nbcplRating")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNbcplRating: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nbcplRating")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNfrcRating(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nfrcRating")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNfrcRating: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nfrcRating")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNfvcbRating(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nfvcbRating")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNfvcbRating: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nfvcbRating")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNkclvRating(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nkclvRating")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNkclvRating: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nkclvRating")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOflcRating(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("oflcRating")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOflcRating: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("oflcRating")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPefilmRating(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pefilmRating")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPefilmRating: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pefilmRating")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRcnofRating(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rcnofRating")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRcnofRating: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rcnofRating")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResorteviolenciaRating(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resorteviolenciaRating")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResorteviolenciaRating: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resorteviolenciaRating")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRtcRating(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rtcRating")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRtcRating: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rtcRating")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRteRating(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rteRating")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRteRating: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rteRating")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRussiaRating(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("russiaRating")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRussiaRating: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("russiaRating")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSkfilmRating(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("skfilmRating")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSkfilmRating: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("skfilmRating")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSmaisRating(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("smaisRating")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSmaisRating: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("smaisRating")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSmsaRating(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("smsaRating")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSmsaRating: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("smsaRating")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTvpgRating(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tvpgRating")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTvpgRating: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tvpgRating")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withYtRating(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ytRating")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutYtRating: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ytRating")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

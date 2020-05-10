@@ -10,5 +10,6 @@ import scala.scalajs.js.annotation._
   * This module causes the browser-only base modules to be loaded.
   *
   */
+@js.native
 trait browser extends js.Object
 

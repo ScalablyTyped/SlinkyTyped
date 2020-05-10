@@ -22,10 +22,41 @@ trait StartTimerDecisionAttributes extends js.Object {
 
 object StartTimerDecisionAttributes {
   @scala.inline
-  def apply(startToFireTimeout: DurationInSeconds, timerId: TimerId, control: Data = null): StartTimerDecisionAttributes = {
+  def apply(startToFireTimeout: DurationInSeconds, timerId: TimerId): StartTimerDecisionAttributes = {
     val __obj = js.Dynamic.literal(startToFireTimeout = startToFireTimeout.asInstanceOf[js.Any], timerId = timerId.asInstanceOf[js.Any])
-    if (control != null) __obj.updateDynamic("control")(control.asInstanceOf[js.Any])
     __obj.asInstanceOf[StartTimerDecisionAttributes]
   }
+  @scala.inline
+  implicit class StartTimerDecisionAttributesOps[Self <: StartTimerDecisionAttributes] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withStartToFireTimeout(value: DurationInSeconds): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startToFireTimeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTimerId(value: TimerId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timerId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withControl(value: Data): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("control")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutControl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("control")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

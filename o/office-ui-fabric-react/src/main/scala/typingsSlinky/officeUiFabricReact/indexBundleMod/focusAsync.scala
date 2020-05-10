@@ -1,6 +1,6 @@
 package typingsSlinky.officeUiFabricReact.indexBundleMod
 
-import typingsSlinky.std.HTMLElement
+import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.uifabricUtilities.AnonFocus
 import scala.scalajs.js
 import scala.scalajs.js.`|`

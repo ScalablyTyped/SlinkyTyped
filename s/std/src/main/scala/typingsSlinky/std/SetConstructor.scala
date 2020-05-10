@@ -10,10 +10,10 @@ import scala.scalajs.js.annotation._
 trait SetConstructor
   extends Instantiable0[Set[js.Object]]
      with Instantiable1[
-      (/* values */ js.Array[js.Object]) | (/* iterable */ Iterable[js.Object]), 
+      (/* values */ js.Array[js.Object]) | (/* iterable */ js.Iterable[js.Object]), 
       Set[js.Object]
     ] {
-  @JSName(scala.scalajs.js.Symbol.species)
+  @JSName(js.Symbol.species)
   val species: SetConstructor = js.native
 }
 

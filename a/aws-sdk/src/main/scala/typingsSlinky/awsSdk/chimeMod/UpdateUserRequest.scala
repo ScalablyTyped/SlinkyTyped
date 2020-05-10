@@ -30,18 +30,65 @@ trait UpdateUserRequest extends js.Object {
 
 object UpdateUserRequest {
   @scala.inline
-  def apply(
-    AccountId: NonEmptyString,
-    UserId: NonEmptyString,
-    AlexaForBusinessMetadata: AlexaForBusinessMetadata = null,
-    LicenseType: License = null,
-    UserType: UserType = null
-  ): UpdateUserRequest = {
+  def apply(AccountId: NonEmptyString, UserId: NonEmptyString): UpdateUserRequest = {
     val __obj = js.Dynamic.literal(AccountId = AccountId.asInstanceOf[js.Any], UserId = UserId.asInstanceOf[js.Any])
-    if (AlexaForBusinessMetadata != null) __obj.updateDynamic("AlexaForBusinessMetadata")(AlexaForBusinessMetadata.asInstanceOf[js.Any])
-    if (LicenseType != null) __obj.updateDynamic("LicenseType")(LicenseType.asInstanceOf[js.Any])
-    if (UserType != null) __obj.updateDynamic("UserType")(UserType.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateUserRequest]
   }
+  @scala.inline
+  implicit class UpdateUserRequestOps[Self <: UpdateUserRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAccountId(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AccountId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUserId(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UserId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAlexaForBusinessMetadata(value: AlexaForBusinessMetadata): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AlexaForBusinessMetadata")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlexaForBusinessMetadata: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AlexaForBusinessMetadata")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLicenseType(value: License): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LicenseType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLicenseType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LicenseType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUserType(value: UserType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UserType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUserType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UserType")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

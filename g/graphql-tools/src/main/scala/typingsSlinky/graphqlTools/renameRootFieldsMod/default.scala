@@ -2,7 +2,6 @@ package typingsSlinky.graphqlTools.renameRootFieldsMod
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.graphql.definitionMod.GraphQLField
-import typingsSlinky.graphql.mod.GraphQLSchema
 import typingsSlinky.graphqlTools.graphqlToolsStrings.Mutation
 import typingsSlinky.graphqlTools.graphqlToolsStrings.Query
 import typingsSlinky.graphqlTools.graphqlToolsStrings.Subscription
@@ -19,10 +18,5 @@ class default protected () extends RenameRootFields {
         /* field */ GraphQLField[_, _, StringDictionary[_]], 
         String
       ]) = this()
-  /* CompleteClass */
-  override var transformer: js.Any = js.native
-  /* CompleteClass */
-  @JSName("transformSchema")
-  override def transformSchema_MRenameRootFields(originalSchema: GraphQLSchema): GraphQLSchema = js.native
 }
 

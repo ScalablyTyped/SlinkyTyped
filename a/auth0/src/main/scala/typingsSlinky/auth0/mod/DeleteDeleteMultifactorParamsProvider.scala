@@ -12,10 +12,8 @@ trait DeleteDeleteMultifactorParamsProvider extends js.Object
 
 object DeleteDeleteMultifactorParamsProvider {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def duo: typingsSlinky.auth0.auth0Strings.duo = "duo".asInstanceOf[typingsSlinky.auth0.auth0Strings.duo]
   @scala.inline
-  def duo: typingsSlinky.auth0.auth0Strings.duo = this.cast("duo")
-  @scala.inline
-  def `google-authenticator`: typingsSlinky.auth0.auth0Strings.`google-authenticator` = this.cast("google-authenticator")
+  def `google-authenticator`: typingsSlinky.auth0.auth0Strings.`google-authenticator` = "google-authenticator".asInstanceOf[typingsSlinky.auth0.auth0Strings.`google-authenticator`]
 }
 

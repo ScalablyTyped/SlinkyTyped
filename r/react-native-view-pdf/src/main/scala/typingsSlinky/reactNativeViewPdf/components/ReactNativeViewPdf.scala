@@ -1,9 +1,7 @@
 package typingsSlinky.reactNativeViewPdf.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactNativeViewPdf.mod.PDFViewProps
 import typingsSlinky.reactNativeViewPdf.mod.URLProps
 import typingsSlinky.reactNativeViewPdf.mod.default
@@ -18,39 +16,40 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactNativeViewPdf
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object ReactNativeViewPdf {
   @JSImport("react-native-view-pdf", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    resource: String,
-    fadeInDuration: Int | Double = null,
-    fileFrom: bundle | documentsDirectory = null,
-    onError: /* error */ js.Error => Unit = null,
-    onLoad: () => Unit = null,
-    onPageChanged: (/* page */ Double, /* pageCount */ Double) => Unit = null,
-    onScrolled: /* offset */ Double => Unit = null,
-    resourceType: url | base64 | file = null,
-    textEncoding: `utf-8` | `utf-16` = null,
-    urlProps: URLProps = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(resource = resource.asInstanceOf[js.Any])
-    if (fadeInDuration != null) __obj.updateDynamic("fadeInDuration")(fadeInDuration.asInstanceOf[js.Any])
-    if (fileFrom != null) __obj.updateDynamic("fileFrom")(fileFrom.asInstanceOf[js.Any])
-    if (onError != null) __obj.updateDynamic("onError")(js.Any.fromFunction1(onError))
-    if (onLoad != null) __obj.updateDynamic("onLoad")(js.Any.fromFunction0(onLoad))
-    if (onPageChanged != null) __obj.updateDynamic("onPageChanged")(js.Any.fromFunction2(onPageChanged))
-    if (onScrolled != null) __obj.updateDynamic("onScrolled")(js.Any.fromFunction1(onScrolled))
-    if (resourceType != null) __obj.updateDynamic("resourceType")(resourceType.asInstanceOf[js.Any])
-    if (textEncoding != null) __obj.updateDynamic("textEncoding")(textEncoding.asInstanceOf[js.Any])
-    if (urlProps != null) __obj.updateDynamic("urlProps")(urlProps.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def fadeInDuration(value: Double): this.type = set("fadeInDuration", value.asInstanceOf[js.Any])
+    @scala.inline
+    def fileFrom(value: bundle | documentsDirectory): this.type = set("fileFrom", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onError(value: /* error */ js.Error => Unit): this.type = set("onError", js.Any.fromFunction1(value))
+    @scala.inline
+    def onLoad(value: () => Unit): this.type = set("onLoad", js.Any.fromFunction0(value))
+    @scala.inline
+    def onPageChanged(value: (/* page */ Double, /* pageCount */ Double) => Unit): this.type = set("onPageChanged", js.Any.fromFunction2(value))
+    @scala.inline
+    def onScrolled(value: /* offset */ Double => Unit): this.type = set("onScrolled", js.Any.fromFunction1(value))
+    @scala.inline
+    def resourceType(value: url | base64 | file): this.type = set("resourceType", value.asInstanceOf[js.Any])
+    @scala.inline
+    def textEncoding(value: `utf-8` | `utf-16`): this.type = set("textEncoding", value.asInstanceOf[js.Any])
+    @scala.inline
+    def urlProps(value: URLProps): this.type = set("urlProps", value.asInstanceOf[js.Any])
   }
-  type Props = PDFViewProps
+  
+  def withProps(p: PDFViewProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(resource: String): Builder = {
+    val __props = js.Dynamic.literal(resource = resource.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[PDFViewProps]))
+  }
 }
 

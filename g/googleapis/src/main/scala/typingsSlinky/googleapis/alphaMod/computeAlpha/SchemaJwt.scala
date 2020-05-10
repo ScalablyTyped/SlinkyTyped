@@ -49,20 +49,77 @@ trait SchemaJwt extends js.Object {
 
 object SchemaJwt {
   @scala.inline
-  def apply(
-    audiences: js.Array[String] = null,
-    issuer: String = null,
-    jwksPublicKeys: String = null,
-    jwtHeaders: js.Array[SchemaJwtHeader] = null,
-    jwtParams: js.Array[String] = null
-  ): SchemaJwt = {
+  def apply(): SchemaJwt = {
     val __obj = js.Dynamic.literal()
-    if (audiences != null) __obj.updateDynamic("audiences")(audiences.asInstanceOf[js.Any])
-    if (issuer != null) __obj.updateDynamic("issuer")(issuer.asInstanceOf[js.Any])
-    if (jwksPublicKeys != null) __obj.updateDynamic("jwksPublicKeys")(jwksPublicKeys.asInstanceOf[js.Any])
-    if (jwtHeaders != null) __obj.updateDynamic("jwtHeaders")(jwtHeaders.asInstanceOf[js.Any])
-    if (jwtParams != null) __obj.updateDynamic("jwtParams")(jwtParams.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaJwt]
   }
+  @scala.inline
+  implicit class SchemaJwtOps[Self <: SchemaJwt] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAudiences(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("audiences")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAudiences: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("audiences")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIssuer(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("issuer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIssuer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("issuer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withJwksPublicKeys(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jwksPublicKeys")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutJwksPublicKeys: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jwksPublicKeys")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withJwtHeaders(value: js.Array[SchemaJwtHeader]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jwtHeaders")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutJwtHeaders: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jwtHeaders")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withJwtParams(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jwtParams")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutJwtParams: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jwtParams")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

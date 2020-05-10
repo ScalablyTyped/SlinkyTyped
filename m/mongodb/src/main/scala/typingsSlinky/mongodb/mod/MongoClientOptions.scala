@@ -1,8 +1,6 @@
 package typingsSlinky.mongodb.mod
 
 import typingsSlinky.mongodb.AnonPassword
-import typingsSlinky.mongodb.mongodbNumbers.`4`
-import typingsSlinky.mongodb.mongodbNumbers.`6`
 import typingsSlinky.mongodb.mongodbStrings.DEFAULT
 import typingsSlinky.mongodb.mongodbStrings.GSSAPI
 import typingsSlinky.mongodb.mongodbStrings.PLAIN
@@ -10,19 +8,16 @@ import typingsSlinky.mongodb.mongodbStrings.`MONGODB-CR`
 import typingsSlinky.mongodb.mongodbStrings.`MONGODB-X509`
 import typingsSlinky.mongodb.mongodbStrings.`SCRAM-SHA-1`
 import typingsSlinky.mongodb.mongodbStrings.`SCRAM-SHA-256`
-import typingsSlinky.mongodb.mongodbStrings.majority
-import typingsSlinky.node.Buffer
-import typingsSlinky.node.tlsMod.PeerCertificate
-import typingsSlinky.std.PromiseConstructor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.mongodb.mod.HighAvailabilityOptions because var conflicts: domainsEnabled, haInterval, readPreference. Inlined ha, readPreferenceTags
 - typingsSlinky.mongodb.mod.SSLOptions because Already inherited
 - typingsSlinky.mongodb.mod.ReplSetOptions because var conflicts: checkServerIdentity, ciphers, domainsEnabled, ecdhCurve, haInterval, minSize, poolSize, readPreference, servername, socketOptions, ssl, sslCA, sslCRL, sslCert, sslKey, sslPass, sslValidate. Inlined maxStalenessSeconds, replicaSet, secondaryAcceptableLatencyMS, connectWithNoPrimary
-- typingsSlinky.mongodb.mod.MongosOptions because var conflicts: checkServerIdentity, ciphers, domainsEnabled, ecdhCurve, haInterval, minSize, poolSize, readPreference, servername, socketOptions, ssl, sslCA, sslCRL, sslCert, sslKey, sslPass, sslValidate. Inlined acceptableLatencyMS */ trait MongoClientOptions
+- typingsSlinky.mongodb.mod.MongosOptions because var conflicts: checkServerIdentity, ciphers, domainsEnabled, ecdhCurve, haInterval, minSize, poolSize, readPreference, servername, socketOptions, ssl, sslCA, sslCRL, sslCert, sslKey, sslPass, sslValidate. Inlined acceptableLatencyMS */ @js.native
+trait MongoClientOptions
   extends DbCreateOptions
      with ServerOptions
      with SocketOptions
@@ -30,214 +25,301 @@ import scala.scalajs.js.annotation._
   /**
     * Default: 15; Cutoff latency point in MS for MongoS proxy selection
     */
-  var acceptableLatencyMS: js.UndefOr[scala.Double] = js.undefined
+  var acceptableLatencyMS: js.UndefOr[scala.Double] = js.native
   /**
     * The name of the application that created this MongoClient instance.
     */
-  var appname: js.UndefOr[String] = js.undefined
+  var appname: js.UndefOr[String] = js.native
   /**
     * Authentication credentials
     */
-  var auth: js.UndefOr[AnonPassword] = js.undefined
+  var auth: js.UndefOr[AnonPassword] = js.native
   /**
     * Mechanism for authentication: DEFAULT, GSSAPI, PLAIN, MONGODB-X509, 'MONGODB-CR', SCRAM-SHA-1 or SCRAM-SHA-256
     */
   var authMechanism: js.UndefOr[
     DEFAULT | GSSAPI | PLAIN | `MONGODB-X509` | `MONGODB-CR` | `SCRAM-SHA-1` | `SCRAM-SHA-256` | String
-  ] = js.undefined
-  var connectWithNoPrimary: js.UndefOr[Boolean] = js.undefined
+  ] = js.native
+  var connectWithNoPrimary: js.UndefOr[Boolean] = js.native
   /**
     * Default: true; Turn on high availability monitoring.
     */
-  var ha: js.UndefOr[Boolean] = js.undefined
+  var ha: js.UndefOr[Boolean] = js.native
   /**
     * Custom logger object
     */
-  var logger: js.UndefOr[js.Object | log] = js.undefined
+  var logger: js.UndefOr[js.Object | log] = js.native
   /**
     * The logging level (error/warn/info/debug)
     */
-  var loggerLevel: js.UndefOr[String] = js.undefined
+  var loggerLevel: js.UndefOr[String] = js.native
   /**
     * The max staleness to secondary reads (values under 10 seconds cannot be guaranteed);
     */
-  var maxStalenessSeconds: js.UndefOr[scala.Double] = js.undefined
+  var maxStalenessSeconds: js.UndefOr[scala.Double] = js.native
   /**
     * number of retries for a tailable cursor
     * @default 5
     */
-  var numberOfRetries: js.UndefOr[scala.Double] = js.undefined
+  var numberOfRetries: js.UndefOr[scala.Double] = js.native
   /** An object representing read preference tags, see: http://mongodb.github.io/node-mongodb-native/3.1/api/ReadPreference.html */
-  var readPreferenceTags: js.UndefOr[js.Array[String]] = js.undefined
+  var readPreferenceTags: js.UndefOr[js.Array[String]] = js.native
   /**
     * The name of the replicaset to connect to.
     */
-  var replicaSet: js.UndefOr[String] = js.undefined
+  var replicaSet: js.UndefOr[String] = js.native
   /**
     * Default: 15 ; Range of servers to pick when using NEAREST (lowest ping ms + the latency fence, ex: range of 1 to (1 + 15) ms)
     */
-  var secondaryAcceptableLatencyMS: js.UndefOr[scala.Double] = js.undefined
+  var secondaryAcceptableLatencyMS: js.UndefOr[scala.Double] = js.native
+  /**
+    * With `useUnifiedTopology`, the MongoDB driver will try to find a server to send any given operation to
+    * and keep retrying for `serverSelectionTimeoutMS` milliseconds.
+    * Default: 30000
+    */
+  var serverSelectionTimeoutMS: js.UndefOr[scala.Double] = js.native
   /**
     * Determines whether or not to use the new url parser. Enables the new, spec-compliant
     * url parser shipped in the core driver. This url parser fixes a number of problems with
     * the original parser, and aims to outright replace that parser in the near future.
     */
-  var useNewUrlParser: js.UndefOr[Boolean] = js.undefined
+  var useNewUrlParser: js.UndefOr[Boolean] = js.native
   /**
     * Enables the new unified topology layer
     */
-  var useUnifiedTopology: js.UndefOr[Boolean] = js.undefined
+  var useUnifiedTopology: js.UndefOr[Boolean] = js.native
   /**
     * Validate MongoClient passed in options for correctness.
     * Default: false
     */
-  var validateOptions: js.UndefOr[js.Object | Boolean] = js.undefined
+  var validateOptions: js.UndefOr[js.Object | Boolean] = js.native
 }
 
 object MongoClientOptions {
   @scala.inline
-  def apply(
-    acceptableLatencyMS: Int | scala.Double = null,
-    appname: String = null,
-    auth: AnonPassword = null,
-    authMechanism: DEFAULT | GSSAPI | PLAIN | `MONGODB-X509` | `MONGODB-CR` | `SCRAM-SHA-1` | `SCRAM-SHA-256` | String = null,
-    authSource: String = null,
-    autoReconnect: js.UndefOr[Boolean] = js.undefined,
-    bufferMaxEntries: Int | scala.Double = null,
-    checkServerIdentity: Boolean | (js.Function2[/* host */ String, /* cert */ PeerCertificate, js.UndefOr[js.Error]]) = null,
-    ciphers: String = null,
-    connectTimeoutMS: Int | scala.Double = null,
-    connectWithNoPrimary: js.UndefOr[Boolean] = js.undefined,
-    domainsEnabled: js.UndefOr[Boolean] = js.undefined,
-    ecdhCurve: String = null,
-    family: `4` | `6` = null,
-    forceServerObjectId: js.UndefOr[Boolean] = js.undefined,
-    fsync: js.UndefOr[Boolean] = js.undefined,
-    ha: js.UndefOr[Boolean] = js.undefined,
-    haInterval: Int | scala.Double = null,
-    ignoreUndefined: js.UndefOr[Boolean] = js.undefined,
-    j: js.UndefOr[Boolean] = js.undefined,
-    keepAlive: js.UndefOr[Boolean] = js.undefined,
-    keepAliveInitialDelay: Int | scala.Double = null,
-    logger: js.Object | log = null,
-    loggerLevel: String = null,
-    maxStalenessSeconds: Int | scala.Double = null,
-    minSize: Int | scala.Double = null,
-    monitorCommands: js.UndefOr[Boolean] = js.undefined,
-    monitoring: js.UndefOr[Boolean] = js.undefined,
-    native_parser: js.UndefOr[Boolean] = js.undefined,
-    noDelay: js.UndefOr[Boolean] = js.undefined,
-    numberOfRetries: Int | scala.Double = null,
-    pkFactory: js.Object = null,
-    poolSize: Int | scala.Double = null,
-    promiseLibrary: PromiseConstructor = null,
-    promoteBuffers: js.UndefOr[Boolean] = js.undefined,
-    promoteLongs: js.UndefOr[Boolean] = js.undefined,
-    promoteValues: js.UndefOr[Boolean] = js.undefined,
-    raw: js.UndefOr[Boolean] = js.undefined,
-    readConcern: ReadConcern | String = null,
-    readPreference: ReadPreferenceOrMode = null,
-    readPreferenceTags: js.Array[String] = null,
-    reconnectInterval: Int | scala.Double = null,
-    reconnectTries: Int | scala.Double = null,
-    replicaSet: String = null,
-    secondaryAcceptableLatencyMS: Int | scala.Double = null,
-    serializeFunctions: js.UndefOr[Boolean] = js.undefined,
-    servername: String = null,
-    session: ClientSession = null,
-    socketOptions: SocketOptions = null,
-    socketTimeoutMS: Int | scala.Double = null,
-    ssl: js.UndefOr[Boolean] = js.undefined,
-    sslCA: js.Array[Buffer | String] = null,
-    sslCRL: js.Array[Buffer | String] = null,
-    sslCert: Buffer | String = null,
-    sslKey: Buffer | String = null,
-    sslPass: Buffer | String = null,
-    sslValidate: js.UndefOr[Boolean] = js.undefined,
-    tls: js.UndefOr[Boolean] = js.undefined,
-    tlsAllowInvalidCertificates: js.UndefOr[Boolean] = js.undefined,
-    tlsAllowInvalidHostnames: js.UndefOr[Boolean] = js.undefined,
-    tlsCAFile: String = null,
-    tlsCertificateKeyFile: String = null,
-    tlsCertificateKeyFilePassword: String = null,
-    tlsInsecure: js.UndefOr[Boolean] = js.undefined,
-    useNewUrlParser: js.UndefOr[Boolean] = js.undefined,
-    useUnifiedTopology: js.UndefOr[Boolean] = js.undefined,
-    validateOptions: js.Object | Boolean = null,
-    w: scala.Double | majority | String = null,
-    wtimeout: Int | scala.Double = null
-  ): MongoClientOptions = {
+  def apply(): MongoClientOptions = {
     val __obj = js.Dynamic.literal()
-    if (acceptableLatencyMS != null) __obj.updateDynamic("acceptableLatencyMS")(acceptableLatencyMS.asInstanceOf[js.Any])
-    if (appname != null) __obj.updateDynamic("appname")(appname.asInstanceOf[js.Any])
-    if (auth != null) __obj.updateDynamic("auth")(auth.asInstanceOf[js.Any])
-    if (authMechanism != null) __obj.updateDynamic("authMechanism")(authMechanism.asInstanceOf[js.Any])
-    if (authSource != null) __obj.updateDynamic("authSource")(authSource.asInstanceOf[js.Any])
-    if (!js.isUndefined(autoReconnect)) __obj.updateDynamic("autoReconnect")(autoReconnect.asInstanceOf[js.Any])
-    if (bufferMaxEntries != null) __obj.updateDynamic("bufferMaxEntries")(bufferMaxEntries.asInstanceOf[js.Any])
-    if (checkServerIdentity != null) __obj.updateDynamic("checkServerIdentity")(checkServerIdentity.asInstanceOf[js.Any])
-    if (ciphers != null) __obj.updateDynamic("ciphers")(ciphers.asInstanceOf[js.Any])
-    if (connectTimeoutMS != null) __obj.updateDynamic("connectTimeoutMS")(connectTimeoutMS.asInstanceOf[js.Any])
-    if (!js.isUndefined(connectWithNoPrimary)) __obj.updateDynamic("connectWithNoPrimary")(connectWithNoPrimary.asInstanceOf[js.Any])
-    if (!js.isUndefined(domainsEnabled)) __obj.updateDynamic("domainsEnabled")(domainsEnabled.asInstanceOf[js.Any])
-    if (ecdhCurve != null) __obj.updateDynamic("ecdhCurve")(ecdhCurve.asInstanceOf[js.Any])
-    if (family != null) __obj.updateDynamic("family")(family.asInstanceOf[js.Any])
-    if (!js.isUndefined(forceServerObjectId)) __obj.updateDynamic("forceServerObjectId")(forceServerObjectId.asInstanceOf[js.Any])
-    if (!js.isUndefined(fsync)) __obj.updateDynamic("fsync")(fsync.asInstanceOf[js.Any])
-    if (!js.isUndefined(ha)) __obj.updateDynamic("ha")(ha.asInstanceOf[js.Any])
-    if (haInterval != null) __obj.updateDynamic("haInterval")(haInterval.asInstanceOf[js.Any])
-    if (!js.isUndefined(ignoreUndefined)) __obj.updateDynamic("ignoreUndefined")(ignoreUndefined.asInstanceOf[js.Any])
-    if (!js.isUndefined(j)) __obj.updateDynamic("j")(j.asInstanceOf[js.Any])
-    if (!js.isUndefined(keepAlive)) __obj.updateDynamic("keepAlive")(keepAlive.asInstanceOf[js.Any])
-    if (keepAliveInitialDelay != null) __obj.updateDynamic("keepAliveInitialDelay")(keepAliveInitialDelay.asInstanceOf[js.Any])
-    if (logger != null) __obj.updateDynamic("logger")(logger.asInstanceOf[js.Any])
-    if (loggerLevel != null) __obj.updateDynamic("loggerLevel")(loggerLevel.asInstanceOf[js.Any])
-    if (maxStalenessSeconds != null) __obj.updateDynamic("maxStalenessSeconds")(maxStalenessSeconds.asInstanceOf[js.Any])
-    if (minSize != null) __obj.updateDynamic("minSize")(minSize.asInstanceOf[js.Any])
-    if (!js.isUndefined(monitorCommands)) __obj.updateDynamic("monitorCommands")(monitorCommands.asInstanceOf[js.Any])
-    if (!js.isUndefined(monitoring)) __obj.updateDynamic("monitoring")(monitoring.asInstanceOf[js.Any])
-    if (!js.isUndefined(native_parser)) __obj.updateDynamic("native_parser")(native_parser.asInstanceOf[js.Any])
-    if (!js.isUndefined(noDelay)) __obj.updateDynamic("noDelay")(noDelay.asInstanceOf[js.Any])
-    if (numberOfRetries != null) __obj.updateDynamic("numberOfRetries")(numberOfRetries.asInstanceOf[js.Any])
-    if (pkFactory != null) __obj.updateDynamic("pkFactory")(pkFactory.asInstanceOf[js.Any])
-    if (poolSize != null) __obj.updateDynamic("poolSize")(poolSize.asInstanceOf[js.Any])
-    if (promiseLibrary != null) __obj.updateDynamic("promiseLibrary")(promiseLibrary.asInstanceOf[js.Any])
-    if (!js.isUndefined(promoteBuffers)) __obj.updateDynamic("promoteBuffers")(promoteBuffers.asInstanceOf[js.Any])
-    if (!js.isUndefined(promoteLongs)) __obj.updateDynamic("promoteLongs")(promoteLongs.asInstanceOf[js.Any])
-    if (!js.isUndefined(promoteValues)) __obj.updateDynamic("promoteValues")(promoteValues.asInstanceOf[js.Any])
-    if (!js.isUndefined(raw)) __obj.updateDynamic("raw")(raw.asInstanceOf[js.Any])
-    if (readConcern != null) __obj.updateDynamic("readConcern")(readConcern.asInstanceOf[js.Any])
-    if (readPreference != null) __obj.updateDynamic("readPreference")(readPreference.asInstanceOf[js.Any])
-    if (readPreferenceTags != null) __obj.updateDynamic("readPreferenceTags")(readPreferenceTags.asInstanceOf[js.Any])
-    if (reconnectInterval != null) __obj.updateDynamic("reconnectInterval")(reconnectInterval.asInstanceOf[js.Any])
-    if (reconnectTries != null) __obj.updateDynamic("reconnectTries")(reconnectTries.asInstanceOf[js.Any])
-    if (replicaSet != null) __obj.updateDynamic("replicaSet")(replicaSet.asInstanceOf[js.Any])
-    if (secondaryAcceptableLatencyMS != null) __obj.updateDynamic("secondaryAcceptableLatencyMS")(secondaryAcceptableLatencyMS.asInstanceOf[js.Any])
-    if (!js.isUndefined(serializeFunctions)) __obj.updateDynamic("serializeFunctions")(serializeFunctions.asInstanceOf[js.Any])
-    if (servername != null) __obj.updateDynamic("servername")(servername.asInstanceOf[js.Any])
-    if (session != null) __obj.updateDynamic("session")(session.asInstanceOf[js.Any])
-    if (socketOptions != null) __obj.updateDynamic("socketOptions")(socketOptions.asInstanceOf[js.Any])
-    if (socketTimeoutMS != null) __obj.updateDynamic("socketTimeoutMS")(socketTimeoutMS.asInstanceOf[js.Any])
-    if (!js.isUndefined(ssl)) __obj.updateDynamic("ssl")(ssl.asInstanceOf[js.Any])
-    if (sslCA != null) __obj.updateDynamic("sslCA")(sslCA.asInstanceOf[js.Any])
-    if (sslCRL != null) __obj.updateDynamic("sslCRL")(sslCRL.asInstanceOf[js.Any])
-    if (sslCert != null) __obj.updateDynamic("sslCert")(sslCert.asInstanceOf[js.Any])
-    if (sslKey != null) __obj.updateDynamic("sslKey")(sslKey.asInstanceOf[js.Any])
-    if (sslPass != null) __obj.updateDynamic("sslPass")(sslPass.asInstanceOf[js.Any])
-    if (!js.isUndefined(sslValidate)) __obj.updateDynamic("sslValidate")(sslValidate.asInstanceOf[js.Any])
-    if (!js.isUndefined(tls)) __obj.updateDynamic("tls")(tls.asInstanceOf[js.Any])
-    if (!js.isUndefined(tlsAllowInvalidCertificates)) __obj.updateDynamic("tlsAllowInvalidCertificates")(tlsAllowInvalidCertificates.asInstanceOf[js.Any])
-    if (!js.isUndefined(tlsAllowInvalidHostnames)) __obj.updateDynamic("tlsAllowInvalidHostnames")(tlsAllowInvalidHostnames.asInstanceOf[js.Any])
-    if (tlsCAFile != null) __obj.updateDynamic("tlsCAFile")(tlsCAFile.asInstanceOf[js.Any])
-    if (tlsCertificateKeyFile != null) __obj.updateDynamic("tlsCertificateKeyFile")(tlsCertificateKeyFile.asInstanceOf[js.Any])
-    if (tlsCertificateKeyFilePassword != null) __obj.updateDynamic("tlsCertificateKeyFilePassword")(tlsCertificateKeyFilePassword.asInstanceOf[js.Any])
-    if (!js.isUndefined(tlsInsecure)) __obj.updateDynamic("tlsInsecure")(tlsInsecure.asInstanceOf[js.Any])
-    if (!js.isUndefined(useNewUrlParser)) __obj.updateDynamic("useNewUrlParser")(useNewUrlParser.asInstanceOf[js.Any])
-    if (!js.isUndefined(useUnifiedTopology)) __obj.updateDynamic("useUnifiedTopology")(useUnifiedTopology.asInstanceOf[js.Any])
-    if (validateOptions != null) __obj.updateDynamic("validateOptions")(validateOptions.asInstanceOf[js.Any])
-    if (w != null) __obj.updateDynamic("w")(w.asInstanceOf[js.Any])
-    if (wtimeout != null) __obj.updateDynamic("wtimeout")(wtimeout.asInstanceOf[js.Any])
     __obj.asInstanceOf[MongoClientOptions]
   }
+  @scala.inline
+  implicit class MongoClientOptionsOps[Self <: MongoClientOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAcceptableLatencyMS(value: scala.Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("acceptableLatencyMS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAcceptableLatencyMS: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("acceptableLatencyMS")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAppname(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appname")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAppname: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appname")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAuth(value: AnonPassword): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("auth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAuth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("auth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAuthMechanism(
+      value: DEFAULT | GSSAPI | PLAIN | `MONGODB-X509` | `MONGODB-CR` | `SCRAM-SHA-1` | `SCRAM-SHA-256` | String
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("authMechanism")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAuthMechanism: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("authMechanism")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConnectWithNoPrimary(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("connectWithNoPrimary")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConnectWithNoPrimary: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("connectWithNoPrimary")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHa(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ha")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHa: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ha")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLoggerFunction2(value: (/* message */ js.UndefOr[String], /* state */ js.UndefOr[LoggerState]) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("logger")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withLogger(value: js.Object | log): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("logger")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLogger: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("logger")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLoggerLevel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loggerLevel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLoggerLevel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loggerLevel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxStalenessSeconds(value: scala.Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxStalenessSeconds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxStalenessSeconds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxStalenessSeconds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNumberOfRetries(value: scala.Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numberOfRetries")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNumberOfRetries: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numberOfRetries")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReadPreferenceTags(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("readPreferenceTags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReadPreferenceTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("readPreferenceTags")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReplicaSet(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("replicaSet")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReplicaSet: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("replicaSet")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSecondaryAcceptableLatencyMS(value: scala.Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("secondaryAcceptableLatencyMS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSecondaryAcceptableLatencyMS: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("secondaryAcceptableLatencyMS")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withServerSelectionTimeoutMS(value: scala.Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serverSelectionTimeoutMS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutServerSelectionTimeoutMS: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serverSelectionTimeoutMS")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUseNewUrlParser(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useNewUrlParser")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUseNewUrlParser: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useNewUrlParser")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUseUnifiedTopology(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useUnifiedTopology")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUseUnifiedTopology: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useUnifiedTopology")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValidateOptions(value: js.Object | Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("validateOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValidateOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("validateOptions")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

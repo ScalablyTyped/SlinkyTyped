@@ -34,21 +34,83 @@ trait ProductionVariantSummary extends js.Object {
 
 object ProductionVariantSummary {
   @scala.inline
-  def apply(
-    VariantName: VariantName,
-    CurrentInstanceCount: Int | Double = null,
-    CurrentWeight: Int | Double = null,
-    DeployedImages: DeployedImages = null,
-    DesiredInstanceCount: Int | Double = null,
-    DesiredWeight: Int | Double = null
-  ): ProductionVariantSummary = {
+  def apply(VariantName: VariantName): ProductionVariantSummary = {
     val __obj = js.Dynamic.literal(VariantName = VariantName.asInstanceOf[js.Any])
-    if (CurrentInstanceCount != null) __obj.updateDynamic("CurrentInstanceCount")(CurrentInstanceCount.asInstanceOf[js.Any])
-    if (CurrentWeight != null) __obj.updateDynamic("CurrentWeight")(CurrentWeight.asInstanceOf[js.Any])
-    if (DeployedImages != null) __obj.updateDynamic("DeployedImages")(DeployedImages.asInstanceOf[js.Any])
-    if (DesiredInstanceCount != null) __obj.updateDynamic("DesiredInstanceCount")(DesiredInstanceCount.asInstanceOf[js.Any])
-    if (DesiredWeight != null) __obj.updateDynamic("DesiredWeight")(DesiredWeight.asInstanceOf[js.Any])
     __obj.asInstanceOf[ProductionVariantSummary]
   }
+  @scala.inline
+  implicit class ProductionVariantSummaryOps[Self <: ProductionVariantSummary] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withVariantName(value: VariantName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VariantName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCurrentInstanceCount(value: TaskCount): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrentInstanceCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCurrentInstanceCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrentInstanceCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCurrentWeight(value: VariantWeight): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrentWeight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCurrentWeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrentWeight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeployedImages(value: DeployedImages): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeployedImages")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeployedImages: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeployedImages")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDesiredInstanceCount(value: TaskCount): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DesiredInstanceCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDesiredInstanceCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DesiredInstanceCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDesiredWeight(value: VariantWeight): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DesiredWeight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDesiredWeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DesiredWeight")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

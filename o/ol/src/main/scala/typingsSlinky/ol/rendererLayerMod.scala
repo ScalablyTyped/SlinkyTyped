@@ -33,7 +33,7 @@ object rendererLayerMod extends js.Object {
         ],
       declutteredFeatures: js.Array[FeatureLike]
     ): T | Unit = js.native
-    def getDataAtPixel(pixel: Pixel, frameState: FrameState, hitTolerance: Double): scala.scalajs.js.typedarray.Uint8ClampedArray | scala.scalajs.js.typedarray.Uint8Array = js.native
+    def getDataAtPixel(pixel: Pixel, frameState: FrameState, hitTolerance: Double): js.typedarray.Uint8ClampedArray | js.typedarray.Uint8Array = js.native
     def getFeatures(pixel: Pixel): js.Promise[
         js.Array[typingsSlinky.ol.olFeatureMod.default[typingsSlinky.ol.geometryMod.default]]
       ] = js.native

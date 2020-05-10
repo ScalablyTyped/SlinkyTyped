@@ -1,6 +1,5 @@
 package typingsSlinky.pixiJs.PIXI.utils
 
-import typingsSlinky.std.Float32Array
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,14 +7,9 @@ import scala.scalajs.js.annotation._
 @JSGlobal("PIXI.utils.premultiplyRgba")
 @js.native
 object premultiplyRgba extends js.Object {
-  def apply(rgb: js.Array[Double], alpha: Double): scala.scalajs.js.typedarray.Float32Array = js.native
-  def apply(rgb: js.Array[Double], alpha: Double, out: scala.scalajs.js.typedarray.Float32Array): scala.scalajs.js.typedarray.Float32Array = js.native
-  def apply(
-    rgb: js.Array[Double],
-    alpha: Double,
-    out: scala.scalajs.js.typedarray.Float32Array,
-    premultiply: Boolean
-  ): scala.scalajs.js.typedarray.Float32Array = js.native
+  def apply(rgb: js.Array[Double], alpha: Double): js.typedarray.Float32Array = js.native
+  def apply(rgb: js.Array[Double], alpha: Double, out: js.typedarray.Float32Array): js.typedarray.Float32Array = js.native
+  def apply(rgb: js.Array[Double], alpha: Double, out: js.typedarray.Float32Array, premultiply: Boolean): js.typedarray.Float32Array = js.native
   /**
     * combines rgb and alpha to out array
     *
@@ -27,13 +21,13 @@ object premultiplyRgba extends js.Object {
     * @param {boolean} [premultiply=true] do premultiply it
     * @returns {Float32Array} vec4 rgba
     */
-  def apply(rgb: Float32Array, alpha: Double): scala.scalajs.js.typedarray.Float32Array = js.native
-  def apply(rgb: Float32Array, alpha: Double, out: scala.scalajs.js.typedarray.Float32Array): scala.scalajs.js.typedarray.Float32Array = js.native
+  def apply(rgb: js.typedarray.Float32Array, alpha: Double): js.typedarray.Float32Array = js.native
+  def apply(rgb: js.typedarray.Float32Array, alpha: Double, out: js.typedarray.Float32Array): js.typedarray.Float32Array = js.native
   def apply(
-    rgb: Float32Array,
+    rgb: js.typedarray.Float32Array,
     alpha: Double,
-    out: scala.scalajs.js.typedarray.Float32Array,
+    out: js.typedarray.Float32Array,
     premultiply: Boolean
-  ): scala.scalajs.js.typedarray.Float32Array = js.native
+  ): js.typedarray.Float32Array = js.native
 }
 

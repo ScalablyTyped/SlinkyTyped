@@ -80,10 +80,10 @@ trait CanvasKit extends js.Object {
   // factories
   def Color(r: Double, g: Double, b: Double, a: Double): SkColor = js.native
   def LTRBRect(left: Double, top: Double, right: Double, bottom: Double): SkRect = js.native
-  def MakeAnimatedImageFromEncoded(buffer: scala.scalajs.js.typedarray.ArrayBuffer): SkAnimatedImage = js.native
+  def MakeAnimatedImageFromEncoded(buffer: js.typedarray.ArrayBuffer): SkAnimatedImage = js.native
   def MakeAnimation(lottieJson: js.Any): SkAnimation = js.native
   def MakeCanvasSurface(canvas: HTMLCanvasElement): SkSurface = js.native
-  def MakeImageFromEncoded(buffer: scala.scalajs.js.typedarray.ArrayBuffer): SkImage = js.native
+  def MakeImageFromEncoded(buffer: js.typedarray.ArrayBuffer): SkImage = js.native
   def MakeLinearGradientShader(
     start: SkPoint,
     end: SkPoint,

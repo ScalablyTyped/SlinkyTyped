@@ -1,14 +1,15 @@
 package typingsSlinky.react.mod
 
-import typingsSlinky.std.EventTarget
+import org.scalajs.dom.raw.EventTarget
 import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ChangeEvent[T] extends BaseSyntheticEvent[Event_, EventTarget with T, EventTarget] {
   @JSName("target")
-  var target_ChangeEvent: org.scalajs.dom.raw.EventTarget with T
+  var target_ChangeEvent: EventTarget with T = js.native
 }
 
 object ChangeEvent {
@@ -16,7 +17,7 @@ object ChangeEvent {
   def apply[T](
     bubbles: Boolean,
     cancelable: Boolean,
-    currentTarget: org.scalajs.dom.raw.EventTarget with T,
+    currentTarget: EventTarget with T,
     defaultPrevented: Boolean,
     eventPhase: Double,
     isDefaultPrevented: () => Boolean,
@@ -26,7 +27,7 @@ object ChangeEvent {
     persist: () => Unit,
     preventDefault: () => Unit,
     stopPropagation: () => Unit,
-    target: org.scalajs.dom.raw.EventTarget with T,
+    target: EventTarget with T,
     timeStamp: Double,
     `type`: String
   ): ChangeEvent[T] = {
@@ -34,5 +35,19 @@ object ChangeEvent {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ChangeEvent[T]]
   }
+  @scala.inline
+  implicit class ChangeEventOps[Self[t] <: ChangeEvent[t], T] (val x: Self[T]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
+    @scala.inline
+    def withTarget(value: EventTarget with T): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

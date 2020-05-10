@@ -28,7 +28,7 @@ class Circle protected () extends GeoObject_ {
   ) = this()
   def this(geometry: js.Object, properties: js.Object, options: ICircleOptions) = this()
   def this(geometry: js.Object, properties: IDataManager, options: ICircleOptions) = this()
-  var indices: scala.scalajs.js.typedarray.ArrayBuffer = js.native
-  var vertices: scala.scalajs.js.typedarray.ArrayBuffer = js.native
+  var indices: js.typedarray.ArrayBuffer = js.native
+  var vertices: js.typedarray.ArrayBuffer = js.native
 }
 

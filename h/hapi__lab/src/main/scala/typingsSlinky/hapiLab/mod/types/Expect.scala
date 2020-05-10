@@ -4,19 +4,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Expect extends js.Object {
   /**
     * Assert the value to throw an argument error
     * 
     * @param value - the value being asserted.
     */
-  def error[T](value: T): Unit
+  def error[T](value: T): Unit = js.native
   /**
     * Assert the type of the value expected
     * 
     * @param value - the value being asserted.
     */
-  def `type`[T](value: T): Unit
+  def `type`[T](value: T): Unit = js.native
 }
 
 object Expect {
@@ -26,5 +27,25 @@ object Expect {
     __obj.updateDynamic("type")(js.Any.fromFunction1(`type`))
     __obj.asInstanceOf[Expect]
   }
+  @scala.inline
+  implicit class ExpectOps[Self <: Expect] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withError(value: js.Any => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withType(value: js.Any => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

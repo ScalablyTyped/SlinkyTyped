@@ -8,59 +8,60 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait BuildDefinition extends BuildDefinitionReference {
   /**
     * Indicates whether badges are enabled for this definition.
     */
-  var badgeEnabled: Boolean
+  var badgeEnabled: Boolean = js.native
   /**
     * The build number format.
     */
-  var buildNumberFormat: String
+  var buildNumberFormat: String = js.native
   /**
     * A save-time comment for the definition.
     */
-  var comment: String
-  var demands: js.Array[_]
+  var comment: String = js.native
+  var demands: js.Array[_] = js.native
   /**
     * The description.
     */
-  var description: String
+  var description: String = js.native
   /**
     * The drop location for the definition.
     */
-  var dropLocation: String
+  var dropLocation: String = js.native
   /**
     * The job authorization scope for builds queued against this definition.
     */
-  var jobAuthorizationScope: BuildAuthorizationScope
+  var jobAuthorizationScope: BuildAuthorizationScope = js.native
   /**
     * The job cancel timeout (in minutes) for builds cancelled by user for this definition.
     */
-  var jobCancelTimeoutInMinutes: Double
+  var jobCancelTimeoutInMinutes: Double = js.native
   /**
     * The job execution timeout (in minutes) for builds queued against this definition.
     */
-  var jobTimeoutInMinutes: Double
-  var options: js.Array[BuildOption]
+  var jobTimeoutInMinutes: Double = js.native
+  var options: js.Array[BuildOption] = js.native
   /**
     * The build process.
     */
-  var process: BuildProcess
+  var process: BuildProcess = js.native
   /**
     * The process parameters for this definition.
     */
-  var processParameters: ProcessParameters
-  var properties: js.Any
+  var processParameters: ProcessParameters = js.native
+  var properties: js.Any = js.native
   /**
     * The repository.
     */
-  var repository: BuildRepository
-  var retentionRules: js.Array[RetentionPolicy]
-  var tags: js.Array[String]
-  var triggers: js.Array[BuildTrigger]
-  var variableGroups: js.Array[VariableGroup]
-  var variables: StringDictionary[BuildDefinitionVariable]
+  var repository: BuildRepository = js.native
+  var retentionRules: js.Array[RetentionPolicy] = js.native
+  var tags: js.Array[String] = js.native
+  var triggers: js.Array[BuildTrigger] = js.native
+  var variableGroups: js.Array[VariableGroup] = js.native
+  var variables: StringDictionary[BuildDefinitionVariable] = js.native
 }
 
 object BuildDefinition {
@@ -109,5 +110,127 @@ object BuildDefinition {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[BuildDefinition]
   }
+  @scala.inline
+  implicit class BuildDefinitionOps[Self <: BuildDefinition] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBadgeEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("badgeEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBuildNumberFormat(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buildNumberFormat")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withComment(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("comment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDemands(value: js.Array[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("demands")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDescription(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDropLocation(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dropLocation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withJobAuthorizationScope(value: BuildAuthorizationScope): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jobAuthorizationScope")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withJobCancelTimeoutInMinutes(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jobCancelTimeoutInMinutes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withJobTimeoutInMinutes(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jobTimeoutInMinutes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOptions(value: js.Array[BuildOption]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withProcess(value: BuildProcess): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("process")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withProcessParameters(value: ProcessParameters): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("processParameters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withProperties(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRepository(value: BuildRepository): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("repository")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRetentionRules(value: js.Array[RetentionPolicy]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("retentionRules")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTags(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTriggers(value: js.Array[BuildTrigger]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("triggers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVariableGroups(value: js.Array[VariableGroup]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("variableGroups")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVariables(value: StringDictionary[BuildDefinitionVariable]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("variables")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

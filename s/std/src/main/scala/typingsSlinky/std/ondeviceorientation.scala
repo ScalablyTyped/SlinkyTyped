@@ -9,6 +9,10 @@ import scala.scalajs.js.annotation._
 @js.native
 object ondeviceorientation
   extends TopLevel[
-      (js.ThisFunction1[/* this */ Window_, /* ev */ DeviceOrientationEvent, js.Any]) | Null
+      (js.ThisFunction1[
+        /* this */ Window_, 
+        /* ev */ org.scalajs.dom.experimental.deviceorientation.DeviceOrientationEvent, 
+        js.Any
+      ]) | Null
     ]
 

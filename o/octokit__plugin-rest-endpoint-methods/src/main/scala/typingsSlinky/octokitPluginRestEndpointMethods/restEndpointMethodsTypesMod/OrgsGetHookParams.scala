@@ -4,17 +4,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait OrgsGetHookParams extends js.Object {
-  var hook_id: Double
-  var org: String
+  var hook_id: Double = js.native
+  var org: String = js.native
 }
 
 object OrgsGetHookParams {
   @scala.inline
   def apply(hook_id: Double, org: String): OrgsGetHookParams = {
     val __obj = js.Dynamic.literal(hook_id = hook_id.asInstanceOf[js.Any], org = org.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[OrgsGetHookParams]
   }
+  @scala.inline
+  implicit class OrgsGetHookParamsOps[Self <: OrgsGetHookParams] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHook_id(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hook_id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOrg(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("org")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

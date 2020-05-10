@@ -5,8 +5,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object codeguruprofilerMod {
-  type AgentProfile = typingsSlinky.node.Buffer | scala.scalajs.js.typedarray.Uint8Array | typingsSlinky.awsSdk.codeguruprofilerMod.Blob | java.lang.String
-  type AggregatedProfile = typingsSlinky.node.Buffer | scala.scalajs.js.typedarray.Uint8Array | typingsSlinky.awsSdk.codeguruprofilerMod.Blob | java.lang.String
+  type AgentProfile = typingsSlinky.node.Buffer | js.typedarray.Uint8Array | typingsSlinky.awsSdk.codeguruprofilerMod.Blob | java.lang.String
+  type AggregatedProfile = typingsSlinky.node.Buffer | js.typedarray.Uint8Array | typingsSlinky.awsSdk.codeguruprofilerMod.Blob | java.lang.String
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.P1D
     - typingsSlinky.awsSdk.awsSdkStrings.PT1H

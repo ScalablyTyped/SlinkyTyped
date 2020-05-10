@@ -29,6 +29,6 @@ package object typeHelpersMod {
   type Reducer[TState, TAction /* <: typingsSlinky.typesafeActions.typeHelpersMod.Action[typingsSlinky.typesafeActions.typeHelpersMod.TypeConstant] */] = js.Function2[/* state */ js.UndefOr[TState], /* action */ TAction, TState]
   type StateType[TReducerOrMap /* <: js.Any */] = (/* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ K in keyof TReducerOrMap ]: / * import warning: SimplifyRecursiveTypeAlias.enterTsTypeRef rewrittenOpt applyOrElse Simplified recursive type alias typesafe-actions.typesafe-actions/dist/type-helpers.StateType<TReducerOrMap[K]> * / object}
-    */ typingsSlinky.typesafeActions.typesafeActionsStrings.StateType with js.Any) | typingsSlinky.std.ReturnType[TReducerOrMap]
+    */ typingsSlinky.typesafeActions.typesafeActionsStrings.StateType with org.scalablytyped.runtime.TopLevel[js.Any]) | typingsSlinky.std.ReturnType[TReducerOrMap]
   type TypeConstant = java.lang.String
 }

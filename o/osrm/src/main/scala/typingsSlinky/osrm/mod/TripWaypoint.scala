@@ -12,9 +12,10 @@ import scala.scalajs.js.annotation._
   *
   * https://github.com/Project-OSRM/node-osrm/blob/master/docs/api.md#trip
   */
+@js.native
 trait TripWaypoint extends Waypoint {
-  var trips_index: Double
-  var waypoint_index: Double
+  var trips_index: Double = js.native
+  var waypoint_index: Double = js.native
 }
 
 object TripWaypoint {
@@ -28,8 +29,27 @@ object TripWaypoint {
     waypoint_index: Double
   ): TripWaypoint = {
     val __obj = js.Dynamic.literal(distance = distance.asInstanceOf[js.Any], hint = hint.asInstanceOf[js.Any], location = location.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], trips_index = trips_index.asInstanceOf[js.Any], waypoint_index = waypoint_index.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[TripWaypoint]
   }
+  @scala.inline
+  implicit class TripWaypointOps[Self <: TripWaypoint] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withTrips_index(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trips_index")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withWaypoint_index(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("waypoint_index")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

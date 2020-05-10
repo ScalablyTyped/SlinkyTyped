@@ -1,20 +1,20 @@
 organization := "org.scalablytyped.slinky"
 name := "jsoneditor-for-react"
-version := "0.0-dt-20200225Z-818f18"
+version := "0.0-dt-20200330Z-f2a2c6"
 scalaVersion := "2.13.1"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
-  "me.shadaj" %%% "slinky-web" % "0.6.4",
-  "org.scalablytyped.slinky" %%% "ace" % "0.0-unknown-dt-20200225Z-875db9",
-  "org.scalablytyped.slinky" %%% "ajv" % "6.11.0-7a0f9a",
-  "org.scalablytyped.slinky" %%% "csstype" % "2.6.6-89abae",
-  "org.scalablytyped.slinky" %%% "jsoneditor" % "v5.28.2-dt-20200225Z-1e7a4c",
-  "org.scalablytyped.slinky" %%% "prop-types" % "15.7-dt-20190924Z-6bb503",
-  "org.scalablytyped.slinky" %%% "react" % "16.9-dt-20200227Z-f18fda",
-  "org.scalablytyped.slinky" %%% "std" % "3.8-16327f")
+  "me.shadaj" %%% "slinky-web" % "0.6.5",
+  "org.scalablytyped.slinky" %%% "ace" % "0.0-unknown-dt-20200314Z-1572b7",
+  "org.scalablytyped.slinky" %%% "ajv" % "6.12.0-bd7a73",
+  "org.scalablytyped.slinky" %%% "csstype" % "2.6.6-fa3762",
+  "org.scalablytyped.slinky" %%% "jsoneditor" % "8.6-dt-20200413Z-1369a4",
+  "org.scalablytyped.slinky" %%% "prop-types" % "15.7-dt-20190924Z-24495c",
+  "org.scalablytyped.slinky" %%% "react" % "16.9-dt-20200409Z-47fb9f",
+  "org.scalablytyped.slinky" %%% "std" % "3.8-8ac92e")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-g:notailcalls", "-P:scalajs:sjsDefinedByDefault")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
-bintrayRepository := "SlinkyTyped"
-resolvers += Resolver.bintrayRepo("oyvindberg", "SlinkyTyped")
+bintrayRepository := "ScalablyTyped"
+resolvers += Resolver.bintrayRepo("oyvindberg", "ScalablyTyped")

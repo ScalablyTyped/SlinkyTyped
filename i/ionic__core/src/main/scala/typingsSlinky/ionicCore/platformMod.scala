@@ -28,6 +28,24 @@ object platformMod extends js.Object {
     def apply(win: Window_, plt: Platforms): Boolean = js.native
   }
   
+  /* keyof @ionic/core.AnonAndroid */ /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.ionicCore.ionicCoreStrings.ipad
+    - typingsSlinky.ionicCore.ionicCoreStrings.iphone
+    - typingsSlinky.ionicCore.ionicCoreStrings.ios
+    - typingsSlinky.ionicCore.ionicCoreStrings.android
+    - typingsSlinky.ionicCore.ionicCoreStrings.phablet
+    - typingsSlinky.ionicCore.ionicCoreStrings.tablet
+    - typingsSlinky.ionicCore.ionicCoreStrings.cordova
+    - typingsSlinky.ionicCore.ionicCoreStrings.capacitor
+    - typingsSlinky.ionicCore.ionicCoreStrings.electron
+    - typingsSlinky.ionicCore.ionicCoreStrings.pwa
+    - typingsSlinky.ionicCore.ionicCoreStrings.mobile
+    - typingsSlinky.ionicCore.ionicCoreStrings.mobileweb
+    - typingsSlinky.ionicCore.ionicCoreStrings.desktop
+    - typingsSlinky.ionicCore.ionicCoreStrings.hybrid
+  */
+  trait Platforms extends js.Object
+  
   val isPlatform: IsPlatformSignature = js.native
   def getPlatforms(win: js.Any): js.Array[
     ios | ipad | iphone | android | phablet | tablet | cordova | capacitor | electron | pwa | mobile | mobileweb | desktop | hybrid
@@ -39,6 +57,5 @@ object platformMod extends js.Object {
     ios | ipad | iphone | android | phablet | tablet | cordova | capacitor | electron | pwa | mobile | mobileweb | desktop | hybrid
   ] = js.native
   def testUserAgent(win: Window_, expr: js.RegExp): Boolean = js.native
-  type Platforms = String
 }
 

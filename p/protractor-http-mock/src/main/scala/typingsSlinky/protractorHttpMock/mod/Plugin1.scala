@@ -16,7 +16,9 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait Plugin1[T1] extends js.Object {
-  def `match`[O /* <: Delete[T1] */](mockRequest: O, requestConfig: O): Boolean = js.native
+  def `match`[O /* <: Patch[T1] */](mockRequest: O, requestConfig: O): Boolean = js.native
+  @JSName("match")
+  def match_O_DeleteT1[O /* <: Delete[T1] */](mockRequest: O, requestConfig: O): Boolean = js.native
   /**
     * Match function.
     * Return a truthy value to indicate successfull match.
@@ -30,8 +32,6 @@ trait Plugin1[T1] extends js.Object {
   def match_O_HeadT1[O /* <: Head[T1] */](mockRequest: O, requestConfig: O): Boolean = js.native
   @JSName("match")
   def match_O_JsonpT1[O /* <: Jsonp[T1] */](mockRequest: O, requestConfig: O): Boolean = js.native
-  @JSName("match")
-  def match_O_PatchT1[O /* <: Patch[T1] */](mockRequest: O, requestConfig: O): Boolean = js.native
   @JSName("match")
   def match_O_PostT1[O /* <: Post[T1] */](mockRequest: O, requestConfig: O): Boolean = js.native
   @JSName("match")

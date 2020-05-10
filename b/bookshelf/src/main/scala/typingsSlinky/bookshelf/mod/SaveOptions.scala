@@ -1,38 +1,79 @@
 package typingsSlinky.bookshelf.mod
 
-import typingsSlinky.knex.mod.Transaction
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SaveOptions extends SyncOptions {
-  var defaults: js.UndefOr[String] = js.undefined
-  var method: js.UndefOr[String] = js.undefined
-  var patch: js.UndefOr[Boolean] = js.undefined
+  var defaults: js.UndefOr[String] = js.native
+  var method: js.UndefOr[String] = js.native
+  var patch: js.UndefOr[Boolean] = js.native
   /** @default true */
-  var require: js.UndefOr[Boolean] = js.undefined
+  var require: js.UndefOr[Boolean] = js.native
 }
 
 object SaveOptions {
   @scala.inline
-  def apply(
-    debug: js.UndefOr[Boolean] = js.undefined,
-    defaults: String = null,
-    method: String = null,
-    patch: js.UndefOr[Boolean] = js.undefined,
-    require: js.UndefOr[Boolean] = js.undefined,
-    transacting: Transaction[_, _] = null,
-    withSchema: String = null
-  ): SaveOptions = {
+  def apply(): SaveOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(debug)) __obj.updateDynamic("debug")(debug.asInstanceOf[js.Any])
-    if (defaults != null) __obj.updateDynamic("defaults")(defaults.asInstanceOf[js.Any])
-    if (method != null) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
-    if (!js.isUndefined(patch)) __obj.updateDynamic("patch")(patch.asInstanceOf[js.Any])
-    if (!js.isUndefined(require)) __obj.updateDynamic("require")(require.asInstanceOf[js.Any])
-    if (transacting != null) __obj.updateDynamic("transacting")(transacting.asInstanceOf[js.Any])
-    if (withSchema != null) __obj.updateDynamic("withSchema")(withSchema.asInstanceOf[js.Any])
     __obj.asInstanceOf[SaveOptions]
   }
+  @scala.inline
+  implicit class SaveOptionsOps[Self <: SaveOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDefaults(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaults")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaults: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaults")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMethod(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMethod: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPatch(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("patch")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPatch: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("patch")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequire(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("require")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequire: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("require")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

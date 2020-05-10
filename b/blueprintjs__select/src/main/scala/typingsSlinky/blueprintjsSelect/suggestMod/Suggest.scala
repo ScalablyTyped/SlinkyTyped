@@ -21,6 +21,7 @@ class Suggest[T] ()
   var handlePopoverOpened: js.Any = js.native
   var handlePopoverOpening: js.Any = js.native
   var input: js.Any = js.native
+  var maybeResetActiveItemToSelectedItem: js.Any = js.native
   var queryList: js.Any = js.native
   var refHandlers: js.Any = js.native
   var renderQueryList: js.Any = js.native

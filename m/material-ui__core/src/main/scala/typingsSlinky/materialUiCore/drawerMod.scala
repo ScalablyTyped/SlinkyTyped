@@ -1,10 +1,9 @@
 package typingsSlinky.materialUiCore
 
 import org.scalablytyped.runtime.TopLevel
+import slinky.core.ReactComponentClass
 import typingsSlinky.materialUiCore.drawerDrawerMod.DrawerProps
 import typingsSlinky.react.mod.Component
-import typingsSlinky.react.mod.ComponentState
-import typingsSlinky.react.mod.ComponentType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,13 +13,13 @@ import scala.scalajs.js.annotation._
 object drawerMod extends js.Object {
   @js.native
   class default protected ()
-    extends Component[DrawerProps, ComponentState, js.Any] {
+    extends Component[DrawerProps, js.Object, js.Any] {
     def this(props: DrawerProps) = this()
     def this(props: DrawerProps, context: js.Any) = this()
   }
   
   @js.native
-  object default extends TopLevel[ComponentType[DrawerProps]]
+  object default extends TopLevel[ReactComponentClass[DrawerProps]]
   
 }
 

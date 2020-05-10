@@ -15,16 +15,14 @@ trait AppLockerApplicationControlType extends js.Object
 
 object AppLockerApplicationControlType {
   @scala.inline
-  def auditComponentsAndStoreApps: typingsSlinky.microsoftGraph.microsoftGraphStrings.auditComponentsAndStoreApps = this.cast("auditComponentsAndStoreApps")
+  def auditComponentsAndStoreApps: typingsSlinky.microsoftGraph.microsoftGraphStrings.auditComponentsAndStoreApps = "auditComponentsAndStoreApps".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.auditComponentsAndStoreApps]
   @scala.inline
-  def auditComponentsStoreAppsAndSmartlocker: typingsSlinky.microsoftGraph.microsoftGraphStrings.auditComponentsStoreAppsAndSmartlocker = this.cast("auditComponentsStoreAppsAndSmartlocker")
+  def auditComponentsStoreAppsAndSmartlocker: typingsSlinky.microsoftGraph.microsoftGraphStrings.auditComponentsStoreAppsAndSmartlocker = "auditComponentsStoreAppsAndSmartlocker".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.auditComponentsStoreAppsAndSmartlocker]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def enforceComponentsAndStoreApps: typingsSlinky.microsoftGraph.microsoftGraphStrings.enforceComponentsAndStoreApps = "enforceComponentsAndStoreApps".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.enforceComponentsAndStoreApps]
   @scala.inline
-  def enforceComponentsAndStoreApps: typingsSlinky.microsoftGraph.microsoftGraphStrings.enforceComponentsAndStoreApps = this.cast("enforceComponentsAndStoreApps")
+  def enforceComponentsStoreAppsAndSmartlocker: typingsSlinky.microsoftGraph.microsoftGraphStrings.enforceComponentsStoreAppsAndSmartlocker = "enforceComponentsStoreAppsAndSmartlocker".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.enforceComponentsStoreAppsAndSmartlocker]
   @scala.inline
-  def enforceComponentsStoreAppsAndSmartlocker: typingsSlinky.microsoftGraph.microsoftGraphStrings.enforceComponentsStoreAppsAndSmartlocker = this.cast("enforceComponentsStoreAppsAndSmartlocker")
-  @scala.inline
-  def notConfigured: typingsSlinky.microsoftGraph.microsoftGraphStrings.notConfigured = this.cast("notConfigured")
+  def notConfigured: typingsSlinky.microsoftGraph.microsoftGraphStrings.notConfigured = "notConfigured".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.notConfigured]
 }
 

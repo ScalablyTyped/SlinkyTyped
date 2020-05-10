@@ -1,10 +1,9 @@
 package typingsSlinky.baseui.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.baseui.listMod.ArtworkSizesT
 import typingsSlinky.baseui.listMod.OverridesT
 import typingsSlinky.baseui.listMod.PropsT
@@ -12,31 +11,32 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ListItem
-  extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+object ListItem {
   @JSImport("baseui/list", "ListItem")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    artwork: TagMod[Any] = null,
-    artworkSize: ArtworkSizesT = null,
-    endEnhancer: TagMod[Any] = null,
-    overrides: OverridesT = null,
-    sublist: js.UndefOr[Boolean] = js.undefined,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, js.Object] = {
-    val __obj = js.Dynamic.literal()
-    if (artwork != null) __obj.updateDynamic("artwork")(artwork.asInstanceOf[js.Any])
-    if (artworkSize != null) __obj.updateDynamic("artworkSize")(artworkSize.asInstanceOf[js.Any])
-    if (endEnhancer != null) __obj.updateDynamic("endEnhancer")(endEnhancer.asInstanceOf[js.Any])
-    if (overrides != null) __obj.updateDynamic("overrides")(overrides.asInstanceOf[js.Any])
-    if (!js.isUndefined(sublist)) __obj.updateDynamic("sublist")(sublist.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, js.Object] {
+    @scala.inline
+    def artworkReactElement(value: ReactElement): this.type = set("artwork", value.asInstanceOf[js.Any])
+    @scala.inline
+    def artwork(value: TagMod[Any]): this.type = set("artwork", value.asInstanceOf[js.Any])
+    @scala.inline
+    def artworkSize(value: ArtworkSizesT): this.type = set("artworkSize", value.asInstanceOf[js.Any])
+    @scala.inline
+    def endEnhancerReactElement(value: ReactElement): this.type = set("endEnhancer", value.asInstanceOf[js.Any])
+    @scala.inline
+    def endEnhancer(value: TagMod[Any]): this.type = set("endEnhancer", value.asInstanceOf[js.Any])
+    @scala.inline
+    def overrides(value: OverridesT): this.type = set("overrides", value.asInstanceOf[js.Any])
+    @scala.inline
+    def sublist(value: Boolean): this.type = set("sublist", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, js.Object] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, js.Object](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = PropsT
+  
+  def withProps(p: PropsT): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: ListItem.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation._
 object focusMod extends js.Object {
   def doesElementContainFocus(element: HTMLElement): Boolean = js.native
   def focusAsync(): Unit = js.native
-  def focusAsync(element: typingsSlinky.std.HTMLElement): Unit = js.native
+  def focusAsync(element: HTMLElement): Unit = js.native
   def focusAsync(element: AnonFocus): Unit = js.native
   def focusFirstChild(rootElement: HTMLElement): Boolean = js.native
   def getElementIndexPath(fromElement: HTMLElement, toElement: HTMLElement): js.Array[Double] = js.native
@@ -49,7 +49,7 @@ object focusMod extends js.Object {
   ): HTMLElement | Null = js.native
   def getNextElement(
     rootElement: HTMLElement,
-    currentElement: typingsSlinky.std.HTMLElement,
+    currentElement: HTMLElement,
     checkNode: js.UndefOr[Boolean],
     suppressParentTraversal: js.UndefOr[Boolean],
     suppressChildTraversal: js.UndefOr[Boolean],
@@ -69,7 +69,7 @@ object focusMod extends js.Object {
   ): HTMLElement | Null = js.native
   def getPreviousElement(
     rootElement: HTMLElement,
-    currentElement: typingsSlinky.std.HTMLElement,
+    currentElement: HTMLElement,
     checkNode: js.UndefOr[Boolean],
     suppressParentTraversal: js.UndefOr[Boolean],
     traverseChildren: js.UndefOr[Boolean],

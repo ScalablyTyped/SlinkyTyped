@@ -19,24 +19,22 @@ trait HttpMethod extends js.Object
 
 object HttpMethod {
   @scala.inline
-  def CONNECT: typingsSlinky.urllib.urllibStrings.CONNECT = this.cast("CONNECT")
+  def CONNECT: typingsSlinky.urllib.urllibStrings.CONNECT = "CONNECT".asInstanceOf[typingsSlinky.urllib.urllibStrings.CONNECT]
   @scala.inline
-  def DELETE: typingsSlinky.urllib.urllibStrings.DELETE = this.cast("DELETE")
+  def DELETE: typingsSlinky.urllib.urllibStrings.DELETE = "DELETE".asInstanceOf[typingsSlinky.urllib.urllibStrings.DELETE]
   @scala.inline
-  def GET: typingsSlinky.urllib.urllibStrings.GET = this.cast("GET")
+  def GET: typingsSlinky.urllib.urllibStrings.GET = "GET".asInstanceOf[typingsSlinky.urllib.urllibStrings.GET]
   @scala.inline
-  def HEAD: typingsSlinky.urllib.urllibStrings.HEAD = this.cast("HEAD")
+  def HEAD: typingsSlinky.urllib.urllibStrings.HEAD = "HEAD".asInstanceOf[typingsSlinky.urllib.urllibStrings.HEAD]
   @scala.inline
-  def OPTIONS: typingsSlinky.urllib.urllibStrings.OPTIONS = this.cast("OPTIONS")
+  def OPTIONS: typingsSlinky.urllib.urllibStrings.OPTIONS = "OPTIONS".asInstanceOf[typingsSlinky.urllib.urllibStrings.OPTIONS]
   @scala.inline
-  def PATCH: typingsSlinky.urllib.urllibStrings.PATCH = this.cast("PATCH")
+  def PATCH: typingsSlinky.urllib.urllibStrings.PATCH = "PATCH".asInstanceOf[typingsSlinky.urllib.urllibStrings.PATCH]
   @scala.inline
-  def POST: typingsSlinky.urllib.urllibStrings.POST = this.cast("POST")
+  def POST: typingsSlinky.urllib.urllibStrings.POST = "POST".asInstanceOf[typingsSlinky.urllib.urllibStrings.POST]
   @scala.inline
-  def PUT: typingsSlinky.urllib.urllibStrings.PUT = this.cast("PUT")
+  def PUT: typingsSlinky.urllib.urllibStrings.PUT = "PUT".asInstanceOf[typingsSlinky.urllib.urllibStrings.PUT]
   @scala.inline
-  def TRACE: typingsSlinky.urllib.urllibStrings.TRACE = this.cast("TRACE")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def TRACE: typingsSlinky.urllib.urllibStrings.TRACE = "TRACE".asInstanceOf[typingsSlinky.urllib.urllibStrings.TRACE]
 }
 

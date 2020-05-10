@@ -13,12 +13,10 @@ trait TextAlignment extends js.Object
 
 object TextAlignment {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def center: typingsSlinky.chartJs.chartJsStrings.center = "center".asInstanceOf[typingsSlinky.chartJs.chartJsStrings.center]
   @scala.inline
-  def center: typingsSlinky.chartJs.chartJsStrings.center = this.cast("center")
+  def left: typingsSlinky.chartJs.chartJsStrings.left = "left".asInstanceOf[typingsSlinky.chartJs.chartJsStrings.left]
   @scala.inline
-  def left: typingsSlinky.chartJs.chartJsStrings.left = this.cast("left")
-  @scala.inline
-  def right: typingsSlinky.chartJs.chartJsStrings.right = this.cast("right")
+  def right: typingsSlinky.chartJs.chartJsStrings.right = "right".asInstanceOf[typingsSlinky.chartJs.chartJsStrings.right]
 }
 

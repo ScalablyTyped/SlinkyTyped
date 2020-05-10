@@ -1,14 +1,15 @@
 package typingsSlinky.officeUiFabricReact.messageBarBaseMod
 
 import typingsSlinky.officeUiFabricReact.messageBarTypesMod.IMessageBarProps
-import typingsSlinky.officeUiFabricReact.utilitiesMod.BaseComponent
+import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSImport("office-ui-fabric-react/lib/components/MessageBar/MessageBar.base", "MessageBarBase")
 @js.native
-class MessageBarBase protected () extends BaseComponent[IMessageBarProps, IMessageBarState] {
+class MessageBarBase protected ()
+  extends Component[IMessageBarProps, IMessageBarState, js.Any] {
   def this(props: IMessageBarProps) = this()
   var ICON_MAP: js.Any = js.native
   var _classNames: js.Any = js.native

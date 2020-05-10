@@ -14,12 +14,6 @@ class SwirlEffect protected () extends VertexEffect {
   var radius: Double = js.native
   var worldX: js.Any = js.native
   var worldY: js.Any = js.native
-  /* CompleteClass */
-  override def begin(skeleton: Skeleton): Unit = js.native
-  /* CompleteClass */
-  override def end(): Unit = js.native
-  /* CompleteClass */
-  override def transform(position: Vector2, uv: Vector2, light: Color, dark: Color): Unit = js.native
 }
 
 /* static members */

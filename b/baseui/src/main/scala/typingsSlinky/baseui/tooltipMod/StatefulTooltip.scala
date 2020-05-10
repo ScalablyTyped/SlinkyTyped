@@ -1,12 +1,12 @@
 package typingsSlinky.baseui.tooltipMod
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.react.mod.FC
+import slinky.core.ReactComponentClass
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSImport("baseui/tooltip", "StatefulTooltip")
 @js.native
-object StatefulTooltip extends TopLevel[FC[StatefulTooltipProps]]
+object StatefulTooltip extends TopLevel[ReactComponentClass[StatefulTooltipProps]]
 

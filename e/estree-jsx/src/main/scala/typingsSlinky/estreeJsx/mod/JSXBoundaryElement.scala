@@ -1,33 +1,35 @@
 package typingsSlinky.estreeJsx.mod
 
 import typingsSlinky.estree.mod.BaseNode
-import typingsSlinky.estree.mod.Comment
-import typingsSlinky.estree.mod.SourceLocation
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait JSXBoundaryElement extends BaseNode {
-  var name: JSXIdentifier | JSXMemberExpression | JSXNamespacedName
+  var name: JSXIdentifier | JSXMemberExpression | JSXNamespacedName = js.native
 }
 
 object JSXBoundaryElement {
   @scala.inline
-  def apply(
-    name: JSXIdentifier | JSXMemberExpression | JSXNamespacedName,
-    `type`: String,
-    leadingComments: js.Array[Comment] = null,
-    loc: SourceLocation = null,
-    range: js.Tuple2[Double, Double] = null,
-    trailingComments: js.Array[Comment] = null
-  ): JSXBoundaryElement = {
+  def apply(name: JSXIdentifier | JSXMemberExpression | JSXNamespacedName, `type`: String): JSXBoundaryElement = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (leadingComments != null) __obj.updateDynamic("leadingComments")(leadingComments.asInstanceOf[js.Any])
-    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
-    if (range != null) __obj.updateDynamic("range")(range.asInstanceOf[js.Any])
-    if (trailingComments != null) __obj.updateDynamic("trailingComments")(trailingComments.asInstanceOf[js.Any])
     __obj.asInstanceOf[JSXBoundaryElement]
   }
+  @scala.inline
+  implicit class JSXBoundaryElementOps[Self <: JSXBoundaryElement] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withName(value: JSXIdentifier | JSXMemberExpression | JSXNamespacedName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

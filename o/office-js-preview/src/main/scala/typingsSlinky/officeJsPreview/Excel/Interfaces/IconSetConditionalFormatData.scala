@@ -28,6 +28,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** An interface describing the data returned by calling `iconSetConditionalFormat.toJSON()`. */
+@js.native
 trait IconSetConditionalFormatData extends js.Object {
   /**
     *
@@ -35,21 +36,21 @@ trait IconSetConditionalFormatData extends js.Object {
     *
     * [Api set: ExcelApi 1.6]
     */
-  var criteria: js.UndefOr[js.Array[ConditionalIconCriterion]] = js.undefined
+  var criteria: js.UndefOr[js.Array[ConditionalIconCriterion]] = js.native
   /**
     *
     * If true, reverses the icon orders for the IconSet. Note that this cannot be set if custom icons are used.
     *
     * [Api set: ExcelApi 1.6]
     */
-  var reverseIconOrder: js.UndefOr[Boolean] = js.undefined
+  var reverseIconOrder: js.UndefOr[Boolean] = js.native
   /**
     *
     * If true, hides the values and only shows icons.
     *
     * [Api set: ExcelApi 1.6]
     */
-  var showIconOnly: js.UndefOr[Boolean] = js.undefined
+  var showIconOnly: js.UndefOr[Boolean] = js.native
   /**
     *
     * If set, displays the IconSet option for the conditional format.
@@ -58,23 +59,72 @@ trait IconSetConditionalFormatData extends js.Object {
     */
   var style: js.UndefOr[
     IconSet | Invalid | ThreeArrows | ThreeArrowsGray | ThreeFlags | ThreeTrafficLights1 | ThreeTrafficLights2 | ThreeSigns | ThreeSymbols | ThreeSymbols2 | FourArrows | FourArrowsGray | FourRedToBlack | FourRating | FourTrafficLights | FiveArrows | FiveArrowsGray | FiveRating | FiveQuarters | ThreeStars | ThreeTriangles | FiveBoxes
-  ] = js.undefined
+  ] = js.native
 }
 
 object IconSetConditionalFormatData {
   @scala.inline
-  def apply(
-    criteria: js.Array[ConditionalIconCriterion] = null,
-    reverseIconOrder: js.UndefOr[Boolean] = js.undefined,
-    showIconOnly: js.UndefOr[Boolean] = js.undefined,
-    style: IconSet | Invalid | ThreeArrows | ThreeArrowsGray | ThreeFlags | ThreeTrafficLights1 | ThreeTrafficLights2 | ThreeSigns | ThreeSymbols | ThreeSymbols2 | FourArrows | FourArrowsGray | FourRedToBlack | FourRating | FourTrafficLights | FiveArrows | FiveArrowsGray | FiveRating | FiveQuarters | ThreeStars | ThreeTriangles | FiveBoxes = null
-  ): IconSetConditionalFormatData = {
+  def apply(): IconSetConditionalFormatData = {
     val __obj = js.Dynamic.literal()
-    if (criteria != null) __obj.updateDynamic("criteria")(criteria.asInstanceOf[js.Any])
-    if (!js.isUndefined(reverseIconOrder)) __obj.updateDynamic("reverseIconOrder")(reverseIconOrder.asInstanceOf[js.Any])
-    if (!js.isUndefined(showIconOnly)) __obj.updateDynamic("showIconOnly")(showIconOnly.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     __obj.asInstanceOf[IconSetConditionalFormatData]
   }
+  @scala.inline
+  implicit class IconSetConditionalFormatDataOps[Self <: IconSetConditionalFormatData] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCriteria(value: js.Array[ConditionalIconCriterion]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("criteria")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCriteria: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("criteria")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReverseIconOrder(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reverseIconOrder")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReverseIconOrder: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reverseIconOrder")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowIconOnly(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showIconOnly")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowIconOnly: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showIconOnly")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyle(
+      value: IconSet | Invalid | ThreeArrows | ThreeArrowsGray | ThreeFlags | ThreeTrafficLights1 | ThreeTrafficLights2 | ThreeSigns | ThreeSymbols | ThreeSymbols2 | FourArrows | FourArrowsGray | FourRedToBlack | FourRating | FourTrafficLights | FiveArrows | FiveArrowsGray | FiveRating | FiveQuarters | ThreeStars | ThreeTriangles | FiveBoxes
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

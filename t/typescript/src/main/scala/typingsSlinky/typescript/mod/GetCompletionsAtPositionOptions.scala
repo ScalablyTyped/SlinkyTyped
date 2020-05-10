@@ -1,59 +1,71 @@
 package typingsSlinky.typescript.mod
 
-import typingsSlinky.typescript.typescriptStrings.`non-relative`
-import typingsSlinky.typescript.typescriptStrings.auto
-import typingsSlinky.typescript.typescriptStrings.double
-import typingsSlinky.typescript.typescriptStrings.index
-import typingsSlinky.typescript.typescriptStrings.js_
-import typingsSlinky.typescript.typescriptStrings.minimal
-import typingsSlinky.typescript.typescriptStrings.relative
-import typingsSlinky.typescript.typescriptStrings.single
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait GetCompletionsAtPositionOptions extends UserPreferences {
   /** @deprecated Use includeCompletionsForModuleExports */
-  var includeExternalModuleExports: js.UndefOr[Boolean] = js.undefined
+  var includeExternalModuleExports: js.UndefOr[Boolean] = js.native
   /** @deprecated Use includeCompletionsWithInsertText */
-  var includeInsertTextCompletions: js.UndefOr[Boolean] = js.undefined
+  var includeInsertTextCompletions: js.UndefOr[Boolean] = js.native
   /**
     * If the editor is asking for completions because a certain character was typed
     * (as opposed to when the user explicitly requested them) this should be set.
     */
-  var triggerCharacter: js.UndefOr[CompletionsTriggerCharacter] = js.undefined
+  var triggerCharacter: js.UndefOr[CompletionsTriggerCharacter] = js.native
 }
 
 object GetCompletionsAtPositionOptions {
   @scala.inline
-  def apply(
-    allowTextChangesInNewFiles: js.UndefOr[Boolean] = js.undefined,
-    disableSuggestions: js.UndefOr[Boolean] = js.undefined,
-    importModuleSpecifierEnding: minimal | index | js_ = null,
-    importModuleSpecifierPreference: auto | relative | `non-relative` = null,
-    includeAutomaticOptionalChainCompletions: js.UndefOr[Boolean] = js.undefined,
-    includeCompletionsForModuleExports: js.UndefOr[Boolean] = js.undefined,
-    includeCompletionsWithInsertText: js.UndefOr[Boolean] = js.undefined,
-    includeExternalModuleExports: js.UndefOr[Boolean] = js.undefined,
-    includeInsertTextCompletions: js.UndefOr[Boolean] = js.undefined,
-    providePrefixAndSuffixTextForRename: js.UndefOr[Boolean] = js.undefined,
-    quotePreference: auto | double | single = null,
-    triggerCharacter: CompletionsTriggerCharacter = null
-  ): GetCompletionsAtPositionOptions = {
+  def apply(): GetCompletionsAtPositionOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(allowTextChangesInNewFiles)) __obj.updateDynamic("allowTextChangesInNewFiles")(allowTextChangesInNewFiles.asInstanceOf[js.Any])
-    if (!js.isUndefined(disableSuggestions)) __obj.updateDynamic("disableSuggestions")(disableSuggestions.asInstanceOf[js.Any])
-    if (importModuleSpecifierEnding != null) __obj.updateDynamic("importModuleSpecifierEnding")(importModuleSpecifierEnding.asInstanceOf[js.Any])
-    if (importModuleSpecifierPreference != null) __obj.updateDynamic("importModuleSpecifierPreference")(importModuleSpecifierPreference.asInstanceOf[js.Any])
-    if (!js.isUndefined(includeAutomaticOptionalChainCompletions)) __obj.updateDynamic("includeAutomaticOptionalChainCompletions")(includeAutomaticOptionalChainCompletions.asInstanceOf[js.Any])
-    if (!js.isUndefined(includeCompletionsForModuleExports)) __obj.updateDynamic("includeCompletionsForModuleExports")(includeCompletionsForModuleExports.asInstanceOf[js.Any])
-    if (!js.isUndefined(includeCompletionsWithInsertText)) __obj.updateDynamic("includeCompletionsWithInsertText")(includeCompletionsWithInsertText.asInstanceOf[js.Any])
-    if (!js.isUndefined(includeExternalModuleExports)) __obj.updateDynamic("includeExternalModuleExports")(includeExternalModuleExports.asInstanceOf[js.Any])
-    if (!js.isUndefined(includeInsertTextCompletions)) __obj.updateDynamic("includeInsertTextCompletions")(includeInsertTextCompletions.asInstanceOf[js.Any])
-    if (!js.isUndefined(providePrefixAndSuffixTextForRename)) __obj.updateDynamic("providePrefixAndSuffixTextForRename")(providePrefixAndSuffixTextForRename.asInstanceOf[js.Any])
-    if (quotePreference != null) __obj.updateDynamic("quotePreference")(quotePreference.asInstanceOf[js.Any])
-    if (triggerCharacter != null) __obj.updateDynamic("triggerCharacter")(triggerCharacter.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetCompletionsAtPositionOptions]
   }
+  @scala.inline
+  implicit class GetCompletionsAtPositionOptionsOps[Self <: GetCompletionsAtPositionOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIncludeExternalModuleExports(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("includeExternalModuleExports")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIncludeExternalModuleExports: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("includeExternalModuleExports")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIncludeInsertTextCompletions(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("includeInsertTextCompletions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIncludeInsertTextCompletions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("includeInsertTextCompletions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTriggerCharacter(value: CompletionsTriggerCharacter): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("triggerCharacter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTriggerCharacter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("triggerCharacter")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

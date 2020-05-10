@@ -1,18 +1,20 @@
 package typingsSlinky.stellarSdk.horizonApiMod.Horizon
 
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.stellarSdk.horizonApiMod.Horizon.OperationResponseType.createAccount
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait CreateAccountOperationResponse
   extends BaseOperationResponse[
       createAccount, 
       typingsSlinky.stellarSdk.horizonApiMod.Horizon.OperationResponseTypeI.createAccount
     ] {
-  var account: String
-  var funder: String
-  var starting_balance: String
+  var account: String = js.native
+  var funder: String = js.native
+  var starting_balance: String = js.native
 }
 
 object CreateAccountOperationResponse {
@@ -20,7 +22,7 @@ object CreateAccountOperationResponse {
   def apply(
     _links: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ key in T | 'self' ]: stellar-sdk.stellar-sdk/lib/horizon_api.Horizon.ResponseLink}
-    */ typingsSlinky.stellarSdk.stellarSdkStrings.BaseResponse with js.Any,
+    */ typingsSlinky.stellarSdk.stellarSdkStrings.BaseResponse with TopLevel[js.Any],
     account: String,
     created_at: String,
     funder: String,
@@ -36,5 +38,31 @@ object CreateAccountOperationResponse {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateAccountOperationResponse]
   }
+  @scala.inline
+  implicit class CreateAccountOperationResponseOps[Self <: CreateAccountOperationResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAccount(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("account")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFunder(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("funder")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStarting_balance(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("starting_balance")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

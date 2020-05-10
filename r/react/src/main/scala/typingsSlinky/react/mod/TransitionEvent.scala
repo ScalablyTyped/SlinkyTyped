@@ -1,14 +1,17 @@
 package typingsSlinky.react.mod
 
-import typingsSlinky.std.EventTarget
+import org.scalajs.dom.raw.EventTarget
+import slinky.web.SyntheticTransitionEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-trait TransitionEvent[T] extends BaseSyntheticEvent[NativeTransitionEvent, EventTarget with T, EventTarget] {
-  var elapsedTime: Double
-  var propertyName: String
-  var pseudoElement: String
+@js.native
+trait TransitionEvent[T]
+  extends BaseSyntheticEvent[org.scalajs.dom.raw.TransitionEvent, EventTarget with T, EventTarget] {
+  var elapsedTime: Double = js.native
+  var propertyName: String = js.native
+  var pseudoElement: String = js.native
 }
 
 object TransitionEvent {
@@ -16,7 +19,7 @@ object TransitionEvent {
   def apply[T](
     bubbles: Boolean,
     cancelable: Boolean,
-    currentTarget: org.scalajs.dom.raw.EventTarget with T,
+    currentTarget: EventTarget with T,
     defaultPrevented: Boolean,
     elapsedTime: Double,
     eventPhase: Double,
@@ -29,7 +32,7 @@ object TransitionEvent {
     propertyName: String,
     pseudoElement: String,
     stopPropagation: () => Unit,
-    target: org.scalajs.dom.raw.EventTarget,
+    target: EventTarget,
     timeStamp: Double,
     `type`: String
   ): TransitionEvent[T] = {
@@ -37,5 +40,31 @@ object TransitionEvent {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[TransitionEvent[T]]
   }
+  @scala.inline
+  implicit class TransitionEventOps[Self[t] <: SyntheticTransitionEvent[t], T] (val x: Self[T]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
+    @scala.inline
+    def withElapsedTime(value: Double): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elapsedTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPropertyName(value: String): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("propertyName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPseudoElement(value: String): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pseudoElement")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

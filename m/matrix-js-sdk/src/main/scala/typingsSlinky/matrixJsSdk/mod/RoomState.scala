@@ -1,5 +1,6 @@
 package typingsSlinky.matrixJsSdk.mod
 
+import org.scalablytyped.runtime.StringDictionary
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,6 +10,8 @@ import scala.scalajs.js.annotation._
 class RoomState () extends js.Object {
   def this(roomId: String) = this()
   def this(roomId: String, oobMemberFlags: js.Object) = this()
+  var members: StringDictionary[RoomMember] = js.native
+  var roomId: String = js.native
   def clearOutOfBandMembers(): Unit = js.native
   def getInviteForThreePidToken(token: String): js.UndefOr[MatrixEvent] = js.native
   def getInvitedMemberCount(): Double = js.native
@@ -31,8 +34,8 @@ class RoomState () extends js.Object {
   def needsOutOfBandMembers(): Boolean = js.native
   def setInvitedMemberCount(count: Double): Unit = js.native
   def setJoinedMemberCount(count: Double): Unit = js.native
-  def setOutOfBandMembers(stateEvents: MatrixEvent): Unit = js.native
-  def setStateEvents(stateEvents: MatrixEvent): Unit = js.native
+  def setOutOfBandMembers(stateEvents: js.Array[MatrixEvent]): Unit = js.native
+  def setStateEvents(stateEvents: js.Array[MatrixEvent]): Unit = js.native
   def setTypingEvent(event: MatrixEvent): Unit = js.native
   def setUnknownStateEvents(events: MatrixEvent): Unit = js.native
 }

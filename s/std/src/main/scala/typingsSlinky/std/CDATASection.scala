@@ -7,5 +7,6 @@ import scala.scalajs.js.annotation._
 
 @JSGlobal("CDATASection")
 @js.native
-object CDATASection extends Instantiable0[CDATASection]
+object CDATASection
+  extends Instantiable0[org.scalajs.dom.raw.CDATASection]
 

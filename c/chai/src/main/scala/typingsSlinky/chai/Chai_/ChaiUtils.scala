@@ -2,8 +2,6 @@ package typingsSlinky.chai.Chai_
 
 import typingsSlinky.chai.chaiNumbers.`-1`
 import typingsSlinky.chai.chaiNumbers.`1`
-import typingsSlinky.std.Error
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -33,11 +31,11 @@ trait ChaiUtils extends js.Object {
   def addProperty(ctx: js.Object, name: String, getter: js.Function0[_]): Unit = js.native
   def compareByInspect(a: js.Object, b: js.Object): `-1` | `1` = js.native
   def compatibleConstructor(thrown: js.Error, errorLike: ErrorConstructor): Boolean = js.native
-  def compatibleConstructor(thrown: js.Error, errorLike: Error): Boolean = js.native
+  def compatibleConstructor(thrown: js.Error, errorLike: js.Error): Boolean = js.native
   def compatibleInstance(thrown: js.Error, errorLike: ErrorConstructor): Boolean = js.native
-  def compatibleInstance(thrown: js.Error, errorLike: Error): Boolean = js.native
+  def compatibleInstance(thrown: js.Error, errorLike: js.Error): Boolean = js.native
   def compatibleMessage(thrown: js.Error, errMatcher: String): Boolean = js.native
-  def compatibleMessage(thrown: js.Error, errMatcher: RegExp): Boolean = js.native
+  def compatibleMessage(thrown: js.Error, errMatcher: js.RegExp): Boolean = js.native
   def expectTypes(obj: js.Object, types: js.Array[String]): Unit = js.native
   def flag(obj: js.Object, key: String): js.Any = js.native
   def flag(obj: js.Object, key: String, value: js.Any): js.Any = js.native
@@ -46,7 +44,7 @@ trait ChaiUtils extends js.Object {
   def getEnumerableProperties(obj: js.Object): js.Array[String] = js.native
   def getFuncName(constructorFn: js.Function): String | Null = js.native
   def getMessage(errorLike: String): String = js.native
-  def getMessage(errorLike: Error): String = js.native
+  def getMessage(errorLike: js.Error): String = js.native
   def getMessage(obj: js.Any, args: AssertionArgs): String = js.native
   def getOwnEnumerableProperties(obj: js.Object): js.Array[String | js.Symbol] = js.native
   def getOwnEnumerablePropertySymbols(obj: js.Object): js.Array[js.Symbol] = js.native

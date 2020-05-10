@@ -10,16 +10,16 @@ import scala.scalajs.js.annotation._
 trait Crypto_ extends js.Object {
   val subtle: org.scalajs.dom.crypto.SubtleCrypto = js.native
   def getRandomValues(): Null = js.native
-  def getRandomValues(array: DataView): scala.scalajs.js.typedarray.DataView = js.native
-  def getRandomValues(array: Float32Array): scala.scalajs.js.typedarray.Float32Array = js.native
-  def getRandomValues(array: Float64Array): scala.scalajs.js.typedarray.Float64Array = js.native
-  def getRandomValues(array: Int16Array): scala.scalajs.js.typedarray.Int16Array = js.native
-  def getRandomValues(array: Int32Array): scala.scalajs.js.typedarray.Int32Array = js.native
-  def getRandomValues(array: Int8Array): scala.scalajs.js.typedarray.Int8Array = js.native
-  def getRandomValues(array: Uint16Array): scala.scalajs.js.typedarray.Uint16Array = js.native
-  def getRandomValues(array: Uint32Array): scala.scalajs.js.typedarray.Uint32Array = js.native
-  def getRandomValues(array: Uint8Array): scala.scalajs.js.typedarray.Uint8Array = js.native
-  def getRandomValues(array: Uint8ClampedArray): scala.scalajs.js.typedarray.Uint8ClampedArray = js.native
+  def getRandomValues(array: js.typedarray.DataView): js.typedarray.DataView = js.native
+  def getRandomValues(array: js.typedarray.Float32Array): js.typedarray.Float32Array = js.native
+  def getRandomValues(array: js.typedarray.Float64Array): js.typedarray.Float64Array = js.native
+  def getRandomValues(array: js.typedarray.Int16Array): js.typedarray.Int16Array = js.native
+  def getRandomValues(array: js.typedarray.Int32Array): js.typedarray.Int32Array = js.native
+  def getRandomValues(array: js.typedarray.Int8Array): js.typedarray.Int8Array = js.native
+  def getRandomValues(array: js.typedarray.Uint16Array): js.typedarray.Uint16Array = js.native
+  def getRandomValues(array: js.typedarray.Uint32Array): js.typedarray.Uint32Array = js.native
+  def getRandomValues(array: js.typedarray.Uint8Array): js.typedarray.Uint8Array = js.native
+  def getRandomValues(array: js.typedarray.Uint8ClampedArray): js.typedarray.Uint8ClampedArray = js.native
 }
 
 @JSGlobal("Crypto")

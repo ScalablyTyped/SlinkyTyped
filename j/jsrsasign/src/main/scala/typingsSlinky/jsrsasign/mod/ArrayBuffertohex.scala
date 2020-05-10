@@ -21,6 +21,6 @@ object ArrayBuffertohex extends js.Object {
     * view.setUint8(2, 0x01);
     * ArrayBuffertohex(buffer) → "fafb01"
     */
-  def apply(buffer: scala.scalajs.js.typedarray.ArrayBuffer): String = js.native
+  def apply(buffer: js.typedarray.ArrayBuffer): String = js.native
 }
 

@@ -14,10 +14,29 @@ trait GetSupportedResourceTypesOutput extends js.Object {
 
 object GetSupportedResourceTypesOutput {
   @scala.inline
-  def apply(ResourceTypes: ResourceTypes = null): GetSupportedResourceTypesOutput = {
+  def apply(): GetSupportedResourceTypesOutput = {
     val __obj = js.Dynamic.literal()
-    if (ResourceTypes != null) __obj.updateDynamic("ResourceTypes")(ResourceTypes.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetSupportedResourceTypesOutput]
   }
+  @scala.inline
+  implicit class GetSupportedResourceTypesOutputOps[Self <: GetSupportedResourceTypesOutput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withResourceTypes(value: ResourceTypes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceTypes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResourceTypes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceTypes")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

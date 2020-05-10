@@ -5,6 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ApplyDevToolsOptions extends js.Object {
   /**
     * From version 1.3.1 it's required for UMD build to provide EditorState
@@ -15,15 +16,28 @@ trait ApplyDevToolsOptions extends js.Object {
     * snapshot due to EditorState classes were different in UMD bundle and in
     * actual client code.
     */
-  var EditorState: TypeofEditorState
+  var EditorState: TypeofEditorState = js.native
 }
 
 object ApplyDevToolsOptions {
   @scala.inline
   def apply(EditorState: TypeofEditorState): ApplyDevToolsOptions = {
     val __obj = js.Dynamic.literal(EditorState = EditorState.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[ApplyDevToolsOptions]
   }
+  @scala.inline
+  implicit class ApplyDevToolsOptionsOps[Self <: ApplyDevToolsOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEditorState(value: TypeofEditorState): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EditorState")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

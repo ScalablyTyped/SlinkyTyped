@@ -4,28 +4,76 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait DebounceOptions extends js.Object {
-  var leading: js.UndefOr[Boolean] = js.undefined
-  var maxWait: js.UndefOr[Double] = js.undefined
-  var trailing: js.UndefOr[Boolean] = js.undefined
+  var leading: js.UndefOr[Boolean] = js.native
+  var maxWait: js.UndefOr[Double] = js.native
+  var trailing: js.UndefOr[Boolean] = js.native
   @JSName("wait")
-  var wait_FDebounceOptions: js.UndefOr[Double] = js.undefined
+  var wait_FDebounceOptions: js.UndefOr[Double] = js.native
 }
 
 object DebounceOptions {
   @scala.inline
-  def apply(
-    leading: js.UndefOr[Boolean] = js.undefined,
-    maxWait: Int | Double = null,
-    trailing: js.UndefOr[Boolean] = js.undefined,
-    wait: Int | Double = null
-  ): DebounceOptions = {
+  def apply(): DebounceOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(leading)) __obj.updateDynamic("leading")(leading.asInstanceOf[js.Any])
-    if (maxWait != null) __obj.updateDynamic("maxWait")(maxWait.asInstanceOf[js.Any])
-    if (!js.isUndefined(trailing)) __obj.updateDynamic("trailing")(trailing.asInstanceOf[js.Any])
-    if (wait != null) __obj.updateDynamic("wait")(wait.asInstanceOf[js.Any])
     __obj.asInstanceOf[DebounceOptions]
   }
+  @scala.inline
+  implicit class DebounceOptionsOps[Self <: DebounceOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLeading(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("leading")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLeading: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("leading")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxWait(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxWait")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxWait: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxWait")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTrailing(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trailing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTrailing: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trailing")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWait(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wait")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWait: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wait")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

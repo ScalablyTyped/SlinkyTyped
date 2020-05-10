@@ -18,10 +18,35 @@ trait ResponseResourceMetricKey extends js.Object {
 
 object ResponseResourceMetricKey {
   @scala.inline
-  def apply(Metric: String, Dimensions: DimensionMap = null): ResponseResourceMetricKey = {
+  def apply(Metric: String): ResponseResourceMetricKey = {
     val __obj = js.Dynamic.literal(Metric = Metric.asInstanceOf[js.Any])
-    if (Dimensions != null) __obj.updateDynamic("Dimensions")(Dimensions.asInstanceOf[js.Any])
     __obj.asInstanceOf[ResponseResourceMetricKey]
   }
+  @scala.inline
+  implicit class ResponseResourceMetricKeyOps[Self <: ResponseResourceMetricKey] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMetric(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Metric")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDimensions(value: DimensionMap): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Dimensions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDimensions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Dimensions")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

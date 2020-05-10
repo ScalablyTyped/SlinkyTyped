@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonRotateLabel extends js.Object {
   /**
     * Whether to rotate the label automatically.
@@ -11,15 +12,34 @@ trait AnonRotateLabel extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-graph.circular.rotateLabel
     */
-  var rotateLabel: js.UndefOr[Boolean] = js.undefined
+  var rotateLabel: js.UndefOr[Boolean] = js.native
 }
 
 object AnonRotateLabel {
   @scala.inline
-  def apply(rotateLabel: js.UndefOr[Boolean] = js.undefined): AnonRotateLabel = {
+  def apply(): AnonRotateLabel = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(rotateLabel)) __obj.updateDynamic("rotateLabel")(rotateLabel.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonRotateLabel]
   }
+  @scala.inline
+  implicit class AnonRotateLabelOps[Self <: AnonRotateLabel] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRotateLabel(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rotateLabel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRotateLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rotateLabel")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

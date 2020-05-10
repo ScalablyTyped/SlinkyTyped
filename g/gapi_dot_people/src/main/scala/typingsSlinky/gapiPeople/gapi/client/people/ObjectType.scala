@@ -13,12 +13,10 @@ trait ObjectType extends js.Object
 
 object ObjectType {
   @scala.inline
-  def OBJECT_TYPE_UNSPECIFIED: typingsSlinky.gapiPeople.gapiPeopleStrings.OBJECT_TYPE_UNSPECIFIED = this.cast("OBJECT_TYPE_UNSPECIFIED")
+  def OBJECT_TYPE_UNSPECIFIED: typingsSlinky.gapiPeople.gapiPeopleStrings.OBJECT_TYPE_UNSPECIFIED = "OBJECT_TYPE_UNSPECIFIED".asInstanceOf[typingsSlinky.gapiPeople.gapiPeopleStrings.OBJECT_TYPE_UNSPECIFIED]
   @scala.inline
-  def PAGE: typingsSlinky.gapiPeople.gapiPeopleStrings.PAGE = this.cast("PAGE")
+  def PAGE: typingsSlinky.gapiPeople.gapiPeopleStrings.PAGE = "PAGE".asInstanceOf[typingsSlinky.gapiPeople.gapiPeopleStrings.PAGE]
   @scala.inline
-  def PERSON: typingsSlinky.gapiPeople.gapiPeopleStrings.PERSON = this.cast("PERSON")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def PERSON: typingsSlinky.gapiPeople.gapiPeopleStrings.PERSON = "PERSON".asInstanceOf[typingsSlinky.gapiPeople.gapiPeopleStrings.PERSON]
 }
 

@@ -14,14 +14,12 @@ trait StateMutabilityType extends js.Object
 
 object StateMutabilityType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def nonpayable: typingsSlinky.web3Utils.web3UtilsStrings.nonpayable = "nonpayable".asInstanceOf[typingsSlinky.web3Utils.web3UtilsStrings.nonpayable]
   @scala.inline
-  def nonpayable: typingsSlinky.web3Utils.web3UtilsStrings.nonpayable = this.cast("nonpayable")
+  def payable: typingsSlinky.web3Utils.web3UtilsStrings.payable = "payable".asInstanceOf[typingsSlinky.web3Utils.web3UtilsStrings.payable]
   @scala.inline
-  def payable: typingsSlinky.web3Utils.web3UtilsStrings.payable = this.cast("payable")
+  def pure: typingsSlinky.web3Utils.web3UtilsStrings.pure = "pure".asInstanceOf[typingsSlinky.web3Utils.web3UtilsStrings.pure]
   @scala.inline
-  def pure: typingsSlinky.web3Utils.web3UtilsStrings.pure = this.cast("pure")
-  @scala.inline
-  def view: typingsSlinky.web3Utils.web3UtilsStrings.view = this.cast("view")
+  def view: typingsSlinky.web3Utils.web3UtilsStrings.view = "view".asInstanceOf[typingsSlinky.web3Utils.web3UtilsStrings.view]
 }
 

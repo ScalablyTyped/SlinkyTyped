@@ -25,7 +25,7 @@ class Gantt protected () extends Widget {
   def clearSelection(): Unit = js.native
   def dataItem(row: String): GanttTask = js.native
   def dataItem(row: JQuery): GanttTask = js.native
-  def dataItem(row: typingsSlinky.std.Element): GanttTask = js.native
+  def dataItem(row: Element): GanttTask = js.native
   def date(): js.Date = js.native
   def date(date: js.Date): js.Date = js.native
   def range(): js.Any = js.native
@@ -40,7 +40,7 @@ class Gantt protected () extends Widget {
   def select(): JQuery = js.native
   def select(row: String): Unit = js.native
   def select(row: JQuery): Unit = js.native
-  def select(row: typingsSlinky.std.Element): Unit = js.native
+  def select(row: Element): Unit = js.native
   def setDataSource(dataSource: GanttDataSource): Unit = js.native
   def setDependenciesDataSource(dataSource: GanttDependencyDataSource): Unit = js.native
   def view(): Unit = js.native

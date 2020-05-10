@@ -28,8 +28,33 @@ object PutNotificationConfigurationType {
     TopicARN: ResourceName
   ): PutNotificationConfigurationType = {
     val __obj = js.Dynamic.literal(AutoScalingGroupName = AutoScalingGroupName.asInstanceOf[js.Any], NotificationTypes = NotificationTypes.asInstanceOf[js.Any], TopicARN = TopicARN.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[PutNotificationConfigurationType]
   }
+  @scala.inline
+  implicit class PutNotificationConfigurationTypeOps[Self <: PutNotificationConfigurationType] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAutoScalingGroupName(value: ResourceName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoScalingGroupName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNotificationTypes(value: AutoScalingNotificationTypes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NotificationTypes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTopicARN(value: ResourceName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TopicARN")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

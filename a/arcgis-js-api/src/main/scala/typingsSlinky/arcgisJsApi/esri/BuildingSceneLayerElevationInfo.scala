@@ -13,6 +13,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait BuildingSceneLayerElevationInfo extends Object {
   /**
     * Defines how features are placed on the vertical axis (z). Currently only `absolute-height` mode is supported.
@@ -24,7 +25,7 @@ trait BuildingSceneLayerElevationInfo extends Object {
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-BuildingSceneLayer.html#elevationInfo)
     */
-  var mode: `absolute-height`
+  var mode: `absolute-height` = js.native
   /**
     * An elevation offset, which is added to the vertical position of each feature.
     *
@@ -32,7 +33,7 @@ trait BuildingSceneLayerElevationInfo extends Object {
     *
     * @default 0
     */
-  var offset: js.UndefOr[Double] = js.undefined
+  var offset: js.UndefOr[Double] = js.native
   /**
     * The unit for `offset` values.
     *
@@ -40,7 +41,7 @@ trait BuildingSceneLayerElevationInfo extends Object {
     *
     * @default meters
     */
-  var unit: js.UndefOr[feet_ | meters_ | kilometers_ | miles_ | `us-feet` | yards] = js.undefined
+  var unit: js.UndefOr[feet_ | meters_ | kilometers_ | miles_ | `us-feet` | yards] = js.native
 }
 
 object BuildingSceneLayerElevationInfo {
@@ -49,14 +50,48 @@ object BuildingSceneLayerElevationInfo {
     constructor: js.Function,
     hasOwnProperty: PropertyKey => Boolean,
     mode: `absolute-height`,
-    propertyIsEnumerable: PropertyKey => Boolean,
-    offset: Int | Double = null,
-    unit: feet_ | meters_ | kilometers_ | miles_ | `us-feet` | yards = null
+    propertyIsEnumerable: PropertyKey => Boolean
   ): BuildingSceneLayerElevationInfo = {
     val __obj = js.Dynamic.literal(constructor = constructor.asInstanceOf[js.Any], hasOwnProperty = js.Any.fromFunction1(hasOwnProperty), mode = mode.asInstanceOf[js.Any], propertyIsEnumerable = js.Any.fromFunction1(propertyIsEnumerable))
-    if (offset != null) __obj.updateDynamic("offset")(offset.asInstanceOf[js.Any])
-    if (unit != null) __obj.updateDynamic("unit")(unit.asInstanceOf[js.Any])
     __obj.asInstanceOf[BuildingSceneLayerElevationInfo]
   }
+  @scala.inline
+  implicit class BuildingSceneLayerElevationInfoOps[Self <: BuildingSceneLayerElevationInfo] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMode(value: `absolute-height`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOffset(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOffset: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUnit(value: feet_ | meters_ | kilometers_ | miles_ | `us-feet` | yards): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUnit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unit")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

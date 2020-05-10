@@ -14,14 +14,12 @@ trait IconCorner extends js.Object
 
 object IconCorner {
   @scala.inline
-  def `bottom left`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`bottom left` = this.cast("bottom left")
+  def `bottom left`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`bottom left` = ("bottom left").asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.`bottom left`]
   @scala.inline
-  def `bottom right`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`bottom right` = this.cast("bottom right")
+  def `bottom right`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`bottom right` = ("bottom right").asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.`bottom right`]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def `top left`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`top left` = ("top left").asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.`top left`]
   @scala.inline
-  def `top left`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`top left` = this.cast("top left")
-  @scala.inline
-  def `top right`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`top right` = this.cast("top right")
+  def `top right`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`top right` = ("top right").asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.`top right`]
 }
 

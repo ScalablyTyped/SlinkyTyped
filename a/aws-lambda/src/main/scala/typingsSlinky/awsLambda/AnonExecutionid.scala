@@ -5,14 +5,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonExecutionid extends js.Object {
-  var action: String
-  var `execution-id`: String
-  var pipeline: String
-  var stage: String
-  var state: CodePipelineActionState
-  var `type`: AnonCategory
-  var version: Double
+  var action: String = js.native
+  var `execution-id`: String = js.native
+  var pipeline: String = js.native
+  var stage: String = js.native
+  var state: CodePipelineActionState = js.native
+  var `type`: AnonCategory = js.native
+  var version: Double = js.native
 }
 
 object AnonExecutionid {
@@ -31,5 +32,55 @@ object AnonExecutionid {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonExecutionid]
   }
+  @scala.inline
+  implicit class AnonExecutionidOps[Self <: AnonExecutionid] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAction(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("action")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withExecution-id`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("execution-id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPipeline(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pipeline")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStage(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withState(value: CodePipelineActionState): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: AnonCategory): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVersion(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

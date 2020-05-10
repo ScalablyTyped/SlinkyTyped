@@ -3,7 +3,6 @@ package typingsSlinky.nestdb.mod
 import typingsSlinky.nestdb.AnonNewDoc
 import typingsSlinky.nestdb.nestdbStrings.compactionDotdone
 import typingsSlinky.node.eventsMod.EventEmitter
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -38,7 +37,7 @@ trait NestDb[G] extends EventEmitter {
     * If no callback is passed, we return the cursor so that user can limit, skip and finally exec
     * * @param {any} query MongoDB-style query
     */
-  def find[T /* <: G */](query: js.Any, callback: js.Function2[/* err */ Error, /* documents */ js.Array[T], Unit]): Unit = js.native
+  def find[T /* <: G */](query: js.Any, callback: js.Function2[/* err */ js.Error, /* documents */ js.Array[T], Unit]): Unit = js.native
   def find[T /* <: G */](query: js.Any, projection: T): Cursor[T] = js.native
   /**
     * Find all documents matching the query
@@ -55,7 +54,7 @@ trait NestDb[G] extends EventEmitter {
     * Find one document matching the query
     * @param query MongoDB-style query
     */
-  def findOne[T /* <: G */](query: js.Any, callback: js.Function2[/* err */ Error, /* document */ T, Unit]): Unit = js.native
+  def findOne[T /* <: G */](query: js.Any, callback: js.Function2[/* err */ js.Error, /* document */ T, Unit]): Unit = js.native
   /**
     * Find one document matching the query
     * @param query MongoDB-style query
@@ -81,9 +80,9 @@ trait NestDb[G] extends EventEmitter {
     * @param cb Optional callback, signature: err, insertedDoc
     */
   def insert[T /* <: G */](newDoc: T): Unit = js.native
-  def insert[T /* <: G */](newDoc: T, cb: js.Function2[/* err */ Error, /* document */ T, Unit]): Unit = js.native
+  def insert[T /* <: G */](newDoc: T, cb: js.Function2[/* err */ js.Error, /* document */ T, Unit]): Unit = js.native
   def insert[T /* <: G */](newDocs: js.Array[T]): Unit = js.native
-  def insert[T /* <: G */](newDocs: js.Array[T], cb: js.Function2[/* err */ Error, /* documents */ js.Array[T], Unit]): Unit = js.native
+  def insert[T /* <: G */](newDocs: js.Array[T], cb: js.Function2[/* err */ js.Error, /* documents */ js.Array[T], Unit]): Unit = js.native
   @JSName("listenerCount")
   def listenerCount_compactiondone(`type`: compactionDotdone): Double = js.native
   @JSName("listeners")
@@ -106,7 +105,7 @@ trait NestDb[G] extends EventEmitter {
   @JSName("rawListeners")
   def rawListeners_compactiondone(event: compactionDotdone): js.Array[js.Function0[Unit]] = js.native
   def remove(query: js.Any): Unit = js.native
-  def remove(query: js.Any, cb: js.Function2[/* err */ Error, /* n */ Double, Unit]): Unit = js.native
+  def remove(query: js.Any, cb: js.Function2[/* err */ js.Error, /* n */ Double, Unit]): Unit = js.native
   /**
     * Remove all docs matching the query
     * For now very naive implementation (similar to update)
@@ -153,14 +152,14 @@ trait NestDb[G] extends EventEmitter {
     query: js.Any,
     updateQuery: js.Any,
     options: UpdateOptions,
-    cb: js.Function3[/* err */ Error, /* numberOfUpdated */ Double, /* upsert */ Boolean, Unit]
+    cb: js.Function3[/* err */ js.Error, /* numberOfUpdated */ Double, /* upsert */ Boolean, Unit]
   ): Unit = js.native
   def update[T /* <: G */](
     query: js.Any,
     updateQuery: js.Any,
     options: UpdateOptions,
     cb: js.Function4[
-      /* err */ Error, 
+      /* err */ js.Error, 
       /* numberOfUpdated */ Double, 
       /* affectedDocuments */ js.Any, 
       /* upsert */ Boolean, 
@@ -173,7 +172,7 @@ trait NestDb[G] extends EventEmitter {
     * If one update violates a constraint, all changes are rolled back
     */
   def updateIndexes[T /* <: G */](oldDoc: T, newDoc: T): Unit = js.native
-  def updateIndexes[T /* <: G */](updates: js.Array[AnonNewDoc[T]]): Unit = js.native
+  def updateIndexes[T /* <: G */](updates: js.Array[AnonNewDoc[T, G]]): Unit = js.native
   /**
     * Update all docs matching query v1.8 signature.
     * For now, very naive implementation (recalculating the whole database)

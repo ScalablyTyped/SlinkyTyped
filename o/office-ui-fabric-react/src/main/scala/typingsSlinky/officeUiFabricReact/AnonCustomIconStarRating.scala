@@ -4,33 +4,101 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonCustomIconStarRating extends js.Object {
-  var customIconStarRating: js.UndefOr[Double] = js.undefined
-  var largeStarRating: js.UndefOr[Double] = js.undefined
-  var rating: js.UndefOr[Double] = js.undefined
-  var smallStarRating: js.UndefOr[Double] = js.undefined
-  var tenStarRating: js.UndefOr[Double] = js.undefined
-  var themedStarRating: js.UndefOr[Double] = js.undefined
+  var customIconStarRating: js.UndefOr[Double] = js.native
+  var largeStarRating: js.UndefOr[Double] = js.native
+  var rating: js.UndefOr[Double] = js.native
+  var smallStarRating: js.UndefOr[Double] = js.native
+  var tenStarRating: js.UndefOr[Double] = js.native
+  var themedStarRating: js.UndefOr[Double] = js.native
 }
 
 object AnonCustomIconStarRating {
   @scala.inline
-  def apply(
-    customIconStarRating: Int | Double = null,
-    largeStarRating: Int | Double = null,
-    rating: Int | Double = null,
-    smallStarRating: Int | Double = null,
-    tenStarRating: Int | Double = null,
-    themedStarRating: Int | Double = null
-  ): AnonCustomIconStarRating = {
+  def apply(): AnonCustomIconStarRating = {
     val __obj = js.Dynamic.literal()
-    if (customIconStarRating != null) __obj.updateDynamic("customIconStarRating")(customIconStarRating.asInstanceOf[js.Any])
-    if (largeStarRating != null) __obj.updateDynamic("largeStarRating")(largeStarRating.asInstanceOf[js.Any])
-    if (rating != null) __obj.updateDynamic("rating")(rating.asInstanceOf[js.Any])
-    if (smallStarRating != null) __obj.updateDynamic("smallStarRating")(smallStarRating.asInstanceOf[js.Any])
-    if (tenStarRating != null) __obj.updateDynamic("tenStarRating")(tenStarRating.asInstanceOf[js.Any])
-    if (themedStarRating != null) __obj.updateDynamic("themedStarRating")(themedStarRating.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonCustomIconStarRating]
   }
+  @scala.inline
+  implicit class AnonCustomIconStarRatingOps[Self <: AnonCustomIconStarRating] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCustomIconStarRating(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customIconStarRating")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCustomIconStarRating: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customIconStarRating")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLargeStarRating(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("largeStarRating")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLargeStarRating: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("largeStarRating")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRating(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rating")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRating: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rating")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSmallStarRating(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("smallStarRating")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSmallStarRating: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("smallStarRating")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTenStarRating(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tenStarRating")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTenStarRating: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tenStarRating")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withThemedStarRating(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("themedStarRating")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutThemedStarRating: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("themedStarRating")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

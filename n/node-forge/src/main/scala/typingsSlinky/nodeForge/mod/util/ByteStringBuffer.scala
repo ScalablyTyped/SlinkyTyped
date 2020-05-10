@@ -13,7 +13,7 @@ class ByteStringBuffer () extends js.Object {
   def this(bytes: Bytes) = this()
   def this(bytes: ArrayBufferView) = this()
   def this(bytes: ByteStringBuffer) = this()
-  def this(bytes: scala.scalajs.js.typedarray.ArrayBuffer) = this()
+  def this(bytes: js.typedarray.ArrayBuffer) = this()
   var data: String = js.native
   var read: Double = js.native
   def at(index: Double): Byte = js.native

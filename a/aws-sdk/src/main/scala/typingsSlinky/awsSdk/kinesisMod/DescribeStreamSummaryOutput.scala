@@ -16,8 +16,21 @@ object DescribeStreamSummaryOutput {
   @scala.inline
   def apply(StreamDescriptionSummary: StreamDescriptionSummary): DescribeStreamSummaryOutput = {
     val __obj = js.Dynamic.literal(StreamDescriptionSummary = StreamDescriptionSummary.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[DescribeStreamSummaryOutput]
   }
+  @scala.inline
+  implicit class DescribeStreamSummaryOutputOps[Self <: DescribeStreamSummaryOutput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withStreamDescriptionSummary(value: StreamDescriptionSummary): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StreamDescriptionSummary")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

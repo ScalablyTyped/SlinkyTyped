@@ -32,424 +32,1728 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined petit-dom.petit-dom.PetitDom.Props<std.Element> */
+@js.native
 trait PropsElement extends js.Object {
-  var ATTRIBUTE_NODE: js.UndefOr[Double] = js.undefined
-  var CDATA_SECTION_NODE: js.UndefOr[Double] = js.undefined
-  var COMMENT_NODE: js.UndefOr[Double] = js.undefined
-  var DOCUMENT_FRAGMENT_NODE: js.UndefOr[Double] = js.undefined
-  var DOCUMENT_NODE: js.UndefOr[Double] = js.undefined
-  var DOCUMENT_POSITION_CONTAINED_BY: js.UndefOr[Double] = js.undefined
-  var DOCUMENT_POSITION_CONTAINS: js.UndefOr[Double] = js.undefined
-  var DOCUMENT_POSITION_DISCONNECTED: js.UndefOr[Double] = js.undefined
-  var DOCUMENT_POSITION_FOLLOWING: js.UndefOr[Double] = js.undefined
-  var DOCUMENT_POSITION_IMPLEMENTATION_SPECIFIC: js.UndefOr[Double] = js.undefined
-  var DOCUMENT_POSITION_PRECEDING: js.UndefOr[Double] = js.undefined
-  var DOCUMENT_TYPE_NODE: js.UndefOr[Double] = js.undefined
-  var ELEMENT_NODE: js.UndefOr[Double] = js.undefined
-  var ENTITY_NODE: js.UndefOr[Double] = js.undefined
-  var ENTITY_REFERENCE_NODE: js.UndefOr[Double] = js.undefined
-  var NOTATION_NODE: js.UndefOr[Double] = js.undefined
-  var PROCESSING_INSTRUCTION_NODE: js.UndefOr[Double] = js.undefined
-  var TEXT_NODE: js.UndefOr[Double] = js.undefined
+  var ATTRIBUTE_NODE: js.UndefOr[Double] = js.native
+  var CDATA_SECTION_NODE: js.UndefOr[Double] = js.native
+  var COMMENT_NODE: js.UndefOr[Double] = js.native
+  var DOCUMENT_FRAGMENT_NODE: js.UndefOr[Double] = js.native
+  var DOCUMENT_NODE: js.UndefOr[Double] = js.native
+  var DOCUMENT_POSITION_CONTAINED_BY: js.UndefOr[Double] = js.native
+  var DOCUMENT_POSITION_CONTAINS: js.UndefOr[Double] = js.native
+  var DOCUMENT_POSITION_DISCONNECTED: js.UndefOr[Double] = js.native
+  var DOCUMENT_POSITION_FOLLOWING: js.UndefOr[Double] = js.native
+  var DOCUMENT_POSITION_IMPLEMENTATION_SPECIFIC: js.UndefOr[Double] = js.native
+  var DOCUMENT_POSITION_PRECEDING: js.UndefOr[Double] = js.native
+  var DOCUMENT_TYPE_NODE: js.UndefOr[Double] = js.native
+  var ELEMENT_NODE: js.UndefOr[Double] = js.native
+  var ENTITY_NODE: js.UndefOr[Double] = js.native
+  var ENTITY_REFERENCE_NODE: js.UndefOr[Double] = js.native
+  var NOTATION_NODE: js.UndefOr[Double] = js.native
+  var PROCESSING_INSTRUCTION_NODE: js.UndefOr[Double] = js.native
+  var TEXT_NODE: js.UndefOr[Double] = js.native
   var addEventListener: js.UndefOr[
     js.Function2[
       fullscreenchange, 
       /* listener */ js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _], 
       Unit
     ]
-  ] = js.undefined
-  var after: js.UndefOr[js.Function1[/* repeated */ Node | String, Unit]] = js.undefined
-  var animate: js.UndefOr[js.Function1[/* keyframes */ js.Array[Keyframe], Animation]] = js.undefined
-  var append: js.UndefOr[js.Function1[/* repeated */ Node | String, Unit]] = js.undefined
-  var appendChild: js.UndefOr[js.Function1[/* newChild */ Node, Node]] = js.undefined
-  var assignedSlot: js.UndefOr[HTMLSlotElement] = js.undefined
-  var attachShadow: js.UndefOr[js.Function1[/* init */ ShadowRootInit, ShadowRoot]] = js.undefined
-  var attributes: js.UndefOr[NamedNodeMap] = js.undefined
-  var baseURI: js.UndefOr[String] = js.undefined
-  var before: js.UndefOr[js.Function1[/* repeated */ Node | String, Unit]] = js.undefined
-  var childElementCount: js.UndefOr[Double] = js.undefined
-  var childNodes: js.UndefOr[NodeListOf[ChildNode with Node]] = js.undefined
-  var children: js.UndefOr[HTMLCollection] = js.undefined
-  var classList: js.UndefOr[DOMTokenList] = js.undefined
-  var className: js.UndefOr[String] = js.undefined
-  var clientHeight: js.UndefOr[Double] = js.undefined
-  var clientLeft: js.UndefOr[Double] = js.undefined
-  var clientTop: js.UndefOr[Double] = js.undefined
-  var clientWidth: js.UndefOr[Double] = js.undefined
-  var cloneNode: js.UndefOr[js.Function0[Node]] = js.undefined
-  var closest: js.UndefOr[js.Function1[a, HTMLAnchorElement | Null]] = js.undefined
-  var compareDocumentPosition: js.UndefOr[js.Function1[/* other */ Node, Double]] = js.undefined
-  var contains: js.UndefOr[js.Function1[/* other */ Node, Boolean]] = js.undefined
-  var content: js.UndefOr[Content | js.Array[Content]] = js.undefined
-  var dispatchEvent: js.UndefOr[js.Function1[/* event */ Event_, Boolean]] = js.undefined
-  var firstChild: js.UndefOr[ChildNode] = js.undefined
-  var firstElementChild: js.UndefOr[Element] = js.undefined
-  var getAnimations: js.UndefOr[js.Function0[js.Array[Animation]]] = js.undefined
-  var getAttribute: js.UndefOr[js.Function1[/* qualifiedName */ String, String | Null]] = js.undefined
-  var getAttributeNS: js.UndefOr[js.Function2[/* namespace */ String, /* localName */ String, String | Null]] = js.undefined
-  var getAttributeNames: js.UndefOr[js.Function0[js.Array[String]]] = js.undefined
-  var getAttributeNode: js.UndefOr[js.Function1[/* name */ String, Attr | Null]] = js.undefined
-  var getAttributeNodeNS: js.UndefOr[js.Function2[/* namespaceURI */ String, /* localName */ String, Attr | Null]] = js.undefined
-  var getBoundingClientRect: js.UndefOr[js.Function0[DOMRect]] = js.undefined
-  var getClientRects: js.UndefOr[js.Function0[DOMRectList]] = js.undefined
-  var getElementsByClassName: js.UndefOr[js.Function1[/* classNames */ String, HTMLCollectionOf[Element]]] = js.undefined
-  var getElementsByTagName: js.UndefOr[js.Function1[a, HTMLCollectionOf[HTMLAnchorElement]]] = js.undefined
+  ] = js.native
+  var after: js.UndefOr[js.Function1[/* repeated */ Node | String, Unit]] = js.native
+  var animate: js.UndefOr[js.Function1[/* keyframes */ js.Array[Keyframe], Animation]] = js.native
+  var append: js.UndefOr[js.Function1[/* repeated */ Node | String, Unit]] = js.native
+  var appendChild: js.UndefOr[js.Function1[/* newChild */ Node, Node]] = js.native
+  var assignedSlot: js.UndefOr[HTMLSlotElement] = js.native
+  var attachShadow: js.UndefOr[js.Function1[/* init */ ShadowRootInit, ShadowRoot]] = js.native
+  var attributes: js.UndefOr[NamedNodeMap] = js.native
+  var baseURI: js.UndefOr[String] = js.native
+  var before: js.UndefOr[js.Function1[/* repeated */ Node | String, Unit]] = js.native
+  var childElementCount: js.UndefOr[Double] = js.native
+  var childNodes: js.UndefOr[NodeListOf[ChildNode with Node]] = js.native
+  var children: js.UndefOr[HTMLCollection] = js.native
+  var classList: js.UndefOr[DOMTokenList] = js.native
+  var className: js.UndefOr[String] = js.native
+  var clientHeight: js.UndefOr[Double] = js.native
+  var clientLeft: js.UndefOr[Double] = js.native
+  var clientTop: js.UndefOr[Double] = js.native
+  var clientWidth: js.UndefOr[Double] = js.native
+  var cloneNode: js.UndefOr[js.Function0[Node]] = js.native
+  var closest: js.UndefOr[js.Function1[a, HTMLAnchorElement | Null]] = js.native
+  var compareDocumentPosition: js.UndefOr[js.Function1[/* other */ Node, Double]] = js.native
+  var contains: js.UndefOr[js.Function1[/* other */ Node, Boolean]] = js.native
+  var content: js.UndefOr[Content | js.Array[Content]] = js.native
+  var dispatchEvent: js.UndefOr[js.Function1[/* event */ Event_, Boolean]] = js.native
+  var firstChild: js.UndefOr[ChildNode] = js.native
+  var firstElementChild: js.UndefOr[Element] = js.native
+  var getAnimations: js.UndefOr[js.Function0[js.Array[Animation]]] = js.native
+  var getAttribute: js.UndefOr[js.Function1[/* qualifiedName */ String, String | Null]] = js.native
+  var getAttributeNS: js.UndefOr[js.Function2[/* namespace */ String, /* localName */ String, String | Null]] = js.native
+  var getAttributeNames: js.UndefOr[js.Function0[js.Array[String]]] = js.native
+  var getAttributeNode: js.UndefOr[js.Function1[/* name */ String, Attr | Null]] = js.native
+  var getAttributeNodeNS: js.UndefOr[js.Function2[/* namespaceURI */ String, /* localName */ String, Attr | Null]] = js.native
+  var getBoundingClientRect: js.UndefOr[js.Function0[DOMRect]] = js.native
+  var getClientRects: js.UndefOr[js.Function0[DOMRectList]] = js.native
+  var getElementsByClassName: js.UndefOr[js.Function1[/* classNames */ String, HTMLCollectionOf[Element]]] = js.native
+  var getElementsByTagName: js.UndefOr[js.Function1[a, HTMLCollectionOf[HTMLAnchorElement]]] = js.native
   var getElementsByTagNameNS: js.UndefOr[
     js.Function2[
       httpColonSlashSlashwwwDotw3DotorgSlash1999Slashxhtml, 
       /* localName */ String, 
       HTMLCollectionOf[HTMLElement]
     ]
-  ] = js.undefined
-  var getRootNode: js.UndefOr[js.Function0[Node]] = js.undefined
-  var hasAttribute: js.UndefOr[js.Function1[/* qualifiedName */ String, Boolean]] = js.undefined
-  var hasAttributeNS: js.UndefOr[js.Function2[/* namespace */ String, /* localName */ String, Boolean]] = js.undefined
-  var hasAttributes: js.UndefOr[js.Function0[Boolean]] = js.undefined
-  var hasChildNodes: js.UndefOr[js.Function0[Boolean]] = js.undefined
-  var hasPointerCapture: js.UndefOr[js.Function1[/* pointerId */ Double, Boolean]] = js.undefined
-  var id: js.UndefOr[String] = js.undefined
-  var innerHTML: js.UndefOr[String] = js.undefined
+  ] = js.native
+  var getRootNode: js.UndefOr[js.Function0[Node]] = js.native
+  var hasAttribute: js.UndefOr[js.Function1[/* qualifiedName */ String, Boolean]] = js.native
+  var hasAttributeNS: js.UndefOr[js.Function2[/* namespace */ String, /* localName */ String, Boolean]] = js.native
+  var hasAttributes: js.UndefOr[js.Function0[Boolean]] = js.native
+  var hasChildNodes: js.UndefOr[js.Function0[Boolean]] = js.native
+  var hasPointerCapture: js.UndefOr[js.Function1[/* pointerId */ Double, Boolean]] = js.native
+  var id: js.UndefOr[String] = js.native
+  var innerHTML: js.UndefOr[String] = js.native
   var insertAdjacentElement: js.UndefOr[
     js.Function2[/* position */ InsertPosition, /* insertedElement */ Element, Element | Null]
-  ] = js.undefined
-  var insertAdjacentHTML: js.UndefOr[js.Function2[/* where */ InsertPosition, /* html */ String, Unit]] = js.undefined
-  var insertAdjacentText: js.UndefOr[js.Function2[/* where */ InsertPosition, /* text */ String, Unit]] = js.undefined
-  var insertBefore: js.UndefOr[js.Function2[/* newChild */ Node, /* refChild */ Node, Node]] = js.undefined
-  var isConnected: js.UndefOr[Boolean] = js.undefined
-  var isDefaultNamespace: js.UndefOr[js.Function1[/* namespace */ String, Boolean]] = js.undefined
-  var isEqualNode: js.UndefOr[js.Function1[/* otherNode */ Node, Boolean]] = js.undefined
-  var isSameNode: js.UndefOr[js.Function1[/* otherNode */ Node, Boolean]] = js.undefined
-  var key: js.UndefOr[Key] = js.undefined
-  var lastChild: js.UndefOr[ChildNode] = js.undefined
-  var lastElementChild: js.UndefOr[Element] = js.undefined
-  var localName: js.UndefOr[String] = js.undefined
-  var lookupNamespaceURI: js.UndefOr[js.Function1[/* prefix */ String, String | Null]] = js.undefined
-  var lookupPrefix: js.UndefOr[js.Function1[/* namespace */ String, String | Null]] = js.undefined
-  var matches: js.UndefOr[js.Function1[/* selectors */ String, Boolean]] = js.undefined
-  var msGetRegionContent: js.UndefOr[js.Function0[_]] = js.undefined
-  var namespaceURI: js.UndefOr[String] = js.undefined
-  var nextElementSibling: js.UndefOr[Element] = js.undefined
-  var nextSibling: js.UndefOr[ChildNode] = js.undefined
-  var nodeName: js.UndefOr[String] = js.undefined
-  var nodeType: js.UndefOr[Double] = js.undefined
-  var nodeValue: js.UndefOr[String] = js.undefined
-  var normalize: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var onfullscreenchange: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.undefined
-  var onfullscreenerror: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.undefined
-  var outerHTML: js.UndefOr[String] = js.undefined
-  var ownerDocument: js.UndefOr[Document_] = js.undefined
-  var parentElement: js.UndefOr[HTMLElement] = js.undefined
-  var parentNode: js.UndefOr[Node with ParentNode] = js.undefined
-  var prefix: js.UndefOr[String] = js.undefined
-  var prepend: js.UndefOr[js.Function1[/* repeated */ Node | String, Unit]] = js.undefined
-  var previousElementSibling: js.UndefOr[Element] = js.undefined
-  var previousSibling: js.UndefOr[ChildNode] = js.undefined
-  var querySelector: js.UndefOr[js.Function1[a, HTMLAnchorElement | Null]] = js.undefined
-  var querySelectorAll: js.UndefOr[js.Function1[a, NodeListOf[HTMLAnchorElement with Node]]] = js.undefined
-  var releasePointerCapture: js.UndefOr[js.Function1[/* pointerId */ Double, Unit]] = js.undefined
-  var remove: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var removeAttribute: js.UndefOr[js.Function1[/* qualifiedName */ String, Unit]] = js.undefined
-  var removeAttributeNS: js.UndefOr[js.Function2[/* namespace */ String, /* localName */ String, Unit]] = js.undefined
-  var removeAttributeNode: js.UndefOr[js.Function1[/* attr */ Attr, Attr]] = js.undefined
-  var removeChild: js.UndefOr[js.Function1[/* oldChild */ Node, Node]] = js.undefined
+  ] = js.native
+  var insertAdjacentHTML: js.UndefOr[js.Function2[/* where */ InsertPosition, /* html */ String, Unit]] = js.native
+  var insertAdjacentText: js.UndefOr[js.Function2[/* where */ InsertPosition, /* text */ String, Unit]] = js.native
+  var insertBefore: js.UndefOr[js.Function2[/* newChild */ Node, /* refChild */ Node, Node]] = js.native
+  var isConnected: js.UndefOr[Boolean] = js.native
+  var isDefaultNamespace: js.UndefOr[js.Function1[/* namespace */ String, Boolean]] = js.native
+  var isEqualNode: js.UndefOr[js.Function1[/* otherNode */ Node, Boolean]] = js.native
+  var isSameNode: js.UndefOr[js.Function1[/* otherNode */ Node, Boolean]] = js.native
+  var key: js.UndefOr[Key] = js.native
+  var lastChild: js.UndefOr[ChildNode] = js.native
+  var lastElementChild: js.UndefOr[Element] = js.native
+  var localName: js.UndefOr[String] = js.native
+  var lookupNamespaceURI: js.UndefOr[js.Function1[/* prefix */ String, String | Null]] = js.native
+  var lookupPrefix: js.UndefOr[js.Function1[/* namespace */ String, String | Null]] = js.native
+  var matches: js.UndefOr[js.Function1[/* selectors */ String, Boolean]] = js.native
+  var msGetRegionContent: js.UndefOr[js.Function0[_]] = js.native
+  var namespaceURI: js.UndefOr[String] = js.native
+  var nextElementSibling: js.UndefOr[Element] = js.native
+  var nextSibling: js.UndefOr[ChildNode] = js.native
+  var nodeName: js.UndefOr[String] = js.native
+  var nodeType: js.UndefOr[Double] = js.native
+  var nodeValue: js.UndefOr[String] = js.native
+  var normalize: js.UndefOr[js.Function0[Unit]] = js.native
+  var onfullscreenchange: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.native
+  var onfullscreenerror: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.native
+  var outerHTML: js.UndefOr[String] = js.native
+  var ownerDocument: js.UndefOr[Document_] = js.native
+  var parentElement: js.UndefOr[HTMLElement] = js.native
+  var parentNode: js.UndefOr[Node with ParentNode] = js.native
+  var prefix: js.UndefOr[String] = js.native
+  var prepend: js.UndefOr[js.Function1[/* repeated */ Node | String, Unit]] = js.native
+  var previousElementSibling: js.UndefOr[Element] = js.native
+  var previousSibling: js.UndefOr[ChildNode] = js.native
+  var querySelector: js.UndefOr[js.Function1[a, HTMLAnchorElement | Null]] = js.native
+  var querySelectorAll: js.UndefOr[js.Function1[a, NodeListOf[HTMLAnchorElement with Node]]] = js.native
+  var releasePointerCapture: js.UndefOr[js.Function1[/* pointerId */ Double, Unit]] = js.native
+  var remove: js.UndefOr[js.Function0[Unit]] = js.native
+  var removeAttribute: js.UndefOr[js.Function1[/* qualifiedName */ String, Unit]] = js.native
+  var removeAttributeNS: js.UndefOr[js.Function2[/* namespace */ String, /* localName */ String, Unit]] = js.native
+  var removeAttributeNode: js.UndefOr[js.Function1[/* attr */ Attr, Attr]] = js.native
+  var removeChild: js.UndefOr[js.Function1[/* oldChild */ Node, Node]] = js.native
   var removeEventListener: js.UndefOr[
     js.Function2[
       fullscreenchange, 
       /* listener */ js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _], 
       Unit
     ]
-  ] = js.undefined
-  var replaceChild: js.UndefOr[js.Function2[/* newChild */ Node, /* oldChild */ Node, Node]] = js.undefined
-  var replaceWith: js.UndefOr[js.Function1[/* repeated */ Node | String, Unit]] = js.undefined
-  var requestFullscreen: js.UndefOr[js.Function0[js.Promise[Unit]]] = js.undefined
-  var requestPointerLock: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var scroll: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var scrollBy: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var scrollHeight: js.UndefOr[Double] = js.undefined
-  var scrollIntoView: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var scrollLeft: js.UndefOr[Double] = js.undefined
-  var scrollTo: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var scrollTop: js.UndefOr[Double] = js.undefined
-  var scrollWidth: js.UndefOr[Double] = js.undefined
-  var setAttribute: js.UndefOr[js.Function2[/* qualifiedName */ String, /* value */ String, Unit]] = js.undefined
+  ] = js.native
+  var replaceChild: js.UndefOr[js.Function2[/* newChild */ Node, /* oldChild */ Node, Node]] = js.native
+  var replaceWith: js.UndefOr[js.Function1[/* repeated */ Node | String, Unit]] = js.native
+  var requestFullscreen: js.UndefOr[js.Function0[js.Promise[Unit]]] = js.native
+  var requestPointerLock: js.UndefOr[js.Function0[Unit]] = js.native
+  var scroll: js.UndefOr[js.Function0[Unit]] = js.native
+  var scrollBy: js.UndefOr[js.Function0[Unit]] = js.native
+  var scrollHeight: js.UndefOr[Double] = js.native
+  var scrollIntoView: js.UndefOr[js.Function0[Unit]] = js.native
+  var scrollLeft: js.UndefOr[Double] = js.native
+  var scrollTo: js.UndefOr[js.Function0[Unit]] = js.native
+  var scrollTop: js.UndefOr[Double] = js.native
+  var scrollWidth: js.UndefOr[Double] = js.native
+  var setAttribute: js.UndefOr[js.Function2[/* qualifiedName */ String, /* value */ String, Unit]] = js.native
   var setAttributeNS: js.UndefOr[
     js.Function3[/* namespace */ String, /* qualifiedName */ String, /* value */ String, Unit]
-  ] = js.undefined
-  var setAttributeNode: js.UndefOr[js.Function1[/* attr */ Attr, Attr | Null]] = js.undefined
-  var setAttributeNodeNS: js.UndefOr[js.Function1[/* attr */ Attr, Attr | Null]] = js.undefined
-  var setPointerCapture: js.UndefOr[js.Function1[/* pointerId */ Double, Unit]] = js.undefined
-  var shadowRoot: js.UndefOr[ShadowRoot] = js.undefined
-  var slot: js.UndefOr[String] = js.undefined
-  var tagName: js.UndefOr[String] = js.undefined
-  var textContent: js.UndefOr[String] = js.undefined
-  var toggleAttribute: js.UndefOr[js.Function1[/* qualifiedName */ String, Boolean]] = js.undefined
-  var webkitMatchesSelector: js.UndefOr[js.Function1[/* selectors */ String, Boolean]] = js.undefined
+  ] = js.native
+  var setAttributeNode: js.UndefOr[js.Function1[/* attr */ Attr, Attr | Null]] = js.native
+  var setAttributeNodeNS: js.UndefOr[js.Function1[/* attr */ Attr, Attr | Null]] = js.native
+  var setPointerCapture: js.UndefOr[js.Function1[/* pointerId */ Double, Unit]] = js.native
+  var shadowRoot: js.UndefOr[ShadowRoot] = js.native
+  var slot: js.UndefOr[String] = js.native
+  var tagName: js.UndefOr[String] = js.native
+  var textContent: js.UndefOr[String] = js.native
+  var toggleAttribute: js.UndefOr[js.Function1[/* qualifiedName */ String, Boolean]] = js.native
+  var webkitMatchesSelector: js.UndefOr[js.Function1[/* selectors */ String, Boolean]] = js.native
 }
 
 object PropsElement {
   @scala.inline
-  def apply(
-    ATTRIBUTE_NODE: Int | Double = null,
-    CDATA_SECTION_NODE: Int | Double = null,
-    COMMENT_NODE: Int | Double = null,
-    DOCUMENT_FRAGMENT_NODE: Int | Double = null,
-    DOCUMENT_NODE: Int | Double = null,
-    DOCUMENT_POSITION_CONTAINED_BY: Int | Double = null,
-    DOCUMENT_POSITION_CONTAINS: Int | Double = null,
-    DOCUMENT_POSITION_DISCONNECTED: Int | Double = null,
-    DOCUMENT_POSITION_FOLLOWING: Int | Double = null,
-    DOCUMENT_POSITION_IMPLEMENTATION_SPECIFIC: Int | Double = null,
-    DOCUMENT_POSITION_PRECEDING: Int | Double = null,
-    DOCUMENT_TYPE_NODE: Int | Double = null,
-    ELEMENT_NODE: Int | Double = null,
-    ENTITY_NODE: Int | Double = null,
-    ENTITY_REFERENCE_NODE: Int | Double = null,
-    NOTATION_NODE: Int | Double = null,
-    PROCESSING_INSTRUCTION_NODE: Int | Double = null,
-    TEXT_NODE: Int | Double = null,
-    addEventListener: (fullscreenchange, /* listener */ js.ThisFunction1[PropsElement, /* ev */ Event_, _]) => Unit = null,
-    after: /* repeated */ Node | String => Unit = null,
-    animate: /* keyframes */ js.Array[Keyframe] => Animation = null,
-    append: /* repeated */ Node | String => Unit = null,
-    appendChild: /* newChild */ Node => Node = null,
-    assignedSlot: HTMLSlotElement = null,
-    attachShadow: /* init */ ShadowRootInit => ShadowRoot = null,
-    attributes: NamedNodeMap = null,
-    baseURI: String = null,
-    before: /* repeated */ Node | String => Unit = null,
-    childElementCount: Int | Double = null,
-    childNodes: NodeListOf[ChildNode with Node] = null,
-    children: HTMLCollection = null,
-    classList: DOMTokenList = null,
-    className: String = null,
-    clientHeight: Int | Double = null,
-    clientLeft: Int | Double = null,
-    clientTop: Int | Double = null,
-    clientWidth: Int | Double = null,
-    cloneNode: () => Node = null,
-    closest: a => HTMLAnchorElement | Null = null,
-    compareDocumentPosition: /* other */ Node => Double = null,
-    contains: /* other */ Node => Boolean = null,
-    content: Content | js.Array[Content] = null,
-    dispatchEvent: /* event */ Event_ => Boolean = null,
-    firstChild: ChildNode = null,
-    firstElementChild: Element = null,
-    getAnimations: () => js.Array[Animation] = null,
-    getAttribute: /* qualifiedName */ String => String | Null = null,
-    getAttributeNS: (/* namespace */ String, /* localName */ String) => String | Null = null,
-    getAttributeNames: () => js.Array[String] = null,
-    getAttributeNode: /* name */ String => Attr | Null = null,
-    getAttributeNodeNS: (/* namespaceURI */ String, /* localName */ String) => Attr | Null = null,
-    getBoundingClientRect: () => DOMRect = null,
-    getClientRects: () => DOMRectList = null,
-    getElementsByClassName: /* classNames */ String => HTMLCollectionOf[Element] = null,
-    getElementsByTagName: a => HTMLCollectionOf[HTMLAnchorElement] = null,
-    getElementsByTagNameNS: (httpColonSlashSlashwwwDotw3DotorgSlash1999Slashxhtml, /* localName */ String) => HTMLCollectionOf[HTMLElement] = null,
-    getRootNode: () => Node = null,
-    hasAttribute: /* qualifiedName */ String => Boolean = null,
-    hasAttributeNS: (/* namespace */ String, /* localName */ String) => Boolean = null,
-    hasAttributes: () => Boolean = null,
-    hasChildNodes: () => Boolean = null,
-    hasPointerCapture: /* pointerId */ Double => Boolean = null,
-    id: String = null,
-    innerHTML: String = null,
-    insertAdjacentElement: (/* position */ InsertPosition, /* insertedElement */ Element) => Element | Null = null,
-    insertAdjacentHTML: (/* where */ InsertPosition, /* html */ String) => Unit = null,
-    insertAdjacentText: (/* where */ InsertPosition, /* text */ String) => Unit = null,
-    insertBefore: (/* newChild */ Node, /* refChild */ Node) => Node = null,
-    isConnected: js.UndefOr[Boolean] = js.undefined,
-    isDefaultNamespace: /* namespace */ String => Boolean = null,
-    isEqualNode: /* otherNode */ Node => Boolean = null,
-    isSameNode: /* otherNode */ Node => Boolean = null,
-    key: Key = null,
-    lastChild: ChildNode = null,
-    lastElementChild: Element = null,
-    localName: String = null,
-    lookupNamespaceURI: /* prefix */ String => String | Null = null,
-    lookupPrefix: /* namespace */ String => String | Null = null,
-    matches: /* selectors */ String => Boolean = null,
-    msGetRegionContent: () => _ = null,
-    namespaceURI: String = null,
-    nextElementSibling: Element = null,
-    nextSibling: ChildNode = null,
-    nodeName: String = null,
-    nodeType: Int | Double = null,
-    nodeValue: String = null,
-    normalize: () => Unit = null,
-    onfullscreenchange: js.ThisFunction1[PropsElement, /* ev */ Event_, _] = null,
-    onfullscreenerror: js.ThisFunction1[PropsElement, /* ev */ Event_, _] = null,
-    outerHTML: String = null,
-    ownerDocument: Document_ = null,
-    parentElement: HTMLElement = null,
-    parentNode: Node with ParentNode = null,
-    prefix: String = null,
-    prepend: /* repeated */ Node | String => Unit = null,
-    previousElementSibling: Element = null,
-    previousSibling: ChildNode = null,
-    querySelector: a => HTMLAnchorElement | Null = null,
-    querySelectorAll: a => NodeListOf[HTMLAnchorElement with Node] = null,
-    releasePointerCapture: /* pointerId */ Double => Unit = null,
-    remove: () => Unit = null,
-    removeAttribute: /* qualifiedName */ String => Unit = null,
-    removeAttributeNS: (/* namespace */ String, /* localName */ String) => Unit = null,
-    removeAttributeNode: /* attr */ Attr => Attr = null,
-    removeChild: /* oldChild */ Node => Node = null,
-    removeEventListener: (fullscreenchange, /* listener */ js.ThisFunction1[PropsElement, /* ev */ Event_, _]) => Unit = null,
-    replaceChild: (/* newChild */ Node, /* oldChild */ Node) => Node = null,
-    replaceWith: /* repeated */ Node | String => Unit = null,
-    requestFullscreen: () => js.Promise[Unit] = null,
-    requestPointerLock: () => Unit = null,
-    scroll: () => Unit = null,
-    scrollBy: () => Unit = null,
-    scrollHeight: Int | Double = null,
-    scrollIntoView: () => Unit = null,
-    scrollLeft: Int | Double = null,
-    scrollTo: () => Unit = null,
-    scrollTop: Int | Double = null,
-    scrollWidth: Int | Double = null,
-    setAttribute: (/* qualifiedName */ String, /* value */ String) => Unit = null,
-    setAttributeNS: (/* namespace */ String, /* qualifiedName */ String, /* value */ String) => Unit = null,
-    setAttributeNode: /* attr */ Attr => Attr | Null = null,
-    setAttributeNodeNS: /* attr */ Attr => Attr | Null = null,
-    setPointerCapture: /* pointerId */ Double => Unit = null,
-    shadowRoot: ShadowRoot = null,
-    slot: String = null,
-    tagName: String = null,
-    textContent: String = null,
-    toggleAttribute: /* qualifiedName */ String => Boolean = null,
-    webkitMatchesSelector: /* selectors */ String => Boolean = null
-  ): PropsElement = {
+  def apply(): PropsElement = {
     val __obj = js.Dynamic.literal()
-    if (ATTRIBUTE_NODE != null) __obj.updateDynamic("ATTRIBUTE_NODE")(ATTRIBUTE_NODE.asInstanceOf[js.Any])
-    if (CDATA_SECTION_NODE != null) __obj.updateDynamic("CDATA_SECTION_NODE")(CDATA_SECTION_NODE.asInstanceOf[js.Any])
-    if (COMMENT_NODE != null) __obj.updateDynamic("COMMENT_NODE")(COMMENT_NODE.asInstanceOf[js.Any])
-    if (DOCUMENT_FRAGMENT_NODE != null) __obj.updateDynamic("DOCUMENT_FRAGMENT_NODE")(DOCUMENT_FRAGMENT_NODE.asInstanceOf[js.Any])
-    if (DOCUMENT_NODE != null) __obj.updateDynamic("DOCUMENT_NODE")(DOCUMENT_NODE.asInstanceOf[js.Any])
-    if (DOCUMENT_POSITION_CONTAINED_BY != null) __obj.updateDynamic("DOCUMENT_POSITION_CONTAINED_BY")(DOCUMENT_POSITION_CONTAINED_BY.asInstanceOf[js.Any])
-    if (DOCUMENT_POSITION_CONTAINS != null) __obj.updateDynamic("DOCUMENT_POSITION_CONTAINS")(DOCUMENT_POSITION_CONTAINS.asInstanceOf[js.Any])
-    if (DOCUMENT_POSITION_DISCONNECTED != null) __obj.updateDynamic("DOCUMENT_POSITION_DISCONNECTED")(DOCUMENT_POSITION_DISCONNECTED.asInstanceOf[js.Any])
-    if (DOCUMENT_POSITION_FOLLOWING != null) __obj.updateDynamic("DOCUMENT_POSITION_FOLLOWING")(DOCUMENT_POSITION_FOLLOWING.asInstanceOf[js.Any])
-    if (DOCUMENT_POSITION_IMPLEMENTATION_SPECIFIC != null) __obj.updateDynamic("DOCUMENT_POSITION_IMPLEMENTATION_SPECIFIC")(DOCUMENT_POSITION_IMPLEMENTATION_SPECIFIC.asInstanceOf[js.Any])
-    if (DOCUMENT_POSITION_PRECEDING != null) __obj.updateDynamic("DOCUMENT_POSITION_PRECEDING")(DOCUMENT_POSITION_PRECEDING.asInstanceOf[js.Any])
-    if (DOCUMENT_TYPE_NODE != null) __obj.updateDynamic("DOCUMENT_TYPE_NODE")(DOCUMENT_TYPE_NODE.asInstanceOf[js.Any])
-    if (ELEMENT_NODE != null) __obj.updateDynamic("ELEMENT_NODE")(ELEMENT_NODE.asInstanceOf[js.Any])
-    if (ENTITY_NODE != null) __obj.updateDynamic("ENTITY_NODE")(ENTITY_NODE.asInstanceOf[js.Any])
-    if (ENTITY_REFERENCE_NODE != null) __obj.updateDynamic("ENTITY_REFERENCE_NODE")(ENTITY_REFERENCE_NODE.asInstanceOf[js.Any])
-    if (NOTATION_NODE != null) __obj.updateDynamic("NOTATION_NODE")(NOTATION_NODE.asInstanceOf[js.Any])
-    if (PROCESSING_INSTRUCTION_NODE != null) __obj.updateDynamic("PROCESSING_INSTRUCTION_NODE")(PROCESSING_INSTRUCTION_NODE.asInstanceOf[js.Any])
-    if (TEXT_NODE != null) __obj.updateDynamic("TEXT_NODE")(TEXT_NODE.asInstanceOf[js.Any])
-    if (addEventListener != null) __obj.updateDynamic("addEventListener")(js.Any.fromFunction2(addEventListener))
-    if (after != null) __obj.updateDynamic("after")(js.Any.fromFunction1(after))
-    if (animate != null) __obj.updateDynamic("animate")(js.Any.fromFunction1(animate))
-    if (append != null) __obj.updateDynamic("append")(js.Any.fromFunction1(append))
-    if (appendChild != null) __obj.updateDynamic("appendChild")(js.Any.fromFunction1(appendChild))
-    if (assignedSlot != null) __obj.updateDynamic("assignedSlot")(assignedSlot.asInstanceOf[js.Any])
-    if (attachShadow != null) __obj.updateDynamic("attachShadow")(js.Any.fromFunction1(attachShadow))
-    if (attributes != null) __obj.updateDynamic("attributes")(attributes.asInstanceOf[js.Any])
-    if (baseURI != null) __obj.updateDynamic("baseURI")(baseURI.asInstanceOf[js.Any])
-    if (before != null) __obj.updateDynamic("before")(js.Any.fromFunction1(before))
-    if (childElementCount != null) __obj.updateDynamic("childElementCount")(childElementCount.asInstanceOf[js.Any])
-    if (childNodes != null) __obj.updateDynamic("childNodes")(childNodes.asInstanceOf[js.Any])
-    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
-    if (classList != null) __obj.updateDynamic("classList")(classList.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (clientHeight != null) __obj.updateDynamic("clientHeight")(clientHeight.asInstanceOf[js.Any])
-    if (clientLeft != null) __obj.updateDynamic("clientLeft")(clientLeft.asInstanceOf[js.Any])
-    if (clientTop != null) __obj.updateDynamic("clientTop")(clientTop.asInstanceOf[js.Any])
-    if (clientWidth != null) __obj.updateDynamic("clientWidth")(clientWidth.asInstanceOf[js.Any])
-    if (cloneNode != null) __obj.updateDynamic("cloneNode")(js.Any.fromFunction0(cloneNode))
-    if (closest != null) __obj.updateDynamic("closest")(js.Any.fromFunction1(closest))
-    if (compareDocumentPosition != null) __obj.updateDynamic("compareDocumentPosition")(js.Any.fromFunction1(compareDocumentPosition))
-    if (contains != null) __obj.updateDynamic("contains")(js.Any.fromFunction1(contains))
-    if (content != null) __obj.updateDynamic("content")(content.asInstanceOf[js.Any])
-    if (dispatchEvent != null) __obj.updateDynamic("dispatchEvent")(js.Any.fromFunction1(dispatchEvent))
-    if (firstChild != null) __obj.updateDynamic("firstChild")(firstChild.asInstanceOf[js.Any])
-    if (firstElementChild != null) __obj.updateDynamic("firstElementChild")(firstElementChild.asInstanceOf[js.Any])
-    if (getAnimations != null) __obj.updateDynamic("getAnimations")(js.Any.fromFunction0(getAnimations))
-    if (getAttribute != null) __obj.updateDynamic("getAttribute")(js.Any.fromFunction1(getAttribute))
-    if (getAttributeNS != null) __obj.updateDynamic("getAttributeNS")(js.Any.fromFunction2(getAttributeNS))
-    if (getAttributeNames != null) __obj.updateDynamic("getAttributeNames")(js.Any.fromFunction0(getAttributeNames))
-    if (getAttributeNode != null) __obj.updateDynamic("getAttributeNode")(js.Any.fromFunction1(getAttributeNode))
-    if (getAttributeNodeNS != null) __obj.updateDynamic("getAttributeNodeNS")(js.Any.fromFunction2(getAttributeNodeNS))
-    if (getBoundingClientRect != null) __obj.updateDynamic("getBoundingClientRect")(js.Any.fromFunction0(getBoundingClientRect))
-    if (getClientRects != null) __obj.updateDynamic("getClientRects")(js.Any.fromFunction0(getClientRects))
-    if (getElementsByClassName != null) __obj.updateDynamic("getElementsByClassName")(js.Any.fromFunction1(getElementsByClassName))
-    if (getElementsByTagName != null) __obj.updateDynamic("getElementsByTagName")(js.Any.fromFunction1(getElementsByTagName))
-    if (getElementsByTagNameNS != null) __obj.updateDynamic("getElementsByTagNameNS")(js.Any.fromFunction2(getElementsByTagNameNS))
-    if (getRootNode != null) __obj.updateDynamic("getRootNode")(js.Any.fromFunction0(getRootNode))
-    if (hasAttribute != null) __obj.updateDynamic("hasAttribute")(js.Any.fromFunction1(hasAttribute))
-    if (hasAttributeNS != null) __obj.updateDynamic("hasAttributeNS")(js.Any.fromFunction2(hasAttributeNS))
-    if (hasAttributes != null) __obj.updateDynamic("hasAttributes")(js.Any.fromFunction0(hasAttributes))
-    if (hasChildNodes != null) __obj.updateDynamic("hasChildNodes")(js.Any.fromFunction0(hasChildNodes))
-    if (hasPointerCapture != null) __obj.updateDynamic("hasPointerCapture")(js.Any.fromFunction1(hasPointerCapture))
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (innerHTML != null) __obj.updateDynamic("innerHTML")(innerHTML.asInstanceOf[js.Any])
-    if (insertAdjacentElement != null) __obj.updateDynamic("insertAdjacentElement")(js.Any.fromFunction2(insertAdjacentElement))
-    if (insertAdjacentHTML != null) __obj.updateDynamic("insertAdjacentHTML")(js.Any.fromFunction2(insertAdjacentHTML))
-    if (insertAdjacentText != null) __obj.updateDynamic("insertAdjacentText")(js.Any.fromFunction2(insertAdjacentText))
-    if (insertBefore != null) __obj.updateDynamic("insertBefore")(js.Any.fromFunction2(insertBefore))
-    if (!js.isUndefined(isConnected)) __obj.updateDynamic("isConnected")(isConnected.asInstanceOf[js.Any])
-    if (isDefaultNamespace != null) __obj.updateDynamic("isDefaultNamespace")(js.Any.fromFunction1(isDefaultNamespace))
-    if (isEqualNode != null) __obj.updateDynamic("isEqualNode")(js.Any.fromFunction1(isEqualNode))
-    if (isSameNode != null) __obj.updateDynamic("isSameNode")(js.Any.fromFunction1(isSameNode))
-    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
-    if (lastChild != null) __obj.updateDynamic("lastChild")(lastChild.asInstanceOf[js.Any])
-    if (lastElementChild != null) __obj.updateDynamic("lastElementChild")(lastElementChild.asInstanceOf[js.Any])
-    if (localName != null) __obj.updateDynamic("localName")(localName.asInstanceOf[js.Any])
-    if (lookupNamespaceURI != null) __obj.updateDynamic("lookupNamespaceURI")(js.Any.fromFunction1(lookupNamespaceURI))
-    if (lookupPrefix != null) __obj.updateDynamic("lookupPrefix")(js.Any.fromFunction1(lookupPrefix))
-    if (matches != null) __obj.updateDynamic("matches")(js.Any.fromFunction1(matches))
-    if (msGetRegionContent != null) __obj.updateDynamic("msGetRegionContent")(js.Any.fromFunction0(msGetRegionContent))
-    if (namespaceURI != null) __obj.updateDynamic("namespaceURI")(namespaceURI.asInstanceOf[js.Any])
-    if (nextElementSibling != null) __obj.updateDynamic("nextElementSibling")(nextElementSibling.asInstanceOf[js.Any])
-    if (nextSibling != null) __obj.updateDynamic("nextSibling")(nextSibling.asInstanceOf[js.Any])
-    if (nodeName != null) __obj.updateDynamic("nodeName")(nodeName.asInstanceOf[js.Any])
-    if (nodeType != null) __obj.updateDynamic("nodeType")(nodeType.asInstanceOf[js.Any])
-    if (nodeValue != null) __obj.updateDynamic("nodeValue")(nodeValue.asInstanceOf[js.Any])
-    if (normalize != null) __obj.updateDynamic("normalize")(js.Any.fromFunction0(normalize))
-    if (onfullscreenchange != null) __obj.updateDynamic("onfullscreenchange")(onfullscreenchange.asInstanceOf[js.Any])
-    if (onfullscreenerror != null) __obj.updateDynamic("onfullscreenerror")(onfullscreenerror.asInstanceOf[js.Any])
-    if (outerHTML != null) __obj.updateDynamic("outerHTML")(outerHTML.asInstanceOf[js.Any])
-    if (ownerDocument != null) __obj.updateDynamic("ownerDocument")(ownerDocument.asInstanceOf[js.Any])
-    if (parentElement != null) __obj.updateDynamic("parentElement")(parentElement.asInstanceOf[js.Any])
-    if (parentNode != null) __obj.updateDynamic("parentNode")(parentNode.asInstanceOf[js.Any])
-    if (prefix != null) __obj.updateDynamic("prefix")(prefix.asInstanceOf[js.Any])
-    if (prepend != null) __obj.updateDynamic("prepend")(js.Any.fromFunction1(prepend))
-    if (previousElementSibling != null) __obj.updateDynamic("previousElementSibling")(previousElementSibling.asInstanceOf[js.Any])
-    if (previousSibling != null) __obj.updateDynamic("previousSibling")(previousSibling.asInstanceOf[js.Any])
-    if (querySelector != null) __obj.updateDynamic("querySelector")(js.Any.fromFunction1(querySelector))
-    if (querySelectorAll != null) __obj.updateDynamic("querySelectorAll")(js.Any.fromFunction1(querySelectorAll))
-    if (releasePointerCapture != null) __obj.updateDynamic("releasePointerCapture")(js.Any.fromFunction1(releasePointerCapture))
-    if (remove != null) __obj.updateDynamic("remove")(js.Any.fromFunction0(remove))
-    if (removeAttribute != null) __obj.updateDynamic("removeAttribute")(js.Any.fromFunction1(removeAttribute))
-    if (removeAttributeNS != null) __obj.updateDynamic("removeAttributeNS")(js.Any.fromFunction2(removeAttributeNS))
-    if (removeAttributeNode != null) __obj.updateDynamic("removeAttributeNode")(js.Any.fromFunction1(removeAttributeNode))
-    if (removeChild != null) __obj.updateDynamic("removeChild")(js.Any.fromFunction1(removeChild))
-    if (removeEventListener != null) __obj.updateDynamic("removeEventListener")(js.Any.fromFunction2(removeEventListener))
-    if (replaceChild != null) __obj.updateDynamic("replaceChild")(js.Any.fromFunction2(replaceChild))
-    if (replaceWith != null) __obj.updateDynamic("replaceWith")(js.Any.fromFunction1(replaceWith))
-    if (requestFullscreen != null) __obj.updateDynamic("requestFullscreen")(js.Any.fromFunction0(requestFullscreen))
-    if (requestPointerLock != null) __obj.updateDynamic("requestPointerLock")(js.Any.fromFunction0(requestPointerLock))
-    if (scroll != null) __obj.updateDynamic("scroll")(js.Any.fromFunction0(scroll))
-    if (scrollBy != null) __obj.updateDynamic("scrollBy")(js.Any.fromFunction0(scrollBy))
-    if (scrollHeight != null) __obj.updateDynamic("scrollHeight")(scrollHeight.asInstanceOf[js.Any])
-    if (scrollIntoView != null) __obj.updateDynamic("scrollIntoView")(js.Any.fromFunction0(scrollIntoView))
-    if (scrollLeft != null) __obj.updateDynamic("scrollLeft")(scrollLeft.asInstanceOf[js.Any])
-    if (scrollTo != null) __obj.updateDynamic("scrollTo")(js.Any.fromFunction0(scrollTo))
-    if (scrollTop != null) __obj.updateDynamic("scrollTop")(scrollTop.asInstanceOf[js.Any])
-    if (scrollWidth != null) __obj.updateDynamic("scrollWidth")(scrollWidth.asInstanceOf[js.Any])
-    if (setAttribute != null) __obj.updateDynamic("setAttribute")(js.Any.fromFunction2(setAttribute))
-    if (setAttributeNS != null) __obj.updateDynamic("setAttributeNS")(js.Any.fromFunction3(setAttributeNS))
-    if (setAttributeNode != null) __obj.updateDynamic("setAttributeNode")(js.Any.fromFunction1(setAttributeNode))
-    if (setAttributeNodeNS != null) __obj.updateDynamic("setAttributeNodeNS")(js.Any.fromFunction1(setAttributeNodeNS))
-    if (setPointerCapture != null) __obj.updateDynamic("setPointerCapture")(js.Any.fromFunction1(setPointerCapture))
-    if (shadowRoot != null) __obj.updateDynamic("shadowRoot")(shadowRoot.asInstanceOf[js.Any])
-    if (slot != null) __obj.updateDynamic("slot")(slot.asInstanceOf[js.Any])
-    if (tagName != null) __obj.updateDynamic("tagName")(tagName.asInstanceOf[js.Any])
-    if (textContent != null) __obj.updateDynamic("textContent")(textContent.asInstanceOf[js.Any])
-    if (toggleAttribute != null) __obj.updateDynamic("toggleAttribute")(js.Any.fromFunction1(toggleAttribute))
-    if (webkitMatchesSelector != null) __obj.updateDynamic("webkitMatchesSelector")(js.Any.fromFunction1(webkitMatchesSelector))
     __obj.asInstanceOf[PropsElement]
   }
+  @scala.inline
+  implicit class PropsElementOps[Self <: PropsElement] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withATTRIBUTE_NODE(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ATTRIBUTE_NODE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutATTRIBUTE_NODE: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ATTRIBUTE_NODE")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCDATA_SECTION_NODE(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CDATA_SECTION_NODE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCDATA_SECTION_NODE: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CDATA_SECTION_NODE")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCOMMENT_NODE(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("COMMENT_NODE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCOMMENT_NODE: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("COMMENT_NODE")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDOCUMENT_FRAGMENT_NODE(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DOCUMENT_FRAGMENT_NODE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDOCUMENT_FRAGMENT_NODE: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DOCUMENT_FRAGMENT_NODE")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDOCUMENT_NODE(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DOCUMENT_NODE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDOCUMENT_NODE: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DOCUMENT_NODE")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDOCUMENT_POSITION_CONTAINED_BY(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DOCUMENT_POSITION_CONTAINED_BY")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDOCUMENT_POSITION_CONTAINED_BY: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DOCUMENT_POSITION_CONTAINED_BY")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDOCUMENT_POSITION_CONTAINS(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DOCUMENT_POSITION_CONTAINS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDOCUMENT_POSITION_CONTAINS: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DOCUMENT_POSITION_CONTAINS")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDOCUMENT_POSITION_DISCONNECTED(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DOCUMENT_POSITION_DISCONNECTED")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDOCUMENT_POSITION_DISCONNECTED: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DOCUMENT_POSITION_DISCONNECTED")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDOCUMENT_POSITION_FOLLOWING(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DOCUMENT_POSITION_FOLLOWING")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDOCUMENT_POSITION_FOLLOWING: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DOCUMENT_POSITION_FOLLOWING")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDOCUMENT_POSITION_IMPLEMENTATION_SPECIFIC(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DOCUMENT_POSITION_IMPLEMENTATION_SPECIFIC")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDOCUMENT_POSITION_IMPLEMENTATION_SPECIFIC: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DOCUMENT_POSITION_IMPLEMENTATION_SPECIFIC")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDOCUMENT_POSITION_PRECEDING(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DOCUMENT_POSITION_PRECEDING")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDOCUMENT_POSITION_PRECEDING: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DOCUMENT_POSITION_PRECEDING")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDOCUMENT_TYPE_NODE(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DOCUMENT_TYPE_NODE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDOCUMENT_TYPE_NODE: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DOCUMENT_TYPE_NODE")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withELEMENT_NODE(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ELEMENT_NODE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutELEMENT_NODE: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ELEMENT_NODE")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withENTITY_NODE(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ENTITY_NODE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutENTITY_NODE: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ENTITY_NODE")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withENTITY_REFERENCE_NODE(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ENTITY_REFERENCE_NODE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutENTITY_REFERENCE_NODE: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ENTITY_REFERENCE_NODE")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNOTATION_NODE(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NOTATION_NODE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNOTATION_NODE: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NOTATION_NODE")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPROCESSING_INSTRUCTION_NODE(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PROCESSING_INSTRUCTION_NODE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPROCESSING_INSTRUCTION_NODE: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PROCESSING_INSTRUCTION_NODE")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTEXT_NODE(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TEXT_NODE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTEXT_NODE: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TEXT_NODE")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAddEventListener(
+      value: (fullscreenchange, /* listener */ js.ThisFunction1[PropsElement, /* ev */ Event_, _]) => Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addEventListener")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutAddEventListener: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addEventListener")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAfter(value: /* repeated */ Node | String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("after")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutAfter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("after")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAnimate(value: /* keyframes */ js.Array[Keyframe] => Animation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animate")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutAnimate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAppend(value: /* repeated */ Node | String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("append")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutAppend: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("append")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAppendChild(value: /* newChild */ Node => Node): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appendChild")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutAppendChild: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appendChild")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAssignedSlot(value: HTMLSlotElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("assignedSlot")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAssignedSlot: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("assignedSlot")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAttachShadow(value: /* init */ ShadowRootInit => ShadowRoot): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attachShadow")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutAttachShadow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attachShadow")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAttributes(value: NamedNodeMap): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attributes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBaseURI(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("baseURI")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBaseURI: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("baseURI")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBefore(value: /* repeated */ Node | String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("before")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutBefore: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("before")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withChildElementCount(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("childElementCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChildElementCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("childElementCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withChildNodes(value: NodeListOf[ChildNode with Node]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("childNodes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChildNodes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("childNodes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withChildren(value: HTMLCollection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChildren: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClassList(value: DOMTokenList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("classList")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClassList: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("classList")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClassName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClassName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClientHeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clientHeight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClientHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clientHeight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClientLeft(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clientLeft")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClientLeft: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clientLeft")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClientTop(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clientTop")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClientTop: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clientTop")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClientWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clientWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClientWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clientWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCloneNode(value: () => Node): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cloneNode")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutCloneNode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cloneNode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClosest(value: a => HTMLAnchorElement | Null): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("closest")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutClosest: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("closest")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCompareDocumentPosition(value: /* other */ Node => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("compareDocumentPosition")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutCompareDocumentPosition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("compareDocumentPosition")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContains(value: /* other */ Node => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contains")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutContains: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contains")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContent(value: Content | js.Array[Content]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDispatchEvent(value: /* event */ Event_ => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dispatchEvent")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutDispatchEvent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dispatchEvent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFirstChild(value: ChildNode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("firstChild")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFirstChild: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("firstChild")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFirstElementChild(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("firstElementChild")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFirstElementChild: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("firstElementChild")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetAnimations(value: () => js.Array[Animation]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getAnimations")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetAnimations: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getAnimations")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetAttribute(value: /* qualifiedName */ String => String | Null): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getAttribute")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetAttribute: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getAttribute")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetAttributeNS(value: (/* namespace */ String, /* localName */ String) => String | Null): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getAttributeNS")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetAttributeNS: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getAttributeNS")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetAttributeNames(value: () => js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getAttributeNames")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetAttributeNames: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getAttributeNames")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetAttributeNode(value: /* name */ String => Attr | Null): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getAttributeNode")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetAttributeNode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getAttributeNode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetAttributeNodeNS(value: (/* namespaceURI */ String, /* localName */ String) => Attr | Null): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getAttributeNodeNS")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetAttributeNodeNS: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getAttributeNodeNS")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetBoundingClientRect(value: () => DOMRect): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getBoundingClientRect")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetBoundingClientRect: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getBoundingClientRect")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetClientRects(value: () => DOMRectList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getClientRects")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetClientRects: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getClientRects")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetElementsByClassName(value: /* classNames */ String => HTMLCollectionOf[Element]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getElementsByClassName")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetElementsByClassName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getElementsByClassName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetElementsByTagName(value: a => HTMLCollectionOf[HTMLAnchorElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getElementsByTagName")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetElementsByTagName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getElementsByTagName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetElementsByTagNameNS(
+      value: (httpColonSlashSlashwwwDotw3DotorgSlash1999Slashxhtml, /* localName */ String) => HTMLCollectionOf[HTMLElement]
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getElementsByTagNameNS")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetElementsByTagNameNS: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getElementsByTagNameNS")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetRootNode(value: () => Node): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getRootNode")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetRootNode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getRootNode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHasAttribute(value: /* qualifiedName */ String => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hasAttribute")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutHasAttribute: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hasAttribute")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHasAttributeNS(value: (/* namespace */ String, /* localName */ String) => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hasAttributeNS")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutHasAttributeNS: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hasAttributeNS")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHasAttributes(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hasAttributes")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutHasAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hasAttributes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHasChildNodes(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hasChildNodes")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutHasChildNodes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hasChildNodes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHasPointerCapture(value: /* pointerId */ Double => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hasPointerCapture")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutHasPointerCapture: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hasPointerCapture")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInnerHTML(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("innerHTML")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInnerHTML: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("innerHTML")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInsertAdjacentElement(value: (/* position */ InsertPosition, /* insertedElement */ Element) => Element | Null): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("insertAdjacentElement")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutInsertAdjacentElement: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("insertAdjacentElement")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInsertAdjacentHTML(value: (/* where */ InsertPosition, /* html */ String) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("insertAdjacentHTML")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutInsertAdjacentHTML: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("insertAdjacentHTML")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInsertAdjacentText(value: (/* where */ InsertPosition, /* text */ String) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("insertAdjacentText")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutInsertAdjacentText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("insertAdjacentText")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInsertBefore(value: (/* newChild */ Node, /* refChild */ Node) => Node): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("insertBefore")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutInsertBefore: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("insertBefore")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsConnected(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isConnected")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsConnected: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isConnected")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsDefaultNamespace(value: /* namespace */ String => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isDefaultNamespace")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutIsDefaultNamespace: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isDefaultNamespace")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsEqualNode(value: /* otherNode */ Node => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isEqualNode")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutIsEqualNode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isEqualNode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsSameNode(value: /* otherNode */ Node => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isSameNode")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutIsSameNode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isSameNode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKey(value: Key): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLastChild(value: ChildNode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastChild")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLastChild: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastChild")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLastElementChild(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastElementChild")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLastElementChild: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastElementChild")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocalName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("localName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocalName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("localName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLookupNamespaceURI(value: /* prefix */ String => String | Null): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lookupNamespaceURI")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutLookupNamespaceURI: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lookupNamespaceURI")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLookupPrefix(value: /* namespace */ String => String | Null): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lookupPrefix")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutLookupPrefix: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lookupPrefix")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMatches(value: /* selectors */ String => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("matches")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutMatches: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("matches")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMsGetRegionContent(value: () => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("msGetRegionContent")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutMsGetRegionContent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("msGetRegionContent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNamespaceURI(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("namespaceURI")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNamespaceURI: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("namespaceURI")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextElementSibling(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextElementSibling")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextElementSibling: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextElementSibling")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextSibling(value: ChildNode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextSibling")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextSibling: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextSibling")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNodeName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNodeName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNodeType(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNodeType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNodeValue(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNodeValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNormalize(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("normalize")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutNormalize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("normalize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnfullscreenchange(value: js.ThisFunction1[PropsElement, /* ev */ Event_, _]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onfullscreenchange")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnfullscreenchange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onfullscreenchange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnfullscreenerror(value: js.ThisFunction1[PropsElement, /* ev */ Event_, _]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onfullscreenerror")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnfullscreenerror: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onfullscreenerror")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOuterHTML(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outerHTML")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOuterHTML: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outerHTML")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOwnerDocument(value: Document_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ownerDocument")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOwnerDocument: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ownerDocument")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParentElement(value: HTMLElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parentElement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParentElement: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parentElement")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParentNode(value: Node with ParentNode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parentNode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParentNode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parentNode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrefix(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prefix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrefix: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prefix")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrepend(value: /* repeated */ Node | String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prepend")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutPrepend: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prepend")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPreviousElementSibling(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("previousElementSibling")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPreviousElementSibling: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("previousElementSibling")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPreviousSibling(value: ChildNode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("previousSibling")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPreviousSibling: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("previousSibling")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQuerySelector(value: a => HTMLAnchorElement | Null): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("querySelector")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutQuerySelector: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("querySelector")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQuerySelectorAll(value: a => NodeListOf[HTMLAnchorElement with Node]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("querySelectorAll")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutQuerySelectorAll: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("querySelectorAll")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReleasePointerCapture(value: /* pointerId */ Double => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("releasePointerCapture")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutReleasePointerCapture: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("releasePointerCapture")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRemove(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("remove")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutRemove: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("remove")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRemoveAttribute(value: /* qualifiedName */ String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeAttribute")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutRemoveAttribute: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeAttribute")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRemoveAttributeNS(value: (/* namespace */ String, /* localName */ String) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeAttributeNS")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutRemoveAttributeNS: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeAttributeNS")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRemoveAttributeNode(value: /* attr */ Attr => Attr): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeAttributeNode")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutRemoveAttributeNode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeAttributeNode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRemoveChild(value: /* oldChild */ Node => Node): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeChild")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutRemoveChild: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeChild")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRemoveEventListener(
+      value: (fullscreenchange, /* listener */ js.ThisFunction1[PropsElement, /* ev */ Event_, _]) => Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeEventListener")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutRemoveEventListener: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeEventListener")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReplaceChild(value: (/* newChild */ Node, /* oldChild */ Node) => Node): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("replaceChild")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutReplaceChild: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("replaceChild")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReplaceWith(value: /* repeated */ Node | String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("replaceWith")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutReplaceWith: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("replaceWith")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequestFullscreen(value: () => js.Promise[Unit]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requestFullscreen")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutRequestFullscreen: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requestFullscreen")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequestPointerLock(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requestPointerLock")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutRequestPointerLock: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requestPointerLock")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScroll(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scroll")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutScroll: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scroll")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScrollBy(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollBy")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutScrollBy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollBy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScrollHeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollHeight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScrollHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollHeight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScrollIntoView(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollIntoView")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutScrollIntoView: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollIntoView")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScrollLeft(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollLeft")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScrollLeft: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollLeft")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScrollTo(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollTo")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutScrollTo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollTo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScrollTop(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollTop")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScrollTop: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollTop")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScrollWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScrollWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSetAttribute(value: (/* qualifiedName */ String, /* value */ String) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setAttribute")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutSetAttribute: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setAttribute")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSetAttributeNS(value: (/* namespace */ String, /* qualifiedName */ String, /* value */ String) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setAttributeNS")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutSetAttributeNS: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setAttributeNS")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSetAttributeNode(value: /* attr */ Attr => Attr | Null): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setAttributeNode")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutSetAttributeNode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setAttributeNode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSetAttributeNodeNS(value: /* attr */ Attr => Attr | Null): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setAttributeNodeNS")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutSetAttributeNodeNS: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setAttributeNodeNS")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSetPointerCapture(value: /* pointerId */ Double => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setPointerCapture")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutSetPointerCapture: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setPointerCapture")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShadowRoot(value: ShadowRoot): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shadowRoot")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShadowRoot: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shadowRoot")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSlot(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("slot")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSlot: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("slot")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTagName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tagName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTagName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tagName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTextContent(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textContent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTextContent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textContent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withToggleAttribute(value: /* qualifiedName */ String => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toggleAttribute")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutToggleAttribute: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toggleAttribute")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitMatchesSelector(value: /* selectors */ String => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("webkitMatchesSelector")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutWebkitMatchesSelector: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("webkitMatchesSelector")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

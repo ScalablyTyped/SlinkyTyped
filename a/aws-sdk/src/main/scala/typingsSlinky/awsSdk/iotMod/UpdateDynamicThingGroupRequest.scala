@@ -34,20 +34,77 @@ trait UpdateDynamicThingGroupRequest extends js.Object {
 
 object UpdateDynamicThingGroupRequest {
   @scala.inline
-  def apply(
-    thingGroupName: ThingGroupName,
-    thingGroupProperties: ThingGroupProperties,
-    expectedVersion: Int | Double = null,
-    indexName: IndexName = null,
-    queryString: QueryString = null,
-    queryVersion: QueryVersion = null
-  ): UpdateDynamicThingGroupRequest = {
+  def apply(thingGroupName: ThingGroupName, thingGroupProperties: ThingGroupProperties): UpdateDynamicThingGroupRequest = {
     val __obj = js.Dynamic.literal(thingGroupName = thingGroupName.asInstanceOf[js.Any], thingGroupProperties = thingGroupProperties.asInstanceOf[js.Any])
-    if (expectedVersion != null) __obj.updateDynamic("expectedVersion")(expectedVersion.asInstanceOf[js.Any])
-    if (indexName != null) __obj.updateDynamic("indexName")(indexName.asInstanceOf[js.Any])
-    if (queryString != null) __obj.updateDynamic("queryString")(queryString.asInstanceOf[js.Any])
-    if (queryVersion != null) __obj.updateDynamic("queryVersion")(queryVersion.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateDynamicThingGroupRequest]
   }
+  @scala.inline
+  implicit class UpdateDynamicThingGroupRequestOps[Self <: UpdateDynamicThingGroupRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withThingGroupName(value: ThingGroupName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thingGroupName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withThingGroupProperties(value: ThingGroupProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thingGroupProperties")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withExpectedVersion(value: OptionalVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expectedVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExpectedVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expectedVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIndexName(value: IndexName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("indexName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIndexName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("indexName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQueryString(value: QueryString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("queryString")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQueryString: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("queryString")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQueryVersion(value: QueryVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("queryVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQueryVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("queryVersion")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

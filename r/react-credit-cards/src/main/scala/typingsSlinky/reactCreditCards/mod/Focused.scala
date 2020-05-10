@@ -14,14 +14,12 @@ trait Focused extends js.Object
 
 object Focused {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def cvc: typingsSlinky.reactCreditCards.reactCreditCardsStrings.cvc = "cvc".asInstanceOf[typingsSlinky.reactCreditCards.reactCreditCardsStrings.cvc]
   @scala.inline
-  def cvc: typingsSlinky.reactCreditCards.reactCreditCardsStrings.cvc = this.cast("cvc")
+  def expiry: typingsSlinky.reactCreditCards.reactCreditCardsStrings.expiry = "expiry".asInstanceOf[typingsSlinky.reactCreditCards.reactCreditCardsStrings.expiry]
   @scala.inline
-  def expiry: typingsSlinky.reactCreditCards.reactCreditCardsStrings.expiry = this.cast("expiry")
+  def name: typingsSlinky.reactCreditCards.reactCreditCardsStrings.name = "name".asInstanceOf[typingsSlinky.reactCreditCards.reactCreditCardsStrings.name]
   @scala.inline
-  def name: typingsSlinky.reactCreditCards.reactCreditCardsStrings.name = this.cast("name")
-  @scala.inline
-  def number: typingsSlinky.reactCreditCards.reactCreditCardsStrings.number = this.cast("number")
+  def number: typingsSlinky.reactCreditCards.reactCreditCardsStrings.number = "number".asInstanceOf[typingsSlinky.reactCreditCards.reactCreditCardsStrings.number]
 }
 

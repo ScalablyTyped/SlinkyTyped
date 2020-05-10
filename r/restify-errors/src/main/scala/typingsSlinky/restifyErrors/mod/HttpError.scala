@@ -19,13 +19,7 @@ class HttpError protected () extends VError {
   var body: js.Any = js.native
   var code: String = js.native
   var displayName: String = js.native
-  /* CompleteClass */
-  override var message: String = js.native
-  /* CompleteClass */
-  override var name: String = js.native
   var statusCode: Double = js.native
-  /* CompleteClass */
-  override def cause(): js.UndefOr[js.Error] = js.native
   def toJSON(): js.Any = js.native
 }
 

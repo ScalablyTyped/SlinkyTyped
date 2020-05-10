@@ -13,12 +13,10 @@ trait MembershipType extends js.Object
 
 object MembershipType {
   @scala.inline
-  def all: typingsSlinky.activedirectory2.activedirectory2Strings.all = this.cast("all")
+  def all: typingsSlinky.activedirectory2.activedirectory2Strings.all = "all".asInstanceOf[typingsSlinky.activedirectory2.activedirectory2Strings.all]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def group: typingsSlinky.activedirectory2.activedirectory2Strings.group = "group".asInstanceOf[typingsSlinky.activedirectory2.activedirectory2Strings.group]
   @scala.inline
-  def group: typingsSlinky.activedirectory2.activedirectory2Strings.group = this.cast("group")
-  @scala.inline
-  def user: typingsSlinky.activedirectory2.activedirectory2Strings.user = this.cast("user")
+  def user: typingsSlinky.activedirectory2.activedirectory2Strings.user = "user".asInstanceOf[typingsSlinky.activedirectory2.activedirectory2Strings.user]
 }
 

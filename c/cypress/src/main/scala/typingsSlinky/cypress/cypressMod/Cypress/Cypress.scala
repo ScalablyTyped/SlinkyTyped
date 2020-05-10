@@ -4,6 +4,7 @@ import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.BeforeUnloadEvent
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.HTMLElement
+import org.scalajs.dom.raw.HTMLSelectElement
 import typingsSlinky.cypress.Anon2
 import typingsSlinky.cypress.AnonDebug
 import typingsSlinky.cypress.AnonDefaults
@@ -85,9 +86,7 @@ import typingsSlinky.moment.mod.MomentFormatSpecification
 import typingsSlinky.moment.mod.MomentInput
 import typingsSlinky.std.ArrayLike
 import typingsSlinky.std.Document_
-import typingsSlinky.std.Error
 import typingsSlinky.std.Event_
-import typingsSlinky.std.HTMLSelectElement
 import typingsSlinky.std.Window_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -264,7 +263,7 @@ trait Cypress extends js.Object {
     *    Cypress.$('p')
     */
   @JSName("$")
-  def $(element: HTMLSelectElement): JQuery_[org.scalajs.dom.raw.HTMLSelectElement] = js.native
+  def $(element: HTMLSelectElement): JQuery_[HTMLSelectElement] = js.native
   // HACK: This is the factory function returned when importing jQuery without a DOM. Declaring it separately breaks using the type parameter on JQueryStatic.
   // HACK: The discriminator parameter handles the edge case of passing a Window object to JQueryStatic. It doesn't actually exist on the factory function.
   /**
@@ -319,22 +318,56 @@ trait Cypress extends js.Object {
     */
   @JSName("$")
   def $[TElement](callback: js.ThisFunction1[/* this */ Document_, /* $ */ this.type, Unit]): JQuery_[TElement] = js.native
+  @JSName("$")
+  def $[T /* <: Element */](element_elementArray: ArrayLike[T]): JQuery_[T] = js.native
   /**
-    * Return a collection of matched elements either found in the DOM based on passed argument(s) or created by passing an HTML string.
-    * @param element_elementArray _&#x40;param_ `element_elementArray`
+    * Creates DOM elements on the fly from the provided string of raw HTML.
+    * @param html _&#x40;param_ `html`
     * <br>
-    * * `element` — A DOM element to wrap in a jQuery object. <br>
-    * * `elementArray` — An array containing a set of DOM elements to wrap in a jQuery object.
+    * * `html (ownerDocument)` — A string of HTML to create on the fly. Note that this parses HTML, not XML. <br>
+    * * `html (attributes)` — A string defining a single, standalone, HTML element (e.g. &lt;div/&gt; or &lt;div&gt;&lt;/div&gt;).
+    * @param ownerDocument_attributes _&#x40;param_ `ownerDocument_attributes`
+    * <br>
+    * * `ownerDocument` — A document in which the new elements will be created. <br>
+    * * `attributes` — An object of attributes, events, and methods to call on the newly-created element.
     * @see \`{@link https://api.jquery.com/jQuery/ }\`
     * @since 1.0
-    * @example ​ ````Set the background color of the page to black.
+    * @since 1.4
+    * @example ​ ````Create a div element (and all of its contents) dynamically and append it to the body element. Internally, an element is created and its innerHTML property set to the given markup.
   ```javascript
-  $( document.body ).css( "background", "black" );
+  $( "<div><p>Hello</p></div>" ).appendTo( "body" )
   ```
-    * @example ​ ````Hide all the input elements within a form.
+    * @example ​ ````Create some DOM elements.
   ```javascript
-  $( myForm.elements ).hide();
+  $( "<div/>", {
+    "class": "test",
+    text: "Click me!",
+    click: function() {
+    $( this ).toggleClass( "test" );
+    }
+  })
+    .appendTo( "body" );
   ```
+    */
+  // tslint:disable-next-line:no-unnecessary-generics
+  /**
+    * jQuery library
+    *
+    * @see https://on.cypress.io/$
+    * @example
+    *    Cypress.$('p')
+    */
+  @JSName("$")
+  def $[TElement /* <: HTMLElement */](html: htmlString): JQuery_[TElement] = js.native
+  @JSName("$")
+  def $[TElement /* <: HTMLElement */](html: htmlString, ownerDocument_attributes: PlainObject[_]): JQuery_[TElement] = js.native
+  @JSName("$")
+  def $[TElement /* <: HTMLElement */](html: htmlString, ownerDocument_attributes: Document_): JQuery_[TElement] = js.native
+  /**
+    * Return a collection of matched elements either found in the DOM based on passed argument(s) or created by passing an HTML string.
+    * @param object A plain object to wrap in a jQuery object.
+    * @see \`{@link https://api.jquery.com/jQuery/ }\`
+    * @since 1.0
     */
   /**
     * jQuery library
@@ -344,11 +377,7 @@ trait Cypress extends js.Object {
     *    Cypress.$('p')
     */
   @JSName("$")
-  def $[T /* <: Element */](element_elementArray: T): JQuery_[T] = js.native
-  @JSName("$")
-  def $[T /* <: Element */](element_elementArray: ArrayLike[T]): JQuery_[T] = js.native
-  @JSName("$")
-  def $[TElement /* <: HTMLElement */](html: htmlString, ownerDocument_attributes: PlainObject[_]): JQuery_[TElement] = js.native
+  def $[T /* <: PlainObject[_] */](`object`: T): JQuery_[T] = js.native
   /**
     * Return a collection of matched elements either found in the DOM based on passed argument(s) or created by passing an HTML string.
     * @param selection An existing jQuery object to clone.
@@ -364,6 +393,10 @@ trait Cypress extends js.Object {
     */
   @JSName("$")
   def $[T](selection: JQuery_[T]): JQuery_[T] = js.native
+  @JSName("$")
+  def $[TElement /* <: Element */](selector: Selector, context: JQuery_[HTMLElement]): JQuery_[TElement] = js.native
+  @JSName("$")
+  def $[TElement /* <: Element */](selector: Selector, context: Element): JQuery_[TElement] = js.native
   /**
     * Accepts a string containing a CSS selector which is then used to match a set of elements.
     * @param selector A string containing a selector expression
@@ -410,59 +443,25 @@ trait Cypress extends js.Object {
     *    Cypress.$('p')
     */
   @JSName("$")
-  def $[TElement /* <: Element */](selector: Selector): JQuery_[TElement] = js.native
+  def $_TElement_Element[TElement /* <: Element */](selector: Selector): JQuery_[TElement] = js.native
   @JSName("$")
-  def $[TElement /* <: Element */](selector: Selector, context: JQuery_[typingsSlinky.std.HTMLElement]): JQuery_[TElement] = js.native
-  @JSName("$")
-  def $[TElement /* <: Element */](selector: Selector, context: Document_): JQuery_[TElement] = js.native
-  @JSName("$")
-  def $[TElement /* <: Element */](selector: Selector, context: typingsSlinky.std.Element): JQuery_[TElement] = js.native
-  /**
-    * Creates DOM elements on the fly from the provided string of raw HTML.
-    * @param html _&#x40;param_ `html`
-    * <br>
-    * * `html (ownerDocument)` — A string of HTML to create on the fly. Note that this parses HTML, not XML. <br>
-    * * `html (attributes)` — A string defining a single, standalone, HTML element (e.g. &lt;div/&gt; or &lt;div&gt;&lt;/div&gt;).
-    * @param ownerDocument_attributes _&#x40;param_ `ownerDocument_attributes`
-    * <br>
-    * * `ownerDocument` — A document in which the new elements will be created. <br>
-    * * `attributes` — An object of attributes, events, and methods to call on the newly-created element.
-    * @see \`{@link https://api.jquery.com/jQuery/ }\`
-    * @since 1.0
-    * @since 1.4
-    * @example ​ ````Create a div element (and all of its contents) dynamically and append it to the body element. Internally, an element is created and its innerHTML property set to the given markup.
-  ```javascript
-  $( "<div><p>Hello</p></div>" ).appendTo( "body" )
-  ```
-    * @example ​ ````Create some DOM elements.
-  ```javascript
-  $( "<div/>", {
-    "class": "test",
-    text: "Click me!",
-    click: function() {
-    $( this ).toggleClass( "test" );
-    }
-  })
-    .appendTo( "body" );
-  ```
-    */
-  // tslint:disable-next-line:no-unnecessary-generics
-  /**
-    * jQuery library
-    *
-    * @see https://on.cypress.io/$
-    * @example
-    *    Cypress.$('p')
-    */
-  @JSName("$")
-  def $_TElement_HTMLElement[TElement /* <: HTMLElement */](html: htmlString): JQuery_[TElement] = js.native
-  @JSName("$")
-  def $_TElement_HTMLElement[TElement /* <: HTMLElement */](html: htmlString, ownerDocument_attributes: Document_): JQuery_[TElement] = js.native
+  def $_TElement_Element[TElement /* <: Element */](selector: Selector, context: Document_): JQuery_[TElement] = js.native
   /**
     * Return a collection of matched elements either found in the DOM based on passed argument(s) or created by passing an HTML string.
-    * @param object A plain object to wrap in a jQuery object.
+    * @param element_elementArray _&#x40;param_ `element_elementArray`
+    * <br>
+    * * `element` — A DOM element to wrap in a jQuery object. <br>
+    * * `elementArray` — An array containing a set of DOM elements to wrap in a jQuery object.
     * @see \`{@link https://api.jquery.com/jQuery/ }\`
     * @since 1.0
+    * @example ​ ````Set the background color of the page to black.
+  ```javascript
+  $( document.body ).css( "background", "black" );
+  ```
+    * @example ​ ````Hide all the input elements within a form.
+  ```javascript
+  $( myForm.elements ).hide();
+  ```
     */
   /**
     * jQuery library
@@ -472,7 +471,7 @@ trait Cypress extends js.Object {
     *    Cypress.$('p')
     */
   @JSName("$")
-  def $_T_PlainObjectWildcard[T /* <: PlainObject[_] */](`object`: T): JQuery_[T] = js.native
+  def $_T_Element[T /* <: Element */](element_elementArray: T): JQuery_[T] = js.native
   /**
     * Creates a lodash object which wraps value to enable implicit method chain sequences.
     * Methods that operate on and return arrays, collections, and functions can be chained together.
@@ -858,7 +857,7 @@ trait Cypress extends js.Object {
     */
   def off(
     action: uncaughtColonexception,
-    fn: js.Function2[/* error */ Error, /* runnable */ IRunnable, `false` | Unit]
+    fn: js.Function2[/* error */ js.Error, /* runnable */ IRunnable, `false` | Unit]
   ): Unit = js.native
   /**
     * Fires when your app calls the global `window.confirm()` method.
@@ -1101,7 +1100,7 @@ trait Cypress extends js.Object {
     */
   def on(
     action: uncaughtColonexception,
-    fn: js.Function2[/* error */ Error, /* runnable */ IRunnable, `false` | Unit]
+    fn: js.Function2[/* error */ js.Error, /* runnable */ IRunnable, `false` | Unit]
   ): Unit = js.native
   /**
     * Fires when your app calls the global `window.confirm()` method.
@@ -1344,7 +1343,7 @@ trait Cypress extends js.Object {
     */
   def once(
     action: uncaughtColonexception,
-    fn: js.Function2[/* error */ Error, /* runnable */ IRunnable, `false` | Unit]
+    fn: js.Function2[/* error */ js.Error, /* runnable */ IRunnable, `false` | Unit]
   ): Unit = js.native
   /**
     * Fires when your app calls the global `window.confirm()` method.

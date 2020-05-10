@@ -1,14 +1,17 @@
 package typingsSlinky.baseui.components
 
+import typingsSlinky.baseui.blockMod.BlockProps
+import typingsSlinky.react.mod.Ref
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object H5 extends SharedApply_BlockProps_369449934 {
+object H5 {
   @JSImport("baseui/typography", "H5")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: BlockProps): SharedBuilder_BlockProps1115621296[Ref[js.Any] with js.Object] = new SharedBuilder_BlockProps1115621296[Ref[js.Any] with js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: H5.type): SharedBuilder_BlockProps1115621296[Ref[js.Any] with js.Object] = new SharedBuilder_BlockProps1115621296[Ref[js.Any] with js.Object](js.Array(this.component, js.Dictionary.empty))()
 }
 

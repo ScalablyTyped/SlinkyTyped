@@ -4,59 +4,60 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonActions extends js.Object {
-  var actions: AnonType
+  var actions: AnonType = js.native
   @JSName("actions[].description")
-  var `actions[]Dotdescription`: AnonRequired
+  var `actions[]Dotdescription`: AnonRequired = js.native
   @JSName("actions[].identifier")
-  var `actions[]Dotidentifier`: AnonRequired
+  var `actions[]Dotidentifier`: AnonRequired = js.native
   @JSName("actions[].label")
-  var `actions[]Dotlabel`: AnonRequired
-  var completed_at: AnonType
-  var conclusion: AnonEnum
-  var details_url: AnonType
-  var external_id: AnonType
-  var head_sha: AnonRequired
-  var name: AnonRequired
-  var output: AnonType
+  var `actions[]Dotlabel`: AnonRequired = js.native
+  var completed_at: AnonType = js.native
+  var conclusion: AnonEnum = js.native
+  var details_url: AnonType = js.native
+  var external_id: AnonType = js.native
+  var head_sha: AnonRequired = js.native
+  var name: AnonRequired = js.native
+  var output: AnonType = js.native
   @JSName("output.annotations")
-  var outputDotannotations: AnonType
+  var outputDotannotations: AnonType = js.native
   @JSName("output.annotations[].annotation_level")
-  var `outputDotannotations[]Dotannotation_level`: AnonEnumRequired
+  var `outputDotannotations[]Dotannotation_level`: AnonEnumRequired = js.native
   @JSName("output.annotations[].end_column")
-  var `outputDotannotations[]Dotend_column`: AnonType
+  var `outputDotannotations[]Dotend_column`: AnonType = js.native
   @JSName("output.annotations[].end_line")
-  var `outputDotannotations[]Dotend_line`: AnonRequired
+  var `outputDotannotations[]Dotend_line`: AnonRequired = js.native
   @JSName("output.annotations[].message")
-  var `outputDotannotations[]Dotmessage`: AnonRequired
+  var `outputDotannotations[]Dotmessage`: AnonRequired = js.native
   @JSName("output.annotations[].path")
-  var `outputDotannotations[]Dotpath`: AnonRequired
+  var `outputDotannotations[]Dotpath`: AnonRequired = js.native
   @JSName("output.annotations[].raw_details")
-  var `outputDotannotations[]Dotraw_details`: AnonType
+  var `outputDotannotations[]Dotraw_details`: AnonType = js.native
   @JSName("output.annotations[].start_column")
-  var `outputDotannotations[]Dotstart_column`: AnonType
+  var `outputDotannotations[]Dotstart_column`: AnonType = js.native
   @JSName("output.annotations[].start_line")
-  var `outputDotannotations[]Dotstart_line`: AnonRequired
+  var `outputDotannotations[]Dotstart_line`: AnonRequired = js.native
   @JSName("output.annotations[].title")
-  var `outputDotannotations[]Dottitle`: AnonType
+  var `outputDotannotations[]Dottitle`: AnonType = js.native
   @JSName("output.images")
-  var outputDotimages: AnonType
+  var outputDotimages: AnonType = js.native
   @JSName("output.images[].alt")
-  var `outputDotimages[]Dotalt`: AnonRequired
+  var `outputDotimages[]Dotalt`: AnonRequired = js.native
   @JSName("output.images[].caption")
-  var `outputDotimages[]Dotcaption`: AnonType
+  var `outputDotimages[]Dotcaption`: AnonType = js.native
   @JSName("output.images[].image_url")
-  var `outputDotimages[]Dotimage_url`: AnonRequired
+  var `outputDotimages[]Dotimage_url`: AnonRequired = js.native
   @JSName("output.summary")
-  var outputDotsummary: AnonRequired
+  var outputDotsummary: AnonRequired = js.native
   @JSName("output.text")
-  var outputDottext: AnonType
+  var outputDottext: AnonType = js.native
   @JSName("output.title")
-  var outputDottitle: AnonRequired
-  var owner: AnonRequired
-  var repo: AnonRequired
-  var started_at: AnonType
-  var status: AnonEnum
+  var outputDottitle: AnonRequired = js.native
+  var owner: AnonRequired = js.native
+  var repo: AnonRequired = js.native
+  var started_at: AnonType = js.native
+  var status: AnonEnum = js.native
 }
 
 object AnonActions {
@@ -118,5 +119,205 @@ object AnonActions {
     __obj.updateDynamic("output.title")(outputDottitle.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonActions]
   }
+  @scala.inline
+  implicit class AnonActionsOps[Self <: AnonActions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withActions(value: AnonType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("actions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withActions[]Dotdescription`(value: AnonRequired): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("actions[].description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withActions[]Dotidentifier`(value: AnonRequired): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("actions[].identifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withActions[]Dotlabel`(value: AnonRequired): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("actions[].label")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCompleted_at(value: AnonType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("completed_at")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withConclusion(value: AnonEnum): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("conclusion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDetails_url(value: AnonType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("details_url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withExternal_id(value: AnonType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("external_id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHead_sha(value: AnonRequired): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("head_sha")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withName(value: AnonRequired): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOutput(value: AnonType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("output")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOutputDotannotations(value: AnonType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("output.annotations")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withOutputDotannotations[]Dotannotation_level`(value: AnonEnumRequired): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("output.annotations[].annotation_level")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withOutputDotannotations[]Dotend_column`(value: AnonType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("output.annotations[].end_column")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withOutputDotannotations[]Dotend_line`(value: AnonRequired): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("output.annotations[].end_line")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withOutputDotannotations[]Dotmessage`(value: AnonRequired): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("output.annotations[].message")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withOutputDotannotations[]Dotpath`(value: AnonRequired): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("output.annotations[].path")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withOutputDotannotations[]Dotraw_details`(value: AnonType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("output.annotations[].raw_details")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withOutputDotannotations[]Dotstart_column`(value: AnonType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("output.annotations[].start_column")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withOutputDotannotations[]Dotstart_line`(value: AnonRequired): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("output.annotations[].start_line")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withOutputDotannotations[]Dottitle`(value: AnonType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("output.annotations[].title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOutputDotimages(value: AnonType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("output.images")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withOutputDotimages[]Dotalt`(value: AnonRequired): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("output.images[].alt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withOutputDotimages[]Dotcaption`(value: AnonType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("output.images[].caption")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withOutputDotimages[]Dotimage_url`(value: AnonRequired): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("output.images[].image_url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOutputDotsummary(value: AnonRequired): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("output.summary")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOutputDottext(value: AnonType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("output.text")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOutputDottitle(value: AnonRequired): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("output.title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOwner(value: AnonRequired): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("owner")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRepo(value: AnonRequired): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("repo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStarted_at(value: AnonType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("started_at")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStatus(value: AnonEnum): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -7,33 +7,101 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait EdgeConfig extends js.Object {
-  var height: js.UndefOr[Double] = js.undefined
-  var labeloffest: js.UndefOr[Double] = js.undefined
-  var lablepos: js.UndefOr[l | c | r] = js.undefined
-  var minlen: js.UndefOr[Double] = js.undefined
-  var weight: js.UndefOr[Double] = js.undefined
-  var width: js.UndefOr[Double] = js.undefined
+  var height: js.UndefOr[Double] = js.native
+  var labeloffest: js.UndefOr[Double] = js.native
+  var lablepos: js.UndefOr[l | c | r] = js.native
+  var minlen: js.UndefOr[Double] = js.native
+  var weight: js.UndefOr[Double] = js.native
+  var width: js.UndefOr[Double] = js.native
 }
 
 object EdgeConfig {
   @scala.inline
-  def apply(
-    height: Int | Double = null,
-    labeloffest: Int | Double = null,
-    lablepos: l | c | r = null,
-    minlen: Int | Double = null,
-    weight: Int | Double = null,
-    width: Int | Double = null
-  ): EdgeConfig = {
+  def apply(): EdgeConfig = {
     val __obj = js.Dynamic.literal()
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (labeloffest != null) __obj.updateDynamic("labeloffest")(labeloffest.asInstanceOf[js.Any])
-    if (lablepos != null) __obj.updateDynamic("lablepos")(lablepos.asInstanceOf[js.Any])
-    if (minlen != null) __obj.updateDynamic("minlen")(minlen.asInstanceOf[js.Any])
-    if (weight != null) __obj.updateDynamic("weight")(weight.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     __obj.asInstanceOf[EdgeConfig]
   }
+  @scala.inline
+  implicit class EdgeConfigOps[Self <: EdgeConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabeloffest(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labeloffest")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabeloffest: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labeloffest")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLablepos(value: l | c | r): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lablepos")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLablepos: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lablepos")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinlen(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minlen")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinlen: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minlen")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("weight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("weight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

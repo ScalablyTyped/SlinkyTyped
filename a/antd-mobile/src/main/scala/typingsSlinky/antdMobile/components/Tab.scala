@@ -1,9 +1,8 @@
 package typingsSlinky.antdMobile.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.antdMobile.tabBarPropsTypeMod.TabIcon
 import typingsSlinky.antdMobile.tabMod.TabProps
 import typingsSlinky.antdMobile.tabMod.default
@@ -11,36 +10,44 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Tab
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object Tab {
   @JSImport("antd-mobile/lib/tab-bar/Tab", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: selected, title */
-  def apply(
-    prefixCls: String,
-    badge: String | Double = null,
-    dot: js.UndefOr[Boolean] = js.undefined,
-    icon: TabIcon = null,
-    onClick: () => Unit = null,
-    selectedIcon: TabIcon = null,
-    tintColor: String = null,
-    unselectedTintColor: String = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(prefixCls = prefixCls.asInstanceOf[js.Any])
-    if (badge != null) __obj.updateDynamic("badge")(badge.asInstanceOf[js.Any])
-    if (!js.isUndefined(dot)) __obj.updateDynamic("dot")(dot.asInstanceOf[js.Any])
-    if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
-    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction0(onClick))
-    if (selectedIcon != null) __obj.updateDynamic("selectedIcon")(selectedIcon.asInstanceOf[js.Any])
-    if (tintColor != null) __obj.updateDynamic("tintColor")(tintColor.asInstanceOf[js.Any])
-    if (unselectedTintColor != null) __obj.updateDynamic("unselectedTintColor")(unselectedTintColor.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def badge(value: String | Double): this.type = set("badge", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dot(value: Boolean): this.type = set("dot", value.asInstanceOf[js.Any])
+    @scala.inline
+    def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def icon(value: TabIcon): this.type = set("icon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onClick(value: () => Unit): this.type = set("onClick", js.Any.fromFunction0(value))
+    @scala.inline
+    def selected(value: Boolean): this.type = set("selected", value.asInstanceOf[js.Any])
+    @scala.inline
+    def selectedIconReactElement(value: ReactElement): this.type = set("selectedIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def selectedIcon(value: TabIcon): this.type = set("selectedIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tintColor(value: String): this.type = set("tintColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def title(value: String): this.type = set("title", value.asInstanceOf[js.Any])
+    @scala.inline
+    def unselectedTintColor(value: String): this.type = set("unselectedTintColor", value.asInstanceOf[js.Any])
   }
-  type Props = TabProps
+  
+  def withProps(p: TabProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(prefixCls: String): Builder = {
+    val __props = js.Dynamic.literal(prefixCls = prefixCls.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[TabProps]))
+  }
 }
 

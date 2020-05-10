@@ -4,11 +4,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ExportJobRequest extends js.Object {
   /**
     * The Amazon Resource Name (ARN) of an IAM role that grants Amazon Pinpoint access to the Amazon S3 location that endpoints will be exported to.
     */
-  var RoleArn: js.UndefOr[String] = js.undefined
+  var RoleArn: js.UndefOr[String] = js.native
   /**
     * A URL that points to the location within an Amazon S3 bucket that will receive the export. The location is typically a folder with multiple files.
     *
@@ -16,31 +17,78 @@ trait ExportJobRequest extends js.Object {
     *
     * Amazon Pinpoint will export endpoints to this location.
     */
-  var S3UrlPrefix: js.UndefOr[String] = js.undefined
+  var S3UrlPrefix: js.UndefOr[String] = js.native
   /**
     * The ID of the segment to export endpoints from. If not present, Amazon Pinpoint exports all of the endpoints that belong to the application.
     */
-  var SegmentId: js.UndefOr[String] = js.undefined
+  var SegmentId: js.UndefOr[String] = js.native
   /**
     * The version of the segment to export if specified.
     */
-  var SegmentVersion: js.UndefOr[Double] = js.undefined
+  var SegmentVersion: js.UndefOr[Double] = js.native
 }
 
 object ExportJobRequest {
   @scala.inline
-  def apply(
-    RoleArn: String = null,
-    S3UrlPrefix: String = null,
-    SegmentId: String = null,
-    SegmentVersion: Int | Double = null
-  ): ExportJobRequest = {
+  def apply(): ExportJobRequest = {
     val __obj = js.Dynamic.literal()
-    if (RoleArn != null) __obj.updateDynamic("RoleArn")(RoleArn.asInstanceOf[js.Any])
-    if (S3UrlPrefix != null) __obj.updateDynamic("S3UrlPrefix")(S3UrlPrefix.asInstanceOf[js.Any])
-    if (SegmentId != null) __obj.updateDynamic("SegmentId")(SegmentId.asInstanceOf[js.Any])
-    if (SegmentVersion != null) __obj.updateDynamic("SegmentVersion")(SegmentVersion.asInstanceOf[js.Any])
     __obj.asInstanceOf[ExportJobRequest]
   }
+  @scala.inline
+  implicit class ExportJobRequestOps[Self <: ExportJobRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRoleArn(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RoleArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRoleArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RoleArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withS3UrlPrefix(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("S3UrlPrefix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutS3UrlPrefix: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("S3UrlPrefix")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSegmentId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SegmentId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSegmentId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SegmentId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSegmentVersion(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SegmentVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSegmentVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SegmentVersion")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

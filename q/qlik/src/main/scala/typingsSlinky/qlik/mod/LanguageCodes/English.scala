@@ -12,10 +12,8 @@ trait English extends _ALL
 
 object English {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def en: typingsSlinky.qlik.qlikStrings.en = "en".asInstanceOf[typingsSlinky.qlik.qlikStrings.en]
   @scala.inline
-  def en: typingsSlinky.qlik.qlikStrings.en = this.cast("en")
-  @scala.inline
-  def `en-US`: typingsSlinky.qlik.qlikStrings.`en-US` = this.cast("en-US")
+  def `en-US`: typingsSlinky.qlik.qlikStrings.`en-US` = "en-US".asInstanceOf[typingsSlinky.qlik.qlikStrings.`en-US`]
 }
 

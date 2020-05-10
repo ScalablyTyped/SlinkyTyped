@@ -1,12 +1,12 @@
 package typingsSlinky.baseui.iconMod
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.react.mod.FC
+import slinky.core.ReactComponentClass
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSImport("baseui/icon", "TriangleUp")
 @js.native
-object TriangleUp extends TopLevel[FC[IconProps]]
+object TriangleUp extends TopLevel[ReactComponentClass[IconProps]]
 

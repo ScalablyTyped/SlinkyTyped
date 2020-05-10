@@ -5,13 +5,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait WindowsUpdateInfo extends UpdateInfo {
-  var packages: js.UndefOr[StringDictionary[PackageFileInfo] | Null] = js.undefined
+  var packages: js.UndefOr[StringDictionary[PackageFileInfo] | Null] = js.native
   /**
     * @deprecated
     * @private
     */
-  var sha2: js.UndefOr[String] = js.undefined
+  var sha2: js.UndefOr[String] = js.native
 }
 
 object WindowsUpdateInfo {
@@ -21,20 +22,48 @@ object WindowsUpdateInfo {
     path: String,
     releaseDate: String,
     sha512: String,
-    version: String,
-    packages: StringDictionary[PackageFileInfo] = null,
-    releaseName: String = null,
-    releaseNotes: String | js.Array[ReleaseNoteInfo] = null,
-    sha2: String = null,
-    stagingPercentage: Int | Double = null
+    version: String
   ): WindowsUpdateInfo = {
     val __obj = js.Dynamic.literal(files = files.asInstanceOf[js.Any], path = path.asInstanceOf[js.Any], releaseDate = releaseDate.asInstanceOf[js.Any], sha512 = sha512.asInstanceOf[js.Any], version = version.asInstanceOf[js.Any])
-    if (packages != null) __obj.updateDynamic("packages")(packages.asInstanceOf[js.Any])
-    if (releaseName != null) __obj.updateDynamic("releaseName")(releaseName.asInstanceOf[js.Any])
-    if (releaseNotes != null) __obj.updateDynamic("releaseNotes")(releaseNotes.asInstanceOf[js.Any])
-    if (sha2 != null) __obj.updateDynamic("sha2")(sha2.asInstanceOf[js.Any])
-    if (stagingPercentage != null) __obj.updateDynamic("stagingPercentage")(stagingPercentage.asInstanceOf[js.Any])
     __obj.asInstanceOf[WindowsUpdateInfo]
   }
+  @scala.inline
+  implicit class WindowsUpdateInfoOps[Self <: WindowsUpdateInfo] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPackages(value: StringDictionary[PackageFileInfo]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("packages")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPackages: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("packages")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPackagesNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("packages")(null)
+        ret
+    }
+    @scala.inline
+    def withSha2(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sha2")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSha2: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sha2")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

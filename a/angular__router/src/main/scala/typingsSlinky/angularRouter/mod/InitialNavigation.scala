@@ -16,18 +16,16 @@ trait InitialNavigation extends js.Object
 
 object InitialNavigation {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def disabled: typingsSlinky.angularRouter.angularRouterStrings.disabled = "disabled".asInstanceOf[typingsSlinky.angularRouter.angularRouterStrings.disabled]
   @scala.inline
-  def disabled: typingsSlinky.angularRouter.angularRouterStrings.disabled = this.cast("disabled")
+  def enabled: typingsSlinky.angularRouter.angularRouterStrings.enabled = "enabled".asInstanceOf[typingsSlinky.angularRouter.angularRouterStrings.enabled]
   @scala.inline
-  def enabled: typingsSlinky.angularRouter.angularRouterStrings.enabled = this.cast("enabled")
+  def `false`: typingsSlinky.angularRouter.angularRouterBooleans.`false` = false.asInstanceOf[typingsSlinky.angularRouter.angularRouterBooleans.`false`]
   @scala.inline
-  def `false`: typingsSlinky.angularRouter.angularRouterBooleans.`false` = this.cast(false)
+  def legacy_disabled: typingsSlinky.angularRouter.angularRouterStrings.legacy_disabled = "legacy_disabled".asInstanceOf[typingsSlinky.angularRouter.angularRouterStrings.legacy_disabled]
   @scala.inline
-  def legacy_disabled: typingsSlinky.angularRouter.angularRouterStrings.legacy_disabled = this.cast("legacy_disabled")
+  def legacy_enabled: typingsSlinky.angularRouter.angularRouterStrings.legacy_enabled = "legacy_enabled".asInstanceOf[typingsSlinky.angularRouter.angularRouterStrings.legacy_enabled]
   @scala.inline
-  def legacy_enabled: typingsSlinky.angularRouter.angularRouterStrings.legacy_enabled = this.cast("legacy_enabled")
-  @scala.inline
-  def `true`: typingsSlinky.angularRouter.angularRouterBooleans.`true` = this.cast(true)
+  def `true`: typingsSlinky.angularRouter.angularRouterBooleans.`true` = true.asInstanceOf[typingsSlinky.angularRouter.angularRouterBooleans.`true`]
 }
 

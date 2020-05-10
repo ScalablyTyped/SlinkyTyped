@@ -26,10 +26,29 @@ trait SchemaAppEngineHttpQueue extends js.Object {
 
 object SchemaAppEngineHttpQueue {
   @scala.inline
-  def apply(appEngineRoutingOverride: SchemaAppEngineRouting = null): SchemaAppEngineHttpQueue = {
+  def apply(): SchemaAppEngineHttpQueue = {
     val __obj = js.Dynamic.literal()
-    if (appEngineRoutingOverride != null) __obj.updateDynamic("appEngineRoutingOverride")(appEngineRoutingOverride.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAppEngineHttpQueue]
   }
+  @scala.inline
+  implicit class SchemaAppEngineHttpQueueOps[Self <: SchemaAppEngineHttpQueue] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAppEngineRoutingOverride(value: SchemaAppEngineRouting): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appEngineRoutingOverride")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAppEngineRoutingOverride: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appEngineRoutingOverride")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

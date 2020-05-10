@@ -6,7 +6,12 @@ import scala.scalajs.js.annotation._
 
 package object mod {
   type CORSSignature = js.Function0[
-    typingsSlinky.express.mod.RequestHandler[typingsSlinky.expressServeStaticCore.mod.ParamsDictionary]
+    typingsSlinky.express.mod.RequestHandler[
+      typingsSlinky.expressServeStaticCore.mod.ParamsDictionary, 
+      js.Any, 
+      js.Any, 
+      typingsSlinky.expressServeStaticCore.mod.Query
+    ]
   ]
   type DefinitionsObject = org.scalablytyped.runtime.StringDictionary[typingsSlinky.swaggerExpressMiddleware.mod.SchemaObject]
   type ExampleObject = org.scalablytyped.runtime.StringDictionary[js.Any]
@@ -14,13 +19,23 @@ package object mod {
   type HeadersObject = org.scalablytyped.runtime.StringDictionary[typingsSlinky.swaggerExpressMiddleware.mod.HeaderObject]
   type MetadataSignature = js.Function1[
     /* router */ js.UndefOr[typingsSlinky.express.mod.Application_ | typingsSlinky.express.mod.Router], 
-    typingsSlinky.express.mod.RequestHandler[typingsSlinky.expressServeStaticCore.mod.ParamsDictionary]
+    typingsSlinky.express.mod.RequestHandler[
+      typingsSlinky.expressServeStaticCore.mod.ParamsDictionary, 
+      js.Any, 
+      js.Any, 
+      typingsSlinky.expressServeStaticCore.mod.Query
+    ]
   ]
   type MimeTypes = js.Array[java.lang.String]
   type MockSignature = js.Function2[
     /* router */ js.UndefOr[typingsSlinky.express.mod.Application_ | typingsSlinky.express.mod.Router], 
     /* datastore */ js.UndefOr[js.Any], 
-    typingsSlinky.express.mod.RequestHandler[typingsSlinky.expressServeStaticCore.mod.ParamsDictionary]
+    typingsSlinky.express.mod.RequestHandler[
+      typingsSlinky.expressServeStaticCore.mod.ParamsDictionary, 
+      js.Any, 
+      js.Any, 
+      typingsSlinky.expressServeStaticCore.mod.Query
+    ]
   ]
   type Parameters = js.Array[
     typingsSlinky.swaggerExpressMiddleware.mod.ParameterObject | typingsSlinky.swaggerExpressMiddleware.mod.ReferenceObject

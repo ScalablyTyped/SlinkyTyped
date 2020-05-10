@@ -9,26 +9,52 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait BaseOAuthSecurity extends BaseSecurity {
-  var flow: accessCode | application | `implicit` | password
-  var scopes: js.UndefOr[OAuthScope] = js.undefined
+  var flow: accessCode | application | `implicit` | password = js.native
+  var scopes: js.UndefOr[OAuthScope] = js.native
   @JSName("type")
-  var type_BaseOAuthSecurity: oauth2
+  var type_BaseOAuthSecurity: oauth2 = js.native
 }
 
 object BaseOAuthSecurity {
   @scala.inline
-  def apply(
-    flow: accessCode | application | `implicit` | password,
-    `type`: oauth2,
-    description: String = null,
-    scopes: OAuthScope = null
-  ): BaseOAuthSecurity = {
+  def apply(flow: accessCode | application | `implicit` | password, `type`: oauth2): BaseOAuthSecurity = {
     val __obj = js.Dynamic.literal(flow = flow.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (scopes != null) __obj.updateDynamic("scopes")(scopes.asInstanceOf[js.Any])
     __obj.asInstanceOf[BaseOAuthSecurity]
   }
+  @scala.inline
+  implicit class BaseOAuthSecurityOps[Self <: BaseOAuthSecurity] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFlow(value: accessCode | application | `implicit` | password): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("flow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: oauth2): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withScopes(value: OAuthScope): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scopes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScopes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scopes")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -20,3 +20,43 @@ trait ParamsResourceUrlnotificationsGetmetadata extends StandardParameters {
   var url: js.UndefOr[String] = js.native
 }
 
+object ParamsResourceUrlnotificationsGetmetadata {
+  @scala.inline
+  def apply(): ParamsResourceUrlnotificationsGetmetadata = {
+    val __obj = js.Dynamic.literal()
+    __obj.asInstanceOf[ParamsResourceUrlnotificationsGetmetadata]
+  }
+  @scala.inline
+  implicit class ParamsResourceUrlnotificationsGetmetadataOps[Self <: ParamsResourceUrlnotificationsGetmetadata] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAuth(value: String | OAuth2Client | JWT | Compute | UserRefreshClient): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("auth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAuth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("auth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(js.undefined)
+        ret
+    }
+  }
+  
+}
+

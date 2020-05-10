@@ -23,11 +23,41 @@ trait SchemaListNotificationChannelsResponse extends js.Object {
 
 object SchemaListNotificationChannelsResponse {
   @scala.inline
-  def apply(nextPageToken: String = null, notificationChannels: js.Array[SchemaNotificationChannel] = null): SchemaListNotificationChannelsResponse = {
+  def apply(): SchemaListNotificationChannelsResponse = {
     val __obj = js.Dynamic.literal()
-    if (nextPageToken != null) __obj.updateDynamic("nextPageToken")(nextPageToken.asInstanceOf[js.Any])
-    if (notificationChannels != null) __obj.updateDynamic("notificationChannels")(notificationChannels.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaListNotificationChannelsResponse]
   }
+  @scala.inline
+  implicit class SchemaListNotificationChannelsResponseOps[Self <: SchemaListNotificationChannelsResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNextPageToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextPageToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNotificationChannels(value: js.Array[SchemaNotificationChannel]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notificationChannels")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNotificationChannels: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notificationChannels")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

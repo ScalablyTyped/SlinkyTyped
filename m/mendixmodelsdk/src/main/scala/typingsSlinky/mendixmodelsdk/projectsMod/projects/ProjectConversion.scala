@@ -9,7 +9,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.mendixmodelsdk.structuresMod.IStructure because Already inherited
 - typingsSlinky.mendixmodelsdk.elementsMod.IAbstractElement because Already inherited
 - typingsSlinky.mendixmodelsdk.unitsMod.IAbstractUnit because Already inherited
@@ -28,8 +28,8 @@ class ProjectConversion protected () extends ModelUnit {
   val containerAsProject_FProjectConversion: IProject = js.native
   @JSName("model")
   var model_FProjectConversion: IModel = js.native
-  def containerAsProject(): Project = js.native
-  def markers(): IList[OneTimeConversionMarker] = js.native
+  def containerAsProject: Project = js.native
+  def markers: IList[OneTimeConversionMarker] = js.native
 }
 
 /* static members */

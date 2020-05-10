@@ -1,6 +1,6 @@
 package typingsSlinky.androiduix.android.widget.NumberPicker
 
-import typingsSlinky.androiduix.java.lang.Runnable
+import typingsSlinky.androiduix.java_.lang.Runnable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +12,5 @@ class SetSelectionCommand protected () extends Runnable {
   var _NumberPicker_this: typingsSlinky.androiduix.android.widget.NumberPicker = js.native
   var mSelectionEnd: js.Any = js.native
   var mSelectionStart: js.Any = js.native
-  /* CompleteClass */
-  override def run(): js.Any = js.native
 }
 

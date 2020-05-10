@@ -26,3 +26,43 @@ trait RuntimeLoadOptions extends js.Object {
   var enableEvents: js.UndefOr[Boolean] = js.native
 }
 
+object RuntimeLoadOptions {
+  @scala.inline
+  def apply(): RuntimeLoadOptions = {
+    val __obj = js.Dynamic.literal()
+    __obj.asInstanceOf[RuntimeLoadOptions]
+  }
+  @scala.inline
+  implicit class RuntimeLoadOptionsOps[Self <: RuntimeLoadOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def with$all(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$all")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without$all: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$all")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnableEvents(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableEvents")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnableEvents: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableEvents")(js.undefined)
+        ret
+    }
+  }
+  
+}
+

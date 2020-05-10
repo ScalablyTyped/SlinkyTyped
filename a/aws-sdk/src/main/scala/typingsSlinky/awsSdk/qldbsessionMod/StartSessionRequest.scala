@@ -16,8 +16,21 @@ object StartSessionRequest {
   @scala.inline
   def apply(LedgerName: LedgerName): StartSessionRequest = {
     val __obj = js.Dynamic.literal(LedgerName = LedgerName.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[StartSessionRequest]
   }
+  @scala.inline
+  implicit class StartSessionRequestOps[Self <: StartSessionRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLedgerName(value: LedgerName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LedgerName")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

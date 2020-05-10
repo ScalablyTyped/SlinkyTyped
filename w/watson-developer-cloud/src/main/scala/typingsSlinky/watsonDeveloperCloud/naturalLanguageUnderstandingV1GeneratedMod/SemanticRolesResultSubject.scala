@@ -5,27 +5,65 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** The extracted subject from the sentence. */
+@js.native
 trait SemanticRolesResultSubject extends js.Object {
   /** An array of extracted entities. */
-  var entities: js.UndefOr[js.Array[SemanticRolesEntity]] = js.undefined
+  var entities: js.UndefOr[js.Array[SemanticRolesEntity]] = js.native
   /** An array of extracted keywords. */
-  var keywords: js.UndefOr[js.Array[SemanticRolesKeyword]] = js.undefined
+  var keywords: js.UndefOr[js.Array[SemanticRolesKeyword]] = js.native
   /** Text that corresponds to the subject role. */
-  var text: js.UndefOr[String] = js.undefined
+  var text: js.UndefOr[String] = js.native
 }
 
 object SemanticRolesResultSubject {
   @scala.inline
-  def apply(
-    entities: js.Array[SemanticRolesEntity] = null,
-    keywords: js.Array[SemanticRolesKeyword] = null,
-    text: String = null
-  ): SemanticRolesResultSubject = {
+  def apply(): SemanticRolesResultSubject = {
     val __obj = js.Dynamic.literal()
-    if (entities != null) __obj.updateDynamic("entities")(entities.asInstanceOf[js.Any])
-    if (keywords != null) __obj.updateDynamic("keywords")(keywords.asInstanceOf[js.Any])
-    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
     __obj.asInstanceOf[SemanticRolesResultSubject]
   }
+  @scala.inline
+  implicit class SemanticRolesResultSubjectOps[Self <: SemanticRolesResultSubject] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEntities(value: js.Array[SemanticRolesEntity]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("entities")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEntities: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("entities")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKeywords(value: js.Array[SemanticRolesKeyword]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keywords")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKeywords: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keywords")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withText(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

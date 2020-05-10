@@ -16,5 +16,6 @@ import scala.scalajs.js.annotation._
   *
   * @param args The 'magic argument', mixing all the properties into thisanimation instance.
   */
+@js.native
 trait Animation extends js.Object
 

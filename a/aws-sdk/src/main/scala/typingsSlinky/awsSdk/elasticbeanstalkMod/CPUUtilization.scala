@@ -42,26 +42,113 @@ trait CPUUtilization extends js.Object {
 
 object CPUUtilization {
   @scala.inline
-  def apply(
-    IOWait: Int | Double = null,
-    IRQ: Int | Double = null,
-    Idle: Int | Double = null,
-    Nice: Int | Double = null,
-    Privileged: Int | Double = null,
-    SoftIRQ: Int | Double = null,
-    System: Int | Double = null,
-    User: Int | Double = null
-  ): CPUUtilization = {
+  def apply(): CPUUtilization = {
     val __obj = js.Dynamic.literal()
-    if (IOWait != null) __obj.updateDynamic("IOWait")(IOWait.asInstanceOf[js.Any])
-    if (IRQ != null) __obj.updateDynamic("IRQ")(IRQ.asInstanceOf[js.Any])
-    if (Idle != null) __obj.updateDynamic("Idle")(Idle.asInstanceOf[js.Any])
-    if (Nice != null) __obj.updateDynamic("Nice")(Nice.asInstanceOf[js.Any])
-    if (Privileged != null) __obj.updateDynamic("Privileged")(Privileged.asInstanceOf[js.Any])
-    if (SoftIRQ != null) __obj.updateDynamic("SoftIRQ")(SoftIRQ.asInstanceOf[js.Any])
-    if (System != null) __obj.updateDynamic("System")(System.asInstanceOf[js.Any])
-    if (User != null) __obj.updateDynamic("User")(User.asInstanceOf[js.Any])
     __obj.asInstanceOf[CPUUtilization]
   }
+  @scala.inline
+  implicit class CPUUtilizationOps[Self <: CPUUtilization] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIOWait(value: NullableDouble): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IOWait")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIOWait: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IOWait")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIRQ(value: NullableDouble): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IRQ")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIRQ: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IRQ")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIdle(value: NullableDouble): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Idle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIdle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Idle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNice(value: NullableDouble): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Nice")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNice: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Nice")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrivileged(value: NullableDouble): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Privileged")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrivileged: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Privileged")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSoftIRQ(value: NullableDouble): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SoftIRQ")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSoftIRQ: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SoftIRQ")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSystem(value: NullableDouble): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("System")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSystem: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("System")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUser(value: NullableDouble): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("User")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUser: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("User")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

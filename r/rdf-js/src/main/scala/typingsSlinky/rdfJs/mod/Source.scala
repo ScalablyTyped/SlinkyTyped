@@ -1,6 +1,5 @@
 package typingsSlinky.rdfJs.mod
 
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -21,31 +20,31 @@ trait Source[Q /* <: BaseQuad */] extends js.Object {
   def `match`(subject: Term, predicate: Term): Stream[Q] = js.native
   def `match`(subject: Term, predicate: Term, `object`: Term): Stream[Q] = js.native
   def `match`(subject: Term, predicate: Term, `object`: Term, graph: Term): Stream[Q] = js.native
-  def `match`(subject: Term, predicate: Term, `object`: Term, graph: RegExp): Stream[Q] = js.native
-  def `match`(subject: Term, predicate: Term, `object`: RegExp): Stream[Q] = js.native
-  def `match`(subject: Term, predicate: Term, `object`: RegExp, graph: Term): Stream[Q] = js.native
-  def `match`(subject: Term, predicate: Term, `object`: RegExp, graph: RegExp): Stream[Q] = js.native
-  def `match`(subject: Term, predicate: RegExp): Stream[Q] = js.native
-  def `match`(subject: Term, predicate: RegExp, `object`: Term): Stream[Q] = js.native
-  def `match`(subject: Term, predicate: RegExp, `object`: Term, graph: Term): Stream[Q] = js.native
-  def `match`(subject: Term, predicate: RegExp, `object`: Term, graph: RegExp): Stream[Q] = js.native
-  def `match`(subject: Term, predicate: RegExp, `object`: RegExp): Stream[Q] = js.native
-  def `match`(subject: Term, predicate: RegExp, `object`: RegExp, graph: Term): Stream[Q] = js.native
-  def `match`(subject: Term, predicate: RegExp, `object`: RegExp, graph: RegExp): Stream[Q] = js.native
-  def `match`(subject: RegExp): Stream[Q] = js.native
-  def `match`(subject: RegExp, predicate: Term): Stream[Q] = js.native
-  def `match`(subject: RegExp, predicate: Term, `object`: Term): Stream[Q] = js.native
-  def `match`(subject: RegExp, predicate: Term, `object`: Term, graph: Term): Stream[Q] = js.native
-  def `match`(subject: RegExp, predicate: Term, `object`: Term, graph: RegExp): Stream[Q] = js.native
-  def `match`(subject: RegExp, predicate: Term, `object`: RegExp): Stream[Q] = js.native
-  def `match`(subject: RegExp, predicate: Term, `object`: RegExp, graph: Term): Stream[Q] = js.native
-  def `match`(subject: RegExp, predicate: Term, `object`: RegExp, graph: RegExp): Stream[Q] = js.native
-  def `match`(subject: RegExp, predicate: RegExp): Stream[Q] = js.native
-  def `match`(subject: RegExp, predicate: RegExp, `object`: Term): Stream[Q] = js.native
-  def `match`(subject: RegExp, predicate: RegExp, `object`: Term, graph: Term): Stream[Q] = js.native
-  def `match`(subject: RegExp, predicate: RegExp, `object`: Term, graph: RegExp): Stream[Q] = js.native
-  def `match`(subject: RegExp, predicate: RegExp, `object`: RegExp): Stream[Q] = js.native
-  def `match`(subject: RegExp, predicate: RegExp, `object`: RegExp, graph: Term): Stream[Q] = js.native
-  def `match`(subject: RegExp, predicate: RegExp, `object`: RegExp, graph: RegExp): Stream[Q] = js.native
+  def `match`(subject: Term, predicate: Term, `object`: Term, graph: js.RegExp): Stream[Q] = js.native
+  def `match`(subject: Term, predicate: Term, `object`: js.RegExp): Stream[Q] = js.native
+  def `match`(subject: Term, predicate: Term, `object`: js.RegExp, graph: Term): Stream[Q] = js.native
+  def `match`(subject: Term, predicate: Term, `object`: js.RegExp, graph: js.RegExp): Stream[Q] = js.native
+  def `match`(subject: Term, predicate: js.RegExp): Stream[Q] = js.native
+  def `match`(subject: Term, predicate: js.RegExp, `object`: Term): Stream[Q] = js.native
+  def `match`(subject: Term, predicate: js.RegExp, `object`: Term, graph: Term): Stream[Q] = js.native
+  def `match`(subject: Term, predicate: js.RegExp, `object`: Term, graph: js.RegExp): Stream[Q] = js.native
+  def `match`(subject: Term, predicate: js.RegExp, `object`: js.RegExp): Stream[Q] = js.native
+  def `match`(subject: Term, predicate: js.RegExp, `object`: js.RegExp, graph: Term): Stream[Q] = js.native
+  def `match`(subject: Term, predicate: js.RegExp, `object`: js.RegExp, graph: js.RegExp): Stream[Q] = js.native
+  def `match`(subject: js.RegExp): Stream[Q] = js.native
+  def `match`(subject: js.RegExp, predicate: Term): Stream[Q] = js.native
+  def `match`(subject: js.RegExp, predicate: Term, `object`: Term): Stream[Q] = js.native
+  def `match`(subject: js.RegExp, predicate: Term, `object`: Term, graph: Term): Stream[Q] = js.native
+  def `match`(subject: js.RegExp, predicate: Term, `object`: Term, graph: js.RegExp): Stream[Q] = js.native
+  def `match`(subject: js.RegExp, predicate: Term, `object`: js.RegExp): Stream[Q] = js.native
+  def `match`(subject: js.RegExp, predicate: Term, `object`: js.RegExp, graph: Term): Stream[Q] = js.native
+  def `match`(subject: js.RegExp, predicate: Term, `object`: js.RegExp, graph: js.RegExp): Stream[Q] = js.native
+  def `match`(subject: js.RegExp, predicate: js.RegExp): Stream[Q] = js.native
+  def `match`(subject: js.RegExp, predicate: js.RegExp, `object`: Term): Stream[Q] = js.native
+  def `match`(subject: js.RegExp, predicate: js.RegExp, `object`: Term, graph: Term): Stream[Q] = js.native
+  def `match`(subject: js.RegExp, predicate: js.RegExp, `object`: Term, graph: js.RegExp): Stream[Q] = js.native
+  def `match`(subject: js.RegExp, predicate: js.RegExp, `object`: js.RegExp): Stream[Q] = js.native
+  def `match`(subject: js.RegExp, predicate: js.RegExp, `object`: js.RegExp, graph: Term): Stream[Q] = js.native
+  def `match`(subject: js.RegExp, predicate: js.RegExp, `object`: js.RegExp, graph: js.RegExp): Stream[Q] = js.native
 }
 

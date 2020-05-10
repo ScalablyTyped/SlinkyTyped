@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Options extends js.Object {
   /**
     * Specifies a custom file context.
@@ -29,14 +30,14 @@ trait Options extends js.Object {
     *
     * @default {@link https://webpack.js.org/configuration/entry-context/#context context}
     */
-  var context: js.UndefOr[String] = js.undefined
+  var context: js.UndefOr[String] = js.native
   /**
     * If `true`, emits a file (writes a file to the filesystem); otherwise, the loader will return a public URI
     * but will not emit the file. It is often useful to disable this option for server-side packages.
     *
     * @default true
     */
-  var emitFile: js.UndefOr[Boolean] = js.undefined
+  var emitFile: js.UndefOr[Boolean] = js.native
   /**
     * Specifies a custom filename template for the target file(s) using the query parameter name.
     *
@@ -84,7 +85,7 @@ trait Options extends js.Object {
     *
     * @default '[contenthash].[ext]'
     */
-  var name: js.UndefOr[String | (js.Function1[/* file */ String, String])] = js.undefined
+  var name: js.UndefOr[String | (js.Function1[/* file */ String, String])] = js.native
   /**
     * Specify a filesystem path where the target file(s) will be placed.
     *
@@ -118,7 +119,7 @@ trait Options extends js.Object {
     *
     * @default undefined
     */
-  var outputPath: js.UndefOr[String | BuildResourcePathFn] = js.undefined
+  var outputPath: js.UndefOr[String | BuildResourcePathFn] = js.native
   /**
     * Specifies a custom function to post-process the generated public path.
     *
@@ -143,7 +144,7 @@ trait Options extends js.Object {
     *
     * @default undefined
     */
-  var postTransformPublicPath: js.UndefOr[js.Function1[/* p */ String, String]] = js.undefined
+  var postTransformPublicPath: js.UndefOr[js.Function1[/* p */ String, String]] = js.native
   /**
     * Specifies a custom public path for the target file(s).
     *
@@ -177,7 +178,7 @@ trait Options extends js.Object {
     *
     * @default {@link https://webpack.js.org/api/module-variables/#__webpack_public_path__-webpack-specific __webpack_public_path__}
     */
-  var publicPath: js.UndefOr[String | BuildResourcePathFn] = js.undefined
+  var publicPath: js.UndefOr[String | BuildResourcePathFn] = js.native
   /**
     * Specifies a Regular Expression to one or many parts of the target file path.
     * The capture groups can be reused in the name property using [N]
@@ -212,29 +213,124 @@ trait Options extends js.Object {
     *
     * @default undefined
     */
-  var regExp: js.UndefOr[js.RegExp] = js.undefined
+  var regExp: js.UndefOr[js.RegExp] = js.native
 }
 
 object Options {
   @scala.inline
-  def apply(
-    context: String = null,
-    emitFile: js.UndefOr[Boolean] = js.undefined,
-    name: String | (js.Function1[/* file */ String, String]) = null,
-    outputPath: String | BuildResourcePathFn = null,
-    postTransformPublicPath: /* p */ String => String = null,
-    publicPath: String | BuildResourcePathFn = null,
-    regExp: js.RegExp = null
-  ): Options = {
+  def apply(): Options = {
     val __obj = js.Dynamic.literal()
-    if (context != null) __obj.updateDynamic("context")(context.asInstanceOf[js.Any])
-    if (!js.isUndefined(emitFile)) __obj.updateDynamic("emitFile")(emitFile.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (outputPath != null) __obj.updateDynamic("outputPath")(outputPath.asInstanceOf[js.Any])
-    if (postTransformPublicPath != null) __obj.updateDynamic("postTransformPublicPath")(js.Any.fromFunction1(postTransformPublicPath))
-    if (publicPath != null) __obj.updateDynamic("publicPath")(publicPath.asInstanceOf[js.Any])
-    if (regExp != null) __obj.updateDynamic("regExp")(regExp.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
+  @scala.inline
+  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withContext(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContext: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEmitFile(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("emitFile")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEmitFile: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("emitFile")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNameFunction1(value: /* file */ String => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withName(value: String | (js.Function1[/* file */ String, String])): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOutputPathFunction3(value: (/* url */ String, /* resourcePath */ String, /* context */ String) => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outputPath")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withOutputPath(value: String | BuildResourcePathFn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outputPath")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOutputPath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outputPath")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPostTransformPublicPath(value: /* p */ String => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("postTransformPublicPath")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutPostTransformPublicPath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("postTransformPublicPath")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPublicPathFunction3(value: (/* url */ String, /* resourcePath */ String, /* context */ String) => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("publicPath")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withPublicPath(value: String | BuildResourcePathFn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("publicPath")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPublicPath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("publicPath")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRegExp(value: js.RegExp): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("regExp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRegExp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("regExp")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

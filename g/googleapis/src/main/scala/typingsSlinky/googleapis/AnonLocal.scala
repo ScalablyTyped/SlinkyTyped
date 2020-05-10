@@ -12,11 +12,41 @@ trait AnonLocal extends js.Object {
 
 object AnonLocal {
   @scala.inline
-  def apply(effective: js.Array[String] = null, local: js.Array[String] = null): AnonLocal = {
+  def apply(): AnonLocal = {
     val __obj = js.Dynamic.literal()
-    if (effective != null) __obj.updateDynamic("effective")(effective.asInstanceOf[js.Any])
-    if (local != null) __obj.updateDynamic("local")(local.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonLocal]
   }
+  @scala.inline
+  implicit class AnonLocalOps[Self <: AnonLocal] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEffective(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("effective")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEffective: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("effective")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocal(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("local")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocal: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("local")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

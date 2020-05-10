@@ -2,7 +2,6 @@ package typingsSlinky.cypress.sinonMod
 
 import typingsSlinky.cypress.AnonCreate
 import typingsSlinky.cypress.PartialSinonSandboxConfig
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -42,7 +41,7 @@ trait SinonApi extends js.Object {
   /**
     * Requires the value to be a string and match the given regular expression.
     */
-  def `match`(expr: RegExp): SinonMatcher = js.native
+  def `match`(expr: js.RegExp): SinonMatcher = js.native
   /**
     * Requires the value to be not null or undefined and have at least the same properties as expectation.
     * This supports nested matchers.

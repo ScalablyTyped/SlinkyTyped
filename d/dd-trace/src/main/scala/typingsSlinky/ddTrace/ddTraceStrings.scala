@@ -21,9 +21,6 @@ object ddTraceStrings {
   sealed trait async_hooks extends js.Object
   
   @js.native
-  sealed trait binary extends js.Object
-  
-  @js.native
   sealed trait bluebird extends js.Object
   
   @js.native
@@ -94,9 +91,6 @@ object ddTraceStrings {
   
   @js.native
   sealed trait httpDoturl extends js.Object
-  
-  @js.native
-  sealed trait http_headers extends js.Object
   
   @js.native
   sealed trait ioredis extends js.Object
@@ -192,9 +186,6 @@ object ddTraceStrings {
   sealed trait tedious extends js.Object
   
   @js.native
-  sealed trait text_map extends js.Object
-  
-  @js.native
   sealed trait web extends js.Object
   
   @js.native
@@ -213,8 +204,6 @@ object ddTraceStrings {
   def amqplib: amqplib = "amqplib".asInstanceOf[amqplib]
   @scala.inline
   def async_hooks: async_hooks = "async_hooks".asInstanceOf[async_hooks]
-  @scala.inline
-  def binary: binary = "binary".asInstanceOf[binary]
   @scala.inline
   def bluebird: bluebird = "bluebird".asInstanceOf[bluebird]
   @scala.inline
@@ -263,8 +252,6 @@ object ddTraceStrings {
   def httpDotstatus_code: httpDotstatus_code = "http.status_code".asInstanceOf[httpDotstatus_code]
   @scala.inline
   def httpDoturl: httpDoturl = "http.url".asInstanceOf[httpDoturl]
-  @scala.inline
-  def http_headers: http_headers = "http_headers".asInstanceOf[http_headers]
   @scala.inline
   def ioredis: ioredis = "ioredis".asInstanceOf[ioredis]
   @scala.inline
@@ -327,8 +314,6 @@ object ddTraceStrings {
   def spanDottype: spanDottype = "span.type".asInstanceOf[spanDottype]
   @scala.inline
   def tedious: tedious = "tedious".asInstanceOf[tedious]
-  @scala.inline
-  def text_map: text_map = "text_map".asInstanceOf[text_map]
   @scala.inline
   def web: web = "web".asInstanceOf[web]
   @scala.inline

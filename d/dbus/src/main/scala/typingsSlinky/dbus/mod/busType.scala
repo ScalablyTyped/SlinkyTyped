@@ -12,10 +12,8 @@ trait busType extends js.Object
 
 object busType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def session: typingsSlinky.dbus.dbusStrings.session = "session".asInstanceOf[typingsSlinky.dbus.dbusStrings.session]
   @scala.inline
-  def session: typingsSlinky.dbus.dbusStrings.session = this.cast("session")
-  @scala.inline
-  def system: typingsSlinky.dbus.dbusStrings.system = this.cast("system")
+  def system: typingsSlinky.dbus.dbusStrings.system = "system".asInstanceOf[typingsSlinky.dbus.dbusStrings.system]
 }
 

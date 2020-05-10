@@ -9,16 +9,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Dom extends js.Object {
-  def addClass(el: Element, className: String): Unit
-  def forceRedraw(el: HTMLElement): Unit
-  def getStyleAttributeAsNumber(el: HTMLElement, attr: String): Double
-  def hasClass(el: Element, className: String): Boolean
-  def isDescendant(parent: Node, child: Node): Boolean
-  def offset(el: Element): AnonLeft
-  def removeClass(el: Element, className: String): Unit
-  def toggleClass(el: Element, className: String): Unit
-  def withoutTransition(el: HTMLElement, callback: js.Function0[Unit]): Unit
+  def addClass(el: Element, className: String): Unit = js.native
+  def forceRedraw(el: HTMLElement): Unit = js.native
+  def getStyleAttributeAsNumber(el: HTMLElement, attr: String): Double = js.native
+  def hasClass(el: Element, className: String): Boolean = js.native
+  def isDescendant(parent: Node, child: Node): Boolean = js.native
+  def offset(el: Element): AnonLeft = js.native
+  def removeClass(el: Element, className: String): Unit = js.native
+  def toggleClass(el: Element, className: String): Unit = js.native
+  def withoutTransition(el: HTMLElement, callback: js.Function0[Unit]): Unit = js.native
 }
 
 @JSGlobal("__MaterialUI.Utils.Dom")

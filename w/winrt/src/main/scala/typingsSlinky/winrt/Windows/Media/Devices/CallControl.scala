@@ -6,30 +6,7 @@ import scala.scalajs.js.annotation._
 
 @JSGlobal("Windows.Media.Devices.CallControl")
 @js.native
-class CallControl () extends ICallControl {
-  /* CompleteClass */
-  override var hasRinger: Boolean = js.native
-  /* CompleteClass */
-  override var onanswerrequested: js.Any = js.native
-  /* CompleteClass */
-  override var onaudiotransferrequested: js.Any = js.native
-  /* CompleteClass */
-  override var ondialrequested: js.Any = js.native
-  /* CompleteClass */
-  override var onhanguprequested: js.Any = js.native
-  /* CompleteClass */
-  override var onkeypadpressed: js.Any = js.native
-  /* CompleteClass */
-  override var onredialrequested: js.Any = js.native
-  /* CompleteClass */
-  override def endCall(callToken: Double): Unit = js.native
-  /* CompleteClass */
-  override def indicateActiveCall(callToken: Double): Unit = js.native
-  /* CompleteClass */
-  override def indicateNewIncomingCall(enableRinger: Boolean, callerId: String): Double = js.native
-  /* CompleteClass */
-  override def indicateNewOutgoingCall(): Double = js.native
-}
+class CallControl () extends ICallControl
 
 /* static members */
 @JSGlobal("Windows.Media.Devices.CallControl")

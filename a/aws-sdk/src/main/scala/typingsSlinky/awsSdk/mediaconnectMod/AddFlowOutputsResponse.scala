@@ -18,11 +18,41 @@ trait AddFlowOutputsResponse extends js.Object {
 
 object AddFlowOutputsResponse {
   @scala.inline
-  def apply(FlowArn: string = null, Outputs: listOfOutput = null): AddFlowOutputsResponse = {
+  def apply(): AddFlowOutputsResponse = {
     val __obj = js.Dynamic.literal()
-    if (FlowArn != null) __obj.updateDynamic("FlowArn")(FlowArn.asInstanceOf[js.Any])
-    if (Outputs != null) __obj.updateDynamic("Outputs")(Outputs.asInstanceOf[js.Any])
     __obj.asInstanceOf[AddFlowOutputsResponse]
   }
+  @scala.inline
+  implicit class AddFlowOutputsResponseOps[Self <: AddFlowOutputsResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFlowArn(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FlowArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFlowArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FlowArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOutputs(value: listOfOutput): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Outputs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOutputs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Outputs")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -47,3 +47,79 @@ trait ChartPivotOptionsLoadOptions extends js.Object {
   var showValueFieldButtons: js.UndefOr[Boolean] = js.native
 }
 
+object ChartPivotOptionsLoadOptions {
+  @scala.inline
+  def apply(): ChartPivotOptionsLoadOptions = {
+    val __obj = js.Dynamic.literal()
+    __obj.asInstanceOf[ChartPivotOptionsLoadOptions]
+  }
+  @scala.inline
+  implicit class ChartPivotOptionsLoadOptionsOps[Self <: ChartPivotOptionsLoadOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def with$all(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$all")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without$all: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$all")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowAxisFieldButtons(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showAxisFieldButtons")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowAxisFieldButtons: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showAxisFieldButtons")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowLegendFieldButtons(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showLegendFieldButtons")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowLegendFieldButtons: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showLegendFieldButtons")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowReportFilterFieldButtons(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showReportFilterFieldButtons")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowReportFilterFieldButtons: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showReportFilterFieldButtons")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowValueFieldButtons(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showValueFieldButtons")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowValueFieldButtons: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showValueFieldButtons")(js.undefined)
+        ret
+    }
+  }
+  
+}
+

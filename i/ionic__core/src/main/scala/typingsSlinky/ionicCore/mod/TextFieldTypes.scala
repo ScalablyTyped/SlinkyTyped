@@ -19,24 +19,22 @@ trait TextFieldTypes extends js.Object
 
 object TextFieldTypes {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def date: typingsSlinky.ionicCore.ionicCoreStrings.date = "date".asInstanceOf[typingsSlinky.ionicCore.ionicCoreStrings.date]
   @scala.inline
-  def date: typingsSlinky.ionicCore.ionicCoreStrings.date = this.cast("date")
+  def email: typingsSlinky.ionicCore.ionicCoreStrings.email = "email".asInstanceOf[typingsSlinky.ionicCore.ionicCoreStrings.email]
   @scala.inline
-  def email: typingsSlinky.ionicCore.ionicCoreStrings.email = this.cast("email")
+  def number: typingsSlinky.ionicCore.ionicCoreStrings.number = "number".asInstanceOf[typingsSlinky.ionicCore.ionicCoreStrings.number]
   @scala.inline
-  def number: typingsSlinky.ionicCore.ionicCoreStrings.number = this.cast("number")
+  def password: typingsSlinky.ionicCore.ionicCoreStrings.password = "password".asInstanceOf[typingsSlinky.ionicCore.ionicCoreStrings.password]
   @scala.inline
-  def password: typingsSlinky.ionicCore.ionicCoreStrings.password = this.cast("password")
+  def search: typingsSlinky.ionicCore.ionicCoreStrings.search = "search".asInstanceOf[typingsSlinky.ionicCore.ionicCoreStrings.search]
   @scala.inline
-  def search: typingsSlinky.ionicCore.ionicCoreStrings.search = this.cast("search")
+  def tel: typingsSlinky.ionicCore.ionicCoreStrings.tel = "tel".asInstanceOf[typingsSlinky.ionicCore.ionicCoreStrings.tel]
   @scala.inline
-  def tel: typingsSlinky.ionicCore.ionicCoreStrings.tel = this.cast("tel")
+  def text: typingsSlinky.ionicCore.ionicCoreStrings.text = "text".asInstanceOf[typingsSlinky.ionicCore.ionicCoreStrings.text]
   @scala.inline
-  def text: typingsSlinky.ionicCore.ionicCoreStrings.text = this.cast("text")
+  def time: typingsSlinky.ionicCore.ionicCoreStrings.time = "time".asInstanceOf[typingsSlinky.ionicCore.ionicCoreStrings.time]
   @scala.inline
-  def time: typingsSlinky.ionicCore.ionicCoreStrings.time = this.cast("time")
-  @scala.inline
-  def url: typingsSlinky.ionicCore.ionicCoreStrings.url = this.cast("url")
+  def url: typingsSlinky.ionicCore.ionicCoreStrings.url = "url".asInstanceOf[typingsSlinky.ionicCore.ionicCoreStrings.url]
 }
 

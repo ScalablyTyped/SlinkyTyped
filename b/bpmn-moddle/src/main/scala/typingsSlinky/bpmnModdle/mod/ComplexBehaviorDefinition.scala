@@ -10,3 +10,37 @@ trait ComplexBehaviorDefinition extends BaseElement {
   var event: ImplicitThrowEvent = js.native
 }
 
+object ComplexBehaviorDefinition {
+  @scala.inline
+  def apply(
+    $parent: TypeDerived,
+    $type: ElementType,
+    condition: FormalExpression,
+    event: ImplicitThrowEvent,
+    id: String
+  ): ComplexBehaviorDefinition = {
+    val __obj = js.Dynamic.literal($parent = $parent.asInstanceOf[js.Any], $type = $type.asInstanceOf[js.Any], condition = condition.asInstanceOf[js.Any], event = event.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ComplexBehaviorDefinition]
+  }
+  @scala.inline
+  implicit class ComplexBehaviorDefinitionOps[Self <: ComplexBehaviorDefinition] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCondition(value: FormalExpression): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("condition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEvent(value: ImplicitThrowEvent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("event")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
+

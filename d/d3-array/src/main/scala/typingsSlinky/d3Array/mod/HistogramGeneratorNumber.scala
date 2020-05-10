@@ -1,7 +1,6 @@
 package typingsSlinky.d3Array.mod
 
 import typingsSlinky.std.ArrayLike
-import typingsSlinky.std.Iterable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +9,7 @@ import scala.scalajs.js.annotation._
 trait HistogramGeneratorNumber[Datum, Value /* <: js.UndefOr[Double] */] extends HistogramCommon[Datum, Value] {
   def domain(): js.Function1[/* values */ js.Iterable[Value], js.Tuple2[js.UndefOr[Double], js.UndefOr[Double]]] = js.native
   def domain(
-    domainAccessor: js.Function1[/* values */ Iterable[Value], js.Tuple2[js.UndefOr[Double], js.UndefOr[Double]]]
+    domainAccessor: js.Function1[/* values */ js.Iterable[Value], js.Tuple2[js.UndefOr[Double], js.UndefOr[Double]]]
   ): this.type = js.native
   def domain(domain: js.Tuple2[Double, Double]): this.type = js.native
   def thresholds(): ThresholdCountGenerator[Value] | ThresholdNumberArrayGenerator[Value] = js.native

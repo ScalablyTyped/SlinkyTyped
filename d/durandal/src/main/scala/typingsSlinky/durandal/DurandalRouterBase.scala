@@ -3,7 +3,6 @@ package typingsSlinky.durandal
 import typingsSlinky.knockout.KnockoutComputed
 import typingsSlinky.knockout.KnockoutObservable
 import typingsSlinky.knockout.KnockoutObservableArray
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -170,14 +169,14 @@ trait DurandalRouterBase[T] extends DurandalEventSupport[T] {
     * @param {RouteConfiguration} config The route's configuration.
     * @chainable
     */
-  def map(route: RegExp, config: DurandalRouteConfiguration): T = js.native
+  def map(route: js.RegExp, config: DurandalRouteConfiguration): T = js.native
   /**
     * Maps route patterns to modules.
     * @param {RegExp} route A route pattern.
     * @param {string} moduleId The module id to map the route to.
     * @chainable
     */
-  def map(route: RegExp, moduleId: String): T = js.native
+  def map(route: js.RegExp, moduleId: String): T = js.native
   /**
     * Configures the router to map unknown routes to modules at the same path.
     * @chainable

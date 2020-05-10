@@ -14,10 +14,29 @@ trait PutOrganizationConfigRuleResponse extends js.Object {
 
 object PutOrganizationConfigRuleResponse {
   @scala.inline
-  def apply(OrganizationConfigRuleArn: StringWithCharLimit256 = null): PutOrganizationConfigRuleResponse = {
+  def apply(): PutOrganizationConfigRuleResponse = {
     val __obj = js.Dynamic.literal()
-    if (OrganizationConfigRuleArn != null) __obj.updateDynamic("OrganizationConfigRuleArn")(OrganizationConfigRuleArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[PutOrganizationConfigRuleResponse]
   }
+  @scala.inline
+  implicit class PutOrganizationConfigRuleResponseOps[Self <: PutOrganizationConfigRuleResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOrganizationConfigRuleArn(value: StringWithCharLimit256): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OrganizationConfigRuleArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOrganizationConfigRuleArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OrganizationConfigRuleArn")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

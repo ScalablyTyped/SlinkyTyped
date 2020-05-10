@@ -7,120 +7,232 @@ import scala.scalajs.js.annotation._
 /**
   * A grouping of people or organizations with a common purpose
   */
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typingsSlinky.fhir.fhir.Resource because Already inherited */ trait Organization extends DomainResource {
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
+- typingsSlinky.fhir.fhir.Resource because Already inherited */ @js.native
+trait Organization extends DomainResource {
   /**
     * Contains extended information for property 'active'.
     */
-  var _active: js.UndefOr[Element] = js.undefined
+  var _active: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'alias'.
     */
-  var _alias: js.UndefOr[js.Array[Element]] = js.undefined
+  var _alias: js.UndefOr[js.Array[Element]] = js.native
   /**
     * Contains extended information for property 'name'.
     */
-  var _name: js.UndefOr[Element] = js.undefined
+  var _name: js.UndefOr[Element] = js.native
   /**
     * Whether the organization's record is still in active use
     */
-  var active: js.UndefOr[Boolean] = js.undefined
+  var active: js.UndefOr[Boolean] = js.native
   /**
     * An address for the organization
     */
-  var address: js.UndefOr[js.Array[Address]] = js.undefined
+  var address: js.UndefOr[js.Array[Address]] = js.native
   /**
     * A list of alternate names that the organization is known as, or was known as in the past
     */
-  var alias: js.UndefOr[js.Array[String]] = js.undefined
+  var alias: js.UndefOr[js.Array[String]] = js.native
   /**
     * Contact for the organization for a certain purpose
     */
-  var contact: js.UndefOr[js.Array[OrganizationContact]] = js.undefined
+  var contact: js.UndefOr[js.Array[OrganizationContact]] = js.native
   /**
     * Technical endpoints providing access to services operated for the organization
     */
-  var endpoint: js.UndefOr[js.Array[Reference]] = js.undefined
+  var endpoint: js.UndefOr[js.Array[Reference]] = js.native
   /**
     * Identifies this organization  across multiple systems
     */
-  var identifier: js.UndefOr[js.Array[Identifier]] = js.undefined
+  var identifier: js.UndefOr[js.Array[Identifier]] = js.native
   /**
     * Name used for the organization
     */
-  var name: js.UndefOr[String] = js.undefined
+  var name: js.UndefOr[String] = js.native
   /**
     * The organization of which this organization forms a part
     */
-  var partOf: js.UndefOr[Reference] = js.undefined
+  var partOf: js.UndefOr[Reference] = js.native
   /**
     * A contact detail for the organization
     */
-  var telecom: js.UndefOr[js.Array[ContactPoint]] = js.undefined
+  var telecom: js.UndefOr[js.Array[ContactPoint]] = js.native
   /**
     * Kind of organization
     */
-  var `type`: js.UndefOr[js.Array[CodeableConcept]] = js.undefined
+  var `type`: js.UndefOr[js.Array[CodeableConcept]] = js.native
 }
 
 object Organization {
   @scala.inline
-  def apply(
-    _active: Element = null,
-    _alias: js.Array[Element] = null,
-    _id: Element = null,
-    _implicitRules: Element = null,
-    _language: Element = null,
-    _name: Element = null,
-    _resourceType: Element = null,
-    active: js.UndefOr[Boolean] = js.undefined,
-    address: js.Array[Address] = null,
-    alias: js.Array[String] = null,
-    contact: js.Array[OrganizationContact] = null,
-    contained: js.Array[Resource] = null,
-    endpoint: js.Array[Reference] = null,
-    extension: js.Array[Extension] = null,
-    id: id = null,
-    identifier: js.Array[Identifier] = null,
-    implicitRules: uri = null,
-    language: code = null,
-    meta: Meta = null,
-    modifierExtension: js.Array[Extension] = null,
-    name: String = null,
-    partOf: Reference = null,
-    resourceType: code = null,
-    telecom: js.Array[ContactPoint] = null,
-    text: Narrative = null,
-    `type`: js.Array[CodeableConcept] = null
-  ): Organization = {
+  def apply(): Organization = {
     val __obj = js.Dynamic.literal()
-    if (_active != null) __obj.updateDynamic("_active")(_active.asInstanceOf[js.Any])
-    if (_alias != null) __obj.updateDynamic("_alias")(_alias.asInstanceOf[js.Any])
-    if (_id != null) __obj.updateDynamic("_id")(_id.asInstanceOf[js.Any])
-    if (_implicitRules != null) __obj.updateDynamic("_implicitRules")(_implicitRules.asInstanceOf[js.Any])
-    if (_language != null) __obj.updateDynamic("_language")(_language.asInstanceOf[js.Any])
-    if (_name != null) __obj.updateDynamic("_name")(_name.asInstanceOf[js.Any])
-    if (_resourceType != null) __obj.updateDynamic("_resourceType")(_resourceType.asInstanceOf[js.Any])
-    if (!js.isUndefined(active)) __obj.updateDynamic("active")(active.asInstanceOf[js.Any])
-    if (address != null) __obj.updateDynamic("address")(address.asInstanceOf[js.Any])
-    if (alias != null) __obj.updateDynamic("alias")(alias.asInstanceOf[js.Any])
-    if (contact != null) __obj.updateDynamic("contact")(contact.asInstanceOf[js.Any])
-    if (contained != null) __obj.updateDynamic("contained")(contained.asInstanceOf[js.Any])
-    if (endpoint != null) __obj.updateDynamic("endpoint")(endpoint.asInstanceOf[js.Any])
-    if (extension != null) __obj.updateDynamic("extension")(extension.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (identifier != null) __obj.updateDynamic("identifier")(identifier.asInstanceOf[js.Any])
-    if (implicitRules != null) __obj.updateDynamic("implicitRules")(implicitRules.asInstanceOf[js.Any])
-    if (language != null) __obj.updateDynamic("language")(language.asInstanceOf[js.Any])
-    if (meta != null) __obj.updateDynamic("meta")(meta.asInstanceOf[js.Any])
-    if (modifierExtension != null) __obj.updateDynamic("modifierExtension")(modifierExtension.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (partOf != null) __obj.updateDynamic("partOf")(partOf.asInstanceOf[js.Any])
-    if (resourceType != null) __obj.updateDynamic("resourceType")(resourceType.asInstanceOf[js.Any])
-    if (telecom != null) __obj.updateDynamic("telecom")(telecom.asInstanceOf[js.Any])
-    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Organization]
   }
+  @scala.inline
+  implicit class OrganizationOps[Self <: Organization] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def with_active(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_active")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_active: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_active")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_alias(value: js.Array[Element]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_alias")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_alias: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_alias")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_name(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_name: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withActive(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("active")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutActive: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("active")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAddress(value: js.Array[Address]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("address")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAddress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("address")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAlias(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alias")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlias: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alias")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContact(value: js.Array[OrganizationContact]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contact")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContact: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contact")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEndpoint(value: js.Array[Reference]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endpoint")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEndpoint: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endpoint")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIdentifier(value: js.Array[Identifier]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("identifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIdentifier: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("identifier")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPartOf(value: Reference): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("partOf")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPartOf: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("partOf")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTelecom(value: js.Array[ContactPoint]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("telecom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTelecom: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("telecom")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: js.Array[CodeableConcept]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

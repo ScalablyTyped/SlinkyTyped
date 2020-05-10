@@ -20,8 +20,27 @@ object CreateSAMLProviderRequest {
   @scala.inline
   def apply(Name: SAMLProviderNameType, SAMLMetadataDocument: SAMLMetadataDocumentType): CreateSAMLProviderRequest = {
     val __obj = js.Dynamic.literal(Name = Name.asInstanceOf[js.Any], SAMLMetadataDocument = SAMLMetadataDocument.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[CreateSAMLProviderRequest]
   }
+  @scala.inline
+  implicit class CreateSAMLProviderRequestOps[Self <: CreateSAMLProviderRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withName(value: SAMLProviderNameType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSAMLMetadataDocument(value: SAMLMetadataDocumentType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SAMLMetadataDocument")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

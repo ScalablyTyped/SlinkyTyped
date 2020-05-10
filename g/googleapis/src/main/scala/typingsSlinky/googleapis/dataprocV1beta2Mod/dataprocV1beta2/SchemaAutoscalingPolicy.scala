@@ -35,20 +35,77 @@ trait SchemaAutoscalingPolicy extends js.Object {
 
 object SchemaAutoscalingPolicy {
   @scala.inline
-  def apply(
-    basicAlgorithm: SchemaBasicAutoscalingAlgorithm = null,
-    id: String = null,
-    name: String = null,
-    secondaryWorkerConfig: SchemaInstanceGroupAutoscalingPolicyConfig = null,
-    workerConfig: SchemaInstanceGroupAutoscalingPolicyConfig = null
-  ): SchemaAutoscalingPolicy = {
+  def apply(): SchemaAutoscalingPolicy = {
     val __obj = js.Dynamic.literal()
-    if (basicAlgorithm != null) __obj.updateDynamic("basicAlgorithm")(basicAlgorithm.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (secondaryWorkerConfig != null) __obj.updateDynamic("secondaryWorkerConfig")(secondaryWorkerConfig.asInstanceOf[js.Any])
-    if (workerConfig != null) __obj.updateDynamic("workerConfig")(workerConfig.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAutoscalingPolicy]
   }
+  @scala.inline
+  implicit class SchemaAutoscalingPolicyOps[Self <: SchemaAutoscalingPolicy] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBasicAlgorithm(value: SchemaBasicAutoscalingAlgorithm): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("basicAlgorithm")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBasicAlgorithm: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("basicAlgorithm")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSecondaryWorkerConfig(value: SchemaInstanceGroupAutoscalingPolicyConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("secondaryWorkerConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSecondaryWorkerConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("secondaryWorkerConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWorkerConfig(value: SchemaInstanceGroupAutoscalingPolicyConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workerConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWorkerConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workerConfig")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -450,7 +450,7 @@ object ^ extends js.Object {
   var scrollX: Double = js.native
   var scrollY: Double = js.native
   var scrollbars: BarProp = js.native
-  var self: Window_ with (/* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof globalThis */ js.Any) = js.native
+  var self: Window_ with (/* globalThis */ js.Any) = js.native
   var sessionStorage: org.scalajs.dom.raw.Storage = js.native
   var speechSynthesis: SpeechSynthesis_ = js.native
   var status: java.lang.String = js.native
@@ -458,6 +458,6 @@ object ^ extends js.Object {
   var styleMedia: StyleMedia_ = js.native
   var toolbar: BarProp = js.native
   var top: Window_ = js.native
-  var window: Window_ with (/* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof globalThis */ js.Any) = js.native
+  var window: Window_ with (/* globalThis */ js.Any) = js.native
 }
 

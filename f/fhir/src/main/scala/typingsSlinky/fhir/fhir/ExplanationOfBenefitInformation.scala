@@ -7,103 +7,219 @@ import scala.scalajs.js.annotation._
 /**
   * Exceptions, special considerations, the condition, situation, prior or concurrent issues
   */
+@js.native
 trait ExplanationOfBenefitInformation extends BackboneElement {
   /**
     * Contains extended information for property 'sequence'.
     */
-  var _sequence: js.UndefOr[Element] = js.undefined
+  var _sequence: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'timingDate'.
     */
-  var _timingDate: js.UndefOr[Element] = js.undefined
+  var _timingDate: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'valueString'.
     */
-  var _valueString: js.UndefOr[Element] = js.undefined
+  var _valueString: js.UndefOr[Element] = js.native
   /**
     * General class of information
     */
-  var category: CodeableConcept
+  var category: CodeableConcept = js.native
   /**
     * Type of information
     */
-  var code: js.UndefOr[CodeableConcept] = js.undefined
+  var code: js.UndefOr[CodeableConcept] = js.native
   /**
     * Reason associated with the information
     */
-  var reason: js.UndefOr[Coding] = js.undefined
+  var reason: js.UndefOr[Coding] = js.native
   /**
     * Information instance identifier
     */
-  var sequence: positiveInt
+  var sequence: positiveInt = js.native
   /**
     * When it occurred
     */
-  var timingDate: js.UndefOr[date] = js.undefined
+  var timingDate: js.UndefOr[date] = js.native
   /**
     * When it occurred
     */
-  var timingPeriod: js.UndefOr[Period] = js.undefined
+  var timingPeriod: js.UndefOr[Period] = js.native
   /**
     * Additional Data or supporting information
     */
-  var valueAttachment: js.UndefOr[Attachment] = js.undefined
+  var valueAttachment: js.UndefOr[Attachment] = js.native
   /**
     * Additional Data or supporting information
     */
-  var valueQuantity: js.UndefOr[Quantity] = js.undefined
+  var valueQuantity: js.UndefOr[Quantity] = js.native
   /**
     * Additional Data or supporting information
     */
-  var valueReference: js.UndefOr[Reference] = js.undefined
+  var valueReference: js.UndefOr[Reference] = js.native
   /**
     * Additional Data or supporting information
     */
-  var valueString: js.UndefOr[String] = js.undefined
+  var valueString: js.UndefOr[String] = js.native
 }
 
 object ExplanationOfBenefitInformation {
   @scala.inline
-  def apply(
-    category: CodeableConcept,
-    sequence: positiveInt,
-    _fhir_comments: js.Array[Element] = null,
-    _id: Element = null,
-    _sequence: Element = null,
-    _timingDate: Element = null,
-    _valueString: Element = null,
-    code: CodeableConcept = null,
-    extension: js.Array[Extension] = null,
-    fhir_comments: js.Array[String] = null,
-    id: String = null,
-    modifierExtension: js.Array[Extension] = null,
-    reason: Coding = null,
-    timingDate: date = null,
-    timingPeriod: Period = null,
-    valueAttachment: Attachment = null,
-    valueQuantity: Quantity = null,
-    valueReference: Reference = null,
-    valueString: String = null
-  ): ExplanationOfBenefitInformation = {
+  def apply(category: CodeableConcept, sequence: positiveInt): ExplanationOfBenefitInformation = {
     val __obj = js.Dynamic.literal(category = category.asInstanceOf[js.Any], sequence = sequence.asInstanceOf[js.Any])
-    if (_fhir_comments != null) __obj.updateDynamic("_fhir_comments")(_fhir_comments.asInstanceOf[js.Any])
-    if (_id != null) __obj.updateDynamic("_id")(_id.asInstanceOf[js.Any])
-    if (_sequence != null) __obj.updateDynamic("_sequence")(_sequence.asInstanceOf[js.Any])
-    if (_timingDate != null) __obj.updateDynamic("_timingDate")(_timingDate.asInstanceOf[js.Any])
-    if (_valueString != null) __obj.updateDynamic("_valueString")(_valueString.asInstanceOf[js.Any])
-    if (code != null) __obj.updateDynamic("code")(code.asInstanceOf[js.Any])
-    if (extension != null) __obj.updateDynamic("extension")(extension.asInstanceOf[js.Any])
-    if (fhir_comments != null) __obj.updateDynamic("fhir_comments")(fhir_comments.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (modifierExtension != null) __obj.updateDynamic("modifierExtension")(modifierExtension.asInstanceOf[js.Any])
-    if (reason != null) __obj.updateDynamic("reason")(reason.asInstanceOf[js.Any])
-    if (timingDate != null) __obj.updateDynamic("timingDate")(timingDate.asInstanceOf[js.Any])
-    if (timingPeriod != null) __obj.updateDynamic("timingPeriod")(timingPeriod.asInstanceOf[js.Any])
-    if (valueAttachment != null) __obj.updateDynamic("valueAttachment")(valueAttachment.asInstanceOf[js.Any])
-    if (valueQuantity != null) __obj.updateDynamic("valueQuantity")(valueQuantity.asInstanceOf[js.Any])
-    if (valueReference != null) __obj.updateDynamic("valueReference")(valueReference.asInstanceOf[js.Any])
-    if (valueString != null) __obj.updateDynamic("valueString")(valueString.asInstanceOf[js.Any])
     __obj.asInstanceOf[ExplanationOfBenefitInformation]
   }
+  @scala.inline
+  implicit class ExplanationOfBenefitInformationOps[Self <: ExplanationOfBenefitInformation] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCategory(value: CodeableConcept): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("category")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSequence(value: positiveInt): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sequence")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_sequence(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_sequence")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_sequence: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_sequence")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_timingDate(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_timingDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_timingDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_timingDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_valueString(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_valueString")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_valueString: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_valueString")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCode(value: CodeableConcept): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("code")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("code")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReason(value: Coding): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reason")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReason: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reason")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimingDate(value: date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timingDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimingDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timingDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimingPeriod(value: Period): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timingPeriod")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimingPeriod: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timingPeriod")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValueAttachment(value: Attachment): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valueAttachment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValueAttachment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valueAttachment")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValueQuantity(value: Quantity): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valueQuantity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValueQuantity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valueQuantity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValueReference(value: Reference): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valueReference")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValueReference: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valueReference")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValueString(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valueString")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValueString: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valueString")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

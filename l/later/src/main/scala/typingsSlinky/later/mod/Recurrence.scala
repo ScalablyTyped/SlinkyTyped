@@ -5,6 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Recurrence
   extends /*
   * Custom Time Periods and Modifiers
@@ -13,164 +14,488 @@ trait Recurrence
   */
 /* timeperiodAndModifierName */ StringDictionary[js.UndefOr[js.Array[Double]]] {
   /** Day of the month. */
-  var D: js.UndefOr[js.Array[Double]] = js.undefined
+  var D: js.UndefOr[js.Array[Double]] = js.native
   /** After modifiers. */
-  var D_a: js.UndefOr[js.Array[Double]] = js.undefined
+  var D_a: js.UndefOr[js.Array[Double]] = js.native
   /** Before modifiers. */
-  var D_b: js.UndefOr[js.Array[Double]] = js.undefined
+  var D_b: js.UndefOr[js.Array[Double]] = js.native
   /** Month in year. */
-  var M: js.UndefOr[js.Array[Double]] = js.undefined
+  var M: js.UndefOr[js.Array[Double]] = js.native
   /** After modifiers. */
-  var M_a: js.UndefOr[js.Array[Double]] = js.undefined
+  var M_a: js.UndefOr[js.Array[Double]] = js.native
   /** Before modifiers. */
-  var M_b: js.UndefOr[js.Array[Double]] = js.undefined
+  var M_b: js.UndefOr[js.Array[Double]] = js.native
   /** Year. */
-  var Y: js.UndefOr[js.Array[Double]] = js.undefined
+  var Y: js.UndefOr[js.Array[Double]] = js.native
   /** After modifiers. */
-  var Y_a: js.UndefOr[js.Array[Double]] = js.undefined
+  var Y_a: js.UndefOr[js.Array[Double]] = js.native
   /** Before modifiers. */
-  var Y_b: js.UndefOr[js.Array[Double]] = js.undefined
+  var Y_b: js.UndefOr[js.Array[Double]] = js.native
   /** Nth day of the week in month. */
-  var dc: js.UndefOr[js.Array[Double]] = js.undefined
+  var dc: js.UndefOr[js.Array[Double]] = js.native
   /** After modifiers. */
-  var dc_a: js.UndefOr[js.Array[Double]] = js.undefined
+  var dc_a: js.UndefOr[js.Array[Double]] = js.native
   /** Before modifiers. */
-  var dc_b: js.UndefOr[js.Array[Double]] = js.undefined
+  var dc_b: js.UndefOr[js.Array[Double]] = js.native
   /** Day in week. */
-  var dw: js.UndefOr[js.Array[Double]] = js.undefined
+  var dw: js.UndefOr[js.Array[Double]] = js.native
   /** After modifiers. */
-  var dw_a: js.UndefOr[js.Array[Double]] = js.undefined
+  var dw_a: js.UndefOr[js.Array[Double]] = js.native
   /** Before modifiers. */
-  var dw_b: js.UndefOr[js.Array[Double]] = js.undefined
+  var dw_b: js.UndefOr[js.Array[Double]] = js.native
   /** Day in year. */
-  var dy: js.UndefOr[js.Array[Double]] = js.undefined
+  var dy: js.UndefOr[js.Array[Double]] = js.native
   /** After modifiers. */
-  var dy_a: js.UndefOr[js.Array[Double]] = js.undefined
+  var dy_a: js.UndefOr[js.Array[Double]] = js.native
   /** Before modifiers. */
-  var dy_b: js.UndefOr[js.Array[Double]] = js.undefined
+  var dy_b: js.UndefOr[js.Array[Double]] = js.native
   /** Hour in day. */
-  var h: js.UndefOr[js.Array[Double]] = js.undefined
+  var h: js.UndefOr[js.Array[Double]] = js.native
   /** After modifiers. */
-  var h_a: js.UndefOr[js.Array[Double]] = js.undefined
+  var h_a: js.UndefOr[js.Array[Double]] = js.native
   /** Before modifiers. */
-  var h_b: js.UndefOr[js.Array[Double]] = js.undefined
+  var h_b: js.UndefOr[js.Array[Double]] = js.native
   /** Minutes in hour. */
-  var m: js.UndefOr[js.Array[Double]] = js.undefined
+  var m: js.UndefOr[js.Array[Double]] = js.native
   /** After modifiers. */
-  var m_a: js.UndefOr[js.Array[Double]] = js.undefined
+  var m_a: js.UndefOr[js.Array[Double]] = js.native
   /** Before modifiers. */
-  var m_b: js.UndefOr[js.Array[Double]] = js.undefined
+  var m_b: js.UndefOr[js.Array[Double]] = js.native
   /** Seconds in minute. */
-  var s: js.UndefOr[js.Array[Double]] = js.undefined
+  var s: js.UndefOr[js.Array[Double]] = js.native
   /** After modifiers. */
-  var s_a: js.UndefOr[js.Array[Double]] = js.undefined
+  var s_a: js.UndefOr[js.Array[Double]] = js.native
   /** Before modifiers. */
-  var s_b: js.UndefOr[js.Array[Double]] = js.undefined
+  var s_b: js.UndefOr[js.Array[Double]] = js.native
   /** Time in seconds from midnight. */
-  var t: js.UndefOr[js.Array[Double]] = js.undefined
+  var t: js.UndefOr[js.Array[Double]] = js.native
   /** After modifiers. */
-  var t_a: js.UndefOr[js.Array[Double]] = js.undefined
+  var t_a: js.UndefOr[js.Array[Double]] = js.native
   /** Before modifiers. */
-  var t_b: js.UndefOr[js.Array[Double]] = js.undefined
+  var t_b: js.UndefOr[js.Array[Double]] = js.native
   /** Week in month. */
-  var wm: js.UndefOr[js.Array[Double]] = js.undefined
+  var wm: js.UndefOr[js.Array[Double]] = js.native
   /** After modifiers. */
-  var wm_a: js.UndefOr[js.Array[Double]] = js.undefined
+  var wm_a: js.UndefOr[js.Array[Double]] = js.native
   /** Before modifiers. */
-  var wm_b: js.UndefOr[js.Array[Double]] = js.undefined
+  var wm_b: js.UndefOr[js.Array[Double]] = js.native
   /** ISO week in year. */
-  var wy: js.UndefOr[js.Array[Double]] = js.undefined
+  var wy: js.UndefOr[js.Array[Double]] = js.native
   /** After modifiers. */
-  var wy_a: js.UndefOr[js.Array[Double]] = js.undefined
+  var wy_a: js.UndefOr[js.Array[Double]] = js.native
   /** Before modifiers. */
-  var wy_b: js.UndefOr[js.Array[Double]] = js.undefined
+  var wy_b: js.UndefOr[js.Array[Double]] = js.native
 }
 
 object Recurrence {
   @scala.inline
-  def apply(
-    D: js.Array[Double] = null,
-    D_a: js.Array[Double] = null,
-    D_b: js.Array[Double] = null,
-    M: js.Array[Double] = null,
-    M_a: js.Array[Double] = null,
-    M_b: js.Array[Double] = null,
-    StringDictionary: /*
-    * Custom Time Periods and Modifiers
-    * For acces to custom time periods created as extension to the later static type
-    * and modifiers created on the later modifier static type.
-    */
-  /* timeperiodAndModifierName */ StringDictionary[js.UndefOr[js.Array[Double]]] = null,
-    Y: js.Array[Double] = null,
-    Y_a: js.Array[Double] = null,
-    Y_b: js.Array[Double] = null,
-    dc: js.Array[Double] = null,
-    dc_a: js.Array[Double] = null,
-    dc_b: js.Array[Double] = null,
-    dw: js.Array[Double] = null,
-    dw_a: js.Array[Double] = null,
-    dw_b: js.Array[Double] = null,
-    dy: js.Array[Double] = null,
-    dy_a: js.Array[Double] = null,
-    dy_b: js.Array[Double] = null,
-    h: js.Array[Double] = null,
-    h_a: js.Array[Double] = null,
-    h_b: js.Array[Double] = null,
-    m: js.Array[Double] = null,
-    m_a: js.Array[Double] = null,
-    m_b: js.Array[Double] = null,
-    s: js.Array[Double] = null,
-    s_a: js.Array[Double] = null,
-    s_b: js.Array[Double] = null,
-    t: js.Array[Double] = null,
-    t_a: js.Array[Double] = null,
-    t_b: js.Array[Double] = null,
-    wm: js.Array[Double] = null,
-    wm_a: js.Array[Double] = null,
-    wm_b: js.Array[Double] = null,
-    wy: js.Array[Double] = null,
-    wy_a: js.Array[Double] = null,
-    wy_b: js.Array[Double] = null
-  ): Recurrence = {
+  def apply(): Recurrence = {
     val __obj = js.Dynamic.literal()
-    if (D != null) __obj.updateDynamic("D")(D.asInstanceOf[js.Any])
-    if (D_a != null) __obj.updateDynamic("D_a")(D_a.asInstanceOf[js.Any])
-    if (D_b != null) __obj.updateDynamic("D_b")(D_b.asInstanceOf[js.Any])
-    if (M != null) __obj.updateDynamic("M")(M.asInstanceOf[js.Any])
-    if (M_a != null) __obj.updateDynamic("M_a")(M_a.asInstanceOf[js.Any])
-    if (M_b != null) __obj.updateDynamic("M_b")(M_b.asInstanceOf[js.Any])
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
-    if (Y != null) __obj.updateDynamic("Y")(Y.asInstanceOf[js.Any])
-    if (Y_a != null) __obj.updateDynamic("Y_a")(Y_a.asInstanceOf[js.Any])
-    if (Y_b != null) __obj.updateDynamic("Y_b")(Y_b.asInstanceOf[js.Any])
-    if (dc != null) __obj.updateDynamic("dc")(dc.asInstanceOf[js.Any])
-    if (dc_a != null) __obj.updateDynamic("dc_a")(dc_a.asInstanceOf[js.Any])
-    if (dc_b != null) __obj.updateDynamic("dc_b")(dc_b.asInstanceOf[js.Any])
-    if (dw != null) __obj.updateDynamic("dw")(dw.asInstanceOf[js.Any])
-    if (dw_a != null) __obj.updateDynamic("dw_a")(dw_a.asInstanceOf[js.Any])
-    if (dw_b != null) __obj.updateDynamic("dw_b")(dw_b.asInstanceOf[js.Any])
-    if (dy != null) __obj.updateDynamic("dy")(dy.asInstanceOf[js.Any])
-    if (dy_a != null) __obj.updateDynamic("dy_a")(dy_a.asInstanceOf[js.Any])
-    if (dy_b != null) __obj.updateDynamic("dy_b")(dy_b.asInstanceOf[js.Any])
-    if (h != null) __obj.updateDynamic("h")(h.asInstanceOf[js.Any])
-    if (h_a != null) __obj.updateDynamic("h_a")(h_a.asInstanceOf[js.Any])
-    if (h_b != null) __obj.updateDynamic("h_b")(h_b.asInstanceOf[js.Any])
-    if (m != null) __obj.updateDynamic("m")(m.asInstanceOf[js.Any])
-    if (m_a != null) __obj.updateDynamic("m_a")(m_a.asInstanceOf[js.Any])
-    if (m_b != null) __obj.updateDynamic("m_b")(m_b.asInstanceOf[js.Any])
-    if (s != null) __obj.updateDynamic("s")(s.asInstanceOf[js.Any])
-    if (s_a != null) __obj.updateDynamic("s_a")(s_a.asInstanceOf[js.Any])
-    if (s_b != null) __obj.updateDynamic("s_b")(s_b.asInstanceOf[js.Any])
-    if (t != null) __obj.updateDynamic("t")(t.asInstanceOf[js.Any])
-    if (t_a != null) __obj.updateDynamic("t_a")(t_a.asInstanceOf[js.Any])
-    if (t_b != null) __obj.updateDynamic("t_b")(t_b.asInstanceOf[js.Any])
-    if (wm != null) __obj.updateDynamic("wm")(wm.asInstanceOf[js.Any])
-    if (wm_a != null) __obj.updateDynamic("wm_a")(wm_a.asInstanceOf[js.Any])
-    if (wm_b != null) __obj.updateDynamic("wm_b")(wm_b.asInstanceOf[js.Any])
-    if (wy != null) __obj.updateDynamic("wy")(wy.asInstanceOf[js.Any])
-    if (wy_a != null) __obj.updateDynamic("wy_a")(wy_a.asInstanceOf[js.Any])
-    if (wy_b != null) __obj.updateDynamic("wy_b")(wy_b.asInstanceOf[js.Any])
     __obj.asInstanceOf[Recurrence]
   }
+  @scala.inline
+  implicit class RecurrenceOps[Self <: Recurrence] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withD(value: js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("D")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutD: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("D")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withD_a(value: js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("D_a")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutD_a: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("D_a")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withD_b(value: js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("D_b")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutD_b: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("D_b")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withM(value: js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("M")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutM: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("M")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withM_a(value: js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("M_a")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutM_a: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("M_a")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withM_b(value: js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("M_b")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutM_b: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("M_b")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withY(value: js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Y")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutY: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Y")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withY_a(value: js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Y_a")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutY_a: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Y_a")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withY_b(value: js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Y_b")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutY_b: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Y_b")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDc(value: js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dc")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDc: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dc")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDc_a(value: js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dc_a")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDc_a: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dc_a")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDc_b(value: js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dc_b")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDc_b: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dc_b")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDw(value: js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dw")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDw: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dw")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDw_a(value: js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dw_a")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDw_a: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dw_a")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDw_b(value: js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dw_b")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDw_b: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dw_b")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDy(value: js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDy_a(value: js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dy_a")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDy_a: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dy_a")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDy_b(value: js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dy_b")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDy_b: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dy_b")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withH(value: js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("h")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutH: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("h")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withH_a(value: js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("h_a")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutH_a: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("h_a")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withH_b(value: js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("h_b")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutH_b: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("h_b")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withS(value: js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("s")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutS: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("s")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withS_a(value: js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("s_a")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutS_a: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("s_a")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withS_b(value: js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("s_b")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutS_b: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("s_b")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withT(value: js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("t")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutT: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("t")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withT_a(value: js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("t_a")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutT_a: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("t_a")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withT_b(value: js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("t_b")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutT_b: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("t_b")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWm(value: js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wm")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWm: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wm")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWm_a(value: js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wm_a")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWm_a: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wm_a")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWm_b(value: js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wm_b")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWm_b: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wm_b")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWy(value: js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWy_a(value: js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wy_a")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWy_a: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wy_a")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWy_b(value: js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wy_b")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWy_b: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wy_b")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

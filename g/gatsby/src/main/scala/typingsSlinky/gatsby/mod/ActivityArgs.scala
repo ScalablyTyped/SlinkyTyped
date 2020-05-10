@@ -4,18 +4,49 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ActivityArgs extends js.Object {
-  var id: js.UndefOr[String] = js.undefined
-  var parentSpan: js.UndefOr[js.Object] = js.undefined
+  var id: js.UndefOr[String] = js.native
+  var parentSpan: js.UndefOr[js.Object] = js.native
 }
 
 object ActivityArgs {
   @scala.inline
-  def apply(id: String = null, parentSpan: js.Object = null): ActivityArgs = {
+  def apply(): ActivityArgs = {
     val __obj = js.Dynamic.literal()
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (parentSpan != null) __obj.updateDynamic("parentSpan")(parentSpan.asInstanceOf[js.Any])
     __obj.asInstanceOf[ActivityArgs]
   }
+  @scala.inline
+  implicit class ActivityArgsOps[Self <: ActivityArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParentSpan(value: js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parentSpan")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParentSpan: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parentSpan")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

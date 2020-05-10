@@ -1,7 +1,7 @@
 package typingsSlinky.athenajs.mod
 
 import org.scalablytyped.runtime.NumberDictionary
-import typingsSlinky.std.HTMLElement
+import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.std.Iterable
 import scala.scalajs.js
 import scala.scalajs.js.`|`

@@ -1,54 +1,56 @@
 package typingsSlinky.reactLazyload.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
+import org.scalajs.dom.raw.Element
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactLazyload.mod.LazyLoadProps
 import typingsSlinky.reactLazyload.mod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactLazyload
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object ReactLazyload {
   @JSImport("react-lazyload", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: height */
-  def apply(
-    debounce: Double | Boolean = null,
-    offset: Double | js.Array[Double] = null,
-    once: js.UndefOr[Boolean] = js.undefined,
-    overflow: js.UndefOr[Boolean] = js.undefined,
-    placeholder: TagMod[Any] = null,
-    preventLoading: js.UndefOr[Boolean] = js.undefined,
-    resize: js.UndefOr[Boolean] = js.undefined,
-    scroll: js.UndefOr[Boolean] = js.undefined,
-    scrollContainer: String | org.scalajs.dom.raw.Element = null,
-    throttle: Double | Boolean = null,
-    unmountIfInvisible: js.UndefOr[Boolean] = js.undefined,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (debounce != null) __obj.updateDynamic("debounce")(debounce.asInstanceOf[js.Any])
-    if (offset != null) __obj.updateDynamic("offset")(offset.asInstanceOf[js.Any])
-    if (!js.isUndefined(once)) __obj.updateDynamic("once")(once.asInstanceOf[js.Any])
-    if (!js.isUndefined(overflow)) __obj.updateDynamic("overflow")(overflow.asInstanceOf[js.Any])
-    if (placeholder != null) __obj.updateDynamic("placeholder")(placeholder.asInstanceOf[js.Any])
-    if (!js.isUndefined(preventLoading)) __obj.updateDynamic("preventLoading")(preventLoading.asInstanceOf[js.Any])
-    if (!js.isUndefined(resize)) __obj.updateDynamic("resize")(resize.asInstanceOf[js.Any])
-    if (!js.isUndefined(scroll)) __obj.updateDynamic("scroll")(scroll.asInstanceOf[js.Any])
-    if (scrollContainer != null) __obj.updateDynamic("scrollContainer")(scrollContainer.asInstanceOf[js.Any])
-    if (throttle != null) __obj.updateDynamic("throttle")(throttle.asInstanceOf[js.Any])
-    if (!js.isUndefined(unmountIfInvisible)) __obj.updateDynamic("unmountIfInvisible")(unmountIfInvisible.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def debounce(value: Double | Boolean): this.type = set("debounce", value.asInstanceOf[js.Any])
+    @scala.inline
+    def height(value: Double | String): this.type = set("height", value.asInstanceOf[js.Any])
+    @scala.inline
+    def offset(value: Double | js.Array[Double]): this.type = set("offset", value.asInstanceOf[js.Any])
+    @scala.inline
+    def once(value: Boolean): this.type = set("once", value.asInstanceOf[js.Any])
+    @scala.inline
+    def overflow(value: Boolean): this.type = set("overflow", value.asInstanceOf[js.Any])
+    @scala.inline
+    def placeholderReactElement(value: ReactElement): this.type = set("placeholder", value.asInstanceOf[js.Any])
+    @scala.inline
+    def placeholder(value: TagMod[Any]): this.type = set("placeholder", value.asInstanceOf[js.Any])
+    @scala.inline
+    def preventLoading(value: Boolean): this.type = set("preventLoading", value.asInstanceOf[js.Any])
+    @scala.inline
+    def resize(value: Boolean): this.type = set("resize", value.asInstanceOf[js.Any])
+    @scala.inline
+    def scroll(value: Boolean): this.type = set("scroll", value.asInstanceOf[js.Any])
+    @scala.inline
+    def scrollContainerElement(value: Element): this.type = set("scrollContainer", value.asInstanceOf[js.Any])
+    @scala.inline
+    def scrollContainer(value: String | Element): this.type = set("scrollContainer", value.asInstanceOf[js.Any])
+    @scala.inline
+    def throttle(value: Double | Boolean): this.type = set("throttle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def unmountIfInvisible(value: Boolean): this.type = set("unmountIfInvisible", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactLazyload.mod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = LazyLoadProps
+  
+  def withProps(p: LazyLoadProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: ReactLazyload.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

@@ -4,16 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Node extends js.Object {
-  def visit(visitor: IVisitor): js.Any
+  def visit(visitor: IVisitor): js.Any = js.native
 }
 
 object Node {
   @scala.inline
   def apply(visit: IVisitor => js.Any): Node = {
     val __obj = js.Dynamic.literal(visit = js.Any.fromFunction1(visit))
-  
     __obj.asInstanceOf[Node]
   }
+  @scala.inline
+  implicit class NodeOps[Self <: Node] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withVisit(value: IVisitor => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visit")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

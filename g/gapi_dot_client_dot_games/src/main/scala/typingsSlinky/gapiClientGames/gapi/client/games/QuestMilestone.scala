@@ -4,18 +4,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait QuestMilestone extends js.Object {
   /**
     * The completion reward data of the milestone, represented as a Base64-encoded string. This is a developer-specified binary blob with size between 0 and
     * 2 KB before encoding.
     */
-  var completionRewardData: js.UndefOr[String] = js.undefined
+  var completionRewardData: js.UndefOr[String] = js.native
   /** The criteria of the milestone. */
-  var criteria: js.UndefOr[js.Array[QuestCriterion]] = js.undefined
+  var criteria: js.UndefOr[js.Array[QuestCriterion]] = js.native
   /** The milestone ID. */
-  var id: js.UndefOr[String] = js.undefined
+  var id: js.UndefOr[String] = js.native
   /** Uniquely identifies the type of this resource. Value is always the fixed string games#questMilestone. */
-  var kind: js.UndefOr[String] = js.undefined
+  var kind: js.UndefOr[String] = js.native
   /**
     * The current state of the milestone.
     * Possible values are:
@@ -24,25 +25,82 @@ trait QuestMilestone extends js.Object {
     * - "NOT_COMPLETED" - The milestone has not yet been completed.
     * - "NOT_STARTED" - The milestone is for a quest that has not yet been accepted.
     */
-  var state: js.UndefOr[String] = js.undefined
+  var state: js.UndefOr[String] = js.native
 }
 
 object QuestMilestone {
   @scala.inline
-  def apply(
-    completionRewardData: String = null,
-    criteria: js.Array[QuestCriterion] = null,
-    id: String = null,
-    kind: String = null,
-    state: String = null
-  ): QuestMilestone = {
+  def apply(): QuestMilestone = {
     val __obj = js.Dynamic.literal()
-    if (completionRewardData != null) __obj.updateDynamic("completionRewardData")(completionRewardData.asInstanceOf[js.Any])
-    if (criteria != null) __obj.updateDynamic("criteria")(criteria.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
-    if (state != null) __obj.updateDynamic("state")(state.asInstanceOf[js.Any])
     __obj.asInstanceOf[QuestMilestone]
   }
+  @scala.inline
+  implicit class QuestMilestoneOps[Self <: QuestMilestone] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCompletionRewardData(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("completionRewardData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCompletionRewardData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("completionRewardData")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCriteria(value: js.Array[QuestCriterion]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("criteria")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCriteria: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("criteria")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKind(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withState(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

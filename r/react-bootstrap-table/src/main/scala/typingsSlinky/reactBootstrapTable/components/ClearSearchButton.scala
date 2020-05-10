@@ -1,15 +1,16 @@
 package typingsSlinky.reactBootstrapTable.components
 
+import typingsSlinky.reactBootstrapTable.mod.ButtonProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ClearSearchButton
-  extends SharedApply_ButtonProps_1824506284[typingsSlinky.reactBootstrapTable.mod.ClearSearchButton] {
+object ClearSearchButton {
   @JSImport("react-bootstrap-table", "ClearSearchButton")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: ButtonProps): SharedBuilder_ButtonProps_792854078[typingsSlinky.reactBootstrapTable.mod.ClearSearchButton] = new SharedBuilder_ButtonProps_792854078[typingsSlinky.reactBootstrapTable.mod.ClearSearchButton](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: ClearSearchButton.type): SharedBuilder_ButtonProps_792854078[typingsSlinky.reactBootstrapTable.mod.ClearSearchButton] = new SharedBuilder_ButtonProps_792854078[typingsSlinky.reactBootstrapTable.mod.ClearSearchButton](js.Array(this.component, js.Dictionary.empty))()
 }
 

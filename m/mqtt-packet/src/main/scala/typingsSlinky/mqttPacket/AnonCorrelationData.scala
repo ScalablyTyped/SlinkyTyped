@@ -5,39 +5,127 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonCorrelationData extends js.Object {
-  var contentType: js.UndefOr[String] = js.undefined
-  var correlationData: js.UndefOr[Buffer] = js.undefined
-  var messageExpiryInterval: js.UndefOr[Double] = js.undefined
-  var payloadFormatIndicator: js.UndefOr[Boolean] = js.undefined
-  var responseTopic: js.UndefOr[String] = js.undefined
-  var subscriptionIdentifier: js.UndefOr[Double] = js.undefined
-  var topicAlias: js.UndefOr[Double] = js.undefined
-  var userProperties: js.UndefOr[js.Object] = js.undefined
+  var contentType: js.UndefOr[String] = js.native
+  var correlationData: js.UndefOr[Buffer] = js.native
+  var messageExpiryInterval: js.UndefOr[Double] = js.native
+  var payloadFormatIndicator: js.UndefOr[Boolean] = js.native
+  var responseTopic: js.UndefOr[String] = js.native
+  var subscriptionIdentifier: js.UndefOr[Double] = js.native
+  var topicAlias: js.UndefOr[Double] = js.native
+  var userProperties: js.UndefOr[js.Object] = js.native
 }
 
 object AnonCorrelationData {
   @scala.inline
-  def apply(
-    contentType: String = null,
-    correlationData: Buffer = null,
-    messageExpiryInterval: Int | Double = null,
-    payloadFormatIndicator: js.UndefOr[Boolean] = js.undefined,
-    responseTopic: String = null,
-    subscriptionIdentifier: Int | Double = null,
-    topicAlias: Int | Double = null,
-    userProperties: js.Object = null
-  ): AnonCorrelationData = {
+  def apply(): AnonCorrelationData = {
     val __obj = js.Dynamic.literal()
-    if (contentType != null) __obj.updateDynamic("contentType")(contentType.asInstanceOf[js.Any])
-    if (correlationData != null) __obj.updateDynamic("correlationData")(correlationData.asInstanceOf[js.Any])
-    if (messageExpiryInterval != null) __obj.updateDynamic("messageExpiryInterval")(messageExpiryInterval.asInstanceOf[js.Any])
-    if (!js.isUndefined(payloadFormatIndicator)) __obj.updateDynamic("payloadFormatIndicator")(payloadFormatIndicator.asInstanceOf[js.Any])
-    if (responseTopic != null) __obj.updateDynamic("responseTopic")(responseTopic.asInstanceOf[js.Any])
-    if (subscriptionIdentifier != null) __obj.updateDynamic("subscriptionIdentifier")(subscriptionIdentifier.asInstanceOf[js.Any])
-    if (topicAlias != null) __obj.updateDynamic("topicAlias")(topicAlias.asInstanceOf[js.Any])
-    if (userProperties != null) __obj.updateDynamic("userProperties")(userProperties.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonCorrelationData]
   }
+  @scala.inline
+  implicit class AnonCorrelationDataOps[Self <: AnonCorrelationData] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withContentType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContentType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCorrelationData(value: Buffer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("correlationData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCorrelationData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("correlationData")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMessageExpiryInterval(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("messageExpiryInterval")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMessageExpiryInterval: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("messageExpiryInterval")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPayloadFormatIndicator(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("payloadFormatIndicator")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPayloadFormatIndicator: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("payloadFormatIndicator")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResponseTopic(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("responseTopic")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResponseTopic: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("responseTopic")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSubscriptionIdentifier(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subscriptionIdentifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubscriptionIdentifier: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subscriptionIdentifier")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTopicAlias(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("topicAlias")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTopicAlias: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("topicAlias")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUserProperties(value: js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userProperties")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUserProperties: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userProperties")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

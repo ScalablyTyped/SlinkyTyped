@@ -22,16 +22,53 @@ trait RegexMatchSet extends js.Object {
 
 object RegexMatchSet {
   @scala.inline
-  def apply(
-    Name: ResourceName = null,
-    RegexMatchSetId: ResourceId = null,
-    RegexMatchTuples: RegexMatchTuples = null
-  ): RegexMatchSet = {
+  def apply(): RegexMatchSet = {
     val __obj = js.Dynamic.literal()
-    if (Name != null) __obj.updateDynamic("Name")(Name.asInstanceOf[js.Any])
-    if (RegexMatchSetId != null) __obj.updateDynamic("RegexMatchSetId")(RegexMatchSetId.asInstanceOf[js.Any])
-    if (RegexMatchTuples != null) __obj.updateDynamic("RegexMatchTuples")(RegexMatchTuples.asInstanceOf[js.Any])
     __obj.asInstanceOf[RegexMatchSet]
   }
+  @scala.inline
+  implicit class RegexMatchSetOps[Self <: RegexMatchSet] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withName(value: ResourceName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRegexMatchSetId(value: ResourceId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RegexMatchSetId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRegexMatchSetId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RegexMatchSetId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRegexMatchTuples(value: RegexMatchTuples): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RegexMatchTuples")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRegexMatchTuples: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RegexMatchTuples")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

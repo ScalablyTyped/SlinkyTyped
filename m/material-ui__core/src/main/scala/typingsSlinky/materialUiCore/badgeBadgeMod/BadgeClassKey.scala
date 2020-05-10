@@ -16,18 +16,16 @@ trait BadgeClassKey extends js.Object
 
 object BadgeClassKey {
   @scala.inline
-  def badge: typingsSlinky.materialUiCore.materialUiCoreStrings.badge = this.cast("badge")
+  def badge: typingsSlinky.materialUiCore.materialUiCoreStrings.badge = "badge".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.badge]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def colorPrimary: typingsSlinky.materialUiCore.materialUiCoreStrings.colorPrimary = "colorPrimary".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.colorPrimary]
   @scala.inline
-  def colorPrimary: typingsSlinky.materialUiCore.materialUiCoreStrings.colorPrimary = this.cast("colorPrimary")
+  def colorSecondary: typingsSlinky.materialUiCore.materialUiCoreStrings.colorSecondary = "colorSecondary".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.colorSecondary]
   @scala.inline
-  def colorSecondary: typingsSlinky.materialUiCore.materialUiCoreStrings.colorSecondary = this.cast("colorSecondary")
+  def dot: typingsSlinky.materialUiCore.materialUiCoreStrings.dot = "dot".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.dot]
   @scala.inline
-  def dot: typingsSlinky.materialUiCore.materialUiCoreStrings.dot = this.cast("dot")
+  def invisible: typingsSlinky.materialUiCore.materialUiCoreStrings.invisible = "invisible".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.invisible]
   @scala.inline
-  def invisible: typingsSlinky.materialUiCore.materialUiCoreStrings.invisible = this.cast("invisible")
-  @scala.inline
-  def root: typingsSlinky.materialUiCore.materialUiCoreStrings.root = this.cast("root")
+  def root: typingsSlinky.materialUiCore.materialUiCoreStrings.root = "root".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.root]
 }
 

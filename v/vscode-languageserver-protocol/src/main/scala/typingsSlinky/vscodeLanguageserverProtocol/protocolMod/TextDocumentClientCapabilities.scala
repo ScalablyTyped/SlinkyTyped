@@ -14,111 +14,279 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait TextDocumentClientCapabilities extends js.Object {
   /**
     * Capabilities specific to the `textDocument/codeAction`
     */
-  var codeAction: js.UndefOr[AnonCodeActionLiteralSupport] = js.undefined
+  var codeAction: js.UndefOr[AnonCodeActionLiteralSupport] = js.native
   /**
     * Capabilities specific to the `textDocument/codeLens`
     */
-  var codeLens: js.UndefOr[AnonDynamicRegistration] = js.undefined
+  var codeLens: js.UndefOr[AnonDynamicRegistration] = js.native
   /**
     * Capabilities specific to the `textDocument/completion`
     */
-  var completion: js.UndefOr[AnonCompletionItem] = js.undefined
+  var completion: js.UndefOr[AnonCompletionItem] = js.native
   /**
     * Capabilities specific to the `textDocument/definition`
     */
-  var definition: js.UndefOr[AnonLinkSupport] = js.undefined
+  var definition: js.UndefOr[AnonLinkSupport] = js.native
   /**
     * Capabilities specific to the `textDocument/documentHighlight`
     */
-  var documentHighlight: js.UndefOr[AnonDynamicRegistration] = js.undefined
+  var documentHighlight: js.UndefOr[AnonDynamicRegistration] = js.native
   /**
     * Capabilities specific to the `textDocument/documentLink`
     */
-  var documentLink: js.UndefOr[AnonDynamicRegistration] = js.undefined
+  var documentLink: js.UndefOr[AnonDynamicRegistration] = js.native
   /**
     * Capabilities specific to the `textDocument/documentSymbol`
     */
-  var documentSymbol: js.UndefOr[AnonHierarchicalDocumentSymbolSupport] = js.undefined
+  var documentSymbol: js.UndefOr[AnonHierarchicalDocumentSymbolSupport] = js.native
   /**
     * Capabilities specific to the `textDocument/formatting`
     */
-  var formatting: js.UndefOr[AnonDynamicRegistration] = js.undefined
+  var formatting: js.UndefOr[AnonDynamicRegistration] = js.native
   /**
     * Capabilities specific to the `textDocument/hover`
     */
-  var hover: js.UndefOr[AnonContentFormat] = js.undefined
+  var hover: js.UndefOr[AnonContentFormat] = js.native
   /**
     * Capabilities specific to the `textDocument/onTypeFormatting`
     */
-  var onTypeFormatting: js.UndefOr[AnonDynamicRegistration] = js.undefined
+  var onTypeFormatting: js.UndefOr[AnonDynamicRegistration] = js.native
   /**
     * Capabilities specific to `textDocument/publishDiagnostics`.
     */
-  var publishDiagnostics: js.UndefOr[AnonRelatedInformation] = js.undefined
+  var publishDiagnostics: js.UndefOr[AnonRelatedInformation] = js.native
   /**
     * Capabilities specific to the `textDocument/rangeFormatting`
     */
-  var rangeFormatting: js.UndefOr[AnonDynamicRegistration] = js.undefined
+  var rangeFormatting: js.UndefOr[AnonDynamicRegistration] = js.native
   /**
     * Capabilities specific to the `textDocument/references`
     */
-  var references: js.UndefOr[AnonDynamicRegistration] = js.undefined
+  var references: js.UndefOr[AnonDynamicRegistration] = js.native
   /**
     * Capabilities specific to the `textDocument/rename`
     */
-  var rename: js.UndefOr[AnonPrepareSupport] = js.undefined
+  var rename: js.UndefOr[AnonPrepareSupport] = js.native
   /**
     * Capabilities specific to the `textDocument/signatureHelp`
     */
-  var signatureHelp: js.UndefOr[AnonSignatureInformation] = js.undefined
+  var signatureHelp: js.UndefOr[AnonSignatureInformation] = js.native
   /**
     * Defines which synchronization capabilities the client supports.
     */
-  var synchronization: js.UndefOr[AnonDidSave] = js.undefined
+  var synchronization: js.UndefOr[AnonDidSave] = js.native
 }
 
 object TextDocumentClientCapabilities {
   @scala.inline
-  def apply(
-    codeAction: AnonCodeActionLiteralSupport = null,
-    codeLens: AnonDynamicRegistration = null,
-    completion: AnonCompletionItem = null,
-    definition: AnonLinkSupport = null,
-    documentHighlight: AnonDynamicRegistration = null,
-    documentLink: AnonDynamicRegistration = null,
-    documentSymbol: AnonHierarchicalDocumentSymbolSupport = null,
-    formatting: AnonDynamicRegistration = null,
-    hover: AnonContentFormat = null,
-    onTypeFormatting: AnonDynamicRegistration = null,
-    publishDiagnostics: AnonRelatedInformation = null,
-    rangeFormatting: AnonDynamicRegistration = null,
-    references: AnonDynamicRegistration = null,
-    rename: AnonPrepareSupport = null,
-    signatureHelp: AnonSignatureInformation = null,
-    synchronization: AnonDidSave = null
-  ): TextDocumentClientCapabilities = {
+  def apply(): TextDocumentClientCapabilities = {
     val __obj = js.Dynamic.literal()
-    if (codeAction != null) __obj.updateDynamic("codeAction")(codeAction.asInstanceOf[js.Any])
-    if (codeLens != null) __obj.updateDynamic("codeLens")(codeLens.asInstanceOf[js.Any])
-    if (completion != null) __obj.updateDynamic("completion")(completion.asInstanceOf[js.Any])
-    if (definition != null) __obj.updateDynamic("definition")(definition.asInstanceOf[js.Any])
-    if (documentHighlight != null) __obj.updateDynamic("documentHighlight")(documentHighlight.asInstanceOf[js.Any])
-    if (documentLink != null) __obj.updateDynamic("documentLink")(documentLink.asInstanceOf[js.Any])
-    if (documentSymbol != null) __obj.updateDynamic("documentSymbol")(documentSymbol.asInstanceOf[js.Any])
-    if (formatting != null) __obj.updateDynamic("formatting")(formatting.asInstanceOf[js.Any])
-    if (hover != null) __obj.updateDynamic("hover")(hover.asInstanceOf[js.Any])
-    if (onTypeFormatting != null) __obj.updateDynamic("onTypeFormatting")(onTypeFormatting.asInstanceOf[js.Any])
-    if (publishDiagnostics != null) __obj.updateDynamic("publishDiagnostics")(publishDiagnostics.asInstanceOf[js.Any])
-    if (rangeFormatting != null) __obj.updateDynamic("rangeFormatting")(rangeFormatting.asInstanceOf[js.Any])
-    if (references != null) __obj.updateDynamic("references")(references.asInstanceOf[js.Any])
-    if (rename != null) __obj.updateDynamic("rename")(rename.asInstanceOf[js.Any])
-    if (signatureHelp != null) __obj.updateDynamic("signatureHelp")(signatureHelp.asInstanceOf[js.Any])
-    if (synchronization != null) __obj.updateDynamic("synchronization")(synchronization.asInstanceOf[js.Any])
     __obj.asInstanceOf[TextDocumentClientCapabilities]
   }
+  @scala.inline
+  implicit class TextDocumentClientCapabilitiesOps[Self <: TextDocumentClientCapabilities] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCodeAction(value: AnonCodeActionLiteralSupport): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("codeAction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCodeAction: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("codeAction")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCodeLens(value: AnonDynamicRegistration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("codeLens")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCodeLens: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("codeLens")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCompletion(value: AnonCompletionItem): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("completion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCompletion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("completion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefinition(value: AnonLinkSupport): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("definition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefinition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("definition")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDocumentHighlight(value: AnonDynamicRegistration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("documentHighlight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDocumentHighlight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("documentHighlight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDocumentLink(value: AnonDynamicRegistration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("documentLink")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDocumentLink: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("documentLink")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDocumentSymbol(value: AnonHierarchicalDocumentSymbolSupport): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("documentSymbol")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDocumentSymbol: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("documentSymbol")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFormatting(value: AnonDynamicRegistration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formatting")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFormatting: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formatting")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHover(value: AnonContentFormat): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hover")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHover: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hover")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnTypeFormatting(value: AnonDynamicRegistration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onTypeFormatting")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnTypeFormatting: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onTypeFormatting")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPublishDiagnostics(value: AnonRelatedInformation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("publishDiagnostics")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPublishDiagnostics: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("publishDiagnostics")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRangeFormatting(value: AnonDynamicRegistration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rangeFormatting")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRangeFormatting: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rangeFormatting")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReferences(value: AnonDynamicRegistration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("references")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReferences: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("references")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRename(value: AnonPrepareSupport): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rename")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRename: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rename")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSignatureHelp(value: AnonSignatureInformation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("signatureHelp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSignatureHelp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("signatureHelp")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSynchronization(value: AnonDidSave): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("synchronization")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSynchronization: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("synchronization")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -12,10 +12,8 @@ trait Status extends js.Object
 
 object Status {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def closed: typingsSlinky.portscanner.portscannerStrings.closed = "closed".asInstanceOf[typingsSlinky.portscanner.portscannerStrings.closed]
   @scala.inline
-  def closed: typingsSlinky.portscanner.portscannerStrings.closed = this.cast("closed")
-  @scala.inline
-  def open: typingsSlinky.portscanner.portscannerStrings.open = this.cast("open")
+  def open: typingsSlinky.portscanner.portscannerStrings.open = "open".asInstanceOf[typingsSlinky.portscanner.portscannerStrings.open]
 }
 

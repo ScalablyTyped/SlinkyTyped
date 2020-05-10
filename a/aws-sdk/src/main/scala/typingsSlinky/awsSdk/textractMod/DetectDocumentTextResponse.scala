@@ -22,16 +22,53 @@ trait DetectDocumentTextResponse extends js.Object {
 
 object DetectDocumentTextResponse {
   @scala.inline
-  def apply(
-    Blocks: BlockList = null,
-    DetectDocumentTextModelVersion: String = null,
-    DocumentMetadata: DocumentMetadata = null
-  ): DetectDocumentTextResponse = {
+  def apply(): DetectDocumentTextResponse = {
     val __obj = js.Dynamic.literal()
-    if (Blocks != null) __obj.updateDynamic("Blocks")(Blocks.asInstanceOf[js.Any])
-    if (DetectDocumentTextModelVersion != null) __obj.updateDynamic("DetectDocumentTextModelVersion")(DetectDocumentTextModelVersion.asInstanceOf[js.Any])
-    if (DocumentMetadata != null) __obj.updateDynamic("DocumentMetadata")(DocumentMetadata.asInstanceOf[js.Any])
     __obj.asInstanceOf[DetectDocumentTextResponse]
   }
+  @scala.inline
+  implicit class DetectDocumentTextResponseOps[Self <: DetectDocumentTextResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBlocks(value: BlockList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Blocks")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBlocks: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Blocks")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDetectDocumentTextModelVersion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DetectDocumentTextModelVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDetectDocumentTextModelVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DetectDocumentTextModelVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDocumentMetadata(value: DocumentMetadata): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DocumentMetadata")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDocumentMetadata: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DocumentMetadata")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

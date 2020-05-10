@@ -4,77 +4,203 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait WorkbookRangeView extends Entity {
   // Represents the cell addresses
-  var cellAddresses: js.UndefOr[js.Any] = js.undefined
+  var cellAddresses: js.UndefOr[js.Any] = js.native
   // Returns the number of visible columns. Read-only.
-  var columnCount: js.UndefOr[Double] = js.undefined
+  var columnCount: js.UndefOr[Double] = js.native
   // Represents the formula in A1-style notation.
-  var formulas: js.UndefOr[js.Any] = js.undefined
+  var formulas: js.UndefOr[js.Any] = js.native
   /**
     * Represents the formula in A1-style notation, in the user's language and number-formatting locale. For example, the
     * English '=SUM(A1, 1.5)' formula would become '=SUMME(A1; 1,5)' in German.
     */
-  var formulasLocal: js.UndefOr[js.Any] = js.undefined
+  var formulasLocal: js.UndefOr[js.Any] = js.native
   // Represents the formula in R1C1-style notation.
-  var formulasR1C1: js.UndefOr[js.Any] = js.undefined
+  var formulasR1C1: js.UndefOr[js.Any] = js.native
   // Index of the range.
-  var index: js.UndefOr[Double] = js.undefined
+  var index: js.UndefOr[Double] = js.native
   // Represents Excel's number format code for the given cell. Read-only.
-  var numberFormat: js.UndefOr[js.Any] = js.undefined
+  var numberFormat: js.UndefOr[js.Any] = js.native
   // Returns the number of visible rows. Read-only.
-  var rowCount: js.UndefOr[Double] = js.undefined
+  var rowCount: js.UndefOr[Double] = js.native
   // Represents a collection of range views associated with the range. Read-only. Read-only.
-  var rows: js.UndefOr[js.Array[WorkbookRangeView]] = js.undefined
+  var rows: js.UndefOr[js.Array[WorkbookRangeView]] = js.native
   /**
     * Text values of the specified range. The Text value will not depend on the cell width. The # sign substitution that
     * happens in Excel UI will not affect the text value returned by the API. Read-only.
     */
-  var text: js.UndefOr[js.Any] = js.undefined
+  var text: js.UndefOr[js.Any] = js.native
   /**
     * Represents the type of data of each cell. Read-only. The possible values are: Unknown, Empty, String, Integer, Double,
     * Boolean, Error.
     */
-  var valueTypes: js.UndefOr[js.Any] = js.undefined
+  var valueTypes: js.UndefOr[js.Any] = js.native
   /**
     * Represents the raw values of the specified range view. The data returned could be of type string, number, or a boolean.
     * Cell that contain an error will return the error string.
     */
-  var values: js.UndefOr[js.Any] = js.undefined
+  var values: js.UndefOr[js.Any] = js.native
 }
 
 object WorkbookRangeView {
   @scala.inline
-  def apply(
-    cellAddresses: js.Any = null,
-    columnCount: Int | Double = null,
-    formulas: js.Any = null,
-    formulasLocal: js.Any = null,
-    formulasR1C1: js.Any = null,
-    id: String = null,
-    index: Int | Double = null,
-    numberFormat: js.Any = null,
-    rowCount: Int | Double = null,
-    rows: js.Array[WorkbookRangeView] = null,
-    text: js.Any = null,
-    valueTypes: js.Any = null,
-    values: js.Any = null
-  ): WorkbookRangeView = {
+  def apply(): WorkbookRangeView = {
     val __obj = js.Dynamic.literal()
-    if (cellAddresses != null) __obj.updateDynamic("cellAddresses")(cellAddresses.asInstanceOf[js.Any])
-    if (columnCount != null) __obj.updateDynamic("columnCount")(columnCount.asInstanceOf[js.Any])
-    if (formulas != null) __obj.updateDynamic("formulas")(formulas.asInstanceOf[js.Any])
-    if (formulasLocal != null) __obj.updateDynamic("formulasLocal")(formulasLocal.asInstanceOf[js.Any])
-    if (formulasR1C1 != null) __obj.updateDynamic("formulasR1C1")(formulasR1C1.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (index != null) __obj.updateDynamic("index")(index.asInstanceOf[js.Any])
-    if (numberFormat != null) __obj.updateDynamic("numberFormat")(numberFormat.asInstanceOf[js.Any])
-    if (rowCount != null) __obj.updateDynamic("rowCount")(rowCount.asInstanceOf[js.Any])
-    if (rows != null) __obj.updateDynamic("rows")(rows.asInstanceOf[js.Any])
-    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
-    if (valueTypes != null) __obj.updateDynamic("valueTypes")(valueTypes.asInstanceOf[js.Any])
-    if (values != null) __obj.updateDynamic("values")(values.asInstanceOf[js.Any])
     __obj.asInstanceOf[WorkbookRangeView]
   }
+  @scala.inline
+  implicit class WorkbookRangeViewOps[Self <: WorkbookRangeView] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCellAddresses(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellAddresses")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCellAddresses: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellAddresses")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColumnCount(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColumnCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFormulas(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formulas")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFormulas: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formulas")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFormulasLocal(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formulasLocal")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFormulasLocal: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formulasLocal")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFormulasR1C1(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formulasR1C1")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFormulasR1C1: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formulasR1C1")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNumberFormat(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numberFormat")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNumberFormat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numberFormat")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRowCount(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRowCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRows(value: js.Array[WorkbookRangeView]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rows")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRows: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rows")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withText(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValueTypes(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valueTypes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValueTypes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valueTypes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValues(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("values")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValues: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("values")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

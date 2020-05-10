@@ -34,18 +34,71 @@ trait IssueCertificateRequest extends js.Object {
 
 object IssueCertificateRequest {
   @scala.inline
-  def apply(
-    CertificateAuthorityArn: Arn,
-    Csr: CsrBlob,
-    SigningAlgorithm: SigningAlgorithm,
-    Validity: Validity,
-    IdempotencyToken: IdempotencyToken = null,
-    TemplateArn: Arn = null
-  ): IssueCertificateRequest = {
+  def apply(CertificateAuthorityArn: Arn, Csr: CsrBlob, SigningAlgorithm: SigningAlgorithm, Validity: Validity): IssueCertificateRequest = {
     val __obj = js.Dynamic.literal(CertificateAuthorityArn = CertificateAuthorityArn.asInstanceOf[js.Any], Csr = Csr.asInstanceOf[js.Any], SigningAlgorithm = SigningAlgorithm.asInstanceOf[js.Any], Validity = Validity.asInstanceOf[js.Any])
-    if (IdempotencyToken != null) __obj.updateDynamic("IdempotencyToken")(IdempotencyToken.asInstanceOf[js.Any])
-    if (TemplateArn != null) __obj.updateDynamic("TemplateArn")(TemplateArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[IssueCertificateRequest]
   }
+  @scala.inline
+  implicit class IssueCertificateRequestOps[Self <: IssueCertificateRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCertificateAuthorityArn(value: Arn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CertificateAuthorityArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCsrUint8Array(value: js.typedarray.Uint8Array): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Csr")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCsr(value: CsrBlob): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Csr")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSigningAlgorithm(value: SigningAlgorithm): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SigningAlgorithm")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withValidity(value: Validity): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Validity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIdempotencyToken(value: IdempotencyToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IdempotencyToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIdempotencyToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IdempotencyToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTemplateArn(value: Arn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TemplateArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTemplateArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TemplateArn")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

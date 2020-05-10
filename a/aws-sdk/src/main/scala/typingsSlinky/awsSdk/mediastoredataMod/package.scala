@@ -22,7 +22,7 @@ package object mediastoredataMod {
   type NonNegativeLong = scala.Double
   type PaginationToken = java.lang.String
   type PathNaming = java.lang.String
-  type PayloadBlob = typingsSlinky.node.Buffer | scala.scalajs.js.typedarray.Uint8Array | typingsSlinky.awsSdk.mediastoredataMod.Blob | java.lang.String | typingsSlinky.node.streamMod.Readable
+  type PayloadBlob = typingsSlinky.node.Buffer | js.typedarray.Uint8Array | typingsSlinky.awsSdk.mediastoredataMod.Blob | java.lang.String | typingsSlinky.node.streamMod.Readable
   type RangePattern = java.lang.String
   type SHA256Hash = java.lang.String
   type StorageClass = typingsSlinky.awsSdk.awsSdkStrings.TEMPORAL | java.lang.String

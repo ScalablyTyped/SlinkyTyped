@@ -24,11 +24,41 @@ trait SchemaListAvailableOrgPolicyConstraintsResponse extends js.Object {
 
 object SchemaListAvailableOrgPolicyConstraintsResponse {
   @scala.inline
-  def apply(constraints: js.Array[SchemaConstraint] = null, nextPageToken: String = null): SchemaListAvailableOrgPolicyConstraintsResponse = {
+  def apply(): SchemaListAvailableOrgPolicyConstraintsResponse = {
     val __obj = js.Dynamic.literal()
-    if (constraints != null) __obj.updateDynamic("constraints")(constraints.asInstanceOf[js.Any])
-    if (nextPageToken != null) __obj.updateDynamic("nextPageToken")(nextPageToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaListAvailableOrgPolicyConstraintsResponse]
   }
+  @scala.inline
+  implicit class SchemaListAvailableOrgPolicyConstraintsResponseOps[Self <: SchemaListAvailableOrgPolicyConstraintsResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConstraints(value: js.Array[SchemaConstraint]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("constraints")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConstraints: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("constraints")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextPageToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextPageToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

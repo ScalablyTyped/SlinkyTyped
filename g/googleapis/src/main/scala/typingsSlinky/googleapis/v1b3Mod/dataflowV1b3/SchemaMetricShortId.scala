@@ -23,11 +23,41 @@ trait SchemaMetricShortId extends js.Object {
 
 object SchemaMetricShortId {
   @scala.inline
-  def apply(metricIndex: Int | Double = null, shortId: String = null): SchemaMetricShortId = {
+  def apply(): SchemaMetricShortId = {
     val __obj = js.Dynamic.literal()
-    if (metricIndex != null) __obj.updateDynamic("metricIndex")(metricIndex.asInstanceOf[js.Any])
-    if (shortId != null) __obj.updateDynamic("shortId")(shortId.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaMetricShortId]
   }
+  @scala.inline
+  implicit class SchemaMetricShortIdOps[Self <: SchemaMetricShortId] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMetricIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metricIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMetricIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metricIndex")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShortId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shortId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShortId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shortId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -91,32 +91,149 @@ trait SchemaVirtualMachine extends js.Object {
 
 object SchemaVirtualMachine {
   @scala.inline
-  def apply(
-    accelerators: js.Array[SchemaAccelerator] = null,
-    bootDiskSizeGb: Int | Double = null,
-    bootImage: String = null,
-    cpuPlatform: String = null,
-    disks: js.Array[SchemaDisk] = null,
-    labels: StringDictionary[String] = null,
-    machineType: String = null,
-    network: SchemaNetwork = null,
-    nvidiaDriverVersion: String = null,
-    preemptible: js.UndefOr[Boolean] = js.undefined,
-    serviceAccount: SchemaServiceAccount = null
-  ): SchemaVirtualMachine = {
+  def apply(): SchemaVirtualMachine = {
     val __obj = js.Dynamic.literal()
-    if (accelerators != null) __obj.updateDynamic("accelerators")(accelerators.asInstanceOf[js.Any])
-    if (bootDiskSizeGb != null) __obj.updateDynamic("bootDiskSizeGb")(bootDiskSizeGb.asInstanceOf[js.Any])
-    if (bootImage != null) __obj.updateDynamic("bootImage")(bootImage.asInstanceOf[js.Any])
-    if (cpuPlatform != null) __obj.updateDynamic("cpuPlatform")(cpuPlatform.asInstanceOf[js.Any])
-    if (disks != null) __obj.updateDynamic("disks")(disks.asInstanceOf[js.Any])
-    if (labels != null) __obj.updateDynamic("labels")(labels.asInstanceOf[js.Any])
-    if (machineType != null) __obj.updateDynamic("machineType")(machineType.asInstanceOf[js.Any])
-    if (network != null) __obj.updateDynamic("network")(network.asInstanceOf[js.Any])
-    if (nvidiaDriverVersion != null) __obj.updateDynamic("nvidiaDriverVersion")(nvidiaDriverVersion.asInstanceOf[js.Any])
-    if (!js.isUndefined(preemptible)) __obj.updateDynamic("preemptible")(preemptible.asInstanceOf[js.Any])
-    if (serviceAccount != null) __obj.updateDynamic("serviceAccount")(serviceAccount.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaVirtualMachine]
   }
+  @scala.inline
+  implicit class SchemaVirtualMachineOps[Self <: SchemaVirtualMachine] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAccelerators(value: js.Array[SchemaAccelerator]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accelerators")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccelerators: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accelerators")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBootDiskSizeGb(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bootDiskSizeGb")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBootDiskSizeGb: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bootDiskSizeGb")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBootImage(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bootImage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBootImage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bootImage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCpuPlatform(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cpuPlatform")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCpuPlatform: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cpuPlatform")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisks(value: js.Array[SchemaDisk]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disks")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisks: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disks")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabels(value: StringDictionary[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabels: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMachineType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("machineType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMachineType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("machineType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNetwork(value: SchemaNetwork): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("network")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNetwork: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("network")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNvidiaDriverVersion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nvidiaDriverVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNvidiaDriverVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nvidiaDriverVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPreemptible(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preemptible")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPreemptible: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preemptible")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withServiceAccount(value: SchemaServiceAccount): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceAccount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutServiceAccount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceAccount")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

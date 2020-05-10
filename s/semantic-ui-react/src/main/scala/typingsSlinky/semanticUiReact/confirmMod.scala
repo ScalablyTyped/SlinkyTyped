@@ -1,9 +1,8 @@
 package typingsSlinky.semanticUiReact
 
 import org.scalablytyped.runtime.TopLevel
+import slinky.core.ReactComponentClass
 import typingsSlinky.react.mod.Component
-import typingsSlinky.react.mod.ComponentClass
-import typingsSlinky.react.mod.ComponentState
 import typingsSlinky.semanticUiReact.confirmConfirmMod.ConfirmProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -14,13 +13,13 @@ import scala.scalajs.js.annotation._
 object confirmMod extends js.Object {
   @js.native
   class default protected ()
-    extends Component[ConfirmProps, ComponentState, js.Any] {
+    extends Component[ConfirmProps, js.Object, js.Any] {
     def this(props: ConfirmProps) = this()
     def this(props: ConfirmProps, context: js.Any) = this()
   }
   
   @js.native
-  object default extends TopLevel[ComponentClass[ConfirmProps, ComponentState]]
+  object default extends TopLevel[ReactComponentClass[ConfirmProps]]
   
 }
 

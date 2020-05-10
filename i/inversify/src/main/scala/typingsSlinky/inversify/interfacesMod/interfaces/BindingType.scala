@@ -18,22 +18,20 @@ trait BindingType extends js.Object
 
 object BindingType {
   @scala.inline
-  def ConstantValue: typingsSlinky.inversify.inversifyStrings.ConstantValue = this.cast("ConstantValue")
+  def ConstantValue: typingsSlinky.inversify.inversifyStrings.ConstantValue = "ConstantValue".asInstanceOf[typingsSlinky.inversify.inversifyStrings.ConstantValue]
   @scala.inline
-  def Constructor: typingsSlinky.inversify.inversifyStrings.Constructor = this.cast("Constructor")
+  def Constructor: typingsSlinky.inversify.inversifyStrings.Constructor = "Constructor".asInstanceOf[typingsSlinky.inversify.inversifyStrings.Constructor]
   @scala.inline
-  def DynamicValue: typingsSlinky.inversify.inversifyStrings.DynamicValue = this.cast("DynamicValue")
+  def DynamicValue: typingsSlinky.inversify.inversifyStrings.DynamicValue = "DynamicValue".asInstanceOf[typingsSlinky.inversify.inversifyStrings.DynamicValue]
   @scala.inline
-  def Factory: typingsSlinky.inversify.inversifyStrings.Factory = this.cast("Factory")
+  def Factory: typingsSlinky.inversify.inversifyStrings.Factory = "Factory".asInstanceOf[typingsSlinky.inversify.inversifyStrings.Factory]
   @scala.inline
-  def Function: typingsSlinky.inversify.inversifyStrings.Function = this.cast("Function")
+  def Function: typingsSlinky.inversify.inversifyStrings.Function = "Function".asInstanceOf[typingsSlinky.inversify.inversifyStrings.Function]
   @scala.inline
-  def Instance: typingsSlinky.inversify.inversifyStrings.Instance = this.cast("Instance")
+  def Instance: typingsSlinky.inversify.inversifyStrings.Instance = "Instance".asInstanceOf[typingsSlinky.inversify.inversifyStrings.Instance]
   @scala.inline
-  def Invalid: typingsSlinky.inversify.inversifyStrings.Invalid = this.cast("Invalid")
+  def Invalid: typingsSlinky.inversify.inversifyStrings.Invalid = "Invalid".asInstanceOf[typingsSlinky.inversify.inversifyStrings.Invalid]
   @scala.inline
-  def Provider: typingsSlinky.inversify.inversifyStrings.Provider = this.cast("Provider")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def Provider: typingsSlinky.inversify.inversifyStrings.Provider = "Provider".asInstanceOf[typingsSlinky.inversify.inversifyStrings.Provider]
 }
 

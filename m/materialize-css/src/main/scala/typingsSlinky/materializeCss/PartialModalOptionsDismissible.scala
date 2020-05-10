@@ -7,48 +7,166 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<materialize-css.M.ModalOptions> */
+@js.native
 trait PartialModalOptionsDismissible extends js.Object {
-  var dismissible: js.UndefOr[Boolean] = js.undefined
-  var endingTop: js.UndefOr[String] = js.undefined
-  var inDuration: js.UndefOr[Double] = js.undefined
-  var onCloseEnd: js.UndefOr[js.ThisFunction1[/* this */ Modal, /* el */ Element, Unit]] = js.undefined
-  var onCloseStart: js.UndefOr[js.ThisFunction1[/* this */ Modal, /* el */ Element, Unit]] = js.undefined
-  var onOpenEnd: js.UndefOr[js.ThisFunction1[/* this */ Modal, /* el */ Element, Unit]] = js.undefined
-  var onOpenStart: js.UndefOr[js.ThisFunction1[/* this */ Modal, /* el */ Element, Unit]] = js.undefined
-  var opacity: js.UndefOr[Double] = js.undefined
-  var outDuration: js.UndefOr[Double] = js.undefined
-  var preventScrolling: js.UndefOr[Boolean] = js.undefined
-  var startingTop: js.UndefOr[String] = js.undefined
+  var dismissible: js.UndefOr[Boolean] = js.native
+  var endingTop: js.UndefOr[String] = js.native
+  var inDuration: js.UndefOr[Double] = js.native
+  var onCloseEnd: js.UndefOr[js.ThisFunction1[/* this */ Modal, /* el */ Element, Unit]] = js.native
+  var onCloseStart: js.UndefOr[js.ThisFunction1[/* this */ Modal, /* el */ Element, Unit]] = js.native
+  var onOpenEnd: js.UndefOr[js.ThisFunction1[/* this */ Modal, /* el */ Element, Unit]] = js.native
+  var onOpenStart: js.UndefOr[js.ThisFunction1[/* this */ Modal, /* el */ Element, Unit]] = js.native
+  var opacity: js.UndefOr[Double] = js.native
+  var outDuration: js.UndefOr[Double] = js.native
+  var preventScrolling: js.UndefOr[Boolean] = js.native
+  var startingTop: js.UndefOr[String] = js.native
 }
 
 object PartialModalOptionsDismissible {
   @scala.inline
-  def apply(
-    dismissible: js.UndefOr[Boolean] = js.undefined,
-    endingTop: String = null,
-    inDuration: Int | Double = null,
-    onCloseEnd: js.ThisFunction1[/* this */ Modal, /* el */ Element, Unit] = null,
-    onCloseStart: js.ThisFunction1[/* this */ Modal, /* el */ Element, Unit] = null,
-    onOpenEnd: js.ThisFunction1[/* this */ Modal, /* el */ Element, Unit] = null,
-    onOpenStart: js.ThisFunction1[/* this */ Modal, /* el */ Element, Unit] = null,
-    opacity: Int | Double = null,
-    outDuration: Int | Double = null,
-    preventScrolling: js.UndefOr[Boolean] = js.undefined,
-    startingTop: String = null
-  ): PartialModalOptionsDismissible = {
+  def apply(): PartialModalOptionsDismissible = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(dismissible)) __obj.updateDynamic("dismissible")(dismissible.asInstanceOf[js.Any])
-    if (endingTop != null) __obj.updateDynamic("endingTop")(endingTop.asInstanceOf[js.Any])
-    if (inDuration != null) __obj.updateDynamic("inDuration")(inDuration.asInstanceOf[js.Any])
-    if (onCloseEnd != null) __obj.updateDynamic("onCloseEnd")(onCloseEnd.asInstanceOf[js.Any])
-    if (onCloseStart != null) __obj.updateDynamic("onCloseStart")(onCloseStart.asInstanceOf[js.Any])
-    if (onOpenEnd != null) __obj.updateDynamic("onOpenEnd")(onOpenEnd.asInstanceOf[js.Any])
-    if (onOpenStart != null) __obj.updateDynamic("onOpenStart")(onOpenStart.asInstanceOf[js.Any])
-    if (opacity != null) __obj.updateDynamic("opacity")(opacity.asInstanceOf[js.Any])
-    if (outDuration != null) __obj.updateDynamic("outDuration")(outDuration.asInstanceOf[js.Any])
-    if (!js.isUndefined(preventScrolling)) __obj.updateDynamic("preventScrolling")(preventScrolling.asInstanceOf[js.Any])
-    if (startingTop != null) __obj.updateDynamic("startingTop")(startingTop.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialModalOptionsDismissible]
   }
+  @scala.inline
+  implicit class PartialModalOptionsDismissibleOps[Self <: PartialModalOptionsDismissible] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDismissible(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dismissible")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDismissible: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dismissible")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEndingTop(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endingTop")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEndingTop: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endingTop")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInDuration(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inDuration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInDuration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inDuration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnCloseEnd(value: js.ThisFunction1[/* this */ Modal, /* el */ Element, Unit]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onCloseEnd")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnCloseEnd: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onCloseEnd")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnCloseStart(value: js.ThisFunction1[/* this */ Modal, /* el */ Element, Unit]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onCloseStart")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnCloseStart: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onCloseStart")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnOpenEnd(value: js.ThisFunction1[/* this */ Modal, /* el */ Element, Unit]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onOpenEnd")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnOpenEnd: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onOpenEnd")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnOpenStart(value: js.ThisFunction1[/* this */ Modal, /* el */ Element, Unit]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onOpenStart")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnOpenStart: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onOpenStart")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOpacity(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("opacity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOpacity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("opacity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOutDuration(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outDuration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOutDuration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outDuration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPreventScrolling(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preventScrolling")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPreventScrolling: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preventScrolling")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartingTop(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startingTop")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartingTop: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startingTop")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -14,14 +14,12 @@ trait LinkEntityType extends js.Object
 
 object LinkEntityType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def email: typingsSlinky.linkifyjs.linkifyjsStrings.email = "email".asInstanceOf[typingsSlinky.linkifyjs.linkifyjsStrings.email]
   @scala.inline
-  def email: typingsSlinky.linkifyjs.linkifyjsStrings.email = this.cast("email")
+  def hashtag: typingsSlinky.linkifyjs.linkifyjsStrings.hashtag = "hashtag".asInstanceOf[typingsSlinky.linkifyjs.linkifyjsStrings.hashtag]
   @scala.inline
-  def hashtag: typingsSlinky.linkifyjs.linkifyjsStrings.hashtag = this.cast("hashtag")
+  def mention: typingsSlinky.linkifyjs.linkifyjsStrings.mention = "mention".asInstanceOf[typingsSlinky.linkifyjs.linkifyjsStrings.mention]
   @scala.inline
-  def mention: typingsSlinky.linkifyjs.linkifyjsStrings.mention = this.cast("mention")
-  @scala.inline
-  def url: typingsSlinky.linkifyjs.linkifyjsStrings.url = this.cast("url")
+  def url: typingsSlinky.linkifyjs.linkifyjsStrings.url = "url".asInstanceOf[typingsSlinky.linkifyjs.linkifyjsStrings.url]
 }
 

@@ -16,18 +16,16 @@ trait Direction extends js.Object
 
 object Direction {
   @scala.inline
-  def auto: typingsSlinky.leaflet.leafletStrings.auto = this.cast("auto")
+  def auto: typingsSlinky.leaflet.leafletStrings.auto = "auto".asInstanceOf[typingsSlinky.leaflet.leafletStrings.auto]
   @scala.inline
-  def bottom: typingsSlinky.leaflet.leafletStrings.bottom = this.cast("bottom")
+  def bottom: typingsSlinky.leaflet.leafletStrings.bottom = "bottom".asInstanceOf[typingsSlinky.leaflet.leafletStrings.bottom]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def center: typingsSlinky.leaflet.leafletStrings.center = "center".asInstanceOf[typingsSlinky.leaflet.leafletStrings.center]
   @scala.inline
-  def center: typingsSlinky.leaflet.leafletStrings.center = this.cast("center")
+  def left: typingsSlinky.leaflet.leafletStrings.left = "left".asInstanceOf[typingsSlinky.leaflet.leafletStrings.left]
   @scala.inline
-  def left: typingsSlinky.leaflet.leafletStrings.left = this.cast("left")
+  def right: typingsSlinky.leaflet.leafletStrings.right = "right".asInstanceOf[typingsSlinky.leaflet.leafletStrings.right]
   @scala.inline
-  def right: typingsSlinky.leaflet.leafletStrings.right = this.cast("right")
-  @scala.inline
-  def top: typingsSlinky.leaflet.leafletStrings.top = this.cast("top")
+  def top: typingsSlinky.leaflet.leafletStrings.top = "top".asInstanceOf[typingsSlinky.leaflet.leafletStrings.top]
 }
 

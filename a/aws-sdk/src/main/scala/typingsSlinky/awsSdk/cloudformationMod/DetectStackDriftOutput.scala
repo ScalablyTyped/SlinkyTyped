@@ -16,8 +16,21 @@ object DetectStackDriftOutput {
   @scala.inline
   def apply(StackDriftDetectionId: StackDriftDetectionId): DetectStackDriftOutput = {
     val __obj = js.Dynamic.literal(StackDriftDetectionId = StackDriftDetectionId.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[DetectStackDriftOutput]
   }
+  @scala.inline
+  implicit class DetectStackDriftOutputOps[Self <: DetectStackDriftOutput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withStackDriftDetectionId(value: StackDriftDetectionId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StackDriftDetectionId")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

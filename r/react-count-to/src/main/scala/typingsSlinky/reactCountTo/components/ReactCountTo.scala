@@ -1,43 +1,43 @@
 package typingsSlinky.reactCountTo.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
+import typingsSlinky.reactCountTo.mod.Props
 import typingsSlinky.reactCountTo.mod.^
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactCountTo
-  extends ExternalComponentWithAttributesWithRefType[tag.type, ^] {
+object ReactCountTo {
   @JSImport("react-count-to", JSImport.Namespace)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className */
-  def apply(
-    speed: Double,
-    to: Double,
-    delay: Int | Double = null,
-    digits: Int | Double = null,
-    easing: /* progress */ Double => Double = null,
-    from: Int | Double = null,
-    onComplete: () => Unit = null,
-    tagName: String = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, ^] = {
-    val __obj = js.Dynamic.literal(speed = speed.asInstanceOf[js.Any], to = to.asInstanceOf[js.Any])
-    if (delay != null) __obj.updateDynamic("delay")(delay.asInstanceOf[js.Any])
-    if (digits != null) __obj.updateDynamic("digits")(digits.asInstanceOf[js.Any])
-    if (easing != null) __obj.updateDynamic("easing")(js.Any.fromFunction1(easing))
-    if (from != null) __obj.updateDynamic("from")(from.asInstanceOf[js.Any])
-    if (onComplete != null) __obj.updateDynamic("onComplete")(js.Any.fromFunction0(onComplete))
-    if (tagName != null) __obj.updateDynamic("tagName")(tagName.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, ^] {
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def delay(value: Double): this.type = set("delay", value.asInstanceOf[js.Any])
+    @scala.inline
+    def digits(value: Double): this.type = set("digits", value.asInstanceOf[js.Any])
+    @scala.inline
+    def easing(value: /* progress */ Double => Double): this.type = set("easing", js.Any.fromFunction1(value))
+    @scala.inline
+    def from(value: Double): this.type = set("from", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onComplete(value: () => Unit): this.type = set("onComplete", js.Any.fromFunction0(value))
+    @scala.inline
+    def tagName(value: String): this.type = set("tagName", value.asInstanceOf[js.Any])
   }
-  type Props = typingsSlinky.reactCountTo.mod.Props
+  
+  def withProps(p: Props): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(speed: Double, to: Double): Builder = {
+    val __props = js.Dynamic.literal(speed = speed.asInstanceOf[js.Any], to = to.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[Props]))
+  }
 }
 

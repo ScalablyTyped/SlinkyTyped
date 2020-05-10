@@ -4,16 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait RootedOptions extends Options {
-  var projectRoot: String
+  var projectRoot: String = js.native
 }
 
 object RootedOptions {
   @scala.inline
   def apply(file: String, projectRoot: String): RootedOptions = {
     val __obj = js.Dynamic.literal(file = file.asInstanceOf[js.Any], projectRoot = projectRoot.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[RootedOptions]
   }
+  @scala.inline
+  implicit class RootedOptionsOps[Self <: RootedOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withProjectRoot(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("projectRoot")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -26,18 +26,65 @@ trait VolumeRecoveryPointInfo extends js.Object {
 
 object VolumeRecoveryPointInfo {
   @scala.inline
-  def apply(
-    VolumeARN: VolumeARN = null,
-    VolumeRecoveryPointTime: String = null,
-    VolumeSizeInBytes: Int | Double = null,
-    VolumeUsageInBytes: Int | Double = null
-  ): VolumeRecoveryPointInfo = {
+  def apply(): VolumeRecoveryPointInfo = {
     val __obj = js.Dynamic.literal()
-    if (VolumeARN != null) __obj.updateDynamic("VolumeARN")(VolumeARN.asInstanceOf[js.Any])
-    if (VolumeRecoveryPointTime != null) __obj.updateDynamic("VolumeRecoveryPointTime")(VolumeRecoveryPointTime.asInstanceOf[js.Any])
-    if (VolumeSizeInBytes != null) __obj.updateDynamic("VolumeSizeInBytes")(VolumeSizeInBytes.asInstanceOf[js.Any])
-    if (VolumeUsageInBytes != null) __obj.updateDynamic("VolumeUsageInBytes")(VolumeUsageInBytes.asInstanceOf[js.Any])
     __obj.asInstanceOf[VolumeRecoveryPointInfo]
   }
+  @scala.inline
+  implicit class VolumeRecoveryPointInfoOps[Self <: VolumeRecoveryPointInfo] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withVolumeARN(value: VolumeARN): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VolumeARN")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVolumeARN: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VolumeARN")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVolumeRecoveryPointTime(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VolumeRecoveryPointTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVolumeRecoveryPointTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VolumeRecoveryPointTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVolumeSizeInBytes(value: long): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VolumeSizeInBytes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVolumeSizeInBytes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VolumeSizeInBytes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVolumeUsageInBytes(value: long): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VolumeUsageInBytes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVolumeUsageInBytes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VolumeUsageInBytes")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -16,7 +16,7 @@ import scala.scalajs.js.annotation._
   *
   * In version 7.6.0: introduced
   */
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.mendixmodelsdk.structuresMod.IStructure because Already inherited
 - typingsSlinky.mendixmodelsdk.elementsMod.IAbstractElement because Already inherited
 - typingsSlinky.mendixmodelsdk.unitsMod.IAbstractUnit because Already inherited
@@ -39,8 +39,8 @@ class MessageDefinitionCollection protected () extends Document {
   @JSName("model")
   var model_FMessageDefinitionCollection: IModel = js.native
   @JSName("containerAsFolderBase")
-  def containerAsFolderBase_MMessageDefinitionCollection(): FolderBase = js.native
-  def messageDefinitions(): IList[MessageDefinition] = js.native
+  def containerAsFolderBase_MMessageDefinitionCollection: FolderBase = js.native
+  def messageDefinitions: IList[MessageDefinition] = js.native
 }
 
 /* static members */

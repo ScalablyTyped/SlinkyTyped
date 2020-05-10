@@ -10,7 +10,6 @@ import typingsSlinky.escpos.escposNumbers.`1`
 import typingsSlinky.escpos.escposNumbers.`2`
 import typingsSlinky.escpos.escposStrings.A
 import typingsSlinky.escpos.escposStrings.B
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -124,7 +123,7 @@ class Printer protected () extends js.Object {
   def qrimage(content: String): Printer = js.native
   def qrimage(
     content: String,
-    callback: js.Function2[/* error */ Error | Null, /* printer */ js.UndefOr[this.type], Unit]
+    callback: js.Function2[/* error */ js.Error | Null, /* printer */ js.UndefOr[this.type], Unit]
   ): Printer = js.native
   def qrimage(content: String, options: AnonMode): Printer = js.native
   def qrimage(

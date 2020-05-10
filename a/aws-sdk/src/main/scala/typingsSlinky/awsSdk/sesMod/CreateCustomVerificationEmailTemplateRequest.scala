@@ -43,8 +43,51 @@ object CreateCustomVerificationEmailTemplateRequest {
     TemplateSubject: Subject
   ): CreateCustomVerificationEmailTemplateRequest = {
     val __obj = js.Dynamic.literal(FailureRedirectionURL = FailureRedirectionURL.asInstanceOf[js.Any], FromEmailAddress = FromEmailAddress.asInstanceOf[js.Any], SuccessRedirectionURL = SuccessRedirectionURL.asInstanceOf[js.Any], TemplateContent = TemplateContent.asInstanceOf[js.Any], TemplateName = TemplateName.asInstanceOf[js.Any], TemplateSubject = TemplateSubject.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[CreateCustomVerificationEmailTemplateRequest]
   }
+  @scala.inline
+  implicit class CreateCustomVerificationEmailTemplateRequestOps[Self <: CreateCustomVerificationEmailTemplateRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFailureRedirectionURL(value: FailureRedirectionURL): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FailureRedirectionURL")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFromEmailAddress(value: FromAddress): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FromEmailAddress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSuccessRedirectionURL(value: SuccessRedirectionURL): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SuccessRedirectionURL")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTemplateContent(value: TemplateContent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TemplateContent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTemplateName(value: TemplateName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TemplateName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTemplateSubject(value: Subject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TemplateSubject")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

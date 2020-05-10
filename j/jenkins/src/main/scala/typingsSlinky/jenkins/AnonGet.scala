@@ -3,7 +3,6 @@ package typingsSlinky.jenkins
 import typingsSlinky.jenkins.jenkinsStrings.html
 import typingsSlinky.jenkins.jenkinsStrings.text
 import typingsSlinky.node.NodeJS.ReadableStream
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,8 +10,8 @@ import scala.scalajs.js.annotation._
 @js.native
 trait AnonGet extends js.Object {
   def get(name: String, n: Double, callback: js.Function2[/* err */ js.Error, /* data */ js.Any, Unit]): Unit = js.native
-  def log(name: String, callback: js.Function2[/* err */ Error, /* data */ js.Any, Unit]): Unit = js.native
-  def log(name: String, n: Double, callback: js.Function2[/* err */ Error, /* data */ js.Any, Unit]): Unit = js.native
+  def log(name: String, callback: js.Function2[/* err */ js.Error, /* data */ js.Any, Unit]): Unit = js.native
+  def log(name: String, n: Double, callback: js.Function2[/* err */ js.Error, /* data */ js.Any, Unit]): Unit = js.native
   def log(
     name: String,
     n: Double,
@@ -27,7 +26,7 @@ trait AnonGet extends js.Object {
     n: Double,
     start: Double,
     `type`: html,
-    callback: js.Function2[/* err */ Error, /* data */ js.Any, Unit]
+    callback: js.Function2[/* err */ js.Error, /* data */ js.Any, Unit]
   ): Unit = js.native
   @JSName("log")
   def log_html(
@@ -44,7 +43,7 @@ trait AnonGet extends js.Object {
     n: Double,
     start: Double,
     `type`: text,
-    callback: js.Function2[/* err */ Error, /* data */ js.Any, Unit]
+    callback: js.Function2[/* err */ js.Error, /* data */ js.Any, Unit]
   ): Unit = js.native
   @JSName("log")
   def log_text(

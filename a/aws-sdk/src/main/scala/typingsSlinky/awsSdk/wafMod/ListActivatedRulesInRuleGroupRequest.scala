@@ -22,12 +22,53 @@ trait ListActivatedRulesInRuleGroupRequest extends js.Object {
 
 object ListActivatedRulesInRuleGroupRequest {
   @scala.inline
-  def apply(Limit: Int | Double = null, NextMarker: NextMarker = null, RuleGroupId: ResourceId = null): ListActivatedRulesInRuleGroupRequest = {
+  def apply(): ListActivatedRulesInRuleGroupRequest = {
     val __obj = js.Dynamic.literal()
-    if (Limit != null) __obj.updateDynamic("Limit")(Limit.asInstanceOf[js.Any])
-    if (NextMarker != null) __obj.updateDynamic("NextMarker")(NextMarker.asInstanceOf[js.Any])
-    if (RuleGroupId != null) __obj.updateDynamic("RuleGroupId")(RuleGroupId.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListActivatedRulesInRuleGroupRequest]
   }
+  @scala.inline
+  implicit class ListActivatedRulesInRuleGroupRequestOps[Self <: ListActivatedRulesInRuleGroupRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLimit(value: PaginationLimit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Limit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLimit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Limit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextMarker(value: NextMarker): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextMarker")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextMarker: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextMarker")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRuleGroupId(value: ResourceId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RuleGroupId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRuleGroupId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RuleGroupId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

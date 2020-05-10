@@ -9,17 +9,5 @@ import scala.scalajs.js.annotation._
 @js.native
 class ^ protected () extends StateCore {
   def this(src: String, md: MarkdownIt, env: js.Any) = this()
-  /* CompleteClass */
-  override var env: js.Any = js.native
-  /* CompleteClass */
-  override var level: Double = js.native
-  /** Link to parser instance */
-  /* CompleteClass */
-  override var md: MarkdownIt = js.native
-  /** The markdown source code that is being parsed. */
-  /* CompleteClass */
-  override var src: String = js.native
-  /* CompleteClass */
-  override var tokens: js.Array[typingsSlinky.markdownIt.tokenMod.^] = js.native
 }
 

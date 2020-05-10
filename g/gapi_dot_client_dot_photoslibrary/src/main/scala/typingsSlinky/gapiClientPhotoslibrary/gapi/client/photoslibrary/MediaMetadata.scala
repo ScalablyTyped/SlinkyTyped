@@ -4,38 +4,96 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait MediaMetadata extends js.Object {
   /**
     * Time when the media item was first created (not when it was uploaded to
     * Google Photos).
     */
-  var creationTime: js.UndefOr[String] = js.undefined
+  var creationTime: js.UndefOr[String] = js.native
   /** Original height (in pixels) of the media item. */
-  var height: js.UndefOr[String] = js.undefined
+  var height: js.UndefOr[String] = js.native
   /** Metadata for a photo media type. */
-  var photo: js.UndefOr[Photo] = js.undefined
+  var photo: js.UndefOr[Photo] = js.native
   /** Metadata for a video media type. */
-  var video: js.UndefOr[Video] = js.undefined
+  var video: js.UndefOr[Video] = js.native
   /** Original width (in pixels) of the media item. */
-  var width: js.UndefOr[String] = js.undefined
+  var width: js.UndefOr[String] = js.native
 }
 
 object MediaMetadata {
   @scala.inline
-  def apply(
-    creationTime: String = null,
-    height: String = null,
-    photo: Photo = null,
-    video: Video = null,
-    width: String = null
-  ): MediaMetadata = {
+  def apply(): MediaMetadata = {
     val __obj = js.Dynamic.literal()
-    if (creationTime != null) __obj.updateDynamic("creationTime")(creationTime.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (photo != null) __obj.updateDynamic("photo")(photo.asInstanceOf[js.Any])
-    if (video != null) __obj.updateDynamic("video")(video.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     __obj.asInstanceOf[MediaMetadata]
   }
+  @scala.inline
+  implicit class MediaMetadataOps[Self <: MediaMetadata] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCreationTime(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("creationTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreationTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("creationTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeight(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPhoto(value: Photo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("photo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPhoto: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("photo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVideo(value: Video): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("video")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVideo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("video")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWidth(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

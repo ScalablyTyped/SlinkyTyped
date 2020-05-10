@@ -9,36 +9,114 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonAlgorithm extends js.Object {
-  var algorithm: js.UndefOr[aes128 | aes192 | aes256 | `3des`] = js.undefined
-  var count: js.UndefOr[Double] = js.undefined
-  var friendlyName: js.UndefOr[String] = js.undefined
-  var generateLocalKeyId: js.UndefOr[Boolean] = js.undefined
-  var localKeyId: js.UndefOr[Hex] = js.undefined
-  var saltSize: js.UndefOr[Double] = js.undefined
-  var useMac: js.UndefOr[Boolean] = js.undefined
+  var algorithm: js.UndefOr[aes128 | aes192 | aes256 | `3des`] = js.native
+  var count: js.UndefOr[Double] = js.native
+  var friendlyName: js.UndefOr[String] = js.native
+  var generateLocalKeyId: js.UndefOr[Boolean] = js.native
+  var localKeyId: js.UndefOr[Hex] = js.native
+  var saltSize: js.UndefOr[Double] = js.native
+  var useMac: js.UndefOr[Boolean] = js.native
 }
 
 object AnonAlgorithm {
   @scala.inline
-  def apply(
-    algorithm: aes128 | aes192 | aes256 | `3des` = null,
-    count: Int | Double = null,
-    friendlyName: String = null,
-    generateLocalKeyId: js.UndefOr[Boolean] = js.undefined,
-    localKeyId: Hex = null,
-    saltSize: Int | Double = null,
-    useMac: js.UndefOr[Boolean] = js.undefined
-  ): AnonAlgorithm = {
+  def apply(): AnonAlgorithm = {
     val __obj = js.Dynamic.literal()
-    if (algorithm != null) __obj.updateDynamic("algorithm")(algorithm.asInstanceOf[js.Any])
-    if (count != null) __obj.updateDynamic("count")(count.asInstanceOf[js.Any])
-    if (friendlyName != null) __obj.updateDynamic("friendlyName")(friendlyName.asInstanceOf[js.Any])
-    if (!js.isUndefined(generateLocalKeyId)) __obj.updateDynamic("generateLocalKeyId")(generateLocalKeyId.asInstanceOf[js.Any])
-    if (localKeyId != null) __obj.updateDynamic("localKeyId")(localKeyId.asInstanceOf[js.Any])
-    if (saltSize != null) __obj.updateDynamic("saltSize")(saltSize.asInstanceOf[js.Any])
-    if (!js.isUndefined(useMac)) __obj.updateDynamic("useMac")(useMac.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonAlgorithm]
   }
+  @scala.inline
+  implicit class AnonAlgorithmOps[Self <: AnonAlgorithm] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAlgorithm(value: aes128 | aes192 | aes256 | `3des`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("algorithm")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlgorithm: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("algorithm")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCount(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("count")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("count")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFriendlyName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("friendlyName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFriendlyName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("friendlyName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGenerateLocalKeyId(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("generateLocalKeyId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGenerateLocalKeyId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("generateLocalKeyId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocalKeyId(value: Hex): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("localKeyId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocalKeyId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("localKeyId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSaltSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("saltSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSaltSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("saltSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUseMac(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useMac")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUseMac: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useMac")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

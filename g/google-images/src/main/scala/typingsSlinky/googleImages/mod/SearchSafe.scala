@@ -13,12 +13,10 @@ trait SearchSafe extends js.Object
 
 object SearchSafe {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def high: typingsSlinky.googleImages.googleImagesStrings.high = "high".asInstanceOf[typingsSlinky.googleImages.googleImagesStrings.high]
   @scala.inline
-  def high: typingsSlinky.googleImages.googleImagesStrings.high = this.cast("high")
+  def medium: typingsSlinky.googleImages.googleImagesStrings.medium = "medium".asInstanceOf[typingsSlinky.googleImages.googleImagesStrings.medium]
   @scala.inline
-  def medium: typingsSlinky.googleImages.googleImagesStrings.medium = this.cast("medium")
-  @scala.inline
-  def off: typingsSlinky.googleImages.googleImagesStrings.off = this.cast("off")
+  def off: typingsSlinky.googleImages.googleImagesStrings.off = "off".asInstanceOf[typingsSlinky.googleImages.googleImagesStrings.off]
 }
 

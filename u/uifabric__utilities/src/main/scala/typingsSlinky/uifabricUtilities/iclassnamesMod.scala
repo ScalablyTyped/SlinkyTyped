@@ -1,5 +1,6 @@
 package typingsSlinky.uifabricUtilities
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,6 +10,6 @@ import scala.scalajs.js.annotation._
 object iclassnamesMod extends js.Object {
   type IClassNames[T] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ key in keyof T ]: string}
-    */ typingsSlinky.uifabricUtilities.uifabricUtilitiesStrings.IClassNames with js.Any
+    */ typingsSlinky.uifabricUtilities.uifabricUtilitiesStrings.IClassNames with TopLevel[js.Any]
 }
 

@@ -18,10 +18,35 @@ trait AssociateSkillWithSkillGroupRequest extends js.Object {
 
 object AssociateSkillWithSkillGroupRequest {
   @scala.inline
-  def apply(SkillId: SkillId, SkillGroupArn: Arn = null): AssociateSkillWithSkillGroupRequest = {
+  def apply(SkillId: SkillId): AssociateSkillWithSkillGroupRequest = {
     val __obj = js.Dynamic.literal(SkillId = SkillId.asInstanceOf[js.Any])
-    if (SkillGroupArn != null) __obj.updateDynamic("SkillGroupArn")(SkillGroupArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[AssociateSkillWithSkillGroupRequest]
   }
+  @scala.inline
+  implicit class AssociateSkillWithSkillGroupRequestOps[Self <: AssociateSkillWithSkillGroupRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSkillId(value: SkillId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SkillId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSkillGroupArn(value: Arn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SkillGroupArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSkillGroupArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SkillGroupArn")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

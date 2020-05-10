@@ -4,20 +4,62 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonHashDigest extends js.Object {
-  var hashDigest: js.UndefOr[String] = js.undefined
-  var hashDigestLength: js.UndefOr[Double] = js.undefined
-  var hashFunction: js.UndefOr[String] = js.undefined
+  var hashDigest: js.UndefOr[String] = js.native
+  var hashDigestLength: js.UndefOr[Double] = js.native
+  var hashFunction: js.UndefOr[String] = js.native
 }
 
 object AnonHashDigest {
   @scala.inline
-  def apply(hashDigest: String = null, hashDigestLength: Int | Double = null, hashFunction: String = null): AnonHashDigest = {
+  def apply(): AnonHashDigest = {
     val __obj = js.Dynamic.literal()
-    if (hashDigest != null) __obj.updateDynamic("hashDigest")(hashDigest.asInstanceOf[js.Any])
-    if (hashDigestLength != null) __obj.updateDynamic("hashDigestLength")(hashDigestLength.asInstanceOf[js.Any])
-    if (hashFunction != null) __obj.updateDynamic("hashFunction")(hashFunction.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonHashDigest]
   }
+  @scala.inline
+  implicit class AnonHashDigestOps[Self <: AnonHashDigest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHashDigest(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hashDigest")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHashDigest: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hashDigest")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHashDigestLength(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hashDigestLength")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHashDigestLength: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hashDigestLength")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHashFunction(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hashFunction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHashFunction: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hashFunction")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

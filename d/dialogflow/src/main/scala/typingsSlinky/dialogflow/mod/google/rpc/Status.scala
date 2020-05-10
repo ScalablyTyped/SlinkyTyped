@@ -5,7 +5,6 @@ import typingsSlinky.dialogflow.mod.google.protobuf.IAny
 import typingsSlinky.protobufjs.mod.IConversionOptions
 import typingsSlinky.protobufjs.mod.Reader
 import typingsSlinky.protobufjs.mod.Writer
-import typingsSlinky.std.Uint8Array
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -56,8 +55,8 @@ object Status extends js.Object {
     */
   def decode(reader: Reader): Status = js.native
   def decode(reader: Reader, length: Double): Status = js.native
-  def decode(reader: Uint8Array): Status = js.native
-  def decode(reader: Uint8Array, length: Double): Status = js.native
+  def decode(reader: js.typedarray.Uint8Array): Status = js.native
+  def decode(reader: js.typedarray.Uint8Array, length: Double): Status = js.native
   /**
     * Decodes a Status message from the specified reader or buffer, length delimited.
     * @param reader Reader or buffer to decode from
@@ -66,7 +65,7 @@ object Status extends js.Object {
     * @throws {$protobuf.util.ProtocolError} If required fields are missing
     */
   def decodeDelimited(reader: Reader): Status = js.native
-  def decodeDelimited(reader: Uint8Array): Status = js.native
+  def decodeDelimited(reader: js.typedarray.Uint8Array): Status = js.native
   /**
     * Encodes the specified Status message. Does not implicitly {@link google.rpc.Status.verify|verify} messages.
     * @param message Status message or plain object to encode

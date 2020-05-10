@@ -19,12 +19,12 @@ trait FormikActions[Values] extends js.Object {
   def resetForm(nextValues: Values): Unit = js.native
   def setError(e: js.Any): Unit = js.native
   def setErrors(errors: FormikErrors[Values]): Unit = js.native
-  def setFieldError(field: String, message: String): Unit = js.native
-  def setFieldTouched(field: String): Unit = js.native
-  def setFieldTouched(field: String, isTouched: Boolean): Unit = js.native
-  def setFieldTouched(field: String, isTouched: Boolean, shouldValidate: Boolean): Unit = js.native
-  def setFieldValue(field: String, value: js.Any): Unit = js.native
-  def setFieldValue(field: String, value: js.Any, shouldValidate: Boolean): Unit = js.native
+  def setFieldError(field: /* keyof Values */ String, message: String): Unit = js.native
+  def setFieldTouched(field: /* keyof Values */ String): Unit = js.native
+  def setFieldTouched(field: /* keyof Values */ String, isTouched: Boolean): Unit = js.native
+  def setFieldTouched(field: /* keyof Values */ String, isTouched: Boolean, shouldValidate: Boolean): Unit = js.native
+  def setFieldValue(field: /* keyof Values */ String, value: js.Any): Unit = js.native
+  def setFieldValue(field: /* keyof Values */ String, value: js.Any, shouldValidate: Boolean): Unit = js.native
   @JSName("setFormikState")
   def setFormikState_error(
     f: js.Function2[

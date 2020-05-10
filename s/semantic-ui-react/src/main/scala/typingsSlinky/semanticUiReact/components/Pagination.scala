@@ -1,11 +1,13 @@
 package typingsSlinky.semanticUiReact.components
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLAnchorElement
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.core.ReactComponentClass
+import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.a.tag
+import typingsSlinky.StBuildingComponent
+import typingsSlinky.react.mod.ReactNodeArray
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandItem
 import typingsSlinky.semanticUiReact.paginationItemMod.PaginationItemProps
 import typingsSlinky.semanticUiReact.paginationMod.default
@@ -14,47 +16,84 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Pagination
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object Pagination {
   @JSImport("semantic-ui-react/dist/commonjs/addons/Pagination", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    totalPages: Double | String,
-    activePage: Double | String = null,
-    `aria-label`: String = null,
-    boundaryRange: Double | String = null,
-    defaultActivePage: Double | String = null,
-    disabled: js.UndefOr[Boolean] = js.undefined,
-    ellipsisItem: SemanticShorthandItem[PaginationItemProps] = null,
-    firstItem: SemanticShorthandItem[PaginationItemProps] = null,
-    lastItem: SemanticShorthandItem[PaginationItemProps] = null,
-    nextItem: SemanticShorthandItem[PaginationItemProps] = null,
-    onPageChange: (/* event */ SyntheticMouseEvent[HTMLAnchorElement], /* data */ PaginationProps) => Unit = null,
-    pageItem: SemanticShorthandItem[PaginationItemProps] = null,
-    prevItem: SemanticShorthandItem[PaginationItemProps] = null,
-    siblingRange: Double | String = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(totalPages = totalPages.asInstanceOf[js.Any])
-    if (activePage != null) __obj.updateDynamic("activePage")(activePage.asInstanceOf[js.Any])
-    if (`aria-label` != null) __obj.updateDynamic("aria-label")(`aria-label`.asInstanceOf[js.Any])
-    if (boundaryRange != null) __obj.updateDynamic("boundaryRange")(boundaryRange.asInstanceOf[js.Any])
-    if (defaultActivePage != null) __obj.updateDynamic("defaultActivePage")(defaultActivePage.asInstanceOf[js.Any])
-    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.asInstanceOf[js.Any])
-    if (ellipsisItem != null) __obj.updateDynamic("ellipsisItem")(ellipsisItem.asInstanceOf[js.Any])
-    if (firstItem != null) __obj.updateDynamic("firstItem")(firstItem.asInstanceOf[js.Any])
-    if (lastItem != null) __obj.updateDynamic("lastItem")(lastItem.asInstanceOf[js.Any])
-    if (nextItem != null) __obj.updateDynamic("nextItem")(nextItem.asInstanceOf[js.Any])
-    if (onPageChange != null) __obj.updateDynamic("onPageChange")(js.Any.fromFunction2(onPageChange))
-    if (pageItem != null) __obj.updateDynamic("pageItem")(pageItem.asInstanceOf[js.Any])
-    if (prevItem != null) __obj.updateDynamic("prevItem")(prevItem.asInstanceOf[js.Any])
-    if (siblingRange != null) __obj.updateDynamic("siblingRange")(siblingRange.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def activePage(value: Double | String): this.type = set("activePage", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `aria-label`(value: String): this.type = set("aria-label", value.asInstanceOf[js.Any])
+    @scala.inline
+    def boundaryRange(value: Double | String): this.type = set("boundaryRange", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultActivePage(value: Double | String): this.type = set("defaultActivePage", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def ellipsisItemReactElement(value: ReactElement): this.type = set("ellipsisItem", value.asInstanceOf[js.Any])
+    @scala.inline
+    def ellipsisItemFunction3(
+      value: (/* component */ ReactComponentClass[PaginationItemProps], PaginationItemProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+    ): this.type = set("ellipsisItem", js.Any.fromFunction3(value))
+    @scala.inline
+    def ellipsisItem(value: SemanticShorthandItem[PaginationItemProps]): this.type = set("ellipsisItem", value.asInstanceOf[js.Any])
+    @scala.inline
+    def firstItemReactElement(value: ReactElement): this.type = set("firstItem", value.asInstanceOf[js.Any])
+    @scala.inline
+    def firstItemFunction3(
+      value: (/* component */ ReactComponentClass[PaginationItemProps], PaginationItemProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+    ): this.type = set("firstItem", js.Any.fromFunction3(value))
+    @scala.inline
+    def firstItem(value: SemanticShorthandItem[PaginationItemProps]): this.type = set("firstItem", value.asInstanceOf[js.Any])
+    @scala.inline
+    def lastItemReactElement(value: ReactElement): this.type = set("lastItem", value.asInstanceOf[js.Any])
+    @scala.inline
+    def lastItemFunction3(
+      value: (/* component */ ReactComponentClass[PaginationItemProps], PaginationItemProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+    ): this.type = set("lastItem", js.Any.fromFunction3(value))
+    @scala.inline
+    def lastItem(value: SemanticShorthandItem[PaginationItemProps]): this.type = set("lastItem", value.asInstanceOf[js.Any])
+    @scala.inline
+    def nextItemReactElement(value: ReactElement): this.type = set("nextItem", value.asInstanceOf[js.Any])
+    @scala.inline
+    def nextItemFunction3(
+      value: (/* component */ ReactComponentClass[PaginationItemProps], PaginationItemProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+    ): this.type = set("nextItem", js.Any.fromFunction3(value))
+    @scala.inline
+    def nextItem(value: SemanticShorthandItem[PaginationItemProps]): this.type = set("nextItem", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onPageChange(value: (/* event */ SyntheticMouseEvent[HTMLAnchorElement], /* data */ PaginationProps) => Unit): this.type = set("onPageChange", js.Any.fromFunction2(value))
+    @scala.inline
+    def pageItemReactElement(value: ReactElement): this.type = set("pageItem", value.asInstanceOf[js.Any])
+    @scala.inline
+    def pageItemFunction3(
+      value: (/* component */ ReactComponentClass[PaginationItemProps], PaginationItemProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+    ): this.type = set("pageItem", js.Any.fromFunction3(value))
+    @scala.inline
+    def pageItem(value: SemanticShorthandItem[PaginationItemProps]): this.type = set("pageItem", value.asInstanceOf[js.Any])
+    @scala.inline
+    def prevItemReactElement(value: ReactElement): this.type = set("prevItem", value.asInstanceOf[js.Any])
+    @scala.inline
+    def prevItemFunction3(
+      value: (/* component */ ReactComponentClass[PaginationItemProps], PaginationItemProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+    ): this.type = set("prevItem", js.Any.fromFunction3(value))
+    @scala.inline
+    def prevItem(value: SemanticShorthandItem[PaginationItemProps]): this.type = set("prevItem", value.asInstanceOf[js.Any])
+    @scala.inline
+    def siblingRange(value: Double | String): this.type = set("siblingRange", value.asInstanceOf[js.Any])
   }
-  type Props = PaginationProps
+  
+  def withProps(p: PaginationProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(totalPages: Double | String): Builder = {
+    val __props = js.Dynamic.literal(totalPages = totalPages.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[PaginationProps]))
+  }
 }
 

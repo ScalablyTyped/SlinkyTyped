@@ -1,41 +1,41 @@
 package typingsSlinky.reactCurrencyFormatter.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactCurrencyFormatter.mod.CurrencyFormatterProps
 import typingsSlinky.reactCurrencyFormatter.mod.^
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactCurrencyFormatter
-  extends ExternalComponentWithAttributesWithRefType[tag.type, ^] {
+object ReactCurrencyFormatter {
   @JSImport("react-currency-formatter", JSImport.Namespace)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: pattern */
-  def apply(
-    quantity: Double,
-    currency: String = null,
-    decimal: String = null,
-    group: String = null,
-    locale: String = null,
-    symbol: String = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, ^] = {
-    val __obj = js.Dynamic.literal(quantity = quantity.asInstanceOf[js.Any])
-    if (currency != null) __obj.updateDynamic("currency")(currency.asInstanceOf[js.Any])
-    if (decimal != null) __obj.updateDynamic("decimal")(decimal.asInstanceOf[js.Any])
-    if (group != null) __obj.updateDynamic("group")(group.asInstanceOf[js.Any])
-    if (locale != null) __obj.updateDynamic("locale")(locale.asInstanceOf[js.Any])
-    if (symbol != null) __obj.updateDynamic("symbol")(symbol.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, ^] {
+    @scala.inline
+    def currency(value: String): this.type = set("currency", value.asInstanceOf[js.Any])
+    @scala.inline
+    def decimal(value: String): this.type = set("decimal", value.asInstanceOf[js.Any])
+    @scala.inline
+    def group(value: String): this.type = set("group", value.asInstanceOf[js.Any])
+    @scala.inline
+    def locale(value: String): this.type = set("locale", value.asInstanceOf[js.Any])
+    @scala.inline
+    def pattern(value: String): this.type = set("pattern", value.asInstanceOf[js.Any])
+    @scala.inline
+    def symbol(value: String): this.type = set("symbol", value.asInstanceOf[js.Any])
   }
-  type Props = CurrencyFormatterProps
+  
+  def withProps(p: CurrencyFormatterProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(quantity: Double): Builder = {
+    val __props = js.Dynamic.literal(quantity = quantity.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[CurrencyFormatterProps]))
+  }
 }
 

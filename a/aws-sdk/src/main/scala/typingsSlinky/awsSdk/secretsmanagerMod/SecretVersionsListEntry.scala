@@ -26,18 +26,65 @@ trait SecretVersionsListEntry extends js.Object {
 
 object SecretVersionsListEntry {
   @scala.inline
-  def apply(
-    CreatedDate: js.Date = null,
-    LastAccessedDate: js.Date = null,
-    VersionId: SecretVersionIdType = null,
-    VersionStages: SecretVersionStagesType = null
-  ): SecretVersionsListEntry = {
+  def apply(): SecretVersionsListEntry = {
     val __obj = js.Dynamic.literal()
-    if (CreatedDate != null) __obj.updateDynamic("CreatedDate")(CreatedDate.asInstanceOf[js.Any])
-    if (LastAccessedDate != null) __obj.updateDynamic("LastAccessedDate")(LastAccessedDate.asInstanceOf[js.Any])
-    if (VersionId != null) __obj.updateDynamic("VersionId")(VersionId.asInstanceOf[js.Any])
-    if (VersionStages != null) __obj.updateDynamic("VersionStages")(VersionStages.asInstanceOf[js.Any])
     __obj.asInstanceOf[SecretVersionsListEntry]
   }
+  @scala.inline
+  implicit class SecretVersionsListEntryOps[Self <: SecretVersionsListEntry] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCreatedDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreatedDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreatedDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreatedDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLastAccessedDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LastAccessedDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLastAccessedDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LastAccessedDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVersionId(value: SecretVersionIdType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VersionId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVersionId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VersionId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVersionStages(value: SecretVersionStagesType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VersionStages")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVersionStages: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VersionStages")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

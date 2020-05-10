@@ -8,19 +8,39 @@ import scala.scalajs.js.annotation._
 /**
   *
   */
+@js.native
 trait SelfSubjectRulesReviewSpec extends js.Object {
   /**
     * Namespace to evaluate rules for. Required.
     */
-  var namespace: js.UndefOr[Input[String]] = js.undefined
+  var namespace: js.UndefOr[Input[String]] = js.native
 }
 
 object SelfSubjectRulesReviewSpec {
   @scala.inline
-  def apply(namespace: Input[String] = null): SelfSubjectRulesReviewSpec = {
+  def apply(): SelfSubjectRulesReviewSpec = {
     val __obj = js.Dynamic.literal()
-    if (namespace != null) __obj.updateDynamic("namespace")(namespace.asInstanceOf[js.Any])
     __obj.asInstanceOf[SelfSubjectRulesReviewSpec]
   }
+  @scala.inline
+  implicit class SelfSubjectRulesReviewSpecOps[Self <: SelfSubjectRulesReviewSpec] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNamespace(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("namespace")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNamespace: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("namespace")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

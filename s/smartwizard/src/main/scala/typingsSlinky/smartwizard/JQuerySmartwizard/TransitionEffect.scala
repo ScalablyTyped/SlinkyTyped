@@ -13,12 +13,10 @@ trait TransitionEffect extends js.Object
 
 object TransitionEffect {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def fade: typingsSlinky.smartwizard.smartwizardStrings.fade = "fade".asInstanceOf[typingsSlinky.smartwizard.smartwizardStrings.fade]
   @scala.inline
-  def fade: typingsSlinky.smartwizard.smartwizardStrings.fade = this.cast("fade")
+  def none: typingsSlinky.smartwizard.smartwizardStrings.none = "none".asInstanceOf[typingsSlinky.smartwizard.smartwizardStrings.none]
   @scala.inline
-  def none: typingsSlinky.smartwizard.smartwizardStrings.none = this.cast("none")
-  @scala.inline
-  def slide: typingsSlinky.smartwizard.smartwizardStrings.slide = this.cast("slide")
+  def slide: typingsSlinky.smartwizard.smartwizardStrings.slide = "slide".asInstanceOf[typingsSlinky.smartwizard.smartwizardStrings.slide]
 }
 

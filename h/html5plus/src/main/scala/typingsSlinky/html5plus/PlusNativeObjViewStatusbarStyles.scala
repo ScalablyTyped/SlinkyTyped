@@ -10,6 +10,7 @@ import scala.scalajs.js.annotation._
   * 
   * 参考: [http://www.html5plus.org/doc/zh_cn/nativeobj.html](http://www.html5plus.org/doc/zh_cn/nativeobj.html)
   */
+@js.native
 trait PlusNativeObjViewStatusbarStyles extends js.Object {
   /**
     * 系统状态栏区域背景颜色
@@ -17,15 +18,34 @@ trait PlusNativeObjViewStatusbarStyles extends js.Object {
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/nativeobj.html](http://www.html5plus.org/doc/zh_cn/nativeobj.html)
     */
-  var background: js.UndefOr[String] = js.undefined
+  var background: js.UndefOr[String] = js.native
 }
 
 object PlusNativeObjViewStatusbarStyles {
   @scala.inline
-  def apply(background: String = null): PlusNativeObjViewStatusbarStyles = {
+  def apply(): PlusNativeObjViewStatusbarStyles = {
     val __obj = js.Dynamic.literal()
-    if (background != null) __obj.updateDynamic("background")(background.asInstanceOf[js.Any])
     __obj.asInstanceOf[PlusNativeObjViewStatusbarStyles]
   }
+  @scala.inline
+  implicit class PlusNativeObjViewStatusbarStylesOps[Self <: PlusNativeObjViewStatusbarStyles] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBackground(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("background")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackground: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("background")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

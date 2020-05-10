@@ -1,35 +1,40 @@
 package typingsSlinky.connectBusboy.mod
 
-import typingsSlinky.busboy.AnonFieldNameSize
 import typingsSlinky.busboy.busboy.BusboyConfig
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ConnectBusboyOptions extends BusboyConfig {
-  var immediate: js.UndefOr[Boolean] = js.undefined
+  var immediate: js.UndefOr[Boolean] = js.native
 }
 
 object ConnectBusboyOptions {
   @scala.inline
-  def apply(
-    defCharset: String = null,
-    fileHwm: Int | Double = null,
-    headers: js.Any = null,
-    highWaterMark: Int | Double = null,
-    immediate: js.UndefOr[Boolean] = js.undefined,
-    limits: AnonFieldNameSize = null,
-    preservePath: js.UndefOr[Boolean] = js.undefined
-  ): ConnectBusboyOptions = {
+  def apply(): ConnectBusboyOptions = {
     val __obj = js.Dynamic.literal()
-    if (defCharset != null) __obj.updateDynamic("defCharset")(defCharset.asInstanceOf[js.Any])
-    if (fileHwm != null) __obj.updateDynamic("fileHwm")(fileHwm.asInstanceOf[js.Any])
-    if (headers != null) __obj.updateDynamic("headers")(headers.asInstanceOf[js.Any])
-    if (highWaterMark != null) __obj.updateDynamic("highWaterMark")(highWaterMark.asInstanceOf[js.Any])
-    if (!js.isUndefined(immediate)) __obj.updateDynamic("immediate")(immediate.asInstanceOf[js.Any])
-    if (limits != null) __obj.updateDynamic("limits")(limits.asInstanceOf[js.Any])
-    if (!js.isUndefined(preservePath)) __obj.updateDynamic("preservePath")(preservePath.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConnectBusboyOptions]
   }
+  @scala.inline
+  implicit class ConnectBusboyOptionsOps[Self <: ConnectBusboyOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withImmediate(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("immediate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImmediate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("immediate")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

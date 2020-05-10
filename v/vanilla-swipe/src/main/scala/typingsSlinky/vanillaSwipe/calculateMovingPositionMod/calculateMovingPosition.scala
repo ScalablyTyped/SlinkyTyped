@@ -1,7 +1,7 @@
 package typingsSlinky.vanillaSwipe.calculateMovingPositionMod
 
-import typingsSlinky.std.MouseEvent
-import typingsSlinky.std.TouchEvent
+import org.scalajs.dom.raw.MouseEvent
+import org.scalajs.dom.raw.TouchEvent
 import typingsSlinky.vanillaSwipe.AnonX
 import scala.scalajs.js
 import scala.scalajs.js.`|`

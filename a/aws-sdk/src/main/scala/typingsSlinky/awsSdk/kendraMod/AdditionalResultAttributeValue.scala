@@ -14,10 +14,29 @@ trait AdditionalResultAttributeValue extends js.Object {
 
 object AdditionalResultAttributeValue {
   @scala.inline
-  def apply(TextWithHighlightsValue: TextWithHighlights = null): AdditionalResultAttributeValue = {
+  def apply(): AdditionalResultAttributeValue = {
     val __obj = js.Dynamic.literal()
-    if (TextWithHighlightsValue != null) __obj.updateDynamic("TextWithHighlightsValue")(TextWithHighlightsValue.asInstanceOf[js.Any])
     __obj.asInstanceOf[AdditionalResultAttributeValue]
   }
+  @scala.inline
+  implicit class AdditionalResultAttributeValueOps[Self <: AdditionalResultAttributeValue] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withTextWithHighlightsValue(value: TextWithHighlights): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TextWithHighlightsValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTextWithHighlightsValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TextWithHighlightsValue")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

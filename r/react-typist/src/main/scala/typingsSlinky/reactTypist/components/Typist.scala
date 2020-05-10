@@ -1,15 +1,17 @@
 package typingsSlinky.reactTypist.components
 
+import typingsSlinky.reactTypist.mod.TypistProps
 import typingsSlinky.reactTypist.mod.Typist_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Typist extends SharedApply_TypistProps_1642881001[Typist_] {
+object Typist {
   @JSImport("react-typist", "Typist")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: TypistProps): SharedBuilder_TypistProps1183841886[Typist_] = new SharedBuilder_TypistProps1183841886[Typist_](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Typist.type): SharedBuilder_TypistProps1183841886[Typist_] = new SharedBuilder_TypistProps1183841886[Typist_](js.Array(this.component, js.Dictionary.empty))()
 }
 

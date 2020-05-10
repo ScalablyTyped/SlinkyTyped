@@ -1,6 +1,5 @@
 package typingsSlinky.dojo.dojox.lang
 
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -144,7 +143,7 @@ trait aspect extends js.Object {
     * @param method A string name of the function in obj. In case of RegExp allmethods of obj matching the regular expression are advised.
     * @param advice An object, which defines advises, or a function, whichreturns such object, or an array of previous items.The advice object can define following member functions:before, around, afterReturning, afterThrowing, after.If the function is supplied, it is called with a contextobject once per call to create a temporary advice object, whichis destroyed after the processing. The temporary advice objectcan implement a destroy() method, if it wants to be called whennot needed.
     */
-  def advise(obj: js.Object, method: RegExp, advice: js.Array[_]): Unit = js.native
+  def advise(obj: js.Object, method: js.RegExp, advice: js.Array[_]): Unit = js.native
   /**
     * Attach AOP-style advices to a method.
     * Attaches AOP-style advices to a method. Can attach several
@@ -163,7 +162,7 @@ trait aspect extends js.Object {
     * @param method A string name of the function in obj. In case of RegExp allmethods of obj matching the regular expression are advised.
     * @param advice An object, which defines advises, or a function, whichreturns such object, or an array of previous items.The advice object can define following member functions:before, around, afterReturning, afterThrowing, after.If the function is supplied, it is called with a contextobject once per call to create a temporary advice object, whichis destroyed after the processing. The temporary advice objectcan implement a destroy() method, if it wants to be called whennot needed.
     */
-  def advise(obj: js.Object, method: RegExp, advice: js.Function): Unit = js.native
+  def advise(obj: js.Object, method: js.RegExp, advice: js.Function): Unit = js.native
   /**
     * Attach AOP-style advices to a method.
     * Attaches AOP-style advices to a method. Can attach several
@@ -182,7 +181,7 @@ trait aspect extends js.Object {
     * @param method A string name of the function in obj. In case of RegExp allmethods of obj matching the regular expression are advised.
     * @param advice An object, which defines advises, or a function, whichreturns such object, or an array of previous items.The advice object can define following member functions:before, around, afterReturning, afterThrowing, after.If the function is supplied, it is called with a contextobject once per call to create a temporary advice object, whichis destroyed after the processing. The temporary advice objectcan implement a destroy() method, if it wants to be called whennot needed.
     */
-  def advise(obj: js.Object, method: RegExp, advice: js.Object): Unit = js.native
+  def advise(obj: js.Object, method: js.RegExp, advice: js.Object): Unit = js.native
   /**
     * Attach AOP-style advices to methods.
     * Attaches AOP-style advices to object's methods. Can attach several
@@ -243,7 +242,7 @@ object aspect extends js.Object {
     def apply(instance: js.Object): Unit = js.native
     def apply(instance: js.Object, method: String): Unit = js.native
     def apply(instance: js.Object, method: js.Array[_]): Unit = js.native
-    def apply(instance: js.Object, method: RegExp): Unit = js.native
+    def apply(instance: js.Object, method: js.RegExp): Unit = js.native
   }
   
   /**

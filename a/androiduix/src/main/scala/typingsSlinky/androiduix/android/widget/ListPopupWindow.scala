@@ -13,7 +13,7 @@ import typingsSlinky.androiduix.android.widget.AbsListView.OnScrollListener
 import typingsSlinky.androiduix.android.widget.AdapterView.OnItemClickListener
 import typingsSlinky.androiduix.android.widget.AdapterView.OnItemSelectedListener
 import typingsSlinky.androiduix.android.widget.PopupWindow.OnDismissListener
-import typingsSlinky.androiduix.java.lang.Runnable
+import typingsSlinky.androiduix.java_.lang.Runnable
 import typingsSlinky.std.Map
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -136,22 +136,14 @@ object ListPopupWindow extends js.Object {
     def getPopup(): ListPopupWindow = js.native
     /* protected */ def onForwardingStarted(): Boolean = js.native
     /* protected */ def onForwardingStopped(): Boolean = js.native
-    /* CompleteClass */
-    override def onTouch(v: View, event: MotionEvent): Unit = js.native
     /* private */ def onTouchForwarded(srcEvent: js.Any): js.Any = js.native
     /* private */ def onTouchObserved(srcEvent: js.Any): js.Any = js.native
-    /* CompleteClass */
-    override def onViewAttachedToWindow(v: View): js.Any = js.native
-    /* CompleteClass */
-    override def onViewDetachedFromWindow(v: View): js.Any = js.native
   }
   
   @js.native
   class ListSelectorHider protected () extends Runnable {
     def this(arg: ListPopupWindow) = this()
     var _ListPopupWindow_this: ListPopupWindow = js.native
-    /* CompleteClass */
-    override def run(): js.Any = js.native
   }
   
   @js.native
@@ -164,26 +156,18 @@ object ListPopupWindow extends js.Object {
   class PopupScrollListener protected () extends OnScrollListener {
     def this(arg: ListPopupWindow) = this()
     var _ListPopupWindow_this: ListPopupWindow = js.native
-    /* CompleteClass */
-    override def onScroll(view: AbsListView, firstVisibleItem: Double, visibleItemCount: Double, totalItemCount: Double): Unit = js.native
-    /* CompleteClass */
-    override def onScrollStateChanged(view: AbsListView, scrollState: Double): Unit = js.native
   }
   
   @js.native
   class PopupTouchInterceptor protected () extends OnTouchListener {
     def this(arg: ListPopupWindow) = this()
     var _ListPopupWindow_this: ListPopupWindow = js.native
-    /* CompleteClass */
-    override def onTouch(v: View, event: MotionEvent): Unit = js.native
   }
   
   @js.native
   class ResizePopupRunnable protected () extends Runnable {
     def this(arg: ListPopupWindow) = this()
     var _ListPopupWindow_this: ListPopupWindow = js.native
-    /* CompleteClass */
-    override def run(): js.Any = js.native
   }
   
   var DEBUG: js.Any = js.native
@@ -209,8 +193,6 @@ object ListPopupWindow extends js.Object {
     class DisallowIntercept protected () extends Runnable {
       def this(arg: ForwardingListener) = this()
       var _ForwardingListener_this: ForwardingListener = js.native
-      /* CompleteClass */
-      override def run(): js.Any = js.native
     }
     
   }

@@ -16,18 +16,16 @@ trait EventType extends js.Object
 
 object EventType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def close: typingsSlinky.k6.k6Strings.close = "close".asInstanceOf[typingsSlinky.k6.k6Strings.close]
   @scala.inline
-  def close: typingsSlinky.k6.k6Strings.close = this.cast("close")
+  def error: typingsSlinky.k6.k6Strings.error = "error".asInstanceOf[typingsSlinky.k6.k6Strings.error]
   @scala.inline
-  def error: typingsSlinky.k6.k6Strings.error = this.cast("error")
+  def message: typingsSlinky.k6.k6Strings.message = "message".asInstanceOf[typingsSlinky.k6.k6Strings.message]
   @scala.inline
-  def message: typingsSlinky.k6.k6Strings.message = this.cast("message")
+  def open: typingsSlinky.k6.k6Strings.open = "open".asInstanceOf[typingsSlinky.k6.k6Strings.open]
   @scala.inline
-  def open: typingsSlinky.k6.k6Strings.open = this.cast("open")
+  def ping: typingsSlinky.k6.k6Strings.ping = "ping".asInstanceOf[typingsSlinky.k6.k6Strings.ping]
   @scala.inline
-  def ping: typingsSlinky.k6.k6Strings.ping = this.cast("ping")
-  @scala.inline
-  def pong: typingsSlinky.k6.k6Strings.pong = this.cast("pong")
+  def pong: typingsSlinky.k6.k6Strings.pong = "pong".asInstanceOf[typingsSlinky.k6.k6Strings.pong]
 }
 

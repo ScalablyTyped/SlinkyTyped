@@ -14,7 +14,7 @@ import scala.scalajs.js.annotation._
 /**
   * See: {@link https://docs.mendix.com/refguide7/project-settings relevant section in reference guide}
   */
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.mendixmodelsdk.structuresMod.IStructure because Already inherited
 - typingsSlinky.mendixmodelsdk.elementsMod.IAbstractElement because Already inherited
 - typingsSlinky.mendixmodelsdk.unitsMod.IAbstractUnit because Already inherited
@@ -33,8 +33,8 @@ class ProjectSettings protected () extends ProjectDocument {
   @JSName("model")
   var model_FProjectSettings: IModel = js.native
   @JSName("containerAsProject")
-  def containerAsProject_MProjectSettings(): Project = js.native
-  def settingsParts(): IList[ProjectSettingsPart] = js.native
+  def containerAsProject_MProjectSettings: Project = js.native
+  def settingsParts: IList[ProjectSettingsPart] = js.native
 }
 
 /* static members */

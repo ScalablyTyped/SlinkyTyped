@@ -1,70 +1,79 @@
 package typingsSlinky.officeUiFabricReact.components
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLButtonElement
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.web.SyntheticKeyboardEvent
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.button.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.officeUiFabricReact.colorPickerGridCellTypesMod.IColorCellProps
 import typingsSlinky.officeUiFabricReact.colorPickerGridCellTypesMod.IColorPickerGridCellProps
 import typingsSlinky.officeUiFabricReact.colorPickerGridCellTypesMod.IColorPickerGridCellStyleProps
 import typingsSlinky.officeUiFabricReact.colorPickerGridCellTypesMod.IColorPickerGridCellStyles
+import typingsSlinky.std.Partial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ColorPickerGridCell
-  extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+object ColorPickerGridCell {
   @JSImport("office-ui-fabric-react", "ColorPickerGridCell")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: disabled, id, onKeyDown, onMouseLeave */
-  def apply(
-    item: IColorCellProps,
-    selected: Boolean,
-    borderWidth: Int | Double = null,
-    circle: js.UndefOr[Boolean] = js.undefined,
-    color: String = null,
-    height: Int | Double = null,
-    idPrefix: String = null,
-    index: Int | Double = null,
-    label: String = null,
-    onClick: /* item */ IColorCellProps => Unit = null,
-    onFocus: /* item */ IColorCellProps => Unit = null,
-    onHover: /* item */ js.UndefOr[IColorCellProps] => Unit = null,
-    onMouseEnter: /* ev */ SyntheticMouseEvent[HTMLButtonElement] => Boolean = null,
-    onMouseMove: /* ev */ SyntheticMouseEvent[HTMLButtonElement] => Boolean = null,
-    onWheel: /* ev */ SyntheticMouseEvent[HTMLButtonElement] => Unit = null,
-    styles: IStyleFunctionOrObject[IColorPickerGridCellStyleProps, IColorPickerGridCellStyles] = null,
-    theme: ITheme = null,
-    width: Int | Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, js.Object] = {
-    val __obj = js.Dynamic.literal(item = item.asInstanceOf[js.Any], selected = selected.asInstanceOf[js.Any])
-    if (borderWidth != null) __obj.updateDynamic("borderWidth")(borderWidth.asInstanceOf[js.Any])
-    if (!js.isUndefined(circle)) __obj.updateDynamic("circle")(circle.asInstanceOf[js.Any])
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (idPrefix != null) __obj.updateDynamic("idPrefix")(idPrefix.asInstanceOf[js.Any])
-    if (index != null) __obj.updateDynamic("index")(index.asInstanceOf[js.Any])
-    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
-    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction1(onClick))
-    if (onFocus != null) __obj.updateDynamic("onFocus")(js.Any.fromFunction1(onFocus))
-    if (onHover != null) __obj.updateDynamic("onHover")(js.Any.fromFunction1(onHover))
-    if (onMouseEnter != null) __obj.updateDynamic("onMouseEnter")(js.Any.fromFunction1(onMouseEnter))
-    if (onMouseMove != null) __obj.updateDynamic("onMouseMove")(js.Any.fromFunction1(onMouseMove))
-    if (onWheel != null) __obj.updateDynamic("onWheel")(js.Any.fromFunction1(onWheel))
-    if (styles != null) __obj.updateDynamic("styles")(styles.asInstanceOf[js.Any])
-    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, js.Object] {
+    @scala.inline
+    def borderWidth(value: Double): this.type = set("borderWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def circle(value: Boolean): this.type = set("circle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def color(value: String): this.type = set("color", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def height(value: Double): this.type = set("height", value.asInstanceOf[js.Any])
+    @scala.inline
+    def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
+    @scala.inline
+    def idPrefix(value: String): this.type = set("idPrefix", value.asInstanceOf[js.Any])
+    @scala.inline
+    def index(value: Double): this.type = set("index", value.asInstanceOf[js.Any])
+    @scala.inline
+    def label(value: String): this.type = set("label", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onClick(value: /* item */ IColorCellProps => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
+    @scala.inline
+    def onFocus(value: /* item */ IColorCellProps => Unit): this.type = set("onFocus", js.Any.fromFunction1(value))
+    @scala.inline
+    def onHover(value: /* item */ js.UndefOr[IColorCellProps] => Unit): this.type = set("onHover", js.Any.fromFunction1(value))
+    @scala.inline
+    def onKeyDown(value: /* ev */ SyntheticKeyboardEvent[HTMLButtonElement] => Unit): this.type = set("onKeyDown", js.Any.fromFunction1(value))
+    @scala.inline
+    def onMouseEnter(value: /* ev */ SyntheticMouseEvent[HTMLButtonElement] => Boolean): this.type = set("onMouseEnter", js.Any.fromFunction1(value))
+    @scala.inline
+    def onMouseLeave(value: /* ev */ SyntheticMouseEvent[HTMLButtonElement] => Unit): this.type = set("onMouseLeave", js.Any.fromFunction1(value))
+    @scala.inline
+    def onMouseMove(value: /* ev */ SyntheticMouseEvent[HTMLButtonElement] => Boolean): this.type = set("onMouseMove", js.Any.fromFunction1(value))
+    @scala.inline
+    def onWheel(value: /* ev */ SyntheticMouseEvent[HTMLButtonElement] => Unit): this.type = set("onWheel", js.Any.fromFunction1(value))
+    @scala.inline
+    def stylesFunction1(value: IColorPickerGridCellStyleProps => Partial[IColorPickerGridCellStyles]): this.type = set("styles", js.Any.fromFunction1(value))
+    @scala.inline
+    def styles(value: IStyleFunctionOrObject[IColorPickerGridCellStyleProps, IColorPickerGridCellStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
+    @scala.inline
+    def theme(value: ITheme): this.type = set("theme", value.asInstanceOf[js.Any])
+    @scala.inline
+    def width(value: Double): this.type = set("width", value.asInstanceOf[js.Any])
   }
-  type Props = IColorPickerGridCellProps
+  
+  def withProps(p: IColorPickerGridCellProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(item: IColorCellProps, selected: Boolean): Builder = {
+    val __props = js.Dynamic.literal(item = item.asInstanceOf[js.Any], selected = selected.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[IColorPickerGridCellProps]))
+  }
 }
 

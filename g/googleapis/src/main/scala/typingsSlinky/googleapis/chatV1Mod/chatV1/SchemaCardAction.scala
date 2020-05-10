@@ -23,11 +23,41 @@ trait SchemaCardAction extends js.Object {
 
 object SchemaCardAction {
   @scala.inline
-  def apply(actionLabel: String = null, onClick: SchemaOnClick = null): SchemaCardAction = {
+  def apply(): SchemaCardAction = {
     val __obj = js.Dynamic.literal()
-    if (actionLabel != null) __obj.updateDynamic("actionLabel")(actionLabel.asInstanceOf[js.Any])
-    if (onClick != null) __obj.updateDynamic("onClick")(onClick.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaCardAction]
   }
+  @scala.inline
+  implicit class SchemaCardActionOps[Self <: SchemaCardAction] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withActionLabel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("actionLabel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutActionLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("actionLabel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnClick(value: SchemaOnClick): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnClick: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

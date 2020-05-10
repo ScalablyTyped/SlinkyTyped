@@ -2,7 +2,6 @@ package typingsSlinky.firebaseDatabase.repoTransactionMod
 
 import typingsSlinky.firebaseDatabase.dataSnapshotMod.DataSnapshot
 import typingsSlinky.firebaseDatabase.pathMod.Path
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,7 +15,7 @@ object firebaseDatabaseDistSrcCoreRepoAugmentingMod extends js.Object {
     def startTransaction(
       path: Path,
       transactionUpdate: js.Function1[/* a */ js.Any, Unit],
-      onComplete: js.Function3[/* a */ Error, /* b */ Boolean, /* c */ DataSnapshot, Unit],
+      onComplete: js.Function3[/* a */ js.Error, /* b */ Boolean, /* c */ DataSnapshot, Unit],
       applyLocally: Boolean
     ): Unit = js.native
     def startTransaction(

@@ -5,16 +5,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Transition extends js.Object {
-  def before(opts: Options, curr: Element, next: Element, fwd: Boolean): Unit
+  def before(opts: Options, curr: Element, next: Element, fwd: Boolean): Unit = js.native
 }
 
 object Transition {
   @scala.inline
   def apply(before: (Options, Element, Element, Boolean) => Unit): Transition = {
     val __obj = js.Dynamic.literal(before = js.Any.fromFunction4(before))
-  
     __obj.asInstanceOf[Transition]
   }
+  @scala.inline
+  implicit class TransitionOps[Self <: Transition] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBefore(value: (Options, Element, Element, Boolean) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("before")(js.Any.fromFunction4(value))
+        ret
+    }
+  }
+  
 }
 

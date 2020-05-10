@@ -15,16 +15,14 @@ trait OnenotePatchActionType extends js.Object
 
 object OnenotePatchActionType {
   @scala.inline
-  def Append: typingsSlinky.microsoftGraph.microsoftGraphStrings.Append = this.cast("Append")
+  def Append: typingsSlinky.microsoftGraph.microsoftGraphStrings.Append = "Append".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.Append]
   @scala.inline
-  def Delete: typingsSlinky.microsoftGraph.microsoftGraphStrings.Delete = this.cast("Delete")
+  def Delete: typingsSlinky.microsoftGraph.microsoftGraphStrings.Delete = "Delete".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.Delete]
   @scala.inline
-  def Insert: typingsSlinky.microsoftGraph.microsoftGraphStrings.Insert = this.cast("Insert")
+  def Insert: typingsSlinky.microsoftGraph.microsoftGraphStrings.Insert = "Insert".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.Insert]
   @scala.inline
-  def Prepend: typingsSlinky.microsoftGraph.microsoftGraphStrings.Prepend = this.cast("Prepend")
+  def Prepend: typingsSlinky.microsoftGraph.microsoftGraphStrings.Prepend = "Prepend".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.Prepend]
   @scala.inline
-  def Replace: typingsSlinky.microsoftGraph.microsoftGraphStrings.Replace = this.cast("Replace")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def Replace: typingsSlinky.microsoftGraph.microsoftGraphStrings.Replace = "Replace".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.Replace]
 }
 

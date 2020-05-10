@@ -1,10 +1,7 @@
 package typingsSlinky.bizcharts.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.antvG2.mod.Styles.line
 import typingsSlinky.antvG2.mod.Styles.text
 import typingsSlinky.bizcharts.mod.LabelProps
@@ -12,47 +9,64 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Label
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.bizcharts.mod.Label] {
+object Label {
   @JSImport("bizcharts", "Label")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    autoRotate: js.UndefOr[Boolean] = js.undefined,
-    content: String | (js.Tuple2[String, js.Function2[/* x */ js.UndefOr[_], /* y */ js.UndefOr[_], String]]) = null,
-    formatter: (js.Function3[
-      /* text */ js.UndefOr[js.Any], 
-      /* item */ js.UndefOr[js.Any], 
-      /* index */ js.UndefOr[Double], 
-      String
-    ]) | Double = null,
-    htmlTemplate: (js.Function3[
-      /* text */ js.UndefOr[js.Any], 
-      /* item */ js.UndefOr[js.Any], 
-      /* index */ js.UndefOr[Double], 
-      String
-    ]) | String = null,
-    labelEmit: js.UndefOr[Boolean] = js.undefined,
-    labelLine: (js.Function2[/* x */ js.UndefOr[js.Any], /* y */ js.UndefOr[js.Any], line]) | line | Boolean = null,
-    offset: Int | Double = null,
-    textStyle: text | (js.Function1[/* t */ js.UndefOr[js.Any], text]) = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.bizcharts.mod.Label] = {
-    val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(autoRotate)) __obj.updateDynamic("autoRotate")(autoRotate.asInstanceOf[js.Any])
-    if (content != null) __obj.updateDynamic("content")(content.asInstanceOf[js.Any])
-    if (formatter != null) __obj.updateDynamic("formatter")(formatter.asInstanceOf[js.Any])
-    if (htmlTemplate != null) __obj.updateDynamic("htmlTemplate")(htmlTemplate.asInstanceOf[js.Any])
-    if (!js.isUndefined(labelEmit)) __obj.updateDynamic("labelEmit")(labelEmit.asInstanceOf[js.Any])
-    if (labelLine != null) __obj.updateDynamic("labelLine")(labelLine.asInstanceOf[js.Any])
-    if (offset != null) __obj.updateDynamic("offset")(offset.asInstanceOf[js.Any])
-    if (textStyle != null) __obj.updateDynamic("textStyle")(textStyle.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.bizcharts.mod.Label] {
+    @scala.inline
+    def autoRotate(value: Boolean): this.type = set("autoRotate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def content(
+      value: String | (js.Tuple2[String, js.Function2[/* x */ js.UndefOr[_], /* y */ js.UndefOr[_], String]])
+    ): this.type = set("content", value.asInstanceOf[js.Any])
+    @scala.inline
+    def formatterFunction3(
+      value: (/* text */ js.UndefOr[js.Any], /* item */ js.UndefOr[js.Any], /* index */ js.UndefOr[Double]) => String
+    ): this.type = set("formatter", js.Any.fromFunction3(value))
+    @scala.inline
+    def formatter(
+      value: (js.Function3[
+          /* text */ js.UndefOr[js.Any], 
+          /* item */ js.UndefOr[js.Any], 
+          /* index */ js.UndefOr[Double], 
+          String
+        ]) | Double
+    ): this.type = set("formatter", value.asInstanceOf[js.Any])
+    @scala.inline
+    def htmlTemplateFunction3(
+      value: (/* text */ js.UndefOr[js.Any], /* item */ js.UndefOr[js.Any], /* index */ js.UndefOr[Double]) => String
+    ): this.type = set("htmlTemplate", js.Any.fromFunction3(value))
+    @scala.inline
+    def htmlTemplate(
+      value: (js.Function3[
+          /* text */ js.UndefOr[js.Any], 
+          /* item */ js.UndefOr[js.Any], 
+          /* index */ js.UndefOr[Double], 
+          String
+        ]) | String
+    ): this.type = set("htmlTemplate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def labelEmit(value: Boolean): this.type = set("labelEmit", value.asInstanceOf[js.Any])
+    @scala.inline
+    def labelLineFunction2(value: (/* x */ js.UndefOr[js.Any], /* y */ js.UndefOr[js.Any]) => line): this.type = set("labelLine", js.Any.fromFunction2(value))
+    @scala.inline
+    def labelLine(
+      value: (js.Function2[/* x */ js.UndefOr[js.Any], /* y */ js.UndefOr[js.Any], line]) | line | Boolean
+    ): this.type = set("labelLine", value.asInstanceOf[js.Any])
+    @scala.inline
+    def offset(value: Double): this.type = set("offset", value.asInstanceOf[js.Any])
+    @scala.inline
+    def textStyleFunction1(value: /* t */ js.UndefOr[js.Any] => text): this.type = set("textStyle", js.Any.fromFunction1(value))
+    @scala.inline
+    def textStyle(value: text | (js.Function1[/* t */ js.UndefOr[js.Any], text])): this.type = set("textStyle", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.bizcharts.mod.Label] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.bizcharts.mod.Label](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = LabelProps
+  
+  def withProps(p: LabelProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Label.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

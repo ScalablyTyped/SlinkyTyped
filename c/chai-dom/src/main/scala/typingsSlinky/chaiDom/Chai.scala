@@ -1,6 +1,6 @@
 package typingsSlinky.chaiDom
 
-import typingsSlinky.std.HTMLElement
+import org.scalajs.dom.raw.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,6 +13,7 @@ object Chai extends js.Object {
     var displayed: Assertion = js.native
     var empty: Assertion = js.native
     var trimmed: Assertion = js.native
+    var visible: Assertion = js.native
     def attr(name: String): Assertion = js.native
     def attr(name: String, value: String): Assertion = js.native
     def attribute(name: String): Assertion = js.native

@@ -20,7 +20,7 @@ object removeEventListener_mouseover extends js.Object {
   def apply(
     `type`: mouseover,
     listener: js.ThisFunction1[/* this */ Window_, /* ev */ org.scalajs.dom.raw.MouseEvent, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
 }
 

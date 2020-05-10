@@ -31,18 +31,65 @@ trait SchemaVoice extends js.Object {
 
 object SchemaVoice {
   @scala.inline
-  def apply(
-    languageCodes: js.Array[String] = null,
-    name: String = null,
-    naturalSampleRateHertz: Int | Double = null,
-    ssmlGender: String = null
-  ): SchemaVoice = {
+  def apply(): SchemaVoice = {
     val __obj = js.Dynamic.literal()
-    if (languageCodes != null) __obj.updateDynamic("languageCodes")(languageCodes.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (naturalSampleRateHertz != null) __obj.updateDynamic("naturalSampleRateHertz")(naturalSampleRateHertz.asInstanceOf[js.Any])
-    if (ssmlGender != null) __obj.updateDynamic("ssmlGender")(ssmlGender.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaVoice]
   }
+  @scala.inline
+  implicit class SchemaVoiceOps[Self <: SchemaVoice] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLanguageCodes(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("languageCodes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLanguageCodes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("languageCodes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNaturalSampleRateHertz(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("naturalSampleRateHertz")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNaturalSampleRateHertz: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("naturalSampleRateHertz")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSsmlGender(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ssmlGender")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSsmlGender: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ssmlGender")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

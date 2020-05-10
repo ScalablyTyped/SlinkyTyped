@@ -1,48 +1,42 @@
 package typingsSlinky.recharts.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.recharts.mod.ResponsiveContainerProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ResponsiveContainer
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.recharts.mod.ResponsiveContainer] {
+object ResponsiveContainer {
   @JSImport("recharts", "ResponsiveContainer")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    aspect: Int | Double = null,
-    className: String | Double = null,
-    debounce: Int | Double = null,
-    height: String | Double = null,
-    id: String | Double = null,
-    maxHeight: String | Double = null,
-    minHeight: String | Double = null,
-    minWidth: String | Double = null,
-    width: String | Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.recharts.mod.ResponsiveContainer] = {
-    val __obj = js.Dynamic.literal()
-    if (aspect != null) __obj.updateDynamic("aspect")(aspect.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (debounce != null) __obj.updateDynamic("debounce")(debounce.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (maxHeight != null) __obj.updateDynamic("maxHeight")(maxHeight.asInstanceOf[js.Any])
-    if (minHeight != null) __obj.updateDynamic("minHeight")(minHeight.asInstanceOf[js.Any])
-    if (minWidth != null) __obj.updateDynamic("minWidth")(minWidth.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.recharts.mod.ResponsiveContainer] {
+    @scala.inline
+    def aspect(value: Double): this.type = set("aspect", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String | Double): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def debounce(value: Double): this.type = set("debounce", value.asInstanceOf[js.Any])
+    @scala.inline
+    def height(value: String | Double): this.type = set("height", value.asInstanceOf[js.Any])
+    @scala.inline
+    def id(value: String | Double): this.type = set("id", value.asInstanceOf[js.Any])
+    @scala.inline
+    def maxHeight(value: String | Double): this.type = set("maxHeight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def minHeight(value: String | Double): this.type = set("minHeight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def minWidth(value: String | Double): this.type = set("minWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def width(value: String | Double): this.type = set("width", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.recharts.mod.ResponsiveContainer] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.recharts.mod.ResponsiveContainer](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = ResponsiveContainerProps
+  
+  def withProps(p: ResponsiveContainerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: ResponsiveContainer.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

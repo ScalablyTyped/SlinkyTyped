@@ -14,10 +14,29 @@ trait DescribeRaidArraysResult extends js.Object {
 
 object DescribeRaidArraysResult {
   @scala.inline
-  def apply(RaidArrays: RaidArrays = null): DescribeRaidArraysResult = {
+  def apply(): DescribeRaidArraysResult = {
     val __obj = js.Dynamic.literal()
-    if (RaidArrays != null) __obj.updateDynamic("RaidArrays")(RaidArrays.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeRaidArraysResult]
   }
+  @scala.inline
+  implicit class DescribeRaidArraysResultOps[Self <: DescribeRaidArraysResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRaidArrays(value: RaidArrays): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RaidArrays")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRaidArrays: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RaidArrays")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

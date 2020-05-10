@@ -1,16 +1,18 @@
 package typingsSlinky.reactSelect.components
 
+import typingsSlinky.reactSelect.selectMod.Props
 import typingsSlinky.reactSelect.selectMod.default
+import typingsSlinky.reactSelect.typesMod.OptionTypeBase
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Select
-  extends SharedApply_Props_2108948542[default[js.Any]] {
+object Select {
   @JSImport("react-select/src/Select", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps[OptionType <: OptionTypeBase](p: Props[OptionType]): SharedBuilder_Props1248470529[default[js.Any], OptionType] = new SharedBuilder_Props1248470529[default[js.Any], OptionType](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make[OptionType <: OptionTypeBase](companion: Select.type): SharedBuilder_Props1248470529[default[js.Any], OptionType] = new SharedBuilder_Props1248470529[default[js.Any], OptionType](js.Array(this.component, js.Dictionary.empty))()
 }
 

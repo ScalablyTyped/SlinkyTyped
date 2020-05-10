@@ -2,7 +2,6 @@ package typingsSlinky.humanDate.mod
 
 import typingsSlinky.humanDate.RelativeTimeOptionsreturn
 import typingsSlinky.humanDate.RelativeTimeOptionsreturnAllUnits
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,8 +15,8 @@ object relativeTime extends js.Object {
   def apply(arg: Double): String = js.native
   def apply(arg: Double, options: RelativeTimeOptionsreturn): String = js.native
   def apply(arg: Double, options: RelativeTimeOptionsreturnAllUnits): RelativeTimeReturns = js.native
-  def apply(arg: Date): String = js.native
-  def apply(arg: Date, options: RelativeTimeOptionsreturn): String = js.native
-  def apply(arg: Date, options: RelativeTimeOptionsreturnAllUnits): RelativeTimeReturns = js.native
+  def apply(arg: js.Date): String = js.native
+  def apply(arg: js.Date, options: RelativeTimeOptionsreturn): String = js.native
+  def apply(arg: js.Date, options: RelativeTimeOptionsreturnAllUnits): RelativeTimeReturns = js.native
 }
 

@@ -8,9 +8,5 @@ import scala.scalajs.js.annotation._
 @js.native
 class MemoryCls protected () extends Memory {
   def this(descriptor: MemoryDescriptor) = this()
-  /* CompleteClass */
-  override val buffer: scala.scalajs.js.typedarray.ArrayBuffer = js.native
-  /* CompleteClass */
-  override def grow(delta: Double): Double = js.native
 }
 

@@ -4,24 +4,62 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonPage extends js.Object {
-  var page: js.UndefOr[String] = js.undefined
-  var persistent: js.UndefOr[Boolean] = js.undefined
-  var scripts: js.UndefOr[js.Array[String]] = js.undefined
+  var page: js.UndefOr[String] = js.native
+  var persistent: js.UndefOr[Boolean] = js.native
+  var scripts: js.UndefOr[js.Array[String]] = js.native
 }
 
 object AnonPage {
   @scala.inline
-  def apply(
-    page: String = null,
-    persistent: js.UndefOr[Boolean] = js.undefined,
-    scripts: js.Array[String] = null
-  ): AnonPage = {
+  def apply(): AnonPage = {
     val __obj = js.Dynamic.literal()
-    if (page != null) __obj.updateDynamic("page")(page.asInstanceOf[js.Any])
-    if (!js.isUndefined(persistent)) __obj.updateDynamic("persistent")(persistent.asInstanceOf[js.Any])
-    if (scripts != null) __obj.updateDynamic("scripts")(scripts.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonPage]
   }
+  @scala.inline
+  implicit class AnonPageOps[Self <: AnonPage] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPage(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("page")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("page")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPersistent(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("persistent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPersistent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("persistent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScripts(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scripts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScripts: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scripts")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

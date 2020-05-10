@@ -22,16 +22,59 @@ trait ClickAwayListenerProps extends js.Object {
 
 object ClickAwayListenerProps {
   @scala.inline
-  def apply(
-    children: TagMod[Any],
-    onClickAway: ChangeEvent[js.Object] => Unit,
-    mouseEvent: onClick | onMouseDown | onMouseUp | `false` = null,
-    touchEvent: onTouchStart | onTouchEnd | `false` = null
-  ): ClickAwayListenerProps = {
-    val __obj = js.Dynamic.literal(children = children.asInstanceOf[js.Any], onClickAway = js.Any.fromFunction1(onClickAway))
-    if (mouseEvent != null) __obj.updateDynamic("mouseEvent")(mouseEvent.asInstanceOf[js.Any])
-    if (touchEvent != null) __obj.updateDynamic("touchEvent")(touchEvent.asInstanceOf[js.Any])
+  def apply(onClickAway: ChangeEvent[js.Object] => Unit): ClickAwayListenerProps = {
+    val __obj = js.Dynamic.literal(onClickAway = js.Any.fromFunction1(onClickAway))
     __obj.asInstanceOf[ClickAwayListenerProps]
   }
+  @scala.inline
+  implicit class ClickAwayListenerPropsOps[Self <: ClickAwayListenerProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOnClickAway(value: ChangeEvent[js.Object] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onClickAway")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withChildren(value: TagMod[Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChildren: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMouseEvent(value: onClick | onMouseDown | onMouseUp | `false`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mouseEvent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMouseEvent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mouseEvent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTouchEvent(value: onTouchStart | onTouchEnd | `false`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("touchEvent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTouchEvent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("touchEvent")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

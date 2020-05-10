@@ -1,80 +1,79 @@
 package typingsSlinky.senchaTouch.Ext.draw.modifier
 
-import typingsSlinky.senchaTouch.Ext.Array
-import typingsSlinky.senchaTouch.Ext.IClass
 import typingsSlinky.senchaTouch.Ext.draw.sprite.ISprite
 import typingsSlinky.senchaTouch.Ext.mixin.IObservable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.senchaTouch.Ext.IClass because Already inherited
 - typingsSlinky.senchaTouch.Ext.IBase because Already inherited
-- typingsSlinky.senchaTouch.Ext.draw.modifier.IModifier because var conflicts: alias, alternateClassName, callOverridden, callParent, callSuper, config, destroy, extend, getInitialConfig, inheritableStatics, initConfig, mixins, platformConfig, self, singleton, statics, uses. Inlined next, previous, sprite, getNext, getPrevious, getSprite, popUp, prepareAttributes, pushDown, setNext, setPrevious, setSprite */ trait IAnimation extends IObservable {
+- typingsSlinky.senchaTouch.Ext.draw.modifier.IModifier because var conflicts: alias, alternateClassName, callOverridden, callParent, callSuper, config, destroy, extend, getInitialConfig, inheritableStatics, initConfig, mixins, platformConfig, self, singleton, statics, uses. Inlined next, previous, sprite, getNext, getPrevious, getSprite, popUp, prepareAttributes, pushDown, setNext, setPrevious, setSprite */ @js.native
+trait IAnimation extends IObservable {
   /** [Method] Remove special easings on the given attributes
   		* @param attrs Object The source attributes.
   		*/
-  var clearDurationOn: js.UndefOr[js.Function1[/* attrs */ js.UndefOr[js.Any], Unit]] = js.undefined
+  var clearDurationOn: js.UndefOr[js.Function1[/* attrs */ js.UndefOr[js.Any], Unit]] = js.native
   /** [Method] Remove special easings on the given attributes
   		* @param attrs String/Array The source attribute(s).
   		*/
-  var clearEasingOn: js.UndefOr[js.Function1[/* attrs */ js.UndefOr[js.Any], Unit]] = js.undefined
+  var clearEasingOn: js.UndefOr[js.Function1[/* attrs */ js.UndefOr[js.Any], Unit]] = js.native
   /** [Config Option] (Object) */
-  var customDuration: js.UndefOr[js.Any] = js.undefined
+  var customDuration: js.UndefOr[js.Any] = js.native
   /** [Config Option] (Object) */
-  var customEasings: js.UndefOr[js.Any] = js.undefined
+  var customEasings: js.UndefOr[js.Any] = js.native
   /** [Config Option] (Number) */
-  var duration: js.UndefOr[Double] = js.undefined
+  var duration: js.UndefOr[Double] = js.native
   /** [Config Option] (Function) */
-  var easing: js.UndefOr[js.Any] = js.undefined
+  var easing: js.UndefOr[js.Any] = js.native
   /** [Method] Returns the value of customDuration
   		* @returns Object
   		*/
-  var getCustomDuration: js.UndefOr[js.Function0[_]] = js.undefined
+  var getCustomDuration: js.UndefOr[js.Function0[_]] = js.native
   /** [Method] Returns the value of customEasings
   		* @returns Object
   		*/
-  var getCustomEasings: js.UndefOr[js.Function0[_]] = js.undefined
+  var getCustomEasings: js.UndefOr[js.Function0[_]] = js.native
   /** [Method] Returns the value of duration
   		* @returns Number
   		*/
-  var getDuration: js.UndefOr[js.Function0[Double]] = js.undefined
+  var getDuration: js.UndefOr[js.Function0[Double]] = js.native
   /** [Method] Returns the value of easing
   		* @returns Function
   		*/
-  var getEasing: js.UndefOr[js.Function0[_]] = js.undefined
+  var getEasing: js.UndefOr[js.Function0[_]] = js.native
   /** [Method] Returns the value of next
   		* @returns Ext.draw.modifier.Modifier
   		*/
-  var getNext: js.UndefOr[js.Function0[this.type]] = js.undefined
+  var getNext: js.UndefOr[js.Function0[this.type]] = js.native
   /** [Method] Returns the value of previous
   		* @returns Ext.draw.modifier.Modifier
   		*/
-  var getPrevious: js.UndefOr[js.Function0[this.type]] = js.undefined
+  var getPrevious: js.UndefOr[js.Function0[this.type]] = js.native
   /** [Method] Returns the value of sprite
   		* @returns Ext.draw.sprite.Sprite
   		*/
-  var getSprite: js.UndefOr[js.Function0[ISprite]] = js.undefined
+  var getSprite: js.UndefOr[js.Function0[ISprite]] = js.native
   /** [Config Option] (Ext.draw.modifier.Modifier) */
-  var next: js.UndefOr[IModifier] = js.undefined
+  var next: js.UndefOr[IModifier] = js.native
   /** [Method] Invoked when changes need to be popped up to the top
   		* @param attributes Object The source attributes.
   		* @param changes Object The changes to be popped up.
   		*/
-  var popUp: js.UndefOr[js.Function2[js.UndefOr[js.Any], js.UndefOr[js.Any], Unit]] = js.undefined
+  var popUp: js.UndefOr[js.Function2[js.UndefOr[js.Any], js.UndefOr[js.Any], Unit]] = js.native
   /** [Method] Validate attribute set before use
   		* @param attr Object The attribute to be validated. Note that it may be already initialized, so do not override properties that have already been used.
   		*/
-  var prepareAttributes: js.UndefOr[js.Function1[js.UndefOr[js.Any], Unit]] = js.undefined
+  var prepareAttributes: js.UndefOr[js.Function1[js.UndefOr[js.Any], Unit]] = js.native
   /** [Config Option] (Ext.draw.modifier.Modifier) */
-  var previous: js.UndefOr[IModifier] = js.undefined
+  var previous: js.UndefOr[IModifier] = js.native
   /** [Method] Invoked when changes need to be pushed down to the sprite
   		* @param attr Object The source attributes.
   		* @param changes Object The changes to make. This object might be changed unexpectedly inside the method.
   		* @returns Mixed
   		*/
-  var pushDown: js.UndefOr[js.Function2[js.UndefOr[js.Any], js.UndefOr[js.Any], _]] = js.undefined
+  var pushDown: js.UndefOr[js.Function2[js.UndefOr[js.Any], js.UndefOr[js.Any], _]] = js.native
   /** [Method] Relays selected events from the specified Observable as if the events were fired by this
   		* @param object Object The Observable whose events this object is to relay.
   		* @param events String/Array/Object Array of event names to relay.
@@ -83,217 +82,428 @@ import scala.scalajs.js.annotation._
   @JSName("relayEvents")
   var relayEvents_IAnimation: js.UndefOr[
     js.Function2[/* object */ js.UndefOr[js.Any], /* events */ js.UndefOr[js.Any], IObservable]
-  ] = js.undefined
+  ] = js.native
   /** [Method] Sets the value of customDuration
   		* @param customDuration Object The new value.
   		*/
-  var setCustomDuration: js.UndefOr[js.Function1[/* customDuration */ js.UndefOr[js.Any], Unit]] = js.undefined
+  var setCustomDuration: js.UndefOr[js.Function1[/* customDuration */ js.UndefOr[js.Any], Unit]] = js.native
   /** [Method] Sets the value of customEasings
   		* @param customEasings Object The new value.
   		*/
-  var setCustomEasings: js.UndefOr[js.Function1[/* customEasings */ js.UndefOr[js.Any], Unit]] = js.undefined
+  var setCustomEasings: js.UndefOr[js.Function1[/* customEasings */ js.UndefOr[js.Any], Unit]] = js.native
   /** [Method] Sets the value of duration
   		* @param duration Number The new value.
   		*/
-  var setDuration: js.UndefOr[js.Function1[/* duration */ js.UndefOr[Double], Unit]] = js.undefined
+  var setDuration: js.UndefOr[js.Function1[/* duration */ js.UndefOr[Double], Unit]] = js.native
   /** [Method] Set special duration on the given attributes
   		* @param attrs String/Array The source attributes.
   		* @param duration Number The special duration.
   		*/
   var setDurationOn: js.UndefOr[
     js.Function2[/* attrs */ js.UndefOr[js.Any], /* duration */ js.UndefOr[Double], Unit]
-  ] = js.undefined
+  ] = js.native
   /** [Method] Sets the value of easing
   		* @param easing Function The new value.
   		*/
-  var setEasing: js.UndefOr[js.Function1[/* easing */ js.UndefOr[js.Any], Unit]] = js.undefined
+  var setEasing: js.UndefOr[js.Function1[/* easing */ js.UndefOr[js.Any], Unit]] = js.native
   /** [Method] Set special easings on the given attributes
   		* @param attrs String/Array The source attribute(s).
   		* @param easing String The special easings.
   		*/
   var setEasingOn: js.UndefOr[
     js.Function2[/* attrs */ js.UndefOr[js.Any], /* easing */ js.UndefOr[String], Unit]
-  ] = js.undefined
+  ] = js.native
   /** [Method] Sets the value of next
   		* @param next Ext.draw.modifier.Modifier The new value.
   		*/
-  var setNext: js.UndefOr[js.Function1[/* next */ js.UndefOr[this.type], Unit]] = js.undefined
+  var setNext: js.UndefOr[js.Function1[/* next */ js.UndefOr[this.type], Unit]] = js.native
   /** [Method] Sets the value of previous
   		* @param previous Ext.draw.modifier.Modifier The new value.
   		*/
-  var setPrevious: js.UndefOr[js.Function1[/* previous */ js.UndefOr[this.type], Unit]] = js.undefined
+  var setPrevious: js.UndefOr[js.Function1[/* previous */ js.UndefOr[this.type], Unit]] = js.native
   /** [Method] Sets the value of sprite
   		* @param sprite Ext.draw.sprite.Sprite The new value.
   		*/
-  var setSprite: js.UndefOr[js.Function1[/* sprite */ js.UndefOr[ISprite], Unit]] = js.undefined
+  var setSprite: js.UndefOr[js.Function1[/* sprite */ js.UndefOr[ISprite], Unit]] = js.native
   /** [Config Option] (Ext.draw.sprite.Sprite) */
-  var sprite: js.UndefOr[ISprite] = js.undefined
+  var sprite: js.UndefOr[ISprite] = js.native
   /** [Method] Stop all animations effected by this modifier */
-  var stop: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var stop: js.UndefOr[js.Function0[Unit]] = js.native
 }
 
 object IAnimation {
   @scala.inline
-  def apply(
-    addAfterListener: (/* eventName */ js.UndefOr[js.Any], /* fn */ js.UndefOr[js.Any], /* scope */ js.UndefOr[js.Any], /* options */ js.UndefOr[js.Any]) => Unit = null,
-    addBeforeListener: (/* eventName */ js.UndefOr[js.Any], /* fn */ js.UndefOr[js.Any], /* scope */ js.UndefOr[js.Any], /* options */ js.UndefOr[js.Any]) => Unit = null,
-    addEvents: /* eventNames */ js.UndefOr[js.Any] => Unit = null,
-    addListener: (/* eventName */ js.UndefOr[js.Any], /* fn */ js.UndefOr[js.Any], /* scope */ js.UndefOr[js.Any], /* options */ js.UndefOr[js.Any], /* order */ js.UndefOr[String]) => Unit = null,
-    addManagedListener: (/* object */ js.UndefOr[js.Any], /* eventName */ js.UndefOr[js.Any], /* fn */ js.UndefOr[js.Any], /* scope */ js.UndefOr[js.Any], /* options */ js.UndefOr[js.Any]) => Unit = null,
-    alias: Array = null,
-    alternateClassName: js.Any = null,
-    bubbleEvents: js.Any = null,
-    callOverridden: /* args */ js.UndefOr[js.Any] => _ = null,
-    callParent: /* args */ js.UndefOr[js.Any] => _ = null,
-    callSuper: /* args */ js.UndefOr[js.Any] => _ = null,
-    clearDurationOn: /* attrs */ js.UndefOr[js.Any] => Unit = null,
-    clearEasingOn: /* attrs */ js.UndefOr[js.Any] => Unit = null,
-    clearListeners: () => Unit = null,
-    config: js.Any = null,
-    customDuration: js.Any = null,
-    customEasings: js.Any = null,
-    destroy: () => Unit = null,
-    duration: Int | Double = null,
-    easing: js.Any = null,
-    enableBubble: /* events */ js.UndefOr[js.Any] => Unit = null,
-    extend: String = null,
-    fireAction: (/* eventName */ js.UndefOr[String], /* args */ js.UndefOr[Array], /* fn */ js.UndefOr[js.Any], /* scope */ js.UndefOr[js.Any]) => _ = null,
-    fireEvent: (/* eventName */ String, /* repeated */ js.Any) => Boolean = null,
-    getBubbleEvents: () => _ = null,
-    getCustomDuration: () => _ = null,
-    getCustomEasings: () => _ = null,
-    getDuration: () => Double = null,
-    getEasing: () => _ = null,
-    getId: () => _ = null,
-    getInitialConfig: /* name */ js.UndefOr[String] => _ = null,
-    getListeners: () => _ = null,
-    getNext: () => IAnimation = null,
-    getPrevious: () => IAnimation = null,
-    getSprite: () => ISprite = null,
-    hasListener: /* eventName */ js.UndefOr[String] => Boolean = null,
-    inheritableStatics: js.Any = null,
-    initConfig: /* instanceConfig */ js.UndefOr[js.Any] => _ = null,
-    listeners: js.Any = null,
-    mixins: js.Any = null,
-    mon: (/* object */ js.UndefOr[js.Any], /* eventName */ js.UndefOr[js.Any], /* fn */ js.UndefOr[js.Any], /* scope */ js.UndefOr[js.Any], /* options */ js.UndefOr[js.Any]) => Unit = null,
-    mun: (/* object */ js.UndefOr[js.Any], /* eventName */ js.UndefOr[js.Any], /* fn */ js.UndefOr[js.Any], /* scope */ js.UndefOr[js.Any]) => Unit = null,
-    next: IModifier = null,
-    on: (/* eventName */ js.UndefOr[js.Any], /* fn */ js.UndefOr[js.Any], /* scope */ js.UndefOr[js.Any], /* options */ js.UndefOr[js.Any], /* order */ js.UndefOr[String]) => Unit = null,
-    onAfter: (/* eventName */ js.UndefOr[js.Any], /* fn */ js.UndefOr[js.Any], /* scope */ js.UndefOr[js.Any], /* options */ js.UndefOr[js.Any]) => Unit = null,
-    onBefore: (/* eventName */ js.UndefOr[js.Any], /* fn */ js.UndefOr[js.Any], /* scope */ js.UndefOr[js.Any], /* options */ js.UndefOr[js.Any]) => Unit = null,
-    platformConfig: js.Any = null,
-    popUp: (js.UndefOr[js.Any], js.UndefOr[js.Any]) => Unit = null,
-    prepareAttributes: js.UndefOr[js.Any] => Unit = null,
-    previous: IModifier = null,
-    pushDown: (js.UndefOr[js.Any], js.UndefOr[js.Any]) => _ = null,
-    relayEvents: (/* object */ js.UndefOr[js.Any], /* events */ js.UndefOr[js.Any]) => IObservable = null,
-    removeAfterListener: (/* eventName */ js.UndefOr[js.Any], /* fn */ js.UndefOr[js.Any], /* scope */ js.UndefOr[js.Any], /* options */ js.UndefOr[js.Any]) => Unit = null,
-    removeBeforeListener: (/* eventName */ js.UndefOr[js.Any], /* fn */ js.UndefOr[js.Any], /* scope */ js.UndefOr[js.Any], /* options */ js.UndefOr[js.Any]) => Unit = null,
-    removeListener: (/* eventName */ js.UndefOr[js.Any], /* fn */ js.UndefOr[js.Any], /* scope */ js.UndefOr[js.Any], /* options */ js.UndefOr[js.Any], /* order */ js.UndefOr[String]) => Unit = null,
-    removeManagedListener: (/* object */ js.UndefOr[js.Any], /* eventName */ js.UndefOr[js.Any], /* fn */ js.UndefOr[js.Any], /* scope */ js.UndefOr[js.Any]) => Unit = null,
-    resumeEvents: /* discardQueuedEvents */ js.UndefOr[Boolean] => Unit = null,
-    self: IClass = null,
-    setBubbleEvents: /* bubbleEvents */ js.UndefOr[js.Any] => Unit = null,
-    setCustomDuration: /* customDuration */ js.UndefOr[js.Any] => Unit = null,
-    setCustomEasings: /* customEasings */ js.UndefOr[js.Any] => Unit = null,
-    setDuration: /* duration */ js.UndefOr[Double] => Unit = null,
-    setDurationOn: (/* attrs */ js.UndefOr[js.Any], /* duration */ js.UndefOr[Double]) => Unit = null,
-    setEasing: /* easing */ js.UndefOr[js.Any] => Unit = null,
-    setEasingOn: (/* attrs */ js.UndefOr[js.Any], /* easing */ js.UndefOr[String]) => Unit = null,
-    setListeners: /* listeners */ js.UndefOr[js.Any] => Unit = null,
-    setNext: /* next */ js.UndefOr[IAnimation] => Unit = null,
-    setPrevious: /* previous */ js.UndefOr[IAnimation] => Unit = null,
-    setSprite: /* sprite */ js.UndefOr[ISprite] => Unit = null,
-    singleton: js.UndefOr[Boolean] = js.undefined,
-    sprite: ISprite = null,
-    statics: js.Any = null,
-    stop: () => Unit = null,
-    suspendEvents: () => Unit = null,
-    un: (/* eventName */ js.UndefOr[js.Any], /* fn */ js.UndefOr[js.Any], /* scope */ js.UndefOr[js.Any], /* options */ js.UndefOr[js.Any], /* order */ js.UndefOr[String]) => Unit = null,
-    unAfter: (/* eventName */ js.UndefOr[js.Any], /* fn */ js.UndefOr[js.Any], /* scope */ js.UndefOr[js.Any], /* options */ js.UndefOr[js.Any]) => Unit = null,
-    unBefore: (/* eventName */ js.UndefOr[js.Any], /* fn */ js.UndefOr[js.Any], /* scope */ js.UndefOr[js.Any], /* options */ js.UndefOr[js.Any]) => Unit = null,
-    uses: Array = null
-  ): IAnimation = {
+  def apply(): IAnimation = {
     val __obj = js.Dynamic.literal()
-    if (addAfterListener != null) __obj.updateDynamic("addAfterListener")(js.Any.fromFunction4(addAfterListener))
-    if (addBeforeListener != null) __obj.updateDynamic("addBeforeListener")(js.Any.fromFunction4(addBeforeListener))
-    if (addEvents != null) __obj.updateDynamic("addEvents")(js.Any.fromFunction1(addEvents))
-    if (addListener != null) __obj.updateDynamic("addListener")(js.Any.fromFunction5(addListener))
-    if (addManagedListener != null) __obj.updateDynamic("addManagedListener")(js.Any.fromFunction5(addManagedListener))
-    if (alias != null) __obj.updateDynamic("alias")(alias.asInstanceOf[js.Any])
-    if (alternateClassName != null) __obj.updateDynamic("alternateClassName")(alternateClassName.asInstanceOf[js.Any])
-    if (bubbleEvents != null) __obj.updateDynamic("bubbleEvents")(bubbleEvents.asInstanceOf[js.Any])
-    if (callOverridden != null) __obj.updateDynamic("callOverridden")(js.Any.fromFunction1(callOverridden))
-    if (callParent != null) __obj.updateDynamic("callParent")(js.Any.fromFunction1(callParent))
-    if (callSuper != null) __obj.updateDynamic("callSuper")(js.Any.fromFunction1(callSuper))
-    if (clearDurationOn != null) __obj.updateDynamic("clearDurationOn")(js.Any.fromFunction1(clearDurationOn))
-    if (clearEasingOn != null) __obj.updateDynamic("clearEasingOn")(js.Any.fromFunction1(clearEasingOn))
-    if (clearListeners != null) __obj.updateDynamic("clearListeners")(js.Any.fromFunction0(clearListeners))
-    if (config != null) __obj.updateDynamic("config")(config.asInstanceOf[js.Any])
-    if (customDuration != null) __obj.updateDynamic("customDuration")(customDuration.asInstanceOf[js.Any])
-    if (customEasings != null) __obj.updateDynamic("customEasings")(customEasings.asInstanceOf[js.Any])
-    if (destroy != null) __obj.updateDynamic("destroy")(js.Any.fromFunction0(destroy))
-    if (duration != null) __obj.updateDynamic("duration")(duration.asInstanceOf[js.Any])
-    if (easing != null) __obj.updateDynamic("easing")(easing.asInstanceOf[js.Any])
-    if (enableBubble != null) __obj.updateDynamic("enableBubble")(js.Any.fromFunction1(enableBubble))
-    if (extend != null) __obj.updateDynamic("extend")(extend.asInstanceOf[js.Any])
-    if (fireAction != null) __obj.updateDynamic("fireAction")(js.Any.fromFunction4(fireAction))
-    if (fireEvent != null) __obj.updateDynamic("fireEvent")(js.Any.fromFunction2(fireEvent))
-    if (getBubbleEvents != null) __obj.updateDynamic("getBubbleEvents")(js.Any.fromFunction0(getBubbleEvents))
-    if (getCustomDuration != null) __obj.updateDynamic("getCustomDuration")(js.Any.fromFunction0(getCustomDuration))
-    if (getCustomEasings != null) __obj.updateDynamic("getCustomEasings")(js.Any.fromFunction0(getCustomEasings))
-    if (getDuration != null) __obj.updateDynamic("getDuration")(js.Any.fromFunction0(getDuration))
-    if (getEasing != null) __obj.updateDynamic("getEasing")(js.Any.fromFunction0(getEasing))
-    if (getId != null) __obj.updateDynamic("getId")(js.Any.fromFunction0(getId))
-    if (getInitialConfig != null) __obj.updateDynamic("getInitialConfig")(js.Any.fromFunction1(getInitialConfig))
-    if (getListeners != null) __obj.updateDynamic("getListeners")(js.Any.fromFunction0(getListeners))
-    if (getNext != null) __obj.updateDynamic("getNext")(js.Any.fromFunction0(getNext))
-    if (getPrevious != null) __obj.updateDynamic("getPrevious")(js.Any.fromFunction0(getPrevious))
-    if (getSprite != null) __obj.updateDynamic("getSprite")(js.Any.fromFunction0(getSprite))
-    if (hasListener != null) __obj.updateDynamic("hasListener")(js.Any.fromFunction1(hasListener))
-    if (inheritableStatics != null) __obj.updateDynamic("inheritableStatics")(inheritableStatics.asInstanceOf[js.Any])
-    if (initConfig != null) __obj.updateDynamic("initConfig")(js.Any.fromFunction1(initConfig))
-    if (listeners != null) __obj.updateDynamic("listeners")(listeners.asInstanceOf[js.Any])
-    if (mixins != null) __obj.updateDynamic("mixins")(mixins.asInstanceOf[js.Any])
-    if (mon != null) __obj.updateDynamic("mon")(js.Any.fromFunction5(mon))
-    if (mun != null) __obj.updateDynamic("mun")(js.Any.fromFunction4(mun))
-    if (next != null) __obj.updateDynamic("next")(next.asInstanceOf[js.Any])
-    if (on != null) __obj.updateDynamic("on")(js.Any.fromFunction5(on))
-    if (onAfter != null) __obj.updateDynamic("onAfter")(js.Any.fromFunction4(onAfter))
-    if (onBefore != null) __obj.updateDynamic("onBefore")(js.Any.fromFunction4(onBefore))
-    if (platformConfig != null) __obj.updateDynamic("platformConfig")(platformConfig.asInstanceOf[js.Any])
-    if (popUp != null) __obj.updateDynamic("popUp")(js.Any.fromFunction2(popUp))
-    if (prepareAttributes != null) __obj.updateDynamic("prepareAttributes")(js.Any.fromFunction1(prepareAttributes))
-    if (previous != null) __obj.updateDynamic("previous")(previous.asInstanceOf[js.Any])
-    if (pushDown != null) __obj.updateDynamic("pushDown")(js.Any.fromFunction2(pushDown))
-    if (relayEvents != null) __obj.updateDynamic("relayEvents")(js.Any.fromFunction2(relayEvents))
-    if (removeAfterListener != null) __obj.updateDynamic("removeAfterListener")(js.Any.fromFunction4(removeAfterListener))
-    if (removeBeforeListener != null) __obj.updateDynamic("removeBeforeListener")(js.Any.fromFunction4(removeBeforeListener))
-    if (removeListener != null) __obj.updateDynamic("removeListener")(js.Any.fromFunction5(removeListener))
-    if (removeManagedListener != null) __obj.updateDynamic("removeManagedListener")(js.Any.fromFunction4(removeManagedListener))
-    if (resumeEvents != null) __obj.updateDynamic("resumeEvents")(js.Any.fromFunction1(resumeEvents))
-    if (self != null) __obj.updateDynamic("self")(self.asInstanceOf[js.Any])
-    if (setBubbleEvents != null) __obj.updateDynamic("setBubbleEvents")(js.Any.fromFunction1(setBubbleEvents))
-    if (setCustomDuration != null) __obj.updateDynamic("setCustomDuration")(js.Any.fromFunction1(setCustomDuration))
-    if (setCustomEasings != null) __obj.updateDynamic("setCustomEasings")(js.Any.fromFunction1(setCustomEasings))
-    if (setDuration != null) __obj.updateDynamic("setDuration")(js.Any.fromFunction1(setDuration))
-    if (setDurationOn != null) __obj.updateDynamic("setDurationOn")(js.Any.fromFunction2(setDurationOn))
-    if (setEasing != null) __obj.updateDynamic("setEasing")(js.Any.fromFunction1(setEasing))
-    if (setEasingOn != null) __obj.updateDynamic("setEasingOn")(js.Any.fromFunction2(setEasingOn))
-    if (setListeners != null) __obj.updateDynamic("setListeners")(js.Any.fromFunction1(setListeners))
-    if (setNext != null) __obj.updateDynamic("setNext")(js.Any.fromFunction1(setNext))
-    if (setPrevious != null) __obj.updateDynamic("setPrevious")(js.Any.fromFunction1(setPrevious))
-    if (setSprite != null) __obj.updateDynamic("setSprite")(js.Any.fromFunction1(setSprite))
-    if (!js.isUndefined(singleton)) __obj.updateDynamic("singleton")(singleton.asInstanceOf[js.Any])
-    if (sprite != null) __obj.updateDynamic("sprite")(sprite.asInstanceOf[js.Any])
-    if (statics != null) __obj.updateDynamic("statics")(statics.asInstanceOf[js.Any])
-    if (stop != null) __obj.updateDynamic("stop")(js.Any.fromFunction0(stop))
-    if (suspendEvents != null) __obj.updateDynamic("suspendEvents")(js.Any.fromFunction0(suspendEvents))
-    if (un != null) __obj.updateDynamic("un")(js.Any.fromFunction5(un))
-    if (unAfter != null) __obj.updateDynamic("unAfter")(js.Any.fromFunction4(unAfter))
-    if (unBefore != null) __obj.updateDynamic("unBefore")(js.Any.fromFunction4(unBefore))
-    if (uses != null) __obj.updateDynamic("uses")(uses.asInstanceOf[js.Any])
     __obj.asInstanceOf[IAnimation]
   }
+  @scala.inline
+  implicit class IAnimationOps[Self <: IAnimation] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClearDurationOn(value: /* attrs */ js.UndefOr[js.Any] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clearDurationOn")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutClearDurationOn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clearDurationOn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClearEasingOn(value: /* attrs */ js.UndefOr[js.Any] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clearEasingOn")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutClearEasingOn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clearEasingOn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCustomDuration(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customDuration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCustomDuration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customDuration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCustomEasings(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customEasings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCustomEasings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customEasings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDuration(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDuration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEasing(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("easing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEasing: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("easing")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetCustomDuration(value: () => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getCustomDuration")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetCustomDuration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getCustomDuration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetCustomEasings(value: () => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getCustomEasings")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetCustomEasings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getCustomEasings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetDuration(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getDuration")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetDuration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getDuration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetEasing(value: () => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getEasing")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetEasing: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getEasing")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetNext(value: () => IAnimation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getNext")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetNext: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getNext")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetPrevious(value: () => IAnimation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getPrevious")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetPrevious: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getPrevious")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetSprite(value: () => ISprite): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getSprite")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetSprite: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getSprite")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNext(value: IModifier): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("next")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNext: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("next")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPopUp(value: (js.UndefOr[js.Any], js.UndefOr[js.Any]) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("popUp")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutPopUp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("popUp")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrepareAttributes(value: js.UndefOr[js.Any] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prepareAttributes")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutPrepareAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prepareAttributes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrevious(value: IModifier): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("previous")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrevious: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("previous")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPushDown(value: (js.UndefOr[js.Any], js.UndefOr[js.Any]) => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pushDown")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutPushDown: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pushDown")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRelayEvents(value: (/* object */ js.UndefOr[js.Any], /* events */ js.UndefOr[js.Any]) => IObservable): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("relayEvents")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutRelayEvents: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("relayEvents")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSetCustomDuration(value: /* customDuration */ js.UndefOr[js.Any] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setCustomDuration")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutSetCustomDuration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setCustomDuration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSetCustomEasings(value: /* customEasings */ js.UndefOr[js.Any] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setCustomEasings")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutSetCustomEasings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setCustomEasings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSetDuration(value: /* duration */ js.UndefOr[Double] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setDuration")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutSetDuration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setDuration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSetDurationOn(value: (/* attrs */ js.UndefOr[js.Any], /* duration */ js.UndefOr[Double]) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setDurationOn")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutSetDurationOn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setDurationOn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSetEasing(value: /* easing */ js.UndefOr[js.Any] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setEasing")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutSetEasing: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setEasing")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSetEasingOn(value: (/* attrs */ js.UndefOr[js.Any], /* easing */ js.UndefOr[String]) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setEasingOn")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutSetEasingOn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setEasingOn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSetNext(value: /* next */ js.UndefOr[IAnimation] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setNext")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutSetNext: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setNext")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSetPrevious(value: /* previous */ js.UndefOr[IAnimation] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setPrevious")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutSetPrevious: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setPrevious")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSetSprite(value: /* sprite */ js.UndefOr[ISprite] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setSprite")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutSetSprite: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setSprite")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSprite(value: ISprite): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sprite")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSprite: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sprite")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStop(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stop")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutStop: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stop")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

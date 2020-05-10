@@ -27,7 +27,7 @@ trait PixelBlock extends Accessor {
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-PixelBlock.html#mask)
     */
-  var mask: js.Array[Double] | scala.scalajs.js.typedarray.Uint8Array = js.native
+  var mask: js.Array[Double] | js.typedarray.Uint8Array = js.native
   /**
     * Indicates whether mask should be used as alpha values. If no (default), a pixel is valid when corresponding mask value is truthy
     *
@@ -45,7 +45,7 @@ trait PixelBlock extends Accessor {
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-PixelBlock.html#pixels)
     */
-  var pixels: js.Array[Double] | scala.scalajs.js.typedarray.Int8Array | scala.scalajs.js.typedarray.Uint8Array | scala.scalajs.js.typedarray.Uint8ClampedArray | scala.scalajs.js.typedarray.Int16Array | scala.scalajs.js.typedarray.Uint16Array | scala.scalajs.js.typedarray.Int32Array | scala.scalajs.js.typedarray.Uint32Array | scala.scalajs.js.typedarray.Float32Array | scala.scalajs.js.typedarray.Float64Array = js.native
+  var pixels: js.Array[Double] | js.typedarray.Int8Array | js.typedarray.Uint8Array | js.typedarray.Uint8ClampedArray | js.typedarray.Int16Array | js.typedarray.Uint16Array | js.typedarray.Int32Array | js.typedarray.Uint32Array | js.typedarray.Float32Array | js.typedarray.Float64Array = js.native
   /**
     * An array of objects containing numeric statistical properties. Each object has the following specification if defined.
     *
@@ -82,7 +82,7 @@ trait PixelBlock extends Accessor {
     *
     *
     */
-  def getAsRGBA(): scala.scalajs.js.typedarray.Uint8ClampedArray = js.native
+  def getAsRGBA(): js.typedarray.Uint8ClampedArray = js.native
   /**
     * Similar to [getAsRGBA](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-PixelBlock.html#getAsRGBA), but returns floating point data. The result can be used to create a webgl texture (OES_texture_float).
     *
@@ -90,7 +90,7 @@ trait PixelBlock extends Accessor {
     *
     *
     */
-  def getAsRGBAFloat(): scala.scalajs.js.typedarray.Float32Array = js.native
+  def getAsRGBAFloat(): js.typedarray.Float32Array = js.native
   /**
     * Returns the plane band count of the PixelBlock.
     *

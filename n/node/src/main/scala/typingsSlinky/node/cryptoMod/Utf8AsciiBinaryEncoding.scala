@@ -13,12 +13,10 @@ trait Utf8AsciiBinaryEncoding extends js.Object
 
 object Utf8AsciiBinaryEncoding {
   @scala.inline
-  def ascii: typingsSlinky.node.nodeStrings.ascii = this.cast("ascii")
+  def ascii: typingsSlinky.node.nodeStrings.ascii = "ascii".asInstanceOf[typingsSlinky.node.nodeStrings.ascii]
   @scala.inline
-  def binary: typingsSlinky.node.nodeStrings.binary = this.cast("binary")
+  def binary: typingsSlinky.node.nodeStrings.binary = "binary".asInstanceOf[typingsSlinky.node.nodeStrings.binary]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
-  @scala.inline
-  def utf8: typingsSlinky.node.nodeStrings.utf8 = this.cast("utf8")
+  def utf8: typingsSlinky.node.nodeStrings.utf8 = "utf8".asInstanceOf[typingsSlinky.node.nodeStrings.utf8]
 }
 

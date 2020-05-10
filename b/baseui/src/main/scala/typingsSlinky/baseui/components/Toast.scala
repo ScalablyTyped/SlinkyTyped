@@ -1,15 +1,16 @@
 package typingsSlinky.baseui.components
 
+import typingsSlinky.baseui.toastMod.ToastProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Toast
-  extends SharedApply_ToastProps_875181936[typingsSlinky.baseui.toastMod.Toast] {
+object Toast {
   @JSImport("baseui/toast", "Toast")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: ToastProps): SharedBuilder_ToastProps_508882891[typingsSlinky.baseui.toastMod.Toast] = new SharedBuilder_ToastProps_508882891[typingsSlinky.baseui.toastMod.Toast](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Toast.type): SharedBuilder_ToastProps_508882891[typingsSlinky.baseui.toastMod.Toast] = new SharedBuilder_ToastProps_508882891[typingsSlinky.baseui.toastMod.Toast](js.Array(this.component, js.Dictionary.empty))()
 }
 

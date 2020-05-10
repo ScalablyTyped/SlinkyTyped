@@ -1,10 +1,7 @@
 package typingsSlinky.semanticUiReact.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.semanticUiReact.genericMod.SemanticCOLORS
 import typingsSlinky.semanticUiReact.genericMod.SemanticFLOATS
 import typingsSlinky.semanticUiReact.genericMod.SemanticTEXTALIGNMENTS
@@ -16,48 +13,46 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object GridColumn
-  extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+object GridColumn {
   @JSImport("semantic-ui-react/dist/commonjs/collections/Grid/GridColumn", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className */
-  def apply(
-    as: js.Any = null,
-    color: SemanticCOLORS = null,
-    computer: SemanticWIDTHS = null,
-    floated: SemanticFLOATS = null,
-    largeScreen: SemanticWIDTHS = null,
-    mobile: SemanticWIDTHS = null,
-    only: GridOnlyProp = null,
-    stretched: js.UndefOr[Boolean] = js.undefined,
-    tablet: SemanticWIDTHS = null,
-    textAlign: SemanticTEXTALIGNMENTS = null,
-    verticalAlign: SemanticVERTICALALIGNMENTS = null,
-    widescreen: SemanticWIDTHS = null,
-    width: SemanticWIDTHS = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, js.Object] = {
-    val __obj = js.Dynamic.literal()
-    if (as != null) __obj.updateDynamic("as")(as.asInstanceOf[js.Any])
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (computer != null) __obj.updateDynamic("computer")(computer.asInstanceOf[js.Any])
-    if (floated != null) __obj.updateDynamic("floated")(floated.asInstanceOf[js.Any])
-    if (largeScreen != null) __obj.updateDynamic("largeScreen")(largeScreen.asInstanceOf[js.Any])
-    if (mobile != null) __obj.updateDynamic("mobile")(mobile.asInstanceOf[js.Any])
-    if (only != null) __obj.updateDynamic("only")(only.asInstanceOf[js.Any])
-    if (!js.isUndefined(stretched)) __obj.updateDynamic("stretched")(stretched.asInstanceOf[js.Any])
-    if (tablet != null) __obj.updateDynamic("tablet")(tablet.asInstanceOf[js.Any])
-    if (textAlign != null) __obj.updateDynamic("textAlign")(textAlign.asInstanceOf[js.Any])
-    if (verticalAlign != null) __obj.updateDynamic("verticalAlign")(verticalAlign.asInstanceOf[js.Any])
-    if (widescreen != null) __obj.updateDynamic("widescreen")(widescreen.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, js.Object] {
+    @scala.inline
+    def as(value: js.Any): this.type = set("as", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def color(value: SemanticCOLORS): this.type = set("color", value.asInstanceOf[js.Any])
+    @scala.inline
+    def computer(value: SemanticWIDTHS): this.type = set("computer", value.asInstanceOf[js.Any])
+    @scala.inline
+    def floated(value: SemanticFLOATS): this.type = set("floated", value.asInstanceOf[js.Any])
+    @scala.inline
+    def largeScreen(value: SemanticWIDTHS): this.type = set("largeScreen", value.asInstanceOf[js.Any])
+    @scala.inline
+    def mobile(value: SemanticWIDTHS): this.type = set("mobile", value.asInstanceOf[js.Any])
+    @scala.inline
+    def only(value: GridOnlyProp): this.type = set("only", value.asInstanceOf[js.Any])
+    @scala.inline
+    def stretched(value: Boolean): this.type = set("stretched", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tablet(value: SemanticWIDTHS): this.type = set("tablet", value.asInstanceOf[js.Any])
+    @scala.inline
+    def textAlign(value: SemanticTEXTALIGNMENTS): this.type = set("textAlign", value.asInstanceOf[js.Any])
+    @scala.inline
+    def verticalAlign(value: SemanticVERTICALALIGNMENTS): this.type = set("verticalAlign", value.asInstanceOf[js.Any])
+    @scala.inline
+    def widescreen(value: SemanticWIDTHS): this.type = set("widescreen", value.asInstanceOf[js.Any])
+    @scala.inline
+    def width(value: SemanticWIDTHS): this.type = set("width", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, js.Object] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, js.Object](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = GridColumnProps
+  
+  def withProps(p: GridColumnProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: GridColumn.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

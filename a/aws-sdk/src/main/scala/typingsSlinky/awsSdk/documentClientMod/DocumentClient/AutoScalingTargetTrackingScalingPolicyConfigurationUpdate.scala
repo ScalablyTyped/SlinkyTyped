@@ -26,17 +26,59 @@ trait AutoScalingTargetTrackingScalingPolicyConfigurationUpdate extends js.Objec
 
 object AutoScalingTargetTrackingScalingPolicyConfigurationUpdate {
   @scala.inline
-  def apply(
-    TargetValue: Double,
-    DisableScaleIn: js.UndefOr[Boolean] = js.undefined,
-    ScaleInCooldown: Int | scala.Double = null,
-    ScaleOutCooldown: Int | scala.Double = null
-  ): AutoScalingTargetTrackingScalingPolicyConfigurationUpdate = {
+  def apply(TargetValue: Double): AutoScalingTargetTrackingScalingPolicyConfigurationUpdate = {
     val __obj = js.Dynamic.literal(TargetValue = TargetValue.asInstanceOf[js.Any])
-    if (!js.isUndefined(DisableScaleIn)) __obj.updateDynamic("DisableScaleIn")(DisableScaleIn.asInstanceOf[js.Any])
-    if (ScaleInCooldown != null) __obj.updateDynamic("ScaleInCooldown")(ScaleInCooldown.asInstanceOf[js.Any])
-    if (ScaleOutCooldown != null) __obj.updateDynamic("ScaleOutCooldown")(ScaleOutCooldown.asInstanceOf[js.Any])
     __obj.asInstanceOf[AutoScalingTargetTrackingScalingPolicyConfigurationUpdate]
   }
+  @scala.inline
+  implicit class AutoScalingTargetTrackingScalingPolicyConfigurationUpdateOps[Self <: AutoScalingTargetTrackingScalingPolicyConfigurationUpdate] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withTargetValue(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDisableScaleIn(value: BooleanObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DisableScaleIn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisableScaleIn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DisableScaleIn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScaleInCooldown(value: IntegerObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ScaleInCooldown")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScaleInCooldown: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ScaleInCooldown")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScaleOutCooldown(value: IntegerObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ScaleOutCooldown")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScaleOutCooldown: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ScaleOutCooldown")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

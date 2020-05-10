@@ -14,14 +14,12 @@ trait PrevSubject extends js.Object
 
 object PrevSubject {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def document: typingsSlinky.cypress.cypressStrings.document = "document".asInstanceOf[typingsSlinky.cypress.cypressStrings.document]
   @scala.inline
-  def document: typingsSlinky.cypress.cypressStrings.document = this.cast("document")
+  def element: typingsSlinky.cypress.cypressStrings.element = "element".asInstanceOf[typingsSlinky.cypress.cypressStrings.element]
   @scala.inline
-  def element: typingsSlinky.cypress.cypressStrings.element = this.cast("element")
+  def optional: typingsSlinky.cypress.cypressStrings.optional = "optional".asInstanceOf[typingsSlinky.cypress.cypressStrings.optional]
   @scala.inline
-  def optional: typingsSlinky.cypress.cypressStrings.optional = this.cast("optional")
-  @scala.inline
-  def window: typingsSlinky.cypress.cypressStrings.window = this.cast("window")
+  def window: typingsSlinky.cypress.cypressStrings.window = "window".asInstanceOf[typingsSlinky.cypress.cypressStrings.window]
 }
 

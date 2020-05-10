@@ -4,32 +4,33 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonAddCollaborator extends js.Object {
-  var addCollaborator: AnonParamsAnonPermission
-  var createCard: AnonParamsAnonColumnid
-  var createColumn: AnonParamsAnonProjectid
-  var createForAuthenticatedUser: AnonParamsAnonBodyName
-  var createForOrg: AnonParamsAnonNameOrg
-  var createForRepo: AnonParamsAnonNameOwner
-  var delete: AnonParamsAnonProjectidAnonRequired
-  var deleteCard: AnonParamsAnonCardid
-  var deleteColumn: AnonParamsAnonColumnidAnonRequired
-  var get: AnonParamsAnonProjectidAnonRequired
-  var getCard: AnonParamsAnonCardid
-  var getColumn: AnonParamsAnonColumnidAnonRequired
-  var listCards: AnonParamsAnonArchivedstate
-  var listCollaborators: AnonParamsAnonAffiliation
-  var listColumns: AnonParamsAnonPerpageProjectid
-  var listForOrg: AnonParamsAnonOrgPagePerpage
-  var listForRepo: AnonParamsAnonRepoState
-  var listForUser: AnonParamsAnonStateUsername
-  var moveCard: AnonParamsAnonPosition
-  var moveColumn: AnonParamsAnonColumnidPosition
-  var removeCollaborator: AnonParamsAnonProjectidUsername
-  var reviewUserPermissionLevel: AnonParamsAnonProjectidUsername
-  var update: AnonParamsAnonOrganizationpermission
-  var updateCard: AnonParamsAnonArchived
-  var updateColumn: AnonParamsAnonColumnidName
+  var addCollaborator: AnonParamsAnonPermission = js.native
+  var createCard: AnonParamsAnonColumnid = js.native
+  var createColumn: AnonParamsAnonProjectid = js.native
+  var createForAuthenticatedUser: AnonParamsAnonBodyName = js.native
+  var createForOrg: AnonParamsAnonNameOrg = js.native
+  var createForRepo: AnonParamsAnonNameOwner = js.native
+  var delete: AnonParamsAnonProjectidAnonRequired = js.native
+  var deleteCard: AnonParamsAnonCardid = js.native
+  var deleteColumn: AnonParamsAnonColumnidAnonRequired = js.native
+  var get: AnonParamsAnonProjectidAnonRequired = js.native
+  var getCard: AnonParamsAnonCardid = js.native
+  var getColumn: AnonParamsAnonColumnidAnonRequired = js.native
+  var listCards: AnonParamsAnonArchivedstate = js.native
+  var listCollaborators: AnonParamsAnonAffiliation = js.native
+  var listColumns: AnonParamsAnonPerpageProjectid = js.native
+  var listForOrg: AnonParamsAnonOrgPagePerpage = js.native
+  var listForRepo: AnonParamsAnonRepoState = js.native
+  var listForUser: AnonParamsAnonStateUsername = js.native
+  var moveCard: AnonParamsAnonPosition = js.native
+  var moveColumn: AnonParamsAnonColumnidPosition = js.native
+  var removeCollaborator: AnonParamsAnonProjectidUsername = js.native
+  var reviewUserPermissionLevel: AnonParamsAnonProjectidUsername = js.native
+  var update: AnonParamsAnonOrganizationpermission = js.native
+  var updateCard: AnonParamsAnonArchived = js.native
+  var updateColumn: AnonParamsAnonColumnidName = js.native
 }
 
 object AnonAddCollaborator {
@@ -62,8 +63,165 @@ object AnonAddCollaborator {
     updateColumn: AnonParamsAnonColumnidName
   ): AnonAddCollaborator = {
     val __obj = js.Dynamic.literal(addCollaborator = addCollaborator.asInstanceOf[js.Any], createCard = createCard.asInstanceOf[js.Any], createColumn = createColumn.asInstanceOf[js.Any], createForAuthenticatedUser = createForAuthenticatedUser.asInstanceOf[js.Any], createForOrg = createForOrg.asInstanceOf[js.Any], createForRepo = createForRepo.asInstanceOf[js.Any], delete = delete.asInstanceOf[js.Any], deleteCard = deleteCard.asInstanceOf[js.Any], deleteColumn = deleteColumn.asInstanceOf[js.Any], get = get.asInstanceOf[js.Any], getCard = getCard.asInstanceOf[js.Any], getColumn = getColumn.asInstanceOf[js.Any], listCards = listCards.asInstanceOf[js.Any], listCollaborators = listCollaborators.asInstanceOf[js.Any], listColumns = listColumns.asInstanceOf[js.Any], listForOrg = listForOrg.asInstanceOf[js.Any], listForRepo = listForRepo.asInstanceOf[js.Any], listForUser = listForUser.asInstanceOf[js.Any], moveCard = moveCard.asInstanceOf[js.Any], moveColumn = moveColumn.asInstanceOf[js.Any], removeCollaborator = removeCollaborator.asInstanceOf[js.Any], reviewUserPermissionLevel = reviewUserPermissionLevel.asInstanceOf[js.Any], update = update.asInstanceOf[js.Any], updateCard = updateCard.asInstanceOf[js.Any], updateColumn = updateColumn.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[AnonAddCollaborator]
   }
+  @scala.inline
+  implicit class AnonAddCollaboratorOps[Self <: AnonAddCollaborator] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAddCollaborator(value: AnonParamsAnonPermission): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addCollaborator")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCreateCard(value: AnonParamsAnonColumnid): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createCard")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCreateColumn(value: AnonParamsAnonProjectid): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createColumn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCreateForAuthenticatedUser(value: AnonParamsAnonBodyName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createForAuthenticatedUser")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCreateForOrg(value: AnonParamsAnonNameOrg): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createForOrg")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCreateForRepo(value: AnonParamsAnonNameOwner): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createForRepo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDelete(value: AnonParamsAnonProjectidAnonRequired): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDeleteCard(value: AnonParamsAnonCardid): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteCard")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDeleteColumn(value: AnonParamsAnonColumnidAnonRequired): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteColumn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGet(value: AnonParamsAnonProjectidAnonRequired): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGetCard(value: AnonParamsAnonCardid): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getCard")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGetColumn(value: AnonParamsAnonColumnidAnonRequired): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getColumn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withListCards(value: AnonParamsAnonArchivedstate): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("listCards")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withListCollaborators(value: AnonParamsAnonAffiliation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("listCollaborators")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withListColumns(value: AnonParamsAnonPerpageProjectid): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("listColumns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withListForOrg(value: AnonParamsAnonOrgPagePerpage): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("listForOrg")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withListForRepo(value: AnonParamsAnonRepoState): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("listForRepo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withListForUser(value: AnonParamsAnonStateUsername): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("listForUser")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMoveCard(value: AnonParamsAnonPosition): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("moveCard")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMoveColumn(value: AnonParamsAnonColumnidPosition): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("moveColumn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRemoveCollaborator(value: AnonParamsAnonProjectidUsername): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeCollaborator")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withReviewUserPermissionLevel(value: AnonParamsAnonProjectidUsername): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reviewUserPermissionLevel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUpdate(value: AnonParamsAnonOrganizationpermission): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("update")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUpdateCard(value: AnonParamsAnonArchived): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateCard")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUpdateColumn(value: AnonParamsAnonColumnidName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateColumn")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

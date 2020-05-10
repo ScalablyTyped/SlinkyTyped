@@ -14,72 +14,270 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait CalendarProps extends js.Object {
-  var a11yTitle: js.UndefOr[A11yTitleType] = js.undefined
-  var alignSelf: js.UndefOr[AlignSelfType] = js.undefined
-  var animate: js.UndefOr[AnimateType] = js.undefined
-  var bounds: js.UndefOr[js.Array[String]] = js.undefined
-  var date: js.UndefOr[String] = js.undefined
-  var dates: js.UndefOr[js.Array[String | js.Array[String]]] = js.undefined
-  var daysOfWeek: js.UndefOr[Boolean] = js.undefined
-  var disabled: js.UndefOr[js.Array[String | js.Array[String]]] = js.undefined
-  var firstDayOfWeek: js.UndefOr[`0` | `1`] = js.undefined
-  var gridArea: js.UndefOr[GridAreaType] = js.undefined
-  var header: js.UndefOr[js.Function1[/* repeated */ js.Any, _]] = js.undefined
-  var locale: js.UndefOr[String] = js.undefined
-  var margin: js.UndefOr[MarginType] = js.undefined
-  var onReference: js.UndefOr[js.Function1[/* reference */ String, Unit]] = js.undefined
-  var onSelect: js.UndefOr[js.Function1[/* select */ js.Array[String], _]] = js.undefined
-  var range: js.UndefOr[Boolean] = js.undefined
-  var reference: js.UndefOr[String] = js.undefined
-  var showAdjacentDays: js.UndefOr[Boolean] = js.undefined
-  var size: js.UndefOr[small | medium | large | String] = js.undefined
+  var a11yTitle: js.UndefOr[A11yTitleType] = js.native
+  var alignSelf: js.UndefOr[AlignSelfType] = js.native
+  var animate: js.UndefOr[AnimateType] = js.native
+  var bounds: js.UndefOr[js.Array[String]] = js.native
+  var date: js.UndefOr[String] = js.native
+  var dates: js.UndefOr[js.Array[String | js.Array[String]]] = js.native
+  var daysOfWeek: js.UndefOr[Boolean] = js.native
+  var disabled: js.UndefOr[js.Array[String | js.Array[String]]] = js.native
+  var firstDayOfWeek: js.UndefOr[`0` | `1`] = js.native
+  var gridArea: js.UndefOr[GridAreaType] = js.native
+  var header: js.UndefOr[js.Function1[/* repeated */ js.Any, _]] = js.native
+  var locale: js.UndefOr[String] = js.native
+  var margin: js.UndefOr[MarginType] = js.native
+  var onReference: js.UndefOr[js.Function1[/* reference */ String, Unit]] = js.native
+  var onSelect: js.UndefOr[js.Function1[/* select */ js.Array[String], _]] = js.native
+  var range: js.UndefOr[Boolean] = js.native
+  var reference: js.UndefOr[String] = js.native
+  var showAdjacentDays: js.UndefOr[Boolean] = js.native
+  var size: js.UndefOr[small | medium | large | String] = js.native
 }
 
 object CalendarProps {
   @scala.inline
-  def apply(
-    a11yTitle: A11yTitleType = null,
-    alignSelf: AlignSelfType = null,
-    animate: js.UndefOr[Boolean] = js.undefined,
-    bounds: js.Array[String] = null,
-    date: String = null,
-    dates: js.Array[String | js.Array[String]] = null,
-    daysOfWeek: js.UndefOr[Boolean] = js.undefined,
-    disabled: js.Array[String | js.Array[String]] = null,
-    firstDayOfWeek: `0` | `1` = null,
-    gridArea: GridAreaType = null,
-    header: /* repeated */ js.Any => _ = null,
-    locale: String = null,
-    margin: MarginType = null,
-    onReference: /* reference */ String => Unit = null,
-    onSelect: /* select */ js.Array[String] => _ = null,
-    range: js.UndefOr[Boolean] = js.undefined,
-    reference: String = null,
-    showAdjacentDays: js.UndefOr[Boolean] = js.undefined,
-    size: small | medium | large | String = null
-  ): CalendarProps = {
+  def apply(): CalendarProps = {
     val __obj = js.Dynamic.literal()
-    if (a11yTitle != null) __obj.updateDynamic("a11yTitle")(a11yTitle.asInstanceOf[js.Any])
-    if (alignSelf != null) __obj.updateDynamic("alignSelf")(alignSelf.asInstanceOf[js.Any])
-    if (!js.isUndefined(animate)) __obj.updateDynamic("animate")(animate.asInstanceOf[js.Any])
-    if (bounds != null) __obj.updateDynamic("bounds")(bounds.asInstanceOf[js.Any])
-    if (date != null) __obj.updateDynamic("date")(date.asInstanceOf[js.Any])
-    if (dates != null) __obj.updateDynamic("dates")(dates.asInstanceOf[js.Any])
-    if (!js.isUndefined(daysOfWeek)) __obj.updateDynamic("daysOfWeek")(daysOfWeek.asInstanceOf[js.Any])
-    if (disabled != null) __obj.updateDynamic("disabled")(disabled.asInstanceOf[js.Any])
-    if (firstDayOfWeek != null) __obj.updateDynamic("firstDayOfWeek")(firstDayOfWeek.asInstanceOf[js.Any])
-    if (gridArea != null) __obj.updateDynamic("gridArea")(gridArea.asInstanceOf[js.Any])
-    if (header != null) __obj.updateDynamic("header")(js.Any.fromFunction1(header))
-    if (locale != null) __obj.updateDynamic("locale")(locale.asInstanceOf[js.Any])
-    if (margin != null) __obj.updateDynamic("margin")(margin.asInstanceOf[js.Any])
-    if (onReference != null) __obj.updateDynamic("onReference")(js.Any.fromFunction1(onReference))
-    if (onSelect != null) __obj.updateDynamic("onSelect")(js.Any.fromFunction1(onSelect))
-    if (!js.isUndefined(range)) __obj.updateDynamic("range")(range.asInstanceOf[js.Any])
-    if (reference != null) __obj.updateDynamic("reference")(reference.asInstanceOf[js.Any])
-    if (!js.isUndefined(showAdjacentDays)) __obj.updateDynamic("showAdjacentDays")(showAdjacentDays.asInstanceOf[js.Any])
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
     __obj.asInstanceOf[CalendarProps]
   }
+  @scala.inline
+  implicit class CalendarPropsOps[Self <: CalendarProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withA11yTitle(value: A11yTitleType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("a11yTitle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutA11yTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("a11yTitle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAlignSelf(value: AlignSelfType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alignSelf")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlignSelf: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alignSelf")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAnimate(value: AnimateType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBounds(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bounds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBounds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bounds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDate(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("date")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("date")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDates(value: js.Array[String | js.Array[String]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dates")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDates: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dates")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDaysOfWeek(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("daysOfWeek")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDaysOfWeek: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("daysOfWeek")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisabled(value: js.Array[String | js.Array[String]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFirstDayOfWeek(value: `0` | `1`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("firstDayOfWeek")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFirstDayOfWeek: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("firstDayOfWeek")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGridArea(value: GridAreaType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gridArea")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGridArea: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gridArea")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeader(value: /* repeated */ js.Any => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("header")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutHeader: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("header")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocale(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocale: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMargin(value: MarginType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("margin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMargin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("margin")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnReference(value: /* reference */ String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onReference")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnReference: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onReference")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnSelect(value: /* select */ js.Array[String] => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onSelect")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnSelect: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onSelect")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRange(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("range")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("range")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReference(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reference")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReference: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reference")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowAdjacentDays(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showAdjacentDays")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowAdjacentDays: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showAdjacentDays")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSize(value: small | medium | large | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

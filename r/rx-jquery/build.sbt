@@ -1,28 +1,28 @@
 organization := "org.scalablytyped.slinky"
 name := "rx-jquery"
-version := "0.0-unknown-dt-20200227Z-6a34b5"
+version := "0.0-unknown-dt-20200227Z-6b7220"
 scalaVersion := "2.13.1"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
-  "me.shadaj" %%% "slinky-web" % "0.6.4",
-  "org.scalablytyped.slinky" %%% "jquery" % "3.3-dt-20200225Z-c4678b",
-  "org.scalablytyped.slinky" %%% "rx-core" % "4.0-dt-20200225Z-9f12e6",
-  "org.scalablytyped.slinky" %%% "rx-core-binding" % "4.0-dt-20200225Z-6f7c35",
-  "org.scalablytyped.slinky" %%% "rx-lite" % "4.0-dt-20200225Z-61a117",
-  "org.scalablytyped.slinky" %%% "rx-lite-aggregates" % "4.0-dt-20200225Z-243d0f",
-  "org.scalablytyped.slinky" %%% "rx-lite-async" % "4.0-dt-20200225Z-1daa7c",
-  "org.scalablytyped.slinky" %%% "rx-lite-backpressure" % "4.0-dt-20200225Z-c50da4",
-  "org.scalablytyped.slinky" %%% "rx-lite-coincidence" % "4.0-dt-20200225Z-6bcd2f",
-  "org.scalablytyped.slinky" %%% "rx-lite-experimental" % "4.0-dt-20200225Z-db5c25",
-  "org.scalablytyped.slinky" %%% "rx-lite-joinpatterns" % "4.0-dt-20200225Z-30c9be",
-  "org.scalablytyped.slinky" %%% "rx-lite-testing" % "4.0-dt-20200225Z-cee824",
-  "org.scalablytyped.slinky" %%% "rx-lite-time" % "4.0-dt-20200225Z-5ddd59",
-  "org.scalablytyped.slinky" %%% "rx-lite-virtualtime" % "4.0-dt-20200225Z-a8f0bf",
-  "org.scalablytyped.slinky" %%% "sizzle" % "2.3-dt-20181006Z-615858",
-  "org.scalablytyped.slinky" %%% "std" % "3.8-16327f")
+  "me.shadaj" %%% "slinky-web" % "0.6.5",
+  "org.scalablytyped.slinky" %%% "jquery" % "3.3-dt-20200427Z-d88135",
+  "org.scalablytyped.slinky" %%% "rx-core" % "4.0-dt-20200225Z-c9264a",
+  "org.scalablytyped.slinky" %%% "rx-core-binding" % "4.0-dt-20200225Z-fc597f",
+  "org.scalablytyped.slinky" %%% "rx-lite" % "4.0-dt-20200225Z-9a9694",
+  "org.scalablytyped.slinky" %%% "rx-lite-aggregates" % "4.0-dt-20200225Z-54236a",
+  "org.scalablytyped.slinky" %%% "rx-lite-async" % "4.0-dt-20200225Z-1f241d",
+  "org.scalablytyped.slinky" %%% "rx-lite-backpressure" % "4.0-dt-20200225Z-831a11",
+  "org.scalablytyped.slinky" %%% "rx-lite-coincidence" % "4.0-dt-20200225Z-4f0280",
+  "org.scalablytyped.slinky" %%% "rx-lite-experimental" % "4.0-dt-20200225Z-3df601",
+  "org.scalablytyped.slinky" %%% "rx-lite-joinpatterns" % "4.0-dt-20200225Z-93dbbe",
+  "org.scalablytyped.slinky" %%% "rx-lite-testing" % "4.0-dt-20200225Z-a1e762",
+  "org.scalablytyped.slinky" %%% "rx-lite-time" % "4.0-dt-20200225Z-95b97f",
+  "org.scalablytyped.slinky" %%% "rx-lite-virtualtime" % "4.0-dt-20200225Z-b8e2c4",
+  "org.scalablytyped.slinky" %%% "sizzle" % "2.3-dt-20181006Z-1b2bf8",
+  "org.scalablytyped.slinky" %%% "std" % "3.8-8ac92e")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-g:notailcalls", "-P:scalajs:sjsDefinedByDefault")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
-bintrayRepository := "SlinkyTyped"
-resolvers += Resolver.bintrayRepo("oyvindberg", "SlinkyTyped")
+bintrayRepository := "ScalablyTyped"
+resolvers += Resolver.bintrayRepo("oyvindberg", "ScalablyTyped")

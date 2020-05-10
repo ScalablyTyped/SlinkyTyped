@@ -1,7 +1,7 @@
 package typingsSlinky.dojo
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.dojo.dojox.highlight.languages.java.defaultMode
+import typingsSlinky.dojo.dojox.highlight.languages.java_.defaultMode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

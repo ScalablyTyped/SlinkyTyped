@@ -119,44 +119,221 @@ trait SchemaClusterUpdate extends js.Object {
 
 object SchemaClusterUpdate {
   @scala.inline
-  def apply(
-    desiredAddonsConfig: SchemaAddonsConfig = null,
-    desiredBinaryAuthorization: SchemaBinaryAuthorization = null,
-    desiredClusterAutoscaling: SchemaClusterAutoscaling = null,
-    desiredDatabaseEncryption: SchemaDatabaseEncryption = null,
-    desiredImageType: String = null,
-    desiredIntraNodeVisibilityConfig: SchemaIntraNodeVisibilityConfig = null,
-    desiredLocations: js.Array[String] = null,
-    desiredLoggingService: String = null,
-    desiredMasterAuthorizedNetworksConfig: SchemaMasterAuthorizedNetworksConfig = null,
-    desiredMasterVersion: String = null,
-    desiredMonitoringService: String = null,
-    desiredNodePoolAutoscaling: SchemaNodePoolAutoscaling = null,
-    desiredNodePoolId: String = null,
-    desiredNodeVersion: String = null,
-    desiredPodSecurityPolicyConfig: SchemaPodSecurityPolicyConfig = null,
-    desiredResourceUsageExportConfig: SchemaResourceUsageExportConfig = null,
-    desiredVerticalPodAutoscaling: SchemaVerticalPodAutoscaling = null
-  ): SchemaClusterUpdate = {
+  def apply(): SchemaClusterUpdate = {
     val __obj = js.Dynamic.literal()
-    if (desiredAddonsConfig != null) __obj.updateDynamic("desiredAddonsConfig")(desiredAddonsConfig.asInstanceOf[js.Any])
-    if (desiredBinaryAuthorization != null) __obj.updateDynamic("desiredBinaryAuthorization")(desiredBinaryAuthorization.asInstanceOf[js.Any])
-    if (desiredClusterAutoscaling != null) __obj.updateDynamic("desiredClusterAutoscaling")(desiredClusterAutoscaling.asInstanceOf[js.Any])
-    if (desiredDatabaseEncryption != null) __obj.updateDynamic("desiredDatabaseEncryption")(desiredDatabaseEncryption.asInstanceOf[js.Any])
-    if (desiredImageType != null) __obj.updateDynamic("desiredImageType")(desiredImageType.asInstanceOf[js.Any])
-    if (desiredIntraNodeVisibilityConfig != null) __obj.updateDynamic("desiredIntraNodeVisibilityConfig")(desiredIntraNodeVisibilityConfig.asInstanceOf[js.Any])
-    if (desiredLocations != null) __obj.updateDynamic("desiredLocations")(desiredLocations.asInstanceOf[js.Any])
-    if (desiredLoggingService != null) __obj.updateDynamic("desiredLoggingService")(desiredLoggingService.asInstanceOf[js.Any])
-    if (desiredMasterAuthorizedNetworksConfig != null) __obj.updateDynamic("desiredMasterAuthorizedNetworksConfig")(desiredMasterAuthorizedNetworksConfig.asInstanceOf[js.Any])
-    if (desiredMasterVersion != null) __obj.updateDynamic("desiredMasterVersion")(desiredMasterVersion.asInstanceOf[js.Any])
-    if (desiredMonitoringService != null) __obj.updateDynamic("desiredMonitoringService")(desiredMonitoringService.asInstanceOf[js.Any])
-    if (desiredNodePoolAutoscaling != null) __obj.updateDynamic("desiredNodePoolAutoscaling")(desiredNodePoolAutoscaling.asInstanceOf[js.Any])
-    if (desiredNodePoolId != null) __obj.updateDynamic("desiredNodePoolId")(desiredNodePoolId.asInstanceOf[js.Any])
-    if (desiredNodeVersion != null) __obj.updateDynamic("desiredNodeVersion")(desiredNodeVersion.asInstanceOf[js.Any])
-    if (desiredPodSecurityPolicyConfig != null) __obj.updateDynamic("desiredPodSecurityPolicyConfig")(desiredPodSecurityPolicyConfig.asInstanceOf[js.Any])
-    if (desiredResourceUsageExportConfig != null) __obj.updateDynamic("desiredResourceUsageExportConfig")(desiredResourceUsageExportConfig.asInstanceOf[js.Any])
-    if (desiredVerticalPodAutoscaling != null) __obj.updateDynamic("desiredVerticalPodAutoscaling")(desiredVerticalPodAutoscaling.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaClusterUpdate]
   }
+  @scala.inline
+  implicit class SchemaClusterUpdateOps[Self <: SchemaClusterUpdate] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDesiredAddonsConfig(value: SchemaAddonsConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("desiredAddonsConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDesiredAddonsConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("desiredAddonsConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDesiredBinaryAuthorization(value: SchemaBinaryAuthorization): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("desiredBinaryAuthorization")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDesiredBinaryAuthorization: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("desiredBinaryAuthorization")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDesiredClusterAutoscaling(value: SchemaClusterAutoscaling): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("desiredClusterAutoscaling")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDesiredClusterAutoscaling: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("desiredClusterAutoscaling")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDesiredDatabaseEncryption(value: SchemaDatabaseEncryption): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("desiredDatabaseEncryption")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDesiredDatabaseEncryption: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("desiredDatabaseEncryption")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDesiredImageType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("desiredImageType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDesiredImageType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("desiredImageType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDesiredIntraNodeVisibilityConfig(value: SchemaIntraNodeVisibilityConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("desiredIntraNodeVisibilityConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDesiredIntraNodeVisibilityConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("desiredIntraNodeVisibilityConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDesiredLocations(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("desiredLocations")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDesiredLocations: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("desiredLocations")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDesiredLoggingService(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("desiredLoggingService")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDesiredLoggingService: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("desiredLoggingService")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDesiredMasterAuthorizedNetworksConfig(value: SchemaMasterAuthorizedNetworksConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("desiredMasterAuthorizedNetworksConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDesiredMasterAuthorizedNetworksConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("desiredMasterAuthorizedNetworksConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDesiredMasterVersion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("desiredMasterVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDesiredMasterVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("desiredMasterVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDesiredMonitoringService(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("desiredMonitoringService")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDesiredMonitoringService: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("desiredMonitoringService")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDesiredNodePoolAutoscaling(value: SchemaNodePoolAutoscaling): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("desiredNodePoolAutoscaling")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDesiredNodePoolAutoscaling: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("desiredNodePoolAutoscaling")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDesiredNodePoolId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("desiredNodePoolId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDesiredNodePoolId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("desiredNodePoolId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDesiredNodeVersion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("desiredNodeVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDesiredNodeVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("desiredNodeVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDesiredPodSecurityPolicyConfig(value: SchemaPodSecurityPolicyConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("desiredPodSecurityPolicyConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDesiredPodSecurityPolicyConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("desiredPodSecurityPolicyConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDesiredResourceUsageExportConfig(value: SchemaResourceUsageExportConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("desiredResourceUsageExportConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDesiredResourceUsageExportConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("desiredResourceUsageExportConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDesiredVerticalPodAutoscaling(value: SchemaVerticalPodAutoscaling): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("desiredVerticalPodAutoscaling")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDesiredVerticalPodAutoscaling: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("desiredVerticalPodAutoscaling")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

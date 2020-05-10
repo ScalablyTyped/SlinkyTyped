@@ -34,8 +34,6 @@ class Service protected ()
   ) = this()
   @JSName("INTERNAL")
   var INTERNAL_Service: AnonDelete = js.native
-  /* CompleteClass */
-  override var app: typingsSlinky.firebaseAppTypes.mod.FirebaseApp = js.native
   var app_ : js.Any = js.native
   /**
     * Calls a callable function asynchronously and returns the result.
@@ -63,6 +61,6 @@ class Service protected ()
     */
   def _url(name: String): String = js.native
   @JSName("app")
-  def app_MService(): FirebaseApp = js.native
+  def app_MService: FirebaseApp = js.native
 }
 

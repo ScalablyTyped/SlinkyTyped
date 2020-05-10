@@ -5,7 +5,6 @@ import typingsSlinky.graphql.graphqlStrings.INTERFACE
 import typingsSlinky.graphql.graphqlStrings.OBJECT
 import typingsSlinky.graphql.graphqlStrings.SCALAR
 import typingsSlinky.graphql.graphqlStrings.UNION
-import typingsSlinky.graphql.maybeMod.Maybe
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,28 +24,19 @@ object IntrospectionOutputType {
     fields: js.Array[IntrospectionField],
     kind: INTERFACE,
     name: String,
-    possibleTypes: js.Array[IntrospectionNamedTypeRef[IntrospectionObjectType]],
-    description: Maybe[String] = null
+    possibleTypes: js.Array[IntrospectionNamedTypeRef[IntrospectionObjectType]]
   ): IntrospectionOutputType = {
     val __obj = js.Dynamic.literal(fields = fields.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], possibleTypes = possibleTypes.asInstanceOf[js.Any])
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
     __obj.asInstanceOf[IntrospectionOutputType]
   }
   @scala.inline
-  def IntrospectionScalarType(kind: SCALAR, name: String, description: Maybe[String] = null): IntrospectionOutputType = {
+  def IntrospectionScalarType(kind: SCALAR, name: String): IntrospectionOutputType = {
     val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
     __obj.asInstanceOf[IntrospectionOutputType]
   }
   @scala.inline
-  def IntrospectionEnumType(
-    enumValues: js.Array[IntrospectionEnumValue],
-    kind: ENUM,
-    name: String,
-    description: Maybe[String] = null
-  ): IntrospectionOutputType = {
+  def IntrospectionEnumType(enumValues: js.Array[IntrospectionEnumValue], kind: ENUM, name: String): IntrospectionOutputType = {
     val __obj = js.Dynamic.literal(enumValues = enumValues.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
     __obj.asInstanceOf[IntrospectionOutputType]
   }
   @scala.inline
@@ -54,22 +44,18 @@ object IntrospectionOutputType {
     fields: js.Array[IntrospectionField],
     interfaces: js.Array[IntrospectionNamedTypeRef[IntrospectionInterfaceType]],
     kind: OBJECT,
-    name: String,
-    description: Maybe[String] = null
+    name: String
   ): IntrospectionOutputType = {
     val __obj = js.Dynamic.literal(fields = fields.asInstanceOf[js.Any], interfaces = interfaces.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
     __obj.asInstanceOf[IntrospectionOutputType]
   }
   @scala.inline
   def IntrospectionUnionType(
     kind: UNION,
     name: String,
-    possibleTypes: js.Array[IntrospectionNamedTypeRef[IntrospectionObjectType]],
-    description: Maybe[String] = null
+    possibleTypes: js.Array[IntrospectionNamedTypeRef[IntrospectionObjectType]]
   ): IntrospectionOutputType = {
     val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], possibleTypes = possibleTypes.asInstanceOf[js.Any])
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
     __obj.asInstanceOf[IntrospectionOutputType]
   }
 }

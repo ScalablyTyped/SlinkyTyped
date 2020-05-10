@@ -4,7 +4,6 @@ import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.apolloProtobufjs.mod.IConversionOptions
 import typingsSlinky.apolloProtobufjs.mod.Reader
 import typingsSlinky.apolloProtobufjs.mod.Writer
-import typingsSlinky.std.Uint8Array
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -51,8 +50,8 @@ object Field extends js.Object {
     */
   def decode(reader: Reader): Field = js.native
   def decode(reader: Reader, length: Double): Field = js.native
-  def decode(reader: Uint8Array): Field = js.native
-  def decode(reader: Uint8Array, length: Double): Field = js.native
+  def decode(reader: js.typedarray.Uint8Array): Field = js.native
+  def decode(reader: js.typedarray.Uint8Array, length: Double): Field = js.native
   /**
     * Decodes a Field message from the specified reader or buffer, length delimited.
     * @param reader Reader or buffer to decode from
@@ -61,7 +60,7 @@ object Field extends js.Object {
     * @throws {$protobuf.util.ProtocolError} If required fields are missing
     */
   def decodeDelimited(reader: Reader): Field = js.native
-  def decodeDelimited(reader: Uint8Array): Field = js.native
+  def decodeDelimited(reader: js.typedarray.Uint8Array): Field = js.native
   /**
     * Encodes the specified Field message. Does not implicitly {@link Field.verify|verify} messages.
     * @param message Field message or plain object to encode

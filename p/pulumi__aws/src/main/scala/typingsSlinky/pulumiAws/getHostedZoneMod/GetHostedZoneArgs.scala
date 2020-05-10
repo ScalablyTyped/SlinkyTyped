@@ -14,10 +14,29 @@ trait GetHostedZoneArgs extends js.Object {
 
 object GetHostedZoneArgs {
   @scala.inline
-  def apply(region: String = null): GetHostedZoneArgs = {
+  def apply(): GetHostedZoneArgs = {
     val __obj = js.Dynamic.literal()
-    if (region != null) __obj.updateDynamic("region")(region.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetHostedZoneArgs]
   }
+  @scala.inline
+  implicit class GetHostedZoneArgsOps[Self <: GetHostedZoneArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRegion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("region")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRegion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("region")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

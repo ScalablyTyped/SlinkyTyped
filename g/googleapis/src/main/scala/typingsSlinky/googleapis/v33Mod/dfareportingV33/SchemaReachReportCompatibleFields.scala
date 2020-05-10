@@ -44,22 +44,89 @@ trait SchemaReachReportCompatibleFields extends js.Object {
 
 object SchemaReachReportCompatibleFields {
   @scala.inline
-  def apply(
-    dimensionFilters: js.Array[SchemaDimension] = null,
-    dimensions: js.Array[SchemaDimension] = null,
-    kind: String = null,
-    metrics: js.Array[SchemaMetric] = null,
-    pivotedActivityMetrics: js.Array[SchemaMetric] = null,
-    reachByFrequencyMetrics: js.Array[SchemaMetric] = null
-  ): SchemaReachReportCompatibleFields = {
+  def apply(): SchemaReachReportCompatibleFields = {
     val __obj = js.Dynamic.literal()
-    if (dimensionFilters != null) __obj.updateDynamic("dimensionFilters")(dimensionFilters.asInstanceOf[js.Any])
-    if (dimensions != null) __obj.updateDynamic("dimensions")(dimensions.asInstanceOf[js.Any])
-    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
-    if (metrics != null) __obj.updateDynamic("metrics")(metrics.asInstanceOf[js.Any])
-    if (pivotedActivityMetrics != null) __obj.updateDynamic("pivotedActivityMetrics")(pivotedActivityMetrics.asInstanceOf[js.Any])
-    if (reachByFrequencyMetrics != null) __obj.updateDynamic("reachByFrequencyMetrics")(reachByFrequencyMetrics.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaReachReportCompatibleFields]
   }
+  @scala.inline
+  implicit class SchemaReachReportCompatibleFieldsOps[Self <: SchemaReachReportCompatibleFields] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDimensionFilters(value: js.Array[SchemaDimension]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dimensionFilters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDimensionFilters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dimensionFilters")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDimensions(value: js.Array[SchemaDimension]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dimensions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDimensions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dimensions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKind(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMetrics(value: js.Array[SchemaMetric]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metrics")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMetrics: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metrics")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPivotedActivityMetrics(value: js.Array[SchemaMetric]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pivotedActivityMetrics")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPivotedActivityMetrics: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pivotedActivityMetrics")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReachByFrequencyMetrics(value: js.Array[SchemaMetric]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reachByFrequencyMetrics")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReachByFrequencyMetrics: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reachByFrequencyMetrics")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -5,30 +5,88 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<plotly.js.plotly.js.Margin> */
+@js.native
 trait PartialMargin extends js.Object {
-  var b: js.UndefOr[Double] = js.undefined
-  var l: js.UndefOr[Double] = js.undefined
-  var pad: js.UndefOr[Double] = js.undefined
-  var r: js.UndefOr[Double] = js.undefined
-  var t: js.UndefOr[Double] = js.undefined
+  var b: js.UndefOr[Double] = js.native
+  var l: js.UndefOr[Double] = js.native
+  var pad: js.UndefOr[Double] = js.native
+  var r: js.UndefOr[Double] = js.native
+  var t: js.UndefOr[Double] = js.native
 }
 
 object PartialMargin {
   @scala.inline
-  def apply(
-    b: Int | Double = null,
-    l: Int | Double = null,
-    pad: Int | Double = null,
-    r: Int | Double = null,
-    t: Int | Double = null
-  ): PartialMargin = {
+  def apply(): PartialMargin = {
     val __obj = js.Dynamic.literal()
-    if (b != null) __obj.updateDynamic("b")(b.asInstanceOf[js.Any])
-    if (l != null) __obj.updateDynamic("l")(l.asInstanceOf[js.Any])
-    if (pad != null) __obj.updateDynamic("pad")(pad.asInstanceOf[js.Any])
-    if (r != null) __obj.updateDynamic("r")(r.asInstanceOf[js.Any])
-    if (t != null) __obj.updateDynamic("t")(t.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialMargin]
   }
+  @scala.inline
+  implicit class PartialMarginOps[Self <: PartialMargin] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withB(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("b")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutB: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("b")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withL(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("l")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutL: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("l")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPad(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pad")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPad: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pad")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withR(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("r")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutR: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("r")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withT(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("t")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutT: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("t")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -68,7 +68,7 @@ class Uni_ () extends js.Object {
     * 参考: [http://uniapp.dcloud.io/api/arrayBufferToBase64?id=arraybuffertobase64](http://uniapp.dcloud.io/api/arrayBufferToBase64?id=arraybuffertobase64)
     */
   def arrayBufferToBase64(): String = js.native
-  def arrayBufferToBase64(arrayBuffer: scala.scalajs.js.typedarray.ArrayBuffer): String = js.native
+  def arrayBufferToBase64(arrayBuffer: js.typedarray.ArrayBuffer): String = js.native
   /**
     * 提前向用户发起授权请求
     *
@@ -81,8 +81,8 @@ class Uni_ () extends js.Object {
     *
     * 参考: [http://uniapp.dcloud.io/api/base64ToArrayBuffer?id=base64toarraybuffer](http://uniapp.dcloud.io/api/base64ToArrayBuffer?id=base64toarraybuffer)
     */
-  def base64ToArrayBuffer(): scala.scalajs.js.typedarray.ArrayBuffer = js.native
-  def base64ToArrayBuffer(base64: String): scala.scalajs.js.typedarray.ArrayBuffer = js.native
+  def base64ToArrayBuffer(): js.typedarray.ArrayBuffer = js.native
+  def base64ToArrayBuffer(base64: String): js.typedarray.ArrayBuffer = js.native
   /**
     * 判断uni-app的API，回调，参数，组件等是否在当前版本可用
     *

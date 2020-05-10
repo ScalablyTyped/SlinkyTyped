@@ -46,28 +46,125 @@ trait ScheduleRunConfiguration extends js.Object {
 
 object ScheduleRunConfiguration {
   @scala.inline
-  def apply(
-    auxiliaryApps: AmazonResourceNames = null,
-    billingMethod: BillingMethod = null,
-    customerArtifactPaths: CustomerArtifactPaths = null,
-    extraDataPackageArn: AmazonResourceName = null,
-    locale: String = null,
-    location: Location = null,
-    networkProfileArn: AmazonResourceName = null,
-    radios: Radios = null,
-    vpceConfigurationArns: AmazonResourceNames = null
-  ): ScheduleRunConfiguration = {
+  def apply(): ScheduleRunConfiguration = {
     val __obj = js.Dynamic.literal()
-    if (auxiliaryApps != null) __obj.updateDynamic("auxiliaryApps")(auxiliaryApps.asInstanceOf[js.Any])
-    if (billingMethod != null) __obj.updateDynamic("billingMethod")(billingMethod.asInstanceOf[js.Any])
-    if (customerArtifactPaths != null) __obj.updateDynamic("customerArtifactPaths")(customerArtifactPaths.asInstanceOf[js.Any])
-    if (extraDataPackageArn != null) __obj.updateDynamic("extraDataPackageArn")(extraDataPackageArn.asInstanceOf[js.Any])
-    if (locale != null) __obj.updateDynamic("locale")(locale.asInstanceOf[js.Any])
-    if (location != null) __obj.updateDynamic("location")(location.asInstanceOf[js.Any])
-    if (networkProfileArn != null) __obj.updateDynamic("networkProfileArn")(networkProfileArn.asInstanceOf[js.Any])
-    if (radios != null) __obj.updateDynamic("radios")(radios.asInstanceOf[js.Any])
-    if (vpceConfigurationArns != null) __obj.updateDynamic("vpceConfigurationArns")(vpceConfigurationArns.asInstanceOf[js.Any])
     __obj.asInstanceOf[ScheduleRunConfiguration]
   }
+  @scala.inline
+  implicit class ScheduleRunConfigurationOps[Self <: ScheduleRunConfiguration] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAuxiliaryApps(value: AmazonResourceNames): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("auxiliaryApps")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAuxiliaryApps: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("auxiliaryApps")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBillingMethod(value: BillingMethod): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("billingMethod")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBillingMethod: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("billingMethod")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCustomerArtifactPaths(value: CustomerArtifactPaths): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customerArtifactPaths")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCustomerArtifactPaths: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customerArtifactPaths")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExtraDataPackageArn(value: AmazonResourceName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extraDataPackageArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExtraDataPackageArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extraDataPackageArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocale(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocale: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocation(value: Location): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNetworkProfileArn(value: AmazonResourceName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("networkProfileArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNetworkProfileArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("networkProfileArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRadios(value: Radios): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("radios")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRadios: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("radios")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVpceConfigurationArns(value: AmazonResourceNames): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vpceConfigurationArns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVpceConfigurationArns: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vpceConfigurationArns")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -13,12 +13,10 @@ trait AuthMethod extends js.Object
 
 object AuthMethod {
   @scala.inline
-  def basic: typingsSlinky.k6.k6Strings.basic = this.cast("basic")
+  def basic: typingsSlinky.k6.k6Strings.basic = "basic".asInstanceOf[typingsSlinky.k6.k6Strings.basic]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def digest: typingsSlinky.k6.k6Strings.digest = "digest".asInstanceOf[typingsSlinky.k6.k6Strings.digest]
   @scala.inline
-  def digest: typingsSlinky.k6.k6Strings.digest = this.cast("digest")
-  @scala.inline
-  def ntlm: typingsSlinky.k6.k6Strings.ntlm = this.cast("ntlm")
+  def ntlm: typingsSlinky.k6.k6Strings.ntlm = "ntlm".asInstanceOf[typingsSlinky.k6.k6Strings.ntlm]
 }
 

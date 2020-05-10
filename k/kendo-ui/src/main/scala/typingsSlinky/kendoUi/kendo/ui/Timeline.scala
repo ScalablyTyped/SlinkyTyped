@@ -18,14 +18,14 @@ class Timeline protected () extends Widget {
   var wrapper: JQuery = js.native
   def collapse(event: String): Unit = js.native
   def collapse(event: JQuery): Unit = js.native
-  def collapse(event: typingsSlinky.std.Element): Unit = js.native
+  def collapse(event: Element): Unit = js.native
   def expand(event: String): Unit = js.native
   def expand(event: JQuery): Unit = js.native
-  def expand(event: typingsSlinky.std.Element): Unit = js.native
+  def expand(event: Element): Unit = js.native
   def next(): Unit = js.native
   def open(event: String): Unit = js.native
   def open(event: JQuery): Unit = js.native
-  def open(event: typingsSlinky.std.Element): Unit = js.native
+  def open(event: Element): Unit = js.native
   def previous(): Unit = js.native
   def redraw(): Unit = js.native
   def setDataSource(dataSource: DataSource): Unit = js.native

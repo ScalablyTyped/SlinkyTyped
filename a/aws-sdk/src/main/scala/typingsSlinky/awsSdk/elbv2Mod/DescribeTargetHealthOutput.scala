@@ -14,10 +14,29 @@ trait DescribeTargetHealthOutput extends js.Object {
 
 object DescribeTargetHealthOutput {
   @scala.inline
-  def apply(TargetHealthDescriptions: TargetHealthDescriptions = null): DescribeTargetHealthOutput = {
+  def apply(): DescribeTargetHealthOutput = {
     val __obj = js.Dynamic.literal()
-    if (TargetHealthDescriptions != null) __obj.updateDynamic("TargetHealthDescriptions")(TargetHealthDescriptions.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeTargetHealthOutput]
   }
+  @scala.inline
+  implicit class DescribeTargetHealthOutputOps[Self <: DescribeTargetHealthOutput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withTargetHealthDescriptions(value: TargetHealthDescriptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetHealthDescriptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTargetHealthDescriptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetHealthDescriptions")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

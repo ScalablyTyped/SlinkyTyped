@@ -14,10 +14,29 @@ trait M2tsScte35Esam extends js.Object {
 
 object M2tsScte35Esam {
   @scala.inline
-  def apply(Scte35EsamPid: Int | Double = null): M2tsScte35Esam = {
+  def apply(): M2tsScte35Esam = {
     val __obj = js.Dynamic.literal()
-    if (Scte35EsamPid != null) __obj.updateDynamic("Scte35EsamPid")(Scte35EsamPid.asInstanceOf[js.Any])
     __obj.asInstanceOf[M2tsScte35Esam]
   }
+  @scala.inline
+  implicit class M2tsScte35EsamOps[Self <: M2tsScte35Esam] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withScte35EsamPid(value: integerMin32Max8182): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Scte35EsamPid")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScte35EsamPid: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Scte35EsamPid")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

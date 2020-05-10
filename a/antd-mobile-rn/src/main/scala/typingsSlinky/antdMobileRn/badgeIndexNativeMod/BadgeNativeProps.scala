@@ -1,7 +1,5 @@
 package typingsSlinky.antdMobileRn.badgeIndexNativeMod
 
-import typingsSlinky.antdMobileRn.antdMobileRnStrings.large
-import typingsSlinky.antdMobileRn.antdMobileRnStrings.small
 import typingsSlinky.antdMobileRn.badgePropsTypeMod.BadgePropsTypes
 import typingsSlinky.antdMobileRn.badgeStyleIndexNativeMod.IBadgeStyle
 import typingsSlinky.reactNative.mod.StyleProp
@@ -10,31 +8,55 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait BadgeNativeProps extends BadgePropsTypes {
-  var style: js.UndefOr[StyleProp[ViewStyle]] = js.undefined
-  var styles: js.UndefOr[IBadgeStyle] = js.undefined
+  var style: js.UndefOr[StyleProp[ViewStyle]] = js.native
+  var styles: js.UndefOr[IBadgeStyle] = js.native
 }
 
 object BadgeNativeProps {
   @scala.inline
-  def apply(
-    corner: js.UndefOr[Boolean] = js.undefined,
-    dot: js.UndefOr[Boolean] = js.undefined,
-    overflowCount: Int | Double = null,
-    size: large | small = null,
-    style: StyleProp[ViewStyle] = null,
-    styles: IBadgeStyle = null,
-    text: js.Any = null
-  ): BadgeNativeProps = {
+  def apply(): BadgeNativeProps = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(corner)) __obj.updateDynamic("corner")(corner.asInstanceOf[js.Any])
-    if (!js.isUndefined(dot)) __obj.updateDynamic("dot")(dot.asInstanceOf[js.Any])
-    if (overflowCount != null) __obj.updateDynamic("overflowCount")(overflowCount.asInstanceOf[js.Any])
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (styles != null) __obj.updateDynamic("styles")(styles.asInstanceOf[js.Any])
-    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
     __obj.asInstanceOf[BadgeNativeProps]
   }
+  @scala.inline
+  implicit class BadgeNativePropsOps[Self <: BadgeNativeProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withStyle(value: StyleProp[ViewStyle]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyleNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(null)
+        ret
+    }
+    @scala.inline
+    def withStyles(value: IBadgeStyle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("styles")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyles: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("styles")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -8,8 +8,8 @@ import scala.scalajs.js.annotation._
 @JSGlobal("spine.webgl.Matrix4")
 @js.native
 class Matrix4 () extends js.Object {
-  var temp: scala.scalajs.js.typedarray.Float32Array = js.native
-  var values: scala.scalajs.js.typedarray.Float32Array = js.native
+  var temp: js.typedarray.Float32Array = js.native
+  var values: js.typedarray.Float32Array = js.native
   def copy(): Matrix4 = js.native
   def determinant(): Double = js.native
   def identity(): Matrix4 = js.native

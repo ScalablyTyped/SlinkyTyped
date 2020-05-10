@@ -14,14 +14,12 @@ trait NumericDataType extends js.Object
 
 object NumericDataType {
   @scala.inline
-  def bool: typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.bool = this.cast("bool")
+  def bool: typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.bool = "bool".asInstanceOf[typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.bool]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def complex64: typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.complex64 = "complex64".asInstanceOf[typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.complex64]
   @scala.inline
-  def complex64: typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.complex64 = this.cast("complex64")
+  def float32: typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.float32 = "float32".asInstanceOf[typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.float32]
   @scala.inline
-  def float32: typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.float32 = this.cast("float32")
-  @scala.inline
-  def int32: typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.int32 = this.cast("int32")
+  def int32: typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.int32 = "int32".asInstanceOf[typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.int32]
 }
 

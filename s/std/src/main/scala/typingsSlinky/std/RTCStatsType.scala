@@ -19,24 +19,22 @@ trait RTCStatsType extends js.Object
 
 object RTCStatsType {
   @scala.inline
-  def candidatepair: typingsSlinky.std.stdStrings.candidatepair = this.cast("candidatepair")
+  def candidatepair: typingsSlinky.std.stdStrings.candidatepair = "candidatepair".asInstanceOf[typingsSlinky.std.stdStrings.candidatepair]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def datachannel: typingsSlinky.std.stdStrings.datachannel = "datachannel".asInstanceOf[typingsSlinky.std.stdStrings.datachannel]
   @scala.inline
-  def datachannel: typingsSlinky.std.stdStrings.datachannel = this.cast("datachannel")
+  def inboundrtp: typingsSlinky.std.stdStrings.inboundrtp = "inboundrtp".asInstanceOf[typingsSlinky.std.stdStrings.inboundrtp]
   @scala.inline
-  def inboundrtp: typingsSlinky.std.stdStrings.inboundrtp = this.cast("inboundrtp")
+  def localcandidate: typingsSlinky.std.stdStrings.localcandidate = "localcandidate".asInstanceOf[typingsSlinky.std.stdStrings.localcandidate]
   @scala.inline
-  def localcandidate: typingsSlinky.std.stdStrings.localcandidate = this.cast("localcandidate")
+  def outboundrtp: typingsSlinky.std.stdStrings.outboundrtp = "outboundrtp".asInstanceOf[typingsSlinky.std.stdStrings.outboundrtp]
   @scala.inline
-  def outboundrtp: typingsSlinky.std.stdStrings.outboundrtp = this.cast("outboundrtp")
+  def remotecandidate: typingsSlinky.std.stdStrings.remotecandidate = "remotecandidate".asInstanceOf[typingsSlinky.std.stdStrings.remotecandidate]
   @scala.inline
-  def remotecandidate: typingsSlinky.std.stdStrings.remotecandidate = this.cast("remotecandidate")
+  def session: typingsSlinky.std.stdStrings.session = "session".asInstanceOf[typingsSlinky.std.stdStrings.session]
   @scala.inline
-  def session: typingsSlinky.std.stdStrings.session = this.cast("session")
+  def track: typingsSlinky.std.stdStrings.track = "track".asInstanceOf[typingsSlinky.std.stdStrings.track]
   @scala.inline
-  def track: typingsSlinky.std.stdStrings.track = this.cast("track")
-  @scala.inline
-  def transport: typingsSlinky.std.stdStrings.transport = this.cast("transport")
+  def transport: typingsSlinky.std.stdStrings.transport = "transport".asInstanceOf[typingsSlinky.std.stdStrings.transport]
 }
 

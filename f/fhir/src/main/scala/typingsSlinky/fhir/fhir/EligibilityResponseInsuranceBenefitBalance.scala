@@ -7,98 +7,209 @@ import scala.scalajs.js.annotation._
 /**
   * Benefits by Category
   */
+@js.native
 trait EligibilityResponseInsuranceBenefitBalance extends BackboneElement {
   /**
     * Contains extended information for property 'description'.
     */
-  var _description: js.UndefOr[Element] = js.undefined
+  var _description: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'excluded'.
     */
-  var _excluded: js.UndefOr[Element] = js.undefined
+  var _excluded: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'name'.
     */
-  var _name: js.UndefOr[Element] = js.undefined
+  var _name: js.UndefOr[Element] = js.native
   /**
     * Type of services covered
     */
-  var category: CodeableConcept
+  var category: CodeableConcept = js.native
   /**
     * Description of the benefit or services covered
     */
-  var description: js.UndefOr[String] = js.undefined
+  var description: js.UndefOr[String] = js.native
   /**
     * Excluded from the plan
     */
-  var excluded: js.UndefOr[Boolean] = js.undefined
+  var excluded: js.UndefOr[Boolean] = js.native
   /**
     * Benefit Summary
     */
-  var financial: js.UndefOr[js.Array[EligibilityResponseInsuranceBenefitBalanceFinancial]] = js.undefined
+  var financial: js.UndefOr[js.Array[EligibilityResponseInsuranceBenefitBalanceFinancial]] = js.native
   /**
     * Short name for the benefit
     */
-  var name: js.UndefOr[String] = js.undefined
+  var name: js.UndefOr[String] = js.native
   /**
     * In or out of network
     */
-  var network: js.UndefOr[CodeableConcept] = js.undefined
+  var network: js.UndefOr[CodeableConcept] = js.native
   /**
     * Detailed services covered within the type
     */
-  var subCategory: js.UndefOr[CodeableConcept] = js.undefined
+  var subCategory: js.UndefOr[CodeableConcept] = js.native
   /**
     * Annual or lifetime
     */
-  var term: js.UndefOr[CodeableConcept] = js.undefined
+  var term: js.UndefOr[CodeableConcept] = js.native
   /**
     * Individual or family
     */
-  var unit: js.UndefOr[CodeableConcept] = js.undefined
+  var unit: js.UndefOr[CodeableConcept] = js.native
 }
 
 object EligibilityResponseInsuranceBenefitBalance {
   @scala.inline
-  def apply(
-    category: CodeableConcept,
-    _description: Element = null,
-    _excluded: Element = null,
-    _fhir_comments: js.Array[Element] = null,
-    _id: Element = null,
-    _name: Element = null,
-    description: String = null,
-    excluded: js.UndefOr[Boolean] = js.undefined,
-    extension: js.Array[Extension] = null,
-    fhir_comments: js.Array[String] = null,
-    financial: js.Array[EligibilityResponseInsuranceBenefitBalanceFinancial] = null,
-    id: String = null,
-    modifierExtension: js.Array[Extension] = null,
-    name: String = null,
-    network: CodeableConcept = null,
-    subCategory: CodeableConcept = null,
-    term: CodeableConcept = null,
-    unit: CodeableConcept = null
-  ): EligibilityResponseInsuranceBenefitBalance = {
+  def apply(category: CodeableConcept): EligibilityResponseInsuranceBenefitBalance = {
     val __obj = js.Dynamic.literal(category = category.asInstanceOf[js.Any])
-    if (_description != null) __obj.updateDynamic("_description")(_description.asInstanceOf[js.Any])
-    if (_excluded != null) __obj.updateDynamic("_excluded")(_excluded.asInstanceOf[js.Any])
-    if (_fhir_comments != null) __obj.updateDynamic("_fhir_comments")(_fhir_comments.asInstanceOf[js.Any])
-    if (_id != null) __obj.updateDynamic("_id")(_id.asInstanceOf[js.Any])
-    if (_name != null) __obj.updateDynamic("_name")(_name.asInstanceOf[js.Any])
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (!js.isUndefined(excluded)) __obj.updateDynamic("excluded")(excluded.asInstanceOf[js.Any])
-    if (extension != null) __obj.updateDynamic("extension")(extension.asInstanceOf[js.Any])
-    if (fhir_comments != null) __obj.updateDynamic("fhir_comments")(fhir_comments.asInstanceOf[js.Any])
-    if (financial != null) __obj.updateDynamic("financial")(financial.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (modifierExtension != null) __obj.updateDynamic("modifierExtension")(modifierExtension.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (network != null) __obj.updateDynamic("network")(network.asInstanceOf[js.Any])
-    if (subCategory != null) __obj.updateDynamic("subCategory")(subCategory.asInstanceOf[js.Any])
-    if (term != null) __obj.updateDynamic("term")(term.asInstanceOf[js.Any])
-    if (unit != null) __obj.updateDynamic("unit")(unit.asInstanceOf[js.Any])
     __obj.asInstanceOf[EligibilityResponseInsuranceBenefitBalance]
   }
+  @scala.inline
+  implicit class EligibilityResponseInsuranceBenefitBalanceOps[Self <: EligibilityResponseInsuranceBenefitBalance] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCategory(value: CodeableConcept): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("category")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_description(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_description: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_excluded(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_excluded")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_excluded: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_excluded")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_name(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_name: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDescription(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExcluded(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("excluded")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExcluded: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("excluded")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFinancial(value: js.Array[EligibilityResponseInsuranceBenefitBalanceFinancial]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("financial")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFinancial: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("financial")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNetwork(value: CodeableConcept): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("network")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNetwork: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("network")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSubCategory(value: CodeableConcept): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subCategory")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubCategory: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subCategory")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTerm(value: CodeableConcept): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("term")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTerm: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("term")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUnit(value: CodeableConcept): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUnit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unit")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

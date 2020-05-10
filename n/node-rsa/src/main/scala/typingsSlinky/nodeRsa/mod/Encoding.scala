@@ -19,24 +19,22 @@ trait Encoding extends js.Object
 
 object Encoding {
   @scala.inline
-  def ascii: typingsSlinky.nodeRsa.nodeRsaStrings.ascii = this.cast("ascii")
+  def ascii: typingsSlinky.nodeRsa.nodeRsaStrings.ascii = "ascii".asInstanceOf[typingsSlinky.nodeRsa.nodeRsaStrings.ascii]
   @scala.inline
-  def base64: typingsSlinky.nodeRsa.nodeRsaStrings.base64 = this.cast("base64")
+  def base64: typingsSlinky.nodeRsa.nodeRsaStrings.base64 = "base64".asInstanceOf[typingsSlinky.nodeRsa.nodeRsaStrings.base64]
   @scala.inline
-  def binary: typingsSlinky.nodeRsa.nodeRsaStrings.binary = this.cast("binary")
+  def binary: typingsSlinky.nodeRsa.nodeRsaStrings.binary = "binary".asInstanceOf[typingsSlinky.nodeRsa.nodeRsaStrings.binary]
   @scala.inline
-  def buffer: typingsSlinky.nodeRsa.nodeRsaStrings.buffer = this.cast("buffer")
+  def buffer: typingsSlinky.nodeRsa.nodeRsaStrings.buffer = "buffer".asInstanceOf[typingsSlinky.nodeRsa.nodeRsaStrings.buffer]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def hex: typingsSlinky.nodeRsa.nodeRsaStrings.hex = "hex".asInstanceOf[typingsSlinky.nodeRsa.nodeRsaStrings.hex]
   @scala.inline
-  def hex: typingsSlinky.nodeRsa.nodeRsaStrings.hex = this.cast("hex")
+  def latin1: typingsSlinky.nodeRsa.nodeRsaStrings.latin1 = "latin1".asInstanceOf[typingsSlinky.nodeRsa.nodeRsaStrings.latin1]
   @scala.inline
-  def latin1: typingsSlinky.nodeRsa.nodeRsaStrings.latin1 = this.cast("latin1")
+  def ucs2: typingsSlinky.nodeRsa.nodeRsaStrings.ucs2 = "ucs2".asInstanceOf[typingsSlinky.nodeRsa.nodeRsaStrings.ucs2]
   @scala.inline
-  def ucs2: typingsSlinky.nodeRsa.nodeRsaStrings.ucs2 = this.cast("ucs2")
+  def utf16le: typingsSlinky.nodeRsa.nodeRsaStrings.utf16le = "utf16le".asInstanceOf[typingsSlinky.nodeRsa.nodeRsaStrings.utf16le]
   @scala.inline
-  def utf16le: typingsSlinky.nodeRsa.nodeRsaStrings.utf16le = this.cast("utf16le")
-  @scala.inline
-  def utf8: typingsSlinky.nodeRsa.nodeRsaStrings.utf8 = this.cast("utf8")
+  def utf8: typingsSlinky.nodeRsa.nodeRsaStrings.utf8 = "utf8".asInstanceOf[typingsSlinky.nodeRsa.nodeRsaStrings.utf8]
 }
 

@@ -5,22 +5,50 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonExtensions extends js.Object {
-  var extensions: js.UndefOr[js.Array[Asterisk | String | AnonIncludedirectories]] = js.undefined
+  var extensions: js.UndefOr[js.Array[Asterisk | String | AnonIncludedirectories]] = js.native
   /** File types to handle */
-  var types: js.UndefOr[js.Array[Asterisk | String | AnonIncludedirectories]] = js.undefined
+  var types: js.UndefOr[js.Array[Asterisk | String | AnonIncludedirectories]] = js.native
 }
 
 object AnonExtensions {
   @scala.inline
-  def apply(
-    extensions: js.Array[Asterisk | String | AnonIncludedirectories] = null,
-    types: js.Array[Asterisk | String | AnonIncludedirectories] = null
-  ): AnonExtensions = {
+  def apply(): AnonExtensions = {
     val __obj = js.Dynamic.literal()
-    if (extensions != null) __obj.updateDynamic("extensions")(extensions.asInstanceOf[js.Any])
-    if (types != null) __obj.updateDynamic("types")(types.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonExtensions]
   }
+  @scala.inline
+  implicit class AnonExtensionsOps[Self <: AnonExtensions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withExtensions(value: js.Array[Asterisk | String | AnonIncludedirectories]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extensions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExtensions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extensions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTypes(value: js.Array[Asterisk | String | AnonIncludedirectories]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("types")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTypes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("types")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

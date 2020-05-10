@@ -17,20 +17,18 @@ trait JSONSchemaTypeName extends _JSONSchemaTypeValue
 
 object JSONSchemaTypeName {
   @scala.inline
-  def array: typingsSlinky.jsonSchemaTyped.jsonSchemaTypedStrings.array = this.cast("array")
+  def array: typingsSlinky.jsonSchemaTyped.jsonSchemaTypedStrings.array = "array".asInstanceOf[typingsSlinky.jsonSchemaTyped.jsonSchemaTypedStrings.array]
   @scala.inline
-  def boolean: typingsSlinky.jsonSchemaTyped.jsonSchemaTypedStrings.boolean = this.cast("boolean")
+  def boolean: typingsSlinky.jsonSchemaTyped.jsonSchemaTypedStrings.boolean = "boolean".asInstanceOf[typingsSlinky.jsonSchemaTyped.jsonSchemaTypedStrings.boolean]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def integer: typingsSlinky.jsonSchemaTyped.jsonSchemaTypedStrings.integer = "integer".asInstanceOf[typingsSlinky.jsonSchemaTyped.jsonSchemaTypedStrings.integer]
   @scala.inline
-  def integer: typingsSlinky.jsonSchemaTyped.jsonSchemaTypedStrings.integer = this.cast("integer")
+  def `null`: typingsSlinky.jsonSchemaTyped.jsonSchemaTypedStrings.`null` = "null".asInstanceOf[typingsSlinky.jsonSchemaTyped.jsonSchemaTypedStrings.`null`]
   @scala.inline
-  def `null`: typingsSlinky.jsonSchemaTyped.jsonSchemaTypedStrings.`null` = this.cast("null")
+  def number: typingsSlinky.jsonSchemaTyped.jsonSchemaTypedStrings.number = "number".asInstanceOf[typingsSlinky.jsonSchemaTyped.jsonSchemaTypedStrings.number]
   @scala.inline
-  def number: typingsSlinky.jsonSchemaTyped.jsonSchemaTypedStrings.number = this.cast("number")
+  def `object`: typingsSlinky.jsonSchemaTyped.jsonSchemaTypedStrings.`object` = "object".asInstanceOf[typingsSlinky.jsonSchemaTyped.jsonSchemaTypedStrings.`object`]
   @scala.inline
-  def `object`: typingsSlinky.jsonSchemaTyped.jsonSchemaTypedStrings.`object` = this.cast("object")
-  @scala.inline
-  def string: typingsSlinky.jsonSchemaTyped.jsonSchemaTypedStrings.string = this.cast("string")
+  def string: typingsSlinky.jsonSchemaTyped.jsonSchemaTypedStrings.string = "string".asInstanceOf[typingsSlinky.jsonSchemaTyped.jsonSchemaTypedStrings.string]
 }
 

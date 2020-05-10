@@ -6,16 +6,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IPlaylistStatics extends js.Object {
-  def loadAsync(file: IStorageFile): IAsyncOperation[Playlist]
+  def loadAsync(file: IStorageFile): IAsyncOperation[Playlist] = js.native
 }
 
 object IPlaylistStatics {
   @scala.inline
   def apply(loadAsync: IStorageFile => IAsyncOperation[Playlist]): IPlaylistStatics = {
     val __obj = js.Dynamic.literal(loadAsync = js.Any.fromFunction1(loadAsync))
-  
     __obj.asInstanceOf[IPlaylistStatics]
   }
+  @scala.inline
+  implicit class IPlaylistStaticsOps[Self <: IPlaylistStatics] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLoadAsync(value: IStorageFile => IAsyncOperation[Playlist]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loadAsync")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

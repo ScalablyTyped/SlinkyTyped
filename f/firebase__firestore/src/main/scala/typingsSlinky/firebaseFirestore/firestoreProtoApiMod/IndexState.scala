@@ -14,14 +14,12 @@ trait IndexState extends js.Object
 
 object IndexState {
   @scala.inline
-  def CREATING: typingsSlinky.firebaseFirestore.firebaseFirestoreStrings.CREATING = this.cast("CREATING")
+  def CREATING: typingsSlinky.firebaseFirestore.firebaseFirestoreStrings.CREATING = "CREATING".asInstanceOf[typingsSlinky.firebaseFirestore.firebaseFirestoreStrings.CREATING]
   @scala.inline
-  def ERROR: typingsSlinky.firebaseFirestore.firebaseFirestoreStrings.ERROR = this.cast("ERROR")
+  def ERROR: typingsSlinky.firebaseFirestore.firebaseFirestoreStrings.ERROR = "ERROR".asInstanceOf[typingsSlinky.firebaseFirestore.firebaseFirestoreStrings.ERROR]
   @scala.inline
-  def READY: typingsSlinky.firebaseFirestore.firebaseFirestoreStrings.READY = this.cast("READY")
+  def READY: typingsSlinky.firebaseFirestore.firebaseFirestoreStrings.READY = "READY".asInstanceOf[typingsSlinky.firebaseFirestore.firebaseFirestoreStrings.READY]
   @scala.inline
-  def STATE_UNSPECIFIED: typingsSlinky.firebaseFirestore.firebaseFirestoreStrings.STATE_UNSPECIFIED = this.cast("STATE_UNSPECIFIED")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def STATE_UNSPECIFIED: typingsSlinky.firebaseFirestore.firebaseFirestoreStrings.STATE_UNSPECIFIED = "STATE_UNSPECIFIED".asInstanceOf[typingsSlinky.firebaseFirestore.firebaseFirestoreStrings.STATE_UNSPECIFIED]
 }
 

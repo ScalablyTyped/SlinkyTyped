@@ -1,38 +1,37 @@
 package typingsSlinky.reactFns.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.ReactComponentClass
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactFns.deviceOrientationDeviceOrientationMod.DeviceOrientationProps
 import typingsSlinky.reactFns.typesMod.SharedRenderProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object DeviceOrientation
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactFns.mod.DeviceOrientation] {
+object DeviceOrientation {
   @JSImport("react-fns", "DeviceOrientation")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    component: ReactComponentClass[DeviceOrientationProps | Unit] = null,
-    debug: js.UndefOr[Boolean] = js.undefined,
-    render: DeviceOrientationProps => TagMod[Any] = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactFns.mod.DeviceOrientation] = {
-    val __obj = js.Dynamic.literal()
-    if (component != null) __obj.updateDynamic("component")(component.asInstanceOf[js.Any])
-    if (!js.isUndefined(debug)) __obj.updateDynamic("debug")(debug.asInstanceOf[js.Any])
-    if (render != null) __obj.updateDynamic("render")(js.Any.fromFunction1(render))
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactFns.mod.DeviceOrientation] {
+    @scala.inline
+    def componentFunctionComponent(value: ReactComponentClass[DeviceOrientationProps | Unit]): this.type = set("component", value.asInstanceOf[js.Any])
+    @scala.inline
+    def componentComponentClass(value: ReactComponentClass[DeviceOrientationProps | Unit]): this.type = set("component", value.asInstanceOf[js.Any])
+    @scala.inline
+    def component(value: ReactComponentClass[DeviceOrientationProps | Unit]): this.type = set("component", value.asInstanceOf[js.Any])
+    @scala.inline
+    def debug(value: Boolean): this.type = set("debug", value.asInstanceOf[js.Any])
+    @scala.inline
+    def render(value: DeviceOrientationProps => TagMod[Any]): this.type = set("render", js.Any.fromFunction1(value))
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.reactFns.mod.DeviceOrientation] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactFns.mod.DeviceOrientation](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = SharedRenderProps[DeviceOrientationProps]
+  
+  def withProps(p: SharedRenderProps[DeviceOrientationProps]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: DeviceOrientation.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

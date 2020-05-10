@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
 class Node ()
   extends Component[NodeProps, js.Object, js.Any] {
   var backbuffer: js.UndefOr[Framebuffer] = js.native
-  var capturePixelsArray: js.UndefOr[scala.scalajs.js.typedarray.Uint8Array] = js.native
+  var capturePixelsArray: js.UndefOr[js.typedarray.Uint8Array] = js.native
   @JSName("context")
   var context_Node: SurfaceContext = js.native
   var dependencies: js.Array[Node | Bus] = js.native

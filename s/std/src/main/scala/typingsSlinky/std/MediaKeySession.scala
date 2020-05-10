@@ -63,7 +63,7 @@ trait MediaKeySession extends EventTarget {
   def removeEventListener_keystatuseschange(
     `type`: keystatuseschange,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_message(
@@ -80,7 +80,7 @@ trait MediaKeySession extends EventTarget {
   def removeEventListener_message(
     `type`: message,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ MediaKeyMessageEvent, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   def update(response: BufferSource): js.Promise[Unit] = js.native
 }

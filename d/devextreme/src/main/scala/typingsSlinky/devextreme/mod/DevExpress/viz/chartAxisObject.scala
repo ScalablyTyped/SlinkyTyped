@@ -1,6 +1,5 @@
 package typingsSlinky.devextreme.mod.DevExpress.viz
 
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +9,7 @@ trait chartAxisObject extends js.Object {
   /** Gets the axis' displayed range. */
   def visualRange(): VizRange = js.native
   /** Sets the axis's displayed range. */
-  def visualRange(visualRange: js.Array[Double | String | Date]): Unit = js.native
+  def visualRange(visualRange: js.Array[Double | String | js.Date]): Unit = js.native
   def visualRange(visualRange: VizRange): Unit = js.native
 }
 

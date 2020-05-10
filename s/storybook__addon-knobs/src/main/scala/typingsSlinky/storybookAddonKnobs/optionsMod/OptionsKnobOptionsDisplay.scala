@@ -16,18 +16,16 @@ trait OptionsKnobOptionsDisplay extends js.Object
 
 object OptionsKnobOptionsDisplay {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def check: typingsSlinky.storybookAddonKnobs.storybookAddonKnobsStrings.check = "check".asInstanceOf[typingsSlinky.storybookAddonKnobs.storybookAddonKnobsStrings.check]
   @scala.inline
-  def check: typingsSlinky.storybookAddonKnobs.storybookAddonKnobsStrings.check = this.cast("check")
+  def `inline-check`: typingsSlinky.storybookAddonKnobs.storybookAddonKnobsStrings.`inline-check` = "inline-check".asInstanceOf[typingsSlinky.storybookAddonKnobs.storybookAddonKnobsStrings.`inline-check`]
   @scala.inline
-  def `inline-check`: typingsSlinky.storybookAddonKnobs.storybookAddonKnobsStrings.`inline-check` = this.cast("inline-check")
+  def `inline-radio`: typingsSlinky.storybookAddonKnobs.storybookAddonKnobsStrings.`inline-radio` = "inline-radio".asInstanceOf[typingsSlinky.storybookAddonKnobs.storybookAddonKnobsStrings.`inline-radio`]
   @scala.inline
-  def `inline-radio`: typingsSlinky.storybookAddonKnobs.storybookAddonKnobsStrings.`inline-radio` = this.cast("inline-radio")
+  def `multi-select`: typingsSlinky.storybookAddonKnobs.storybookAddonKnobsStrings.`multi-select` = "multi-select".asInstanceOf[typingsSlinky.storybookAddonKnobs.storybookAddonKnobsStrings.`multi-select`]
   @scala.inline
-  def `multi-select`: typingsSlinky.storybookAddonKnobs.storybookAddonKnobsStrings.`multi-select` = this.cast("multi-select")
+  def radio: typingsSlinky.storybookAddonKnobs.storybookAddonKnobsStrings.radio = "radio".asInstanceOf[typingsSlinky.storybookAddonKnobs.storybookAddonKnobsStrings.radio]
   @scala.inline
-  def radio: typingsSlinky.storybookAddonKnobs.storybookAddonKnobsStrings.radio = this.cast("radio")
-  @scala.inline
-  def select: typingsSlinky.storybookAddonKnobs.storybookAddonKnobsStrings.select = this.cast("select")
+  def select: typingsSlinky.storybookAddonKnobs.storybookAddonKnobsStrings.select = "select".asInstanceOf[typingsSlinky.storybookAddonKnobs.storybookAddonKnobsStrings.select]
 }
 

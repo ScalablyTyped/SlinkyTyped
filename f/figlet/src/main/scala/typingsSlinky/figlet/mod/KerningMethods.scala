@@ -15,16 +15,14 @@ trait KerningMethods extends js.Object
 
 object KerningMethods {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def `controlled smushing`: typingsSlinky.figlet.figletStrings.`controlled smushing` = ("controlled smushing").asInstanceOf[typingsSlinky.figlet.figletStrings.`controlled smushing`]
   @scala.inline
-  def `controlled smushing`: typingsSlinky.figlet.figletStrings.`controlled smushing` = this.cast("controlled smushing")
+  def default: typingsSlinky.figlet.figletStrings.default = "default".asInstanceOf[typingsSlinky.figlet.figletStrings.default]
   @scala.inline
-  def default: typingsSlinky.figlet.figletStrings.default = this.cast("default")
+  def fitted: typingsSlinky.figlet.figletStrings.fitted = "fitted".asInstanceOf[typingsSlinky.figlet.figletStrings.fitted]
   @scala.inline
-  def fitted: typingsSlinky.figlet.figletStrings.fitted = this.cast("fitted")
+  def full: typingsSlinky.figlet.figletStrings.full = "full".asInstanceOf[typingsSlinky.figlet.figletStrings.full]
   @scala.inline
-  def full: typingsSlinky.figlet.figletStrings.full = this.cast("full")
-  @scala.inline
-  def `universal smushing`: typingsSlinky.figlet.figletStrings.`universal smushing` = this.cast("universal smushing")
+  def `universal smushing`: typingsSlinky.figlet.figletStrings.`universal smushing` = ("universal smushing").asInstanceOf[typingsSlinky.figlet.figletStrings.`universal smushing`]
 }
 

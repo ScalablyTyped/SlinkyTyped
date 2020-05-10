@@ -16,16 +16,14 @@ trait uApparentPower extends js.Object
 
 object uApparentPower {
   @scala.inline
-  def GVA: typingsSlinky.convertUnits.convertUnitsStrings.GVA = this.cast("GVA")
+  def GVA: typingsSlinky.convertUnits.convertUnitsStrings.GVA = "GVA".asInstanceOf[typingsSlinky.convertUnits.convertUnitsStrings.GVA]
   @scala.inline
-  def MVA: typingsSlinky.convertUnits.convertUnitsStrings.MVA = this.cast("MVA")
+  def MVA: typingsSlinky.convertUnits.convertUnitsStrings.MVA = "MVA".asInstanceOf[typingsSlinky.convertUnits.convertUnitsStrings.MVA]
   @scala.inline
-  def VA: typingsSlinky.convertUnits.convertUnitsStrings.VA = this.cast("VA")
+  def VA: typingsSlinky.convertUnits.convertUnitsStrings.VA = "VA".asInstanceOf[typingsSlinky.convertUnits.convertUnitsStrings.VA]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def kVA: typingsSlinky.convertUnits.convertUnitsStrings.kVA = "kVA".asInstanceOf[typingsSlinky.convertUnits.convertUnitsStrings.kVA]
   @scala.inline
-  def kVA: typingsSlinky.convertUnits.convertUnitsStrings.kVA = this.cast("kVA")
-  @scala.inline
-  def mVA: mVA_ = this.cast("mVA")
+  def mVA: mVA_ = "mVA".asInstanceOf[mVA_]
 }
 

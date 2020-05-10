@@ -13,7 +13,7 @@ object elementBufferMod extends js.Object {
   @js.native
   class ElementBuffer () extends CommonBuffer {
     @JSName("data")
-    var data_ElementBuffer: scala.scalajs.js.typedarray.Uint16Array | scala.scalajs.js.typedarray.Uint32Array = js.native
+    var data_ElementBuffer: js.typedarray.Uint16Array | js.typedarray.Uint32Array = js.native
     val typeSize: Double = js.native
     def initWhenCreate(data: js.Array[Double], `type`: EBufferType, usage: EBufferUsage): js.Any = js.native
     def resetData(data: js.Array[Double]): this.type = js.native

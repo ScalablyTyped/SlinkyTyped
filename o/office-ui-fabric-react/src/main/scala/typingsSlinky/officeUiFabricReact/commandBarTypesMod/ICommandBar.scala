@@ -4,23 +4,43 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ICommandBar extends js.Object {
   /**
     * Sets focus to the active command in the list.
     */
-  def focus(): Unit
+  def focus(): Unit = js.native
   /**
     * Remeasures the available space.
     */
-  def remeasure(): Unit
+  def remeasure(): Unit = js.native
 }
 
 object ICommandBar {
   @scala.inline
   def apply(focus: () => Unit, remeasure: () => Unit): ICommandBar = {
     val __obj = js.Dynamic.literal(focus = js.Any.fromFunction0(focus), remeasure = js.Any.fromFunction0(remeasure))
-  
     __obj.asInstanceOf[ICommandBar]
   }
+  @scala.inline
+  implicit class ICommandBarOps[Self <: ICommandBar] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFocus(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("focus")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withRemeasure(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("remeasure")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

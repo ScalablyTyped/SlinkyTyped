@@ -19,10 +19,29 @@ trait SchemaThreatEntryMetadata extends js.Object {
 
 object SchemaThreatEntryMetadata {
   @scala.inline
-  def apply(entries: js.Array[SchemaMetadataEntry] = null): SchemaThreatEntryMetadata = {
+  def apply(): SchemaThreatEntryMetadata = {
     val __obj = js.Dynamic.literal()
-    if (entries != null) __obj.updateDynamic("entries")(entries.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaThreatEntryMetadata]
   }
+  @scala.inline
+  implicit class SchemaThreatEntryMetadataOps[Self <: SchemaThreatEntryMetadata] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEntries(value: js.Array[SchemaMetadataEntry]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("entries")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEntries: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("entries")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -16,9 +16,9 @@ import scala.scalajs.js.annotation._
 @JSImport("@aws-sdk/util-buffer-from", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
-  def fromArrayBuffer(input: scala.scalajs.js.typedarray.ArrayBuffer): Buffer = js.native
-  def fromArrayBuffer(input: scala.scalajs.js.typedarray.ArrayBuffer, offset: Double): Buffer = js.native
-  def fromArrayBuffer(input: scala.scalajs.js.typedarray.ArrayBuffer, offset: Double, length: Double): Buffer = js.native
+  def fromArrayBuffer(input: js.typedarray.ArrayBuffer): Buffer = js.native
+  def fromArrayBuffer(input: js.typedarray.ArrayBuffer, offset: Double): Buffer = js.native
+  def fromArrayBuffer(input: js.typedarray.ArrayBuffer, offset: Double, length: Double): Buffer = js.native
   def fromString(input: String): Buffer = js.native
   def fromString(input: String, encoding: String): Buffer = js.native
   @JSName("fromString")

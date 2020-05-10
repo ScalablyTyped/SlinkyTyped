@@ -2,7 +2,6 @@ package typingsSlinky.chromeApps.chrome.certificateProvider
 
 import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.chromeApps.chrome.events.Event
-import typingsSlinky.std.ArrayBuffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -24,7 +23,7 @@ object onSignDigestRequested
       Event[
         js.Function2[
           /* signRequest */ SignRequest, 
-          /* signCallback */ js.Function1[/* signature */ js.UndefOr[ArrayBuffer], Unit], 
+          /* signCallback */ js.Function1[/* signature */ js.UndefOr[js.typedarray.ArrayBuffer], Unit], 
           js.Any
         ]
       ]

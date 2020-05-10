@@ -9,10 +9,5 @@ import scala.scalajs.js.annotation._
 @js.native
 class default protected () extends ConvertEnumResponse {
   def this(enumNode: GraphQLEnumType) = this()
-  /* CompleteClass */
-  override var enumNode: js.Any = js.native
-  /* CompleteClass */
-  @JSName("transformResult")
-  override def transformResult_MConvertEnumResponse(result: js.Any): js.Any = js.native
 }
 

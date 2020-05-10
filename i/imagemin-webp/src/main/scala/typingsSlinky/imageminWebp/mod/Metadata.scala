@@ -15,16 +15,14 @@ trait Metadata extends js.Object
 
 object Metadata {
   @scala.inline
-  def all: typingsSlinky.imageminWebp.imageminWebpStrings.all = this.cast("all")
+  def all: typingsSlinky.imageminWebp.imageminWebpStrings.all = "all".asInstanceOf[typingsSlinky.imageminWebp.imageminWebpStrings.all]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def exif: typingsSlinky.imageminWebp.imageminWebpStrings.exif = "exif".asInstanceOf[typingsSlinky.imageminWebp.imageminWebpStrings.exif]
   @scala.inline
-  def exif: typingsSlinky.imageminWebp.imageminWebpStrings.exif = this.cast("exif")
+  def icc: typingsSlinky.imageminWebp.imageminWebpStrings.icc = "icc".asInstanceOf[typingsSlinky.imageminWebp.imageminWebpStrings.icc]
   @scala.inline
-  def icc: typingsSlinky.imageminWebp.imageminWebpStrings.icc = this.cast("icc")
+  def none: typingsSlinky.imageminWebp.imageminWebpStrings.none = "none".asInstanceOf[typingsSlinky.imageminWebp.imageminWebpStrings.none]
   @scala.inline
-  def none: typingsSlinky.imageminWebp.imageminWebpStrings.none = this.cast("none")
-  @scala.inline
-  def xmp: typingsSlinky.imageminWebp.imageminWebpStrings.xmp = this.cast("xmp")
+  def xmp: typingsSlinky.imageminWebp.imageminWebpStrings.xmp = "xmp".asInstanceOf[typingsSlinky.imageminWebp.imageminWebpStrings.xmp]
 }
 

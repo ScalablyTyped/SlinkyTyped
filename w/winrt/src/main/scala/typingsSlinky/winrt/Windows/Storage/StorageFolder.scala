@@ -16,8 +16,6 @@ class StorageFolder ()
      with IStorageItemProperties {
   /* InferMemberOverrides */
   override def getItemsAsync(startIndex: Double, maxItemsToRetrieve: Double): IAsyncOperation[IVectorView[IStorageItem]] = js.native
-  /* CompleteClass */
-  override def tryGetItemAsync(name: String): IAsyncOperation[IStorageItem] = js.native
 }
 
 /* static members */

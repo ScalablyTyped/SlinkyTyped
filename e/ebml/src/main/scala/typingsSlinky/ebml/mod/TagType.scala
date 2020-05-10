@@ -18,22 +18,20 @@ trait TagType extends js.Object
 
 object TagType {
   @scala.inline
-  def `8`: typingsSlinky.ebml.ebmlStrings.`8` = this.cast("8")
+  def `8`: typingsSlinky.ebml.ebmlStrings.`8` = "8".asInstanceOf[typingsSlinky.ebml.ebmlStrings.`8`]
   @scala.inline
-  def b: typingsSlinky.ebml.ebmlStrings.b = this.cast("b")
+  def b: typingsSlinky.ebml.ebmlStrings.b = "b".asInstanceOf[typingsSlinky.ebml.ebmlStrings.b]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def d: typingsSlinky.ebml.ebmlStrings.d = "d".asInstanceOf[typingsSlinky.ebml.ebmlStrings.d]
   @scala.inline
-  def d: typingsSlinky.ebml.ebmlStrings.d = this.cast("d")
+  def f: typingsSlinky.ebml.ebmlStrings.f = "f".asInstanceOf[typingsSlinky.ebml.ebmlStrings.f]
   @scala.inline
-  def f: typingsSlinky.ebml.ebmlStrings.f = this.cast("f")
+  def i: typingsSlinky.ebml.ebmlStrings.i = "i".asInstanceOf[typingsSlinky.ebml.ebmlStrings.i]
   @scala.inline
-  def i: typingsSlinky.ebml.ebmlStrings.i = this.cast("i")
+  def m: typingsSlinky.ebml.ebmlStrings.m = "m".asInstanceOf[typingsSlinky.ebml.ebmlStrings.m]
   @scala.inline
-  def m: typingsSlinky.ebml.ebmlStrings.m = this.cast("m")
+  def s: typingsSlinky.ebml.ebmlStrings.s = "s".asInstanceOf[typingsSlinky.ebml.ebmlStrings.s]
   @scala.inline
-  def s: typingsSlinky.ebml.ebmlStrings.s = this.cast("s")
-  @scala.inline
-  def u: typingsSlinky.ebml.ebmlStrings.u = this.cast("u")
+  def u: typingsSlinky.ebml.ebmlStrings.u = "u".asInstanceOf[typingsSlinky.ebml.ebmlStrings.u]
 }
 

@@ -7,15 +7,6 @@ import scala.scalajs.js.annotation._
 
 object xmlCoreStrings {
   @js.native
-  sealed trait XMLJS extends js.Object
-  
-  @js.native
-  sealed trait _empty extends js.Object
-  
-  @js.native
-  sealed trait applicationSlashxml extends js.Object
-  
-  @js.native
   sealed trait base64 extends _XmlBufferEncoding
   
   @js.native
@@ -30,12 +21,6 @@ object xmlCoreStrings {
   @js.native
   sealed trait utf8 extends _XmlBufferEncoding
   
-  @scala.inline
-  def XMLJS: XMLJS = "XMLJS".asInstanceOf[XMLJS]
-  @scala.inline
-  def _empty: _empty = "".asInstanceOf[_empty]
-  @scala.inline
-  def applicationSlashxml: applicationSlashxml = "application/xml".asInstanceOf[applicationSlashxml]
   @scala.inline
   def base64: base64 = "base64".asInstanceOf[base64]
   @scala.inline

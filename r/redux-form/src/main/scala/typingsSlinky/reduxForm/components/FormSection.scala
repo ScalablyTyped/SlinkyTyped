@@ -1,21 +1,25 @@
 package typingsSlinky.reduxForm.components
 
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reduxForm.formSectionMod.FormSectionProps
 import typingsSlinky.reduxForm.formSectionMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* This component has complicated props, you'll have to assemble `props` yourself using js.Dynamic.literal(...) or similar. Couldn't find props for TypeRef(QualifiedName(IArray(Name(<intersection>))),IArray(TypeRef(QualifiedName(IArray(Name(typingsSlinky), Name(reduxForm), Name(formSectionMod), Name(FormSectionProps))),IArray(TypeRef(QualifiedName(IArray(Name(P))),IArray(),NoComments)),NoComments), TypeRef(QualifiedName(IArray(Name(P))),IArray(),NoComments)),NoComments) because: Could't extract props from TypeRef(QualifiedName(IArray(Name(P))),IArray(),NoComments) because couldn't resolve ClassTree. */
-object FormSection
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default[js.Any]] {
+/* The props of this component has an unsupported shape. You can use `set` manually to use it, but with no compiler support :/ . Couldn't find props for typingsSlinky.reduxForm.formSectionMod.FormSectionProps[P] with P because: IArray(Could't extract props from P because couldn't resolve ClassTree.) */
+object FormSection {
   @JSImport("redux-form/lib/FormSection", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  type Props = FormSectionProps[js.Any] with js.Any
+  @scala.inline
+  class Builder[P] (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default[js.Any]]
+  
+  def apply[P](p: FormSectionProps[P] with P): Builder[P] = new Builder[P](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make[P](companion: FormSection.type): Builder[P] = new Builder[P](js.Array(this.component, js.Dictionary.empty))()
 }
 

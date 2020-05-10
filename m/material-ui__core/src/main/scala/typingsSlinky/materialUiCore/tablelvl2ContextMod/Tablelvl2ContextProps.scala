@@ -16,8 +16,21 @@ object Tablelvl2ContextProps {
   @scala.inline
   def apply(variant: head | body | footer): Tablelvl2ContextProps = {
     val __obj = js.Dynamic.literal(variant = variant.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[Tablelvl2ContextProps]
   }
+  @scala.inline
+  implicit class Tablelvl2ContextPropsOps[Self <: Tablelvl2ContextProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withVariant(value: head | body | footer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("variant")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

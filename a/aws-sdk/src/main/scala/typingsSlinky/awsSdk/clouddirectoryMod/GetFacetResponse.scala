@@ -14,10 +14,29 @@ trait GetFacetResponse extends js.Object {
 
 object GetFacetResponse {
   @scala.inline
-  def apply(Facet: Facet = null): GetFacetResponse = {
+  def apply(): GetFacetResponse = {
     val __obj = js.Dynamic.literal()
-    if (Facet != null) __obj.updateDynamic("Facet")(Facet.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetFacetResponse]
   }
+  @scala.inline
+  implicit class GetFacetResponseOps[Self <: GetFacetResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFacet(value: Facet): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Facet")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFacet: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Facet")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

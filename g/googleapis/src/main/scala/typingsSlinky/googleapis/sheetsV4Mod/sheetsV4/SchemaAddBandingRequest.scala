@@ -19,10 +19,29 @@ trait SchemaAddBandingRequest extends js.Object {
 
 object SchemaAddBandingRequest {
   @scala.inline
-  def apply(bandedRange: SchemaBandedRange = null): SchemaAddBandingRequest = {
+  def apply(): SchemaAddBandingRequest = {
     val __obj = js.Dynamic.literal()
-    if (bandedRange != null) __obj.updateDynamic("bandedRange")(bandedRange.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAddBandingRequest]
   }
+  @scala.inline
+  implicit class SchemaAddBandingRequestOps[Self <: SchemaAddBandingRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBandedRange(value: SchemaBandedRange): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bandedRange")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBandedRange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bandedRange")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

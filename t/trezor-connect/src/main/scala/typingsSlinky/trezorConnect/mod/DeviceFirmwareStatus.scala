@@ -13,12 +13,10 @@ trait DeviceFirmwareStatus extends js.Object
 
 object DeviceFirmwareStatus {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def outdated: typingsSlinky.trezorConnect.trezorConnectStrings.outdated = "outdated".asInstanceOf[typingsSlinky.trezorConnect.trezorConnectStrings.outdated]
   @scala.inline
-  def outdated: typingsSlinky.trezorConnect.trezorConnectStrings.outdated = this.cast("outdated")
+  def required: typingsSlinky.trezorConnect.trezorConnectStrings.required = "required".asInstanceOf[typingsSlinky.trezorConnect.trezorConnectStrings.required]
   @scala.inline
-  def required: typingsSlinky.trezorConnect.trezorConnectStrings.required = this.cast("required")
-  @scala.inline
-  def valid: typingsSlinky.trezorConnect.trezorConnectStrings.valid = this.cast("valid")
+  def valid: typingsSlinky.trezorConnect.trezorConnectStrings.valid = "valid".asInstanceOf[typingsSlinky.trezorConnect.trezorConnectStrings.valid]
 }
 

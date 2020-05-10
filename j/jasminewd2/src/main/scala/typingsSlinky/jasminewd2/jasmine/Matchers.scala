@@ -1,8 +1,6 @@
 package typingsSlinky.jasminewd2.jasmine
 
 import org.scalablytyped.runtime.Instantiable1
-import typingsSlinky.std.Error
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -54,42 +52,42 @@ trait Matchers[T] extends js.Object {
   def toHaveBeenCalledWith(params: js.Any*): js.Promise[Unit] = js.native
   def toMatch(expected: String): js.Promise[Unit] = js.native
   def toMatch(expected: String, expectationFailOutput: js.Any): js.Promise[Unit] = js.native
-  def toMatch(expected: js.Promise[String | RegExp]): js.Promise[Unit] = js.native
-  def toMatch(expected: js.Promise[String | RegExp], expectationFailOutput: js.Any): js.Promise[Unit] = js.native
-  def toMatch(expected: RegExp): js.Promise[Unit] = js.native
-  def toMatch(expected: RegExp, expectationFailOutput: js.Any): js.Promise[Unit] = js.native
+  def toMatch(expected: js.Promise[String | js.RegExp]): js.Promise[Unit] = js.native
+  def toMatch(expected: js.Promise[String | js.RegExp], expectationFailOutput: js.Any): js.Promise[Unit] = js.native
+  def toMatch(expected: js.RegExp): js.Promise[Unit] = js.native
+  def toMatch(expected: js.RegExp, expectationFailOutput: js.Any): js.Promise[Unit] = js.native
   def toThrow(): js.Promise[Unit] = js.native
   def toThrow(expected: js.Any): js.Promise[Unit] = js.native
   def toThrowError(): js.Promise[Unit] = js.native
   def toThrowError(
     expected: Instantiable1[
       /* args (repeated) */ js.Any, 
-      Error | (js.Promise[Instantiable1[/* args (repeated) */ js.Any, Error]])
+      js.Error | (js.Promise[Instantiable1[/* args (repeated) */ js.Any, js.Error]])
     ]
   ): js.Promise[Unit] = js.native
   def toThrowError(
     expected: Instantiable1[
       /* args (repeated) */ js.Any, 
-      Error | (js.Promise[Instantiable1[/* args (repeated) */ js.Any, Error]])
+      js.Error | (js.Promise[Instantiable1[/* args (repeated) */ js.Any, js.Error]])
     ],
     message: String
   ): js.Promise[Unit] = js.native
   def toThrowError(
     expected: Instantiable1[
       /* args (repeated) */ js.Any, 
-      Error | (js.Promise[Instantiable1[/* args (repeated) */ js.Any, Error]])
+      js.Error | (js.Promise[Instantiable1[/* args (repeated) */ js.Any, js.Error]])
     ],
-    message: js.Promise[String | RegExp]
+    message: js.Promise[String | js.RegExp]
   ): js.Promise[Unit] = js.native
   def toThrowError(
     expected: Instantiable1[
       /* args (repeated) */ js.Any, 
-      Error | (js.Promise[Instantiable1[/* args (repeated) */ js.Any, Error]])
+      js.Error | (js.Promise[Instantiable1[/* args (repeated) */ js.Any, js.Error]])
     ],
-    message: RegExp
+    message: js.RegExp
   ): js.Promise[Unit] = js.native
   def toThrowError(message: String): js.Promise[Unit] = js.native
-  def toThrowError(message: js.Promise[String | RegExp]): js.Promise[Unit] = js.native
-  def toThrowError(message: RegExp): js.Promise[Unit] = js.native
+  def toThrowError(message: js.Promise[String | js.RegExp]): js.Promise[Unit] = js.native
+  def toThrowError(message: js.RegExp): js.Promise[Unit] = js.native
 }
 

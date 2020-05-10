@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonFormatter extends js.Object {
   /**
     * Data label formatter, which supports string
@@ -50,7 +51,7 @@ trait AnonFormatter extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-scatter.markLine.data.1.label.emphasis.formatter
     */
-  var formatter: js.UndefOr[js.Function | String] = js.undefined
+  var formatter: js.UndefOr[js.Function | String] = js.native
   /**
     * Positions of labels can be:
     *
@@ -63,7 +64,7 @@ trait AnonFormatter extends js.Object {
     * "end"
     * @see https://echarts.apache.org/en/option.html#series-scatter.markLine.data.1.label.emphasis.position
     */
-  var position: js.UndefOr[String] = js.undefined
+  var position: js.UndefOr[String] = js.native
   /**
     * Whether show label or not.
     *
@@ -72,21 +73,58 @@ trait AnonFormatter extends js.Object {
     * "true"
     * @see https://echarts.apache.org/en/option.html#series-scatter.markLine.data.1.label.emphasis.show
     */
-  var show: js.UndefOr[Boolean] = js.undefined
+  var show: js.UndefOr[Boolean] = js.native
 }
 
 object AnonFormatter {
   @scala.inline
-  def apply(
-    formatter: js.Function | String = null,
-    position: String = null,
-    show: js.UndefOr[Boolean] = js.undefined
-  ): AnonFormatter = {
+  def apply(): AnonFormatter = {
     val __obj = js.Dynamic.literal()
-    if (formatter != null) __obj.updateDynamic("formatter")(formatter.asInstanceOf[js.Any])
-    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
-    if (!js.isUndefined(show)) __obj.updateDynamic("show")(show.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonFormatter]
   }
+  @scala.inline
+  implicit class AnonFormatterOps[Self <: AnonFormatter] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFormatter(value: js.Function | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formatter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFormatter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formatter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPosition(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPosition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShow(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("show")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("show")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

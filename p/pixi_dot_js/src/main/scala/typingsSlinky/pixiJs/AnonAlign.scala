@@ -6,102 +6,412 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonAlign extends js.Object {
-  var align: js.UndefOr[String] = js.undefined
-  var breakWords: js.UndefOr[Boolean] = js.undefined
-  var dropShadow: js.UndefOr[Boolean] = js.undefined
-  var dropShadowAlpha: js.UndefOr[Double] = js.undefined
-  var dropShadowAngle: js.UndefOr[Double] = js.undefined
-  var dropShadowBlur: js.UndefOr[Double] = js.undefined
-  var dropShadowColor: js.UndefOr[String | Double] = js.undefined
-  var dropShadowDistance: js.UndefOr[Double] = js.undefined
-  var fill: js.UndefOr[String | (js.Array[Double | String]) | Double | CanvasGradient | CanvasPattern] = js.undefined
-  var fillGradientStops: js.UndefOr[js.Array[Double]] = js.undefined
-  var fillGradientType: js.UndefOr[Double] = js.undefined
-  var fontFamily: js.UndefOr[String | js.Array[String]] = js.undefined
-  var fontSize: js.UndefOr[Double | String] = js.undefined
-  var fontStyle: js.UndefOr[String] = js.undefined
-  var fontVariant: js.UndefOr[String] = js.undefined
-  var fontWeight: js.UndefOr[String] = js.undefined
-  var leading: js.UndefOr[Double] = js.undefined
-  var letterSpacing: js.UndefOr[Double] = js.undefined
-  var lineHeight: js.UndefOr[Double] = js.undefined
-  var lineJoin: js.UndefOr[String] = js.undefined
-  var miterLimit: js.UndefOr[Double] = js.undefined
-  var padding: js.UndefOr[Double] = js.undefined
-  var stroke: js.UndefOr[String | Double] = js.undefined
-  var strokeThickness: js.UndefOr[Double] = js.undefined
-  var textBaseline: js.UndefOr[String] = js.undefined
-  var trim: js.UndefOr[Boolean] = js.undefined
-  var whiteSpace: js.UndefOr[String] = js.undefined
-  var wordWrap: js.UndefOr[Boolean] = js.undefined
-  var wordWrapWidth: js.UndefOr[Double] = js.undefined
+  var align: js.UndefOr[String] = js.native
+  var breakWords: js.UndefOr[Boolean] = js.native
+  var dropShadow: js.UndefOr[Boolean] = js.native
+  var dropShadowAlpha: js.UndefOr[Double] = js.native
+  var dropShadowAngle: js.UndefOr[Double] = js.native
+  var dropShadowBlur: js.UndefOr[Double] = js.native
+  var dropShadowColor: js.UndefOr[String | Double] = js.native
+  var dropShadowDistance: js.UndefOr[Double] = js.native
+  var fill: js.UndefOr[String | (js.Array[Double | String]) | Double | CanvasGradient | CanvasPattern] = js.native
+  var fillGradientStops: js.UndefOr[js.Array[Double]] = js.native
+  var fillGradientType: js.UndefOr[Double] = js.native
+  var fontFamily: js.UndefOr[String | js.Array[String]] = js.native
+  var fontSize: js.UndefOr[Double | String] = js.native
+  var fontStyle: js.UndefOr[String] = js.native
+  var fontVariant: js.UndefOr[String] = js.native
+  var fontWeight: js.UndefOr[String] = js.native
+  var leading: js.UndefOr[Double] = js.native
+  var letterSpacing: js.UndefOr[Double] = js.native
+  var lineHeight: js.UndefOr[Double] = js.native
+  var lineJoin: js.UndefOr[String] = js.native
+  var miterLimit: js.UndefOr[Double] = js.native
+  var padding: js.UndefOr[Double] = js.native
+  var stroke: js.UndefOr[String | Double] = js.native
+  var strokeThickness: js.UndefOr[Double] = js.native
+  var textBaseline: js.UndefOr[String] = js.native
+  var trim: js.UndefOr[Boolean] = js.native
+  var whiteSpace: js.UndefOr[String] = js.native
+  var wordWrap: js.UndefOr[Boolean] = js.native
+  var wordWrapWidth: js.UndefOr[Double] = js.native
 }
 
 object AnonAlign {
   @scala.inline
-  def apply(
-    align: String = null,
-    breakWords: js.UndefOr[Boolean] = js.undefined,
-    dropShadow: js.UndefOr[Boolean] = js.undefined,
-    dropShadowAlpha: Int | Double = null,
-    dropShadowAngle: Int | Double = null,
-    dropShadowBlur: Int | Double = null,
-    dropShadowColor: String | Double = null,
-    dropShadowDistance: Int | Double = null,
-    fill: String | (js.Array[Double | String]) | Double | CanvasGradient | CanvasPattern = null,
-    fillGradientStops: js.Array[Double] = null,
-    fillGradientType: Int | Double = null,
-    fontFamily: String | js.Array[String] = null,
-    fontSize: Double | String = null,
-    fontStyle: String = null,
-    fontVariant: String = null,
-    fontWeight: String = null,
-    leading: Int | Double = null,
-    letterSpacing: Int | Double = null,
-    lineHeight: Int | Double = null,
-    lineJoin: String = null,
-    miterLimit: Int | Double = null,
-    padding: Int | Double = null,
-    stroke: String | Double = null,
-    strokeThickness: Int | Double = null,
-    textBaseline: String = null,
-    trim: js.UndefOr[Boolean] = js.undefined,
-    whiteSpace: String = null,
-    wordWrap: js.UndefOr[Boolean] = js.undefined,
-    wordWrapWidth: Int | Double = null
-  ): AnonAlign = {
+  def apply(): AnonAlign = {
     val __obj = js.Dynamic.literal()
-    if (align != null) __obj.updateDynamic("align")(align.asInstanceOf[js.Any])
-    if (!js.isUndefined(breakWords)) __obj.updateDynamic("breakWords")(breakWords.asInstanceOf[js.Any])
-    if (!js.isUndefined(dropShadow)) __obj.updateDynamic("dropShadow")(dropShadow.asInstanceOf[js.Any])
-    if (dropShadowAlpha != null) __obj.updateDynamic("dropShadowAlpha")(dropShadowAlpha.asInstanceOf[js.Any])
-    if (dropShadowAngle != null) __obj.updateDynamic("dropShadowAngle")(dropShadowAngle.asInstanceOf[js.Any])
-    if (dropShadowBlur != null) __obj.updateDynamic("dropShadowBlur")(dropShadowBlur.asInstanceOf[js.Any])
-    if (dropShadowColor != null) __obj.updateDynamic("dropShadowColor")(dropShadowColor.asInstanceOf[js.Any])
-    if (dropShadowDistance != null) __obj.updateDynamic("dropShadowDistance")(dropShadowDistance.asInstanceOf[js.Any])
-    if (fill != null) __obj.updateDynamic("fill")(fill.asInstanceOf[js.Any])
-    if (fillGradientStops != null) __obj.updateDynamic("fillGradientStops")(fillGradientStops.asInstanceOf[js.Any])
-    if (fillGradientType != null) __obj.updateDynamic("fillGradientType")(fillGradientType.asInstanceOf[js.Any])
-    if (fontFamily != null) __obj.updateDynamic("fontFamily")(fontFamily.asInstanceOf[js.Any])
-    if (fontSize != null) __obj.updateDynamic("fontSize")(fontSize.asInstanceOf[js.Any])
-    if (fontStyle != null) __obj.updateDynamic("fontStyle")(fontStyle.asInstanceOf[js.Any])
-    if (fontVariant != null) __obj.updateDynamic("fontVariant")(fontVariant.asInstanceOf[js.Any])
-    if (fontWeight != null) __obj.updateDynamic("fontWeight")(fontWeight.asInstanceOf[js.Any])
-    if (leading != null) __obj.updateDynamic("leading")(leading.asInstanceOf[js.Any])
-    if (letterSpacing != null) __obj.updateDynamic("letterSpacing")(letterSpacing.asInstanceOf[js.Any])
-    if (lineHeight != null) __obj.updateDynamic("lineHeight")(lineHeight.asInstanceOf[js.Any])
-    if (lineJoin != null) __obj.updateDynamic("lineJoin")(lineJoin.asInstanceOf[js.Any])
-    if (miterLimit != null) __obj.updateDynamic("miterLimit")(miterLimit.asInstanceOf[js.Any])
-    if (padding != null) __obj.updateDynamic("padding")(padding.asInstanceOf[js.Any])
-    if (stroke != null) __obj.updateDynamic("stroke")(stroke.asInstanceOf[js.Any])
-    if (strokeThickness != null) __obj.updateDynamic("strokeThickness")(strokeThickness.asInstanceOf[js.Any])
-    if (textBaseline != null) __obj.updateDynamic("textBaseline")(textBaseline.asInstanceOf[js.Any])
-    if (!js.isUndefined(trim)) __obj.updateDynamic("trim")(trim.asInstanceOf[js.Any])
-    if (whiteSpace != null) __obj.updateDynamic("whiteSpace")(whiteSpace.asInstanceOf[js.Any])
-    if (!js.isUndefined(wordWrap)) __obj.updateDynamic("wordWrap")(wordWrap.asInstanceOf[js.Any])
-    if (wordWrapWidth != null) __obj.updateDynamic("wordWrapWidth")(wordWrapWidth.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonAlign]
   }
+  @scala.inline
+  implicit class AnonAlignOps[Self <: AnonAlign] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAlign(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("align")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlign: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("align")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBreakWords(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("breakWords")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBreakWords: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("breakWords")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDropShadow(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dropShadow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDropShadow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dropShadow")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDropShadowAlpha(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dropShadowAlpha")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDropShadowAlpha: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dropShadowAlpha")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDropShadowAngle(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dropShadowAngle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDropShadowAngle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dropShadowAngle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDropShadowBlur(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dropShadowBlur")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDropShadowBlur: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dropShadowBlur")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDropShadowColor(value: String | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dropShadowColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDropShadowColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dropShadowColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDropShadowDistance(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dropShadowDistance")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDropShadowDistance: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dropShadowDistance")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFillCanvasPattern(value: CanvasPattern): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fill")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFillCanvasGradient(value: CanvasGradient): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fill")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFill(value: String | (js.Array[Double | String]) | Double | CanvasGradient | CanvasPattern): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fill")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFill: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fill")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFillGradientStops(value: js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fillGradientStops")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFillGradientStops: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fillGradientStops")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFillGradientType(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fillGradientType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFillGradientType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fillGradientType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFontFamily(value: String | js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontFamily")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFontFamily: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontFamily")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFontSize(value: Double | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFontSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFontStyle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFontStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFontVariant(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontVariant")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFontVariant: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontVariant")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFontWeight(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontWeight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFontWeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontWeight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLeading(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("leading")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLeading: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("leading")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLetterSpacing(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("letterSpacing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLetterSpacing: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("letterSpacing")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLineHeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineHeight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLineHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineHeight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLineJoin(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineJoin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLineJoin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineJoin")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMiterLimit(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("miterLimit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMiterLimit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("miterLimit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPadding(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPadding: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStroke(value: String | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stroke")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStroke: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stroke")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStrokeThickness(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeThickness")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStrokeThickness: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeThickness")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTextBaseline(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textBaseline")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTextBaseline: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textBaseline")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTrim(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trim")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTrim: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trim")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWhiteSpace(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("whiteSpace")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWhiteSpace: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("whiteSpace")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWordWrap(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wordWrap")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWordWrap: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wordWrap")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWordWrapWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wordWrapWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWordWrapWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wordWrapWidth")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

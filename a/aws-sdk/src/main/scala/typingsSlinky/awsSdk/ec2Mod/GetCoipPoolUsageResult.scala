@@ -22,16 +22,53 @@ trait GetCoipPoolUsageResult extends js.Object {
 
 object GetCoipPoolUsageResult {
   @scala.inline
-  def apply(
-    CoipAddressUsages: CoipAddressUsageSet = null,
-    CoipPoolId: String = null,
-    LocalGatewayRouteTableId: String = null
-  ): GetCoipPoolUsageResult = {
+  def apply(): GetCoipPoolUsageResult = {
     val __obj = js.Dynamic.literal()
-    if (CoipAddressUsages != null) __obj.updateDynamic("CoipAddressUsages")(CoipAddressUsages.asInstanceOf[js.Any])
-    if (CoipPoolId != null) __obj.updateDynamic("CoipPoolId")(CoipPoolId.asInstanceOf[js.Any])
-    if (LocalGatewayRouteTableId != null) __obj.updateDynamic("LocalGatewayRouteTableId")(LocalGatewayRouteTableId.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetCoipPoolUsageResult]
   }
+  @scala.inline
+  implicit class GetCoipPoolUsageResultOps[Self <: GetCoipPoolUsageResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCoipAddressUsages(value: CoipAddressUsageSet): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CoipAddressUsages")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCoipAddressUsages: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CoipAddressUsages")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCoipPoolId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CoipPoolId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCoipPoolId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CoipPoolId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocalGatewayRouteTableId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LocalGatewayRouteTableId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocalGatewayRouteTableId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LocalGatewayRouteTableId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

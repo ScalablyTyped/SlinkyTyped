@@ -1,7 +1,7 @@
 package typingsSlinky.officeUiFabricReact
 
 import typingsSlinky.officeUiFabricReact.dialogFooterTypesMod.IDialogFooterProps
-import typingsSlinky.officeUiFabricReact.utilitiesMod.BaseComponent
+import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,8 +10,9 @@ import scala.scalajs.js.annotation._
 @js.native
 object dialogFooterBaseMod extends js.Object {
   @js.native
-  class DialogFooterBase ()
-    extends BaseComponent[IDialogFooterProps, js.Object] {
+  class DialogFooterBase protected ()
+    extends Component[IDialogFooterProps, js.Object, js.Any] {
+    def this(props: IDialogFooterProps) = this()
     var _classNames: js.Any = js.native
     var _renderChildrenAsActions: js.Any = js.native
   }

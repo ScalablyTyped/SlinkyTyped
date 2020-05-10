@@ -220,7 +220,7 @@ class excelviewer ()
   def load(url: String, `type`: String, callback: WebixCallback): js.Promise[_] = js.native
   def loadNext(count: Double, start: Double, callback: WebixCallback, url: String, now: Boolean): js.Promise[_] = js.native
   def locate(node: Event_): js.Any = js.native
-  def locate(node: typingsSlinky.std.HTMLElement): js.Any = js.native
+  def locate(node: HTMLElement): js.Any = js.native
   def mapCells(startrow: Double, startcol: String, numrows: Double, numcols: Double, callback: WebixCallback): Unit = js.native
   def mapEvent(map: js.Any): Unit = js.native
   def markSorting(column_id: String, direction: String): Unit = js.native

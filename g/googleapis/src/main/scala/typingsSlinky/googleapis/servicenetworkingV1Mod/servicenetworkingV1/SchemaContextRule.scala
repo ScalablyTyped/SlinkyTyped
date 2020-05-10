@@ -37,20 +37,77 @@ trait SchemaContextRule extends js.Object {
 
 object SchemaContextRule {
   @scala.inline
-  def apply(
-    allowedRequestExtensions: js.Array[String] = null,
-    allowedResponseExtensions: js.Array[String] = null,
-    provided: js.Array[String] = null,
-    requested: js.Array[String] = null,
-    selector: String = null
-  ): SchemaContextRule = {
+  def apply(): SchemaContextRule = {
     val __obj = js.Dynamic.literal()
-    if (allowedRequestExtensions != null) __obj.updateDynamic("allowedRequestExtensions")(allowedRequestExtensions.asInstanceOf[js.Any])
-    if (allowedResponseExtensions != null) __obj.updateDynamic("allowedResponseExtensions")(allowedResponseExtensions.asInstanceOf[js.Any])
-    if (provided != null) __obj.updateDynamic("provided")(provided.asInstanceOf[js.Any])
-    if (requested != null) __obj.updateDynamic("requested")(requested.asInstanceOf[js.Any])
-    if (selector != null) __obj.updateDynamic("selector")(selector.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaContextRule]
   }
+  @scala.inline
+  implicit class SchemaContextRuleOps[Self <: SchemaContextRule] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAllowedRequestExtensions(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowedRequestExtensions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowedRequestExtensions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowedRequestExtensions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAllowedResponseExtensions(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowedResponseExtensions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowedResponseExtensions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowedResponseExtensions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProvided(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("provided")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProvided: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("provided")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequested(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requested")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequested: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requested")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelector(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selector")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelector: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selector")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

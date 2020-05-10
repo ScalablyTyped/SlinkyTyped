@@ -4,7 +4,7 @@ import typingsSlinky.tensorflowTfjsConverter.executionContextMod.ExecutionContex
 import typingsSlinky.tensorflowTfjsConverter.operationsTypesMod.Node
 import typingsSlinky.tensorflowTfjsConverter.typesMod.NamedTensorsMap
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank
-import typingsSlinky.tensorflowTfjsCore.mod.Tensor_
+import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,6 +12,6 @@ import scala.scalajs.js.annotation._
 @JSImport("@tensorflow/tfjs-converter/dist/src/operations/operation_executor", JSImport.Namespace)
 @js.native
 object operationExecutorMod extends js.Object {
-  def executeOp(node: Node, tensorMap: NamedTensorsMap, context: ExecutionContext): js.Array[Tensor_[Rank]] | js.Promise[js.Array[Tensor_[Rank]]] = js.native
+  def executeOp(node: Node, tensorMap: NamedTensorsMap, context: ExecutionContext): js.Array[Tensor[Rank]] | js.Promise[js.Array[Tensor[Rank]]] = js.native
 }
 

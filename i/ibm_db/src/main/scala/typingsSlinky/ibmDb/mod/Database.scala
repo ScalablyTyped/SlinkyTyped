@@ -1,7 +1,6 @@
 package typingsSlinky.ibmDb.mod
 
 import typingsSlinky.ibmDb.AnonParams
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -163,7 +162,7 @@ class Database () extends Options {
   def prepare(sql: String, cb: js.Function2[/* err */ js.Error, /* stmt */ ODBCStatement, Unit]): Unit = js.native
   def prepareSync(sql: String): ODBCStatement = js.native
   def query(query: String): js.Promise[js.Array[_]] = js.native
-  def query(query: String, cb: js.Function2[/* err */ Error, /* res */ js.Array[_], Unit]): Unit = js.native
+  def query(query: String, cb: js.Function2[/* err */ js.Error, /* res */ js.Array[_], Unit]): Unit = js.native
   def query(query: String, params: js.Array[_]): js.Promise[js.Array[_]] = js.native
   def query(
     query: String,
@@ -171,17 +170,17 @@ class Database () extends Options {
     cb: js.Function2[/* err */ js.Error, /* res */ js.Array[_], Unit]
   ): Unit = js.native
   def query(query: AnonParams): js.Promise[js.Array[_]] = js.native
-  def query(query: AnonParams, cb: js.Function2[/* err */ Error, /* res */ js.Array[_], Unit]): Unit = js.native
+  def query(query: AnonParams, cb: js.Function2[/* err */ js.Error, /* res */ js.Array[_], Unit]): Unit = js.native
   def query(query: AnonParams, params: js.Array[_]): js.Promise[js.Array[_]] = js.native
   def queryResult(query: String): js.Promise[ODBCResult] = js.native
-  def queryResult(query: String, cb: js.Function2[/* err */ Error, /* res */ ODBCResult, Unit]): Unit = js.native
+  def queryResult(query: String, cb: js.Function2[/* err */ js.Error, /* res */ ODBCResult, Unit]): Unit = js.native
   def queryResult(query: String, params: js.Array[_]): js.Promise[ODBCResult] = js.native
   def queryResult(
     query: String,
     params: js.Array[_],
     cb: js.Function2[/* err */ js.Error, /* res */ ODBCResult, Unit]
   ): Unit = js.native
-  def queryResult(query: AnonParams, cb: js.Function2[/* err */ Error, /* res */ ODBCResult, Unit]): Unit = js.native
+  def queryResult(query: AnonParams, cb: js.Function2[/* err */ js.Error, /* res */ ODBCResult, Unit]): Unit = js.native
   def queryResultSync(query: String): ODBCResult = js.native
   def queryResultSync(query: String, params: js.Array[_]): ODBCResult = js.native
   def queryResultSync(query: AnonParams): ODBCResult = js.native

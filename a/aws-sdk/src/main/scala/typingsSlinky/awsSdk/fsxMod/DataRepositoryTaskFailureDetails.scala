@@ -11,10 +11,29 @@ trait DataRepositoryTaskFailureDetails extends js.Object {
 
 object DataRepositoryTaskFailureDetails {
   @scala.inline
-  def apply(Message: ErrorMessage = null): DataRepositoryTaskFailureDetails = {
+  def apply(): DataRepositoryTaskFailureDetails = {
     val __obj = js.Dynamic.literal()
-    if (Message != null) __obj.updateDynamic("Message")(Message.asInstanceOf[js.Any])
     __obj.asInstanceOf[DataRepositoryTaskFailureDetails]
   }
+  @scala.inline
+  implicit class DataRepositoryTaskFailureDetailsOps[Self <: DataRepositoryTaskFailureDetails] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMessage(value: ErrorMessage): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Message")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMessage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Message")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

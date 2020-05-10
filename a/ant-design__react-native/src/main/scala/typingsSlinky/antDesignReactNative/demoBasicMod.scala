@@ -1,7 +1,5 @@
 package typingsSlinky.antDesignReactNative
 
-import typingsSlinky.antDesignReactNative.antDesignReactNativeStrings.ActionSheet
-import typingsSlinky.antDesignReactNative.antDesignReactNativeStrings.`ActionSheet example`
 import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -22,7 +20,7 @@ object demoBasicMod extends js.Object {
     def this(props: js.Any) = this()
   }
   
-  val description: `ActionSheet example` = js.native
-  val title: ActionSheet = js.native
+  val description: /* "ActionSheet example" */ String = js.native
+  val title: /* "ActionSheet" */ String = js.native
 }
 

@@ -5,24 +5,49 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait GanttRemoveEvent extends GanttEvent {
-  var dependencies: js.UndefOr[js.Any] = js.undefined
-  var task: js.UndefOr[GanttTask] = js.undefined
+  var dependencies: js.UndefOr[js.Any] = js.native
+  var task: js.UndefOr[GanttTask] = js.native
 }
 
 object GanttRemoveEvent {
   @scala.inline
-  def apply(
-    isDefaultPrevented: () => Boolean,
-    preventDefault: js.Function,
-    sender: Gantt,
-    dependencies: js.Any = null,
-    task: GanttTask = null
-  ): GanttRemoveEvent = {
+  def apply(isDefaultPrevented: () => Boolean, preventDefault: js.Function, sender: Gantt): GanttRemoveEvent = {
     val __obj = js.Dynamic.literal(isDefaultPrevented = js.Any.fromFunction0(isDefaultPrevented), preventDefault = preventDefault.asInstanceOf[js.Any], sender = sender.asInstanceOf[js.Any])
-    if (dependencies != null) __obj.updateDynamic("dependencies")(dependencies.asInstanceOf[js.Any])
-    if (task != null) __obj.updateDynamic("task")(task.asInstanceOf[js.Any])
     __obj.asInstanceOf[GanttRemoveEvent]
   }
+  @scala.inline
+  implicit class GanttRemoveEventOps[Self <: GanttRemoveEvent] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDependencies(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dependencies")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDependencies: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dependencies")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTask(value: GanttTask): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("task")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTask: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("task")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

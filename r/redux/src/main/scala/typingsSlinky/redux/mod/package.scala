@@ -12,7 +12,7 @@ package object mod {
   type CombinedState[S] = typingsSlinky.redux.AnonCombinedState with S
   type DeepPartial[T] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ K in keyof T ]:? T[K] extends object? / * import warning: SimplifyRecursiveTypeAlias.enterTsTypeRef rewrittenOpt applyOrElse Simplified recursive type alias redux.redux.DeepPartial<T[K]> * / object : T[K]}
-    */ typingsSlinky.redux.reduxStrings.DeepPartial with js.Any
+    */ typingsSlinky.redux.reduxStrings.DeepPartial with org.scalablytyped.runtime.TopLevel[js.Any]
   type Dispatch[A /* <: typingsSlinky.redux.mod.Action[_] */] = js.Function1[/* action */ A, A]
   /* compose */
   type Func0[R] = js.Function0[R]
@@ -28,15 +28,15 @@ package object mod {
   ]
   type PreloadedState[S] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ K in keyof S ]: S[K] extends object? / * import warning: SimplifyRecursiveTypeAlias.enterTsTypeRef rewrittenOpt applyOrElse Simplified recursive type alias redux.redux.PreloadedState<S[K]> * / object : S[K]}
-    */ typingsSlinky.redux.reduxStrings.PreloadedState with js.Any
+    */ typingsSlinky.redux.reduxStrings.PreloadedState with org.scalablytyped.runtime.TopLevel[js.Any]
   type Reducer[S, A /* <: typingsSlinky.redux.mod.Action[_] */] = js.Function2[/* state */ js.UndefOr[S], /* action */ A, S]
   type ReducerFromReducersMapObject[M] = js.Any
   type ReducersMapObject[S, A /* <: typingsSlinky.redux.mod.Action[_] */] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ K in keyof S ]: redux.redux.Reducer<S[K], A>}
-    */ typingsSlinky.redux.reduxStrings.ReducersMapObject with S
+    */ typingsSlinky.redux.reduxStrings.ReducersMapObject with org.scalablytyped.runtime.TopLevel[S]
   type StateFromReducersMapObject[M] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ P in keyof M ]: M[P] extends redux.redux.Reducer<infer S, any>? any : never}
-    */ typingsSlinky.redux.reduxStrings.StateFromReducersMapObject with M
+    */ typingsSlinky.redux.reduxStrings.StateFromReducersMapObject with org.scalablytyped.runtime.TopLevel[M]
   type StoreEnhancer[Ext, StateExt] = js.Function1[
     /* next */ typingsSlinky.redux.mod.StoreEnhancerStoreCreator[js.Object, js.Object], 
     typingsSlinky.redux.mod.StoreEnhancerStoreCreator[Ext, StateExt]

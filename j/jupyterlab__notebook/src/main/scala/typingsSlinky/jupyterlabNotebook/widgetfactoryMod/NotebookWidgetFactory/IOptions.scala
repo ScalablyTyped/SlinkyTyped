@@ -1,7 +1,6 @@
 package typingsSlinky.jupyterlabNotebook.widgetfactoryMod.NotebookWidgetFactory
 
 import typingsSlinky.jupyterlabCodeeditor.mimetypeMod.IEditorMimeTypeService
-import typingsSlinky.jupyterlabDocregistry.registryMod.DocumentRegistry.IToolbarItem
 import typingsSlinky.jupyterlabDocregistry.registryMod.DocumentRegistry.IWidgetFactoryOptions
 import typingsSlinky.jupyterlabNotebook.panelMod.NotebookPanel
 import typingsSlinky.jupyterlabNotebook.panelMod.NotebookPanel.IContentFactory
@@ -15,57 +14,88 @@ import scala.scalajs.js.annotation._
 /**
   * The options used to construct a `NotebookWidgetFactory`.
   */
+@js.native
 trait IOptions[T /* <: NotebookPanel */] extends IWidgetFactoryOptions[T] {
   /**
     * A notebook panel content factory.
     */
-  var contentFactory: IContentFactory
+  var contentFactory: IContentFactory = js.native
   /**
     * The notebook cell editor configuration.
     */
-  var editorConfig: js.UndefOr[IEditorConfig] = js.undefined
+  var editorConfig: js.UndefOr[IEditorConfig] = js.native
   /**
     * The service used to look up mime types.
     */
-  var mimeTypeService: IEditorMimeTypeService
+  var mimeTypeService: IEditorMimeTypeService = js.native
   /**
     * The notebook configuration.
     */
-  var notebookConfig: js.UndefOr[INotebookConfig] = js.undefined
-  var rendermime: IRenderMimeRegistry
+  var notebookConfig: js.UndefOr[INotebookConfig] = js.native
+  var rendermime: IRenderMimeRegistry = js.native
 }
 
 object IOptions {
   @scala.inline
-  def apply[T /* <: NotebookPanel */](
+  def apply[T](
     contentFactory: IContentFactory,
     fileTypes: js.Array[String],
     mimeTypeService: IEditorMimeTypeService,
     name: String,
-    rendermime: IRenderMimeRegistry,
-    canStartKernel: js.UndefOr[Boolean] = js.undefined,
-    defaultFor: js.Array[String] = null,
-    defaultRendered: js.Array[String] = null,
-    editorConfig: IEditorConfig = null,
-    modelName: String = null,
-    notebookConfig: INotebookConfig = null,
-    preferKernel: js.UndefOr[Boolean] = js.undefined,
-    readOnly: js.UndefOr[Boolean] = js.undefined,
-    shutdownOnClose: js.UndefOr[Boolean] = js.undefined,
-    toolbarFactory: T => js.Array[IToolbarItem] = null
+    rendermime: IRenderMimeRegistry
   ): IOptions[T] = {
     val __obj = js.Dynamic.literal(contentFactory = contentFactory.asInstanceOf[js.Any], fileTypes = fileTypes.asInstanceOf[js.Any], mimeTypeService = mimeTypeService.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], rendermime = rendermime.asInstanceOf[js.Any])
-    if (!js.isUndefined(canStartKernel)) __obj.updateDynamic("canStartKernel")(canStartKernel.asInstanceOf[js.Any])
-    if (defaultFor != null) __obj.updateDynamic("defaultFor")(defaultFor.asInstanceOf[js.Any])
-    if (defaultRendered != null) __obj.updateDynamic("defaultRendered")(defaultRendered.asInstanceOf[js.Any])
-    if (editorConfig != null) __obj.updateDynamic("editorConfig")(editorConfig.asInstanceOf[js.Any])
-    if (modelName != null) __obj.updateDynamic("modelName")(modelName.asInstanceOf[js.Any])
-    if (notebookConfig != null) __obj.updateDynamic("notebookConfig")(notebookConfig.asInstanceOf[js.Any])
-    if (!js.isUndefined(preferKernel)) __obj.updateDynamic("preferKernel")(preferKernel.asInstanceOf[js.Any])
-    if (!js.isUndefined(readOnly)) __obj.updateDynamic("readOnly")(readOnly.asInstanceOf[js.Any])
-    if (!js.isUndefined(shutdownOnClose)) __obj.updateDynamic("shutdownOnClose")(shutdownOnClose.asInstanceOf[js.Any])
-    if (toolbarFactory != null) __obj.updateDynamic("toolbarFactory")(js.Any.fromFunction1(toolbarFactory))
     __obj.asInstanceOf[IOptions[T]]
   }
+  @scala.inline
+  implicit class IOptionsOps[Self[t] <: IOptions[t], T] (val x: Self[T]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
+    @scala.inline
+    def withContentFactory(value: IContentFactory): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentFactory")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMimeTypeService(value: IEditorMimeTypeService): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mimeTypeService")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRendermime(value: IRenderMimeRegistry): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rendermime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEditorConfig(value: IEditorConfig): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("editorConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEditorConfig: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("editorConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNotebookConfig(value: INotebookConfig): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notebookConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNotebookConfig: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notebookConfig")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

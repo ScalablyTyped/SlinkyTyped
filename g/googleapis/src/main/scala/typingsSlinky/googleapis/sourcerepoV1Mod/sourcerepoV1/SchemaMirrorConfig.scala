@@ -31,12 +31,53 @@ trait SchemaMirrorConfig extends js.Object {
 
 object SchemaMirrorConfig {
   @scala.inline
-  def apply(deployKeyId: String = null, url: String = null, webhookId: String = null): SchemaMirrorConfig = {
+  def apply(): SchemaMirrorConfig = {
     val __obj = js.Dynamic.literal()
-    if (deployKeyId != null) __obj.updateDynamic("deployKeyId")(deployKeyId.asInstanceOf[js.Any])
-    if (url != null) __obj.updateDynamic("url")(url.asInstanceOf[js.Any])
-    if (webhookId != null) __obj.updateDynamic("webhookId")(webhookId.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaMirrorConfig]
   }
+  @scala.inline
+  implicit class SchemaMirrorConfigOps[Self <: SchemaMirrorConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDeployKeyId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deployKeyId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeployKeyId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deployKeyId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebhookId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("webhookId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebhookId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("webhookId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

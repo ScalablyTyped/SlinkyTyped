@@ -16,33 +16,34 @@ import scala.scalajs.js.annotation._
   * @see \`{@link https://api.jquery.com/category/events/event-object/ }\`
   * @see \`{@link TriggeredEvent }\`
   */
+@js.native
 trait Event extends js.Object {
   // MouseEvent, KeyboardEvent, TouchEvent
-  var altKey: js.UndefOr[Boolean] = js.undefined
+  var altKey: js.UndefOr[Boolean] = js.native
   // region Copied properties
   // #region Copied properties
   // Event
-  var bubbles: js.UndefOr[Boolean] = js.undefined
+  var bubbles: js.UndefOr[Boolean] = js.native
   // MouseEvent
-  var button: js.UndefOr[Double] = js.undefined
-  var buttons: js.UndefOr[Double] = js.undefined
-  var cancelable: js.UndefOr[Boolean] = js.undefined
+  var button: js.UndefOr[Double] = js.native
+  var buttons: js.UndefOr[Double] = js.native
+  var cancelable: js.UndefOr[Boolean] = js.native
   // TouchEvent
-  var changedTouches: js.UndefOr[TouchList] = js.undefined
+  var changedTouches: js.UndefOr[TouchList] = js.native
   // KeyboardEvent
   /** @deprecated */
-  var char: js.UndefOr[String] = js.undefined
+  var char: js.UndefOr[String] = js.native
   /** @deprecated */
-  var charCode: js.UndefOr[Double] = js.undefined
-  var clientX: js.UndefOr[Double] = js.undefined
-  var clientY: js.UndefOr[Double] = js.undefined
-  var ctrlKey: js.UndefOr[Boolean] = js.undefined
+  var charCode: js.UndefOr[Double] = js.native
+  var clientX: js.UndefOr[Double] = js.native
+  var clientY: js.UndefOr[Double] = js.native
+  var ctrlKey: js.UndefOr[Boolean] = js.native
   // UIEvent
-  var detail: js.UndefOr[Double] = js.undefined
-  var eventPhase: js.UndefOr[Double] = js.undefined
-  var key: js.UndefOr[String] = js.undefined
+  var detail: js.UndefOr[Double] = js.native
+  var eventPhase: js.UndefOr[Double] = js.native
+  var key: js.UndefOr[String] = js.native
   /** @deprecated */
-  var keyCode: js.UndefOr[Double] = js.undefined
+  var keyCode: js.UndefOr[Double] = js.native
   /**
     * Indicates whether the META key was pressed when the event fired.
     * @see \`{@link https://api.jquery.com/event.metaKey/ }\`
@@ -79,9 +80,9 @@ trait Event extends js.Object {
   </html>
   ```
     */
-  var metaKey: js.UndefOr[Boolean] = js.undefined
-  var offsetX: js.UndefOr[Double] = js.undefined
-  var offsetY: js.UndefOr[Double] = js.undefined
+  var metaKey: js.UndefOr[Boolean] = js.native
+  var offsetX: js.UndefOr[Double] = js.native
+  var offsetY: js.UndefOr[Double] = js.native
   /**
     * The mouse position relative to the left edge of the document.
     * @see \`{@link https://api.jquery.com/event.pageX/ }\`
@@ -117,7 +118,7 @@ trait Event extends js.Object {
   </html>
   ```
     */
-  var pageX: js.UndefOr[Double] = js.undefined
+  var pageX: js.UndefOr[Double] = js.native
   /**
     * The mouse position relative to the top edge of the document.
     * @see \`{@link https://api.jquery.com/event.pageY/ }\`
@@ -153,14 +154,14 @@ trait Event extends js.Object {
   </html>
   ```
     */
-  var pageY: js.UndefOr[Double] = js.undefined
+  var pageY: js.UndefOr[Double] = js.native
   // PointerEvent
-  var pointerId: js.UndefOr[Double] = js.undefined
-  var pointerType: js.UndefOr[String] = js.undefined
-  var screenX: js.UndefOr[Double] = js.undefined
-  var screenY: js.UndefOr[Double] = js.undefined
-  var shiftKey: js.UndefOr[Boolean] = js.undefined
-  var targetTouches: js.UndefOr[TouchList] = js.undefined
+  var pointerId: js.UndefOr[Double] = js.native
+  var pointerType: js.UndefOr[String] = js.native
+  var screenX: js.UndefOr[Double] = js.native
+  var screenY: js.UndefOr[Double] = js.native
+  var shiftKey: js.UndefOr[Boolean] = js.native
+  var targetTouches: js.UndefOr[TouchList] = js.native
   // #endregion
   /**
     * The difference in milliseconds between the time the browser created the event and January 1, 1970.
@@ -205,10 +206,10 @@ trait Event extends js.Object {
   </html>
   ```
     */
-  var timeStamp: Double
+  var timeStamp: Double = js.native
   /** @deprecated */
-  var toElement: js.UndefOr[Element] = js.undefined
-  var touches: js.UndefOr[TouchList] = js.undefined
+  var toElement: js.UndefOr[Element] = js.native
+  var touches: js.UndefOr[TouchList] = js.native
   /**
     * Describes the nature of the event.
     * @see \`{@link https://api.jquery.com/event.type/ }\`
@@ -220,8 +221,8 @@ trait Event extends js.Object {
   });
   ```
     */
-  var `type`: String
-  var view: js.UndefOr[Window_] = js.undefined
+  var `type`: String = js.native
+  var view: js.UndefOr[Window_] = js.native
   // MouseEvent, KeyboardEvent
   /**
     * For key or mouse events, this property indicates the specific key or button that was pressed.
@@ -275,7 +276,7 @@ trait Event extends js.Object {
   </html>
   ```
     */
-  var which: js.UndefOr[Double] = js.undefined
+  var which: js.UndefOr[Double] = js.native
   /**
     * Returns whether event.preventDefault() was ever called on this event object.
     * @see \`{@link https://api.jquery.com/event.isDefaultPrevented/ }\`
@@ -289,7 +290,7 @@ trait Event extends js.Object {
   });
   ```
     */
-  def isDefaultPrevented(): Boolean
+  def isDefaultPrevented(): Boolean = js.native
   /**
     * Returns whether event.stopImmediatePropagation() was ever called on this event object.
     * @see \`{@link https://api.jquery.com/event.isImmediatePropagationStopped/ }\`
@@ -330,7 +331,7 @@ trait Event extends js.Object {
   </html>
   ```
     */
-  def isImmediatePropagationStopped(): Boolean
+  def isImmediatePropagationStopped(): Boolean = js.native
   /**
     * Returns whether event.stopPropagation() was ever called on this event object.
     * @see \`{@link https://api.jquery.com/event.isPropagationStopped/ }\`
@@ -371,7 +372,7 @@ trait Event extends js.Object {
   </html>
   ```
     */
-  def isPropagationStopped(): Boolean
+  def isPropagationStopped(): Boolean = js.native
   /**
     * If this method is called, the default action of the event will not be triggered.
     * @see \`{@link https://api.jquery.com/event.preventDefault/ }\`
@@ -403,7 +404,7 @@ trait Event extends js.Object {
   </html>
   ```
     */
-  def preventDefault(): Unit
+  def preventDefault(): Unit = js.native
   /**
     * Keeps the rest of the handlers from being executed and prevents the event from bubbling up the DOM tree.
     * @see \`{@link https://api.jquery.com/event.stopImmediatePropagation/ }\`
@@ -452,7 +453,7 @@ trait Event extends js.Object {
   </html>
   ```
     */
-  def stopImmediatePropagation(): Unit
+  def stopImmediatePropagation(): Unit = js.native
   /**
     * Prevents the event from bubbling up the DOM tree, preventing any parent handlers from being notified of the event.
     * @see \`{@link https://api.jquery.com/event.stopPropagation/ }\`
@@ -465,7 +466,7 @@ trait Event extends js.Object {
   });
   ```
     */
-  def stopPropagation(): Unit
+  def stopPropagation(): Unit = js.native
 }
 
 object Event {
@@ -478,71 +479,427 @@ object Event {
     stopImmediatePropagation: () => Unit,
     stopPropagation: () => Unit,
     timeStamp: Double,
-    `type`: String,
-    altKey: js.UndefOr[Boolean] = js.undefined,
-    bubbles: js.UndefOr[Boolean] = js.undefined,
-    button: Int | Double = null,
-    buttons: Int | Double = null,
-    cancelable: js.UndefOr[Boolean] = js.undefined,
-    changedTouches: TouchList = null,
-    char: String = null,
-    charCode: Int | Double = null,
-    clientX: Int | Double = null,
-    clientY: Int | Double = null,
-    ctrlKey: js.UndefOr[Boolean] = js.undefined,
-    detail: Int | Double = null,
-    eventPhase: Int | Double = null,
-    key: String = null,
-    keyCode: Int | Double = null,
-    metaKey: js.UndefOr[Boolean] = js.undefined,
-    offsetX: Int | Double = null,
-    offsetY: Int | Double = null,
-    pageX: Int | Double = null,
-    pageY: Int | Double = null,
-    pointerId: Int | Double = null,
-    pointerType: String = null,
-    screenX: Int | Double = null,
-    screenY: Int | Double = null,
-    shiftKey: js.UndefOr[Boolean] = js.undefined,
-    targetTouches: TouchList = null,
-    toElement: Element = null,
-    touches: TouchList = null,
-    view: Window_ = null,
-    which: Int | Double = null
+    `type`: String
   ): Event = {
     val __obj = js.Dynamic.literal(isDefaultPrevented = js.Any.fromFunction0(isDefaultPrevented), isImmediatePropagationStopped = js.Any.fromFunction0(isImmediatePropagationStopped), isPropagationStopped = js.Any.fromFunction0(isPropagationStopped), preventDefault = js.Any.fromFunction0(preventDefault), stopImmediatePropagation = js.Any.fromFunction0(stopImmediatePropagation), stopPropagation = js.Any.fromFunction0(stopPropagation), timeStamp = timeStamp.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (!js.isUndefined(altKey)) __obj.updateDynamic("altKey")(altKey.asInstanceOf[js.Any])
-    if (!js.isUndefined(bubbles)) __obj.updateDynamic("bubbles")(bubbles.asInstanceOf[js.Any])
-    if (button != null) __obj.updateDynamic("button")(button.asInstanceOf[js.Any])
-    if (buttons != null) __obj.updateDynamic("buttons")(buttons.asInstanceOf[js.Any])
-    if (!js.isUndefined(cancelable)) __obj.updateDynamic("cancelable")(cancelable.asInstanceOf[js.Any])
-    if (changedTouches != null) __obj.updateDynamic("changedTouches")(changedTouches.asInstanceOf[js.Any])
-    if (char != null) __obj.updateDynamic("char")(char.asInstanceOf[js.Any])
-    if (charCode != null) __obj.updateDynamic("charCode")(charCode.asInstanceOf[js.Any])
-    if (clientX != null) __obj.updateDynamic("clientX")(clientX.asInstanceOf[js.Any])
-    if (clientY != null) __obj.updateDynamic("clientY")(clientY.asInstanceOf[js.Any])
-    if (!js.isUndefined(ctrlKey)) __obj.updateDynamic("ctrlKey")(ctrlKey.asInstanceOf[js.Any])
-    if (detail != null) __obj.updateDynamic("detail")(detail.asInstanceOf[js.Any])
-    if (eventPhase != null) __obj.updateDynamic("eventPhase")(eventPhase.asInstanceOf[js.Any])
-    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
-    if (keyCode != null) __obj.updateDynamic("keyCode")(keyCode.asInstanceOf[js.Any])
-    if (!js.isUndefined(metaKey)) __obj.updateDynamic("metaKey")(metaKey.asInstanceOf[js.Any])
-    if (offsetX != null) __obj.updateDynamic("offsetX")(offsetX.asInstanceOf[js.Any])
-    if (offsetY != null) __obj.updateDynamic("offsetY")(offsetY.asInstanceOf[js.Any])
-    if (pageX != null) __obj.updateDynamic("pageX")(pageX.asInstanceOf[js.Any])
-    if (pageY != null) __obj.updateDynamic("pageY")(pageY.asInstanceOf[js.Any])
-    if (pointerId != null) __obj.updateDynamic("pointerId")(pointerId.asInstanceOf[js.Any])
-    if (pointerType != null) __obj.updateDynamic("pointerType")(pointerType.asInstanceOf[js.Any])
-    if (screenX != null) __obj.updateDynamic("screenX")(screenX.asInstanceOf[js.Any])
-    if (screenY != null) __obj.updateDynamic("screenY")(screenY.asInstanceOf[js.Any])
-    if (!js.isUndefined(shiftKey)) __obj.updateDynamic("shiftKey")(shiftKey.asInstanceOf[js.Any])
-    if (targetTouches != null) __obj.updateDynamic("targetTouches")(targetTouches.asInstanceOf[js.Any])
-    if (toElement != null) __obj.updateDynamic("toElement")(toElement.asInstanceOf[js.Any])
-    if (touches != null) __obj.updateDynamic("touches")(touches.asInstanceOf[js.Any])
-    if (view != null) __obj.updateDynamic("view")(view.asInstanceOf[js.Any])
-    if (which != null) __obj.updateDynamic("which")(which.asInstanceOf[js.Any])
     __obj.asInstanceOf[Event]
   }
+  @scala.inline
+  implicit class EventOps[Self <: Event] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIsDefaultPrevented(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isDefaultPrevented")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withIsImmediatePropagationStopped(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isImmediatePropagationStopped")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withIsPropagationStopped(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isPropagationStopped")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withPreventDefault(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preventDefault")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withStopImmediatePropagation(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stopImmediatePropagation")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withStopPropagation(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stopPropagation")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withTimeStamp(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeStamp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAltKey(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("altKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAltKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("altKey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBubbles(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bubbles")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBubbles: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bubbles")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withButton(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("button")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutButton: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("button")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withButtons(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buttons")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutButtons: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buttons")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCancelable(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cancelable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCancelable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cancelable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withChangedTouches(value: TouchList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("changedTouches")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChangedTouches: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("changedTouches")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withChar(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("char")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChar: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("char")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCharCode(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("charCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCharCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("charCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClientX(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clientX")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClientX: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clientX")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClientY(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clientY")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClientY: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clientY")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCtrlKey(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ctrlKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCtrlKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ctrlKey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDetail(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("detail")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDetail: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("detail")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEventPhase(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("eventPhase")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEventPhase: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("eventPhase")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKey(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKeyCode(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keyCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKeyCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keyCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMetaKey(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metaKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMetaKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metaKey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOffsetX(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offsetX")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOffsetX: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offsetX")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOffsetY(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offsetY")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOffsetY: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offsetY")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPageX(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pageX")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPageX: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pageX")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPageY(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pageY")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPageY: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pageY")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPointerId(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pointerId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPointerId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pointerId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPointerType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pointerType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPointerType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pointerType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScreenX(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("screenX")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScreenX: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("screenX")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScreenY(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("screenY")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScreenY: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("screenY")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShiftKey(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shiftKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShiftKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shiftKey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTargetTouches(value: TouchList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetTouches")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTargetTouches: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetTouches")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withToElement(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toElement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutToElement: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toElement")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTouches(value: TouchList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("touches")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTouches: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("touches")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withView(value: Window_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("view")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutView: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("view")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWhich(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("which")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWhich: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("which")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

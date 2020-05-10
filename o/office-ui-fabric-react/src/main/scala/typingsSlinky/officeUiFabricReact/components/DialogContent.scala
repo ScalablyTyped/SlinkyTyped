@@ -1,14 +1,12 @@
 package typingsSlinky.officeUiFabricReact.components
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLButtonElement
 import org.scalajs.dom.raw.HTMLDivElement
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
+import slinky.core.facade.ReactRef
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.button.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.officeUiFabricReact.buttonTypesMod.IButtonProps
 import typingsSlinky.officeUiFabricReact.dialogContentTypesMod.DialogType
 import typingsSlinky.officeUiFabricReact.dialogContentTypesMod.IDialogContent
@@ -18,6 +16,7 @@ import typingsSlinky.officeUiFabricReact.dialogContentTypesMod.IDialogContentSty
 import typingsSlinky.officeUiFabricReact.withResponsiveModeMod.ResponsiveMode
 import typingsSlinky.react.mod.HTMLAttributes
 import typingsSlinky.react.mod.LegacyRef
+import typingsSlinky.std.Partial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
@@ -25,56 +24,60 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object DialogContent
-  extends ExternalComponentWithAttributesWithRefType[tag.type, LegacyRef[js.Any] with js.Object] {
+object DialogContent {
   @JSImport("office-ui-fabric-react", "DialogContent")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, key */
-  def apply(
-    closeButtonAriaLabel: String = null,
-    componentRef: IRefObject[IDialogContent] = null,
-    draggableHeaderClassName: String = null,
-    isMultiline: js.UndefOr[Boolean] = js.undefined,
-    onDismiss: /* ev */ js.UndefOr[SyntheticMouseEvent[HTMLButtonElement]] => _ = null,
-    responsiveMode: ResponsiveMode = null,
-    showCloseButton: js.UndefOr[Boolean] = js.undefined,
-    styles: IStyleFunctionOrObject[IDialogContentStyleProps, IDialogContentStyles] = null,
-    subText: String = null,
-    subTextId: String = null,
-    theme: ITheme = null,
-    title: String | ReactElement = null,
-    titleId: String = null,
-    titleProps: HTMLAttributes[HTMLDivElement] = null,
-    topButtonsProps: js.Array[IButtonProps] = null,
-    `type`: DialogType = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, LegacyRef[js.Any] with js.Object] = {
-    val __obj = js.Dynamic.literal()
-    if (closeButtonAriaLabel != null) __obj.updateDynamic("closeButtonAriaLabel")(closeButtonAriaLabel.asInstanceOf[js.Any])
-    if (componentRef != null) __obj.updateDynamic("componentRef")(componentRef.asInstanceOf[js.Any])
-    if (draggableHeaderClassName != null) __obj.updateDynamic("draggableHeaderClassName")(draggableHeaderClassName.asInstanceOf[js.Any])
-    if (!js.isUndefined(isMultiline)) __obj.updateDynamic("isMultiline")(isMultiline.asInstanceOf[js.Any])
-    if (onDismiss != null) __obj.updateDynamic("onDismiss")(js.Any.fromFunction1(onDismiss))
-    if (responsiveMode != null) __obj.updateDynamic("responsiveMode")(responsiveMode.asInstanceOf[js.Any])
-    if (!js.isUndefined(showCloseButton)) __obj.updateDynamic("showCloseButton")(showCloseButton.asInstanceOf[js.Any])
-    if (styles != null) __obj.updateDynamic("styles")(styles.asInstanceOf[js.Any])
-    if (subText != null) __obj.updateDynamic("subText")(subText.asInstanceOf[js.Any])
-    if (subTextId != null) __obj.updateDynamic("subTextId")(subTextId.asInstanceOf[js.Any])
-    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
-    if (titleId != null) __obj.updateDynamic("titleId")(titleId.asInstanceOf[js.Any])
-    if (titleProps != null) __obj.updateDynamic("titleProps")(titleProps.asInstanceOf[js.Any])
-    if (topButtonsProps != null) __obj.updateDynamic("topButtonsProps")(topButtonsProps.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, LegacyRef[js.Any] with js.Object] {
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def closeButtonAriaLabel(value: String): this.type = set("closeButtonAriaLabel", value.asInstanceOf[js.Any])
+    @scala.inline
+    def componentRefFunction1(value: /* ref */ IDialogContent | Null => Unit): this.type = set("componentRef", js.Any.fromFunction1(value))
+    @scala.inline
+    def componentRefRefObject(value: ReactRef[IDialogContent]): this.type = set("componentRef", value.asInstanceOf[js.Any])
+    @scala.inline
+    def componentRef(value: IRefObject[IDialogContent]): this.type = set("componentRef", value.asInstanceOf[js.Any])
+    @scala.inline
+    def draggableHeaderClassName(value: String): this.type = set("draggableHeaderClassName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def isMultiline(value: Boolean): this.type = set("isMultiline", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onDismiss(value: /* ev */ js.UndefOr[SyntheticMouseEvent[HTMLButtonElement]] => _): this.type = set("onDismiss", js.Any.fromFunction1(value))
+    @scala.inline
+    def responsiveMode(value: ResponsiveMode): this.type = set("responsiveMode", value.asInstanceOf[js.Any])
+    @scala.inline
+    def showCloseButton(value: Boolean): this.type = set("showCloseButton", value.asInstanceOf[js.Any])
+    @scala.inline
+    def stylesFunction1(value: IDialogContentStyleProps => Partial[IDialogContentStyles]): this.type = set("styles", js.Any.fromFunction1(value))
+    @scala.inline
+    def styles(value: IStyleFunctionOrObject[IDialogContentStyleProps, IDialogContentStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
+    @scala.inline
+    def subText(value: String): this.type = set("subText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def subTextId(value: String): this.type = set("subTextId", value.asInstanceOf[js.Any])
+    @scala.inline
+    def theme(value: ITheme): this.type = set("theme", value.asInstanceOf[js.Any])
+    @scala.inline
+    def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
+    @scala.inline
+    def title(value: String | ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
+    @scala.inline
+    def titleId(value: String): this.type = set("titleId", value.asInstanceOf[js.Any])
+    @scala.inline
+    def titleProps(value: HTMLAttributes[HTMLDivElement]): this.type = set("titleProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def topButtonsProps(value: js.Array[IButtonProps]): this.type = set("topButtonsProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `type`(value: DialogType): this.type = set("type", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, LegacyRef[js.Any] with js.Object] = new slinky.core.BuildingComponent[
-  slinky.web.html.button.tag.type, 
-  typingsSlinky.react.mod.LegacyRef[js.Any] with js.Object](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = IDialogContentProps
+  
+  def withProps(p: IDialogContentProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: DialogContent.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

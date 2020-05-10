@@ -5,7 +5,6 @@ import typingsSlinky.dialogflow.dialogflowStrings.gcsSource
 import typingsSlinky.protobufjs.mod.IConversionOptions
 import typingsSlinky.protobufjs.mod.Reader
 import typingsSlinky.protobufjs.mod.Writer
-import typingsSlinky.std.Uint8Array
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -52,8 +51,8 @@ object ReloadDocumentRequest extends js.Object {
     */
   def decode(reader: Reader): ReloadDocumentRequest = js.native
   def decode(reader: Reader, length: Double): ReloadDocumentRequest = js.native
-  def decode(reader: Uint8Array): ReloadDocumentRequest = js.native
-  def decode(reader: Uint8Array, length: Double): ReloadDocumentRequest = js.native
+  def decode(reader: js.typedarray.Uint8Array): ReloadDocumentRequest = js.native
+  def decode(reader: js.typedarray.Uint8Array, length: Double): ReloadDocumentRequest = js.native
   /**
     * Decodes a ReloadDocumentRequest message from the specified reader or buffer, length delimited.
     * @param reader Reader or buffer to decode from
@@ -62,7 +61,7 @@ object ReloadDocumentRequest extends js.Object {
     * @throws {$protobuf.util.ProtocolError} If required fields are missing
     */
   def decodeDelimited(reader: Reader): ReloadDocumentRequest = js.native
-  def decodeDelimited(reader: Uint8Array): ReloadDocumentRequest = js.native
+  def decodeDelimited(reader: js.typedarray.Uint8Array): ReloadDocumentRequest = js.native
   /**
     * Encodes the specified ReloadDocumentRequest message. Does not implicitly {@link google.cloud.dialogflow.v2beta1.ReloadDocumentRequest.verify|verify} messages.
     * @param message ReloadDocumentRequest message or plain object to encode

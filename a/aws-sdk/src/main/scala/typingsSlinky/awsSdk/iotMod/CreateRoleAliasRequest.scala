@@ -22,10 +22,41 @@ trait CreateRoleAliasRequest extends js.Object {
 
 object CreateRoleAliasRequest {
   @scala.inline
-  def apply(roleAlias: RoleAlias, roleArn: RoleArn, credentialDurationSeconds: Int | Double = null): CreateRoleAliasRequest = {
+  def apply(roleAlias: RoleAlias, roleArn: RoleArn): CreateRoleAliasRequest = {
     val __obj = js.Dynamic.literal(roleAlias = roleAlias.asInstanceOf[js.Any], roleArn = roleArn.asInstanceOf[js.Any])
-    if (credentialDurationSeconds != null) __obj.updateDynamic("credentialDurationSeconds")(credentialDurationSeconds.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateRoleAliasRequest]
   }
+  @scala.inline
+  implicit class CreateRoleAliasRequestOps[Self <: CreateRoleAliasRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRoleAlias(value: RoleAlias): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("roleAlias")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRoleArn(value: RoleArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("roleArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCredentialDurationSeconds(value: CredentialDurationSeconds): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("credentialDurationSeconds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCredentialDurationSeconds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("credentialDurationSeconds")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

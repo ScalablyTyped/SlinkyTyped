@@ -7,55 +7,103 @@ import scala.scalajs.js.annotation._
 /**
   * A reference from one resource to another
   */
+@js.native
 trait Reference extends Element {
   /**
     * Contains extended information for property 'display'.
     */
-  var _display: js.UndefOr[Element] = js.undefined
+  var _display: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'reference'.
     */
-  var _reference: js.UndefOr[Element] = js.undefined
+  var _reference: js.UndefOr[Element] = js.native
   /**
     * Text alternative for the resource
     */
-  var display: js.UndefOr[String] = js.undefined
+  var display: js.UndefOr[String] = js.native
   /**
     * Logical reference, when literal reference is not known
     */
-  var identifier: js.UndefOr[Identifier] = js.undefined
+  var identifier: js.UndefOr[Identifier] = js.native
   /**
     * Literal reference, Relative, internal or absolute URL
     */
-  var reference: js.UndefOr[String] = js.undefined
+  var reference: js.UndefOr[String] = js.native
 }
 
 object Reference {
   @scala.inline
-  def apply(
-    _display: Element = null,
-    _fhir_comments: js.Array[Element] = null,
-    _id: Element = null,
-    _reference: Element = null,
-    display: String = null,
-    extension: js.Array[Extension] = null,
-    fhir_comments: js.Array[String] = null,
-    id: String = null,
-    identifier: Identifier = null,
-    reference: String = null
-  ): Reference = {
+  def apply(): Reference = {
     val __obj = js.Dynamic.literal()
-    if (_display != null) __obj.updateDynamic("_display")(_display.asInstanceOf[js.Any])
-    if (_fhir_comments != null) __obj.updateDynamic("_fhir_comments")(_fhir_comments.asInstanceOf[js.Any])
-    if (_id != null) __obj.updateDynamic("_id")(_id.asInstanceOf[js.Any])
-    if (_reference != null) __obj.updateDynamic("_reference")(_reference.asInstanceOf[js.Any])
-    if (display != null) __obj.updateDynamic("display")(display.asInstanceOf[js.Any])
-    if (extension != null) __obj.updateDynamic("extension")(extension.asInstanceOf[js.Any])
-    if (fhir_comments != null) __obj.updateDynamic("fhir_comments")(fhir_comments.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (identifier != null) __obj.updateDynamic("identifier")(identifier.asInstanceOf[js.Any])
-    if (reference != null) __obj.updateDynamic("reference")(reference.asInstanceOf[js.Any])
     __obj.asInstanceOf[Reference]
   }
+  @scala.inline
+  implicit class ReferenceOps[Self <: Reference] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def with_display(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_display")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_display: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_display")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_reference(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_reference")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_reference: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_reference")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisplay(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("display")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisplay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("display")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIdentifier(value: Identifier): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("identifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIdentifier: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("identifier")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReference(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reference")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReference: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reference")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

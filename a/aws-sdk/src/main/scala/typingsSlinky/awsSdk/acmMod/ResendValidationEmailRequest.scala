@@ -24,8 +24,33 @@ object ResendValidationEmailRequest {
   @scala.inline
   def apply(CertificateArn: Arn, Domain: DomainNameString, ValidationDomain: DomainNameString): ResendValidationEmailRequest = {
     val __obj = js.Dynamic.literal(CertificateArn = CertificateArn.asInstanceOf[js.Any], Domain = Domain.asInstanceOf[js.Any], ValidationDomain = ValidationDomain.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[ResendValidationEmailRequest]
   }
+  @scala.inline
+  implicit class ResendValidationEmailRequestOps[Self <: ResendValidationEmailRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCertificateArn(value: Arn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CertificateArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDomain(value: DomainNameString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Domain")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withValidationDomain(value: DomainNameString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ValidationDomain")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait TOTPVerifyOpt extends TOTPGenOpt {
   /**
     * The allowable margin for the counter. The function will check 'W' codes in
@@ -17,17 +18,34 @@ trait TOTPVerifyOpt extends TOTPGenOpt {
     *
     * Default - 50
     */
-  var window: js.UndefOr[Double] = js.undefined
+  var window: js.UndefOr[Double] = js.native
 }
 
 object TOTPVerifyOpt {
   @scala.inline
-  def apply(_t: Int | Double = null, time: Int | Double = null, window: Int | Double = null): TOTPVerifyOpt = {
+  def apply(): TOTPVerifyOpt = {
     val __obj = js.Dynamic.literal()
-    if (_t != null) __obj.updateDynamic("_t")(_t.asInstanceOf[js.Any])
-    if (time != null) __obj.updateDynamic("time")(time.asInstanceOf[js.Any])
-    if (window != null) __obj.updateDynamic("window")(window.asInstanceOf[js.Any])
     __obj.asInstanceOf[TOTPVerifyOpt]
   }
+  @scala.inline
+  implicit class TOTPVerifyOptOps[Self <: TOTPVerifyOpt] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withWindow(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("window")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWindow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("window")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -7,170 +7,401 @@ import scala.scalajs.js.annotation._
 /**
   * In-line definition of activity
   */
+@js.native
 trait CarePlanActivityDetail extends BackboneElement {
   /**
     * Contains extended information for property 'description'.
     */
-  var _description: js.UndefOr[Element] = js.undefined
+  var _description: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'prohibited'.
     */
-  var _prohibited: js.UndefOr[Element] = js.undefined
+  var _prohibited: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'scheduledString'.
     */
-  var _scheduledString: js.UndefOr[Element] = js.undefined
+  var _scheduledString: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'status'.
     */
-  var _status: js.UndefOr[Element] = js.undefined
+  var _status: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'statusReason'.
     */
-  var _statusReason: js.UndefOr[Element] = js.undefined
+  var _statusReason: js.UndefOr[Element] = js.native
   /**
     * diet | drug | encounter | observation | procedure | supply | other
     */
-  var category: js.UndefOr[CodeableConcept] = js.undefined
+  var category: js.UndefOr[CodeableConcept] = js.native
   /**
     * Detail type of activity
     */
-  var code: js.UndefOr[CodeableConcept] = js.undefined
+  var code: js.UndefOr[CodeableConcept] = js.native
   /**
     * How to consume/day?
     */
-  var dailyAmount: js.UndefOr[Quantity] = js.undefined
+  var dailyAmount: js.UndefOr[Quantity] = js.native
   /**
     * Protocol or definition
     */
-  var definition: js.UndefOr[Reference] = js.undefined
+  var definition: js.UndefOr[Reference] = js.native
   /**
     * Extra info describing activity to perform
     */
-  var description: js.UndefOr[String] = js.undefined
+  var description: js.UndefOr[String] = js.native
   /**
     * Goals this activity relates to
     */
-  var goal: js.UndefOr[js.Array[Reference]] = js.undefined
+  var goal: js.UndefOr[js.Array[Reference]] = js.native
   /**
     * Where it should happen
     */
-  var location: js.UndefOr[Reference] = js.undefined
+  var location: js.UndefOr[Reference] = js.native
   /**
     * Who will be responsible?
     */
-  var performer: js.UndefOr[js.Array[Reference]] = js.undefined
+  var performer: js.UndefOr[js.Array[Reference]] = js.native
   /**
     * What is to be administered/supplied
     */
-  var productCodeableConcept: js.UndefOr[CodeableConcept] = js.undefined
+  var productCodeableConcept: js.UndefOr[CodeableConcept] = js.native
   /**
     * What is to be administered/supplied
     */
-  var productReference: js.UndefOr[Reference] = js.undefined
+  var productReference: js.UndefOr[Reference] = js.native
   /**
     * Do NOT do
     */
-  var prohibited: js.UndefOr[Boolean] = js.undefined
+  var prohibited: js.UndefOr[Boolean] = js.native
   /**
     * How much to administer/supply/consume
     */
-  var quantity: js.UndefOr[Quantity] = js.undefined
+  var quantity: js.UndefOr[Quantity] = js.native
   /**
     * Why activity should be done or why activity was prohibited
     */
-  var reasonCode: js.UndefOr[js.Array[CodeableConcept]] = js.undefined
+  var reasonCode: js.UndefOr[js.Array[CodeableConcept]] = js.native
   /**
     * Condition triggering need for activity
     */
-  var reasonReference: js.UndefOr[js.Array[Reference]] = js.undefined
+  var reasonReference: js.UndefOr[js.Array[Reference]] = js.native
   /**
     * When activity is to occur
     */
-  var scheduledPeriod: js.UndefOr[Period] = js.undefined
+  var scheduledPeriod: js.UndefOr[Period] = js.native
   /**
     * When activity is to occur
     */
-  var scheduledString: js.UndefOr[String] = js.undefined
+  var scheduledString: js.UndefOr[String] = js.native
   /**
     * When activity is to occur
     */
-  var scheduledTiming: js.UndefOr[Timing] = js.undefined
+  var scheduledTiming: js.UndefOr[Timing] = js.native
   /**
     * not-started | scheduled | in-progress | on-hold | completed | cancelled | unknown
     */
-  var status: code
+  var status: code = js.native
   /**
     * Reason for current status
     */
-  var statusReason: js.UndefOr[String] = js.undefined
+  var statusReason: js.UndefOr[String] = js.native
 }
 
 object CarePlanActivityDetail {
   @scala.inline
-  def apply(
-    status: code,
-    _description: Element = null,
-    _fhir_comments: js.Array[Element] = null,
-    _id: Element = null,
-    _prohibited: Element = null,
-    _scheduledString: Element = null,
-    _status: Element = null,
-    _statusReason: Element = null,
-    category: CodeableConcept = null,
-    code: CodeableConcept = null,
-    dailyAmount: Quantity = null,
-    definition: Reference = null,
-    description: String = null,
-    extension: js.Array[Extension] = null,
-    fhir_comments: js.Array[String] = null,
-    goal: js.Array[Reference] = null,
-    id: String = null,
-    location: Reference = null,
-    modifierExtension: js.Array[Extension] = null,
-    performer: js.Array[Reference] = null,
-    productCodeableConcept: CodeableConcept = null,
-    productReference: Reference = null,
-    prohibited: js.UndefOr[Boolean] = js.undefined,
-    quantity: Quantity = null,
-    reasonCode: js.Array[CodeableConcept] = null,
-    reasonReference: js.Array[Reference] = null,
-    scheduledPeriod: Period = null,
-    scheduledString: String = null,
-    scheduledTiming: Timing = null,
-    statusReason: String = null
-  ): CarePlanActivityDetail = {
+  def apply(status: code): CarePlanActivityDetail = {
     val __obj = js.Dynamic.literal(status = status.asInstanceOf[js.Any])
-    if (_description != null) __obj.updateDynamic("_description")(_description.asInstanceOf[js.Any])
-    if (_fhir_comments != null) __obj.updateDynamic("_fhir_comments")(_fhir_comments.asInstanceOf[js.Any])
-    if (_id != null) __obj.updateDynamic("_id")(_id.asInstanceOf[js.Any])
-    if (_prohibited != null) __obj.updateDynamic("_prohibited")(_prohibited.asInstanceOf[js.Any])
-    if (_scheduledString != null) __obj.updateDynamic("_scheduledString")(_scheduledString.asInstanceOf[js.Any])
-    if (_status != null) __obj.updateDynamic("_status")(_status.asInstanceOf[js.Any])
-    if (_statusReason != null) __obj.updateDynamic("_statusReason")(_statusReason.asInstanceOf[js.Any])
-    if (category != null) __obj.updateDynamic("category")(category.asInstanceOf[js.Any])
-    if (code != null) __obj.updateDynamic("code")(code.asInstanceOf[js.Any])
-    if (dailyAmount != null) __obj.updateDynamic("dailyAmount")(dailyAmount.asInstanceOf[js.Any])
-    if (definition != null) __obj.updateDynamic("definition")(definition.asInstanceOf[js.Any])
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (extension != null) __obj.updateDynamic("extension")(extension.asInstanceOf[js.Any])
-    if (fhir_comments != null) __obj.updateDynamic("fhir_comments")(fhir_comments.asInstanceOf[js.Any])
-    if (goal != null) __obj.updateDynamic("goal")(goal.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (location != null) __obj.updateDynamic("location")(location.asInstanceOf[js.Any])
-    if (modifierExtension != null) __obj.updateDynamic("modifierExtension")(modifierExtension.asInstanceOf[js.Any])
-    if (performer != null) __obj.updateDynamic("performer")(performer.asInstanceOf[js.Any])
-    if (productCodeableConcept != null) __obj.updateDynamic("productCodeableConcept")(productCodeableConcept.asInstanceOf[js.Any])
-    if (productReference != null) __obj.updateDynamic("productReference")(productReference.asInstanceOf[js.Any])
-    if (!js.isUndefined(prohibited)) __obj.updateDynamic("prohibited")(prohibited.asInstanceOf[js.Any])
-    if (quantity != null) __obj.updateDynamic("quantity")(quantity.asInstanceOf[js.Any])
-    if (reasonCode != null) __obj.updateDynamic("reasonCode")(reasonCode.asInstanceOf[js.Any])
-    if (reasonReference != null) __obj.updateDynamic("reasonReference")(reasonReference.asInstanceOf[js.Any])
-    if (scheduledPeriod != null) __obj.updateDynamic("scheduledPeriod")(scheduledPeriod.asInstanceOf[js.Any])
-    if (scheduledString != null) __obj.updateDynamic("scheduledString")(scheduledString.asInstanceOf[js.Any])
-    if (scheduledTiming != null) __obj.updateDynamic("scheduledTiming")(scheduledTiming.asInstanceOf[js.Any])
-    if (statusReason != null) __obj.updateDynamic("statusReason")(statusReason.asInstanceOf[js.Any])
     __obj.asInstanceOf[CarePlanActivityDetail]
   }
+  @scala.inline
+  implicit class CarePlanActivityDetailOps[Self <: CarePlanActivityDetail] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withStatus(value: code): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_description(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_description: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_prohibited(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_prohibited")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_prohibited: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_prohibited")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_scheduledString(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_scheduledString")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_scheduledString: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_scheduledString")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_status(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_status: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_status")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_statusReason(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_statusReason")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_statusReason: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_statusReason")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCategory(value: CodeableConcept): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("category")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCategory: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("category")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCode(value: CodeableConcept): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("code")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("code")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDailyAmount(value: Quantity): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dailyAmount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDailyAmount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dailyAmount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefinition(value: Reference): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("definition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefinition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("definition")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDescription(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGoal(value: js.Array[Reference]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("goal")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGoal: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("goal")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocation(value: Reference): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPerformer(value: js.Array[Reference]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("performer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPerformer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("performer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProductCodeableConcept(value: CodeableConcept): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("productCodeableConcept")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProductCodeableConcept: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("productCodeableConcept")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProductReference(value: Reference): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("productReference")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProductReference: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("productReference")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProhibited(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prohibited")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProhibited: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prohibited")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQuantity(value: Quantity): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("quantity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQuantity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("quantity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReasonCode(value: js.Array[CodeableConcept]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reasonCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReasonCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reasonCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReasonReference(value: js.Array[Reference]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reasonReference")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReasonReference: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reasonReference")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScheduledPeriod(value: Period): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scheduledPeriod")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScheduledPeriod: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scheduledPeriod")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScheduledString(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scheduledString")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScheduledString: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scheduledString")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScheduledTiming(value: Timing): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scheduledTiming")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScheduledTiming: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scheduledTiming")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatusReason(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("statusReason")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatusReason: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("statusReason")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -6,18 +6,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonIfy extends js.Object {
   /** Returns a "gun-ified" variant of the json input by injecting a new gun ID into the metadata field. */
-  def ify(json: js.Any): js.Any
+  def ify(json: js.Any): js.Any = js.native
   /** Returns true if data is a gun node, otherwise false. */
-  def is(anything: js.Any): /* is gun.gun.Gun.ChainReference<any, any, false> */ Boolean
+  def is(anything: js.Any): /* is gun.gun.Gun.ChainReference<any, any, false> */ Boolean = js.native
   /**
     * Returns data's gun ID (instead of manually grabbing its metadata i.e. data["_"]["#"], which is faster but could change in the future)
     *
     * Returns undefined if data is not correct gun data.
     */
   @JSName("soul")
-  def soul_false(data: ChainReference[_, _, `false`]): String
+  def soul_false(data: ChainReference[_, _, `false`]): String = js.native
 }
 
 object AnonIfy {
@@ -28,8 +29,33 @@ object AnonIfy {
     soul: ChainReference[_, _, `false`] => String
   ): AnonIfy = {
     val __obj = js.Dynamic.literal(ify = js.Any.fromFunction1(ify), is = js.Any.fromFunction1(is), soul = js.Any.fromFunction1(soul))
-  
     __obj.asInstanceOf[AnonIfy]
   }
+  @scala.inline
+  implicit class AnonIfyOps[Self <: AnonIfy] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIfy(value: js.Any => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ify")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withIs(value: js.Any => /* is gun.gun.Gun.ChainReference<any, any, false> */ Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("is")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSoul(value: ChainReference[_, _, `false`] => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("soul")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

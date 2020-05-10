@@ -1,10 +1,9 @@
 package typingsSlinky.materialUiCore
 
 import org.scalablytyped.runtime.TopLevel
+import slinky.core.ReactComponentClass
 import typingsSlinky.materialUiCore.tableBodyTableBodyMod.TableBodyProps
 import typingsSlinky.react.mod.Component
-import typingsSlinky.react.mod.ComponentState
-import typingsSlinky.react.mod.ComponentType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,13 +13,13 @@ import scala.scalajs.js.annotation._
 object tableBodyMod extends js.Object {
   @js.native
   class default protected ()
-    extends Component[TableBodyProps, ComponentState, js.Any] {
+    extends Component[TableBodyProps, js.Object, js.Any] {
     def this(props: TableBodyProps) = this()
     def this(props: TableBodyProps, context: js.Any) = this()
   }
   
   @js.native
-  object default extends TopLevel[ComponentType[TableBodyProps]]
+  object default extends TopLevel[ReactComponentClass[TableBodyProps]]
   
 }
 

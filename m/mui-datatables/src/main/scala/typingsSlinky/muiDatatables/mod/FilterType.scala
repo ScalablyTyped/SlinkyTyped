@@ -15,16 +15,14 @@ trait FilterType extends js.Object
 
 object FilterType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def checkbox: typingsSlinky.muiDatatables.muiDatatablesStrings.checkbox = "checkbox".asInstanceOf[typingsSlinky.muiDatatables.muiDatatablesStrings.checkbox]
   @scala.inline
-  def checkbox: typingsSlinky.muiDatatables.muiDatatablesStrings.checkbox = this.cast("checkbox")
+  def custom: typingsSlinky.muiDatatables.muiDatatablesStrings.custom = "custom".asInstanceOf[typingsSlinky.muiDatatables.muiDatatablesStrings.custom]
   @scala.inline
-  def custom: typingsSlinky.muiDatatables.muiDatatablesStrings.custom = this.cast("custom")
+  def dropdown: typingsSlinky.muiDatatables.muiDatatablesStrings.dropdown = "dropdown".asInstanceOf[typingsSlinky.muiDatatables.muiDatatablesStrings.dropdown]
   @scala.inline
-  def dropdown: typingsSlinky.muiDatatables.muiDatatablesStrings.dropdown = this.cast("dropdown")
+  def multiselect: typingsSlinky.muiDatatables.muiDatatablesStrings.multiselect = "multiselect".asInstanceOf[typingsSlinky.muiDatatables.muiDatatablesStrings.multiselect]
   @scala.inline
-  def multiselect: typingsSlinky.muiDatatables.muiDatatablesStrings.multiselect = this.cast("multiselect")
-  @scala.inline
-  def textField: typingsSlinky.muiDatatables.muiDatatablesStrings.textField = this.cast("textField")
+  def textField: typingsSlinky.muiDatatables.muiDatatablesStrings.textField = "textField".asInstanceOf[typingsSlinky.muiDatatables.muiDatatablesStrings.textField]
 }
 

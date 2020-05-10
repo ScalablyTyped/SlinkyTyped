@@ -18,11 +18,41 @@ trait CloudWatchLogsDestination extends js.Object {
 
 object CloudWatchLogsDestination {
   @scala.inline
-  def apply(IamRoleArn: String = null, LogGroupArn: String = null): CloudWatchLogsDestination = {
+  def apply(): CloudWatchLogsDestination = {
     val __obj = js.Dynamic.literal()
-    if (IamRoleArn != null) __obj.updateDynamic("IamRoleArn")(IamRoleArn.asInstanceOf[js.Any])
-    if (LogGroupArn != null) __obj.updateDynamic("LogGroupArn")(LogGroupArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[CloudWatchLogsDestination]
   }
+  @scala.inline
+  implicit class CloudWatchLogsDestinationOps[Self <: CloudWatchLogsDestination] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIamRoleArn(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IamRoleArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIamRoleArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IamRoleArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLogGroupArn(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LogGroupArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLogGroupArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LogGroupArn")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

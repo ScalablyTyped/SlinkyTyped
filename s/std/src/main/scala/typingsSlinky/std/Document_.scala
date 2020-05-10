@@ -1304,11 +1304,11 @@ trait Document_
     filter: Null,
     entityReferenceExpansion: scala.Boolean
   ): org.scalajs.dom.raw.TreeWalker = js.native
-  def createTreeWalker(root: org.scalajs.dom.raw.Node, whatToShow: Double, filter: NodeFilter): org.scalajs.dom.raw.TreeWalker = js.native
+  def createTreeWalker(root: org.scalajs.dom.raw.Node, whatToShow: Double, filter: org.scalajs.dom.raw.NodeFilter): org.scalajs.dom.raw.TreeWalker = js.native
   def createTreeWalker(
     root: org.scalajs.dom.raw.Node,
     whatToShow: Double,
-    filter: NodeFilter,
+    filter: org.scalajs.dom.raw.NodeFilter,
     entityReferenceExpansion: scala.Boolean
   ): org.scalajs.dom.raw.TreeWalker = js.native
   /**
@@ -1758,7 +1758,7 @@ trait Document_
   override def removeEventListener(
     `type`: java.lang.String,
     callback: EventListenerOrEventListenerObject,
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_fullscreenchange(`type`: fullscreenchange, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
@@ -1772,7 +1772,7 @@ trait Document_
   def removeEventListener_fullscreenchange(
     `type`: fullscreenchange,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_fullscreenerror(`type`: fullscreenerror, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
@@ -1786,7 +1786,7 @@ trait Document_
   def removeEventListener_fullscreenerror(
     `type`: fullscreenerror,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_pointerlockchange(`type`: pointerlockchange, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
@@ -1800,7 +1800,7 @@ trait Document_
   def removeEventListener_pointerlockchange(
     `type`: pointerlockchange,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_pointerlockerror(`type`: pointerlockerror, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
@@ -1814,7 +1814,7 @@ trait Document_
   def removeEventListener_pointerlockerror(
     `type`: pointerlockerror,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_readystatechange(`type`: readystatechange, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
@@ -1828,7 +1828,7 @@ trait Document_
   def removeEventListener_readystatechange(
     `type`: readystatechange,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_visibilitychange(`type`: visibilitychange, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
@@ -1842,7 +1842,7 @@ trait Document_
   def removeEventListener_visibilitychange(
     `type`: visibilitychange,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   /**
     * Writes one or more HTML expressions to a document in the specified window.

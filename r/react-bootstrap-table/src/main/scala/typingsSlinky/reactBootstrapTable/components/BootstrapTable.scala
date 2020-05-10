@@ -1,10 +1,8 @@
 package typingsSlinky.reactBootstrapTable.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.reactBootstrapTable.AnonFilter
 import typingsSlinky.reactBootstrapTable.mod.BootstrapTableProps
@@ -22,119 +20,128 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object BootstrapTable
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactBootstrapTable.mod.BootstrapTable] {
+object BootstrapTable {
   @JSImport("react-bootstrap-table", "BootstrapTable")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    data: js.Array[js.Object],
-    autoCollapse: AnonFilter = null,
-    bodyContainerClass: String = null,
-    bodyStyle: CSSProperties = null,
-    bordered: js.UndefOr[Boolean] = js.undefined,
-    cellEdit: CellEdit[_] = null,
-    columnFilter: js.UndefOr[Boolean] = js.undefined,
-    condensed: js.UndefOr[Boolean] = js.undefined,
-    containerClass: String = null,
-    containerStyle: CSSProperties = null,
-    csvFileName: String | js.Function0[String] = null,
-    deleteRow: js.UndefOr[Boolean] = js.undefined,
-    excludeCSVHeader: js.UndefOr[Boolean] = js.undefined,
-    expandColumnOptions: ExpandColumnOptions = null,
-    expandComponent: /* row */ js.Any => String | ReactElement = null,
-    expandableRow: /* row */ js.Any => Boolean = null,
-    exportCSV: js.UndefOr[Boolean] = js.undefined,
-    fetchInfo: FetchInfo = null,
-    footer: js.UndefOr[Boolean] = js.undefined,
-    footerData: js.Array[js.Array[FooterData]] = null,
-    headerContainerClass: String = null,
-    headerStyle: CSSProperties = null,
-    height: String = null,
-    hover: js.UndefOr[Boolean] = js.undefined,
-    ignoreSinglePage: js.UndefOr[Boolean] = js.undefined,
-    insertRow: js.UndefOr[Boolean] = js.undefined,
-    keyBoardNav: Boolean | KeyboardNavigation = null,
-    keyField: String = null,
-    maxHeight: String = null,
-    multiColumnSearch: js.UndefOr[Boolean] = js.undefined,
-    multiColumnSort: Int | Double = null,
-    options: Options[_] = null,
-    pagination: js.UndefOr[Boolean] = js.undefined,
-    remote: Boolean | (js.Function1[/* remobeObj */ RemoteObjSpec, RemoteObjSpec]) = null,
-    renderAlert: js.UndefOr[Boolean] = js.undefined,
-    scrollTop: Double | ScrollPosition = null,
-    search: js.UndefOr[Boolean] = js.undefined,
-    searchPlaceholder: String = null,
-    selectRow: SelectRow[_] = null,
-    strictSearch: js.UndefOr[Boolean] = js.undefined,
-    striped: js.UndefOr[Boolean] = js.undefined,
-    tableBodyClass: String = null,
-    tableContainerClass: String = null,
-    tableFooterClass: String = null,
-    tableHeaderClass: String = null,
-    tableStyle: CSSProperties = null,
-    trClassName: String | (js.Function2[/* rowData */ js.Any, /* rowIndex */ Double, String]) = null,
-    trStyle: CSSProperties | (js.Function2[/* rowData */ js.Any, /* rowIndex */ Double, CSSProperties]) = null,
-    version: BootstrapVersion = null,
-    withoutTabIndex: js.UndefOr[Boolean] = js.undefined,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactBootstrapTable.mod.BootstrapTable] = {
-    val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any])
-    if (autoCollapse != null) __obj.updateDynamic("autoCollapse")(autoCollapse.asInstanceOf[js.Any])
-    if (bodyContainerClass != null) __obj.updateDynamic("bodyContainerClass")(bodyContainerClass.asInstanceOf[js.Any])
-    if (bodyStyle != null) __obj.updateDynamic("bodyStyle")(bodyStyle.asInstanceOf[js.Any])
-    if (!js.isUndefined(bordered)) __obj.updateDynamic("bordered")(bordered.asInstanceOf[js.Any])
-    if (cellEdit != null) __obj.updateDynamic("cellEdit")(cellEdit.asInstanceOf[js.Any])
-    if (!js.isUndefined(columnFilter)) __obj.updateDynamic("columnFilter")(columnFilter.asInstanceOf[js.Any])
-    if (!js.isUndefined(condensed)) __obj.updateDynamic("condensed")(condensed.asInstanceOf[js.Any])
-    if (containerClass != null) __obj.updateDynamic("containerClass")(containerClass.asInstanceOf[js.Any])
-    if (containerStyle != null) __obj.updateDynamic("containerStyle")(containerStyle.asInstanceOf[js.Any])
-    if (csvFileName != null) __obj.updateDynamic("csvFileName")(csvFileName.asInstanceOf[js.Any])
-    if (!js.isUndefined(deleteRow)) __obj.updateDynamic("deleteRow")(deleteRow.asInstanceOf[js.Any])
-    if (!js.isUndefined(excludeCSVHeader)) __obj.updateDynamic("excludeCSVHeader")(excludeCSVHeader.asInstanceOf[js.Any])
-    if (expandColumnOptions != null) __obj.updateDynamic("expandColumnOptions")(expandColumnOptions.asInstanceOf[js.Any])
-    if (expandComponent != null) __obj.updateDynamic("expandComponent")(js.Any.fromFunction1(expandComponent))
-    if (expandableRow != null) __obj.updateDynamic("expandableRow")(js.Any.fromFunction1(expandableRow))
-    if (!js.isUndefined(exportCSV)) __obj.updateDynamic("exportCSV")(exportCSV.asInstanceOf[js.Any])
-    if (fetchInfo != null) __obj.updateDynamic("fetchInfo")(fetchInfo.asInstanceOf[js.Any])
-    if (!js.isUndefined(footer)) __obj.updateDynamic("footer")(footer.asInstanceOf[js.Any])
-    if (footerData != null) __obj.updateDynamic("footerData")(footerData.asInstanceOf[js.Any])
-    if (headerContainerClass != null) __obj.updateDynamic("headerContainerClass")(headerContainerClass.asInstanceOf[js.Any])
-    if (headerStyle != null) __obj.updateDynamic("headerStyle")(headerStyle.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (!js.isUndefined(hover)) __obj.updateDynamic("hover")(hover.asInstanceOf[js.Any])
-    if (!js.isUndefined(ignoreSinglePage)) __obj.updateDynamic("ignoreSinglePage")(ignoreSinglePage.asInstanceOf[js.Any])
-    if (!js.isUndefined(insertRow)) __obj.updateDynamic("insertRow")(insertRow.asInstanceOf[js.Any])
-    if (keyBoardNav != null) __obj.updateDynamic("keyBoardNav")(keyBoardNav.asInstanceOf[js.Any])
-    if (keyField != null) __obj.updateDynamic("keyField")(keyField.asInstanceOf[js.Any])
-    if (maxHeight != null) __obj.updateDynamic("maxHeight")(maxHeight.asInstanceOf[js.Any])
-    if (!js.isUndefined(multiColumnSearch)) __obj.updateDynamic("multiColumnSearch")(multiColumnSearch.asInstanceOf[js.Any])
-    if (multiColumnSort != null) __obj.updateDynamic("multiColumnSort")(multiColumnSort.asInstanceOf[js.Any])
-    if (options != null) __obj.updateDynamic("options")(options.asInstanceOf[js.Any])
-    if (!js.isUndefined(pagination)) __obj.updateDynamic("pagination")(pagination.asInstanceOf[js.Any])
-    if (remote != null) __obj.updateDynamic("remote")(remote.asInstanceOf[js.Any])
-    if (!js.isUndefined(renderAlert)) __obj.updateDynamic("renderAlert")(renderAlert.asInstanceOf[js.Any])
-    if (scrollTop != null) __obj.updateDynamic("scrollTop")(scrollTop.asInstanceOf[js.Any])
-    if (!js.isUndefined(search)) __obj.updateDynamic("search")(search.asInstanceOf[js.Any])
-    if (searchPlaceholder != null) __obj.updateDynamic("searchPlaceholder")(searchPlaceholder.asInstanceOf[js.Any])
-    if (selectRow != null) __obj.updateDynamic("selectRow")(selectRow.asInstanceOf[js.Any])
-    if (!js.isUndefined(strictSearch)) __obj.updateDynamic("strictSearch")(strictSearch.asInstanceOf[js.Any])
-    if (!js.isUndefined(striped)) __obj.updateDynamic("striped")(striped.asInstanceOf[js.Any])
-    if (tableBodyClass != null) __obj.updateDynamic("tableBodyClass")(tableBodyClass.asInstanceOf[js.Any])
-    if (tableContainerClass != null) __obj.updateDynamic("tableContainerClass")(tableContainerClass.asInstanceOf[js.Any])
-    if (tableFooterClass != null) __obj.updateDynamic("tableFooterClass")(tableFooterClass.asInstanceOf[js.Any])
-    if (tableHeaderClass != null) __obj.updateDynamic("tableHeaderClass")(tableHeaderClass.asInstanceOf[js.Any])
-    if (tableStyle != null) __obj.updateDynamic("tableStyle")(tableStyle.asInstanceOf[js.Any])
-    if (trClassName != null) __obj.updateDynamic("trClassName")(trClassName.asInstanceOf[js.Any])
-    if (trStyle != null) __obj.updateDynamic("trStyle")(trStyle.asInstanceOf[js.Any])
-    if (version != null) __obj.updateDynamic("version")(version.asInstanceOf[js.Any])
-    if (!js.isUndefined(withoutTabIndex)) __obj.updateDynamic("withoutTabIndex")(withoutTabIndex.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactBootstrapTable.mod.BootstrapTable] {
+    @scala.inline
+    def autoCollapse(value: AnonFilter): this.type = set("autoCollapse", value.asInstanceOf[js.Any])
+    @scala.inline
+    def bodyContainerClass(value: String): this.type = set("bodyContainerClass", value.asInstanceOf[js.Any])
+    @scala.inline
+    def bodyStyle(value: CSSProperties): this.type = set("bodyStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def bordered(value: Boolean): this.type = set("bordered", value.asInstanceOf[js.Any])
+    @scala.inline
+    def cellEdit(value: CellEdit[_]): this.type = set("cellEdit", value.asInstanceOf[js.Any])
+    @scala.inline
+    def columnFilter(value: Boolean): this.type = set("columnFilter", value.asInstanceOf[js.Any])
+    @scala.inline
+    def condensed(value: Boolean): this.type = set("condensed", value.asInstanceOf[js.Any])
+    @scala.inline
+    def containerClass(value: String): this.type = set("containerClass", value.asInstanceOf[js.Any])
+    @scala.inline
+    def containerStyle(value: CSSProperties): this.type = set("containerStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def csvFileNameFunction0(value: () => String): this.type = set("csvFileName", js.Any.fromFunction0(value))
+    @scala.inline
+    def csvFileName(value: String | js.Function0[String]): this.type = set("csvFileName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteRow(value: Boolean): this.type = set("deleteRow", value.asInstanceOf[js.Any])
+    @scala.inline
+    def excludeCSVHeader(value: Boolean): this.type = set("excludeCSVHeader", value.asInstanceOf[js.Any])
+    @scala.inline
+    def expandColumnOptions(value: ExpandColumnOptions): this.type = set("expandColumnOptions", value.asInstanceOf[js.Any])
+    @scala.inline
+    def expandComponent(value: /* row */ js.Any => String | ReactElement): this.type = set("expandComponent", js.Any.fromFunction1(value))
+    @scala.inline
+    def expandableRow(value: /* row */ js.Any => Boolean): this.type = set("expandableRow", js.Any.fromFunction1(value))
+    @scala.inline
+    def exportCSV(value: Boolean): this.type = set("exportCSV", value.asInstanceOf[js.Any])
+    @scala.inline
+    def fetchInfo(value: FetchInfo): this.type = set("fetchInfo", value.asInstanceOf[js.Any])
+    @scala.inline
+    def footer(value: Boolean): this.type = set("footer", value.asInstanceOf[js.Any])
+    @scala.inline
+    def footerData(value: js.Array[js.Array[FooterData]]): this.type = set("footerData", value.asInstanceOf[js.Any])
+    @scala.inline
+    def headerContainerClass(value: String): this.type = set("headerContainerClass", value.asInstanceOf[js.Any])
+    @scala.inline
+    def headerStyle(value: CSSProperties): this.type = set("headerStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def height(value: String): this.type = set("height", value.asInstanceOf[js.Any])
+    @scala.inline
+    def hover(value: Boolean): this.type = set("hover", value.asInstanceOf[js.Any])
+    @scala.inline
+    def ignoreSinglePage(value: Boolean): this.type = set("ignoreSinglePage", value.asInstanceOf[js.Any])
+    @scala.inline
+    def insertRow(value: Boolean): this.type = set("insertRow", value.asInstanceOf[js.Any])
+    @scala.inline
+    def keyBoardNav(value: Boolean | KeyboardNavigation): this.type = set("keyBoardNav", value.asInstanceOf[js.Any])
+    @scala.inline
+    def keyField(value: String): this.type = set("keyField", value.asInstanceOf[js.Any])
+    @scala.inline
+    def maxHeight(value: String): this.type = set("maxHeight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def multiColumnSearch(value: Boolean): this.type = set("multiColumnSearch", value.asInstanceOf[js.Any])
+    @scala.inline
+    def multiColumnSort(value: Double): this.type = set("multiColumnSort", value.asInstanceOf[js.Any])
+    @scala.inline
+    def options(value: Options[_]): this.type = set("options", value.asInstanceOf[js.Any])
+    @scala.inline
+    def pagination(value: Boolean): this.type = set("pagination", value.asInstanceOf[js.Any])
+    @scala.inline
+    def remoteFunction1(value: /* remobeObj */ RemoteObjSpec => RemoteObjSpec): this.type = set("remote", js.Any.fromFunction1(value))
+    @scala.inline
+    def remote(value: Boolean | (js.Function1[/* remobeObj */ RemoteObjSpec, RemoteObjSpec])): this.type = set("remote", value.asInstanceOf[js.Any])
+    @scala.inline
+    def renderAlert(value: Boolean): this.type = set("renderAlert", value.asInstanceOf[js.Any])
+    @scala.inline
+    def scrollTop(value: Double | ScrollPosition): this.type = set("scrollTop", value.asInstanceOf[js.Any])
+    @scala.inline
+    def search(value: Boolean): this.type = set("search", value.asInstanceOf[js.Any])
+    @scala.inline
+    def searchPlaceholder(value: String): this.type = set("searchPlaceholder", value.asInstanceOf[js.Any])
+    @scala.inline
+    def selectRow(value: SelectRow[_]): this.type = set("selectRow", value.asInstanceOf[js.Any])
+    @scala.inline
+    def strictSearch(value: Boolean): this.type = set("strictSearch", value.asInstanceOf[js.Any])
+    @scala.inline
+    def striped(value: Boolean): this.type = set("striped", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tableBodyClass(value: String): this.type = set("tableBodyClass", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tableContainerClass(value: String): this.type = set("tableContainerClass", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tableFooterClass(value: String): this.type = set("tableFooterClass", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tableHeaderClass(value: String): this.type = set("tableHeaderClass", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tableStyle(value: CSSProperties): this.type = set("tableStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def trClassNameFunction2(value: (/* rowData */ js.Any, /* rowIndex */ Double) => String): this.type = set("trClassName", js.Any.fromFunction2(value))
+    @scala.inline
+    def trClassName(value: String | (js.Function2[/* rowData */ js.Any, /* rowIndex */ Double, String])): this.type = set("trClassName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def trStyleFunction2(value: (/* rowData */ js.Any, /* rowIndex */ Double) => CSSProperties): this.type = set("trStyle", js.Any.fromFunction2(value))
+    @scala.inline
+    def trStyle(value: CSSProperties | (js.Function2[/* rowData */ js.Any, /* rowIndex */ Double, CSSProperties])): this.type = set("trStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def version(value: BootstrapVersion): this.type = set("version", value.asInstanceOf[js.Any])
+    @scala.inline
+    def withoutTabIndex(value: Boolean): this.type = set("withoutTabIndex", value.asInstanceOf[js.Any])
   }
-  type Props = BootstrapTableProps
+  
+  def withProps(p: BootstrapTableProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(data: js.Array[js.Object]): Builder = {
+    val __props = js.Dynamic.literal(data = data.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[BootstrapTableProps]))
+  }
 }
 

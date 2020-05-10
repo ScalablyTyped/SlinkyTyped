@@ -45,22 +45,114 @@ object EncoderSettings {
     AudioDescriptions: listOfAudioDescription,
     OutputGroups: listOfOutputGroup,
     TimecodeConfig: TimecodeConfig,
-    VideoDescriptions: listOfVideoDescription,
-    AvailBlanking: AvailBlanking = null,
-    AvailConfiguration: AvailConfiguration = null,
-    BlackoutSlate: BlackoutSlate = null,
-    CaptionDescriptions: listOfCaptionDescription = null,
-    GlobalConfiguration: GlobalConfiguration = null,
-    NielsenConfiguration: NielsenConfiguration = null
+    VideoDescriptions: listOfVideoDescription
   ): EncoderSettings = {
     val __obj = js.Dynamic.literal(AudioDescriptions = AudioDescriptions.asInstanceOf[js.Any], OutputGroups = OutputGroups.asInstanceOf[js.Any], TimecodeConfig = TimecodeConfig.asInstanceOf[js.Any], VideoDescriptions = VideoDescriptions.asInstanceOf[js.Any])
-    if (AvailBlanking != null) __obj.updateDynamic("AvailBlanking")(AvailBlanking.asInstanceOf[js.Any])
-    if (AvailConfiguration != null) __obj.updateDynamic("AvailConfiguration")(AvailConfiguration.asInstanceOf[js.Any])
-    if (BlackoutSlate != null) __obj.updateDynamic("BlackoutSlate")(BlackoutSlate.asInstanceOf[js.Any])
-    if (CaptionDescriptions != null) __obj.updateDynamic("CaptionDescriptions")(CaptionDescriptions.asInstanceOf[js.Any])
-    if (GlobalConfiguration != null) __obj.updateDynamic("GlobalConfiguration")(GlobalConfiguration.asInstanceOf[js.Any])
-    if (NielsenConfiguration != null) __obj.updateDynamic("NielsenConfiguration")(NielsenConfiguration.asInstanceOf[js.Any])
     __obj.asInstanceOf[EncoderSettings]
   }
+  @scala.inline
+  implicit class EncoderSettingsOps[Self <: EncoderSettings] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAudioDescriptions(value: listOfAudioDescription): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AudioDescriptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOutputGroups(value: listOfOutputGroup): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OutputGroups")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTimecodeConfig(value: TimecodeConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TimecodeConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVideoDescriptions(value: listOfVideoDescription): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VideoDescriptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAvailBlanking(value: AvailBlanking): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AvailBlanking")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAvailBlanking: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AvailBlanking")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAvailConfiguration(value: AvailConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AvailConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAvailConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AvailConfiguration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBlackoutSlate(value: BlackoutSlate): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BlackoutSlate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBlackoutSlate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BlackoutSlate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCaptionDescriptions(value: listOfCaptionDescription): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CaptionDescriptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCaptionDescriptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CaptionDescriptions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGlobalConfiguration(value: GlobalConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GlobalConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGlobalConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GlobalConfiguration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNielsenConfiguration(value: NielsenConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NielsenConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNielsenConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NielsenConfiguration")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

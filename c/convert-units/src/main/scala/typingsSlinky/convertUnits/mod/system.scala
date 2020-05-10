@@ -14,14 +14,12 @@ trait system extends js.Object
 
 object system {
   @scala.inline
-  def bits: typingsSlinky.convertUnits.convertUnitsStrings.bits = this.cast("bits")
+  def bits: typingsSlinky.convertUnits.convertUnitsStrings.bits = "bits".asInstanceOf[typingsSlinky.convertUnits.convertUnitsStrings.bits]
   @scala.inline
-  def bytes: typingsSlinky.convertUnits.convertUnitsStrings.bytes = this.cast("bytes")
+  def bytes: typingsSlinky.convertUnits.convertUnitsStrings.bytes = "bytes".asInstanceOf[typingsSlinky.convertUnits.convertUnitsStrings.bytes]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def imperial: typingsSlinky.convertUnits.convertUnitsStrings.imperial = "imperial".asInstanceOf[typingsSlinky.convertUnits.convertUnitsStrings.imperial]
   @scala.inline
-  def imperial: typingsSlinky.convertUnits.convertUnitsStrings.imperial = this.cast("imperial")
-  @scala.inline
-  def metric: typingsSlinky.convertUnits.convertUnitsStrings.metric = this.cast("metric")
+  def metric: typingsSlinky.convertUnits.convertUnitsStrings.metric = "metric".asInstanceOf[typingsSlinky.convertUnits.convertUnitsStrings.metric]
 }
 

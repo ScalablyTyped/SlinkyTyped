@@ -24,93 +24,361 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonBoundedBy extends js.Object {
-  var adjustMapMargin: js.UndefOr[Boolean] = js.undefined
-  var boundedBy: js.UndefOr[js.Array[js.Array[Double]]] = js.undefined
-  var fitMaxWidth: js.UndefOr[Boolean] = js.undefined
-  var float: js.UndefOr[none | left | right] = js.undefined
-  var floatIndex: js.UndefOr[Double] = js.undefined
-  var formLayout: js.UndefOr[String | IClassConstructor[ILayout]] = js.undefined
-  var kind: js.UndefOr[house | street | metro | district | locality] = js.undefined
-  var layout: js.UndefOr[String | IClassConstructor[ISearchControlLayout]] = js.undefined
-  var maxWidth: js.UndefOr[(js.Array[js.Array[Double] | Double]) | Double] = js.undefined
-  var noCentering: js.UndefOr[Boolean] = js.undefined
-  var noPlacemark: js.UndefOr[Boolean] = js.undefined
-  var noPopup: js.UndefOr[Boolean] = js.undefined
-  var noSelect: js.UndefOr[Boolean] = js.undefined
-  var noSuggestPanel: js.UndefOr[Boolean] = js.undefined
-  var placeholderContent: js.UndefOr[String] = js.undefined
-  var popupItemLayout: js.UndefOr[String | IClassConstructor[ILayout]] = js.undefined
-  var popupLayout: js.UndefOr[String | IClassConstructor[ILayout]] = js.undefined
-  var position: js.UndefOr[AnonBottom] = js.undefined
-  var provider: js.UndefOr[IGeocodeProvider | yandexNumbersignmap | yandexNumbersignsearch] = js.undefined
-  var searchCoordOrder: js.UndefOr[latlong | longlat] = js.undefined
-  var size: js.UndefOr[auto | small | medium | large] = js.undefined
-  var strictBounds: js.UndefOr[Boolean] = js.undefined
-  var suppressYandexSearch: js.UndefOr[Boolean] = js.undefined
-  var useMapBounds: js.UndefOr[Boolean] = js.undefined
-  var visible: js.UndefOr[Boolean] = js.undefined
-  var zoomMargin: js.UndefOr[Double] = js.undefined
+  var adjustMapMargin: js.UndefOr[Boolean] = js.native
+  var boundedBy: js.UndefOr[js.Array[js.Array[Double]]] = js.native
+  var fitMaxWidth: js.UndefOr[Boolean] = js.native
+  var float: js.UndefOr[none | left | right] = js.native
+  var floatIndex: js.UndefOr[Double] = js.native
+  var formLayout: js.UndefOr[String | IClassConstructor[ILayout]] = js.native
+  var kind: js.UndefOr[house | street | metro | district | locality] = js.native
+  var layout: js.UndefOr[String | IClassConstructor[ISearchControlLayout]] = js.native
+  var maxWidth: js.UndefOr[(js.Array[js.Array[Double] | Double]) | Double] = js.native
+  var noCentering: js.UndefOr[Boolean] = js.native
+  var noPlacemark: js.UndefOr[Boolean] = js.native
+  var noPopup: js.UndefOr[Boolean] = js.native
+  var noSelect: js.UndefOr[Boolean] = js.native
+  var noSuggestPanel: js.UndefOr[Boolean] = js.native
+  var placeholderContent: js.UndefOr[String] = js.native
+  var popupItemLayout: js.UndefOr[String | IClassConstructor[ILayout]] = js.native
+  var popupLayout: js.UndefOr[String | IClassConstructor[ILayout]] = js.native
+  var position: js.UndefOr[AnonBottom] = js.native
+  var provider: js.UndefOr[IGeocodeProvider | yandexNumbersignmap | yandexNumbersignsearch] = js.native
+  var searchCoordOrder: js.UndefOr[latlong | longlat] = js.native
+  var size: js.UndefOr[auto | small | medium | large] = js.native
+  var strictBounds: js.UndefOr[Boolean] = js.native
+  var suppressYandexSearch: js.UndefOr[Boolean] = js.native
+  var useMapBounds: js.UndefOr[Boolean] = js.native
+  var visible: js.UndefOr[Boolean] = js.native
+  var zoomMargin: js.UndefOr[Double] = js.native
 }
 
 object AnonBoundedBy {
   @scala.inline
-  def apply(
-    adjustMapMargin: js.UndefOr[Boolean] = js.undefined,
-    boundedBy: js.Array[js.Array[Double]] = null,
-    fitMaxWidth: js.UndefOr[Boolean] = js.undefined,
-    float: none | left | right = null,
-    floatIndex: Int | Double = null,
-    formLayout: String | IClassConstructor[ILayout] = null,
-    kind: house | street | metro | district | locality = null,
-    layout: String | IClassConstructor[ISearchControlLayout] = null,
-    maxWidth: (js.Array[js.Array[Double] | Double]) | Double = null,
-    noCentering: js.UndefOr[Boolean] = js.undefined,
-    noPlacemark: js.UndefOr[Boolean] = js.undefined,
-    noPopup: js.UndefOr[Boolean] = js.undefined,
-    noSelect: js.UndefOr[Boolean] = js.undefined,
-    noSuggestPanel: js.UndefOr[Boolean] = js.undefined,
-    placeholderContent: String = null,
-    popupItemLayout: String | IClassConstructor[ILayout] = null,
-    popupLayout: String | IClassConstructor[ILayout] = null,
-    position: AnonBottom = null,
-    provider: IGeocodeProvider | yandexNumbersignmap | yandexNumbersignsearch = null,
-    searchCoordOrder: latlong | longlat = null,
-    size: auto | small | medium | large = null,
-    strictBounds: js.UndefOr[Boolean] = js.undefined,
-    suppressYandexSearch: js.UndefOr[Boolean] = js.undefined,
-    useMapBounds: js.UndefOr[Boolean] = js.undefined,
-    visible: js.UndefOr[Boolean] = js.undefined,
-    zoomMargin: Int | Double = null
-  ): AnonBoundedBy = {
+  def apply(): AnonBoundedBy = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(adjustMapMargin)) __obj.updateDynamic("adjustMapMargin")(adjustMapMargin.asInstanceOf[js.Any])
-    if (boundedBy != null) __obj.updateDynamic("boundedBy")(boundedBy.asInstanceOf[js.Any])
-    if (!js.isUndefined(fitMaxWidth)) __obj.updateDynamic("fitMaxWidth")(fitMaxWidth.asInstanceOf[js.Any])
-    if (float != null) __obj.updateDynamic("float")(float.asInstanceOf[js.Any])
-    if (floatIndex != null) __obj.updateDynamic("floatIndex")(floatIndex.asInstanceOf[js.Any])
-    if (formLayout != null) __obj.updateDynamic("formLayout")(formLayout.asInstanceOf[js.Any])
-    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
-    if (layout != null) __obj.updateDynamic("layout")(layout.asInstanceOf[js.Any])
-    if (maxWidth != null) __obj.updateDynamic("maxWidth")(maxWidth.asInstanceOf[js.Any])
-    if (!js.isUndefined(noCentering)) __obj.updateDynamic("noCentering")(noCentering.asInstanceOf[js.Any])
-    if (!js.isUndefined(noPlacemark)) __obj.updateDynamic("noPlacemark")(noPlacemark.asInstanceOf[js.Any])
-    if (!js.isUndefined(noPopup)) __obj.updateDynamic("noPopup")(noPopup.asInstanceOf[js.Any])
-    if (!js.isUndefined(noSelect)) __obj.updateDynamic("noSelect")(noSelect.asInstanceOf[js.Any])
-    if (!js.isUndefined(noSuggestPanel)) __obj.updateDynamic("noSuggestPanel")(noSuggestPanel.asInstanceOf[js.Any])
-    if (placeholderContent != null) __obj.updateDynamic("placeholderContent")(placeholderContent.asInstanceOf[js.Any])
-    if (popupItemLayout != null) __obj.updateDynamic("popupItemLayout")(popupItemLayout.asInstanceOf[js.Any])
-    if (popupLayout != null) __obj.updateDynamic("popupLayout")(popupLayout.asInstanceOf[js.Any])
-    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
-    if (provider != null) __obj.updateDynamic("provider")(provider.asInstanceOf[js.Any])
-    if (searchCoordOrder != null) __obj.updateDynamic("searchCoordOrder")(searchCoordOrder.asInstanceOf[js.Any])
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
-    if (!js.isUndefined(strictBounds)) __obj.updateDynamic("strictBounds")(strictBounds.asInstanceOf[js.Any])
-    if (!js.isUndefined(suppressYandexSearch)) __obj.updateDynamic("suppressYandexSearch")(suppressYandexSearch.asInstanceOf[js.Any])
-    if (!js.isUndefined(useMapBounds)) __obj.updateDynamic("useMapBounds")(useMapBounds.asInstanceOf[js.Any])
-    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.asInstanceOf[js.Any])
-    if (zoomMargin != null) __obj.updateDynamic("zoomMargin")(zoomMargin.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonBoundedBy]
   }
+  @scala.inline
+  implicit class AnonBoundedByOps[Self <: AnonBoundedBy] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAdjustMapMargin(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("adjustMapMargin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAdjustMapMargin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("adjustMapMargin")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBoundedBy(value: js.Array[js.Array[Double]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("boundedBy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBoundedBy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("boundedBy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFitMaxWidth(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fitMaxWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFitMaxWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fitMaxWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFloat(value: none | left | right): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("float")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFloat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("float")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFloatIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("floatIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFloatIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("floatIndex")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFormLayout(value: String | IClassConstructor[ILayout]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formLayout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFormLayout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formLayout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKind(value: house | street | metro | district | locality): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLayout(value: String | IClassConstructor[ISearchControlLayout]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("layout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLayout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("layout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxWidth(value: (js.Array[js.Array[Double] | Double]) | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNoCentering(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noCentering")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNoCentering: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noCentering")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNoPlacemark(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noPlacemark")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNoPlacemark: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noPlacemark")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNoPopup(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noPopup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNoPopup: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noPopup")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNoSelect(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noSelect")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNoSelect: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noSelect")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNoSuggestPanel(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noSuggestPanel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNoSuggestPanel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noSuggestPanel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlaceholderContent(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholderContent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlaceholderContent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholderContent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPopupItemLayout(value: String | IClassConstructor[ILayout]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("popupItemLayout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPopupItemLayout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("popupItemLayout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPopupLayout(value: String | IClassConstructor[ILayout]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("popupLayout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPopupLayout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("popupLayout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPosition(value: AnonBottom): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPosition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProvider(value: IGeocodeProvider | yandexNumbersignmap | yandexNumbersignsearch): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("provider")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProvider: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("provider")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSearchCoordOrder(value: latlong | longlat): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("searchCoordOrder")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSearchCoordOrder: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("searchCoordOrder")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSize(value: auto | small | medium | large): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStrictBounds(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strictBounds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStrictBounds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strictBounds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSuppressYandexSearch(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suppressYandexSearch")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSuppressYandexSearch: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suppressYandexSearch")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUseMapBounds(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useMapBounds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUseMapBounds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useMapBounds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVisible(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVisible: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withZoomMargin(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zoomMargin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutZoomMargin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zoomMargin")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

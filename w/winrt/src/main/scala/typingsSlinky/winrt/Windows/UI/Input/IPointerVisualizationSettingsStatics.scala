@@ -4,16 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IPointerVisualizationSettingsStatics extends js.Object {
-  def getForCurrentView(): PointerVisualizationSettings
+  def getForCurrentView(): PointerVisualizationSettings = js.native
 }
 
 object IPointerVisualizationSettingsStatics {
   @scala.inline
   def apply(getForCurrentView: () => PointerVisualizationSettings): IPointerVisualizationSettingsStatics = {
     val __obj = js.Dynamic.literal(getForCurrentView = js.Any.fromFunction0(getForCurrentView))
-  
     __obj.asInstanceOf[IPointerVisualizationSettingsStatics]
   }
+  @scala.inline
+  implicit class IPointerVisualizationSettingsStaticsOps[Self <: IPointerVisualizationSettingsStatics] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetForCurrentView(value: () => PointerVisualizationSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getForCurrentView")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

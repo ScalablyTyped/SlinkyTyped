@@ -6,19 +6,19 @@ import scala.scalajs.js.annotation._
 
 package object mod {
   type CallBack = js.Function2[
-    /* error */ typingsSlinky.ldapjs.mod.Error, 
+    /* error */ typingsSlinky.ldapjs.mod.Error | scala.Null, 
     /* result */ js.UndefOr[js.Any], 
     scala.Unit
   ]
   type CompareCallback = js.Function2[
-    /* error */ typingsSlinky.ldapjs.mod.Error, 
+    /* error */ typingsSlinky.ldapjs.mod.Error | scala.Null, 
     /* matched */ js.UndefOr[scala.Boolean], 
     scala.Unit
   ]
   type Control = js.Any
   type ErrorCallback = js.Function1[/* error */ typingsSlinky.ldapjs.mod.Error, scala.Unit]
   type ExopCallback = js.Function3[
-    /* error */ typingsSlinky.ldapjs.mod.Error, 
+    /* error */ typingsSlinky.ldapjs.mod.Error | scala.Null, 
     /* value */ java.lang.String, 
     /* result */ js.UndefOr[js.Any], 
     scala.Unit

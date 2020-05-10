@@ -26,18 +26,65 @@ trait CoverageNormalizedUnits extends js.Object {
 
 object CoverageNormalizedUnits {
   @scala.inline
-  def apply(
-    CoverageNormalizedUnitsPercentage: CoverageNormalizedUnitsPercentage = null,
-    OnDemandNormalizedUnits: OnDemandNormalizedUnits = null,
-    ReservedNormalizedUnits: ReservedNormalizedUnits = null,
-    TotalRunningNormalizedUnits: TotalRunningNormalizedUnits = null
-  ): CoverageNormalizedUnits = {
+  def apply(): CoverageNormalizedUnits = {
     val __obj = js.Dynamic.literal()
-    if (CoverageNormalizedUnitsPercentage != null) __obj.updateDynamic("CoverageNormalizedUnitsPercentage")(CoverageNormalizedUnitsPercentage.asInstanceOf[js.Any])
-    if (OnDemandNormalizedUnits != null) __obj.updateDynamic("OnDemandNormalizedUnits")(OnDemandNormalizedUnits.asInstanceOf[js.Any])
-    if (ReservedNormalizedUnits != null) __obj.updateDynamic("ReservedNormalizedUnits")(ReservedNormalizedUnits.asInstanceOf[js.Any])
-    if (TotalRunningNormalizedUnits != null) __obj.updateDynamic("TotalRunningNormalizedUnits")(TotalRunningNormalizedUnits.asInstanceOf[js.Any])
     __obj.asInstanceOf[CoverageNormalizedUnits]
   }
+  @scala.inline
+  implicit class CoverageNormalizedUnitsOps[Self <: CoverageNormalizedUnits] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCoverageNormalizedUnitsPercentage(value: CoverageNormalizedUnitsPercentage): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CoverageNormalizedUnitsPercentage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCoverageNormalizedUnitsPercentage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CoverageNormalizedUnitsPercentage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnDemandNormalizedUnits(value: OnDemandNormalizedUnits): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnDemandNormalizedUnits")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnDemandNormalizedUnits: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnDemandNormalizedUnits")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReservedNormalizedUnits(value: ReservedNormalizedUnits): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReservedNormalizedUnits")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReservedNormalizedUnits: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReservedNormalizedUnits")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTotalRunningNormalizedUnits(value: TotalRunningNormalizedUnits): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TotalRunningNormalizedUnits")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTotalRunningNormalizedUnits: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TotalRunningNormalizedUnits")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

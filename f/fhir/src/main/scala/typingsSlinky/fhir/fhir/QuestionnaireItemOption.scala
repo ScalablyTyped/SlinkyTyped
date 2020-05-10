@@ -7,81 +7,167 @@ import scala.scalajs.js.annotation._
 /**
   * Permitted answer
   */
+@js.native
 trait QuestionnaireItemOption extends BackboneElement {
   /**
     * Contains extended information for property 'valueDate'.
     */
-  var _valueDate: js.UndefOr[Element] = js.undefined
+  var _valueDate: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'valueInteger'.
     */
-  var _valueInteger: js.UndefOr[Element] = js.undefined
+  var _valueInteger: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'valueString'.
     */
-  var _valueString: js.UndefOr[Element] = js.undefined
+  var _valueString: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'valueTime'.
     */
-  var _valueTime: js.UndefOr[Element] = js.undefined
+  var _valueTime: js.UndefOr[Element] = js.native
   /**
     * Answer value
     */
-  var valueCoding: js.UndefOr[Coding] = js.undefined
+  var valueCoding: js.UndefOr[Coding] = js.native
   /**
     * Answer value
     */
-  var valueDate: js.UndefOr[date] = js.undefined
+  var valueDate: js.UndefOr[date] = js.native
   /**
     * Answer value
     */
-  var valueInteger: js.UndefOr[integer] = js.undefined
+  var valueInteger: js.UndefOr[integer] = js.native
   /**
     * Answer value
     */
-  var valueString: js.UndefOr[String] = js.undefined
+  var valueString: js.UndefOr[String] = js.native
   /**
     * Answer value
     */
-  var valueTime: js.UndefOr[time] = js.undefined
+  var valueTime: js.UndefOr[time] = js.native
 }
 
 object QuestionnaireItemOption {
   @scala.inline
-  def apply(
-    _fhir_comments: js.Array[Element] = null,
-    _id: Element = null,
-    _valueDate: Element = null,
-    _valueInteger: Element = null,
-    _valueString: Element = null,
-    _valueTime: Element = null,
-    extension: js.Array[Extension] = null,
-    fhir_comments: js.Array[String] = null,
-    id: String = null,
-    modifierExtension: js.Array[Extension] = null,
-    valueCoding: Coding = null,
-    valueDate: date = null,
-    valueInteger: Int | Double = null,
-    valueString: String = null,
-    valueTime: time = null
-  ): QuestionnaireItemOption = {
+  def apply(): QuestionnaireItemOption = {
     val __obj = js.Dynamic.literal()
-    if (_fhir_comments != null) __obj.updateDynamic("_fhir_comments")(_fhir_comments.asInstanceOf[js.Any])
-    if (_id != null) __obj.updateDynamic("_id")(_id.asInstanceOf[js.Any])
-    if (_valueDate != null) __obj.updateDynamic("_valueDate")(_valueDate.asInstanceOf[js.Any])
-    if (_valueInteger != null) __obj.updateDynamic("_valueInteger")(_valueInteger.asInstanceOf[js.Any])
-    if (_valueString != null) __obj.updateDynamic("_valueString")(_valueString.asInstanceOf[js.Any])
-    if (_valueTime != null) __obj.updateDynamic("_valueTime")(_valueTime.asInstanceOf[js.Any])
-    if (extension != null) __obj.updateDynamic("extension")(extension.asInstanceOf[js.Any])
-    if (fhir_comments != null) __obj.updateDynamic("fhir_comments")(fhir_comments.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (modifierExtension != null) __obj.updateDynamic("modifierExtension")(modifierExtension.asInstanceOf[js.Any])
-    if (valueCoding != null) __obj.updateDynamic("valueCoding")(valueCoding.asInstanceOf[js.Any])
-    if (valueDate != null) __obj.updateDynamic("valueDate")(valueDate.asInstanceOf[js.Any])
-    if (valueInteger != null) __obj.updateDynamic("valueInteger")(valueInteger.asInstanceOf[js.Any])
-    if (valueString != null) __obj.updateDynamic("valueString")(valueString.asInstanceOf[js.Any])
-    if (valueTime != null) __obj.updateDynamic("valueTime")(valueTime.asInstanceOf[js.Any])
     __obj.asInstanceOf[QuestionnaireItemOption]
   }
+  @scala.inline
+  implicit class QuestionnaireItemOptionOps[Self <: QuestionnaireItemOption] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def with_valueDate(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_valueDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_valueDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_valueDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_valueInteger(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_valueInteger")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_valueInteger: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_valueInteger")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_valueString(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_valueString")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_valueString: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_valueString")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_valueTime(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_valueTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_valueTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_valueTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValueCoding(value: Coding): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valueCoding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValueCoding: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valueCoding")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValueDate(value: date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valueDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValueDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valueDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValueInteger(value: integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valueInteger")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValueInteger: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valueInteger")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValueString(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valueString")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValueString: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valueString")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValueTime(value: time): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valueTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValueTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valueTime")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

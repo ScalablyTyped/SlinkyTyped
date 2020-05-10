@@ -32,18 +32,65 @@ trait SchemaResources extends js.Object {
 
 object SchemaResources {
   @scala.inline
-  def apply(
-    projectId: String = null,
-    regions: js.Array[String] = null,
-    virtualMachine: SchemaVirtualMachine = null,
-    zones: js.Array[String] = null
-  ): SchemaResources = {
+  def apply(): SchemaResources = {
     val __obj = js.Dynamic.literal()
-    if (projectId != null) __obj.updateDynamic("projectId")(projectId.asInstanceOf[js.Any])
-    if (regions != null) __obj.updateDynamic("regions")(regions.asInstanceOf[js.Any])
-    if (virtualMachine != null) __obj.updateDynamic("virtualMachine")(virtualMachine.asInstanceOf[js.Any])
-    if (zones != null) __obj.updateDynamic("zones")(zones.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaResources]
   }
+  @scala.inline
+  implicit class SchemaResourcesOps[Self <: SchemaResources] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withProjectId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("projectId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProjectId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("projectId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRegions(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("regions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRegions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("regions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVirtualMachine(value: SchemaVirtualMachine): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("virtualMachine")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVirtualMachine: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("virtualMachine")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withZones(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zones")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutZones: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zones")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

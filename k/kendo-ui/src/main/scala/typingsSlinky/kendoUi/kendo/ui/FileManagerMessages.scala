@@ -4,27 +4,75 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait FileManagerMessages extends js.Object {
-  var dialogs: js.UndefOr[FileManagerMessagesDialogs] = js.undefined
-  var previewPane: js.UndefOr[FileManagerMessagesPreviewPane] = js.undefined
-  var toolbar: js.UndefOr[FileManagerMessagesToolbar] = js.undefined
-  var views: js.UndefOr[FileManagerMessagesViews] = js.undefined
+  var dialogs: js.UndefOr[FileManagerMessagesDialogs] = js.native
+  var previewPane: js.UndefOr[FileManagerMessagesPreviewPane] = js.native
+  var toolbar: js.UndefOr[FileManagerMessagesToolbar] = js.native
+  var views: js.UndefOr[FileManagerMessagesViews] = js.native
 }
 
 object FileManagerMessages {
   @scala.inline
-  def apply(
-    dialogs: FileManagerMessagesDialogs = null,
-    previewPane: FileManagerMessagesPreviewPane = null,
-    toolbar: FileManagerMessagesToolbar = null,
-    views: FileManagerMessagesViews = null
-  ): FileManagerMessages = {
+  def apply(): FileManagerMessages = {
     val __obj = js.Dynamic.literal()
-    if (dialogs != null) __obj.updateDynamic("dialogs")(dialogs.asInstanceOf[js.Any])
-    if (previewPane != null) __obj.updateDynamic("previewPane")(previewPane.asInstanceOf[js.Any])
-    if (toolbar != null) __obj.updateDynamic("toolbar")(toolbar.asInstanceOf[js.Any])
-    if (views != null) __obj.updateDynamic("views")(views.asInstanceOf[js.Any])
     __obj.asInstanceOf[FileManagerMessages]
   }
+  @scala.inline
+  implicit class FileManagerMessagesOps[Self <: FileManagerMessages] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDialogs(value: FileManagerMessagesDialogs): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dialogs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDialogs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dialogs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPreviewPane(value: FileManagerMessagesPreviewPane): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("previewPane")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPreviewPane: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("previewPane")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withToolbar(value: FileManagerMessagesToolbar): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toolbar")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutToolbar: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toolbar")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withViews(value: FileManagerMessagesViews): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("views")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutViews: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("views")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

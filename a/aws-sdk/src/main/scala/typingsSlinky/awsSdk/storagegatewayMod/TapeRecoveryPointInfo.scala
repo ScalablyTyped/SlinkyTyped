@@ -26,18 +26,65 @@ trait TapeRecoveryPointInfo extends js.Object {
 
 object TapeRecoveryPointInfo {
   @scala.inline
-  def apply(
-    TapeARN: TapeARN = null,
-    TapeRecoveryPointTime: js.Date = null,
-    TapeSizeInBytes: Int | Double = null,
-    TapeStatus: TapeRecoveryPointStatus = null
-  ): TapeRecoveryPointInfo = {
+  def apply(): TapeRecoveryPointInfo = {
     val __obj = js.Dynamic.literal()
-    if (TapeARN != null) __obj.updateDynamic("TapeARN")(TapeARN.asInstanceOf[js.Any])
-    if (TapeRecoveryPointTime != null) __obj.updateDynamic("TapeRecoveryPointTime")(TapeRecoveryPointTime.asInstanceOf[js.Any])
-    if (TapeSizeInBytes != null) __obj.updateDynamic("TapeSizeInBytes")(TapeSizeInBytes.asInstanceOf[js.Any])
-    if (TapeStatus != null) __obj.updateDynamic("TapeStatus")(TapeStatus.asInstanceOf[js.Any])
     __obj.asInstanceOf[TapeRecoveryPointInfo]
   }
+  @scala.inline
+  implicit class TapeRecoveryPointInfoOps[Self <: TapeRecoveryPointInfo] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withTapeARN(value: TapeARN): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TapeARN")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTapeARN: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TapeARN")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTapeRecoveryPointTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TapeRecoveryPointTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTapeRecoveryPointTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TapeRecoveryPointTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTapeSizeInBytes(value: TapeSize): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TapeSizeInBytes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTapeSizeInBytes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TapeSizeInBytes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTapeStatus(value: TapeRecoveryPointStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TapeStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTapeStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TapeStatus")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

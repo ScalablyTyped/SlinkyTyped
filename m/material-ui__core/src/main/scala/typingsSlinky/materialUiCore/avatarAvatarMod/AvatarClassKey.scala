@@ -13,12 +13,10 @@ trait AvatarClassKey extends js.Object
 
 object AvatarClassKey {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def colorDefault: typingsSlinky.materialUiCore.materialUiCoreStrings.colorDefault = "colorDefault".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.colorDefault]
   @scala.inline
-  def colorDefault: typingsSlinky.materialUiCore.materialUiCoreStrings.colorDefault = this.cast("colorDefault")
+  def img: typingsSlinky.materialUiCore.materialUiCoreStrings.img = "img".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.img]
   @scala.inline
-  def img: typingsSlinky.materialUiCore.materialUiCoreStrings.img = this.cast("img")
-  @scala.inline
-  def root: typingsSlinky.materialUiCore.materialUiCoreStrings.root = this.cast("root")
+  def root: typingsSlinky.materialUiCore.materialUiCoreStrings.root = "root".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.root]
 }
 

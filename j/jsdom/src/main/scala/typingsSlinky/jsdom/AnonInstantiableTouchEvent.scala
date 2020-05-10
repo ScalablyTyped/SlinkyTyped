@@ -2,7 +2,7 @@ package typingsSlinky.jsdom
 
 import org.scalablytyped.runtime.Instantiable1
 import org.scalablytyped.runtime.Instantiable2
-import typingsSlinky.std.TouchEvent
+import org.scalajs.dom.raw.TouchEvent
 import typingsSlinky.std.TouchEventInit
 import scala.scalajs.js
 import scala.scalajs.js.`|`

@@ -8,113 +8,295 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ADMMessage extends js.Object {
   /**
     * The action that occurs if the user taps a push notification delivered by the campaign: OPEN_APP - Your app launches, or it becomes the foreground app if it has been sent to the background. This is the default action. DEEP_LINK - Uses deep linking features in iOS and Android to open your app and display a designated user interface within the app. URL - The default mobile browser on the user's device launches and opens a web page at the URL you specify. Possible values include: OPEN_APP | DEEP_LINK | URL
     */
-  var Action: js.UndefOr[OPEN_APP | DEEP_LINK | URL | String] = js.undefined
+  var Action: js.UndefOr[OPEN_APP | DEEP_LINK | URL | String] = js.native
   /**
     * The message body of the notification.
     */
-  var Body: js.UndefOr[String] = js.undefined
+  var Body: js.UndefOr[String] = js.native
   /**
     * Optional. Arbitrary string used to indicate multiple messages are logically the same and that ADM is allowed to drop previously enqueued messages in favor of this one.
     */
-  var ConsolidationKey: js.UndefOr[String] = js.undefined
+  var ConsolidationKey: js.UndefOr[String] = js.native
   /**
     * The data payload used for a silent push. This payload is added to the notifications' data.pinpoint.jsonBody' object
     */
-  var Data: js.UndefOr[StringDictionary[String] | (js.Iterable[js.Tuple2[String, String]])] = js.undefined
+  var Data: js.UndefOr[StringDictionary[String] | (js.Iterable[js.Tuple2[String, String]])] = js.native
   /**
     * Optional. Number of seconds ADM should retain the message if the device is offline
     */
-  var ExpiresAfter: js.UndefOr[String] = js.undefined
+  var ExpiresAfter: js.UndefOr[String] = js.native
   /**
     * The icon image name of the asset saved in your application.
     */
-  var IconReference: js.UndefOr[String] = js.undefined
+  var IconReference: js.UndefOr[String] = js.native
   /**
     * The URL that points to an image used as the large icon to the notification content view.
     */
-  var ImageIconUrl: js.UndefOr[String] = js.undefined
+  var ImageIconUrl: js.UndefOr[String] = js.native
   /**
     * The URL that points to an image used in the push notification.
     */
-  var ImageUrl: js.UndefOr[String] = js.undefined
+  var ImageUrl: js.UndefOr[String] = js.native
   /**
     * Optional. Base-64-encoded MD5 checksum of the data parameter. Used to verify data integrity
     */
-  var MD5: js.UndefOr[String] = js.undefined
+  var MD5: js.UndefOr[String] = js.native
   /**
     * The Raw JSON formatted string to be used as the payload. This value overrides the message.
     */
-  var RawContent: js.UndefOr[String] = js.undefined
+  var RawContent: js.UndefOr[String] = js.native
   /**
     * Indicates if the message should display on the users device. Silent pushes can be used for Remote Configuration and Phone Home use cases.
     */
-  var SilentPush: js.UndefOr[Boolean] = js.undefined
+  var SilentPush: js.UndefOr[Boolean] = js.native
   /**
     * The URL that points to an image used as the small icon for the notification which will be used to represent the notification in the status bar and content view
     */
-  var SmallImageIconUrl: js.UndefOr[String] = js.undefined
+  var SmallImageIconUrl: js.UndefOr[String] = js.native
   /**
     * Indicates a sound to play when the device receives the notification. Supports default, or the filename of a sound resource bundled in the app. Android sound files must reside in /res/raw/
     */
-  var Sound: js.UndefOr[String] = js.undefined
+  var Sound: js.UndefOr[String] = js.native
   /**
     * Default message substitutions. Can be overridden by individual address substitutions.
     */
   var Substitutions: js.UndefOr[
     (StringDictionary[js.Array[String] | js.Iterable[String]]) | (js.Iterable[js.Tuple2[String, js.Array[String] | js.Iterable[String]]])
-  ] = js.undefined
+  ] = js.native
   /**
     * The message title that displays above the message on the user's device.
     */
-  var Title: js.UndefOr[String] = js.undefined
+  var Title: js.UndefOr[String] = js.native
   /**
     * The URL to open in the user's mobile browser. Used if the value for Action is URL.
     */
-  var Url: js.UndefOr[String] = js.undefined
+  var Url: js.UndefOr[String] = js.native
 }
 
 object ADMMessage {
   @scala.inline
-  def apply(
-    Action: OPEN_APP | DEEP_LINK | URL | String = null,
-    Body: String = null,
-    ConsolidationKey: String = null,
-    Data: StringDictionary[String] | (js.Iterable[js.Tuple2[String, String]]) = null,
-    ExpiresAfter: String = null,
-    IconReference: String = null,
-    ImageIconUrl: String = null,
-    ImageUrl: String = null,
-    MD5: String = null,
-    RawContent: String = null,
-    SilentPush: js.UndefOr[Boolean] = js.undefined,
-    SmallImageIconUrl: String = null,
-    Sound: String = null,
-    Substitutions: (StringDictionary[js.Array[String] | js.Iterable[String]]) | (js.Iterable[js.Tuple2[String, js.Array[String] | js.Iterable[String]]]) = null,
-    Title: String = null,
-    Url: String = null
-  ): ADMMessage = {
+  def apply(): ADMMessage = {
     val __obj = js.Dynamic.literal()
-    if (Action != null) __obj.updateDynamic("Action")(Action.asInstanceOf[js.Any])
-    if (Body != null) __obj.updateDynamic("Body")(Body.asInstanceOf[js.Any])
-    if (ConsolidationKey != null) __obj.updateDynamic("ConsolidationKey")(ConsolidationKey.asInstanceOf[js.Any])
-    if (Data != null) __obj.updateDynamic("Data")(Data.asInstanceOf[js.Any])
-    if (ExpiresAfter != null) __obj.updateDynamic("ExpiresAfter")(ExpiresAfter.asInstanceOf[js.Any])
-    if (IconReference != null) __obj.updateDynamic("IconReference")(IconReference.asInstanceOf[js.Any])
-    if (ImageIconUrl != null) __obj.updateDynamic("ImageIconUrl")(ImageIconUrl.asInstanceOf[js.Any])
-    if (ImageUrl != null) __obj.updateDynamic("ImageUrl")(ImageUrl.asInstanceOf[js.Any])
-    if (MD5 != null) __obj.updateDynamic("MD5")(MD5.asInstanceOf[js.Any])
-    if (RawContent != null) __obj.updateDynamic("RawContent")(RawContent.asInstanceOf[js.Any])
-    if (!js.isUndefined(SilentPush)) __obj.updateDynamic("SilentPush")(SilentPush.asInstanceOf[js.Any])
-    if (SmallImageIconUrl != null) __obj.updateDynamic("SmallImageIconUrl")(SmallImageIconUrl.asInstanceOf[js.Any])
-    if (Sound != null) __obj.updateDynamic("Sound")(Sound.asInstanceOf[js.Any])
-    if (Substitutions != null) __obj.updateDynamic("Substitutions")(Substitutions.asInstanceOf[js.Any])
-    if (Title != null) __obj.updateDynamic("Title")(Title.asInstanceOf[js.Any])
-    if (Url != null) __obj.updateDynamic("Url")(Url.asInstanceOf[js.Any])
     __obj.asInstanceOf[ADMMessage]
   }
+  @scala.inline
+  implicit class ADMMessageOps[Self <: ADMMessage] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAction(value: OPEN_APP | DEEP_LINK | URL | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Action")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAction: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Action")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBody(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Body")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBody: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Body")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConsolidationKey(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConsolidationKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConsolidationKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConsolidationKey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDataIterable(value: js.Iterable[js.Tuple2[String, String]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Data")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withData(value: StringDictionary[String] | (js.Iterable[js.Tuple2[String, String]])): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Data")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Data")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExpiresAfter(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExpiresAfter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExpiresAfter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExpiresAfter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIconReference(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IconReference")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIconReference: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IconReference")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withImageIconUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ImageIconUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImageIconUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ImageIconUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withImageUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ImageUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImageUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ImageUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMD5(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MD5")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMD5: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MD5")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRawContent(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RawContent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRawContent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RawContent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSilentPush(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SilentPush")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSilentPush: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SilentPush")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSmallImageIconUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SmallImageIconUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSmallImageIconUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SmallImageIconUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSound(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Sound")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSound: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Sound")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSubstitutionsIterable(value: js.Iterable[js.Tuple2[String, js.Array[String] | js.Iterable[String]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Substitutions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSubstitutions(
+      value: (StringDictionary[js.Array[String] | js.Iterable[String]]) | (js.Iterable[js.Tuple2[String, js.Array[String] | js.Iterable[String]]])
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Substitutions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubstitutions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Substitutions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Title")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Url")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

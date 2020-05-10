@@ -1,6 +1,5 @@
 package typingsSlinky.lazyJs.LazyJS
 
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,7 +21,7 @@ trait StringLikeSequence extends SequenceBaser[String] {
   def `match`(pattern: js.RegExp): StringLikeSequence = js.native
   def reverse(): StringLikeSequence = js.native
   def split(delimiter: String): StringLikeSequence = js.native
-  def split(delimiter: RegExp): StringLikeSequence = js.native
+  def split(delimiter: js.RegExp): StringLikeSequence = js.native
   def startsWith(prefix: String): Boolean = js.native
   def substring(start: Double): StringLikeSequence = js.native
   def substring(start: Double, stop: Double): StringLikeSequence = js.native

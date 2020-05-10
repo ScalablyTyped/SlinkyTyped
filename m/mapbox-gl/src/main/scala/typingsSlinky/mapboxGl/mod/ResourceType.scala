@@ -18,22 +18,20 @@ trait ResourceType extends js.Object
 
 object ResourceType {
   @scala.inline
-  def Glyphs: typingsSlinky.mapboxGl.mapboxGlStrings.Glyphs = this.cast("Glyphs")
+  def Glyphs: typingsSlinky.mapboxGl.mapboxGlStrings.Glyphs = "Glyphs".asInstanceOf[typingsSlinky.mapboxGl.mapboxGlStrings.Glyphs]
   @scala.inline
-  def Image: typingsSlinky.mapboxGl.mapboxGlStrings.Image = this.cast("Image")
+  def Image: typingsSlinky.mapboxGl.mapboxGlStrings.Image = "Image".asInstanceOf[typingsSlinky.mapboxGl.mapboxGlStrings.Image]
   @scala.inline
-  def Source: typingsSlinky.mapboxGl.mapboxGlStrings.Source = this.cast("Source")
+  def Source: typingsSlinky.mapboxGl.mapboxGlStrings.Source = "Source".asInstanceOf[typingsSlinky.mapboxGl.mapboxGlStrings.Source]
   @scala.inline
-  def SpriteImage: typingsSlinky.mapboxGl.mapboxGlStrings.SpriteImage = this.cast("SpriteImage")
+  def SpriteImage: typingsSlinky.mapboxGl.mapboxGlStrings.SpriteImage = "SpriteImage".asInstanceOf[typingsSlinky.mapboxGl.mapboxGlStrings.SpriteImage]
   @scala.inline
-  def SpriteJSON: typingsSlinky.mapboxGl.mapboxGlStrings.SpriteJSON = this.cast("SpriteJSON")
+  def SpriteJSON: typingsSlinky.mapboxGl.mapboxGlStrings.SpriteJSON = "SpriteJSON".asInstanceOf[typingsSlinky.mapboxGl.mapboxGlStrings.SpriteJSON]
   @scala.inline
-  def Style: typingsSlinky.mapboxGl.mapboxGlStrings.Style = this.cast("Style")
+  def Style: typingsSlinky.mapboxGl.mapboxGlStrings.Style = "Style".asInstanceOf[typingsSlinky.mapboxGl.mapboxGlStrings.Style]
   @scala.inline
-  def Tile: typingsSlinky.mapboxGl.mapboxGlStrings.Tile = this.cast("Tile")
+  def Tile: typingsSlinky.mapboxGl.mapboxGlStrings.Tile = "Tile".asInstanceOf[typingsSlinky.mapboxGl.mapboxGlStrings.Tile]
   @scala.inline
-  def Unknown: typingsSlinky.mapboxGl.mapboxGlStrings.Unknown = this.cast("Unknown")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def Unknown: typingsSlinky.mapboxGl.mapboxGlStrings.Unknown = "Unknown".asInstanceOf[typingsSlinky.mapboxGl.mapboxGlStrings.Unknown]
 }
 

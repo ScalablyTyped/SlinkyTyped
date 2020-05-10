@@ -13,12 +13,10 @@ trait DeleteOnExpire extends js.Object
 
 object DeleteOnExpire {
   @scala.inline
-  def aggressive: typingsSlinky.cachefactory.cachefactoryStrings.aggressive = this.cast("aggressive")
+  def aggressive: typingsSlinky.cachefactory.cachefactoryStrings.aggressive = "aggressive".asInstanceOf[typingsSlinky.cachefactory.cachefactoryStrings.aggressive]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def none: typingsSlinky.cachefactory.cachefactoryStrings.none = "none".asInstanceOf[typingsSlinky.cachefactory.cachefactoryStrings.none]
   @scala.inline
-  def none: typingsSlinky.cachefactory.cachefactoryStrings.none = this.cast("none")
-  @scala.inline
-  def passive: typingsSlinky.cachefactory.cachefactoryStrings.passive = this.cast("passive")
+  def passive: typingsSlinky.cachefactory.cachefactoryStrings.passive = "passive".asInstanceOf[typingsSlinky.cachefactory.cachefactoryStrings.passive]
 }
 

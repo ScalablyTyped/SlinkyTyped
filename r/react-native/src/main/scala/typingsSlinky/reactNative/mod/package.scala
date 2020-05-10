@@ -28,6 +28,13 @@ package object mod {
   type ButtonProperties = typingsSlinky.reactNative.mod.ButtonProps
   type CameraRoll = typingsSlinky.reactNative.mod.CameraRollStatic
   type Clipboard = typingsSlinky.reactNative.mod.ClipboardStatic
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.reactNative.reactNativeStrings.light
+    - typingsSlinky.reactNative.reactNativeStrings.dark
+    - scala.Null
+    - js.UndefOr[scala.Nothing]
+  */
+  type ColorSchemeName = js.UndefOr[typingsSlinky.reactNative.mod._ColorSchemeName | scala.Null]
   type ComponentProvider = js.Function0[slinky.core.ReactComponentClass[js.Any]]
   type Constructor[T] = org.scalablytyped.runtime.Instantiable1[/* args (repeated) */ js.Any, T]
   type DatePickerAndroid = typingsSlinky.reactNative.mod.DatePickerAndroidStatic
@@ -115,9 +122,8 @@ package object mod {
   ]
   type ModalProperties = typingsSlinky.reactNative.mod.ModalProps
   type ModalProps = typingsSlinky.reactNative.mod.ModalBaseProps with typingsSlinky.reactNative.mod.ModalPropsIOS with typingsSlinky.reactNative.mod.ModalPropsAndroid
-  type NativeComponent = typingsSlinky.reactNative.mod.NativeMethodsMixinStatic
-  type NativeEventEmitter = typingsSlinky.reactNative.mod.EventEmitter
-  type NativeMethodsMixin = typingsSlinky.reactNative.mod.NativeMethodsMixinStatic
+  type NativeMethodsMixin = typingsSlinky.reactNative.mod.NativeMethods
+  type NativeMethodsMixinType = typingsSlinky.reactNative.mod.NativeMethods
   /**
     * Interface for NativeModules which allows to augment NativeModules with type informations.
     * See react-native-sensor-manager for example.

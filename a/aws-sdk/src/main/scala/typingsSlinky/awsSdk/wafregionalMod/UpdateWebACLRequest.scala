@@ -26,16 +26,53 @@ trait UpdateWebACLRequest extends js.Object {
 
 object UpdateWebACLRequest {
   @scala.inline
-  def apply(
-    ChangeToken: ChangeToken,
-    WebACLId: ResourceId,
-    DefaultAction: WafAction = null,
-    Updates: WebACLUpdates = null
-  ): UpdateWebACLRequest = {
+  def apply(ChangeToken: ChangeToken, WebACLId: ResourceId): UpdateWebACLRequest = {
     val __obj = js.Dynamic.literal(ChangeToken = ChangeToken.asInstanceOf[js.Any], WebACLId = WebACLId.asInstanceOf[js.Any])
-    if (DefaultAction != null) __obj.updateDynamic("DefaultAction")(DefaultAction.asInstanceOf[js.Any])
-    if (Updates != null) __obj.updateDynamic("Updates")(Updates.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateWebACLRequest]
   }
+  @scala.inline
+  implicit class UpdateWebACLRequestOps[Self <: UpdateWebACLRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withChangeToken(value: ChangeToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ChangeToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withWebACLId(value: ResourceId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebACLId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDefaultAction(value: WafAction): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultAction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultAction: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultAction")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUpdates(value: WebACLUpdates): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Updates")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUpdates: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Updates")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

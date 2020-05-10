@@ -9,7 +9,7 @@ trait DisassociateClientVpnTargetNetworkRequest extends js.Object {
   /**
     * The ID of the target network association.
     */
-  var AssociationId: String = js.native
+  var AssociationId: ClientVpnAssociationId = js.native
   /**
     * The ID of the Client VPN endpoint from which to disassociate the target network.
     */
@@ -22,14 +22,41 @@ trait DisassociateClientVpnTargetNetworkRequest extends js.Object {
 
 object DisassociateClientVpnTargetNetworkRequest {
   @scala.inline
-  def apply(
-    AssociationId: String,
-    ClientVpnEndpointId: ClientVpnEndpointId,
-    DryRun: js.UndefOr[scala.Boolean] = js.undefined
-  ): DisassociateClientVpnTargetNetworkRequest = {
+  def apply(AssociationId: ClientVpnAssociationId, ClientVpnEndpointId: ClientVpnEndpointId): DisassociateClientVpnTargetNetworkRequest = {
     val __obj = js.Dynamic.literal(AssociationId = AssociationId.asInstanceOf[js.Any], ClientVpnEndpointId = ClientVpnEndpointId.asInstanceOf[js.Any])
-    if (!js.isUndefined(DryRun)) __obj.updateDynamic("DryRun")(DryRun.asInstanceOf[js.Any])
     __obj.asInstanceOf[DisassociateClientVpnTargetNetworkRequest]
   }
+  @scala.inline
+  implicit class DisassociateClientVpnTargetNetworkRequestOps[Self <: DisassociateClientVpnTargetNetworkRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAssociationId(value: ClientVpnAssociationId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AssociationId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withClientVpnEndpointId(value: ClientVpnEndpointId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientVpnEndpointId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDryRun(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDryRun: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

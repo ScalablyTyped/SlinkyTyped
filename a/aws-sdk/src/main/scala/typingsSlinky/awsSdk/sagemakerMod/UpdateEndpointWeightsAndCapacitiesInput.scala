@@ -20,8 +20,27 @@ object UpdateEndpointWeightsAndCapacitiesInput {
   @scala.inline
   def apply(DesiredWeightsAndCapacities: DesiredWeightAndCapacityList, EndpointName: EndpointName): UpdateEndpointWeightsAndCapacitiesInput = {
     val __obj = js.Dynamic.literal(DesiredWeightsAndCapacities = DesiredWeightsAndCapacities.asInstanceOf[js.Any], EndpointName = EndpointName.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[UpdateEndpointWeightsAndCapacitiesInput]
   }
+  @scala.inline
+  implicit class UpdateEndpointWeightsAndCapacitiesInputOps[Self <: UpdateEndpointWeightsAndCapacitiesInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDesiredWeightsAndCapacities(value: DesiredWeightAndCapacityList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DesiredWeightsAndCapacities")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEndpointName(value: EndpointName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EndpointName")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

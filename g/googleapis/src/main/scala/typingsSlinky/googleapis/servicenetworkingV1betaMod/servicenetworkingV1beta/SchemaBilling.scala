@@ -29,10 +29,29 @@ trait SchemaBilling extends js.Object {
 
 object SchemaBilling {
   @scala.inline
-  def apply(consumerDestinations: js.Array[SchemaBillingDestination] = null): SchemaBilling = {
+  def apply(): SchemaBilling = {
     val __obj = js.Dynamic.literal()
-    if (consumerDestinations != null) __obj.updateDynamic("consumerDestinations")(consumerDestinations.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaBilling]
   }
+  @scala.inline
+  implicit class SchemaBillingOps[Self <: SchemaBilling] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConsumerDestinations(value: js.Array[SchemaBillingDestination]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("consumerDestinations")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConsumerDestinations: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("consumerDestinations")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

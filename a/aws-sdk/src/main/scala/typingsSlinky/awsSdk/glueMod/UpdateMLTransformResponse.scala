@@ -14,10 +14,29 @@ trait UpdateMLTransformResponse extends js.Object {
 
 object UpdateMLTransformResponse {
   @scala.inline
-  def apply(TransformId: HashString = null): UpdateMLTransformResponse = {
+  def apply(): UpdateMLTransformResponse = {
     val __obj = js.Dynamic.literal()
-    if (TransformId != null) __obj.updateDynamic("TransformId")(TransformId.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateMLTransformResponse]
   }
+  @scala.inline
+  implicit class UpdateMLTransformResponseOps[Self <: UpdateMLTransformResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withTransformId(value: HashString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TransformId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTransformId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TransformId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

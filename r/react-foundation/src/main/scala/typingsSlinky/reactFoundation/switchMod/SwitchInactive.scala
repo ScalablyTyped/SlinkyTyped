@@ -1,12 +1,12 @@
 package typingsSlinky.reactFoundation.switchMod
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.react.mod.StatelessComponent
+import slinky.core.ReactComponentClass
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSImport("react-foundation/components/switch", "SwitchInactive")
 @js.native
-object SwitchInactive extends TopLevel[StatelessComponent[SwitchInactiveProps]]
+object SwitchInactive extends TopLevel[ReactComponentClass[SwitchInactiveProps]]
 

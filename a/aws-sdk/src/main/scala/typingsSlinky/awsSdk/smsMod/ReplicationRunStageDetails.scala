@@ -18,11 +18,41 @@ trait ReplicationRunStageDetails extends js.Object {
 
 object ReplicationRunStageDetails {
   @scala.inline
-  def apply(stage: ReplicationRunStage = null, stageProgress: ReplicationRunStageProgress = null): ReplicationRunStageDetails = {
+  def apply(): ReplicationRunStageDetails = {
     val __obj = js.Dynamic.literal()
-    if (stage != null) __obj.updateDynamic("stage")(stage.asInstanceOf[js.Any])
-    if (stageProgress != null) __obj.updateDynamic("stageProgress")(stageProgress.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReplicationRunStageDetails]
   }
+  @scala.inline
+  implicit class ReplicationRunStageDetailsOps[Self <: ReplicationRunStageDetails] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withStage(value: ReplicationRunStage): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStageProgress(value: ReplicationRunStageProgress): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stageProgress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStageProgress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stageProgress")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

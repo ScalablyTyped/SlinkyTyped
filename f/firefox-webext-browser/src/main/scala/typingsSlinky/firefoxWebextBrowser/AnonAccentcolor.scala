@@ -5,147 +5,565 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonAccentcolor extends js.Object {
   /**
     * @deprecated Unsupported colors property, use 'theme.colors.frame', this alias is ignored in Firefox >=
     *     70.
     */
-  var accentcolor: js.UndefOr[ThemeColor] = js.undefined
-  var bookmark_text: js.UndefOr[ThemeColor] = js.undefined
-  var button_background_active: js.UndefOr[ThemeColor] = js.undefined
-  var button_background_hover: js.UndefOr[ThemeColor] = js.undefined
-  var frame: js.UndefOr[ThemeColor] = js.undefined
-  var frame_inactive: js.UndefOr[ThemeColor] = js.undefined
-  var icons: js.UndefOr[ThemeColor] = js.undefined
-  var icons_attention: js.UndefOr[ThemeColor] = js.undefined
-  var ntp_background: js.UndefOr[ThemeColor] = js.undefined
-  var ntp_text: js.UndefOr[ThemeColor] = js.undefined
-  var popup: js.UndefOr[ThemeColor] = js.undefined
-  var popup_border: js.UndefOr[ThemeColor] = js.undefined
-  var popup_highlight: js.UndefOr[ThemeColor] = js.undefined
-  var popup_highlight_text: js.UndefOr[ThemeColor] = js.undefined
-  var popup_text: js.UndefOr[ThemeColor] = js.undefined
-  var sidebar: js.UndefOr[ThemeColor] = js.undefined
-  var sidebar_border: js.UndefOr[ThemeColor] = js.undefined
-  var sidebar_highlight: js.UndefOr[ThemeColor] = js.undefined
-  var sidebar_highlight_text: js.UndefOr[ThemeColor] = js.undefined
-  var sidebar_text: js.UndefOr[ThemeColor] = js.undefined
-  var tab_background_separator: js.UndefOr[ThemeColor] = js.undefined
-  var tab_background_text: js.UndefOr[ThemeColor] = js.undefined
-  var tab_line: js.UndefOr[ThemeColor] = js.undefined
-  var tab_loading: js.UndefOr[ThemeColor] = js.undefined
-  var tab_selected: js.UndefOr[ThemeColor] = js.undefined
-  var tab_text: js.UndefOr[ThemeColor] = js.undefined
+  var accentcolor: js.UndefOr[ThemeColor] = js.native
+  var bookmark_text: js.UndefOr[ThemeColor] = js.native
+  var button_background_active: js.UndefOr[ThemeColor] = js.native
+  var button_background_hover: js.UndefOr[ThemeColor] = js.native
+  var frame: js.UndefOr[ThemeColor] = js.native
+  var frame_inactive: js.UndefOr[ThemeColor] = js.native
+  var icons: js.UndefOr[ThemeColor] = js.native
+  var icons_attention: js.UndefOr[ThemeColor] = js.native
+  var ntp_background: js.UndefOr[ThemeColor] = js.native
+  var ntp_text: js.UndefOr[ThemeColor] = js.native
+  var popup: js.UndefOr[ThemeColor] = js.native
+  var popup_border: js.UndefOr[ThemeColor] = js.native
+  var popup_highlight: js.UndefOr[ThemeColor] = js.native
+  var popup_highlight_text: js.UndefOr[ThemeColor] = js.native
+  var popup_text: js.UndefOr[ThemeColor] = js.native
+  var sidebar: js.UndefOr[ThemeColor] = js.native
+  var sidebar_border: js.UndefOr[ThemeColor] = js.native
+  var sidebar_highlight: js.UndefOr[ThemeColor] = js.native
+  var sidebar_highlight_text: js.UndefOr[ThemeColor] = js.native
+  var sidebar_text: js.UndefOr[ThemeColor] = js.native
+  var tab_background_separator: js.UndefOr[ThemeColor] = js.native
+  var tab_background_text: js.UndefOr[ThemeColor] = js.native
+  var tab_line: js.UndefOr[ThemeColor] = js.native
+  var tab_loading: js.UndefOr[ThemeColor] = js.native
+  var tab_selected: js.UndefOr[ThemeColor] = js.native
+  var tab_text: js.UndefOr[ThemeColor] = js.native
   /**
     * @deprecated Unsupported color property, use 'theme.colors.tab_background_text', this alias is ignored in
     *     Firefox >= 70.
     */
-  var textcolor: js.UndefOr[ThemeColor] = js.undefined
-  var toolbar: js.UndefOr[ThemeColor] = js.undefined
-  var toolbar_bottom_separator: js.UndefOr[ThemeColor] = js.undefined
-  var toolbar_field: js.UndefOr[ThemeColor] = js.undefined
-  var toolbar_field_border: js.UndefOr[ThemeColor] = js.undefined
-  var toolbar_field_border_focus: js.UndefOr[ThemeColor] = js.undefined
-  var toolbar_field_focus: js.UndefOr[ThemeColor] = js.undefined
-  var toolbar_field_highlight: js.UndefOr[ThemeColor] = js.undefined
-  var toolbar_field_highlight_text: js.UndefOr[ThemeColor] = js.undefined
-  var toolbar_field_separator: js.UndefOr[ThemeColor] = js.undefined
-  var toolbar_field_text: js.UndefOr[ThemeColor] = js.undefined
-  var toolbar_field_text_focus: js.UndefOr[ThemeColor] = js.undefined
+  var textcolor: js.UndefOr[ThemeColor] = js.native
+  var toolbar: js.UndefOr[ThemeColor] = js.native
+  var toolbar_bottom_separator: js.UndefOr[ThemeColor] = js.native
+  var toolbar_field: js.UndefOr[ThemeColor] = js.native
+  var toolbar_field_border: js.UndefOr[ThemeColor] = js.native
+  var toolbar_field_border_focus: js.UndefOr[ThemeColor] = js.native
+  var toolbar_field_focus: js.UndefOr[ThemeColor] = js.native
+  var toolbar_field_highlight: js.UndefOr[ThemeColor] = js.native
+  var toolbar_field_highlight_text: js.UndefOr[ThemeColor] = js.native
+  var toolbar_field_separator: js.UndefOr[ThemeColor] = js.native
+  var toolbar_field_text: js.UndefOr[ThemeColor] = js.native
+  var toolbar_field_text_focus: js.UndefOr[ThemeColor] = js.native
   /** This color property is an alias of 'bookmark_text'. */
-  var toolbar_text: js.UndefOr[ThemeColor] = js.undefined
-  var toolbar_top_separator: js.UndefOr[ThemeColor] = js.undefined
-  var toolbar_vertical_separator: js.UndefOr[ThemeColor] = js.undefined
+  var toolbar_text: js.UndefOr[ThemeColor] = js.native
+  var toolbar_top_separator: js.UndefOr[ThemeColor] = js.native
+  var toolbar_vertical_separator: js.UndefOr[ThemeColor] = js.native
 }
 
 object AnonAccentcolor {
   @scala.inline
-  def apply(
-    accentcolor: ThemeColor = null,
-    bookmark_text: ThemeColor = null,
-    button_background_active: ThemeColor = null,
-    button_background_hover: ThemeColor = null,
-    frame: ThemeColor = null,
-    frame_inactive: ThemeColor = null,
-    icons: ThemeColor = null,
-    icons_attention: ThemeColor = null,
-    ntp_background: ThemeColor = null,
-    ntp_text: ThemeColor = null,
-    popup: ThemeColor = null,
-    popup_border: ThemeColor = null,
-    popup_highlight: ThemeColor = null,
-    popup_highlight_text: ThemeColor = null,
-    popup_text: ThemeColor = null,
-    sidebar: ThemeColor = null,
-    sidebar_border: ThemeColor = null,
-    sidebar_highlight: ThemeColor = null,
-    sidebar_highlight_text: ThemeColor = null,
-    sidebar_text: ThemeColor = null,
-    tab_background_separator: ThemeColor = null,
-    tab_background_text: ThemeColor = null,
-    tab_line: ThemeColor = null,
-    tab_loading: ThemeColor = null,
-    tab_selected: ThemeColor = null,
-    tab_text: ThemeColor = null,
-    textcolor: ThemeColor = null,
-    toolbar: ThemeColor = null,
-    toolbar_bottom_separator: ThemeColor = null,
-    toolbar_field: ThemeColor = null,
-    toolbar_field_border: ThemeColor = null,
-    toolbar_field_border_focus: ThemeColor = null,
-    toolbar_field_focus: ThemeColor = null,
-    toolbar_field_highlight: ThemeColor = null,
-    toolbar_field_highlight_text: ThemeColor = null,
-    toolbar_field_separator: ThemeColor = null,
-    toolbar_field_text: ThemeColor = null,
-    toolbar_field_text_focus: ThemeColor = null,
-    toolbar_text: ThemeColor = null,
-    toolbar_top_separator: ThemeColor = null,
-    toolbar_vertical_separator: ThemeColor = null
-  ): AnonAccentcolor = {
+  def apply(): AnonAccentcolor = {
     val __obj = js.Dynamic.literal()
-    if (accentcolor != null) __obj.updateDynamic("accentcolor")(accentcolor.asInstanceOf[js.Any])
-    if (bookmark_text != null) __obj.updateDynamic("bookmark_text")(bookmark_text.asInstanceOf[js.Any])
-    if (button_background_active != null) __obj.updateDynamic("button_background_active")(button_background_active.asInstanceOf[js.Any])
-    if (button_background_hover != null) __obj.updateDynamic("button_background_hover")(button_background_hover.asInstanceOf[js.Any])
-    if (frame != null) __obj.updateDynamic("frame")(frame.asInstanceOf[js.Any])
-    if (frame_inactive != null) __obj.updateDynamic("frame_inactive")(frame_inactive.asInstanceOf[js.Any])
-    if (icons != null) __obj.updateDynamic("icons")(icons.asInstanceOf[js.Any])
-    if (icons_attention != null) __obj.updateDynamic("icons_attention")(icons_attention.asInstanceOf[js.Any])
-    if (ntp_background != null) __obj.updateDynamic("ntp_background")(ntp_background.asInstanceOf[js.Any])
-    if (ntp_text != null) __obj.updateDynamic("ntp_text")(ntp_text.asInstanceOf[js.Any])
-    if (popup != null) __obj.updateDynamic("popup")(popup.asInstanceOf[js.Any])
-    if (popup_border != null) __obj.updateDynamic("popup_border")(popup_border.asInstanceOf[js.Any])
-    if (popup_highlight != null) __obj.updateDynamic("popup_highlight")(popup_highlight.asInstanceOf[js.Any])
-    if (popup_highlight_text != null) __obj.updateDynamic("popup_highlight_text")(popup_highlight_text.asInstanceOf[js.Any])
-    if (popup_text != null) __obj.updateDynamic("popup_text")(popup_text.asInstanceOf[js.Any])
-    if (sidebar != null) __obj.updateDynamic("sidebar")(sidebar.asInstanceOf[js.Any])
-    if (sidebar_border != null) __obj.updateDynamic("sidebar_border")(sidebar_border.asInstanceOf[js.Any])
-    if (sidebar_highlight != null) __obj.updateDynamic("sidebar_highlight")(sidebar_highlight.asInstanceOf[js.Any])
-    if (sidebar_highlight_text != null) __obj.updateDynamic("sidebar_highlight_text")(sidebar_highlight_text.asInstanceOf[js.Any])
-    if (sidebar_text != null) __obj.updateDynamic("sidebar_text")(sidebar_text.asInstanceOf[js.Any])
-    if (tab_background_separator != null) __obj.updateDynamic("tab_background_separator")(tab_background_separator.asInstanceOf[js.Any])
-    if (tab_background_text != null) __obj.updateDynamic("tab_background_text")(tab_background_text.asInstanceOf[js.Any])
-    if (tab_line != null) __obj.updateDynamic("tab_line")(tab_line.asInstanceOf[js.Any])
-    if (tab_loading != null) __obj.updateDynamic("tab_loading")(tab_loading.asInstanceOf[js.Any])
-    if (tab_selected != null) __obj.updateDynamic("tab_selected")(tab_selected.asInstanceOf[js.Any])
-    if (tab_text != null) __obj.updateDynamic("tab_text")(tab_text.asInstanceOf[js.Any])
-    if (textcolor != null) __obj.updateDynamic("textcolor")(textcolor.asInstanceOf[js.Any])
-    if (toolbar != null) __obj.updateDynamic("toolbar")(toolbar.asInstanceOf[js.Any])
-    if (toolbar_bottom_separator != null) __obj.updateDynamic("toolbar_bottom_separator")(toolbar_bottom_separator.asInstanceOf[js.Any])
-    if (toolbar_field != null) __obj.updateDynamic("toolbar_field")(toolbar_field.asInstanceOf[js.Any])
-    if (toolbar_field_border != null) __obj.updateDynamic("toolbar_field_border")(toolbar_field_border.asInstanceOf[js.Any])
-    if (toolbar_field_border_focus != null) __obj.updateDynamic("toolbar_field_border_focus")(toolbar_field_border_focus.asInstanceOf[js.Any])
-    if (toolbar_field_focus != null) __obj.updateDynamic("toolbar_field_focus")(toolbar_field_focus.asInstanceOf[js.Any])
-    if (toolbar_field_highlight != null) __obj.updateDynamic("toolbar_field_highlight")(toolbar_field_highlight.asInstanceOf[js.Any])
-    if (toolbar_field_highlight_text != null) __obj.updateDynamic("toolbar_field_highlight_text")(toolbar_field_highlight_text.asInstanceOf[js.Any])
-    if (toolbar_field_separator != null) __obj.updateDynamic("toolbar_field_separator")(toolbar_field_separator.asInstanceOf[js.Any])
-    if (toolbar_field_text != null) __obj.updateDynamic("toolbar_field_text")(toolbar_field_text.asInstanceOf[js.Any])
-    if (toolbar_field_text_focus != null) __obj.updateDynamic("toolbar_field_text_focus")(toolbar_field_text_focus.asInstanceOf[js.Any])
-    if (toolbar_text != null) __obj.updateDynamic("toolbar_text")(toolbar_text.asInstanceOf[js.Any])
-    if (toolbar_top_separator != null) __obj.updateDynamic("toolbar_top_separator")(toolbar_top_separator.asInstanceOf[js.Any])
-    if (toolbar_vertical_separator != null) __obj.updateDynamic("toolbar_vertical_separator")(toolbar_vertical_separator.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonAccentcolor]
   }
+  @scala.inline
+  implicit class AnonAccentcolorOps[Self <: AnonAccentcolor] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAccentcolor(value: ThemeColor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accentcolor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccentcolor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accentcolor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBookmark_text(value: ThemeColor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bookmark_text")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBookmark_text: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bookmark_text")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withButton_background_active(value: ThemeColor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("button_background_active")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutButton_background_active: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("button_background_active")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withButton_background_hover(value: ThemeColor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("button_background_hover")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutButton_background_hover: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("button_background_hover")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFrame(value: ThemeColor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("frame")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFrame: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("frame")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFrame_inactive(value: ThemeColor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("frame_inactive")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFrame_inactive: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("frame_inactive")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIcons(value: ThemeColor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icons")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIcons: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icons")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIcons_attention(value: ThemeColor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icons_attention")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIcons_attention: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icons_attention")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNtp_background(value: ThemeColor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ntp_background")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNtp_background: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ntp_background")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNtp_text(value: ThemeColor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ntp_text")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNtp_text: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ntp_text")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPopup(value: ThemeColor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("popup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPopup: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("popup")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPopup_border(value: ThemeColor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("popup_border")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPopup_border: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("popup_border")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPopup_highlight(value: ThemeColor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("popup_highlight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPopup_highlight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("popup_highlight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPopup_highlight_text(value: ThemeColor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("popup_highlight_text")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPopup_highlight_text: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("popup_highlight_text")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPopup_text(value: ThemeColor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("popup_text")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPopup_text: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("popup_text")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSidebar(value: ThemeColor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sidebar")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSidebar: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sidebar")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSidebar_border(value: ThemeColor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sidebar_border")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSidebar_border: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sidebar_border")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSidebar_highlight(value: ThemeColor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sidebar_highlight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSidebar_highlight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sidebar_highlight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSidebar_highlight_text(value: ThemeColor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sidebar_highlight_text")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSidebar_highlight_text: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sidebar_highlight_text")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSidebar_text(value: ThemeColor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sidebar_text")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSidebar_text: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sidebar_text")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTab_background_separator(value: ThemeColor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tab_background_separator")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTab_background_separator: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tab_background_separator")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTab_background_text(value: ThemeColor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tab_background_text")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTab_background_text: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tab_background_text")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTab_line(value: ThemeColor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tab_line")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTab_line: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tab_line")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTab_loading(value: ThemeColor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tab_loading")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTab_loading: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tab_loading")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTab_selected(value: ThemeColor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tab_selected")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTab_selected: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tab_selected")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTab_text(value: ThemeColor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tab_text")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTab_text: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tab_text")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTextcolor(value: ThemeColor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textcolor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTextcolor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textcolor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withToolbar(value: ThemeColor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toolbar")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutToolbar: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toolbar")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withToolbar_bottom_separator(value: ThemeColor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toolbar_bottom_separator")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutToolbar_bottom_separator: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toolbar_bottom_separator")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withToolbar_field(value: ThemeColor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toolbar_field")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutToolbar_field: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toolbar_field")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withToolbar_field_border(value: ThemeColor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toolbar_field_border")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutToolbar_field_border: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toolbar_field_border")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withToolbar_field_border_focus(value: ThemeColor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toolbar_field_border_focus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutToolbar_field_border_focus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toolbar_field_border_focus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withToolbar_field_focus(value: ThemeColor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toolbar_field_focus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutToolbar_field_focus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toolbar_field_focus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withToolbar_field_highlight(value: ThemeColor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toolbar_field_highlight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutToolbar_field_highlight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toolbar_field_highlight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withToolbar_field_highlight_text(value: ThemeColor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toolbar_field_highlight_text")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutToolbar_field_highlight_text: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toolbar_field_highlight_text")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withToolbar_field_separator(value: ThemeColor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toolbar_field_separator")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutToolbar_field_separator: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toolbar_field_separator")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withToolbar_field_text(value: ThemeColor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toolbar_field_text")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutToolbar_field_text: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toolbar_field_text")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withToolbar_field_text_focus(value: ThemeColor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toolbar_field_text_focus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutToolbar_field_text_focus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toolbar_field_text_focus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withToolbar_text(value: ThemeColor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toolbar_text")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutToolbar_text: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toolbar_text")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withToolbar_top_separator(value: ThemeColor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toolbar_top_separator")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutToolbar_top_separator: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toolbar_top_separator")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withToolbar_vertical_separator(value: ThemeColor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toolbar_vertical_separator")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutToolbar_vertical_separator: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toolbar_vertical_separator")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

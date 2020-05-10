@@ -4,13 +4,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait PlotSunburstEventsOptions extends js.Object {
   /**
     * (Highcharts, Highstock, Gantt) Fires after the series has finished its
     * initial animation, or in case animation is disabled, immediately as the
     * series is displayed.
     */
-  var afterAnimate: js.UndefOr[SeriesAfterAnimateCallbackFunction] = js.undefined
+  var afterAnimate: js.UndefOr[SeriesAfterAnimateCallbackFunction] = js.native
   /**
     * (Highcharts) Fires when the checkbox next to the point name in the legend
     * is clicked. One parameter, event, is passed to the function. The state of
@@ -18,58 +19,135 @@ trait PlotSunburstEventsOptions extends js.Object {
     * event.item. Return false to prevent the default action which is to toggle
     * the select state of the series.
     */
-  var checkboxClick: js.UndefOr[js.Function] = js.undefined
+  var checkboxClick: js.UndefOr[js.Function] = js.native
   /**
     * (Highcharts) Fires when the series is clicked. One parameter, `event`, is
     * passed to the function, containing common event information.
     * Additionally, `event.point` holds a pointer to the nearest point on the
     * graph.
     */
-  var click: js.UndefOr[SeriesClickCallbackFunction] = js.undefined
+  var click: js.UndefOr[SeriesClickCallbackFunction] = js.native
   /**
     * (Highcharts) Fires when the series is hidden after chart generation time,
     * either by clicking the legend item or by calling `.hide()`.
     */
-  var hide: js.UndefOr[SeriesHideCallbackFunction] = js.undefined
+  var hide: js.UndefOr[SeriesHideCallbackFunction] = js.native
   /**
     * (Highcharts) Fires when the mouse leaves the graph. One parameter,
     * `event`, is passed to the function, containing common event information.
     * If the stickyTracking option is true, `mouseOut` doesn't happen before
     * the mouse enters another graph or leaves the plot area.
     */
-  var mouseOut: js.UndefOr[SeriesMouseOutCallbackFunction] = js.undefined
+  var mouseOut: js.UndefOr[SeriesMouseOutCallbackFunction] = js.native
   /**
     * (Highcharts) Fires when the mouse enters the graph. One parameter,
     * `event`, is passed to the function, containing common event information.
     */
-  var mouseOver: js.UndefOr[SeriesMouseOverCallbackFunction] = js.undefined
+  var mouseOver: js.UndefOr[SeriesMouseOverCallbackFunction] = js.native
   /**
     * (Highcharts) Fires when the series is shown after chart generation time,
     * either by clicking the legend item or by calling `.show()`.
     */
-  var show: js.UndefOr[SeriesShowCallbackFunction] = js.undefined
+  var show: js.UndefOr[SeriesShowCallbackFunction] = js.native
 }
 
 object PlotSunburstEventsOptions {
   @scala.inline
-  def apply(
-    afterAnimate: SeriesAfterAnimateCallbackFunction = null,
-    checkboxClick: js.Function = null,
-    click: SeriesClickCallbackFunction = null,
-    hide: SeriesHideCallbackFunction = null,
-    mouseOut: SeriesMouseOutCallbackFunction = null,
-    mouseOver: SeriesMouseOverCallbackFunction = null,
-    show: SeriesShowCallbackFunction = null
-  ): PlotSunburstEventsOptions = {
+  def apply(): PlotSunburstEventsOptions = {
     val __obj = js.Dynamic.literal()
-    if (afterAnimate != null) __obj.updateDynamic("afterAnimate")(afterAnimate.asInstanceOf[js.Any])
-    if (checkboxClick != null) __obj.updateDynamic("checkboxClick")(checkboxClick.asInstanceOf[js.Any])
-    if (click != null) __obj.updateDynamic("click")(click.asInstanceOf[js.Any])
-    if (hide != null) __obj.updateDynamic("hide")(hide.asInstanceOf[js.Any])
-    if (mouseOut != null) __obj.updateDynamic("mouseOut")(mouseOut.asInstanceOf[js.Any])
-    if (mouseOver != null) __obj.updateDynamic("mouseOver")(mouseOver.asInstanceOf[js.Any])
-    if (show != null) __obj.updateDynamic("show")(show.asInstanceOf[js.Any])
     __obj.asInstanceOf[PlotSunburstEventsOptions]
   }
+  @scala.inline
+  implicit class PlotSunburstEventsOptionsOps[Self <: PlotSunburstEventsOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAfterAnimate(value: SeriesAfterAnimateCallbackFunction): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("afterAnimate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAfterAnimate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("afterAnimate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCheckboxClick(value: js.Function): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("checkboxClick")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCheckboxClick: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("checkboxClick")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClick(value: SeriesClickCallbackFunction): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("click")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClick: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("click")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHide(value: SeriesHideCallbackFunction): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hide")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHide: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hide")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMouseOut(value: SeriesMouseOutCallbackFunction): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mouseOut")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMouseOut: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mouseOut")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMouseOver(value: SeriesMouseOverCallbackFunction): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mouseOver")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMouseOver: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mouseOver")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShow(value: SeriesShowCallbackFunction): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("show")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("show")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

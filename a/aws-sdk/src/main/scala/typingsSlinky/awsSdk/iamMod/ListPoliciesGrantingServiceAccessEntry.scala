@@ -18,14 +18,41 @@ trait ListPoliciesGrantingServiceAccessEntry extends js.Object {
 
 object ListPoliciesGrantingServiceAccessEntry {
   @scala.inline
-  def apply(
-    Policies: policyGrantingServiceAccessListType = null,
-    ServiceNamespace: serviceNamespaceType = null
-  ): ListPoliciesGrantingServiceAccessEntry = {
+  def apply(): ListPoliciesGrantingServiceAccessEntry = {
     val __obj = js.Dynamic.literal()
-    if (Policies != null) __obj.updateDynamic("Policies")(Policies.asInstanceOf[js.Any])
-    if (ServiceNamespace != null) __obj.updateDynamic("ServiceNamespace")(ServiceNamespace.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListPoliciesGrantingServiceAccessEntry]
   }
+  @scala.inline
+  implicit class ListPoliciesGrantingServiceAccessEntryOps[Self <: ListPoliciesGrantingServiceAccessEntry] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPolicies(value: policyGrantingServiceAccessListType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Policies")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPolicies: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Policies")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withServiceNamespace(value: serviceNamespaceType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceNamespace")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutServiceNamespace: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceNamespace")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

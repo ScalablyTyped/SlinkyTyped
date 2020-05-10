@@ -1,14 +1,16 @@
 package typingsSlinky.antd.components
 
+import typingsSlinky.antd.gridMod.CardGridProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object CardGrid extends SharedApply_CardGridProps_1858790644 {
+object CardGrid {
   @JSImport("antd", "Card.Grid")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: CardGridProps): SharedBuilder_CardGridProps552494094 = new SharedBuilder_CardGridProps552494094(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: CardGrid.type): SharedBuilder_CardGridProps552494094 = new SharedBuilder_CardGridProps552494094(js.Array(this.component, js.Dictionary.empty))()
 }
 

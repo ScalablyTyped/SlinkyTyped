@@ -5,43 +5,121 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ChannelSection extends js.Object {
   /** The contentDetails object contains details about the channel section content, such as a list of playlists or channels featured in the section. */
-  var contentDetails: js.UndefOr[ChannelSectionContentDetails] = js.undefined
+  var contentDetails: js.UndefOr[ChannelSectionContentDetails] = js.native
   /** Etag of this resource. */
-  var etag: js.UndefOr[String] = js.undefined
+  var etag: js.UndefOr[String] = js.native
   /** The ID that YouTube uses to uniquely identify the channel section. */
-  var id: js.UndefOr[String] = js.undefined
+  var id: js.UndefOr[String] = js.native
   /** Identifies what kind of resource this is. Value: the fixed string "youtube#channelSection". */
-  var kind: js.UndefOr[String] = js.undefined
+  var kind: js.UndefOr[String] = js.native
   /** Localizations for different languages */
-  var localizations: js.UndefOr[Record[String, ChannelSectionLocalization]] = js.undefined
+  var localizations: js.UndefOr[Record[String, ChannelSectionLocalization]] = js.native
   /** The snippet object contains basic details about the channel section, such as its type, style and title. */
-  var snippet: js.UndefOr[ChannelSectionSnippet] = js.undefined
+  var snippet: js.UndefOr[ChannelSectionSnippet] = js.native
   /** The targeting object contains basic targeting settings about the channel section. */
-  var targeting: js.UndefOr[ChannelSectionTargeting] = js.undefined
+  var targeting: js.UndefOr[ChannelSectionTargeting] = js.native
 }
 
 object ChannelSection {
   @scala.inline
-  def apply(
-    contentDetails: ChannelSectionContentDetails = null,
-    etag: String = null,
-    id: String = null,
-    kind: String = null,
-    localizations: Record[String, ChannelSectionLocalization] = null,
-    snippet: ChannelSectionSnippet = null,
-    targeting: ChannelSectionTargeting = null
-  ): ChannelSection = {
+  def apply(): ChannelSection = {
     val __obj = js.Dynamic.literal()
-    if (contentDetails != null) __obj.updateDynamic("contentDetails")(contentDetails.asInstanceOf[js.Any])
-    if (etag != null) __obj.updateDynamic("etag")(etag.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
-    if (localizations != null) __obj.updateDynamic("localizations")(localizations.asInstanceOf[js.Any])
-    if (snippet != null) __obj.updateDynamic("snippet")(snippet.asInstanceOf[js.Any])
-    if (targeting != null) __obj.updateDynamic("targeting")(targeting.asInstanceOf[js.Any])
     __obj.asInstanceOf[ChannelSection]
   }
+  @scala.inline
+  implicit class ChannelSectionOps[Self <: ChannelSection] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withContentDetails(value: ChannelSectionContentDetails): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentDetails")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContentDetails: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentDetails")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEtag(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("etag")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEtag: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("etag")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKind(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocalizations(value: Record[String, ChannelSectionLocalization]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("localizations")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocalizations: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("localizations")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSnippet(value: ChannelSectionSnippet): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("snippet")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSnippet: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("snippet")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTargeting(value: ChannelSectionTargeting): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targeting")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTargeting: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targeting")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

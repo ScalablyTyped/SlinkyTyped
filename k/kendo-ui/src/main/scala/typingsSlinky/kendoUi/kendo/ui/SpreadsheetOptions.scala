@@ -4,132 +4,530 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SpreadsheetOptions extends js.Object {
-  var activeSheet: js.UndefOr[String] = js.undefined
-  var change: js.UndefOr[js.Function1[/* e */ SpreadsheetChangeEvent, Unit]] = js.undefined
-  var changeFormat: js.UndefOr[js.Function1[/* e */ SpreadsheetChangeFormatEvent, Unit]] = js.undefined
-  var changing: js.UndefOr[js.Function1[/* e */ SpreadsheetChangingEvent, Unit]] = js.undefined
-  var columnWidth: js.UndefOr[Double] = js.undefined
-  var columns: js.UndefOr[Double] = js.undefined
-  var copy: js.UndefOr[js.Function1[/* e */ SpreadsheetCopyEvent, Unit]] = js.undefined
-  var cut: js.UndefOr[js.Function1[/* e */ SpreadsheetCutEvent, Unit]] = js.undefined
-  var dataBinding: js.UndefOr[js.Function1[/* e */ SpreadsheetDataBindingEvent, Unit]] = js.undefined
-  var dataBound: js.UndefOr[js.Function1[/* e */ SpreadsheetDataBoundEvent, Unit]] = js.undefined
-  var defaultCellStyle: js.UndefOr[SpreadsheetDefaultCellStyle] = js.undefined
-  var deleteColumn: js.UndefOr[js.Function1[/* e */ SpreadsheetDeleteColumnEvent, Unit]] = js.undefined
-  var deleteRow: js.UndefOr[js.Function1[/* e */ SpreadsheetDeleteRowEvent, Unit]] = js.undefined
-  var excel: js.UndefOr[SpreadsheetExcel] = js.undefined
-  var excelExport: js.UndefOr[js.Function1[/* e */ SpreadsheetExcelExportEvent, Unit]] = js.undefined
-  var excelImport: js.UndefOr[js.Function1[/* e */ SpreadsheetExcelImportEvent, Unit]] = js.undefined
-  var headerHeight: js.UndefOr[Double] = js.undefined
-  var headerWidth: js.UndefOr[Double] = js.undefined
-  var hideColumn: js.UndefOr[js.Function1[/* e */ SpreadsheetHideColumnEvent, Unit]] = js.undefined
-  var hideRow: js.UndefOr[js.Function1[/* e */ SpreadsheetHideRowEvent, Unit]] = js.undefined
-  var insertColumn: js.UndefOr[js.Function1[/* e */ SpreadsheetInsertColumnEvent, Unit]] = js.undefined
-  var insertRow: js.UndefOr[js.Function1[/* e */ SpreadsheetInsertRowEvent, Unit]] = js.undefined
-  var insertSheet: js.UndefOr[js.Function1[/* e */ SpreadsheetInsertSheetEvent, Unit]] = js.undefined
-  var name: js.UndefOr[String] = js.undefined
-  var paste: js.UndefOr[js.Function1[/* e */ SpreadsheetPasteEvent, Unit]] = js.undefined
-  var pdf: js.UndefOr[SpreadsheetPdf] = js.undefined
-  var pdfExport: js.UndefOr[js.Function1[/* e */ SpreadsheetPdfExportEvent, Unit]] = js.undefined
-  var removeSheet: js.UndefOr[js.Function1[/* e */ SpreadsheetRemoveSheetEvent, Unit]] = js.undefined
-  var renameSheet: js.UndefOr[js.Function1[/* e */ SpreadsheetRenameSheetEvent, Unit]] = js.undefined
-  var render: js.UndefOr[js.Function1[/* e */ SpreadsheetRenderEvent, Unit]] = js.undefined
-  var rowHeight: js.UndefOr[Double] = js.undefined
-  var rows: js.UndefOr[Double] = js.undefined
-  var select: js.UndefOr[js.Function1[/* e */ SpreadsheetSelectEvent, Unit]] = js.undefined
-  var selectSheet: js.UndefOr[js.Function1[/* e */ SpreadsheetSelectSheetEvent, Unit]] = js.undefined
-  var sheets: js.UndefOr[js.Array[SpreadsheetSheet]] = js.undefined
-  var sheetsbar: js.UndefOr[Boolean] = js.undefined
-  var toolbar: js.UndefOr[Boolean | SpreadsheetToolbar] = js.undefined
-  var unhideColumn: js.UndefOr[js.Function1[/* e */ SpreadsheetUnhideColumnEvent, Unit]] = js.undefined
-  var unhideRow: js.UndefOr[js.Function1[/* e */ SpreadsheetUnhideRowEvent, Unit]] = js.undefined
+  var activeSheet: js.UndefOr[String] = js.native
+  var change: js.UndefOr[js.Function1[/* e */ SpreadsheetChangeEvent, Unit]] = js.native
+  var changeFormat: js.UndefOr[js.Function1[/* e */ SpreadsheetChangeFormatEvent, Unit]] = js.native
+  var changing: js.UndefOr[js.Function1[/* e */ SpreadsheetChangingEvent, Unit]] = js.native
+  var columnWidth: js.UndefOr[Double] = js.native
+  var columns: js.UndefOr[Double] = js.native
+  var copy: js.UndefOr[js.Function1[/* e */ SpreadsheetCopyEvent, Unit]] = js.native
+  var cut: js.UndefOr[js.Function1[/* e */ SpreadsheetCutEvent, Unit]] = js.native
+  var dataBinding: js.UndefOr[js.Function1[/* e */ SpreadsheetDataBindingEvent, Unit]] = js.native
+  var dataBound: js.UndefOr[js.Function1[/* e */ SpreadsheetDataBoundEvent, Unit]] = js.native
+  var defaultCellStyle: js.UndefOr[SpreadsheetDefaultCellStyle] = js.native
+  var deleteColumn: js.UndefOr[js.Function1[/* e */ SpreadsheetDeleteColumnEvent, Unit]] = js.native
+  var deleteRow: js.UndefOr[js.Function1[/* e */ SpreadsheetDeleteRowEvent, Unit]] = js.native
+  var excel: js.UndefOr[SpreadsheetExcel] = js.native
+  var excelExport: js.UndefOr[js.Function1[/* e */ SpreadsheetExcelExportEvent, Unit]] = js.native
+  var excelImport: js.UndefOr[js.Function1[/* e */ SpreadsheetExcelImportEvent, Unit]] = js.native
+  var headerHeight: js.UndefOr[Double] = js.native
+  var headerWidth: js.UndefOr[Double] = js.native
+  var hideColumn: js.UndefOr[js.Function1[/* e */ SpreadsheetHideColumnEvent, Unit]] = js.native
+  var hideRow: js.UndefOr[js.Function1[/* e */ SpreadsheetHideRowEvent, Unit]] = js.native
+  var insertColumn: js.UndefOr[js.Function1[/* e */ SpreadsheetInsertColumnEvent, Unit]] = js.native
+  var insertRow: js.UndefOr[js.Function1[/* e */ SpreadsheetInsertRowEvent, Unit]] = js.native
+  var insertSheet: js.UndefOr[js.Function1[/* e */ SpreadsheetInsertSheetEvent, Unit]] = js.native
+  var name: js.UndefOr[String] = js.native
+  var paste: js.UndefOr[js.Function1[/* e */ SpreadsheetPasteEvent, Unit]] = js.native
+  var pdf: js.UndefOr[SpreadsheetPdf] = js.native
+  var pdfExport: js.UndefOr[js.Function1[/* e */ SpreadsheetPdfExportEvent, Unit]] = js.native
+  var removeSheet: js.UndefOr[js.Function1[/* e */ SpreadsheetRemoveSheetEvent, Unit]] = js.native
+  var renameSheet: js.UndefOr[js.Function1[/* e */ SpreadsheetRenameSheetEvent, Unit]] = js.native
+  var render: js.UndefOr[js.Function1[/* e */ SpreadsheetRenderEvent, Unit]] = js.native
+  var rowHeight: js.UndefOr[Double] = js.native
+  var rows: js.UndefOr[Double] = js.native
+  var select: js.UndefOr[js.Function1[/* e */ SpreadsheetSelectEvent, Unit]] = js.native
+  var selectSheet: js.UndefOr[js.Function1[/* e */ SpreadsheetSelectSheetEvent, Unit]] = js.native
+  var sheets: js.UndefOr[js.Array[SpreadsheetSheet]] = js.native
+  var sheetsbar: js.UndefOr[Boolean] = js.native
+  var toolbar: js.UndefOr[Boolean | SpreadsheetToolbar] = js.native
+  var unhideColumn: js.UndefOr[js.Function1[/* e */ SpreadsheetUnhideColumnEvent, Unit]] = js.native
+  var unhideRow: js.UndefOr[js.Function1[/* e */ SpreadsheetUnhideRowEvent, Unit]] = js.native
 }
 
 object SpreadsheetOptions {
   @scala.inline
-  def apply(
-    activeSheet: String = null,
-    change: /* e */ SpreadsheetChangeEvent => Unit = null,
-    changeFormat: /* e */ SpreadsheetChangeFormatEvent => Unit = null,
-    changing: /* e */ SpreadsheetChangingEvent => Unit = null,
-    columnWidth: Int | Double = null,
-    columns: Int | Double = null,
-    copy: /* e */ SpreadsheetCopyEvent => Unit = null,
-    cut: /* e */ SpreadsheetCutEvent => Unit = null,
-    dataBinding: /* e */ SpreadsheetDataBindingEvent => Unit = null,
-    dataBound: /* e */ SpreadsheetDataBoundEvent => Unit = null,
-    defaultCellStyle: SpreadsheetDefaultCellStyle = null,
-    deleteColumn: /* e */ SpreadsheetDeleteColumnEvent => Unit = null,
-    deleteRow: /* e */ SpreadsheetDeleteRowEvent => Unit = null,
-    excel: SpreadsheetExcel = null,
-    excelExport: /* e */ SpreadsheetExcelExportEvent => Unit = null,
-    excelImport: /* e */ SpreadsheetExcelImportEvent => Unit = null,
-    headerHeight: Int | Double = null,
-    headerWidth: Int | Double = null,
-    hideColumn: /* e */ SpreadsheetHideColumnEvent => Unit = null,
-    hideRow: /* e */ SpreadsheetHideRowEvent => Unit = null,
-    insertColumn: /* e */ SpreadsheetInsertColumnEvent => Unit = null,
-    insertRow: /* e */ SpreadsheetInsertRowEvent => Unit = null,
-    insertSheet: /* e */ SpreadsheetInsertSheetEvent => Unit = null,
-    name: String = null,
-    paste: /* e */ SpreadsheetPasteEvent => Unit = null,
-    pdf: SpreadsheetPdf = null,
-    pdfExport: /* e */ SpreadsheetPdfExportEvent => Unit = null,
-    removeSheet: /* e */ SpreadsheetRemoveSheetEvent => Unit = null,
-    renameSheet: /* e */ SpreadsheetRenameSheetEvent => Unit = null,
-    render: /* e */ SpreadsheetRenderEvent => Unit = null,
-    rowHeight: Int | Double = null,
-    rows: Int | Double = null,
-    select: /* e */ SpreadsheetSelectEvent => Unit = null,
-    selectSheet: /* e */ SpreadsheetSelectSheetEvent => Unit = null,
-    sheets: js.Array[SpreadsheetSheet] = null,
-    sheetsbar: js.UndefOr[Boolean] = js.undefined,
-    toolbar: Boolean | SpreadsheetToolbar = null,
-    unhideColumn: /* e */ SpreadsheetUnhideColumnEvent => Unit = null,
-    unhideRow: /* e */ SpreadsheetUnhideRowEvent => Unit = null
-  ): SpreadsheetOptions = {
+  def apply(): SpreadsheetOptions = {
     val __obj = js.Dynamic.literal()
-    if (activeSheet != null) __obj.updateDynamic("activeSheet")(activeSheet.asInstanceOf[js.Any])
-    if (change != null) __obj.updateDynamic("change")(js.Any.fromFunction1(change))
-    if (changeFormat != null) __obj.updateDynamic("changeFormat")(js.Any.fromFunction1(changeFormat))
-    if (changing != null) __obj.updateDynamic("changing")(js.Any.fromFunction1(changing))
-    if (columnWidth != null) __obj.updateDynamic("columnWidth")(columnWidth.asInstanceOf[js.Any])
-    if (columns != null) __obj.updateDynamic("columns")(columns.asInstanceOf[js.Any])
-    if (copy != null) __obj.updateDynamic("copy")(js.Any.fromFunction1(copy))
-    if (cut != null) __obj.updateDynamic("cut")(js.Any.fromFunction1(cut))
-    if (dataBinding != null) __obj.updateDynamic("dataBinding")(js.Any.fromFunction1(dataBinding))
-    if (dataBound != null) __obj.updateDynamic("dataBound")(js.Any.fromFunction1(dataBound))
-    if (defaultCellStyle != null) __obj.updateDynamic("defaultCellStyle")(defaultCellStyle.asInstanceOf[js.Any])
-    if (deleteColumn != null) __obj.updateDynamic("deleteColumn")(js.Any.fromFunction1(deleteColumn))
-    if (deleteRow != null) __obj.updateDynamic("deleteRow")(js.Any.fromFunction1(deleteRow))
-    if (excel != null) __obj.updateDynamic("excel")(excel.asInstanceOf[js.Any])
-    if (excelExport != null) __obj.updateDynamic("excelExport")(js.Any.fromFunction1(excelExport))
-    if (excelImport != null) __obj.updateDynamic("excelImport")(js.Any.fromFunction1(excelImport))
-    if (headerHeight != null) __obj.updateDynamic("headerHeight")(headerHeight.asInstanceOf[js.Any])
-    if (headerWidth != null) __obj.updateDynamic("headerWidth")(headerWidth.asInstanceOf[js.Any])
-    if (hideColumn != null) __obj.updateDynamic("hideColumn")(js.Any.fromFunction1(hideColumn))
-    if (hideRow != null) __obj.updateDynamic("hideRow")(js.Any.fromFunction1(hideRow))
-    if (insertColumn != null) __obj.updateDynamic("insertColumn")(js.Any.fromFunction1(insertColumn))
-    if (insertRow != null) __obj.updateDynamic("insertRow")(js.Any.fromFunction1(insertRow))
-    if (insertSheet != null) __obj.updateDynamic("insertSheet")(js.Any.fromFunction1(insertSheet))
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (paste != null) __obj.updateDynamic("paste")(js.Any.fromFunction1(paste))
-    if (pdf != null) __obj.updateDynamic("pdf")(pdf.asInstanceOf[js.Any])
-    if (pdfExport != null) __obj.updateDynamic("pdfExport")(js.Any.fromFunction1(pdfExport))
-    if (removeSheet != null) __obj.updateDynamic("removeSheet")(js.Any.fromFunction1(removeSheet))
-    if (renameSheet != null) __obj.updateDynamic("renameSheet")(js.Any.fromFunction1(renameSheet))
-    if (render != null) __obj.updateDynamic("render")(js.Any.fromFunction1(render))
-    if (rowHeight != null) __obj.updateDynamic("rowHeight")(rowHeight.asInstanceOf[js.Any])
-    if (rows != null) __obj.updateDynamic("rows")(rows.asInstanceOf[js.Any])
-    if (select != null) __obj.updateDynamic("select")(js.Any.fromFunction1(select))
-    if (selectSheet != null) __obj.updateDynamic("selectSheet")(js.Any.fromFunction1(selectSheet))
-    if (sheets != null) __obj.updateDynamic("sheets")(sheets.asInstanceOf[js.Any])
-    if (!js.isUndefined(sheetsbar)) __obj.updateDynamic("sheetsbar")(sheetsbar.asInstanceOf[js.Any])
-    if (toolbar != null) __obj.updateDynamic("toolbar")(toolbar.asInstanceOf[js.Any])
-    if (unhideColumn != null) __obj.updateDynamic("unhideColumn")(js.Any.fromFunction1(unhideColumn))
-    if (unhideRow != null) __obj.updateDynamic("unhideRow")(js.Any.fromFunction1(unhideRow))
     __obj.asInstanceOf[SpreadsheetOptions]
   }
+  @scala.inline
+  implicit class SpreadsheetOptionsOps[Self <: SpreadsheetOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withActiveSheet(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("activeSheet")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutActiveSheet: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("activeSheet")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withChange(value: /* e */ SpreadsheetChangeEvent => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("change")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutChange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("change")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withChangeFormat(value: /* e */ SpreadsheetChangeFormatEvent => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("changeFormat")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutChangeFormat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("changeFormat")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withChanging(value: /* e */ SpreadsheetChangingEvent => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("changing")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutChanging: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("changing")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColumnWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColumnWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColumns(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColumns: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columns")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCopy(value: /* e */ SpreadsheetCopyEvent => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("copy")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutCopy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("copy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCut(value: /* e */ SpreadsheetCutEvent => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cut")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutCut: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cut")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDataBinding(value: /* e */ SpreadsheetDataBindingEvent => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataBinding")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutDataBinding: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataBinding")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDataBound(value: /* e */ SpreadsheetDataBoundEvent => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataBound")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutDataBound: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataBound")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultCellStyle(value: SpreadsheetDefaultCellStyle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultCellStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultCellStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultCellStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeleteColumn(value: /* e */ SpreadsheetDeleteColumnEvent => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteColumn")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutDeleteColumn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteColumn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeleteRow(value: /* e */ SpreadsheetDeleteRowEvent => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteRow")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutDeleteRow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteRow")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExcel(value: SpreadsheetExcel): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("excel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExcel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("excel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExcelExport(value: /* e */ SpreadsheetExcelExportEvent => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("excelExport")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutExcelExport: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("excelExport")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExcelImport(value: /* e */ SpreadsheetExcelImportEvent => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("excelImport")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutExcelImport: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("excelImport")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeaderHeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headerHeight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeaderHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headerHeight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeaderWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headerWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeaderWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headerWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHideColumn(value: /* e */ SpreadsheetHideColumnEvent => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hideColumn")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutHideColumn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hideColumn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHideRow(value: /* e */ SpreadsheetHideRowEvent => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hideRow")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutHideRow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hideRow")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInsertColumn(value: /* e */ SpreadsheetInsertColumnEvent => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("insertColumn")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutInsertColumn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("insertColumn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInsertRow(value: /* e */ SpreadsheetInsertRowEvent => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("insertRow")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutInsertRow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("insertRow")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInsertSheet(value: /* e */ SpreadsheetInsertSheetEvent => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("insertSheet")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutInsertSheet: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("insertSheet")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPaste(value: /* e */ SpreadsheetPasteEvent => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paste")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutPaste: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paste")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPdf(value: SpreadsheetPdf): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pdf")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPdf: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pdf")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPdfExport(value: /* e */ SpreadsheetPdfExportEvent => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pdfExport")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutPdfExport: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pdfExport")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRemoveSheet(value: /* e */ SpreadsheetRemoveSheetEvent => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeSheet")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutRemoveSheet: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeSheet")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRenameSheet(value: /* e */ SpreadsheetRenameSheetEvent => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("renameSheet")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutRenameSheet: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("renameSheet")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRender(value: /* e */ SpreadsheetRenderEvent => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("render")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutRender: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("render")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRowHeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowHeight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRowHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowHeight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRows(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rows")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRows: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rows")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelect(value: /* e */ SpreadsheetSelectEvent => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("select")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutSelect: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("select")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelectSheet(value: /* e */ SpreadsheetSelectSheetEvent => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectSheet")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutSelectSheet: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectSheet")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSheets(value: js.Array[SpreadsheetSheet]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sheets")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSheets: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sheets")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSheetsbar(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sheetsbar")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSheetsbar: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sheetsbar")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withToolbar(value: Boolean | SpreadsheetToolbar): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toolbar")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutToolbar: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toolbar")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUnhideColumn(value: /* e */ SpreadsheetUnhideColumnEvent => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unhideColumn")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutUnhideColumn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unhideColumn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUnhideRow(value: /* e */ SpreadsheetUnhideRowEvent => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unhideRow")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutUnhideRow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unhideRow")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

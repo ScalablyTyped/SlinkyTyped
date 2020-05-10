@@ -33,12 +33,53 @@ trait SchemaStoreLayout extends js.Object {
 
 object SchemaStoreLayout {
   @scala.inline
-  def apply(homepageId: String = null, kind: String = null, storeLayoutType: String = null): SchemaStoreLayout = {
+  def apply(): SchemaStoreLayout = {
     val __obj = js.Dynamic.literal()
-    if (homepageId != null) __obj.updateDynamic("homepageId")(homepageId.asInstanceOf[js.Any])
-    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
-    if (storeLayoutType != null) __obj.updateDynamic("storeLayoutType")(storeLayoutType.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaStoreLayout]
   }
+  @scala.inline
+  implicit class SchemaStoreLayoutOps[Self <: SchemaStoreLayout] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHomepageId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("homepageId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHomepageId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("homepageId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKind(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStoreLayoutType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("storeLayoutType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStoreLayoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("storeLayoutType")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

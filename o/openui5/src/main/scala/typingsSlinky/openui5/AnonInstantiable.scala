@@ -1,7 +1,7 @@
 package typingsSlinky.openui5
 
 import org.scalablytyped.runtime.Instantiable1
-import typingsSlinky.std.Touch
+import org.scalajs.dom.raw.Touch
 import typingsSlinky.std.TouchInit
 import scala.scalajs.js
 import scala.scalajs.js.`|`

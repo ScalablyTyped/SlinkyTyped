@@ -10,8 +10,6 @@ import typingsSlinky.bluebirdLst.mod.PromisifyAllOptions
 import typingsSlinky.bluebirdLst.mod.PromisifyOptions
 import typingsSlinky.bluebirdLst.mod.ResolvableProps
 import typingsSlinky.bluebirdLst.mod.Resolver
-import typingsSlinky.std.Error
-import typingsSlinky.std.Iterable
 import typingsSlinky.std.IterableIterator
 import typingsSlinky.std.Map
 import scala.scalajs.js
@@ -589,20 +587,20 @@ trait TypeofBluebird
     * *The original array is not modified.*
     */
   def map[R, U](
-    values: js.Thenable[(js.Array[js.Thenable[R] | R]) | (Iterable[js.Thenable[R] | R])],
+    values: js.Thenable[(js.Array[js.Thenable[R] | R]) | (js.Iterable[js.Thenable[R] | R])],
     mapper: js.Function3[/* item */ R, /* index */ Double, /* arrayLength */ Double, U | js.Thenable[U]]
   ): Bluebird[js.Array[U]] = js.native
   def map[R, U](
-    values: js.Thenable[(js.Array[js.Thenable[R] | R]) | (Iterable[js.Thenable[R] | R])],
+    values: js.Thenable[(js.Array[js.Thenable[R] | R]) | (js.Iterable[js.Thenable[R] | R])],
     mapper: js.Function3[/* item */ R, /* index */ Double, /* arrayLength */ Double, U | js.Thenable[U]],
     options: ConcurrencyOption
   ): Bluebird[js.Array[U]] = js.native
   def map[R, U](
-    values: Iterable[js.Thenable[R] | R],
+    values: js.Iterable[js.Thenable[R] | R],
     mapper: js.Function3[/* item */ R, /* index */ Double, /* arrayLength */ Double, U | js.Thenable[U]]
   ): Bluebird[js.Array[U]] = js.native
   def map[R, U](
-    values: Iterable[js.Thenable[R] | R],
+    values: js.Iterable[js.Thenable[R] | R],
     mapper: js.Function3[/* item */ R, /* index */ Double, /* arrayLength */ Double, U | js.Thenable[U]],
     options: ConcurrencyOption
   ): Bluebird[js.Array[U]] = js.native
@@ -618,11 +616,11 @@ trait TypeofBluebird
     * If any promise in the input array is rejected or any promise returned by the iterator function is rejected, the result will be rejected as well.
     */
   def mapSeries[R, U](
-    values: js.Thenable[(js.Array[js.Thenable[R] | R]) | (Iterable[js.Thenable[R] | R])],
+    values: js.Thenable[(js.Array[js.Thenable[R] | R]) | (js.Iterable[js.Thenable[R] | R])],
     iterator: js.Function3[/* item */ R, /* index */ Double, /* arrayLength */ Double, U | js.Thenable[U]]
   ): Bluebird[js.Array[U]] = js.native
   def mapSeries[R, U](
-    values: Iterable[js.Thenable[R] | R],
+    values: js.Iterable[js.Thenable[R] | R],
     iterator: js.Function3[/* item */ R, /* index */ Double, /* arrayLength */ Double, U | js.Thenable[U]]
   ): Bluebird[js.Array[U]] = js.native
   def method[R](fn: js.Function1[/* repeated */ js.Any, R | js.Thenable[R]]): js.Function1[/* repeated */ js.Any, Bluebird[R]] = js.native
@@ -660,7 +658,7 @@ trait TypeofBluebird
     * Passing no value or a non-function will have the effect of removing any kind of handling for possibly unhandled rejections.
     */
   def onPossiblyUnhandledRejection(handler: js.Function1[/* reason */ js.Any, _]): Unit = js.native
-  def onPossiblyUnhandledRejection(handler: js.Function2[/* error */ Error, /* promise */ Bluebird[_], Unit]): Unit = js.native
+  def onPossiblyUnhandledRejection(handler: js.Function2[/* error */ js.Error, /* promise */ Bluebird[_], Unit]): Unit = js.native
   def promisify(nodeFunction: js.Function1[/* repeated */ js.Any, Unit]): js.Function1[/* repeated */ js.Any, Bluebird[_]] = js.native
   def promisify(nodeFunction: js.Function1[/* repeated */ js.Any, Unit], options: PromisifyOptions): js.Function1[/* repeated */ js.Any, Bluebird[_]] = js.native
   def promisify[T, A1](

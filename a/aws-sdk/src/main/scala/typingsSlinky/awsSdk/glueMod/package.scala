@@ -374,6 +374,7 @@ package object glueMod {
   type TimestampValue = js.Date
   type Token = java.lang.String
   type TotalSegmentsInteger = scala.Double
+  type TransformIdList = js.Array[typingsSlinky.awsSdk.glueMod.HashString]
   type TransformList = js.Array[typingsSlinky.awsSdk.glueMod.MLTransform]
   type TransformSchema = js.Array[typingsSlinky.awsSdk.glueMod.SchemaColumn]
   /* Rewritten from type alias, can be one of: 

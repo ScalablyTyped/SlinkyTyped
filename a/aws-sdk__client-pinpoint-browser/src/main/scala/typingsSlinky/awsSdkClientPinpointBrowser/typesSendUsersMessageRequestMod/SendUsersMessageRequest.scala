@@ -7,41 +7,103 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SendUsersMessageRequest extends js.Object {
   /**
     * A map of custom attribute-value pairs. Amazon Pinpoint adds these attributes to the data.pinpoint object in the body of the push notification payload. Amazon Pinpoint also provides these attributes in the events that it generates for users-messages deliveries.
     */
-  var Context: js.UndefOr[StringDictionary[String] | (js.Iterable[js.Tuple2[String, String]])] = js.undefined
+  var Context: js.UndefOr[StringDictionary[String] | (js.Iterable[js.Tuple2[String, String]])] = js.native
   /**
     * Message definitions for the default message and any messages that are tailored for specific channels.
     */
-  var MessageConfiguration: js.UndefOr[DirectMessageConfiguration] = js.undefined
+  var MessageConfiguration: js.UndefOr[DirectMessageConfiguration] = js.native
   /**
     * A unique ID that you can use to trace a message. This ID is visible to recipients.
     */
-  var TraceId: js.UndefOr[String] = js.undefined
+  var TraceId: js.UndefOr[String] = js.native
   /**
     * A map that associates user IDs with EndpointSendConfiguration objects. Within an EndpointSendConfiguration object, you can tailor the message for a user by specifying message overrides or substitutions.
     */
   var Users: js.UndefOr[
     StringDictionary[EndpointSendConfiguration] | (js.Iterable[js.Tuple2[String, EndpointSendConfiguration]])
-  ] = js.undefined
+  ] = js.native
 }
 
 object SendUsersMessageRequest {
   @scala.inline
-  def apply(
-    Context: StringDictionary[String] | (js.Iterable[js.Tuple2[String, String]]) = null,
-    MessageConfiguration: DirectMessageConfiguration = null,
-    TraceId: String = null,
-    Users: StringDictionary[EndpointSendConfiguration] | (js.Iterable[js.Tuple2[String, EndpointSendConfiguration]]) = null
-  ): SendUsersMessageRequest = {
+  def apply(): SendUsersMessageRequest = {
     val __obj = js.Dynamic.literal()
-    if (Context != null) __obj.updateDynamic("Context")(Context.asInstanceOf[js.Any])
-    if (MessageConfiguration != null) __obj.updateDynamic("MessageConfiguration")(MessageConfiguration.asInstanceOf[js.Any])
-    if (TraceId != null) __obj.updateDynamic("TraceId")(TraceId.asInstanceOf[js.Any])
-    if (Users != null) __obj.updateDynamic("Users")(Users.asInstanceOf[js.Any])
     __obj.asInstanceOf[SendUsersMessageRequest]
   }
+  @scala.inline
+  implicit class SendUsersMessageRequestOps[Self <: SendUsersMessageRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withContextIterable(value: js.Iterable[js.Tuple2[String, String]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Context")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withContext(value: StringDictionary[String] | (js.Iterable[js.Tuple2[String, String]])): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Context")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContext: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Context")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMessageConfiguration(value: DirectMessageConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MessageConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMessageConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MessageConfiguration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTraceId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TraceId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTraceId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TraceId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUsersIterable(value: js.Iterable[js.Tuple2[String, EndpointSendConfiguration]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Users")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUsers(
+      value: StringDictionary[EndpointSendConfiguration] | (js.Iterable[js.Tuple2[String, EndpointSendConfiguration]])
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Users")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUsers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Users")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

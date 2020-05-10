@@ -1,0 +1,46 @@
+package typingsSlinky.babelTypes.mod
+
+import typingsSlinky.babelTypes.babelTypesStrings.TupleExpression
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
+- typingsSlinky.babelTypes.mod._Node because Already inherited */ @js.native
+trait TupleExpression_
+  extends Expression
+     with BaseNode {
+  var elements: js.Array[Null | Expression | SpreadElement_] = js.native
+  @JSName("type")
+  var type_TupleExpression_ : TupleExpression = js.native
+}
+
+object TupleExpression_ {
+  @scala.inline
+  def apply(elements: js.Array[Null | Expression | SpreadElement_], `type`: TupleExpression): TupleExpression_ = {
+    val __obj = js.Dynamic.literal(elements = elements.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[TupleExpression_]
+  }
+  @scala.inline
+  implicit class TupleExpression_Ops[Self <: TupleExpression_] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withElements(value: js.Array[Null | Expression | SpreadElement_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elements")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: TupleExpression): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
+

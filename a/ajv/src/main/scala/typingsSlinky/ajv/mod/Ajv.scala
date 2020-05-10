@@ -1,6 +1,5 @@
 package typingsSlinky.ajv.mod
 
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -93,9 +92,9 @@ trait Ajv extends js.Object {
   /**
     * Get compiled schema from the instance by `key` or `ref`.
     * @param  {string} keyRef `key` that was passed to `addSchema` or full schema reference (`schema.id` or resolved id).
-    * @return {Function} schema validating function (with property `schema`).
+    * @return {Function} schema validating function (with property `schema`). Returns undefined if keyRef can't be resolved to an existing schema.
     */
-  def getSchema(keyRef: String): ValidateFunction = js.native
+  def getSchema(keyRef: String): js.UndefOr[ValidateFunction] = js.native
   /**
     * Remove keyword
     * @this  Ajv
@@ -115,7 +114,7 @@ trait Ajv extends js.Object {
   def removeSchema(schemaKeyRef: String): Ajv = js.native
   def removeSchema(schemaKeyRef: js.Object): Ajv = js.native
   def removeSchema(schemaKeyRef: Boolean): Ajv = js.native
-  def removeSchema(schemaKeyRef: RegExp): Ajv = js.native
+  def removeSchema(schemaKeyRef: js.RegExp): Ajv = js.native
   def validate(schemaKeyRef: String, data: js.Any): Boolean | js.Thenable[_] = js.native
   /**
     * Validate data using schema

@@ -5,25 +5,63 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonAttributes extends js.Object {
-  var attributes: js.UndefOr[js.Array[Parameter]] = js.undefined
-  var fragment: String
-  var uniforms: js.UndefOr[js.Array[Parameter]] = js.undefined
-  var vertex: String
+  var attributes: js.UndefOr[js.Array[Parameter]] = js.native
+  var fragment: String = js.native
+  var uniforms: js.UndefOr[js.Array[Parameter]] = js.native
+  var vertex: String = js.native
 }
 
 object AnonAttributes {
   @scala.inline
-  def apply(
-    fragment: String,
-    vertex: String,
-    attributes: js.Array[Parameter] = null,
-    uniforms: js.Array[Parameter] = null
-  ): AnonAttributes = {
+  def apply(fragment: String, vertex: String): AnonAttributes = {
     val __obj = js.Dynamic.literal(fragment = fragment.asInstanceOf[js.Any], vertex = vertex.asInstanceOf[js.Any])
-    if (attributes != null) __obj.updateDynamic("attributes")(attributes.asInstanceOf[js.Any])
-    if (uniforms != null) __obj.updateDynamic("uniforms")(uniforms.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonAttributes]
   }
+  @scala.inline
+  implicit class AnonAttributesOps[Self <: AnonAttributes] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFragment(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fragment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVertex(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vertex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAttributes(value: js.Array[Parameter]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attributes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUniforms(value: js.Array[Parameter]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("uniforms")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUniforms: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("uniforms")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

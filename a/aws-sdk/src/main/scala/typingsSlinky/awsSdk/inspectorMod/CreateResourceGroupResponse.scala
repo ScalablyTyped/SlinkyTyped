@@ -16,8 +16,21 @@ object CreateResourceGroupResponse {
   @scala.inline
   def apply(resourceGroupArn: Arn): CreateResourceGroupResponse = {
     val __obj = js.Dynamic.literal(resourceGroupArn = resourceGroupArn.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[CreateResourceGroupResponse]
   }
+  @scala.inline
+  implicit class CreateResourceGroupResponseOps[Self <: CreateResourceGroupResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withResourceGroupArn(value: Arn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceGroupArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -15,10 +15,10 @@ trait CompositionEvent extends UIEvent {
 @JSGlobal("CompositionEvent")
 @js.native
 object CompositionEvent
-  extends Instantiable1[/* type */ java.lang.String, CompositionEvent]
+  extends Instantiable1[/* type */ java.lang.String, org.scalajs.dom.raw.CompositionEvent]
      with Instantiable2[
       /* type */ java.lang.String, 
       /* eventInitDict */ CompositionEventInit, 
-      CompositionEvent
+      org.scalajs.dom.raw.CompositionEvent
     ]
 

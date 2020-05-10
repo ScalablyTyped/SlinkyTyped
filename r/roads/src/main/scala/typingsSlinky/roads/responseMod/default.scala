@@ -1,6 +1,5 @@
 package typingsSlinky.roads.responseMod
 
-import org.scalablytyped.runtime.StringDictionary
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,11 +17,5 @@ class default protected () extends Response {
   def this(body: String) = this()
   def this(body: String, status: Double) = this()
   def this(body: String, status: Double, headers: js.Object) = this()
-  /* CompleteClass */
-  override var body: String = js.native
-  /* CompleteClass */
-  override var headers: StringDictionary[js.Any] = js.native
-  /* CompleteClass */
-  override var status: Double = js.native
 }
 

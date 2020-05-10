@@ -8,5 +8,5 @@ import scala.scalajs.js.annotation._
 @JSImport("tcomb", "RegExp")
 @js.native
 object RegExp
-  extends TopLevel[Irreducible_[typingsSlinky.std.RegExp]]
+  extends TopLevel[Irreducible_[js.RegExp]]
 

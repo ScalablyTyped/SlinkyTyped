@@ -13,40 +13,164 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait EnvironmentConfig extends js.Object {
-  val configName: js.UndefOr[String] = js.undefined
-  val handlerProvider: js.UndefOr[HandlerProvider | Null] = js.undefined
-  val log: js.UndefOr[LogFunction | Null] = js.undefined
-  val missingFieldHandlers: js.UndefOr[js.Array[MissingFieldHandler] | Null] = js.undefined
-  val network: Network
-  val operationLoader: js.UndefOr[OperationLoader | Null] = js.undefined
-  val operationTracker: js.UndefOr[OperationTracker | Null] = js.undefined
-  val scheduler: js.UndefOr[TaskScheduler | Null] = js.undefined
-  val store: Store
+  val configName: js.UndefOr[String] = js.native
+  val handlerProvider: js.UndefOr[HandlerProvider | Null] = js.native
+  val log: js.UndefOr[LogFunction | Null] = js.native
+  val missingFieldHandlers: js.UndefOr[js.Array[MissingFieldHandler] | Null] = js.native
+  val network: Network = js.native
+  val operationLoader: js.UndefOr[OperationLoader | Null] = js.native
+  val operationTracker: js.UndefOr[OperationTracker | Null] = js.native
+  val scheduler: js.UndefOr[TaskScheduler | Null] = js.native
+  val store: Store = js.native
 }
 
 object EnvironmentConfig {
   @scala.inline
-  def apply(
-    network: Network,
-    store: Store,
-    configName: String = null,
-    handlerProvider: /* handle */ String => js.Any = null,
-    log: /* logEvent */ LogEvent => Unit = null,
-    missingFieldHandlers: js.Array[MissingFieldHandler] = null,
-    operationLoader: OperationLoader = null,
-    operationTracker: OperationTracker = null,
-    scheduler: TaskScheduler = null
-  ): EnvironmentConfig = {
+  def apply(network: Network, store: Store): EnvironmentConfig = {
     val __obj = js.Dynamic.literal(network = network.asInstanceOf[js.Any], store = store.asInstanceOf[js.Any])
-    if (configName != null) __obj.updateDynamic("configName")(configName.asInstanceOf[js.Any])
-    if (handlerProvider != null) __obj.updateDynamic("handlerProvider")(js.Any.fromFunction1(handlerProvider))
-    if (log != null) __obj.updateDynamic("log")(js.Any.fromFunction1(log))
-    if (missingFieldHandlers != null) __obj.updateDynamic("missingFieldHandlers")(missingFieldHandlers.asInstanceOf[js.Any])
-    if (operationLoader != null) __obj.updateDynamic("operationLoader")(operationLoader.asInstanceOf[js.Any])
-    if (operationTracker != null) __obj.updateDynamic("operationTracker")(operationTracker.asInstanceOf[js.Any])
-    if (scheduler != null) __obj.updateDynamic("scheduler")(scheduler.asInstanceOf[js.Any])
     __obj.asInstanceOf[EnvironmentConfig]
   }
+  @scala.inline
+  implicit class EnvironmentConfigOps[Self <: EnvironmentConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNetwork(value: Network): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("network")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStore(value: Store): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("store")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withConfigName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("configName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConfigName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("configName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHandlerProvider(value: /* handle */ String => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("handlerProvider")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutHandlerProvider: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("handlerProvider")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHandlerProviderNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("handlerProvider")(null)
+        ret
+    }
+    @scala.inline
+    def withLog(value: /* logEvent */ LogEvent => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("log")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutLog: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("log")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLogNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("log")(null)
+        ret
+    }
+    @scala.inline
+    def withMissingFieldHandlers(value: js.Array[MissingFieldHandler]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("missingFieldHandlers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMissingFieldHandlers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("missingFieldHandlers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMissingFieldHandlersNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("missingFieldHandlers")(null)
+        ret
+    }
+    @scala.inline
+    def withOperationLoader(value: OperationLoader): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("operationLoader")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOperationLoader: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("operationLoader")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOperationLoaderNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("operationLoader")(null)
+        ret
+    }
+    @scala.inline
+    def withOperationTracker(value: OperationTracker): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("operationTracker")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOperationTracker: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("operationTracker")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOperationTrackerNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("operationTracker")(null)
+        ret
+    }
+    @scala.inline
+    def withScheduler(value: TaskScheduler): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scheduler")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScheduler: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scheduler")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSchedulerNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scheduler")(null)
+        ret
+    }
+  }
+  
 }
 

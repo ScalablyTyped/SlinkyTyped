@@ -7,7 +7,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.surveyKnockout.mod.ISurveyElement because Already inherited
 - typingsSlinky.surveyKnockout.mod.IElement because var conflicts: containsErrors, isPage, isPanel, isReadOnly, isVisible, name. Inlined visible, parent, renderWidth, width, rightIndent, startWithNewLine, getPanel, getLayoutType, isLayoutTypeSupported, removeElement, onAnyValueChanged, clearIncorrectValues, clearErrors
 - typingsSlinky.surveyKnockout.mod.IQuestion because var conflicts: containsErrors, isPage, isPanel, isReadOnly, isVisible, name. Inlined hasTitle, isEmpty, onSurveyValueChanged, updateValueFromSurvey, updateCommentFromSurvey, supportGoNextPageAutomatic, clearUnusedValues, getDisplayValue, getValueName, clearValue, clearValueIfInvisible, isAnswerCorrect, updateValueWithDefaults, getQuestionFromArray, value */ @JSImport("survey-knockout", "Question")
@@ -113,6 +113,7 @@ class Question protected ()
     */
   val isAllowTitleLeft: Boolean = js.native
   var isAnswered: Boolean = js.native
+  val isCompositeQuestion: Boolean = js.native
   val isFlowLayout: Boolean = js.native
   val isInputTextUpdate: Boolean = js.native
   val isReady: Boolean = js.native
@@ -204,8 +205,6 @@ class Question protected ()
     * Use it to choose how other question values will be rendered in title if referenced in {}.
     */
   var useDisplayValuesInTitle: Boolean = js.native
-  /* CompleteClass */
-  override var validatedValue: js.Any = js.native
   /**
     * The list of question validators.
     */
@@ -250,6 +249,7 @@ class Question protected ()
     */
   def addError(error: SurveyError): Unit = js.native
   /* protected */ def addSupportedValidators(supportedValidators: js.Array[String]): Unit = js.native
+  def afterRenderInput(el: js.Any): Unit = js.native
   /**
     * Get is question ready to use
     */
@@ -297,10 +297,6 @@ class Question protected ()
   def getConditionJson(operator: String): js.Any = js.native
   def getConditionJson(operator: String, path: String): js.Any = js.native
   /* protected */ def getCorrectAnswerCount(): Double = js.native
-  /* CompleteClass */
-  override def getDataFilteredProperties(): js.Any = js.native
-  /* CompleteClass */
-  override def getDataFilteredValues(): js.Any = js.native
   def getDefaultValue(): js.Any = js.native
   /**
     * Return the question value as a display text. For example, for dropdown, it would return the item text instead of item value.
@@ -310,17 +306,11 @@ class Question protected ()
   def getDisplayValue(keysAsText: Boolean): js.Any = js.native
   def getDisplayValue(keysAsText: Boolean, value: js.Any): js.Any = js.native
   /* protected */ def getDisplayValueCore(keyAsText: Boolean, value: js.Any): js.Any = js.native
-  /* CompleteClass */
-  override def getErrorCustomText(text: String, error: SurveyError): String = js.native
   /* protected */ def getFirstErrorInputElementId(): String = js.native
   /* protected */ def getFirstInputElementId(): String = js.native
   /* protected */ def getIsAnswered(): Boolean = js.native
   /* protected */ def getIsRunningValidators(): Boolean = js.native
   def getLayoutType(): String = js.native
-  /* CompleteClass */
-  override def getLocale(): String = js.native
-  /* CompleteClass */
-  override def getMarkdownHtml(text: String): String = js.native
   def getOthersMaxLength(): js.Any = js.native
   def getPanel(): IPanel = js.native
   /**
@@ -330,8 +320,6 @@ class Question protected ()
     */
   def getPlainData(): js.Any = js.native
   def getPlainData(options: AnonCalculations): js.Any = js.native
-  /* CompleteClass */
-  override def getProcessedText(text: String): String = js.native
   /* protected */ def getProcessedTextValue(textValue: TextPreProcessorValue): Unit = js.native
   def getQuestionFromArray(name: String, index: Double): IQuestion = js.native
   def getQuestionTitleTemplate(): String = js.native
@@ -348,10 +336,6 @@ class Question protected ()
   /* protected */ def getTitleLocationCore(): String = js.native
   /* InferMemberOverrides */
   override def getType(): String = js.native
-  /* CompleteClass */
-  override def getValidatorTitle(): String = js.native
-  /* CompleteClass */
-  override def getValidators(): js.Array[SurveyValidator] = js.native
   /* protected */ def getValueCore(): js.Any = js.native
   def getValueName(): String = js.native
   /**
@@ -404,8 +388,6 @@ class Question protected ()
     * @param error
     */
   def removeError(error: SurveyError): Unit = js.native
-  /* CompleteClass */
-  override def runCondition(values: HashTable[_], properties: HashTable[_]): js.Any = js.native
   /* protected */ def runValidators(): js.Array[SurveyError] = js.native
   /* protected */ def setComment(newValue: String): Unit = js.native
   /* protected */ def setDefaultValue(): Unit = js.native

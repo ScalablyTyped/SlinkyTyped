@@ -1,15 +1,17 @@
 package typingsSlinky.reactColor.components
 
+import typingsSlinky.reactColor.githubMod.GithubPickerProps
 import typingsSlinky.reactColor.githubMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Github extends SharedApply_GithubPickerProps973772445[default] {
+object Github {
   @JSImport("react-color/lib/components/github/Github", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: GithubPickerProps): SharedBuilder_GithubPickerProps1409653094[default] = new SharedBuilder_GithubPickerProps1409653094[default](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Github.type): SharedBuilder_GithubPickerProps1409653094[default] = new SharedBuilder_GithubPickerProps1409653094[default](js.Array(this.component, js.Dictionary.empty))()
 }
 

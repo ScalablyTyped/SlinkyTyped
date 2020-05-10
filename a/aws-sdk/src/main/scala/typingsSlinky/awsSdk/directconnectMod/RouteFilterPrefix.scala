@@ -14,10 +14,29 @@ trait RouteFilterPrefix extends js.Object {
 
 object RouteFilterPrefix {
   @scala.inline
-  def apply(cidr: CIDR = null): RouteFilterPrefix = {
+  def apply(): RouteFilterPrefix = {
     val __obj = js.Dynamic.literal()
-    if (cidr != null) __obj.updateDynamic("cidr")(cidr.asInstanceOf[js.Any])
     __obj.asInstanceOf[RouteFilterPrefix]
   }
+  @scala.inline
+  implicit class RouteFilterPrefixOps[Self <: RouteFilterPrefix] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCidr(value: CIDR): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cidr")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCidr: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cidr")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

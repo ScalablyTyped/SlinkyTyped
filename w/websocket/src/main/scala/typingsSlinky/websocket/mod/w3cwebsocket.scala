@@ -2,8 +2,6 @@ package typingsSlinky.websocket.mod
 
 import typingsSlinky.node.Buffer
 import typingsSlinky.node.httpMod.OutgoingHttpHeaders
-import typingsSlinky.std.ArrayBuffer
-import typingsSlinky.std.ArrayBufferView
 import typingsSlinky.websocket.websocketStrings.arraybuffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -75,8 +73,8 @@ class w3cwebsocket protected () extends js.Object {
   def onmessage(message: IMessageEvent): Unit = js.native
   def onopen(): Unit = js.native
   def send(data: Buffer): Unit = js.native
-  def send(data: ArrayBuffer): Unit = js.native
-  def send(data: ArrayBufferView): Unit = js.native
+  def send(data: js.typedarray.ArrayBuffer): Unit = js.native
+  def send(data: js.typedarray.ArrayBufferView): Unit = js.native
   def send(data: IStringified): Unit = js.native
 }
 

@@ -22,16 +22,53 @@ trait EsamSettings extends js.Object {
 
 object EsamSettings {
   @scala.inline
-  def apply(
-    ManifestConfirmConditionNotification: EsamManifestConfirmConditionNotification = null,
-    ResponseSignalPreroll: Int | Double = null,
-    SignalProcessingNotification: EsamSignalProcessingNotification = null
-  ): EsamSettings = {
+  def apply(): EsamSettings = {
     val __obj = js.Dynamic.literal()
-    if (ManifestConfirmConditionNotification != null) __obj.updateDynamic("ManifestConfirmConditionNotification")(ManifestConfirmConditionNotification.asInstanceOf[js.Any])
-    if (ResponseSignalPreroll != null) __obj.updateDynamic("ResponseSignalPreroll")(ResponseSignalPreroll.asInstanceOf[js.Any])
-    if (SignalProcessingNotification != null) __obj.updateDynamic("SignalProcessingNotification")(SignalProcessingNotification.asInstanceOf[js.Any])
     __obj.asInstanceOf[EsamSettings]
   }
+  @scala.inline
+  implicit class EsamSettingsOps[Self <: EsamSettings] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withManifestConfirmConditionNotification(value: EsamManifestConfirmConditionNotification): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ManifestConfirmConditionNotification")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutManifestConfirmConditionNotification: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ManifestConfirmConditionNotification")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResponseSignalPreroll(value: integerMin0Max30000): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResponseSignalPreroll")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResponseSignalPreroll: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResponseSignalPreroll")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSignalProcessingNotification(value: EsamSignalProcessingNotification): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SignalProcessingNotification")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSignalProcessingNotification: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SignalProcessingNotification")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

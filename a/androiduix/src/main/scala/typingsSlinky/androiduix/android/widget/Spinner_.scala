@@ -2,7 +2,6 @@ package typingsSlinky.androiduix.android.widget
 
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.androiduix.android.content.Context
-import typingsSlinky.androiduix.android.content.DialogInterface
 import typingsSlinky.androiduix.android.content.DialogInterface.OnClickListener
 import typingsSlinky.androiduix.android.content.res.Resources
 import typingsSlinky.androiduix.android.content.res.TypedArray
@@ -38,8 +37,8 @@ import typingsSlinky.androiduix.android.widget.AdapterView.OnItemClickListener
 import typingsSlinky.androiduix.android.widget.AdapterView.OnItemLongClickListener
 import typingsSlinky.androiduix.android.widget.AdapterView.OnItemSelectedListener
 import typingsSlinky.androiduix.androidui.attr.AttrBinder.ClassBinderMap
-import typingsSlinky.androiduix.java.lang.Runnable
-import typingsSlinky.androiduix.java.util.ArrayList
+import typingsSlinky.androiduix.java_.lang.Runnable
+import typingsSlinky.androiduix.java_.util.ArrayList
 import typingsSlinky.std.Map
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -753,8 +752,6 @@ class Spinner_ protected ()
   override def onCancelPendingInputEvents(): Unit = js.native
   /* InferMemberOverrides */
   override def onChildVisibilityChanged(child: View, oldVisibility: Double, newVisibility: Double): Unit = js.native
-  /* CompleteClass */
-  override def onClick(dialog: DialogInterface, which: Double): Unit = js.native
   /* InferMemberOverrides */
   /* protected */ override def onCreateDrawableState(extraSpace: Double): js.Array[Double] = js.native
   /* InferMemberOverrides */

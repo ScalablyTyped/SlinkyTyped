@@ -498,759 +498,5330 @@ import scala.scalajs.js.annotation._
 
 // Jss Style definitions
 /* Inlined jss.jss.CssProperties & {[key: string] : jss.jss.FnValue<jss.jss.JssValue | S>} */
+@js.native
 trait JssStyleP[S] extends /* key */ StringDictionary[FnValue[JssValue | S]] {
-  var KhtmlBoxAlign: FnValue[js.UndefOr[BoxAlignProperty]]
-  var KhtmlBoxDirection: FnValue[js.UndefOr[BoxDirectionProperty]]
-  var KhtmlBoxFlex: FnValue[js.UndefOr[GlobalsNumber]]
-  var KhtmlBoxFlexGroup: FnValue[js.UndefOr[GlobalsNumber]]
-  var KhtmlBoxLines: FnValue[js.UndefOr[BoxLinesProperty]]
-  var KhtmlBoxOrdinalGroup: FnValue[js.UndefOr[GlobalsNumber]]
-  var KhtmlBoxOrient: FnValue[js.UndefOr[BoxOrientProperty]]
-  var KhtmlBoxPack: FnValue[js.UndefOr[BoxPackProperty]]
-  var KhtmlLineBreak: FnValue[js.UndefOr[LineBreakProperty]]
-  var KhtmlOpacity: FnValue[js.UndefOr[GlobalsNumber]]
-  var KhtmlUserSelect: FnValue[js.UndefOr[UserSelectProperty]]
-  var MozAnimation: FnValue[js.UndefOr[AnimationProperty]]
-  var MozAnimationDelay: FnValue[js.UndefOr[GlobalsString]]
-  var MozAnimationDirection: FnValue[js.UndefOr[AnimationDirectionProperty]]
-  var MozAnimationDuration: FnValue[js.UndefOr[GlobalsString]]
-  var MozAnimationFillMode: FnValue[js.UndefOr[AnimationFillModeProperty]]
-  var MozAnimationIterationCount: FnValue[js.UndefOr[AnimationIterationCountProperty]]
-  var MozAnimationName: FnValue[js.UndefOr[AnimationNameProperty]]
-  var MozAnimationPlayState: FnValue[js.UndefOr[AnimationPlayStateProperty]]
-  var MozAnimationTimingFunction: FnValue[js.UndefOr[AnimationTimingFunctionProperty]]
-  var MozAppearance: FnValue[js.UndefOr[MozAppearanceProperty]]
-  var MozBackfaceVisibility: FnValue[js.UndefOr[BackfaceVisibilityProperty]]
-  var MozBackgroundClip: FnValue[js.UndefOr[BackgroundClipProperty]]
-  var MozBackgroundInlinePolicy: FnValue[js.UndefOr[BoxDecorationBreakProperty]]
-  var MozBackgroundOrigin: FnValue[js.UndefOr[BackgroundOriginProperty]]
-  var MozBackgroundSize: FnValue[js.UndefOr[BackgroundSizeProperty[String | Double]]]
-  var MozBinding: FnValue[js.UndefOr[MozBindingProperty]]
-  var MozBorderBottomColors: FnValue[js.UndefOr[MozBorderBottomColorsProperty]]
-  var MozBorderEndColor: FnValue[js.UndefOr[BorderInlineEndColorProperty]]
-  var MozBorderEndStyle: FnValue[js.UndefOr[BorderInlineEndStyleProperty]]
-  var MozBorderEndWidth: FnValue[js.UndefOr[BorderInlineEndWidthProperty[String | Double]]]
-  var MozBorderImage: FnValue[js.UndefOr[BorderImageProperty]]
-  var MozBorderLeftColors: FnValue[js.UndefOr[MozBorderLeftColorsProperty]]
-  var MozBorderRadius: FnValue[js.UndefOr[BorderRadiusProperty[String | Double]]]
-  var MozBorderRadiusBottomleft: FnValue[js.UndefOr[BorderBottomLeftRadiusProperty[String | Double]]]
-  var MozBorderRadiusBottomright: FnValue[js.UndefOr[BorderBottomRightRadiusProperty[String | Double]]]
-  var MozBorderRadiusTopleft: FnValue[js.UndefOr[BorderTopLeftRadiusProperty[String | Double]]]
-  var MozBorderRadiusTopright: FnValue[js.UndefOr[BorderTopRightRadiusProperty[String | Double]]]
-  var MozBorderRightColors: FnValue[js.UndefOr[MozBorderRightColorsProperty]]
-  var MozBorderStartColor: FnValue[js.UndefOr[BorderInlineStartColorProperty]]
-  var MozBorderStartStyle: FnValue[js.UndefOr[BorderInlineStartStyleProperty]]
-  var MozBorderTopColors: FnValue[js.UndefOr[MozBorderTopColorsProperty]]
-  var MozBoxAlign: FnValue[js.UndefOr[BoxAlignProperty]]
-  var MozBoxDirection: FnValue[js.UndefOr[BoxDirectionProperty]]
-  var MozBoxFlex: FnValue[js.UndefOr[GlobalsNumber]]
-  var MozBoxOrdinalGroup: FnValue[js.UndefOr[GlobalsNumber]]
-  var MozBoxOrient: FnValue[js.UndefOr[BoxOrientProperty]]
-  var MozBoxPack: FnValue[js.UndefOr[BoxPackProperty]]
-  var MozBoxShadow: FnValue[js.UndefOr[BoxShadowProperty]]
-  var MozBoxSizing: FnValue[js.UndefOr[BoxSizingProperty]]
-  var MozColumnCount: FnValue[js.UndefOr[ColumnCountProperty]]
-  var MozColumnFill: FnValue[js.UndefOr[ColumnFillProperty]]
-  var MozColumnGap: FnValue[js.UndefOr[ColumnGapProperty[String | Double]]]
-  var MozColumnRule: FnValue[js.UndefOr[ColumnRuleProperty[String | Double]]]
-  var MozColumnRuleColor: FnValue[js.UndefOr[ColumnRuleColorProperty]]
-  var MozColumnRuleStyle: FnValue[js.UndefOr[ColumnRuleStyleProperty]]
-  var MozColumnRuleWidth: FnValue[js.UndefOr[ColumnRuleWidthProperty[String | Double]]]
-  var MozColumnWidth: FnValue[js.UndefOr[ColumnWidthProperty[String | Double]]]
-  var MozColumns: FnValue[js.UndefOr[ColumnsProperty[String | Double]]]
-  var MozContextProperties: FnValue[js.UndefOr[MozContextPropertiesProperty]]
-  var MozFloatEdge: FnValue[js.UndefOr[MozFloatEdgeProperty]]
-  var MozFontFeatureSettings: FnValue[js.UndefOr[FontFeatureSettingsProperty]]
-  var MozFontLanguageOverride: FnValue[js.UndefOr[FontLanguageOverrideProperty]]
-  var MozForceBrokenImageIcon: FnValue[js.UndefOr[GlobalsNumber]]
-  var MozHyphens: FnValue[js.UndefOr[HyphensProperty]]
-  var MozImageRegion: FnValue[js.UndefOr[MozImageRegionProperty]]
-  var MozMarginEnd: FnValue[js.UndefOr[MarginInlineEndProperty[String | Double]]]
-  var MozMarginStart: FnValue[js.UndefOr[MarginInlineStartProperty[String | Double]]]
-  var MozOpacity: FnValue[js.UndefOr[GlobalsNumber]]
-  var MozOrient: FnValue[js.UndefOr[MozOrientProperty]]
-  var MozOutline: FnValue[js.UndefOr[OutlineProperty[String | Double]]]
-  var MozOutlineColor: FnValue[js.UndefOr[OutlineColorProperty]]
-  var MozOutlineRadius: FnValue[js.UndefOr[MozOutlineRadiusProperty[String | Double]]]
-  var MozOutlineRadiusBottomleft: FnValue[js.UndefOr[MozOutlineRadiusBottomleftProperty[String | Double]]]
-  var MozOutlineRadiusBottomright: FnValue[js.UndefOr[MozOutlineRadiusBottomrightProperty[String | Double]]]
-  var MozOutlineRadiusTopleft: FnValue[js.UndefOr[MozOutlineRadiusTopleftProperty[String | Double]]]
-  var MozOutlineRadiusTopright: FnValue[js.UndefOr[MozOutlineRadiusToprightProperty[String | Double]]]
-  var MozOutlineStyle: FnValue[js.UndefOr[OutlineStyleProperty]]
-  var MozOutlineWidth: FnValue[js.UndefOr[OutlineWidthProperty[String | Double]]]
-  var MozPaddingEnd: FnValue[js.UndefOr[PaddingInlineEndProperty[String | Double]]]
-  var MozPaddingStart: FnValue[js.UndefOr[PaddingInlineStartProperty[String | Double]]]
-  var MozPerspective: FnValue[js.UndefOr[PerspectiveProperty[String | Double]]]
-  var MozPerspectiveOrigin: FnValue[js.UndefOr[PerspectiveOriginProperty[String | Double]]]
-  var MozStackSizing: FnValue[js.UndefOr[MozStackSizingProperty]]
-  var MozTabSize: FnValue[js.UndefOr[TabSizeProperty[String | Double]]]
-  var MozTextAlignLast: FnValue[js.UndefOr[TextAlignLastProperty]]
-  var MozTextBlink: FnValue[js.UndefOr[MozTextBlinkProperty]]
-  var MozTextDecorationColor: FnValue[js.UndefOr[TextDecorationColorProperty]]
-  var MozTextDecorationLine: FnValue[js.UndefOr[TextDecorationLineProperty]]
-  var MozTextDecorationStyle: FnValue[js.UndefOr[TextDecorationStyleProperty]]
-  var MozTextSizeAdjust: FnValue[js.UndefOr[TextSizeAdjustProperty]]
-  var MozTransformOrigin: FnValue[js.UndefOr[TransformOriginProperty[String | Double]]]
-  var MozTransformStyle: FnValue[js.UndefOr[TransformStyleProperty]]
-  var MozTransition: FnValue[js.UndefOr[TransitionProperty]]
-  var MozTransitionDelay: FnValue[js.UndefOr[GlobalsString]]
-  var MozTransitionDuration: FnValue[js.UndefOr[GlobalsString]]
-  var MozTransitionProperty: FnValue[js.UndefOr[TransitionPropertyProperty]]
-  var MozTransitionTimingFunction: FnValue[js.UndefOr[TransitionTimingFunctionProperty]]
-  var MozUserFocus: FnValue[js.UndefOr[MozUserFocusProperty]]
-  var MozUserInput: FnValue[js.UndefOr[MozUserInputProperty]]
-  var MozUserModify: FnValue[js.UndefOr[MozUserModifyProperty]]
-  var MozUserSelect: FnValue[js.UndefOr[UserSelectProperty]]
-  var MozWindowDragging: FnValue[js.UndefOr[MozWindowDraggingProperty]]
-  var MozWindowShadow: FnValue[js.UndefOr[MozWindowShadowProperty]]
-  var OAnimation: FnValue[js.UndefOr[AnimationProperty]]
-  var OAnimationDelay: FnValue[js.UndefOr[GlobalsString]]
-  var OAnimationDirection: FnValue[js.UndefOr[AnimationDirectionProperty]]
-  var OAnimationDuration: FnValue[js.UndefOr[GlobalsString]]
-  var OAnimationFillMode: FnValue[js.UndefOr[AnimationFillModeProperty]]
-  var OAnimationIterationCount: FnValue[js.UndefOr[AnimationIterationCountProperty]]
-  var OAnimationName: FnValue[js.UndefOr[AnimationNameProperty]]
-  var OAnimationPlayState: FnValue[js.UndefOr[AnimationPlayStateProperty]]
-  var OAnimationTimingFunction: FnValue[js.UndefOr[AnimationTimingFunctionProperty]]
-  var OBackgroundSize: FnValue[js.UndefOr[BackgroundSizeProperty[String | Double]]]
-  var OBorderImage: FnValue[js.UndefOr[BorderImageProperty]]
-  var OObjectFit: FnValue[js.UndefOr[ObjectFitProperty]]
-  var OObjectPosition: FnValue[js.UndefOr[ObjectPositionProperty[String | Double]]]
-  var OTabSize: FnValue[js.UndefOr[TabSizeProperty[String | Double]]]
-  var OTextOverflow: FnValue[js.UndefOr[TextOverflowProperty]]
-  var OTransform: FnValue[js.UndefOr[TransformProperty]]
-  var OTransformOrigin: FnValue[js.UndefOr[TransformOriginProperty[String | Double]]]
-  var OTransition: FnValue[js.UndefOr[TransitionProperty]]
-  var OTransitionDelay: FnValue[js.UndefOr[GlobalsString]]
-  var OTransitionDuration: FnValue[js.UndefOr[GlobalsString]]
-  var OTransitionProperty: FnValue[js.UndefOr[TransitionPropertyProperty]]
-  var OTransitionTimingFunction: FnValue[js.UndefOr[TransitionTimingFunctionProperty]]
-  var WebkitAlignContent: FnValue[js.UndefOr[AlignContentProperty]]
-  var WebkitAlignItems: FnValue[js.UndefOr[AlignItemsProperty]]
-  var WebkitAlignSelf: FnValue[js.UndefOr[AlignSelfProperty]]
-  var WebkitAnimation: FnValue[js.UndefOr[AnimationProperty]]
-  var WebkitAnimationDelay: FnValue[js.UndefOr[GlobalsString]]
-  var WebkitAnimationDirection: FnValue[js.UndefOr[AnimationDirectionProperty]]
-  var WebkitAnimationDuration: FnValue[js.UndefOr[GlobalsString]]
-  var WebkitAnimationFillMode: FnValue[js.UndefOr[AnimationFillModeProperty]]
-  var WebkitAnimationIterationCount: FnValue[js.UndefOr[AnimationIterationCountProperty]]
-  var WebkitAnimationName: FnValue[js.UndefOr[AnimationNameProperty]]
-  var WebkitAnimationPlayState: FnValue[js.UndefOr[AnimationPlayStateProperty]]
-  var WebkitAnimationTimingFunction: FnValue[js.UndefOr[AnimationTimingFunctionProperty]]
-  var WebkitAppearance: FnValue[js.UndefOr[WebkitAppearanceProperty]]
-  var WebkitBackdropFilter: FnValue[js.UndefOr[BackdropFilterProperty]]
-  var WebkitBackfaceVisibility: FnValue[js.UndefOr[BackfaceVisibilityProperty]]
-  var WebkitBackgroundClip: FnValue[js.UndefOr[BackgroundClipProperty]]
-  var WebkitBackgroundOrigin: FnValue[js.UndefOr[BackgroundOriginProperty]]
-  var WebkitBackgroundSize: FnValue[js.UndefOr[BackgroundSizeProperty[String | Double]]]
-  var WebkitBorderBefore: FnValue[js.UndefOr[WebkitBorderBeforeProperty[String | Double]]]
-  var WebkitBorderBeforeColor: FnValue[js.UndefOr[WebkitBorderBeforeColorProperty]]
-  var WebkitBorderBeforeStyle: FnValue[js.UndefOr[WebkitBorderBeforeStyleProperty]]
-  var WebkitBorderBeforeWidth: FnValue[js.UndefOr[WebkitBorderBeforeWidthProperty[String | Double]]]
-  var WebkitBorderBottomLeftRadius: FnValue[js.UndefOr[BorderBottomLeftRadiusProperty[String | Double]]]
-  var WebkitBorderBottomRightRadius: FnValue[js.UndefOr[BorderBottomRightRadiusProperty[String | Double]]]
-  var WebkitBorderImage: FnValue[js.UndefOr[BorderImageProperty]]
-  var WebkitBorderImageSlice: FnValue[js.UndefOr[BorderImageSliceProperty]]
-  var WebkitBorderRadius: FnValue[js.UndefOr[BorderRadiusProperty[String | Double]]]
-  var WebkitBorderTopLeftRadius: FnValue[js.UndefOr[BorderTopLeftRadiusProperty[String | Double]]]
-  var WebkitBorderTopRightRadius: FnValue[js.UndefOr[BorderTopRightRadiusProperty[String | Double]]]
-  var WebkitBoxAlign: FnValue[js.UndefOr[BoxAlignProperty]]
-  var WebkitBoxDecorationBreak: FnValue[js.UndefOr[BoxDecorationBreakProperty]]
-  var WebkitBoxDirection: FnValue[js.UndefOr[BoxDirectionProperty]]
-  var WebkitBoxFlex: FnValue[js.UndefOr[GlobalsNumber]]
-  var WebkitBoxFlexGroup: FnValue[js.UndefOr[GlobalsNumber]]
-  var WebkitBoxLines: FnValue[js.UndefOr[BoxLinesProperty]]
-  var WebkitBoxOrdinalGroup: FnValue[js.UndefOr[GlobalsNumber]]
-  var WebkitBoxOrient: FnValue[js.UndefOr[BoxOrientProperty]]
-  var WebkitBoxPack: FnValue[js.UndefOr[BoxPackProperty]]
-  var WebkitBoxReflect: FnValue[js.UndefOr[WebkitBoxReflectProperty[String | Double]]]
-  var WebkitBoxShadow: FnValue[js.UndefOr[BoxShadowProperty]]
-  var WebkitBoxSizing: FnValue[js.UndefOr[BoxSizingProperty]]
-  var WebkitClipPath: FnValue[js.UndefOr[ClipPathProperty]]
-  var WebkitColorAdjust: FnValue[js.UndefOr[ColorAdjustProperty]]
-  var WebkitColumnCount: FnValue[js.UndefOr[ColumnCountProperty]]
-  var WebkitColumnFill: FnValue[js.UndefOr[ColumnFillProperty]]
-  var WebkitColumnGap: FnValue[js.UndefOr[ColumnGapProperty[String | Double]]]
-  var WebkitColumnRule: FnValue[js.UndefOr[ColumnRuleProperty[String | Double]]]
-  var WebkitColumnRuleColor: FnValue[js.UndefOr[ColumnRuleColorProperty]]
-  var WebkitColumnRuleStyle: FnValue[js.UndefOr[ColumnRuleStyleProperty]]
-  var WebkitColumnRuleWidth: FnValue[js.UndefOr[ColumnRuleWidthProperty[String | Double]]]
-  var WebkitColumnSpan: FnValue[js.UndefOr[ColumnSpanProperty]]
-  var WebkitColumnWidth: FnValue[js.UndefOr[ColumnWidthProperty[String | Double]]]
-  var WebkitColumns: FnValue[js.UndefOr[ColumnsProperty[String | Double]]]
-  var WebkitFilter: FnValue[js.UndefOr[FilterProperty]]
-  var WebkitFlex: FnValue[js.UndefOr[FlexProperty[String | Double]]]
-  var WebkitFlexBasis: FnValue[js.UndefOr[FlexBasisProperty[String | Double]]]
-  var WebkitFlexDirection: FnValue[js.UndefOr[FlexDirectionProperty]]
-  var WebkitFlexFlow: FnValue[js.UndefOr[FlexFlowProperty]]
-  var WebkitFlexGrow: FnValue[js.UndefOr[GlobalsNumber]]
-  var WebkitFlexShrink: FnValue[js.UndefOr[GlobalsNumber]]
-  var WebkitFlexWrap: FnValue[js.UndefOr[FlexWrapProperty]]
-  var WebkitFontFeatureSettings: FnValue[js.UndefOr[FontFeatureSettingsProperty]]
-  var WebkitFontKerning: FnValue[js.UndefOr[FontKerningProperty]]
-  var WebkitFontVariantLigatures: FnValue[js.UndefOr[FontVariantLigaturesProperty]]
-  var WebkitHyphens: FnValue[js.UndefOr[HyphensProperty]]
-  var WebkitJustifyContent: FnValue[js.UndefOr[JustifyContentProperty]]
-  var WebkitLineBreak: FnValue[js.UndefOr[LineBreakProperty]]
-  var WebkitLineClamp: FnValue[js.UndefOr[WebkitLineClampProperty]]
-  var WebkitMarginEnd: FnValue[js.UndefOr[MarginInlineEndProperty[String | Double]]]
-  var WebkitMarginStart: FnValue[js.UndefOr[MarginInlineStartProperty[String | Double]]]
-  var WebkitMask: FnValue[js.UndefOr[WebkitMaskProperty[String | Double]]]
-  var WebkitMaskAttachment: FnValue[js.UndefOr[WebkitMaskAttachmentProperty]]
-  var WebkitMaskClip: FnValue[js.UndefOr[WebkitMaskClipProperty]]
-  var WebkitMaskComposite: FnValue[js.UndefOr[WebkitMaskCompositeProperty]]
-  var WebkitMaskImage: FnValue[js.UndefOr[WebkitMaskImageProperty]]
-  var WebkitMaskOrigin: FnValue[js.UndefOr[WebkitMaskOriginProperty]]
-  var WebkitMaskPosition: FnValue[js.UndefOr[WebkitMaskPositionProperty[String | Double]]]
-  var WebkitMaskPositionX: FnValue[js.UndefOr[WebkitMaskPositionXProperty[String | Double]]]
-  var WebkitMaskPositionY: FnValue[js.UndefOr[WebkitMaskPositionYProperty[String | Double]]]
-  var WebkitMaskRepeat: FnValue[js.UndefOr[WebkitMaskRepeatProperty]]
-  var WebkitMaskRepeatX: FnValue[js.UndefOr[WebkitMaskRepeatXProperty]]
-  var WebkitMaskRepeatY: FnValue[js.UndefOr[WebkitMaskRepeatYProperty]]
-  var WebkitMaskSize: FnValue[js.UndefOr[WebkitMaskSizeProperty[String | Double]]]
-  var WebkitMaxInlineSize: FnValue[js.UndefOr[MaxInlineSizeProperty[String | Double]]]
-  var WebkitOrder: FnValue[js.UndefOr[GlobalsNumber]]
-  var WebkitOverflowScrolling: FnValue[js.UndefOr[WebkitOverflowScrollingProperty]]
-  var WebkitPaddingEnd: FnValue[js.UndefOr[PaddingInlineEndProperty[String | Double]]]
-  var WebkitPaddingStart: FnValue[js.UndefOr[PaddingInlineStartProperty[String | Double]]]
-  var WebkitPerspective: FnValue[js.UndefOr[PerspectiveProperty[String | Double]]]
-  var WebkitPerspectiveOrigin: FnValue[js.UndefOr[PerspectiveOriginProperty[String | Double]]]
-  var WebkitScrollSnapPointsX: FnValue[js.UndefOr[ScrollSnapPointsXProperty]]
-  var WebkitScrollSnapPointsY: FnValue[js.UndefOr[ScrollSnapPointsYProperty]]
-  var WebkitScrollSnapType: FnValue[js.UndefOr[ScrollSnapTypeProperty]]
-  var WebkitShapeMargin: FnValue[js.UndefOr[ShapeMarginProperty[String | Double]]]
-  var WebkitTapHighlightColor: FnValue[js.UndefOr[WebkitTapHighlightColorProperty]]
-  var WebkitTextCombine: FnValue[js.UndefOr[TextCombineUprightProperty]]
-  var WebkitTextDecorationColor: FnValue[js.UndefOr[TextDecorationColorProperty]]
-  var WebkitTextDecorationLine: FnValue[js.UndefOr[TextDecorationLineProperty]]
-  var WebkitTextDecorationSkip: FnValue[js.UndefOr[TextDecorationSkipProperty]]
-  var WebkitTextDecorationStyle: FnValue[js.UndefOr[TextDecorationStyleProperty]]
-  var WebkitTextEmphasis: FnValue[js.UndefOr[TextEmphasisProperty]]
-  var WebkitTextEmphasisColor: FnValue[js.UndefOr[TextEmphasisColorProperty]]
-  var WebkitTextEmphasisPosition: FnValue[js.UndefOr[GlobalsString]]
-  var WebkitTextEmphasisStyle: FnValue[js.UndefOr[TextEmphasisStyleProperty]]
-  var WebkitTextFillColor: FnValue[js.UndefOr[WebkitTextFillColorProperty]]
-  var WebkitTextOrientation: FnValue[js.UndefOr[TextOrientationProperty]]
-  var WebkitTextSizeAdjust: FnValue[js.UndefOr[TextSizeAdjustProperty]]
-  var WebkitTextStroke: FnValue[js.UndefOr[WebkitTextStrokeProperty[String | Double]]]
-  var WebkitTextStrokeColor: FnValue[js.UndefOr[WebkitTextStrokeColorProperty]]
-  var WebkitTextStrokeWidth: FnValue[js.UndefOr[WebkitTextStrokeWidthProperty[String | Double]]]
-  var WebkitTouchCallout: FnValue[js.UndefOr[WebkitTouchCalloutProperty]]
-  var WebkitTransform: FnValue[js.UndefOr[TransformProperty]]
-  var WebkitTransformOrigin: FnValue[js.UndefOr[TransformOriginProperty[String | Double]]]
-  var WebkitTransformStyle: FnValue[js.UndefOr[TransformStyleProperty]]
-  var WebkitTransition: FnValue[js.UndefOr[TransitionProperty]]
-  var WebkitTransitionDelay: FnValue[js.UndefOr[GlobalsString]]
-  var WebkitTransitionDuration: FnValue[js.UndefOr[GlobalsString]]
-  var WebkitTransitionProperty: FnValue[js.UndefOr[TransitionPropertyProperty]]
-  var WebkitTransitionTimingFunction: FnValue[js.UndefOr[TransitionTimingFunctionProperty]]
-  var WebkitUserModify: FnValue[js.UndefOr[WebkitUserModifyProperty]]
-  var WebkitUserSelect: FnValue[js.UndefOr[UserSelectProperty]]
-  var WebkitWritingMode: FnValue[js.UndefOr[WritingModeProperty]]
-  var alignContent: FnValue[js.UndefOr[AlignContentProperty]]
-  var alignItems: FnValue[js.UndefOr[AlignItemsProperty]]
-  var alignSelf: FnValue[js.UndefOr[AlignSelfProperty]]
-  var alignmentBaseline: FnValue[js.UndefOr[AlignmentBaselineProperty]]
-  var all: FnValue[js.UndefOr[Globals]]
-  var animation: FnValue[js.UndefOr[AnimationProperty]]
-  var animationDelay: FnValue[js.UndefOr[GlobalsString]]
-  var animationDirection: FnValue[js.UndefOr[AnimationDirectionProperty]]
-  var animationDuration: FnValue[js.UndefOr[GlobalsString]]
-  var animationFillMode: FnValue[js.UndefOr[AnimationFillModeProperty]]
-  var animationIterationCount: FnValue[js.UndefOr[AnimationIterationCountProperty]]
-  var animationName: FnValue[js.UndefOr[AnimationNameProperty]]
-  var animationPlayState: FnValue[js.UndefOr[AnimationPlayStateProperty]]
-  var animationTimingFunction: FnValue[js.UndefOr[AnimationTimingFunctionProperty]]
-  var appearance: FnValue[js.UndefOr[AppearanceProperty]]
-  var backdropFilter: FnValue[js.UndefOr[BackdropFilterProperty]]
-  var backfaceVisibility: FnValue[js.UndefOr[BackfaceVisibilityProperty]]
-  var background: FnValue[js.UndefOr[BackgroundProperty[String | Double]]]
-  var backgroundAttachment: FnValue[js.UndefOr[BackgroundAttachmentProperty]]
-  var backgroundBlendMode: FnValue[js.UndefOr[BackgroundBlendModeProperty]]
-  var backgroundClip: FnValue[js.UndefOr[BackgroundClipProperty]]
-  var backgroundColor: FnValue[js.UndefOr[BackgroundColorProperty]]
-  var backgroundImage: FnValue[js.UndefOr[BackgroundImageProperty]]
-  var backgroundOrigin: FnValue[js.UndefOr[BackgroundOriginProperty]]
-  var backgroundPosition: FnValue[js.UndefOr[BackgroundPositionProperty[String | Double]]]
-  var backgroundPositionX: FnValue[js.UndefOr[BackgroundPositionXProperty[String | Double]]]
-  var backgroundPositionY: FnValue[js.UndefOr[BackgroundPositionYProperty[String | Double]]]
-  var backgroundRepeat: FnValue[js.UndefOr[BackgroundRepeatProperty]]
-  var backgroundSize: FnValue[js.UndefOr[BackgroundSizeProperty[String | Double]]]
-  var baselineShift: FnValue[js.UndefOr[BaselineShiftProperty[String | Double]]]
-  var blockOverflow: FnValue[js.UndefOr[BlockOverflowProperty]]
-  var blockSize: FnValue[js.UndefOr[BlockSizeProperty[String | Double]]]
-  var border: FnValue[js.UndefOr[BorderProperty[String | Double]]]
-  var borderBlock: FnValue[js.UndefOr[BorderBlockProperty[String | Double]]]
-  var borderBlockColor: FnValue[js.UndefOr[BorderBlockColorProperty]]
-  var borderBlockEnd: FnValue[js.UndefOr[BorderBlockEndProperty[String | Double]]]
-  var borderBlockEndColor: FnValue[js.UndefOr[BorderBlockEndColorProperty]]
-  var borderBlockEndStyle: FnValue[js.UndefOr[BorderBlockEndStyleProperty]]
-  var borderBlockEndWidth: FnValue[js.UndefOr[BorderBlockEndWidthProperty[String | Double]]]
-  var borderBlockStart: FnValue[js.UndefOr[BorderBlockStartProperty[String | Double]]]
-  var borderBlockStartColor: FnValue[js.UndefOr[BorderBlockStartColorProperty]]
-  var borderBlockStartStyle: FnValue[js.UndefOr[BorderBlockStartStyleProperty]]
-  var borderBlockStartWidth: FnValue[js.UndefOr[BorderBlockStartWidthProperty[String | Double]]]
-  var borderBlockStyle: FnValue[js.UndefOr[BorderBlockStyleProperty]]
-  var borderBlockWidth: FnValue[js.UndefOr[BorderBlockWidthProperty[String | Double]]]
-  var borderBottom: FnValue[js.UndefOr[BorderBottomProperty[String | Double]]]
-  var borderBottomColor: FnValue[js.UndefOr[BorderBottomColorProperty]]
-  var borderBottomLeftRadius: FnValue[js.UndefOr[BorderBottomLeftRadiusProperty[String | Double]]]
-  var borderBottomRightRadius: FnValue[js.UndefOr[BorderBottomRightRadiusProperty[String | Double]]]
-  var borderBottomStyle: FnValue[js.UndefOr[BorderBottomStyleProperty]]
-  var borderBottomWidth: FnValue[js.UndefOr[BorderBottomWidthProperty[String | Double]]]
-  var borderCollapse: FnValue[js.UndefOr[BorderCollapseProperty]]
-  var borderColor: FnValue[js.UndefOr[BorderColorProperty]]
-  var borderEndEndRadius: FnValue[js.UndefOr[BorderEndEndRadiusProperty[String | Double]]]
-  var borderEndStartRadius: FnValue[js.UndefOr[BorderEndStartRadiusProperty[String | Double]]]
-  var borderImage: FnValue[js.UndefOr[BorderImageProperty]]
-  var borderImageOutset: FnValue[js.UndefOr[BorderImageOutsetProperty[String | Double]]]
-  var borderImageRepeat: FnValue[js.UndefOr[BorderImageRepeatProperty]]
-  var borderImageSlice: FnValue[js.UndefOr[BorderImageSliceProperty]]
-  var borderImageSource: FnValue[js.UndefOr[BorderImageSourceProperty]]
-  var borderImageWidth: FnValue[js.UndefOr[BorderImageWidthProperty[String | Double]]]
-  var borderInline: FnValue[js.UndefOr[BorderInlineProperty[String | Double]]]
-  var borderInlineColor: FnValue[js.UndefOr[BorderInlineColorProperty]]
-  var borderInlineEnd: FnValue[js.UndefOr[BorderInlineEndProperty[String | Double]]]
-  var borderInlineEndColor: FnValue[js.UndefOr[BorderInlineEndColorProperty]]
-  var borderInlineEndStyle: FnValue[js.UndefOr[BorderInlineEndStyleProperty]]
-  var borderInlineEndWidth: FnValue[js.UndefOr[BorderInlineEndWidthProperty[String | Double]]]
-  var borderInlineStart: FnValue[js.UndefOr[BorderInlineStartProperty[String | Double]]]
-  var borderInlineStartColor: FnValue[js.UndefOr[BorderInlineStartColorProperty]]
-  var borderInlineStartStyle: FnValue[js.UndefOr[BorderInlineStartStyleProperty]]
-  var borderInlineStartWidth: FnValue[js.UndefOr[BorderInlineStartWidthProperty[String | Double]]]
-  var borderInlineStyle: FnValue[js.UndefOr[BorderInlineStyleProperty]]
-  var borderInlineWidth: FnValue[js.UndefOr[BorderInlineWidthProperty[String | Double]]]
-  var borderLeft: FnValue[js.UndefOr[BorderLeftProperty[String | Double]]]
-  var borderLeftColor: FnValue[js.UndefOr[BorderLeftColorProperty]]
-  var borderLeftStyle: FnValue[js.UndefOr[BorderLeftStyleProperty]]
-  var borderLeftWidth: FnValue[js.UndefOr[BorderLeftWidthProperty[String | Double]]]
-  var borderRadius: FnValue[js.UndefOr[BorderRadiusProperty[String | Double]]]
-  var borderRight: FnValue[js.UndefOr[BorderRightProperty[String | Double]]]
-  var borderRightColor: FnValue[js.UndefOr[BorderRightColorProperty]]
-  var borderRightStyle: FnValue[js.UndefOr[BorderRightStyleProperty]]
-  var borderRightWidth: FnValue[js.UndefOr[BorderRightWidthProperty[String | Double]]]
-  var borderSpacing: FnValue[js.UndefOr[BorderSpacingProperty[String | Double]]]
-  var borderStartEndRadius: FnValue[js.UndefOr[BorderStartEndRadiusProperty[String | Double]]]
-  var borderStartStartRadius: FnValue[js.UndefOr[BorderStartStartRadiusProperty[String | Double]]]
-  var borderStyle: FnValue[js.UndefOr[BorderStyleProperty]]
-  var borderTop: FnValue[js.UndefOr[BorderTopProperty[String | Double]]]
-  var borderTopColor: FnValue[js.UndefOr[BorderTopColorProperty]]
-  var borderTopLeftRadius: FnValue[js.UndefOr[BorderTopLeftRadiusProperty[String | Double]]]
-  var borderTopRightRadius: FnValue[js.UndefOr[BorderTopRightRadiusProperty[String | Double]]]
-  var borderTopStyle: FnValue[js.UndefOr[BorderTopStyleProperty]]
-  var borderTopWidth: FnValue[js.UndefOr[BorderTopWidthProperty[String | Double]]]
-  var borderWidth: FnValue[js.UndefOr[BorderWidthProperty[String | Double]]]
-  var bottom: FnValue[js.UndefOr[BottomProperty[String | Double]]]
-  var boxAlign: FnValue[js.UndefOr[BoxAlignProperty]]
-  var boxDecorationBreak: FnValue[js.UndefOr[BoxDecorationBreakProperty]]
-  var boxDirection: FnValue[js.UndefOr[BoxDirectionProperty]]
-  var boxFlex: FnValue[js.UndefOr[GlobalsNumber]]
-  var boxFlexGroup: FnValue[js.UndefOr[GlobalsNumber]]
-  var boxLines: FnValue[js.UndefOr[BoxLinesProperty]]
-  var boxOrdinalGroup: FnValue[js.UndefOr[GlobalsNumber]]
-  var boxOrient: FnValue[js.UndefOr[BoxOrientProperty]]
-  var boxPack: FnValue[js.UndefOr[BoxPackProperty]]
-  var boxShadow: FnValue[js.UndefOr[BoxShadowProperty]]
-  var boxSizing: FnValue[js.UndefOr[BoxSizingProperty]]
-  var breakAfter: FnValue[js.UndefOr[BreakAfterProperty]]
-  var breakBefore: FnValue[js.UndefOr[BreakBeforeProperty]]
-  var breakInside: FnValue[js.UndefOr[BreakInsideProperty]]
-  var captionSide: FnValue[js.UndefOr[CaptionSideProperty]]
-  var caretColor: FnValue[js.UndefOr[CaretColorProperty]]
-  var clear: FnValue[js.UndefOr[ClearProperty]]
-  var clip: FnValue[js.UndefOr[ClipProperty]]
-  var clipPath: FnValue[js.UndefOr[ClipPathProperty]]
-  var clipRule: FnValue[js.UndefOr[ClipRuleProperty]]
-  var color: FnValue[js.UndefOr[ColorProperty]]
-  var colorAdjust: FnValue[js.UndefOr[ColorAdjustProperty]]
-  var colorInterpolation: FnValue[js.UndefOr[ColorInterpolationProperty]]
-  var colorRendering: FnValue[js.UndefOr[ColorRenderingProperty]]
-  var columnCount: FnValue[js.UndefOr[ColumnCountProperty]]
-  var columnFill: FnValue[js.UndefOr[ColumnFillProperty]]
-  var columnGap: FnValue[js.UndefOr[ColumnGapProperty[String | Double]]]
-  var columnRule: FnValue[js.UndefOr[ColumnRuleProperty[String | Double]]]
-  var columnRuleColor: FnValue[js.UndefOr[ColumnRuleColorProperty]]
-  var columnRuleStyle: FnValue[js.UndefOr[ColumnRuleStyleProperty]]
-  var columnRuleWidth: FnValue[js.UndefOr[ColumnRuleWidthProperty[String | Double]]]
-  var columnSpan: FnValue[js.UndefOr[ColumnSpanProperty]]
-  var columnWidth: FnValue[js.UndefOr[ColumnWidthProperty[String | Double]]]
-  var columns: FnValue[js.UndefOr[ColumnsProperty[String | Double]]]
-  var contain: FnValue[js.UndefOr[ContainProperty]]
-  var content: FnValue[js.UndefOr[ContentProperty]]
-  var counterIncrement: FnValue[js.UndefOr[CounterIncrementProperty]]
-  var counterReset: FnValue[js.UndefOr[CounterResetProperty]]
-  var counterSet: FnValue[js.UndefOr[CounterSetProperty]]
-  var cursor: FnValue[js.UndefOr[CursorProperty]]
-  var direction: FnValue[js.UndefOr[DirectionProperty]]
-  var display: FnValue[js.UndefOr[DisplayProperty]]
-  var dominantBaseline: FnValue[js.UndefOr[DominantBaselineProperty]]
-  var emptyCells: FnValue[js.UndefOr[EmptyCellsProperty]]
-  var fill: FnValue[js.UndefOr[FillProperty]]
-  var fillOpacity: FnValue[js.UndefOr[GlobalsNumber]]
-  var fillRule: FnValue[js.UndefOr[FillRuleProperty]]
-  var filter: FnValue[js.UndefOr[FilterProperty]]
-  var flex: FnValue[js.UndefOr[FlexProperty[String | Double]]]
-  var flexBasis: FnValue[js.UndefOr[FlexBasisProperty[String | Double]]]
-  var flexDirection: FnValue[js.UndefOr[FlexDirectionProperty]]
-  var flexFlow: FnValue[js.UndefOr[FlexFlowProperty]]
-  var flexGrow: FnValue[js.UndefOr[GlobalsNumber]]
-  var flexShrink: FnValue[js.UndefOr[GlobalsNumber]]
-  var flexWrap: FnValue[js.UndefOr[FlexWrapProperty]]
-  var float: FnValue[js.UndefOr[FloatProperty]]
-  var floodColor: FnValue[js.UndefOr[FloodColorProperty]]
-  var floodOpacity: FnValue[js.UndefOr[GlobalsNumber]]
-  var font: FnValue[js.UndefOr[FontProperty]]
-  var fontFamily: FnValue[js.UndefOr[FontFamilyProperty]]
-  var fontFeatureSettings: FnValue[js.UndefOr[FontFeatureSettingsProperty]]
-  var fontKerning: FnValue[js.UndefOr[FontKerningProperty]]
-  var fontLanguageOverride: FnValue[js.UndefOr[FontLanguageOverrideProperty]]
-  var fontOpticalSizing: FnValue[js.UndefOr[FontOpticalSizingProperty]]
-  var fontSize: FnValue[js.UndefOr[FontSizeProperty[String | Double]]]
-  var fontSizeAdjust: FnValue[js.UndefOr[FontSizeAdjustProperty]]
-  var fontStretch: FnValue[js.UndefOr[FontStretchProperty]]
-  var fontStyle: FnValue[js.UndefOr[FontStyleProperty]]
-  var fontSynthesis: FnValue[js.UndefOr[FontSynthesisProperty]]
-  var fontVariant: FnValue[js.UndefOr[FontVariantProperty]]
-  var fontVariantAlternates: FnValue[js.UndefOr[FontVariantAlternatesProperty]]
-  var fontVariantCaps: FnValue[js.UndefOr[FontVariantCapsProperty]]
-  var fontVariantEastAsian: FnValue[js.UndefOr[FontVariantEastAsianProperty]]
-  var fontVariantLigatures: FnValue[js.UndefOr[FontVariantLigaturesProperty]]
-  var fontVariantNumeric: FnValue[js.UndefOr[FontVariantNumericProperty]]
-  var fontVariantPosition: FnValue[js.UndefOr[FontVariantPositionProperty]]
-  var fontVariationSettings: FnValue[js.UndefOr[FontVariationSettingsProperty]]
-  var fontWeight: FnValue[js.UndefOr[FontWeightProperty]]
-  var gap: FnValue[js.UndefOr[GapProperty[String | Double]]]
-  var glyphOrientationVertical: FnValue[js.UndefOr[GlyphOrientationVerticalProperty]]
-  var grid: FnValue[js.UndefOr[GridProperty]]
-  var gridArea: FnValue[js.UndefOr[GridAreaProperty]]
-  var gridAutoColumns: FnValue[js.UndefOr[GridAutoColumnsProperty[String | Double]]]
-  var gridAutoFlow: FnValue[js.UndefOr[GridAutoFlowProperty]]
-  var gridAutoRows: FnValue[js.UndefOr[GridAutoRowsProperty[String | Double]]]
-  var gridColumn: FnValue[js.UndefOr[GridColumnProperty]]
-  var gridColumnEnd: FnValue[js.UndefOr[GridColumnEndProperty]]
-  var gridColumnGap: FnValue[js.UndefOr[GridColumnGapProperty[String | Double]]]
-  var gridColumnStart: FnValue[js.UndefOr[GridColumnStartProperty]]
-  var gridGap: FnValue[js.UndefOr[GridGapProperty[String | Double]]]
-  var gridRow: FnValue[js.UndefOr[GridRowProperty]]
-  var gridRowEnd: FnValue[js.UndefOr[GridRowEndProperty]]
-  var gridRowGap: FnValue[js.UndefOr[GridRowGapProperty[String | Double]]]
-  var gridRowStart: FnValue[js.UndefOr[GridRowStartProperty]]
-  var gridTemplate: FnValue[js.UndefOr[GridTemplateProperty]]
-  var gridTemplateAreas: FnValue[js.UndefOr[GridTemplateAreasProperty]]
-  var gridTemplateColumns: FnValue[js.UndefOr[GridTemplateColumnsProperty[String | Double]]]
-  var gridTemplateRows: FnValue[js.UndefOr[GridTemplateRowsProperty[String | Double]]]
-  var hangingPunctuation: FnValue[js.UndefOr[HangingPunctuationProperty]]
-  var height: FnValue[js.UndefOr[HeightProperty[String | Double]]]
-  var hyphens: FnValue[js.UndefOr[HyphensProperty]]
-  var imageOrientation: FnValue[js.UndefOr[ImageOrientationProperty]]
-  var imageRendering: FnValue[js.UndefOr[ImageRenderingProperty]]
-  var imageResolution: FnValue[js.UndefOr[ImageResolutionProperty]]
-  var imeMode: FnValue[js.UndefOr[ImeModeProperty]]
-  var initialLetter: FnValue[js.UndefOr[InitialLetterProperty]]
-  var inlineSize: FnValue[js.UndefOr[InlineSizeProperty[String | Double]]]
-  var inset: FnValue[js.UndefOr[InsetProperty[String | Double]]]
-  var insetBlock: FnValue[js.UndefOr[InsetBlockProperty[String | Double]]]
-  var insetBlockEnd: FnValue[js.UndefOr[InsetBlockEndProperty[String | Double]]]
-  var insetBlockStart: FnValue[js.UndefOr[InsetBlockStartProperty[String | Double]]]
-  var insetInline: FnValue[js.UndefOr[InsetInlineProperty[String | Double]]]
-  var insetInlineEnd: FnValue[js.UndefOr[InsetInlineEndProperty[String | Double]]]
-  var insetInlineStart: FnValue[js.UndefOr[InsetInlineStartProperty[String | Double]]]
-  var isolation: FnValue[js.UndefOr[IsolationProperty]]
-  var justifyContent: FnValue[js.UndefOr[JustifyContentProperty]]
-  var justifyItems: FnValue[js.UndefOr[JustifyItemsProperty]]
-  var justifySelf: FnValue[js.UndefOr[JustifySelfProperty]]
-  var left: FnValue[js.UndefOr[LeftProperty[String | Double]]]
-  var letterSpacing: FnValue[js.UndefOr[LetterSpacingProperty[String | Double]]]
-  var lightingColor: FnValue[js.UndefOr[LightingColorProperty]]
-  var lineBreak: FnValue[js.UndefOr[LineBreakProperty]]
-  var lineClamp: FnValue[js.UndefOr[LineClampProperty]]
-  var lineHeight: FnValue[js.UndefOr[LineHeightProperty[String | Double]]]
-  var lineHeightStep: FnValue[js.UndefOr[LineHeightStepProperty[String | Double]]]
-  var listStyle: FnValue[js.UndefOr[ListStyleProperty]]
-  var listStyleImage: FnValue[js.UndefOr[ListStyleImageProperty]]
-  var listStylePosition: FnValue[js.UndefOr[ListStylePositionProperty]]
-  var listStyleType: FnValue[js.UndefOr[ListStyleTypeProperty]]
-  var margin: FnValue[js.UndefOr[MarginProperty[String | Double]]]
-  var marginBlock: FnValue[js.UndefOr[MarginBlockProperty[String | Double]]]
-  var marginBlockEnd: FnValue[js.UndefOr[MarginBlockEndProperty[String | Double]]]
-  var marginBlockStart: FnValue[js.UndefOr[MarginBlockStartProperty[String | Double]]]
-  var marginBottom: FnValue[js.UndefOr[MarginBottomProperty[String | Double]]]
-  var marginInline: FnValue[js.UndefOr[MarginInlineProperty[String | Double]]]
-  var marginInlineEnd: FnValue[js.UndefOr[MarginInlineEndProperty[String | Double]]]
-  var marginInlineStart: FnValue[js.UndefOr[MarginInlineStartProperty[String | Double]]]
-  var marginLeft: FnValue[js.UndefOr[MarginLeftProperty[String | Double]]]
-  var marginRight: FnValue[js.UndefOr[MarginRightProperty[String | Double]]]
-  var marginTop: FnValue[js.UndefOr[MarginTopProperty[String | Double]]]
-  var marker: FnValue[js.UndefOr[MarkerProperty]]
-  var markerEnd: FnValue[js.UndefOr[MarkerEndProperty]]
-  var markerMid: FnValue[js.UndefOr[MarkerMidProperty]]
-  var markerStart: FnValue[js.UndefOr[MarkerStartProperty]]
-  var mask: FnValue[js.UndefOr[MaskProperty[String | Double]]]
-  var maskBorder: FnValue[js.UndefOr[MaskBorderProperty]]
-  var maskBorderMode: FnValue[js.UndefOr[MaskBorderModeProperty]]
-  var maskBorderOutset: FnValue[js.UndefOr[MaskBorderOutsetProperty[String | Double]]]
-  var maskBorderRepeat: FnValue[js.UndefOr[MaskBorderRepeatProperty]]
-  var maskBorderSlice: FnValue[js.UndefOr[MaskBorderSliceProperty]]
-  var maskBorderSource: FnValue[js.UndefOr[MaskBorderSourceProperty]]
-  var maskBorderWidth: FnValue[js.UndefOr[MaskBorderWidthProperty[String | Double]]]
-  var maskClip: FnValue[js.UndefOr[MaskClipProperty]]
-  var maskComposite: FnValue[js.UndefOr[MaskCompositeProperty]]
-  var maskImage: FnValue[js.UndefOr[MaskImageProperty]]
-  var maskMode: FnValue[js.UndefOr[MaskModeProperty]]
-  var maskOrigin: FnValue[js.UndefOr[MaskOriginProperty]]
-  var maskPosition: FnValue[js.UndefOr[MaskPositionProperty[String | Double]]]
-  var maskRepeat: FnValue[js.UndefOr[MaskRepeatProperty]]
-  var maskSize: FnValue[js.UndefOr[MaskSizeProperty[String | Double]]]
-  var maskType: FnValue[js.UndefOr[MaskTypeProperty]]
-  var maxBlockSize: FnValue[js.UndefOr[MaxBlockSizeProperty[String | Double]]]
-  var maxHeight: FnValue[js.UndefOr[MaxHeightProperty[String | Double]]]
-  var maxInlineSize: FnValue[js.UndefOr[MaxInlineSizeProperty[String | Double]]]
-  var maxLines: FnValue[js.UndefOr[MaxLinesProperty]]
-  var maxWidth: FnValue[js.UndefOr[MaxWidthProperty[String | Double]]]
-  var minBlockSize: FnValue[js.UndefOr[MinBlockSizeProperty[String | Double]]]
-  var minHeight: FnValue[js.UndefOr[MinHeightProperty[String | Double]]]
-  var minInlineSize: FnValue[js.UndefOr[MinInlineSizeProperty[String | Double]]]
-  var minWidth: FnValue[js.UndefOr[MinWidthProperty[String | Double]]]
-  var mixBlendMode: FnValue[js.UndefOr[MixBlendModeProperty]]
-  var motion: FnValue[js.UndefOr[OffsetProperty[String | Double]]]
-  var motionDistance: FnValue[js.UndefOr[OffsetDistanceProperty[String | Double]]]
-  var motionPath: FnValue[js.UndefOr[OffsetPathProperty]]
-  var motionRotation: FnValue[js.UndefOr[OffsetRotateProperty]]
-  var msAccelerator: FnValue[js.UndefOr[MsAcceleratorProperty]]
-  var msAlignSelf: FnValue[js.UndefOr[AlignSelfProperty]]
-  var msBlockProgression: FnValue[js.UndefOr[MsBlockProgressionProperty]]
-  var msContentZoomChaining: FnValue[js.UndefOr[MsContentZoomChainingProperty]]
-  var msContentZoomLimit: FnValue[js.UndefOr[GlobalsString]]
-  var msContentZoomLimitMax: FnValue[js.UndefOr[GlobalsString]]
-  var msContentZoomLimitMin: FnValue[js.UndefOr[GlobalsString]]
-  var msContentZoomSnap: FnValue[js.UndefOr[MsContentZoomSnapProperty]]
-  var msContentZoomSnapPoints: FnValue[js.UndefOr[GlobalsString]]
-  var msContentZoomSnapType: FnValue[js.UndefOr[MsContentZoomSnapTypeProperty]]
-  var msContentZooming: FnValue[js.UndefOr[MsContentZoomingProperty]]
-  var msFilter: FnValue[js.UndefOr[GlobalsString]]
-  var msFlex: FnValue[js.UndefOr[FlexProperty[String | Double]]]
-  var msFlexDirection: FnValue[js.UndefOr[FlexDirectionProperty]]
-  var msFlexPositive: FnValue[js.UndefOr[GlobalsNumber]]
-  var msFlowFrom: FnValue[js.UndefOr[MsFlowFromProperty]]
-  var msFlowInto: FnValue[js.UndefOr[MsFlowIntoProperty]]
-  var msGridColumns: FnValue[js.UndefOr[GridAutoColumnsProperty[String | Double]]]
-  var msGridRows: FnValue[js.UndefOr[GridAutoRowsProperty[String | Double]]]
-  var msHighContrastAdjust: FnValue[js.UndefOr[MsHighContrastAdjustProperty]]
-  var msHyphenateLimitChars: FnValue[js.UndefOr[MsHyphenateLimitCharsProperty]]
-  var msHyphenateLimitLines: FnValue[js.UndefOr[MsHyphenateLimitLinesProperty]]
-  var msHyphenateLimitZone: FnValue[js.UndefOr[MsHyphenateLimitZoneProperty[String | Double]]]
-  var msHyphens: FnValue[js.UndefOr[HyphensProperty]]
-  var msImeAlign: FnValue[js.UndefOr[MsImeAlignProperty]]
-  var msImeMode: FnValue[js.UndefOr[ImeModeProperty]]
-  var msLineBreak: FnValue[js.UndefOr[LineBreakProperty]]
-  var msOrder: FnValue[js.UndefOr[GlobalsNumber]]
-  var msOverflowStyle: FnValue[js.UndefOr[MsOverflowStyleProperty]]
-  var msOverflowX: FnValue[js.UndefOr[OverflowXProperty]]
-  var msOverflowY: FnValue[js.UndefOr[OverflowYProperty]]
-  var msScrollChaining: FnValue[js.UndefOr[MsScrollChainingProperty]]
-  var msScrollLimit: FnValue[js.UndefOr[GlobalsString]]
-  var msScrollLimitXMax: FnValue[js.UndefOr[MsScrollLimitXMaxProperty[String | Double]]]
-  var msScrollLimitXMin: FnValue[js.UndefOr[MsScrollLimitXMinProperty[String | Double]]]
-  var msScrollLimitYMax: FnValue[js.UndefOr[MsScrollLimitYMaxProperty[String | Double]]]
-  var msScrollLimitYMin: FnValue[js.UndefOr[MsScrollLimitYMinProperty[String | Double]]]
-  var msScrollRails: FnValue[js.UndefOr[MsScrollRailsProperty]]
-  var msScrollSnapPointsX: FnValue[js.UndefOr[GlobalsString]]
-  var msScrollSnapPointsY: FnValue[js.UndefOr[GlobalsString]]
-  var msScrollSnapType: FnValue[js.UndefOr[MsScrollSnapTypeProperty]]
-  var msScrollSnapX: FnValue[js.UndefOr[GlobalsString]]
-  var msScrollSnapY: FnValue[js.UndefOr[GlobalsString]]
-  var msScrollTranslation: FnValue[js.UndefOr[MsScrollTranslationProperty]]
-  var msScrollbar3dlightColor: FnValue[js.UndefOr[MsScrollbar3dlightColorProperty]]
-  var msScrollbarArrowColor: FnValue[js.UndefOr[MsScrollbarArrowColorProperty]]
-  var msScrollbarBaseColor: FnValue[js.UndefOr[MsScrollbarBaseColorProperty]]
-  var msScrollbarDarkshadowColor: FnValue[js.UndefOr[MsScrollbarDarkshadowColorProperty]]
-  var msScrollbarFaceColor: FnValue[js.UndefOr[MsScrollbarFaceColorProperty]]
-  var msScrollbarHighlightColor: FnValue[js.UndefOr[MsScrollbarHighlightColorProperty]]
-  var msScrollbarShadowColor: FnValue[js.UndefOr[MsScrollbarShadowColorProperty]]
-  var msScrollbarTrackColor: FnValue[js.UndefOr[MsScrollbarTrackColorProperty]]
-  var msTextAutospace: FnValue[js.UndefOr[MsTextAutospaceProperty]]
-  var msTextCombineHorizontal: FnValue[js.UndefOr[TextCombineUprightProperty]]
-  var msTextOverflow: FnValue[js.UndefOr[TextOverflowProperty]]
-  var msTouchAction: FnValue[js.UndefOr[TouchActionProperty]]
-  var msTouchSelect: FnValue[js.UndefOr[MsTouchSelectProperty]]
-  var msTransform: FnValue[js.UndefOr[TransformProperty]]
-  var msTransformOrigin: FnValue[js.UndefOr[TransformOriginProperty[String | Double]]]
-  var msTransition: FnValue[js.UndefOr[TransitionProperty]]
-  var msTransitionDelay: FnValue[js.UndefOr[GlobalsString]]
-  var msTransitionDuration: FnValue[js.UndefOr[GlobalsString]]
-  var msTransitionProperty: FnValue[js.UndefOr[TransitionPropertyProperty]]
-  var msTransitionTimingFunction: FnValue[js.UndefOr[TransitionTimingFunctionProperty]]
-  var msUserSelect: FnValue[js.UndefOr[MsUserSelectProperty]]
-  var msWordBreak: FnValue[js.UndefOr[WordBreakProperty]]
-  var msWrapFlow: FnValue[js.UndefOr[MsWrapFlowProperty]]
-  var msWrapMargin: FnValue[js.UndefOr[MsWrapMarginProperty[String | Double]]]
-  var msWrapThrough: FnValue[js.UndefOr[MsWrapThroughProperty]]
-  var msWritingMode: FnValue[js.UndefOr[WritingModeProperty]]
-  var objectFit: FnValue[js.UndefOr[ObjectFitProperty]]
-  var objectPosition: FnValue[js.UndefOr[ObjectPositionProperty[String | Double]]]
-  var offset: FnValue[js.UndefOr[OffsetProperty[String | Double]]]
-  var offsetAnchor: FnValue[js.UndefOr[OffsetAnchorProperty[String | Double]]]
-  var offsetBlock: FnValue[js.UndefOr[InsetBlockProperty[String | Double]]]
-  var offsetBlockEnd: FnValue[js.UndefOr[InsetBlockEndProperty[String | Double]]]
-  var offsetBlockStart: FnValue[js.UndefOr[InsetBlockStartProperty[String | Double]]]
-  var offsetDistance: FnValue[js.UndefOr[OffsetDistanceProperty[String | Double]]]
-  var offsetInline: FnValue[js.UndefOr[InsetInlineProperty[String | Double]]]
-  var offsetInlineEnd: FnValue[js.UndefOr[InsetInlineEndProperty[String | Double]]]
-  var offsetInlineStart: FnValue[js.UndefOr[InsetInlineStartProperty[String | Double]]]
-  var offsetPath: FnValue[js.UndefOr[OffsetPathProperty]]
-  var offsetPosition: FnValue[js.UndefOr[OffsetPositionProperty[String | Double]]]
-  var offsetRotate: FnValue[js.UndefOr[OffsetRotateProperty]]
-  var offsetRotation: FnValue[js.UndefOr[OffsetRotateProperty]]
-  var opacity: FnValue[js.UndefOr[GlobalsNumber]]
-  var order: FnValue[js.UndefOr[GlobalsNumber]]
-  var orphans: FnValue[js.UndefOr[GlobalsNumber]]
-  var outline: FnValue[js.UndefOr[OutlineProperty[String | Double]]]
-  var outlineColor: FnValue[js.UndefOr[OutlineColorProperty]]
-  var outlineOffset: FnValue[js.UndefOr[OutlineOffsetProperty[String | Double]]]
-  var outlineStyle: FnValue[js.UndefOr[OutlineStyleProperty]]
-  var outlineWidth: FnValue[js.UndefOr[OutlineWidthProperty[String | Double]]]
-  var overflow: FnValue[js.UndefOr[OverflowProperty]]
-  var overflowAnchor: FnValue[js.UndefOr[OverflowAnchorProperty]]
-  var overflowBlock: FnValue[js.UndefOr[OverflowBlockProperty]]
-  var overflowClipBox: FnValue[js.UndefOr[OverflowClipBoxProperty]]
-  var overflowInline: FnValue[js.UndefOr[OverflowInlineProperty]]
-  var overflowWrap: FnValue[js.UndefOr[OverflowWrapProperty]]
-  var overflowX: FnValue[js.UndefOr[OverflowXProperty]]
-  var overflowY: FnValue[js.UndefOr[OverflowYProperty]]
-  var overscrollBehavior: FnValue[js.UndefOr[OverscrollBehaviorProperty]]
-  var overscrollBehaviorX: FnValue[js.UndefOr[OverscrollBehaviorXProperty]]
-  var overscrollBehaviorY: FnValue[js.UndefOr[OverscrollBehaviorYProperty]]
-  var padding: FnValue[js.UndefOr[PaddingProperty[String | Double]]]
-  var paddingBlock: FnValue[js.UndefOr[PaddingBlockProperty[String | Double]]]
-  var paddingBlockEnd: FnValue[js.UndefOr[PaddingBlockEndProperty[String | Double]]]
-  var paddingBlockStart: FnValue[js.UndefOr[PaddingBlockStartProperty[String | Double]]]
-  var paddingBottom: FnValue[js.UndefOr[PaddingBottomProperty[String | Double]]]
-  var paddingInline: FnValue[js.UndefOr[PaddingInlineProperty[String | Double]]]
-  var paddingInlineEnd: FnValue[js.UndefOr[PaddingInlineEndProperty[String | Double]]]
-  var paddingInlineStart: FnValue[js.UndefOr[PaddingInlineStartProperty[String | Double]]]
-  var paddingLeft: FnValue[js.UndefOr[PaddingLeftProperty[String | Double]]]
-  var paddingRight: FnValue[js.UndefOr[PaddingRightProperty[String | Double]]]
-  var paddingTop: FnValue[js.UndefOr[PaddingTopProperty[String | Double]]]
-  var pageBreakAfter: FnValue[js.UndefOr[PageBreakAfterProperty]]
-  var pageBreakBefore: FnValue[js.UndefOr[PageBreakBeforeProperty]]
-  var pageBreakInside: FnValue[js.UndefOr[PageBreakInsideProperty]]
-  var paintOrder: FnValue[js.UndefOr[PaintOrderProperty]]
-  var perspective: FnValue[js.UndefOr[PerspectiveProperty[String | Double]]]
-  var perspectiveOrigin: FnValue[js.UndefOr[PerspectiveOriginProperty[String | Double]]]
-  var placeContent: FnValue[js.UndefOr[PlaceContentProperty]]
-  var placeItems: FnValue[js.UndefOr[PlaceItemsProperty]]
-  var placeSelf: FnValue[js.UndefOr[PlaceSelfProperty]]
-  var pointerEvents: FnValue[js.UndefOr[PointerEventsProperty]]
-  var position: FnValue[js.UndefOr[PositionProperty]]
-  var quotes: FnValue[js.UndefOr[QuotesProperty]]
-  var resize: FnValue[js.UndefOr[ResizeProperty]]
-  var right: FnValue[js.UndefOr[RightProperty[String | Double]]]
-  var rotate: FnValue[js.UndefOr[RotateProperty]]
-  var rowGap: FnValue[js.UndefOr[RowGapProperty[String | Double]]]
-  var rubyAlign: FnValue[js.UndefOr[RubyAlignProperty]]
-  var rubyMerge: FnValue[js.UndefOr[RubyMergeProperty]]
-  var rubyPosition: FnValue[js.UndefOr[RubyPositionProperty]]
-  var scale: FnValue[js.UndefOr[ScaleProperty]]
-  var scrollBehavior: FnValue[js.UndefOr[ScrollBehaviorProperty]]
-  var scrollMargin: FnValue[js.UndefOr[ScrollMarginProperty[String | Double]]]
-  var scrollMarginBlock: FnValue[js.UndefOr[ScrollMarginBlockProperty[String | Double]]]
-  var scrollMarginBlockEnd: FnValue[js.UndefOr[ScrollMarginBlockEndProperty[String | Double]]]
-  var scrollMarginBlockStart: FnValue[js.UndefOr[ScrollMarginBlockStartProperty[String | Double]]]
-  var scrollMarginBottom: FnValue[js.UndefOr[ScrollMarginBottomProperty[String | Double]]]
-  var scrollMarginInline: FnValue[js.UndefOr[ScrollMarginInlineProperty[String | Double]]]
-  var scrollMarginInlineEnd: FnValue[js.UndefOr[ScrollMarginInlineEndProperty[String | Double]]]
-  var scrollMarginInlineStart: FnValue[js.UndefOr[ScrollMarginInlineStartProperty[String | Double]]]
-  var scrollMarginLeft: FnValue[js.UndefOr[ScrollMarginLeftProperty[String | Double]]]
-  var scrollMarginRight: FnValue[js.UndefOr[ScrollMarginRightProperty[String | Double]]]
-  var scrollMarginTop: FnValue[js.UndefOr[ScrollMarginTopProperty[String | Double]]]
-  var scrollPadding: FnValue[js.UndefOr[ScrollPaddingProperty[String | Double]]]
-  var scrollPaddingBlock: FnValue[js.UndefOr[ScrollPaddingBlockProperty[String | Double]]]
-  var scrollPaddingBlockEnd: FnValue[js.UndefOr[ScrollPaddingBlockEndProperty[String | Double]]]
-  var scrollPaddingBlockStart: FnValue[js.UndefOr[ScrollPaddingBlockStartProperty[String | Double]]]
-  var scrollPaddingBottom: FnValue[js.UndefOr[ScrollPaddingBottomProperty[String | Double]]]
-  var scrollPaddingInline: FnValue[js.UndefOr[ScrollPaddingInlineProperty[String | Double]]]
-  var scrollPaddingInlineEnd: FnValue[js.UndefOr[ScrollPaddingInlineEndProperty[String | Double]]]
-  var scrollPaddingInlineStart: FnValue[js.UndefOr[ScrollPaddingInlineStartProperty[String | Double]]]
-  var scrollPaddingLeft: FnValue[js.UndefOr[ScrollPaddingLeftProperty[String | Double]]]
-  var scrollPaddingRight: FnValue[js.UndefOr[ScrollPaddingRightProperty[String | Double]]]
-  var scrollPaddingTop: FnValue[js.UndefOr[ScrollPaddingTopProperty[String | Double]]]
-  var scrollSnapAlign: FnValue[js.UndefOr[ScrollSnapAlignProperty]]
-  var scrollSnapCoordinate: FnValue[js.UndefOr[ScrollSnapCoordinateProperty[String | Double]]]
-  var scrollSnapDestination: FnValue[js.UndefOr[ScrollSnapDestinationProperty[String | Double]]]
-  var scrollSnapPointsX: FnValue[js.UndefOr[ScrollSnapPointsXProperty]]
-  var scrollSnapPointsY: FnValue[js.UndefOr[ScrollSnapPointsYProperty]]
-  var scrollSnapStop: FnValue[js.UndefOr[ScrollSnapStopProperty]]
-  var scrollSnapType: FnValue[js.UndefOr[ScrollSnapTypeProperty]]
-  var scrollSnapTypeX: FnValue[js.UndefOr[ScrollSnapTypeXProperty]]
-  var scrollSnapTypeY: FnValue[js.UndefOr[ScrollSnapTypeYProperty]]
-  var scrollbarColor: FnValue[js.UndefOr[ScrollbarColorProperty]]
-  var scrollbarWidth: FnValue[js.UndefOr[ScrollbarWidthProperty]]
-  var shapeImageThreshold: FnValue[js.UndefOr[GlobalsNumber]]
-  var shapeMargin: FnValue[js.UndefOr[ShapeMarginProperty[String | Double]]]
-  var shapeOutside: FnValue[js.UndefOr[ShapeOutsideProperty]]
-  var shapeRendering: FnValue[js.UndefOr[ShapeRenderingProperty]]
-  var stopColor: FnValue[js.UndefOr[StopColorProperty]]
-  var stopOpacity: FnValue[js.UndefOr[GlobalsNumber]]
-  var stroke: FnValue[js.UndefOr[StrokeProperty]]
-  var strokeDasharray: FnValue[js.UndefOr[StrokeDasharrayProperty[String | Double]]]
-  var strokeDashoffset: FnValue[js.UndefOr[StrokeDashoffsetProperty[String | Double]]]
-  var strokeLinecap: FnValue[js.UndefOr[StrokeLinecapProperty]]
-  var strokeLinejoin: FnValue[js.UndefOr[StrokeLinejoinProperty]]
-  var strokeMiterlimit: FnValue[js.UndefOr[GlobalsNumber]]
-  var strokeOpacity: FnValue[js.UndefOr[GlobalsNumber]]
-  var strokeWidth: FnValue[js.UndefOr[StrokeWidthProperty[String | Double]]]
-  var tabSize: FnValue[js.UndefOr[TabSizeProperty[String | Double]]]
-  var tableLayout: FnValue[js.UndefOr[TableLayoutProperty]]
-  var textAlign: FnValue[js.UndefOr[TextAlignProperty]]
-  var textAlignLast: FnValue[js.UndefOr[TextAlignLastProperty]]
-  var textAnchor: FnValue[js.UndefOr[TextAnchorProperty]]
-  var textCombineHorizontal: FnValue[js.UndefOr[TextCombineUprightProperty]]
-  var textCombineUpright: FnValue[js.UndefOr[TextCombineUprightProperty]]
-  var textDecoration: FnValue[js.UndefOr[TextDecorationProperty]]
-  var textDecorationColor: FnValue[js.UndefOr[TextDecorationColorProperty]]
-  var textDecorationLine: FnValue[js.UndefOr[TextDecorationLineProperty]]
-  var textDecorationSkip: FnValue[js.UndefOr[TextDecorationSkipProperty]]
-  var textDecorationSkipInk: FnValue[js.UndefOr[TextDecorationSkipInkProperty]]
-  var textDecorationStyle: FnValue[js.UndefOr[TextDecorationStyleProperty]]
-  var textEmphasis: FnValue[js.UndefOr[TextEmphasisProperty]]
-  var textEmphasisColor: FnValue[js.UndefOr[TextEmphasisColorProperty]]
-  var textEmphasisPosition: FnValue[js.UndefOr[GlobalsString]]
-  var textEmphasisStyle: FnValue[js.UndefOr[TextEmphasisStyleProperty]]
-  var textIndent: FnValue[js.UndefOr[TextIndentProperty[String | Double]]]
-  var textJustify: FnValue[js.UndefOr[TextJustifyProperty]]
-  var textOrientation: FnValue[js.UndefOr[TextOrientationProperty]]
-  var textOverflow: FnValue[js.UndefOr[TextOverflowProperty]]
-  var textRendering: FnValue[js.UndefOr[TextRenderingProperty]]
-  var textShadow: FnValue[js.UndefOr[TextShadowProperty]]
-  var textSizeAdjust: FnValue[js.UndefOr[TextSizeAdjustProperty]]
-  var textTransform: FnValue[js.UndefOr[TextTransformProperty]]
-  var textUnderlinePosition: FnValue[js.UndefOr[TextUnderlinePositionProperty]]
-  var top: FnValue[js.UndefOr[TopProperty[String | Double]]]
-  var touchAction: FnValue[js.UndefOr[TouchActionProperty]]
-  var transform: FnValue[js.UndefOr[TransformProperty]]
-  var transformBox: FnValue[js.UndefOr[TransformBoxProperty]]
-  var transformOrigin: FnValue[js.UndefOr[TransformOriginProperty[String | Double]]]
-  var transformStyle: FnValue[js.UndefOr[TransformStyleProperty]]
-  var transition: FnValue[js.UndefOr[TransitionProperty]]
-  var transitionDelay: FnValue[js.UndefOr[GlobalsString]]
-  var transitionDuration: FnValue[js.UndefOr[GlobalsString]]
-  var transitionProperty: FnValue[js.UndefOr[TransitionPropertyProperty]]
-  var transitionTimingFunction: FnValue[js.UndefOr[TransitionTimingFunctionProperty]]
-  var translate: FnValue[js.UndefOr[TranslateProperty[String | Double]]]
-  var unicodeBidi: FnValue[js.UndefOr[UnicodeBidiProperty]]
-  var userSelect: FnValue[js.UndefOr[UserSelectProperty]]
-  var vectorEffect: FnValue[js.UndefOr[VectorEffectProperty]]
-  var verticalAlign: FnValue[js.UndefOr[VerticalAlignProperty[String | Double]]]
-  var visibility: FnValue[js.UndefOr[VisibilityProperty]]
-  var whiteSpace: FnValue[js.UndefOr[WhiteSpaceProperty]]
-  var widows: FnValue[js.UndefOr[GlobalsNumber]]
-  var width: FnValue[js.UndefOr[WidthProperty[String | Double]]]
-  var willChange: FnValue[js.UndefOr[WillChangeProperty]]
-  var wordBreak: FnValue[js.UndefOr[WordBreakProperty]]
-  var wordSpacing: FnValue[js.UndefOr[WordSpacingProperty[String | Double]]]
-  var wordWrap: FnValue[js.UndefOr[WordWrapProperty]]
-  var writingMode: FnValue[js.UndefOr[WritingModeProperty]]
-  var zIndex: FnValue[js.UndefOr[ZIndexProperty]]
-  var zoom: FnValue[js.UndefOr[ZoomProperty]]
+  var KhtmlBoxAlign: FnValue[js.UndefOr[BoxAlignProperty]] = js.native
+  var KhtmlBoxDirection: FnValue[js.UndefOr[BoxDirectionProperty]] = js.native
+  var KhtmlBoxFlex: FnValue[js.UndefOr[GlobalsNumber]] = js.native
+  var KhtmlBoxFlexGroup: FnValue[js.UndefOr[GlobalsNumber]] = js.native
+  var KhtmlBoxLines: FnValue[js.UndefOr[BoxLinesProperty]] = js.native
+  var KhtmlBoxOrdinalGroup: FnValue[js.UndefOr[GlobalsNumber]] = js.native
+  var KhtmlBoxOrient: FnValue[js.UndefOr[BoxOrientProperty]] = js.native
+  var KhtmlBoxPack: FnValue[js.UndefOr[BoxPackProperty]] = js.native
+  var KhtmlLineBreak: FnValue[js.UndefOr[LineBreakProperty]] = js.native
+  var KhtmlOpacity: FnValue[js.UndefOr[GlobalsNumber]] = js.native
+  var KhtmlUserSelect: FnValue[js.UndefOr[UserSelectProperty]] = js.native
+  var MozAnimation: FnValue[js.UndefOr[AnimationProperty]] = js.native
+  var MozAnimationDelay: FnValue[js.UndefOr[GlobalsString]] = js.native
+  var MozAnimationDirection: FnValue[js.UndefOr[AnimationDirectionProperty]] = js.native
+  var MozAnimationDuration: FnValue[js.UndefOr[GlobalsString]] = js.native
+  var MozAnimationFillMode: FnValue[js.UndefOr[AnimationFillModeProperty]] = js.native
+  var MozAnimationIterationCount: FnValue[js.UndefOr[AnimationIterationCountProperty]] = js.native
+  var MozAnimationName: FnValue[js.UndefOr[AnimationNameProperty]] = js.native
+  var MozAnimationPlayState: FnValue[js.UndefOr[AnimationPlayStateProperty]] = js.native
+  var MozAnimationTimingFunction: FnValue[js.UndefOr[AnimationTimingFunctionProperty]] = js.native
+  var MozAppearance: FnValue[js.UndefOr[MozAppearanceProperty]] = js.native
+  var MozBackfaceVisibility: FnValue[js.UndefOr[BackfaceVisibilityProperty]] = js.native
+  var MozBackgroundClip: FnValue[js.UndefOr[BackgroundClipProperty]] = js.native
+  var MozBackgroundInlinePolicy: FnValue[js.UndefOr[BoxDecorationBreakProperty]] = js.native
+  var MozBackgroundOrigin: FnValue[js.UndefOr[BackgroundOriginProperty]] = js.native
+  var MozBackgroundSize: FnValue[js.UndefOr[BackgroundSizeProperty[String | Double]]] = js.native
+  var MozBinding: FnValue[js.UndefOr[MozBindingProperty]] = js.native
+  var MozBorderBottomColors: FnValue[js.UndefOr[MozBorderBottomColorsProperty]] = js.native
+  var MozBorderEndColor: FnValue[js.UndefOr[BorderInlineEndColorProperty]] = js.native
+  var MozBorderEndStyle: FnValue[js.UndefOr[BorderInlineEndStyleProperty]] = js.native
+  var MozBorderEndWidth: FnValue[js.UndefOr[BorderInlineEndWidthProperty[String | Double]]] = js.native
+  var MozBorderImage: FnValue[js.UndefOr[BorderImageProperty]] = js.native
+  var MozBorderLeftColors: FnValue[js.UndefOr[MozBorderLeftColorsProperty]] = js.native
+  var MozBorderRadius: FnValue[js.UndefOr[BorderRadiusProperty[String | Double]]] = js.native
+  var MozBorderRadiusBottomleft: FnValue[js.UndefOr[BorderBottomLeftRadiusProperty[String | Double]]] = js.native
+  var MozBorderRadiusBottomright: FnValue[js.UndefOr[BorderBottomRightRadiusProperty[String | Double]]] = js.native
+  var MozBorderRadiusTopleft: FnValue[js.UndefOr[BorderTopLeftRadiusProperty[String | Double]]] = js.native
+  var MozBorderRadiusTopright: FnValue[js.UndefOr[BorderTopRightRadiusProperty[String | Double]]] = js.native
+  var MozBorderRightColors: FnValue[js.UndefOr[MozBorderRightColorsProperty]] = js.native
+  var MozBorderStartColor: FnValue[js.UndefOr[BorderInlineStartColorProperty]] = js.native
+  var MozBorderStartStyle: FnValue[js.UndefOr[BorderInlineStartStyleProperty]] = js.native
+  var MozBorderTopColors: FnValue[js.UndefOr[MozBorderTopColorsProperty]] = js.native
+  var MozBoxAlign: FnValue[js.UndefOr[BoxAlignProperty]] = js.native
+  var MozBoxDirection: FnValue[js.UndefOr[BoxDirectionProperty]] = js.native
+  var MozBoxFlex: FnValue[js.UndefOr[GlobalsNumber]] = js.native
+  var MozBoxOrdinalGroup: FnValue[js.UndefOr[GlobalsNumber]] = js.native
+  var MozBoxOrient: FnValue[js.UndefOr[BoxOrientProperty]] = js.native
+  var MozBoxPack: FnValue[js.UndefOr[BoxPackProperty]] = js.native
+  var MozBoxShadow: FnValue[js.UndefOr[BoxShadowProperty]] = js.native
+  var MozBoxSizing: FnValue[js.UndefOr[BoxSizingProperty]] = js.native
+  var MozColumnCount: FnValue[js.UndefOr[ColumnCountProperty]] = js.native
+  var MozColumnFill: FnValue[js.UndefOr[ColumnFillProperty]] = js.native
+  var MozColumnGap: FnValue[js.UndefOr[ColumnGapProperty[String | Double]]] = js.native
+  var MozColumnRule: FnValue[js.UndefOr[ColumnRuleProperty[String | Double]]] = js.native
+  var MozColumnRuleColor: FnValue[js.UndefOr[ColumnRuleColorProperty]] = js.native
+  var MozColumnRuleStyle: FnValue[js.UndefOr[ColumnRuleStyleProperty]] = js.native
+  var MozColumnRuleWidth: FnValue[js.UndefOr[ColumnRuleWidthProperty[String | Double]]] = js.native
+  var MozColumnWidth: FnValue[js.UndefOr[ColumnWidthProperty[String | Double]]] = js.native
+  var MozColumns: FnValue[js.UndefOr[ColumnsProperty[String | Double]]] = js.native
+  var MozContextProperties: FnValue[js.UndefOr[MozContextPropertiesProperty]] = js.native
+  var MozFloatEdge: FnValue[js.UndefOr[MozFloatEdgeProperty]] = js.native
+  var MozFontFeatureSettings: FnValue[js.UndefOr[FontFeatureSettingsProperty]] = js.native
+  var MozFontLanguageOverride: FnValue[js.UndefOr[FontLanguageOverrideProperty]] = js.native
+  var MozForceBrokenImageIcon: FnValue[js.UndefOr[GlobalsNumber]] = js.native
+  var MozHyphens: FnValue[js.UndefOr[HyphensProperty]] = js.native
+  var MozImageRegion: FnValue[js.UndefOr[MozImageRegionProperty]] = js.native
+  var MozMarginEnd: FnValue[js.UndefOr[MarginInlineEndProperty[String | Double]]] = js.native
+  var MozMarginStart: FnValue[js.UndefOr[MarginInlineStartProperty[String | Double]]] = js.native
+  var MozOpacity: FnValue[js.UndefOr[GlobalsNumber]] = js.native
+  var MozOrient: FnValue[js.UndefOr[MozOrientProperty]] = js.native
+  var MozOutline: FnValue[js.UndefOr[OutlineProperty[String | Double]]] = js.native
+  var MozOutlineColor: FnValue[js.UndefOr[OutlineColorProperty]] = js.native
+  var MozOutlineRadius: FnValue[js.UndefOr[MozOutlineRadiusProperty[String | Double]]] = js.native
+  var MozOutlineRadiusBottomleft: FnValue[js.UndefOr[MozOutlineRadiusBottomleftProperty[String | Double]]] = js.native
+  var MozOutlineRadiusBottomright: FnValue[js.UndefOr[MozOutlineRadiusBottomrightProperty[String | Double]]] = js.native
+  var MozOutlineRadiusTopleft: FnValue[js.UndefOr[MozOutlineRadiusTopleftProperty[String | Double]]] = js.native
+  var MozOutlineRadiusTopright: FnValue[js.UndefOr[MozOutlineRadiusToprightProperty[String | Double]]] = js.native
+  var MozOutlineStyle: FnValue[js.UndefOr[OutlineStyleProperty]] = js.native
+  var MozOutlineWidth: FnValue[js.UndefOr[OutlineWidthProperty[String | Double]]] = js.native
+  var MozPaddingEnd: FnValue[js.UndefOr[PaddingInlineEndProperty[String | Double]]] = js.native
+  var MozPaddingStart: FnValue[js.UndefOr[PaddingInlineStartProperty[String | Double]]] = js.native
+  var MozPerspective: FnValue[js.UndefOr[PerspectiveProperty[String | Double]]] = js.native
+  var MozPerspectiveOrigin: FnValue[js.UndefOr[PerspectiveOriginProperty[String | Double]]] = js.native
+  var MozStackSizing: FnValue[js.UndefOr[MozStackSizingProperty]] = js.native
+  var MozTabSize: FnValue[js.UndefOr[TabSizeProperty[String | Double]]] = js.native
+  var MozTextAlignLast: FnValue[js.UndefOr[TextAlignLastProperty]] = js.native
+  var MozTextBlink: FnValue[js.UndefOr[MozTextBlinkProperty]] = js.native
+  var MozTextDecorationColor: FnValue[js.UndefOr[TextDecorationColorProperty]] = js.native
+  var MozTextDecorationLine: FnValue[js.UndefOr[TextDecorationLineProperty]] = js.native
+  var MozTextDecorationStyle: FnValue[js.UndefOr[TextDecorationStyleProperty]] = js.native
+  var MozTextSizeAdjust: FnValue[js.UndefOr[TextSizeAdjustProperty]] = js.native
+  var MozTransformOrigin: FnValue[js.UndefOr[TransformOriginProperty[String | Double]]] = js.native
+  var MozTransformStyle: FnValue[js.UndefOr[TransformStyleProperty]] = js.native
+  var MozTransition: FnValue[js.UndefOr[TransitionProperty]] = js.native
+  var MozTransitionDelay: FnValue[js.UndefOr[GlobalsString]] = js.native
+  var MozTransitionDuration: FnValue[js.UndefOr[GlobalsString]] = js.native
+  var MozTransitionProperty: FnValue[js.UndefOr[TransitionPropertyProperty]] = js.native
+  var MozTransitionTimingFunction: FnValue[js.UndefOr[TransitionTimingFunctionProperty]] = js.native
+  var MozUserFocus: FnValue[js.UndefOr[MozUserFocusProperty]] = js.native
+  var MozUserInput: FnValue[js.UndefOr[MozUserInputProperty]] = js.native
+  var MozUserModify: FnValue[js.UndefOr[MozUserModifyProperty]] = js.native
+  var MozUserSelect: FnValue[js.UndefOr[UserSelectProperty]] = js.native
+  var MozWindowDragging: FnValue[js.UndefOr[MozWindowDraggingProperty]] = js.native
+  var MozWindowShadow: FnValue[js.UndefOr[MozWindowShadowProperty]] = js.native
+  var OAnimation: FnValue[js.UndefOr[AnimationProperty]] = js.native
+  var OAnimationDelay: FnValue[js.UndefOr[GlobalsString]] = js.native
+  var OAnimationDirection: FnValue[js.UndefOr[AnimationDirectionProperty]] = js.native
+  var OAnimationDuration: FnValue[js.UndefOr[GlobalsString]] = js.native
+  var OAnimationFillMode: FnValue[js.UndefOr[AnimationFillModeProperty]] = js.native
+  var OAnimationIterationCount: FnValue[js.UndefOr[AnimationIterationCountProperty]] = js.native
+  var OAnimationName: FnValue[js.UndefOr[AnimationNameProperty]] = js.native
+  var OAnimationPlayState: FnValue[js.UndefOr[AnimationPlayStateProperty]] = js.native
+  var OAnimationTimingFunction: FnValue[js.UndefOr[AnimationTimingFunctionProperty]] = js.native
+  var OBackgroundSize: FnValue[js.UndefOr[BackgroundSizeProperty[String | Double]]] = js.native
+  var OBorderImage: FnValue[js.UndefOr[BorderImageProperty]] = js.native
+  var OObjectFit: FnValue[js.UndefOr[ObjectFitProperty]] = js.native
+  var OObjectPosition: FnValue[js.UndefOr[ObjectPositionProperty[String | Double]]] = js.native
+  var OTabSize: FnValue[js.UndefOr[TabSizeProperty[String | Double]]] = js.native
+  var OTextOverflow: FnValue[js.UndefOr[TextOverflowProperty]] = js.native
+  var OTransform: FnValue[js.UndefOr[TransformProperty]] = js.native
+  var OTransformOrigin: FnValue[js.UndefOr[TransformOriginProperty[String | Double]]] = js.native
+  var OTransition: FnValue[js.UndefOr[TransitionProperty]] = js.native
+  var OTransitionDelay: FnValue[js.UndefOr[GlobalsString]] = js.native
+  var OTransitionDuration: FnValue[js.UndefOr[GlobalsString]] = js.native
+  var OTransitionProperty: FnValue[js.UndefOr[TransitionPropertyProperty]] = js.native
+  var OTransitionTimingFunction: FnValue[js.UndefOr[TransitionTimingFunctionProperty]] = js.native
+  var WebkitAlignContent: FnValue[js.UndefOr[AlignContentProperty]] = js.native
+  var WebkitAlignItems: FnValue[js.UndefOr[AlignItemsProperty]] = js.native
+  var WebkitAlignSelf: FnValue[js.UndefOr[AlignSelfProperty]] = js.native
+  var WebkitAnimation: FnValue[js.UndefOr[AnimationProperty]] = js.native
+  var WebkitAnimationDelay: FnValue[js.UndefOr[GlobalsString]] = js.native
+  var WebkitAnimationDirection: FnValue[js.UndefOr[AnimationDirectionProperty]] = js.native
+  var WebkitAnimationDuration: FnValue[js.UndefOr[GlobalsString]] = js.native
+  var WebkitAnimationFillMode: FnValue[js.UndefOr[AnimationFillModeProperty]] = js.native
+  var WebkitAnimationIterationCount: FnValue[js.UndefOr[AnimationIterationCountProperty]] = js.native
+  var WebkitAnimationName: FnValue[js.UndefOr[AnimationNameProperty]] = js.native
+  var WebkitAnimationPlayState: FnValue[js.UndefOr[AnimationPlayStateProperty]] = js.native
+  var WebkitAnimationTimingFunction: FnValue[js.UndefOr[AnimationTimingFunctionProperty]] = js.native
+  var WebkitAppearance: FnValue[js.UndefOr[WebkitAppearanceProperty]] = js.native
+  var WebkitBackdropFilter: FnValue[js.UndefOr[BackdropFilterProperty]] = js.native
+  var WebkitBackfaceVisibility: FnValue[js.UndefOr[BackfaceVisibilityProperty]] = js.native
+  var WebkitBackgroundClip: FnValue[js.UndefOr[BackgroundClipProperty]] = js.native
+  var WebkitBackgroundOrigin: FnValue[js.UndefOr[BackgroundOriginProperty]] = js.native
+  var WebkitBackgroundSize: FnValue[js.UndefOr[BackgroundSizeProperty[String | Double]]] = js.native
+  var WebkitBorderBefore: FnValue[js.UndefOr[WebkitBorderBeforeProperty[String | Double]]] = js.native
+  var WebkitBorderBeforeColor: FnValue[js.UndefOr[WebkitBorderBeforeColorProperty]] = js.native
+  var WebkitBorderBeforeStyle: FnValue[js.UndefOr[WebkitBorderBeforeStyleProperty]] = js.native
+  var WebkitBorderBeforeWidth: FnValue[js.UndefOr[WebkitBorderBeforeWidthProperty[String | Double]]] = js.native
+  var WebkitBorderBottomLeftRadius: FnValue[js.UndefOr[BorderBottomLeftRadiusProperty[String | Double]]] = js.native
+  var WebkitBorderBottomRightRadius: FnValue[js.UndefOr[BorderBottomRightRadiusProperty[String | Double]]] = js.native
+  var WebkitBorderImage: FnValue[js.UndefOr[BorderImageProperty]] = js.native
+  var WebkitBorderImageSlice: FnValue[js.UndefOr[BorderImageSliceProperty]] = js.native
+  var WebkitBorderRadius: FnValue[js.UndefOr[BorderRadiusProperty[String | Double]]] = js.native
+  var WebkitBorderTopLeftRadius: FnValue[js.UndefOr[BorderTopLeftRadiusProperty[String | Double]]] = js.native
+  var WebkitBorderTopRightRadius: FnValue[js.UndefOr[BorderTopRightRadiusProperty[String | Double]]] = js.native
+  var WebkitBoxAlign: FnValue[js.UndefOr[BoxAlignProperty]] = js.native
+  var WebkitBoxDecorationBreak: FnValue[js.UndefOr[BoxDecorationBreakProperty]] = js.native
+  var WebkitBoxDirection: FnValue[js.UndefOr[BoxDirectionProperty]] = js.native
+  var WebkitBoxFlex: FnValue[js.UndefOr[GlobalsNumber]] = js.native
+  var WebkitBoxFlexGroup: FnValue[js.UndefOr[GlobalsNumber]] = js.native
+  var WebkitBoxLines: FnValue[js.UndefOr[BoxLinesProperty]] = js.native
+  var WebkitBoxOrdinalGroup: FnValue[js.UndefOr[GlobalsNumber]] = js.native
+  var WebkitBoxOrient: FnValue[js.UndefOr[BoxOrientProperty]] = js.native
+  var WebkitBoxPack: FnValue[js.UndefOr[BoxPackProperty]] = js.native
+  var WebkitBoxReflect: FnValue[js.UndefOr[WebkitBoxReflectProperty[String | Double]]] = js.native
+  var WebkitBoxShadow: FnValue[js.UndefOr[BoxShadowProperty]] = js.native
+  var WebkitBoxSizing: FnValue[js.UndefOr[BoxSizingProperty]] = js.native
+  var WebkitClipPath: FnValue[js.UndefOr[ClipPathProperty]] = js.native
+  var WebkitColorAdjust: FnValue[js.UndefOr[ColorAdjustProperty]] = js.native
+  var WebkitColumnCount: FnValue[js.UndefOr[ColumnCountProperty]] = js.native
+  var WebkitColumnFill: FnValue[js.UndefOr[ColumnFillProperty]] = js.native
+  var WebkitColumnGap: FnValue[js.UndefOr[ColumnGapProperty[String | Double]]] = js.native
+  var WebkitColumnRule: FnValue[js.UndefOr[ColumnRuleProperty[String | Double]]] = js.native
+  var WebkitColumnRuleColor: FnValue[js.UndefOr[ColumnRuleColorProperty]] = js.native
+  var WebkitColumnRuleStyle: FnValue[js.UndefOr[ColumnRuleStyleProperty]] = js.native
+  var WebkitColumnRuleWidth: FnValue[js.UndefOr[ColumnRuleWidthProperty[String | Double]]] = js.native
+  var WebkitColumnSpan: FnValue[js.UndefOr[ColumnSpanProperty]] = js.native
+  var WebkitColumnWidth: FnValue[js.UndefOr[ColumnWidthProperty[String | Double]]] = js.native
+  var WebkitColumns: FnValue[js.UndefOr[ColumnsProperty[String | Double]]] = js.native
+  var WebkitFilter: FnValue[js.UndefOr[FilterProperty]] = js.native
+  var WebkitFlex: FnValue[js.UndefOr[FlexProperty[String | Double]]] = js.native
+  var WebkitFlexBasis: FnValue[js.UndefOr[FlexBasisProperty[String | Double]]] = js.native
+  var WebkitFlexDirection: FnValue[js.UndefOr[FlexDirectionProperty]] = js.native
+  var WebkitFlexFlow: FnValue[js.UndefOr[FlexFlowProperty]] = js.native
+  var WebkitFlexGrow: FnValue[js.UndefOr[GlobalsNumber]] = js.native
+  var WebkitFlexShrink: FnValue[js.UndefOr[GlobalsNumber]] = js.native
+  var WebkitFlexWrap: FnValue[js.UndefOr[FlexWrapProperty]] = js.native
+  var WebkitFontFeatureSettings: FnValue[js.UndefOr[FontFeatureSettingsProperty]] = js.native
+  var WebkitFontKerning: FnValue[js.UndefOr[FontKerningProperty]] = js.native
+  var WebkitFontVariantLigatures: FnValue[js.UndefOr[FontVariantLigaturesProperty]] = js.native
+  var WebkitHyphens: FnValue[js.UndefOr[HyphensProperty]] = js.native
+  var WebkitJustifyContent: FnValue[js.UndefOr[JustifyContentProperty]] = js.native
+  var WebkitLineBreak: FnValue[js.UndefOr[LineBreakProperty]] = js.native
+  var WebkitLineClamp: FnValue[js.UndefOr[WebkitLineClampProperty]] = js.native
+  var WebkitMarginEnd: FnValue[js.UndefOr[MarginInlineEndProperty[String | Double]]] = js.native
+  var WebkitMarginStart: FnValue[js.UndefOr[MarginInlineStartProperty[String | Double]]] = js.native
+  var WebkitMask: FnValue[js.UndefOr[WebkitMaskProperty[String | Double]]] = js.native
+  var WebkitMaskAttachment: FnValue[js.UndefOr[WebkitMaskAttachmentProperty]] = js.native
+  var WebkitMaskClip: FnValue[js.UndefOr[WebkitMaskClipProperty]] = js.native
+  var WebkitMaskComposite: FnValue[js.UndefOr[WebkitMaskCompositeProperty]] = js.native
+  var WebkitMaskImage: FnValue[js.UndefOr[WebkitMaskImageProperty]] = js.native
+  var WebkitMaskOrigin: FnValue[js.UndefOr[WebkitMaskOriginProperty]] = js.native
+  var WebkitMaskPosition: FnValue[js.UndefOr[WebkitMaskPositionProperty[String | Double]]] = js.native
+  var WebkitMaskPositionX: FnValue[js.UndefOr[WebkitMaskPositionXProperty[String | Double]]] = js.native
+  var WebkitMaskPositionY: FnValue[js.UndefOr[WebkitMaskPositionYProperty[String | Double]]] = js.native
+  var WebkitMaskRepeat: FnValue[js.UndefOr[WebkitMaskRepeatProperty]] = js.native
+  var WebkitMaskRepeatX: FnValue[js.UndefOr[WebkitMaskRepeatXProperty]] = js.native
+  var WebkitMaskRepeatY: FnValue[js.UndefOr[WebkitMaskRepeatYProperty]] = js.native
+  var WebkitMaskSize: FnValue[js.UndefOr[WebkitMaskSizeProperty[String | Double]]] = js.native
+  var WebkitMaxInlineSize: FnValue[js.UndefOr[MaxInlineSizeProperty[String | Double]]] = js.native
+  var WebkitOrder: FnValue[js.UndefOr[GlobalsNumber]] = js.native
+  var WebkitOverflowScrolling: FnValue[js.UndefOr[WebkitOverflowScrollingProperty]] = js.native
+  var WebkitPaddingEnd: FnValue[js.UndefOr[PaddingInlineEndProperty[String | Double]]] = js.native
+  var WebkitPaddingStart: FnValue[js.UndefOr[PaddingInlineStartProperty[String | Double]]] = js.native
+  var WebkitPerspective: FnValue[js.UndefOr[PerspectiveProperty[String | Double]]] = js.native
+  var WebkitPerspectiveOrigin: FnValue[js.UndefOr[PerspectiveOriginProperty[String | Double]]] = js.native
+  var WebkitScrollSnapPointsX: FnValue[js.UndefOr[ScrollSnapPointsXProperty]] = js.native
+  var WebkitScrollSnapPointsY: FnValue[js.UndefOr[ScrollSnapPointsYProperty]] = js.native
+  var WebkitScrollSnapType: FnValue[js.UndefOr[ScrollSnapTypeProperty]] = js.native
+  var WebkitShapeMargin: FnValue[js.UndefOr[ShapeMarginProperty[String | Double]]] = js.native
+  var WebkitTapHighlightColor: FnValue[js.UndefOr[WebkitTapHighlightColorProperty]] = js.native
+  var WebkitTextCombine: FnValue[js.UndefOr[TextCombineUprightProperty]] = js.native
+  var WebkitTextDecorationColor: FnValue[js.UndefOr[TextDecorationColorProperty]] = js.native
+  var WebkitTextDecorationLine: FnValue[js.UndefOr[TextDecorationLineProperty]] = js.native
+  var WebkitTextDecorationSkip: FnValue[js.UndefOr[TextDecorationSkipProperty]] = js.native
+  var WebkitTextDecorationStyle: FnValue[js.UndefOr[TextDecorationStyleProperty]] = js.native
+  var WebkitTextEmphasis: FnValue[js.UndefOr[TextEmphasisProperty]] = js.native
+  var WebkitTextEmphasisColor: FnValue[js.UndefOr[TextEmphasisColorProperty]] = js.native
+  var WebkitTextEmphasisPosition: FnValue[js.UndefOr[GlobalsString]] = js.native
+  var WebkitTextEmphasisStyle: FnValue[js.UndefOr[TextEmphasisStyleProperty]] = js.native
+  var WebkitTextFillColor: FnValue[js.UndefOr[WebkitTextFillColorProperty]] = js.native
+  var WebkitTextOrientation: FnValue[js.UndefOr[TextOrientationProperty]] = js.native
+  var WebkitTextSizeAdjust: FnValue[js.UndefOr[TextSizeAdjustProperty]] = js.native
+  var WebkitTextStroke: FnValue[js.UndefOr[WebkitTextStrokeProperty[String | Double]]] = js.native
+  var WebkitTextStrokeColor: FnValue[js.UndefOr[WebkitTextStrokeColorProperty]] = js.native
+  var WebkitTextStrokeWidth: FnValue[js.UndefOr[WebkitTextStrokeWidthProperty[String | Double]]] = js.native
+  var WebkitTouchCallout: FnValue[js.UndefOr[WebkitTouchCalloutProperty]] = js.native
+  var WebkitTransform: FnValue[js.UndefOr[TransformProperty]] = js.native
+  var WebkitTransformOrigin: FnValue[js.UndefOr[TransformOriginProperty[String | Double]]] = js.native
+  var WebkitTransformStyle: FnValue[js.UndefOr[TransformStyleProperty]] = js.native
+  var WebkitTransition: FnValue[js.UndefOr[TransitionProperty]] = js.native
+  var WebkitTransitionDelay: FnValue[js.UndefOr[GlobalsString]] = js.native
+  var WebkitTransitionDuration: FnValue[js.UndefOr[GlobalsString]] = js.native
+  var WebkitTransitionProperty: FnValue[js.UndefOr[TransitionPropertyProperty]] = js.native
+  var WebkitTransitionTimingFunction: FnValue[js.UndefOr[TransitionTimingFunctionProperty]] = js.native
+  var WebkitUserModify: FnValue[js.UndefOr[WebkitUserModifyProperty]] = js.native
+  var WebkitUserSelect: FnValue[js.UndefOr[UserSelectProperty]] = js.native
+  var WebkitWritingMode: FnValue[js.UndefOr[WritingModeProperty]] = js.native
+  var alignContent: FnValue[js.UndefOr[AlignContentProperty]] = js.native
+  var alignItems: FnValue[js.UndefOr[AlignItemsProperty]] = js.native
+  var alignSelf: FnValue[js.UndefOr[AlignSelfProperty]] = js.native
+  var alignmentBaseline: FnValue[js.UndefOr[AlignmentBaselineProperty]] = js.native
+  var all: FnValue[js.UndefOr[Globals]] = js.native
+  var animation: FnValue[js.UndefOr[AnimationProperty]] = js.native
+  var animationDelay: FnValue[js.UndefOr[GlobalsString]] = js.native
+  var animationDirection: FnValue[js.UndefOr[AnimationDirectionProperty]] = js.native
+  var animationDuration: FnValue[js.UndefOr[GlobalsString]] = js.native
+  var animationFillMode: FnValue[js.UndefOr[AnimationFillModeProperty]] = js.native
+  var animationIterationCount: FnValue[js.UndefOr[AnimationIterationCountProperty]] = js.native
+  var animationName: FnValue[js.UndefOr[AnimationNameProperty]] = js.native
+  var animationPlayState: FnValue[js.UndefOr[AnimationPlayStateProperty]] = js.native
+  var animationTimingFunction: FnValue[js.UndefOr[AnimationTimingFunctionProperty]] = js.native
+  var appearance: FnValue[js.UndefOr[AppearanceProperty]] = js.native
+  var backdropFilter: FnValue[js.UndefOr[BackdropFilterProperty]] = js.native
+  var backfaceVisibility: FnValue[js.UndefOr[BackfaceVisibilityProperty]] = js.native
+  var background: FnValue[js.UndefOr[BackgroundProperty[String | Double]]] = js.native
+  var backgroundAttachment: FnValue[js.UndefOr[BackgroundAttachmentProperty]] = js.native
+  var backgroundBlendMode: FnValue[js.UndefOr[BackgroundBlendModeProperty]] = js.native
+  var backgroundClip: FnValue[js.UndefOr[BackgroundClipProperty]] = js.native
+  var backgroundColor: FnValue[js.UndefOr[BackgroundColorProperty]] = js.native
+  var backgroundImage: FnValue[js.UndefOr[BackgroundImageProperty]] = js.native
+  var backgroundOrigin: FnValue[js.UndefOr[BackgroundOriginProperty]] = js.native
+  var backgroundPosition: FnValue[js.UndefOr[BackgroundPositionProperty[String | Double]]] = js.native
+  var backgroundPositionX: FnValue[js.UndefOr[BackgroundPositionXProperty[String | Double]]] = js.native
+  var backgroundPositionY: FnValue[js.UndefOr[BackgroundPositionYProperty[String | Double]]] = js.native
+  var backgroundRepeat: FnValue[js.UndefOr[BackgroundRepeatProperty]] = js.native
+  var backgroundSize: FnValue[js.UndefOr[BackgroundSizeProperty[String | Double]]] = js.native
+  var baselineShift: FnValue[js.UndefOr[BaselineShiftProperty[String | Double]]] = js.native
+  var blockOverflow: FnValue[js.UndefOr[BlockOverflowProperty]] = js.native
+  var blockSize: FnValue[js.UndefOr[BlockSizeProperty[String | Double]]] = js.native
+  var border: FnValue[js.UndefOr[BorderProperty[String | Double]]] = js.native
+  var borderBlock: FnValue[js.UndefOr[BorderBlockProperty[String | Double]]] = js.native
+  var borderBlockColor: FnValue[js.UndefOr[BorderBlockColorProperty]] = js.native
+  var borderBlockEnd: FnValue[js.UndefOr[BorderBlockEndProperty[String | Double]]] = js.native
+  var borderBlockEndColor: FnValue[js.UndefOr[BorderBlockEndColorProperty]] = js.native
+  var borderBlockEndStyle: FnValue[js.UndefOr[BorderBlockEndStyleProperty]] = js.native
+  var borderBlockEndWidth: FnValue[js.UndefOr[BorderBlockEndWidthProperty[String | Double]]] = js.native
+  var borderBlockStart: FnValue[js.UndefOr[BorderBlockStartProperty[String | Double]]] = js.native
+  var borderBlockStartColor: FnValue[js.UndefOr[BorderBlockStartColorProperty]] = js.native
+  var borderBlockStartStyle: FnValue[js.UndefOr[BorderBlockStartStyleProperty]] = js.native
+  var borderBlockStartWidth: FnValue[js.UndefOr[BorderBlockStartWidthProperty[String | Double]]] = js.native
+  var borderBlockStyle: FnValue[js.UndefOr[BorderBlockStyleProperty]] = js.native
+  var borderBlockWidth: FnValue[js.UndefOr[BorderBlockWidthProperty[String | Double]]] = js.native
+  var borderBottom: FnValue[js.UndefOr[BorderBottomProperty[String | Double]]] = js.native
+  var borderBottomColor: FnValue[js.UndefOr[BorderBottomColorProperty]] = js.native
+  var borderBottomLeftRadius: FnValue[js.UndefOr[BorderBottomLeftRadiusProperty[String | Double]]] = js.native
+  var borderBottomRightRadius: FnValue[js.UndefOr[BorderBottomRightRadiusProperty[String | Double]]] = js.native
+  var borderBottomStyle: FnValue[js.UndefOr[BorderBottomStyleProperty]] = js.native
+  var borderBottomWidth: FnValue[js.UndefOr[BorderBottomWidthProperty[String | Double]]] = js.native
+  var borderCollapse: FnValue[js.UndefOr[BorderCollapseProperty]] = js.native
+  var borderColor: FnValue[js.UndefOr[BorderColorProperty]] = js.native
+  var borderEndEndRadius: FnValue[js.UndefOr[BorderEndEndRadiusProperty[String | Double]]] = js.native
+  var borderEndStartRadius: FnValue[js.UndefOr[BorderEndStartRadiusProperty[String | Double]]] = js.native
+  var borderImage: FnValue[js.UndefOr[BorderImageProperty]] = js.native
+  var borderImageOutset: FnValue[js.UndefOr[BorderImageOutsetProperty[String | Double]]] = js.native
+  var borderImageRepeat: FnValue[js.UndefOr[BorderImageRepeatProperty]] = js.native
+  var borderImageSlice: FnValue[js.UndefOr[BorderImageSliceProperty]] = js.native
+  var borderImageSource: FnValue[js.UndefOr[BorderImageSourceProperty]] = js.native
+  var borderImageWidth: FnValue[js.UndefOr[BorderImageWidthProperty[String | Double]]] = js.native
+  var borderInline: FnValue[js.UndefOr[BorderInlineProperty[String | Double]]] = js.native
+  var borderInlineColor: FnValue[js.UndefOr[BorderInlineColorProperty]] = js.native
+  var borderInlineEnd: FnValue[js.UndefOr[BorderInlineEndProperty[String | Double]]] = js.native
+  var borderInlineEndColor: FnValue[js.UndefOr[BorderInlineEndColorProperty]] = js.native
+  var borderInlineEndStyle: FnValue[js.UndefOr[BorderInlineEndStyleProperty]] = js.native
+  var borderInlineEndWidth: FnValue[js.UndefOr[BorderInlineEndWidthProperty[String | Double]]] = js.native
+  var borderInlineStart: FnValue[js.UndefOr[BorderInlineStartProperty[String | Double]]] = js.native
+  var borderInlineStartColor: FnValue[js.UndefOr[BorderInlineStartColorProperty]] = js.native
+  var borderInlineStartStyle: FnValue[js.UndefOr[BorderInlineStartStyleProperty]] = js.native
+  var borderInlineStartWidth: FnValue[js.UndefOr[BorderInlineStartWidthProperty[String | Double]]] = js.native
+  var borderInlineStyle: FnValue[js.UndefOr[BorderInlineStyleProperty]] = js.native
+  var borderInlineWidth: FnValue[js.UndefOr[BorderInlineWidthProperty[String | Double]]] = js.native
+  var borderLeft: FnValue[js.UndefOr[BorderLeftProperty[String | Double]]] = js.native
+  var borderLeftColor: FnValue[js.UndefOr[BorderLeftColorProperty]] = js.native
+  var borderLeftStyle: FnValue[js.UndefOr[BorderLeftStyleProperty]] = js.native
+  var borderLeftWidth: FnValue[js.UndefOr[BorderLeftWidthProperty[String | Double]]] = js.native
+  var borderRadius: FnValue[js.UndefOr[BorderRadiusProperty[String | Double]]] = js.native
+  var borderRight: FnValue[js.UndefOr[BorderRightProperty[String | Double]]] = js.native
+  var borderRightColor: FnValue[js.UndefOr[BorderRightColorProperty]] = js.native
+  var borderRightStyle: FnValue[js.UndefOr[BorderRightStyleProperty]] = js.native
+  var borderRightWidth: FnValue[js.UndefOr[BorderRightWidthProperty[String | Double]]] = js.native
+  var borderSpacing: FnValue[js.UndefOr[BorderSpacingProperty[String | Double]]] = js.native
+  var borderStartEndRadius: FnValue[js.UndefOr[BorderStartEndRadiusProperty[String | Double]]] = js.native
+  var borderStartStartRadius: FnValue[js.UndefOr[BorderStartStartRadiusProperty[String | Double]]] = js.native
+  var borderStyle: FnValue[js.UndefOr[BorderStyleProperty]] = js.native
+  var borderTop: FnValue[js.UndefOr[BorderTopProperty[String | Double]]] = js.native
+  var borderTopColor: FnValue[js.UndefOr[BorderTopColorProperty]] = js.native
+  var borderTopLeftRadius: FnValue[js.UndefOr[BorderTopLeftRadiusProperty[String | Double]]] = js.native
+  var borderTopRightRadius: FnValue[js.UndefOr[BorderTopRightRadiusProperty[String | Double]]] = js.native
+  var borderTopStyle: FnValue[js.UndefOr[BorderTopStyleProperty]] = js.native
+  var borderTopWidth: FnValue[js.UndefOr[BorderTopWidthProperty[String | Double]]] = js.native
+  var borderWidth: FnValue[js.UndefOr[BorderWidthProperty[String | Double]]] = js.native
+  var bottom: FnValue[js.UndefOr[BottomProperty[String | Double]]] = js.native
+  var boxAlign: FnValue[js.UndefOr[BoxAlignProperty]] = js.native
+  var boxDecorationBreak: FnValue[js.UndefOr[BoxDecorationBreakProperty]] = js.native
+  var boxDirection: FnValue[js.UndefOr[BoxDirectionProperty]] = js.native
+  var boxFlex: FnValue[js.UndefOr[GlobalsNumber]] = js.native
+  var boxFlexGroup: FnValue[js.UndefOr[GlobalsNumber]] = js.native
+  var boxLines: FnValue[js.UndefOr[BoxLinesProperty]] = js.native
+  var boxOrdinalGroup: FnValue[js.UndefOr[GlobalsNumber]] = js.native
+  var boxOrient: FnValue[js.UndefOr[BoxOrientProperty]] = js.native
+  var boxPack: FnValue[js.UndefOr[BoxPackProperty]] = js.native
+  var boxShadow: FnValue[js.UndefOr[BoxShadowProperty]] = js.native
+  var boxSizing: FnValue[js.UndefOr[BoxSizingProperty]] = js.native
+  var breakAfter: FnValue[js.UndefOr[BreakAfterProperty]] = js.native
+  var breakBefore: FnValue[js.UndefOr[BreakBeforeProperty]] = js.native
+  var breakInside: FnValue[js.UndefOr[BreakInsideProperty]] = js.native
+  var captionSide: FnValue[js.UndefOr[CaptionSideProperty]] = js.native
+  var caretColor: FnValue[js.UndefOr[CaretColorProperty]] = js.native
+  var clear: FnValue[js.UndefOr[ClearProperty]] = js.native
+  var clip: FnValue[js.UndefOr[ClipProperty]] = js.native
+  var clipPath: FnValue[js.UndefOr[ClipPathProperty]] = js.native
+  var clipRule: FnValue[js.UndefOr[ClipRuleProperty]] = js.native
+  var color: FnValue[js.UndefOr[ColorProperty]] = js.native
+  var colorAdjust: FnValue[js.UndefOr[ColorAdjustProperty]] = js.native
+  var colorInterpolation: FnValue[js.UndefOr[ColorInterpolationProperty]] = js.native
+  var colorRendering: FnValue[js.UndefOr[ColorRenderingProperty]] = js.native
+  var columnCount: FnValue[js.UndefOr[ColumnCountProperty]] = js.native
+  var columnFill: FnValue[js.UndefOr[ColumnFillProperty]] = js.native
+  var columnGap: FnValue[js.UndefOr[ColumnGapProperty[String | Double]]] = js.native
+  var columnRule: FnValue[js.UndefOr[ColumnRuleProperty[String | Double]]] = js.native
+  var columnRuleColor: FnValue[js.UndefOr[ColumnRuleColorProperty]] = js.native
+  var columnRuleStyle: FnValue[js.UndefOr[ColumnRuleStyleProperty]] = js.native
+  var columnRuleWidth: FnValue[js.UndefOr[ColumnRuleWidthProperty[String | Double]]] = js.native
+  var columnSpan: FnValue[js.UndefOr[ColumnSpanProperty]] = js.native
+  var columnWidth: FnValue[js.UndefOr[ColumnWidthProperty[String | Double]]] = js.native
+  var columns: FnValue[js.UndefOr[ColumnsProperty[String | Double]]] = js.native
+  var contain: FnValue[js.UndefOr[ContainProperty]] = js.native
+  var content: FnValue[js.UndefOr[ContentProperty]] = js.native
+  var counterIncrement: FnValue[js.UndefOr[CounterIncrementProperty]] = js.native
+  var counterReset: FnValue[js.UndefOr[CounterResetProperty]] = js.native
+  var counterSet: FnValue[js.UndefOr[CounterSetProperty]] = js.native
+  var cursor: FnValue[js.UndefOr[CursorProperty]] = js.native
+  var direction: FnValue[js.UndefOr[DirectionProperty]] = js.native
+  var display: FnValue[js.UndefOr[DisplayProperty]] = js.native
+  var dominantBaseline: FnValue[js.UndefOr[DominantBaselineProperty]] = js.native
+  var emptyCells: FnValue[js.UndefOr[EmptyCellsProperty]] = js.native
+  var fill: FnValue[js.UndefOr[FillProperty]] = js.native
+  var fillOpacity: FnValue[js.UndefOr[GlobalsNumber]] = js.native
+  var fillRule: FnValue[js.UndefOr[FillRuleProperty]] = js.native
+  var filter: FnValue[js.UndefOr[FilterProperty]] = js.native
+  var flex: FnValue[js.UndefOr[FlexProperty[String | Double]]] = js.native
+  var flexBasis: FnValue[js.UndefOr[FlexBasisProperty[String | Double]]] = js.native
+  var flexDirection: FnValue[js.UndefOr[FlexDirectionProperty]] = js.native
+  var flexFlow: FnValue[js.UndefOr[FlexFlowProperty]] = js.native
+  var flexGrow: FnValue[js.UndefOr[GlobalsNumber]] = js.native
+  var flexShrink: FnValue[js.UndefOr[GlobalsNumber]] = js.native
+  var flexWrap: FnValue[js.UndefOr[FlexWrapProperty]] = js.native
+  var float: FnValue[js.UndefOr[FloatProperty]] = js.native
+  var floodColor: FnValue[js.UndefOr[FloodColorProperty]] = js.native
+  var floodOpacity: FnValue[js.UndefOr[GlobalsNumber]] = js.native
+  var font: FnValue[js.UndefOr[FontProperty]] = js.native
+  var fontFamily: FnValue[js.UndefOr[FontFamilyProperty]] = js.native
+  var fontFeatureSettings: FnValue[js.UndefOr[FontFeatureSettingsProperty]] = js.native
+  var fontKerning: FnValue[js.UndefOr[FontKerningProperty]] = js.native
+  var fontLanguageOverride: FnValue[js.UndefOr[FontLanguageOverrideProperty]] = js.native
+  var fontOpticalSizing: FnValue[js.UndefOr[FontOpticalSizingProperty]] = js.native
+  var fontSize: FnValue[js.UndefOr[FontSizeProperty[String | Double]]] = js.native
+  var fontSizeAdjust: FnValue[js.UndefOr[FontSizeAdjustProperty]] = js.native
+  var fontStretch: FnValue[js.UndefOr[FontStretchProperty]] = js.native
+  var fontStyle: FnValue[js.UndefOr[FontStyleProperty]] = js.native
+  var fontSynthesis: FnValue[js.UndefOr[FontSynthesisProperty]] = js.native
+  var fontVariant: FnValue[js.UndefOr[FontVariantProperty]] = js.native
+  var fontVariantAlternates: FnValue[js.UndefOr[FontVariantAlternatesProperty]] = js.native
+  var fontVariantCaps: FnValue[js.UndefOr[FontVariantCapsProperty]] = js.native
+  var fontVariantEastAsian: FnValue[js.UndefOr[FontVariantEastAsianProperty]] = js.native
+  var fontVariantLigatures: FnValue[js.UndefOr[FontVariantLigaturesProperty]] = js.native
+  var fontVariantNumeric: FnValue[js.UndefOr[FontVariantNumericProperty]] = js.native
+  var fontVariantPosition: FnValue[js.UndefOr[FontVariantPositionProperty]] = js.native
+  var fontVariationSettings: FnValue[js.UndefOr[FontVariationSettingsProperty]] = js.native
+  var fontWeight: FnValue[js.UndefOr[FontWeightProperty]] = js.native
+  var gap: FnValue[js.UndefOr[GapProperty[String | Double]]] = js.native
+  var glyphOrientationVertical: FnValue[js.UndefOr[GlyphOrientationVerticalProperty]] = js.native
+  var grid: FnValue[js.UndefOr[GridProperty]] = js.native
+  var gridArea: FnValue[js.UndefOr[GridAreaProperty]] = js.native
+  var gridAutoColumns: FnValue[js.UndefOr[GridAutoColumnsProperty[String | Double]]] = js.native
+  var gridAutoFlow: FnValue[js.UndefOr[GridAutoFlowProperty]] = js.native
+  var gridAutoRows: FnValue[js.UndefOr[GridAutoRowsProperty[String | Double]]] = js.native
+  var gridColumn: FnValue[js.UndefOr[GridColumnProperty]] = js.native
+  var gridColumnEnd: FnValue[js.UndefOr[GridColumnEndProperty]] = js.native
+  var gridColumnGap: FnValue[js.UndefOr[GridColumnGapProperty[String | Double]]] = js.native
+  var gridColumnStart: FnValue[js.UndefOr[GridColumnStartProperty]] = js.native
+  var gridGap: FnValue[js.UndefOr[GridGapProperty[String | Double]]] = js.native
+  var gridRow: FnValue[js.UndefOr[GridRowProperty]] = js.native
+  var gridRowEnd: FnValue[js.UndefOr[GridRowEndProperty]] = js.native
+  var gridRowGap: FnValue[js.UndefOr[GridRowGapProperty[String | Double]]] = js.native
+  var gridRowStart: FnValue[js.UndefOr[GridRowStartProperty]] = js.native
+  var gridTemplate: FnValue[js.UndefOr[GridTemplateProperty]] = js.native
+  var gridTemplateAreas: FnValue[js.UndefOr[GridTemplateAreasProperty]] = js.native
+  var gridTemplateColumns: FnValue[js.UndefOr[GridTemplateColumnsProperty[String | Double]]] = js.native
+  var gridTemplateRows: FnValue[js.UndefOr[GridTemplateRowsProperty[String | Double]]] = js.native
+  var hangingPunctuation: FnValue[js.UndefOr[HangingPunctuationProperty]] = js.native
+  var height: FnValue[js.UndefOr[HeightProperty[String | Double]]] = js.native
+  var hyphens: FnValue[js.UndefOr[HyphensProperty]] = js.native
+  var imageOrientation: FnValue[js.UndefOr[ImageOrientationProperty]] = js.native
+  var imageRendering: FnValue[js.UndefOr[ImageRenderingProperty]] = js.native
+  var imageResolution: FnValue[js.UndefOr[ImageResolutionProperty]] = js.native
+  var imeMode: FnValue[js.UndefOr[ImeModeProperty]] = js.native
+  var initialLetter: FnValue[js.UndefOr[InitialLetterProperty]] = js.native
+  var inlineSize: FnValue[js.UndefOr[InlineSizeProperty[String | Double]]] = js.native
+  var inset: FnValue[js.UndefOr[InsetProperty[String | Double]]] = js.native
+  var insetBlock: FnValue[js.UndefOr[InsetBlockProperty[String | Double]]] = js.native
+  var insetBlockEnd: FnValue[js.UndefOr[InsetBlockEndProperty[String | Double]]] = js.native
+  var insetBlockStart: FnValue[js.UndefOr[InsetBlockStartProperty[String | Double]]] = js.native
+  var insetInline: FnValue[js.UndefOr[InsetInlineProperty[String | Double]]] = js.native
+  var insetInlineEnd: FnValue[js.UndefOr[InsetInlineEndProperty[String | Double]]] = js.native
+  var insetInlineStart: FnValue[js.UndefOr[InsetInlineStartProperty[String | Double]]] = js.native
+  var isolation: FnValue[js.UndefOr[IsolationProperty]] = js.native
+  var justifyContent: FnValue[js.UndefOr[JustifyContentProperty]] = js.native
+  var justifyItems: FnValue[js.UndefOr[JustifyItemsProperty]] = js.native
+  var justifySelf: FnValue[js.UndefOr[JustifySelfProperty]] = js.native
+  var left: FnValue[js.UndefOr[LeftProperty[String | Double]]] = js.native
+  var letterSpacing: FnValue[js.UndefOr[LetterSpacingProperty[String | Double]]] = js.native
+  var lightingColor: FnValue[js.UndefOr[LightingColorProperty]] = js.native
+  var lineBreak: FnValue[js.UndefOr[LineBreakProperty]] = js.native
+  var lineClamp: FnValue[js.UndefOr[LineClampProperty]] = js.native
+  var lineHeight: FnValue[js.UndefOr[LineHeightProperty[String | Double]]] = js.native
+  var lineHeightStep: FnValue[js.UndefOr[LineHeightStepProperty[String | Double]]] = js.native
+  var listStyle: FnValue[js.UndefOr[ListStyleProperty]] = js.native
+  var listStyleImage: FnValue[js.UndefOr[ListStyleImageProperty]] = js.native
+  var listStylePosition: FnValue[js.UndefOr[ListStylePositionProperty]] = js.native
+  var listStyleType: FnValue[js.UndefOr[ListStyleTypeProperty]] = js.native
+  var margin: FnValue[js.UndefOr[MarginProperty[String | Double]]] = js.native
+  var marginBlock: FnValue[js.UndefOr[MarginBlockProperty[String | Double]]] = js.native
+  var marginBlockEnd: FnValue[js.UndefOr[MarginBlockEndProperty[String | Double]]] = js.native
+  var marginBlockStart: FnValue[js.UndefOr[MarginBlockStartProperty[String | Double]]] = js.native
+  var marginBottom: FnValue[js.UndefOr[MarginBottomProperty[String | Double]]] = js.native
+  var marginInline: FnValue[js.UndefOr[MarginInlineProperty[String | Double]]] = js.native
+  var marginInlineEnd: FnValue[js.UndefOr[MarginInlineEndProperty[String | Double]]] = js.native
+  var marginInlineStart: FnValue[js.UndefOr[MarginInlineStartProperty[String | Double]]] = js.native
+  var marginLeft: FnValue[js.UndefOr[MarginLeftProperty[String | Double]]] = js.native
+  var marginRight: FnValue[js.UndefOr[MarginRightProperty[String | Double]]] = js.native
+  var marginTop: FnValue[js.UndefOr[MarginTopProperty[String | Double]]] = js.native
+  var marker: FnValue[js.UndefOr[MarkerProperty]] = js.native
+  var markerEnd: FnValue[js.UndefOr[MarkerEndProperty]] = js.native
+  var markerMid: FnValue[js.UndefOr[MarkerMidProperty]] = js.native
+  var markerStart: FnValue[js.UndefOr[MarkerStartProperty]] = js.native
+  var mask: FnValue[js.UndefOr[MaskProperty[String | Double]]] = js.native
+  var maskBorder: FnValue[js.UndefOr[MaskBorderProperty]] = js.native
+  var maskBorderMode: FnValue[js.UndefOr[MaskBorderModeProperty]] = js.native
+  var maskBorderOutset: FnValue[js.UndefOr[MaskBorderOutsetProperty[String | Double]]] = js.native
+  var maskBorderRepeat: FnValue[js.UndefOr[MaskBorderRepeatProperty]] = js.native
+  var maskBorderSlice: FnValue[js.UndefOr[MaskBorderSliceProperty]] = js.native
+  var maskBorderSource: FnValue[js.UndefOr[MaskBorderSourceProperty]] = js.native
+  var maskBorderWidth: FnValue[js.UndefOr[MaskBorderWidthProperty[String | Double]]] = js.native
+  var maskClip: FnValue[js.UndefOr[MaskClipProperty]] = js.native
+  var maskComposite: FnValue[js.UndefOr[MaskCompositeProperty]] = js.native
+  var maskImage: FnValue[js.UndefOr[MaskImageProperty]] = js.native
+  var maskMode: FnValue[js.UndefOr[MaskModeProperty]] = js.native
+  var maskOrigin: FnValue[js.UndefOr[MaskOriginProperty]] = js.native
+  var maskPosition: FnValue[js.UndefOr[MaskPositionProperty[String | Double]]] = js.native
+  var maskRepeat: FnValue[js.UndefOr[MaskRepeatProperty]] = js.native
+  var maskSize: FnValue[js.UndefOr[MaskSizeProperty[String | Double]]] = js.native
+  var maskType: FnValue[js.UndefOr[MaskTypeProperty]] = js.native
+  var maxBlockSize: FnValue[js.UndefOr[MaxBlockSizeProperty[String | Double]]] = js.native
+  var maxHeight: FnValue[js.UndefOr[MaxHeightProperty[String | Double]]] = js.native
+  var maxInlineSize: FnValue[js.UndefOr[MaxInlineSizeProperty[String | Double]]] = js.native
+  var maxLines: FnValue[js.UndefOr[MaxLinesProperty]] = js.native
+  var maxWidth: FnValue[js.UndefOr[MaxWidthProperty[String | Double]]] = js.native
+  var minBlockSize: FnValue[js.UndefOr[MinBlockSizeProperty[String | Double]]] = js.native
+  var minHeight: FnValue[js.UndefOr[MinHeightProperty[String | Double]]] = js.native
+  var minInlineSize: FnValue[js.UndefOr[MinInlineSizeProperty[String | Double]]] = js.native
+  var minWidth: FnValue[js.UndefOr[MinWidthProperty[String | Double]]] = js.native
+  var mixBlendMode: FnValue[js.UndefOr[MixBlendModeProperty]] = js.native
+  var motion: FnValue[js.UndefOr[OffsetProperty[String | Double]]] = js.native
+  var motionDistance: FnValue[js.UndefOr[OffsetDistanceProperty[String | Double]]] = js.native
+  var motionPath: FnValue[js.UndefOr[OffsetPathProperty]] = js.native
+  var motionRotation: FnValue[js.UndefOr[OffsetRotateProperty]] = js.native
+  var msAccelerator: FnValue[js.UndefOr[MsAcceleratorProperty]] = js.native
+  var msAlignSelf: FnValue[js.UndefOr[AlignSelfProperty]] = js.native
+  var msBlockProgression: FnValue[js.UndefOr[MsBlockProgressionProperty]] = js.native
+  var msContentZoomChaining: FnValue[js.UndefOr[MsContentZoomChainingProperty]] = js.native
+  var msContentZoomLimit: FnValue[js.UndefOr[GlobalsString]] = js.native
+  var msContentZoomLimitMax: FnValue[js.UndefOr[GlobalsString]] = js.native
+  var msContentZoomLimitMin: FnValue[js.UndefOr[GlobalsString]] = js.native
+  var msContentZoomSnap: FnValue[js.UndefOr[MsContentZoomSnapProperty]] = js.native
+  var msContentZoomSnapPoints: FnValue[js.UndefOr[GlobalsString]] = js.native
+  var msContentZoomSnapType: FnValue[js.UndefOr[MsContentZoomSnapTypeProperty]] = js.native
+  var msContentZooming: FnValue[js.UndefOr[MsContentZoomingProperty]] = js.native
+  var msFilter: FnValue[js.UndefOr[GlobalsString]] = js.native
+  var msFlex: FnValue[js.UndefOr[FlexProperty[String | Double]]] = js.native
+  var msFlexDirection: FnValue[js.UndefOr[FlexDirectionProperty]] = js.native
+  var msFlexPositive: FnValue[js.UndefOr[GlobalsNumber]] = js.native
+  var msFlowFrom: FnValue[js.UndefOr[MsFlowFromProperty]] = js.native
+  var msFlowInto: FnValue[js.UndefOr[MsFlowIntoProperty]] = js.native
+  var msGridColumns: FnValue[js.UndefOr[GridAutoColumnsProperty[String | Double]]] = js.native
+  var msGridRows: FnValue[js.UndefOr[GridAutoRowsProperty[String | Double]]] = js.native
+  var msHighContrastAdjust: FnValue[js.UndefOr[MsHighContrastAdjustProperty]] = js.native
+  var msHyphenateLimitChars: FnValue[js.UndefOr[MsHyphenateLimitCharsProperty]] = js.native
+  var msHyphenateLimitLines: FnValue[js.UndefOr[MsHyphenateLimitLinesProperty]] = js.native
+  var msHyphenateLimitZone: FnValue[js.UndefOr[MsHyphenateLimitZoneProperty[String | Double]]] = js.native
+  var msHyphens: FnValue[js.UndefOr[HyphensProperty]] = js.native
+  var msImeAlign: FnValue[js.UndefOr[MsImeAlignProperty]] = js.native
+  var msImeMode: FnValue[js.UndefOr[ImeModeProperty]] = js.native
+  var msLineBreak: FnValue[js.UndefOr[LineBreakProperty]] = js.native
+  var msOrder: FnValue[js.UndefOr[GlobalsNumber]] = js.native
+  var msOverflowStyle: FnValue[js.UndefOr[MsOverflowStyleProperty]] = js.native
+  var msOverflowX: FnValue[js.UndefOr[OverflowXProperty]] = js.native
+  var msOverflowY: FnValue[js.UndefOr[OverflowYProperty]] = js.native
+  var msScrollChaining: FnValue[js.UndefOr[MsScrollChainingProperty]] = js.native
+  var msScrollLimit: FnValue[js.UndefOr[GlobalsString]] = js.native
+  var msScrollLimitXMax: FnValue[js.UndefOr[MsScrollLimitXMaxProperty[String | Double]]] = js.native
+  var msScrollLimitXMin: FnValue[js.UndefOr[MsScrollLimitXMinProperty[String | Double]]] = js.native
+  var msScrollLimitYMax: FnValue[js.UndefOr[MsScrollLimitYMaxProperty[String | Double]]] = js.native
+  var msScrollLimitYMin: FnValue[js.UndefOr[MsScrollLimitYMinProperty[String | Double]]] = js.native
+  var msScrollRails: FnValue[js.UndefOr[MsScrollRailsProperty]] = js.native
+  var msScrollSnapPointsX: FnValue[js.UndefOr[GlobalsString]] = js.native
+  var msScrollSnapPointsY: FnValue[js.UndefOr[GlobalsString]] = js.native
+  var msScrollSnapType: FnValue[js.UndefOr[MsScrollSnapTypeProperty]] = js.native
+  var msScrollSnapX: FnValue[js.UndefOr[GlobalsString]] = js.native
+  var msScrollSnapY: FnValue[js.UndefOr[GlobalsString]] = js.native
+  var msScrollTranslation: FnValue[js.UndefOr[MsScrollTranslationProperty]] = js.native
+  var msScrollbar3dlightColor: FnValue[js.UndefOr[MsScrollbar3dlightColorProperty]] = js.native
+  var msScrollbarArrowColor: FnValue[js.UndefOr[MsScrollbarArrowColorProperty]] = js.native
+  var msScrollbarBaseColor: FnValue[js.UndefOr[MsScrollbarBaseColorProperty]] = js.native
+  var msScrollbarDarkshadowColor: FnValue[js.UndefOr[MsScrollbarDarkshadowColorProperty]] = js.native
+  var msScrollbarFaceColor: FnValue[js.UndefOr[MsScrollbarFaceColorProperty]] = js.native
+  var msScrollbarHighlightColor: FnValue[js.UndefOr[MsScrollbarHighlightColorProperty]] = js.native
+  var msScrollbarShadowColor: FnValue[js.UndefOr[MsScrollbarShadowColorProperty]] = js.native
+  var msScrollbarTrackColor: FnValue[js.UndefOr[MsScrollbarTrackColorProperty]] = js.native
+  var msTextAutospace: FnValue[js.UndefOr[MsTextAutospaceProperty]] = js.native
+  var msTextCombineHorizontal: FnValue[js.UndefOr[TextCombineUprightProperty]] = js.native
+  var msTextOverflow: FnValue[js.UndefOr[TextOverflowProperty]] = js.native
+  var msTouchAction: FnValue[js.UndefOr[TouchActionProperty]] = js.native
+  var msTouchSelect: FnValue[js.UndefOr[MsTouchSelectProperty]] = js.native
+  var msTransform: FnValue[js.UndefOr[TransformProperty]] = js.native
+  var msTransformOrigin: FnValue[js.UndefOr[TransformOriginProperty[String | Double]]] = js.native
+  var msTransition: FnValue[js.UndefOr[TransitionProperty]] = js.native
+  var msTransitionDelay: FnValue[js.UndefOr[GlobalsString]] = js.native
+  var msTransitionDuration: FnValue[js.UndefOr[GlobalsString]] = js.native
+  var msTransitionProperty: FnValue[js.UndefOr[TransitionPropertyProperty]] = js.native
+  var msTransitionTimingFunction: FnValue[js.UndefOr[TransitionTimingFunctionProperty]] = js.native
+  var msUserSelect: FnValue[js.UndefOr[MsUserSelectProperty]] = js.native
+  var msWordBreak: FnValue[js.UndefOr[WordBreakProperty]] = js.native
+  var msWrapFlow: FnValue[js.UndefOr[MsWrapFlowProperty]] = js.native
+  var msWrapMargin: FnValue[js.UndefOr[MsWrapMarginProperty[String | Double]]] = js.native
+  var msWrapThrough: FnValue[js.UndefOr[MsWrapThroughProperty]] = js.native
+  var msWritingMode: FnValue[js.UndefOr[WritingModeProperty]] = js.native
+  var objectFit: FnValue[js.UndefOr[ObjectFitProperty]] = js.native
+  var objectPosition: FnValue[js.UndefOr[ObjectPositionProperty[String | Double]]] = js.native
+  var offset: FnValue[js.UndefOr[OffsetProperty[String | Double]]] = js.native
+  var offsetAnchor: FnValue[js.UndefOr[OffsetAnchorProperty[String | Double]]] = js.native
+  var offsetBlock: FnValue[js.UndefOr[InsetBlockProperty[String | Double]]] = js.native
+  var offsetBlockEnd: FnValue[js.UndefOr[InsetBlockEndProperty[String | Double]]] = js.native
+  var offsetBlockStart: FnValue[js.UndefOr[InsetBlockStartProperty[String | Double]]] = js.native
+  var offsetDistance: FnValue[js.UndefOr[OffsetDistanceProperty[String | Double]]] = js.native
+  var offsetInline: FnValue[js.UndefOr[InsetInlineProperty[String | Double]]] = js.native
+  var offsetInlineEnd: FnValue[js.UndefOr[InsetInlineEndProperty[String | Double]]] = js.native
+  var offsetInlineStart: FnValue[js.UndefOr[InsetInlineStartProperty[String | Double]]] = js.native
+  var offsetPath: FnValue[js.UndefOr[OffsetPathProperty]] = js.native
+  var offsetPosition: FnValue[js.UndefOr[OffsetPositionProperty[String | Double]]] = js.native
+  var offsetRotate: FnValue[js.UndefOr[OffsetRotateProperty]] = js.native
+  var offsetRotation: FnValue[js.UndefOr[OffsetRotateProperty]] = js.native
+  var opacity: FnValue[js.UndefOr[GlobalsNumber]] = js.native
+  var order: FnValue[js.UndefOr[GlobalsNumber]] = js.native
+  var orphans: FnValue[js.UndefOr[GlobalsNumber]] = js.native
+  var outline: FnValue[js.UndefOr[OutlineProperty[String | Double]]] = js.native
+  var outlineColor: FnValue[js.UndefOr[OutlineColorProperty]] = js.native
+  var outlineOffset: FnValue[js.UndefOr[OutlineOffsetProperty[String | Double]]] = js.native
+  var outlineStyle: FnValue[js.UndefOr[OutlineStyleProperty]] = js.native
+  var outlineWidth: FnValue[js.UndefOr[OutlineWidthProperty[String | Double]]] = js.native
+  var overflow: FnValue[js.UndefOr[OverflowProperty]] = js.native
+  var overflowAnchor: FnValue[js.UndefOr[OverflowAnchorProperty]] = js.native
+  var overflowBlock: FnValue[js.UndefOr[OverflowBlockProperty]] = js.native
+  var overflowClipBox: FnValue[js.UndefOr[OverflowClipBoxProperty]] = js.native
+  var overflowInline: FnValue[js.UndefOr[OverflowInlineProperty]] = js.native
+  var overflowWrap: FnValue[js.UndefOr[OverflowWrapProperty]] = js.native
+  var overflowX: FnValue[js.UndefOr[OverflowXProperty]] = js.native
+  var overflowY: FnValue[js.UndefOr[OverflowYProperty]] = js.native
+  var overscrollBehavior: FnValue[js.UndefOr[OverscrollBehaviorProperty]] = js.native
+  var overscrollBehaviorX: FnValue[js.UndefOr[OverscrollBehaviorXProperty]] = js.native
+  var overscrollBehaviorY: FnValue[js.UndefOr[OverscrollBehaviorYProperty]] = js.native
+  var padding: FnValue[js.UndefOr[PaddingProperty[String | Double]]] = js.native
+  var paddingBlock: FnValue[js.UndefOr[PaddingBlockProperty[String | Double]]] = js.native
+  var paddingBlockEnd: FnValue[js.UndefOr[PaddingBlockEndProperty[String | Double]]] = js.native
+  var paddingBlockStart: FnValue[js.UndefOr[PaddingBlockStartProperty[String | Double]]] = js.native
+  var paddingBottom: FnValue[js.UndefOr[PaddingBottomProperty[String | Double]]] = js.native
+  var paddingInline: FnValue[js.UndefOr[PaddingInlineProperty[String | Double]]] = js.native
+  var paddingInlineEnd: FnValue[js.UndefOr[PaddingInlineEndProperty[String | Double]]] = js.native
+  var paddingInlineStart: FnValue[js.UndefOr[PaddingInlineStartProperty[String | Double]]] = js.native
+  var paddingLeft: FnValue[js.UndefOr[PaddingLeftProperty[String | Double]]] = js.native
+  var paddingRight: FnValue[js.UndefOr[PaddingRightProperty[String | Double]]] = js.native
+  var paddingTop: FnValue[js.UndefOr[PaddingTopProperty[String | Double]]] = js.native
+  var pageBreakAfter: FnValue[js.UndefOr[PageBreakAfterProperty]] = js.native
+  var pageBreakBefore: FnValue[js.UndefOr[PageBreakBeforeProperty]] = js.native
+  var pageBreakInside: FnValue[js.UndefOr[PageBreakInsideProperty]] = js.native
+  var paintOrder: FnValue[js.UndefOr[PaintOrderProperty]] = js.native
+  var perspective: FnValue[js.UndefOr[PerspectiveProperty[String | Double]]] = js.native
+  var perspectiveOrigin: FnValue[js.UndefOr[PerspectiveOriginProperty[String | Double]]] = js.native
+  var placeContent: FnValue[js.UndefOr[PlaceContentProperty]] = js.native
+  var placeItems: FnValue[js.UndefOr[PlaceItemsProperty]] = js.native
+  var placeSelf: FnValue[js.UndefOr[PlaceSelfProperty]] = js.native
+  var pointerEvents: FnValue[js.UndefOr[PointerEventsProperty]] = js.native
+  var position: FnValue[js.UndefOr[PositionProperty]] = js.native
+  var quotes: FnValue[js.UndefOr[QuotesProperty]] = js.native
+  var resize: FnValue[js.UndefOr[ResizeProperty]] = js.native
+  var right: FnValue[js.UndefOr[RightProperty[String | Double]]] = js.native
+  var rotate: FnValue[js.UndefOr[RotateProperty]] = js.native
+  var rowGap: FnValue[js.UndefOr[RowGapProperty[String | Double]]] = js.native
+  var rubyAlign: FnValue[js.UndefOr[RubyAlignProperty]] = js.native
+  var rubyMerge: FnValue[js.UndefOr[RubyMergeProperty]] = js.native
+  var rubyPosition: FnValue[js.UndefOr[RubyPositionProperty]] = js.native
+  var scale: FnValue[js.UndefOr[ScaleProperty]] = js.native
+  var scrollBehavior: FnValue[js.UndefOr[ScrollBehaviorProperty]] = js.native
+  var scrollMargin: FnValue[js.UndefOr[ScrollMarginProperty[String | Double]]] = js.native
+  var scrollMarginBlock: FnValue[js.UndefOr[ScrollMarginBlockProperty[String | Double]]] = js.native
+  var scrollMarginBlockEnd: FnValue[js.UndefOr[ScrollMarginBlockEndProperty[String | Double]]] = js.native
+  var scrollMarginBlockStart: FnValue[js.UndefOr[ScrollMarginBlockStartProperty[String | Double]]] = js.native
+  var scrollMarginBottom: FnValue[js.UndefOr[ScrollMarginBottomProperty[String | Double]]] = js.native
+  var scrollMarginInline: FnValue[js.UndefOr[ScrollMarginInlineProperty[String | Double]]] = js.native
+  var scrollMarginInlineEnd: FnValue[js.UndefOr[ScrollMarginInlineEndProperty[String | Double]]] = js.native
+  var scrollMarginInlineStart: FnValue[js.UndefOr[ScrollMarginInlineStartProperty[String | Double]]] = js.native
+  var scrollMarginLeft: FnValue[js.UndefOr[ScrollMarginLeftProperty[String | Double]]] = js.native
+  var scrollMarginRight: FnValue[js.UndefOr[ScrollMarginRightProperty[String | Double]]] = js.native
+  var scrollMarginTop: FnValue[js.UndefOr[ScrollMarginTopProperty[String | Double]]] = js.native
+  var scrollPadding: FnValue[js.UndefOr[ScrollPaddingProperty[String | Double]]] = js.native
+  var scrollPaddingBlock: FnValue[js.UndefOr[ScrollPaddingBlockProperty[String | Double]]] = js.native
+  var scrollPaddingBlockEnd: FnValue[js.UndefOr[ScrollPaddingBlockEndProperty[String | Double]]] = js.native
+  var scrollPaddingBlockStart: FnValue[js.UndefOr[ScrollPaddingBlockStartProperty[String | Double]]] = js.native
+  var scrollPaddingBottom: FnValue[js.UndefOr[ScrollPaddingBottomProperty[String | Double]]] = js.native
+  var scrollPaddingInline: FnValue[js.UndefOr[ScrollPaddingInlineProperty[String | Double]]] = js.native
+  var scrollPaddingInlineEnd: FnValue[js.UndefOr[ScrollPaddingInlineEndProperty[String | Double]]] = js.native
+  var scrollPaddingInlineStart: FnValue[js.UndefOr[ScrollPaddingInlineStartProperty[String | Double]]] = js.native
+  var scrollPaddingLeft: FnValue[js.UndefOr[ScrollPaddingLeftProperty[String | Double]]] = js.native
+  var scrollPaddingRight: FnValue[js.UndefOr[ScrollPaddingRightProperty[String | Double]]] = js.native
+  var scrollPaddingTop: FnValue[js.UndefOr[ScrollPaddingTopProperty[String | Double]]] = js.native
+  var scrollSnapAlign: FnValue[js.UndefOr[ScrollSnapAlignProperty]] = js.native
+  var scrollSnapCoordinate: FnValue[js.UndefOr[ScrollSnapCoordinateProperty[String | Double]]] = js.native
+  var scrollSnapDestination: FnValue[js.UndefOr[ScrollSnapDestinationProperty[String | Double]]] = js.native
+  var scrollSnapPointsX: FnValue[js.UndefOr[ScrollSnapPointsXProperty]] = js.native
+  var scrollSnapPointsY: FnValue[js.UndefOr[ScrollSnapPointsYProperty]] = js.native
+  var scrollSnapStop: FnValue[js.UndefOr[ScrollSnapStopProperty]] = js.native
+  var scrollSnapType: FnValue[js.UndefOr[ScrollSnapTypeProperty]] = js.native
+  var scrollSnapTypeX: FnValue[js.UndefOr[ScrollSnapTypeXProperty]] = js.native
+  var scrollSnapTypeY: FnValue[js.UndefOr[ScrollSnapTypeYProperty]] = js.native
+  var scrollbarColor: FnValue[js.UndefOr[ScrollbarColorProperty]] = js.native
+  var scrollbarWidth: FnValue[js.UndefOr[ScrollbarWidthProperty]] = js.native
+  var shapeImageThreshold: FnValue[js.UndefOr[GlobalsNumber]] = js.native
+  var shapeMargin: FnValue[js.UndefOr[ShapeMarginProperty[String | Double]]] = js.native
+  var shapeOutside: FnValue[js.UndefOr[ShapeOutsideProperty]] = js.native
+  var shapeRendering: FnValue[js.UndefOr[ShapeRenderingProperty]] = js.native
+  var stopColor: FnValue[js.UndefOr[StopColorProperty]] = js.native
+  var stopOpacity: FnValue[js.UndefOr[GlobalsNumber]] = js.native
+  var stroke: FnValue[js.UndefOr[StrokeProperty]] = js.native
+  var strokeDasharray: FnValue[js.UndefOr[StrokeDasharrayProperty[String | Double]]] = js.native
+  var strokeDashoffset: FnValue[js.UndefOr[StrokeDashoffsetProperty[String | Double]]] = js.native
+  var strokeLinecap: FnValue[js.UndefOr[StrokeLinecapProperty]] = js.native
+  var strokeLinejoin: FnValue[js.UndefOr[StrokeLinejoinProperty]] = js.native
+  var strokeMiterlimit: FnValue[js.UndefOr[GlobalsNumber]] = js.native
+  var strokeOpacity: FnValue[js.UndefOr[GlobalsNumber]] = js.native
+  var strokeWidth: FnValue[js.UndefOr[StrokeWidthProperty[String | Double]]] = js.native
+  var tabSize: FnValue[js.UndefOr[TabSizeProperty[String | Double]]] = js.native
+  var tableLayout: FnValue[js.UndefOr[TableLayoutProperty]] = js.native
+  var textAlign: FnValue[js.UndefOr[TextAlignProperty]] = js.native
+  var textAlignLast: FnValue[js.UndefOr[TextAlignLastProperty]] = js.native
+  var textAnchor: FnValue[js.UndefOr[TextAnchorProperty]] = js.native
+  var textCombineHorizontal: FnValue[js.UndefOr[TextCombineUprightProperty]] = js.native
+  var textCombineUpright: FnValue[js.UndefOr[TextCombineUprightProperty]] = js.native
+  var textDecoration: FnValue[js.UndefOr[TextDecorationProperty]] = js.native
+  var textDecorationColor: FnValue[js.UndefOr[TextDecorationColorProperty]] = js.native
+  var textDecorationLine: FnValue[js.UndefOr[TextDecorationLineProperty]] = js.native
+  var textDecorationSkip: FnValue[js.UndefOr[TextDecorationSkipProperty]] = js.native
+  var textDecorationSkipInk: FnValue[js.UndefOr[TextDecorationSkipInkProperty]] = js.native
+  var textDecorationStyle: FnValue[js.UndefOr[TextDecorationStyleProperty]] = js.native
+  var textEmphasis: FnValue[js.UndefOr[TextEmphasisProperty]] = js.native
+  var textEmphasisColor: FnValue[js.UndefOr[TextEmphasisColorProperty]] = js.native
+  var textEmphasisPosition: FnValue[js.UndefOr[GlobalsString]] = js.native
+  var textEmphasisStyle: FnValue[js.UndefOr[TextEmphasisStyleProperty]] = js.native
+  var textIndent: FnValue[js.UndefOr[TextIndentProperty[String | Double]]] = js.native
+  var textJustify: FnValue[js.UndefOr[TextJustifyProperty]] = js.native
+  var textOrientation: FnValue[js.UndefOr[TextOrientationProperty]] = js.native
+  var textOverflow: FnValue[js.UndefOr[TextOverflowProperty]] = js.native
+  var textRendering: FnValue[js.UndefOr[TextRenderingProperty]] = js.native
+  var textShadow: FnValue[js.UndefOr[TextShadowProperty]] = js.native
+  var textSizeAdjust: FnValue[js.UndefOr[TextSizeAdjustProperty]] = js.native
+  var textTransform: FnValue[js.UndefOr[TextTransformProperty]] = js.native
+  var textUnderlinePosition: FnValue[js.UndefOr[TextUnderlinePositionProperty]] = js.native
+  var top: FnValue[js.UndefOr[TopProperty[String | Double]]] = js.native
+  var touchAction: FnValue[js.UndefOr[TouchActionProperty]] = js.native
+  var transform: FnValue[js.UndefOr[TransformProperty]] = js.native
+  var transformBox: FnValue[js.UndefOr[TransformBoxProperty]] = js.native
+  var transformOrigin: FnValue[js.UndefOr[TransformOriginProperty[String | Double]]] = js.native
+  var transformStyle: FnValue[js.UndefOr[TransformStyleProperty]] = js.native
+  var transition: FnValue[js.UndefOr[TransitionProperty]] = js.native
+  var transitionDelay: FnValue[js.UndefOr[GlobalsString]] = js.native
+  var transitionDuration: FnValue[js.UndefOr[GlobalsString]] = js.native
+  var transitionProperty: FnValue[js.UndefOr[TransitionPropertyProperty]] = js.native
+  var transitionTimingFunction: FnValue[js.UndefOr[TransitionTimingFunctionProperty]] = js.native
+  var translate: FnValue[js.UndefOr[TranslateProperty[String | Double]]] = js.native
+  var unicodeBidi: FnValue[js.UndefOr[UnicodeBidiProperty]] = js.native
+  var userSelect: FnValue[js.UndefOr[UserSelectProperty]] = js.native
+  var vectorEffect: FnValue[js.UndefOr[VectorEffectProperty]] = js.native
+  var verticalAlign: FnValue[js.UndefOr[VerticalAlignProperty[String | Double]]] = js.native
+  var visibility: FnValue[js.UndefOr[VisibilityProperty]] = js.native
+  var whiteSpace: FnValue[js.UndefOr[WhiteSpaceProperty]] = js.native
+  var widows: FnValue[js.UndefOr[GlobalsNumber]] = js.native
+  var width: FnValue[js.UndefOr[WidthProperty[String | Double]]] = js.native
+  var willChange: FnValue[js.UndefOr[WillChangeProperty]] = js.native
+  var wordBreak: FnValue[js.UndefOr[WordBreakProperty]] = js.native
+  var wordSpacing: FnValue[js.UndefOr[WordSpacingProperty[String | Double]]] = js.native
+  var wordWrap: FnValue[js.UndefOr[WordWrapProperty]] = js.native
+  var writingMode: FnValue[js.UndefOr[WritingModeProperty]] = js.native
+  var zIndex: FnValue[js.UndefOr[ZIndexProperty]] = js.native
+  var zoom: FnValue[js.UndefOr[ZoomProperty]] = js.native
+}
+
+object JssStyleP {
+  @scala.inline
+  def apply[S](): JssStyleP[S] = {
+    val __obj = js.Dynamic.literal()
+    __obj.asInstanceOf[JssStyleP[S]]
+  }
+  @scala.inline
+  implicit class JssStylePOps[Self[s] <: JssStyleP[s], S] (val x: Self[S]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[S] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[S]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self[S] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[S] with Other]
+    @scala.inline
+    def withKhtmlBoxAlignFunction1(value: /* data */ js.Any => js.UndefOr[BoxAlignProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KhtmlBoxAlign")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withKhtmlBoxAlign(value: FnValue[js.UndefOr[BoxAlignProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KhtmlBoxAlign")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKhtmlBoxAlign: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KhtmlBoxAlign")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKhtmlBoxDirectionFunction1(value: /* data */ js.Any => js.UndefOr[BoxDirectionProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KhtmlBoxDirection")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withKhtmlBoxDirection(value: FnValue[js.UndefOr[BoxDirectionProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KhtmlBoxDirection")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKhtmlBoxDirection: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KhtmlBoxDirection")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKhtmlBoxFlexFunction1(value: /* data */ js.Any => js.UndefOr[GlobalsNumber]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KhtmlBoxFlex")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withKhtmlBoxFlex(value: FnValue[js.UndefOr[GlobalsNumber]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KhtmlBoxFlex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKhtmlBoxFlex: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KhtmlBoxFlex")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKhtmlBoxFlexGroupFunction1(value: /* data */ js.Any => js.UndefOr[GlobalsNumber]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KhtmlBoxFlexGroup")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withKhtmlBoxFlexGroup(value: FnValue[js.UndefOr[GlobalsNumber]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KhtmlBoxFlexGroup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKhtmlBoxFlexGroup: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KhtmlBoxFlexGroup")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKhtmlBoxLinesFunction1(value: /* data */ js.Any => js.UndefOr[BoxLinesProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KhtmlBoxLines")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withKhtmlBoxLines(value: FnValue[js.UndefOr[BoxLinesProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KhtmlBoxLines")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKhtmlBoxLines: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KhtmlBoxLines")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKhtmlBoxOrdinalGroupFunction1(value: /* data */ js.Any => js.UndefOr[GlobalsNumber]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KhtmlBoxOrdinalGroup")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withKhtmlBoxOrdinalGroup(value: FnValue[js.UndefOr[GlobalsNumber]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KhtmlBoxOrdinalGroup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKhtmlBoxOrdinalGroup: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KhtmlBoxOrdinalGroup")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKhtmlBoxOrientFunction1(value: /* data */ js.Any => js.UndefOr[BoxOrientProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KhtmlBoxOrient")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withKhtmlBoxOrient(value: FnValue[js.UndefOr[BoxOrientProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KhtmlBoxOrient")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKhtmlBoxOrient: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KhtmlBoxOrient")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKhtmlBoxPackFunction1(value: /* data */ js.Any => js.UndefOr[BoxPackProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KhtmlBoxPack")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withKhtmlBoxPack(value: FnValue[js.UndefOr[BoxPackProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KhtmlBoxPack")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKhtmlBoxPack: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KhtmlBoxPack")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKhtmlLineBreakFunction1(value: /* data */ js.Any => js.UndefOr[LineBreakProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KhtmlLineBreak")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withKhtmlLineBreak(value: FnValue[js.UndefOr[LineBreakProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KhtmlLineBreak")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKhtmlLineBreak: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KhtmlLineBreak")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKhtmlOpacityFunction1(value: /* data */ js.Any => js.UndefOr[GlobalsNumber]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KhtmlOpacity")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withKhtmlOpacity(value: FnValue[js.UndefOr[GlobalsNumber]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KhtmlOpacity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKhtmlOpacity: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KhtmlOpacity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKhtmlUserSelectFunction1(value: /* data */ js.Any => js.UndefOr[UserSelectProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KhtmlUserSelect")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withKhtmlUserSelect(value: FnValue[js.UndefOr[UserSelectProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KhtmlUserSelect")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKhtmlUserSelect: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KhtmlUserSelect")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMozAnimationFunction1(value: /* data */ js.Any => js.UndefOr[AnimationProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozAnimation")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMozAnimation(value: FnValue[js.UndefOr[AnimationProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozAnimation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMozAnimation: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozAnimation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMozAnimationDelayFunction1(value: /* data */ js.Any => js.UndefOr[GlobalsString]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozAnimationDelay")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMozAnimationDelay(value: FnValue[js.UndefOr[GlobalsString]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozAnimationDelay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMozAnimationDelay: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozAnimationDelay")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMozAnimationDirectionFunction1(value: /* data */ js.Any => js.UndefOr[AnimationDirectionProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozAnimationDirection")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMozAnimationDirection(value: FnValue[js.UndefOr[AnimationDirectionProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozAnimationDirection")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMozAnimationDirection: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozAnimationDirection")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMozAnimationDurationFunction1(value: /* data */ js.Any => js.UndefOr[GlobalsString]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozAnimationDuration")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMozAnimationDuration(value: FnValue[js.UndefOr[GlobalsString]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozAnimationDuration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMozAnimationDuration: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozAnimationDuration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMozAnimationFillModeFunction1(value: /* data */ js.Any => js.UndefOr[AnimationFillModeProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozAnimationFillMode")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMozAnimationFillMode(value: FnValue[js.UndefOr[AnimationFillModeProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozAnimationFillMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMozAnimationFillMode: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozAnimationFillMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMozAnimationIterationCountFunction1(value: /* data */ js.Any => js.UndefOr[AnimationIterationCountProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozAnimationIterationCount")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMozAnimationIterationCount(value: FnValue[js.UndefOr[AnimationIterationCountProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozAnimationIterationCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMozAnimationIterationCount: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozAnimationIterationCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMozAnimationNameFunction1(value: /* data */ js.Any => js.UndefOr[AnimationNameProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozAnimationName")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMozAnimationName(value: FnValue[js.UndefOr[AnimationNameProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozAnimationName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMozAnimationName: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozAnimationName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMozAnimationPlayStateFunction1(value: /* data */ js.Any => js.UndefOr[AnimationPlayStateProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozAnimationPlayState")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMozAnimationPlayState(value: FnValue[js.UndefOr[AnimationPlayStateProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozAnimationPlayState")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMozAnimationPlayState: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozAnimationPlayState")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMozAnimationTimingFunctionFunction1(value: /* data */ js.Any => js.UndefOr[AnimationTimingFunctionProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozAnimationTimingFunction")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMozAnimationTimingFunction(value: FnValue[js.UndefOr[AnimationTimingFunctionProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozAnimationTimingFunction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMozAnimationTimingFunction: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozAnimationTimingFunction")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMozAppearanceFunction1(value: /* data */ js.Any => js.UndefOr[MozAppearanceProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozAppearance")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMozAppearance(value: FnValue[js.UndefOr[MozAppearanceProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozAppearance")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMozAppearance: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozAppearance")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMozBackfaceVisibilityFunction1(value: /* data */ js.Any => js.UndefOr[BackfaceVisibilityProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBackfaceVisibility")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMozBackfaceVisibility(value: FnValue[js.UndefOr[BackfaceVisibilityProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBackfaceVisibility")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMozBackfaceVisibility: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBackfaceVisibility")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMozBackgroundClipFunction1(value: /* data */ js.Any => js.UndefOr[BackgroundClipProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBackgroundClip")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMozBackgroundClip(value: FnValue[js.UndefOr[BackgroundClipProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBackgroundClip")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMozBackgroundClip: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBackgroundClip")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMozBackgroundInlinePolicyFunction1(value: /* data */ js.Any => js.UndefOr[BoxDecorationBreakProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBackgroundInlinePolicy")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMozBackgroundInlinePolicy(value: FnValue[js.UndefOr[BoxDecorationBreakProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBackgroundInlinePolicy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMozBackgroundInlinePolicy: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBackgroundInlinePolicy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMozBackgroundOriginFunction1(value: /* data */ js.Any => js.UndefOr[BackgroundOriginProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBackgroundOrigin")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMozBackgroundOrigin(value: FnValue[js.UndefOr[BackgroundOriginProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBackgroundOrigin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMozBackgroundOrigin: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBackgroundOrigin")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMozBackgroundSizeFunction1(value: /* data */ js.Any => js.UndefOr[BackgroundSizeProperty[String | Double]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBackgroundSize")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMozBackgroundSize(value: FnValue[js.UndefOr[BackgroundSizeProperty[String | Double]]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBackgroundSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMozBackgroundSize: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBackgroundSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMozBindingFunction1(value: /* data */ js.Any => js.UndefOr[MozBindingProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBinding")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMozBinding(value: FnValue[js.UndefOr[MozBindingProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBinding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMozBinding: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBinding")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMozBorderBottomColorsFunction1(value: /* data */ js.Any => js.UndefOr[MozBorderBottomColorsProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBorderBottomColors")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMozBorderBottomColors(value: FnValue[js.UndefOr[MozBorderBottomColorsProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBorderBottomColors")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMozBorderBottomColors: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBorderBottomColors")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMozBorderEndColorFunction1(value: /* data */ js.Any => js.UndefOr[BorderInlineEndColorProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBorderEndColor")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMozBorderEndColor(value: FnValue[js.UndefOr[BorderInlineEndColorProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBorderEndColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMozBorderEndColor: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBorderEndColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMozBorderEndStyleFunction1(value: /* data */ js.Any => js.UndefOr[BorderInlineEndStyleProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBorderEndStyle")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMozBorderEndStyle(value: FnValue[js.UndefOr[BorderInlineEndStyleProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBorderEndStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMozBorderEndStyle: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBorderEndStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMozBorderEndWidthFunction1(value: /* data */ js.Any => js.UndefOr[BorderInlineEndWidthProperty[String | Double]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBorderEndWidth")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMozBorderEndWidth(value: FnValue[js.UndefOr[BorderInlineEndWidthProperty[String | Double]]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBorderEndWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMozBorderEndWidth: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBorderEndWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMozBorderImageFunction1(value: /* data */ js.Any => js.UndefOr[BorderImageProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBorderImage")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMozBorderImage(value: FnValue[js.UndefOr[BorderImageProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBorderImage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMozBorderImage: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBorderImage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMozBorderLeftColorsFunction1(value: /* data */ js.Any => js.UndefOr[MozBorderLeftColorsProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBorderLeftColors")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMozBorderLeftColors(value: FnValue[js.UndefOr[MozBorderLeftColorsProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBorderLeftColors")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMozBorderLeftColors: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBorderLeftColors")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMozBorderRadiusFunction1(value: /* data */ js.Any => js.UndefOr[BorderRadiusProperty[String | Double]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBorderRadius")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMozBorderRadius(value: FnValue[js.UndefOr[BorderRadiusProperty[String | Double]]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBorderRadius")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMozBorderRadius: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBorderRadius")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMozBorderRadiusBottomleftFunction1(value: /* data */ js.Any => js.UndefOr[BorderBottomLeftRadiusProperty[String | Double]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBorderRadiusBottomleft")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMozBorderRadiusBottomleft(value: FnValue[js.UndefOr[BorderBottomLeftRadiusProperty[String | Double]]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBorderRadiusBottomleft")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMozBorderRadiusBottomleft: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBorderRadiusBottomleft")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMozBorderRadiusBottomrightFunction1(value: /* data */ js.Any => js.UndefOr[BorderBottomRightRadiusProperty[String | Double]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBorderRadiusBottomright")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMozBorderRadiusBottomright(value: FnValue[js.UndefOr[BorderBottomRightRadiusProperty[String | Double]]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBorderRadiusBottomright")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMozBorderRadiusBottomright: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBorderRadiusBottomright")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMozBorderRadiusTopleftFunction1(value: /* data */ js.Any => js.UndefOr[BorderTopLeftRadiusProperty[String | Double]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBorderRadiusTopleft")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMozBorderRadiusTopleft(value: FnValue[js.UndefOr[BorderTopLeftRadiusProperty[String | Double]]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBorderRadiusTopleft")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMozBorderRadiusTopleft: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBorderRadiusTopleft")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMozBorderRadiusToprightFunction1(value: /* data */ js.Any => js.UndefOr[BorderTopRightRadiusProperty[String | Double]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBorderRadiusTopright")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMozBorderRadiusTopright(value: FnValue[js.UndefOr[BorderTopRightRadiusProperty[String | Double]]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBorderRadiusTopright")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMozBorderRadiusTopright: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBorderRadiusTopright")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMozBorderRightColorsFunction1(value: /* data */ js.Any => js.UndefOr[MozBorderRightColorsProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBorderRightColors")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMozBorderRightColors(value: FnValue[js.UndefOr[MozBorderRightColorsProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBorderRightColors")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMozBorderRightColors: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBorderRightColors")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMozBorderStartColorFunction1(value: /* data */ js.Any => js.UndefOr[BorderInlineStartColorProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBorderStartColor")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMozBorderStartColor(value: FnValue[js.UndefOr[BorderInlineStartColorProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBorderStartColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMozBorderStartColor: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBorderStartColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMozBorderStartStyleFunction1(value: /* data */ js.Any => js.UndefOr[BorderInlineStartStyleProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBorderStartStyle")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMozBorderStartStyle(value: FnValue[js.UndefOr[BorderInlineStartStyleProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBorderStartStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMozBorderStartStyle: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBorderStartStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMozBorderTopColorsFunction1(value: /* data */ js.Any => js.UndefOr[MozBorderTopColorsProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBorderTopColors")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMozBorderTopColors(value: FnValue[js.UndefOr[MozBorderTopColorsProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBorderTopColors")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMozBorderTopColors: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBorderTopColors")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMozBoxAlignFunction1(value: /* data */ js.Any => js.UndefOr[BoxAlignProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBoxAlign")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMozBoxAlign(value: FnValue[js.UndefOr[BoxAlignProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBoxAlign")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMozBoxAlign: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBoxAlign")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMozBoxDirectionFunction1(value: /* data */ js.Any => js.UndefOr[BoxDirectionProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBoxDirection")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMozBoxDirection(value: FnValue[js.UndefOr[BoxDirectionProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBoxDirection")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMozBoxDirection: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBoxDirection")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMozBoxFlexFunction1(value: /* data */ js.Any => js.UndefOr[GlobalsNumber]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBoxFlex")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMozBoxFlex(value: FnValue[js.UndefOr[GlobalsNumber]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBoxFlex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMozBoxFlex: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBoxFlex")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMozBoxOrdinalGroupFunction1(value: /* data */ js.Any => js.UndefOr[GlobalsNumber]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBoxOrdinalGroup")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMozBoxOrdinalGroup(value: FnValue[js.UndefOr[GlobalsNumber]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBoxOrdinalGroup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMozBoxOrdinalGroup: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBoxOrdinalGroup")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMozBoxOrientFunction1(value: /* data */ js.Any => js.UndefOr[BoxOrientProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBoxOrient")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMozBoxOrient(value: FnValue[js.UndefOr[BoxOrientProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBoxOrient")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMozBoxOrient: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBoxOrient")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMozBoxPackFunction1(value: /* data */ js.Any => js.UndefOr[BoxPackProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBoxPack")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMozBoxPack(value: FnValue[js.UndefOr[BoxPackProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBoxPack")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMozBoxPack: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBoxPack")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMozBoxShadowFunction1(value: /* data */ js.Any => js.UndefOr[BoxShadowProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBoxShadow")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMozBoxShadow(value: FnValue[js.UndefOr[BoxShadowProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBoxShadow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMozBoxShadow: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBoxShadow")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMozBoxSizingFunction1(value: /* data */ js.Any => js.UndefOr[BoxSizingProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBoxSizing")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMozBoxSizing(value: FnValue[js.UndefOr[BoxSizingProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBoxSizing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMozBoxSizing: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBoxSizing")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMozColumnCountFunction1(value: /* data */ js.Any => js.UndefOr[ColumnCountProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozColumnCount")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMozColumnCount(value: FnValue[js.UndefOr[ColumnCountProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozColumnCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMozColumnCount: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozColumnCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMozColumnFillFunction1(value: /* data */ js.Any => js.UndefOr[ColumnFillProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozColumnFill")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMozColumnFill(value: FnValue[js.UndefOr[ColumnFillProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozColumnFill")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMozColumnFill: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozColumnFill")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMozColumnGapFunction1(value: /* data */ js.Any => js.UndefOr[ColumnGapProperty[String | Double]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozColumnGap")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMozColumnGap(value: FnValue[js.UndefOr[ColumnGapProperty[String | Double]]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozColumnGap")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMozColumnGap: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozColumnGap")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMozColumnRuleFunction1(value: /* data */ js.Any => js.UndefOr[ColumnRuleProperty[String | Double]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozColumnRule")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMozColumnRule(value: FnValue[js.UndefOr[ColumnRuleProperty[String | Double]]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozColumnRule")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMozColumnRule: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozColumnRule")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMozColumnRuleColorFunction1(value: /* data */ js.Any => js.UndefOr[ColumnRuleColorProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozColumnRuleColor")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMozColumnRuleColor(value: FnValue[js.UndefOr[ColumnRuleColorProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozColumnRuleColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMozColumnRuleColor: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozColumnRuleColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMozColumnRuleStyleFunction1(value: /* data */ js.Any => js.UndefOr[ColumnRuleStyleProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozColumnRuleStyle")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMozColumnRuleStyle(value: FnValue[js.UndefOr[ColumnRuleStyleProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozColumnRuleStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMozColumnRuleStyle: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozColumnRuleStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMozColumnRuleWidthFunction1(value: /* data */ js.Any => js.UndefOr[ColumnRuleWidthProperty[String | Double]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozColumnRuleWidth")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMozColumnRuleWidth(value: FnValue[js.UndefOr[ColumnRuleWidthProperty[String | Double]]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozColumnRuleWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMozColumnRuleWidth: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozColumnRuleWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMozColumnWidthFunction1(value: /* data */ js.Any => js.UndefOr[ColumnWidthProperty[String | Double]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozColumnWidth")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMozColumnWidth(value: FnValue[js.UndefOr[ColumnWidthProperty[String | Double]]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozColumnWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMozColumnWidth: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozColumnWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMozColumnsFunction1(value: /* data */ js.Any => js.UndefOr[ColumnsProperty[String | Double]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozColumns")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMozColumns(value: FnValue[js.UndefOr[ColumnsProperty[String | Double]]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozColumns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMozColumns: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozColumns")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMozContextPropertiesFunction1(value: /* data */ js.Any => js.UndefOr[MozContextPropertiesProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozContextProperties")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMozContextProperties(value: FnValue[js.UndefOr[MozContextPropertiesProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozContextProperties")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMozContextProperties: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozContextProperties")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMozFloatEdgeFunction1(value: /* data */ js.Any => js.UndefOr[MozFloatEdgeProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozFloatEdge")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMozFloatEdge(value: FnValue[js.UndefOr[MozFloatEdgeProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozFloatEdge")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMozFloatEdge: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozFloatEdge")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMozFontFeatureSettingsFunction1(value: /* data */ js.Any => js.UndefOr[FontFeatureSettingsProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozFontFeatureSettings")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMozFontFeatureSettings(value: FnValue[js.UndefOr[FontFeatureSettingsProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozFontFeatureSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMozFontFeatureSettings: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozFontFeatureSettings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMozFontLanguageOverrideFunction1(value: /* data */ js.Any => js.UndefOr[FontLanguageOverrideProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozFontLanguageOverride")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMozFontLanguageOverride(value: FnValue[js.UndefOr[FontLanguageOverrideProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozFontLanguageOverride")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMozFontLanguageOverride: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozFontLanguageOverride")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMozForceBrokenImageIconFunction1(value: /* data */ js.Any => js.UndefOr[GlobalsNumber]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozForceBrokenImageIcon")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMozForceBrokenImageIcon(value: FnValue[js.UndefOr[GlobalsNumber]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozForceBrokenImageIcon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMozForceBrokenImageIcon: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozForceBrokenImageIcon")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMozHyphensFunction1(value: /* data */ js.Any => js.UndefOr[HyphensProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozHyphens")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMozHyphens(value: FnValue[js.UndefOr[HyphensProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozHyphens")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMozHyphens: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozHyphens")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMozImageRegionFunction1(value: /* data */ js.Any => js.UndefOr[MozImageRegionProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozImageRegion")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMozImageRegion(value: FnValue[js.UndefOr[MozImageRegionProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozImageRegion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMozImageRegion: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozImageRegion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMozMarginEndFunction1(value: /* data */ js.Any => js.UndefOr[MarginInlineEndProperty[String | Double]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozMarginEnd")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMozMarginEnd(value: FnValue[js.UndefOr[MarginInlineEndProperty[String | Double]]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozMarginEnd")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMozMarginEnd: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozMarginEnd")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMozMarginStartFunction1(value: /* data */ js.Any => js.UndefOr[MarginInlineStartProperty[String | Double]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozMarginStart")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMozMarginStart(value: FnValue[js.UndefOr[MarginInlineStartProperty[String | Double]]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozMarginStart")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMozMarginStart: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozMarginStart")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMozOpacityFunction1(value: /* data */ js.Any => js.UndefOr[GlobalsNumber]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozOpacity")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMozOpacity(value: FnValue[js.UndefOr[GlobalsNumber]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozOpacity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMozOpacity: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozOpacity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMozOrientFunction1(value: /* data */ js.Any => js.UndefOr[MozOrientProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozOrient")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMozOrient(value: FnValue[js.UndefOr[MozOrientProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozOrient")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMozOrient: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozOrient")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMozOutlineFunction1(value: /* data */ js.Any => js.UndefOr[OutlineProperty[String | Double]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozOutline")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMozOutline(value: FnValue[js.UndefOr[OutlineProperty[String | Double]]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozOutline")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMozOutline: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozOutline")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMozOutlineColorFunction1(value: /* data */ js.Any => js.UndefOr[OutlineColorProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozOutlineColor")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMozOutlineColor(value: FnValue[js.UndefOr[OutlineColorProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozOutlineColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMozOutlineColor: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozOutlineColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMozOutlineRadiusFunction1(value: /* data */ js.Any => js.UndefOr[MozOutlineRadiusProperty[String | Double]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozOutlineRadius")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMozOutlineRadius(value: FnValue[js.UndefOr[MozOutlineRadiusProperty[String | Double]]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozOutlineRadius")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMozOutlineRadius: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozOutlineRadius")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMozOutlineRadiusBottomleftFunction1(value: /* data */ js.Any => js.UndefOr[MozOutlineRadiusBottomleftProperty[String | Double]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozOutlineRadiusBottomleft")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMozOutlineRadiusBottomleft(value: FnValue[js.UndefOr[MozOutlineRadiusBottomleftProperty[String | Double]]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozOutlineRadiusBottomleft")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMozOutlineRadiusBottomleft: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozOutlineRadiusBottomleft")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMozOutlineRadiusBottomrightFunction1(value: /* data */ js.Any => js.UndefOr[MozOutlineRadiusBottomrightProperty[String | Double]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozOutlineRadiusBottomright")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMozOutlineRadiusBottomright(value: FnValue[js.UndefOr[MozOutlineRadiusBottomrightProperty[String | Double]]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozOutlineRadiusBottomright")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMozOutlineRadiusBottomright: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozOutlineRadiusBottomright")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMozOutlineRadiusTopleftFunction1(value: /* data */ js.Any => js.UndefOr[MozOutlineRadiusTopleftProperty[String | Double]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozOutlineRadiusTopleft")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMozOutlineRadiusTopleft(value: FnValue[js.UndefOr[MozOutlineRadiusTopleftProperty[String | Double]]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozOutlineRadiusTopleft")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMozOutlineRadiusTopleft: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozOutlineRadiusTopleft")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMozOutlineRadiusToprightFunction1(value: /* data */ js.Any => js.UndefOr[MozOutlineRadiusToprightProperty[String | Double]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozOutlineRadiusTopright")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMozOutlineRadiusTopright(value: FnValue[js.UndefOr[MozOutlineRadiusToprightProperty[String | Double]]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozOutlineRadiusTopright")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMozOutlineRadiusTopright: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozOutlineRadiusTopright")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMozOutlineStyleFunction1(value: /* data */ js.Any => js.UndefOr[OutlineStyleProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozOutlineStyle")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMozOutlineStyle(value: FnValue[js.UndefOr[OutlineStyleProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozOutlineStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMozOutlineStyle: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozOutlineStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMozOutlineWidthFunction1(value: /* data */ js.Any => js.UndefOr[OutlineWidthProperty[String | Double]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozOutlineWidth")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMozOutlineWidth(value: FnValue[js.UndefOr[OutlineWidthProperty[String | Double]]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozOutlineWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMozOutlineWidth: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozOutlineWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMozPaddingEndFunction1(value: /* data */ js.Any => js.UndefOr[PaddingInlineEndProperty[String | Double]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozPaddingEnd")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMozPaddingEnd(value: FnValue[js.UndefOr[PaddingInlineEndProperty[String | Double]]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozPaddingEnd")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMozPaddingEnd: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozPaddingEnd")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMozPaddingStartFunction1(value: /* data */ js.Any => js.UndefOr[PaddingInlineStartProperty[String | Double]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozPaddingStart")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMozPaddingStart(value: FnValue[js.UndefOr[PaddingInlineStartProperty[String | Double]]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozPaddingStart")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMozPaddingStart: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozPaddingStart")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMozPerspectiveFunction1(value: /* data */ js.Any => js.UndefOr[PerspectiveProperty[String | Double]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozPerspective")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMozPerspective(value: FnValue[js.UndefOr[PerspectiveProperty[String | Double]]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozPerspective")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMozPerspective: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozPerspective")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMozPerspectiveOriginFunction1(value: /* data */ js.Any => js.UndefOr[PerspectiveOriginProperty[String | Double]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozPerspectiveOrigin")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMozPerspectiveOrigin(value: FnValue[js.UndefOr[PerspectiveOriginProperty[String | Double]]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozPerspectiveOrigin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMozPerspectiveOrigin: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozPerspectiveOrigin")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMozStackSizingFunction1(value: /* data */ js.Any => js.UndefOr[MozStackSizingProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozStackSizing")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMozStackSizing(value: FnValue[js.UndefOr[MozStackSizingProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozStackSizing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMozStackSizing: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozStackSizing")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMozTabSizeFunction1(value: /* data */ js.Any => js.UndefOr[TabSizeProperty[String | Double]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozTabSize")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMozTabSize(value: FnValue[js.UndefOr[TabSizeProperty[String | Double]]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozTabSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMozTabSize: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozTabSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMozTextAlignLastFunction1(value: /* data */ js.Any => js.UndefOr[TextAlignLastProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozTextAlignLast")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMozTextAlignLast(value: FnValue[js.UndefOr[TextAlignLastProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozTextAlignLast")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMozTextAlignLast: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozTextAlignLast")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMozTextBlinkFunction1(value: /* data */ js.Any => js.UndefOr[MozTextBlinkProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozTextBlink")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMozTextBlink(value: FnValue[js.UndefOr[MozTextBlinkProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozTextBlink")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMozTextBlink: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozTextBlink")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMozTextDecorationColorFunction1(value: /* data */ js.Any => js.UndefOr[TextDecorationColorProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozTextDecorationColor")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMozTextDecorationColor(value: FnValue[js.UndefOr[TextDecorationColorProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozTextDecorationColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMozTextDecorationColor: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozTextDecorationColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMozTextDecorationLineFunction1(value: /* data */ js.Any => js.UndefOr[TextDecorationLineProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozTextDecorationLine")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMozTextDecorationLine(value: FnValue[js.UndefOr[TextDecorationLineProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozTextDecorationLine")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMozTextDecorationLine: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozTextDecorationLine")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMozTextDecorationStyleFunction1(value: /* data */ js.Any => js.UndefOr[TextDecorationStyleProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozTextDecorationStyle")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMozTextDecorationStyle(value: FnValue[js.UndefOr[TextDecorationStyleProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozTextDecorationStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMozTextDecorationStyle: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozTextDecorationStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMozTextSizeAdjustFunction1(value: /* data */ js.Any => js.UndefOr[TextSizeAdjustProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozTextSizeAdjust")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMozTextSizeAdjust(value: FnValue[js.UndefOr[TextSizeAdjustProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozTextSizeAdjust")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMozTextSizeAdjust: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozTextSizeAdjust")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMozTransformOriginFunction1(value: /* data */ js.Any => js.UndefOr[TransformOriginProperty[String | Double]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozTransformOrigin")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMozTransformOrigin(value: FnValue[js.UndefOr[TransformOriginProperty[String | Double]]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozTransformOrigin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMozTransformOrigin: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozTransformOrigin")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMozTransformStyleFunction1(value: /* data */ js.Any => js.UndefOr[TransformStyleProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozTransformStyle")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMozTransformStyle(value: FnValue[js.UndefOr[TransformStyleProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozTransformStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMozTransformStyle: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozTransformStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMozTransitionFunction1(value: /* data */ js.Any => js.UndefOr[TransitionProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozTransition")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMozTransition(value: FnValue[js.UndefOr[TransitionProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozTransition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMozTransition: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozTransition")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMozTransitionDelayFunction1(value: /* data */ js.Any => js.UndefOr[GlobalsString]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozTransitionDelay")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMozTransitionDelay(value: FnValue[js.UndefOr[GlobalsString]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozTransitionDelay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMozTransitionDelay: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozTransitionDelay")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMozTransitionDurationFunction1(value: /* data */ js.Any => js.UndefOr[GlobalsString]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozTransitionDuration")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMozTransitionDuration(value: FnValue[js.UndefOr[GlobalsString]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozTransitionDuration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMozTransitionDuration: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozTransitionDuration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMozTransitionPropertyFunction1(value: /* data */ js.Any => js.UndefOr[TransitionPropertyProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozTransitionProperty")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMozTransitionProperty(value: FnValue[js.UndefOr[TransitionPropertyProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozTransitionProperty")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMozTransitionProperty: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozTransitionProperty")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMozTransitionTimingFunctionFunction1(value: /* data */ js.Any => js.UndefOr[TransitionTimingFunctionProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozTransitionTimingFunction")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMozTransitionTimingFunction(value: FnValue[js.UndefOr[TransitionTimingFunctionProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozTransitionTimingFunction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMozTransitionTimingFunction: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozTransitionTimingFunction")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMozUserFocusFunction1(value: /* data */ js.Any => js.UndefOr[MozUserFocusProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozUserFocus")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMozUserFocus(value: FnValue[js.UndefOr[MozUserFocusProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozUserFocus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMozUserFocus: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozUserFocus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMozUserInputFunction1(value: /* data */ js.Any => js.UndefOr[MozUserInputProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozUserInput")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMozUserInput(value: FnValue[js.UndefOr[MozUserInputProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozUserInput")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMozUserInput: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozUserInput")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMozUserModifyFunction1(value: /* data */ js.Any => js.UndefOr[MozUserModifyProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozUserModify")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMozUserModify(value: FnValue[js.UndefOr[MozUserModifyProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozUserModify")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMozUserModify: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozUserModify")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMozUserSelectFunction1(value: /* data */ js.Any => js.UndefOr[UserSelectProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozUserSelect")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMozUserSelect(value: FnValue[js.UndefOr[UserSelectProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozUserSelect")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMozUserSelect: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozUserSelect")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMozWindowDraggingFunction1(value: /* data */ js.Any => js.UndefOr[MozWindowDraggingProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozWindowDragging")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMozWindowDragging(value: FnValue[js.UndefOr[MozWindowDraggingProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozWindowDragging")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMozWindowDragging: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozWindowDragging")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMozWindowShadowFunction1(value: /* data */ js.Any => js.UndefOr[MozWindowShadowProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozWindowShadow")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMozWindowShadow(value: FnValue[js.UndefOr[MozWindowShadowProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozWindowShadow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMozWindowShadow: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozWindowShadow")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOAnimationFunction1(value: /* data */ js.Any => js.UndefOr[AnimationProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OAnimation")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOAnimation(value: FnValue[js.UndefOr[AnimationProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OAnimation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOAnimation: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OAnimation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOAnimationDelayFunction1(value: /* data */ js.Any => js.UndefOr[GlobalsString]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OAnimationDelay")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOAnimationDelay(value: FnValue[js.UndefOr[GlobalsString]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OAnimationDelay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOAnimationDelay: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OAnimationDelay")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOAnimationDirectionFunction1(value: /* data */ js.Any => js.UndefOr[AnimationDirectionProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OAnimationDirection")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOAnimationDirection(value: FnValue[js.UndefOr[AnimationDirectionProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OAnimationDirection")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOAnimationDirection: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OAnimationDirection")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOAnimationDurationFunction1(value: /* data */ js.Any => js.UndefOr[GlobalsString]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OAnimationDuration")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOAnimationDuration(value: FnValue[js.UndefOr[GlobalsString]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OAnimationDuration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOAnimationDuration: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OAnimationDuration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOAnimationFillModeFunction1(value: /* data */ js.Any => js.UndefOr[AnimationFillModeProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OAnimationFillMode")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOAnimationFillMode(value: FnValue[js.UndefOr[AnimationFillModeProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OAnimationFillMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOAnimationFillMode: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OAnimationFillMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOAnimationIterationCountFunction1(value: /* data */ js.Any => js.UndefOr[AnimationIterationCountProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OAnimationIterationCount")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOAnimationIterationCount(value: FnValue[js.UndefOr[AnimationIterationCountProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OAnimationIterationCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOAnimationIterationCount: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OAnimationIterationCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOAnimationNameFunction1(value: /* data */ js.Any => js.UndefOr[AnimationNameProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OAnimationName")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOAnimationName(value: FnValue[js.UndefOr[AnimationNameProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OAnimationName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOAnimationName: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OAnimationName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOAnimationPlayStateFunction1(value: /* data */ js.Any => js.UndefOr[AnimationPlayStateProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OAnimationPlayState")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOAnimationPlayState(value: FnValue[js.UndefOr[AnimationPlayStateProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OAnimationPlayState")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOAnimationPlayState: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OAnimationPlayState")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOAnimationTimingFunctionFunction1(value: /* data */ js.Any => js.UndefOr[AnimationTimingFunctionProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OAnimationTimingFunction")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOAnimationTimingFunction(value: FnValue[js.UndefOr[AnimationTimingFunctionProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OAnimationTimingFunction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOAnimationTimingFunction: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OAnimationTimingFunction")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOBackgroundSizeFunction1(value: /* data */ js.Any => js.UndefOr[BackgroundSizeProperty[String | Double]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OBackgroundSize")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOBackgroundSize(value: FnValue[js.UndefOr[BackgroundSizeProperty[String | Double]]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OBackgroundSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOBackgroundSize: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OBackgroundSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOBorderImageFunction1(value: /* data */ js.Any => js.UndefOr[BorderImageProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OBorderImage")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOBorderImage(value: FnValue[js.UndefOr[BorderImageProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OBorderImage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOBorderImage: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OBorderImage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOObjectFitFunction1(value: /* data */ js.Any => js.UndefOr[ObjectFitProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OObjectFit")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOObjectFit(value: FnValue[js.UndefOr[ObjectFitProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OObjectFit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOObjectFit: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OObjectFit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOObjectPositionFunction1(value: /* data */ js.Any => js.UndefOr[ObjectPositionProperty[String | Double]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OObjectPosition")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOObjectPosition(value: FnValue[js.UndefOr[ObjectPositionProperty[String | Double]]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OObjectPosition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOObjectPosition: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OObjectPosition")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOTabSizeFunction1(value: /* data */ js.Any => js.UndefOr[TabSizeProperty[String | Double]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OTabSize")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOTabSize(value: FnValue[js.UndefOr[TabSizeProperty[String | Double]]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OTabSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOTabSize: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OTabSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOTextOverflowFunction1(value: /* data */ js.Any => js.UndefOr[TextOverflowProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OTextOverflow")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOTextOverflow(value: FnValue[js.UndefOr[TextOverflowProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OTextOverflow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOTextOverflow: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OTextOverflow")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOTransformFunction1(value: /* data */ js.Any => js.UndefOr[TransformProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OTransform")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOTransform(value: FnValue[js.UndefOr[TransformProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OTransform")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOTransform: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OTransform")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOTransformOriginFunction1(value: /* data */ js.Any => js.UndefOr[TransformOriginProperty[String | Double]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OTransformOrigin")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOTransformOrigin(value: FnValue[js.UndefOr[TransformOriginProperty[String | Double]]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OTransformOrigin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOTransformOrigin: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OTransformOrigin")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOTransitionFunction1(value: /* data */ js.Any => js.UndefOr[TransitionProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OTransition")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOTransition(value: FnValue[js.UndefOr[TransitionProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OTransition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOTransition: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OTransition")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOTransitionDelayFunction1(value: /* data */ js.Any => js.UndefOr[GlobalsString]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OTransitionDelay")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOTransitionDelay(value: FnValue[js.UndefOr[GlobalsString]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OTransitionDelay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOTransitionDelay: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OTransitionDelay")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOTransitionDurationFunction1(value: /* data */ js.Any => js.UndefOr[GlobalsString]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OTransitionDuration")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOTransitionDuration(value: FnValue[js.UndefOr[GlobalsString]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OTransitionDuration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOTransitionDuration: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OTransitionDuration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOTransitionPropertyFunction1(value: /* data */ js.Any => js.UndefOr[TransitionPropertyProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OTransitionProperty")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOTransitionProperty(value: FnValue[js.UndefOr[TransitionPropertyProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OTransitionProperty")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOTransitionProperty: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OTransitionProperty")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOTransitionTimingFunctionFunction1(value: /* data */ js.Any => js.UndefOr[TransitionTimingFunctionProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OTransitionTimingFunction")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOTransitionTimingFunction(value: FnValue[js.UndefOr[TransitionTimingFunctionProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OTransitionTimingFunction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOTransitionTimingFunction: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OTransitionTimingFunction")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitAlignContentFunction1(value: /* data */ js.Any => js.UndefOr[AlignContentProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitAlignContent")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitAlignContent(value: FnValue[js.UndefOr[AlignContentProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitAlignContent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitAlignContent: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitAlignContent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitAlignItemsFunction1(value: /* data */ js.Any => js.UndefOr[AlignItemsProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitAlignItems")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitAlignItems(value: FnValue[js.UndefOr[AlignItemsProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitAlignItems")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitAlignItems: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitAlignItems")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitAlignSelfFunction1(value: /* data */ js.Any => js.UndefOr[AlignSelfProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitAlignSelf")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitAlignSelf(value: FnValue[js.UndefOr[AlignSelfProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitAlignSelf")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitAlignSelf: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitAlignSelf")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitAnimationFunction1(value: /* data */ js.Any => js.UndefOr[AnimationProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitAnimation")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitAnimation(value: FnValue[js.UndefOr[AnimationProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitAnimation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitAnimation: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitAnimation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitAnimationDelayFunction1(value: /* data */ js.Any => js.UndefOr[GlobalsString]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitAnimationDelay")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitAnimationDelay(value: FnValue[js.UndefOr[GlobalsString]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitAnimationDelay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitAnimationDelay: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitAnimationDelay")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitAnimationDirectionFunction1(value: /* data */ js.Any => js.UndefOr[AnimationDirectionProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitAnimationDirection")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitAnimationDirection(value: FnValue[js.UndefOr[AnimationDirectionProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitAnimationDirection")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitAnimationDirection: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitAnimationDirection")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitAnimationDurationFunction1(value: /* data */ js.Any => js.UndefOr[GlobalsString]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitAnimationDuration")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitAnimationDuration(value: FnValue[js.UndefOr[GlobalsString]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitAnimationDuration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitAnimationDuration: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitAnimationDuration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitAnimationFillModeFunction1(value: /* data */ js.Any => js.UndefOr[AnimationFillModeProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitAnimationFillMode")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitAnimationFillMode(value: FnValue[js.UndefOr[AnimationFillModeProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitAnimationFillMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitAnimationFillMode: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitAnimationFillMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitAnimationIterationCountFunction1(value: /* data */ js.Any => js.UndefOr[AnimationIterationCountProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitAnimationIterationCount")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitAnimationIterationCount(value: FnValue[js.UndefOr[AnimationIterationCountProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitAnimationIterationCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitAnimationIterationCount: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitAnimationIterationCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitAnimationNameFunction1(value: /* data */ js.Any => js.UndefOr[AnimationNameProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitAnimationName")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitAnimationName(value: FnValue[js.UndefOr[AnimationNameProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitAnimationName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitAnimationName: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitAnimationName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitAnimationPlayStateFunction1(value: /* data */ js.Any => js.UndefOr[AnimationPlayStateProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitAnimationPlayState")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitAnimationPlayState(value: FnValue[js.UndefOr[AnimationPlayStateProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitAnimationPlayState")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitAnimationPlayState: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitAnimationPlayState")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitAnimationTimingFunctionFunction1(value: /* data */ js.Any => js.UndefOr[AnimationTimingFunctionProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitAnimationTimingFunction")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitAnimationTimingFunction(value: FnValue[js.UndefOr[AnimationTimingFunctionProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitAnimationTimingFunction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitAnimationTimingFunction: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitAnimationTimingFunction")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitAppearanceFunction1(value: /* data */ js.Any => js.UndefOr[WebkitAppearanceProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitAppearance")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitAppearance(value: FnValue[js.UndefOr[WebkitAppearanceProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitAppearance")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitAppearance: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitAppearance")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitBackdropFilterFunction1(value: /* data */ js.Any => js.UndefOr[BackdropFilterProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitBackdropFilter")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitBackdropFilter(value: FnValue[js.UndefOr[BackdropFilterProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitBackdropFilter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitBackdropFilter: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitBackdropFilter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitBackfaceVisibilityFunction1(value: /* data */ js.Any => js.UndefOr[BackfaceVisibilityProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitBackfaceVisibility")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitBackfaceVisibility(value: FnValue[js.UndefOr[BackfaceVisibilityProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitBackfaceVisibility")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitBackfaceVisibility: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitBackfaceVisibility")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitBackgroundClipFunction1(value: /* data */ js.Any => js.UndefOr[BackgroundClipProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitBackgroundClip")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitBackgroundClip(value: FnValue[js.UndefOr[BackgroundClipProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitBackgroundClip")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitBackgroundClip: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitBackgroundClip")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitBackgroundOriginFunction1(value: /* data */ js.Any => js.UndefOr[BackgroundOriginProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitBackgroundOrigin")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitBackgroundOrigin(value: FnValue[js.UndefOr[BackgroundOriginProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitBackgroundOrigin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitBackgroundOrigin: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitBackgroundOrigin")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitBackgroundSizeFunction1(value: /* data */ js.Any => js.UndefOr[BackgroundSizeProperty[String | Double]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitBackgroundSize")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitBackgroundSize(value: FnValue[js.UndefOr[BackgroundSizeProperty[String | Double]]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitBackgroundSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitBackgroundSize: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitBackgroundSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitBorderBeforeFunction1(value: /* data */ js.Any => js.UndefOr[WebkitBorderBeforeProperty[String | Double]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitBorderBefore")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitBorderBefore(value: FnValue[js.UndefOr[WebkitBorderBeforeProperty[String | Double]]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitBorderBefore")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitBorderBefore: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitBorderBefore")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitBorderBeforeColorFunction1(value: /* data */ js.Any => js.UndefOr[WebkitBorderBeforeColorProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitBorderBeforeColor")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitBorderBeforeColor(value: FnValue[js.UndefOr[WebkitBorderBeforeColorProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitBorderBeforeColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitBorderBeforeColor: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitBorderBeforeColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitBorderBeforeStyleFunction1(value: /* data */ js.Any => js.UndefOr[WebkitBorderBeforeStyleProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitBorderBeforeStyle")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitBorderBeforeStyle(value: FnValue[js.UndefOr[WebkitBorderBeforeStyleProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitBorderBeforeStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitBorderBeforeStyle: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitBorderBeforeStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitBorderBeforeWidthFunction1(value: /* data */ js.Any => js.UndefOr[WebkitBorderBeforeWidthProperty[String | Double]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitBorderBeforeWidth")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitBorderBeforeWidth(value: FnValue[js.UndefOr[WebkitBorderBeforeWidthProperty[String | Double]]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitBorderBeforeWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitBorderBeforeWidth: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitBorderBeforeWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitBorderBottomLeftRadiusFunction1(value: /* data */ js.Any => js.UndefOr[BorderBottomLeftRadiusProperty[String | Double]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitBorderBottomLeftRadius")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitBorderBottomLeftRadius(value: FnValue[js.UndefOr[BorderBottomLeftRadiusProperty[String | Double]]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitBorderBottomLeftRadius")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitBorderBottomLeftRadius: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitBorderBottomLeftRadius")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitBorderBottomRightRadiusFunction1(value: /* data */ js.Any => js.UndefOr[BorderBottomRightRadiusProperty[String | Double]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitBorderBottomRightRadius")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitBorderBottomRightRadius(value: FnValue[js.UndefOr[BorderBottomRightRadiusProperty[String | Double]]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitBorderBottomRightRadius")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitBorderBottomRightRadius: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitBorderBottomRightRadius")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitBorderImageFunction1(value: /* data */ js.Any => js.UndefOr[BorderImageProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitBorderImage")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitBorderImage(value: FnValue[js.UndefOr[BorderImageProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitBorderImage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitBorderImage: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitBorderImage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitBorderImageSliceFunction1(value: /* data */ js.Any => js.UndefOr[BorderImageSliceProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitBorderImageSlice")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitBorderImageSlice(value: FnValue[js.UndefOr[BorderImageSliceProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitBorderImageSlice")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitBorderImageSlice: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitBorderImageSlice")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitBorderRadiusFunction1(value: /* data */ js.Any => js.UndefOr[BorderRadiusProperty[String | Double]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitBorderRadius")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitBorderRadius(value: FnValue[js.UndefOr[BorderRadiusProperty[String | Double]]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitBorderRadius")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitBorderRadius: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitBorderRadius")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitBorderTopLeftRadiusFunction1(value: /* data */ js.Any => js.UndefOr[BorderTopLeftRadiusProperty[String | Double]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitBorderTopLeftRadius")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitBorderTopLeftRadius(value: FnValue[js.UndefOr[BorderTopLeftRadiusProperty[String | Double]]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitBorderTopLeftRadius")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitBorderTopLeftRadius: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitBorderTopLeftRadius")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitBorderTopRightRadiusFunction1(value: /* data */ js.Any => js.UndefOr[BorderTopRightRadiusProperty[String | Double]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitBorderTopRightRadius")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitBorderTopRightRadius(value: FnValue[js.UndefOr[BorderTopRightRadiusProperty[String | Double]]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitBorderTopRightRadius")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitBorderTopRightRadius: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitBorderTopRightRadius")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitBoxAlignFunction1(value: /* data */ js.Any => js.UndefOr[BoxAlignProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitBoxAlign")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitBoxAlign(value: FnValue[js.UndefOr[BoxAlignProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitBoxAlign")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitBoxAlign: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitBoxAlign")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitBoxDecorationBreakFunction1(value: /* data */ js.Any => js.UndefOr[BoxDecorationBreakProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitBoxDecorationBreak")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitBoxDecorationBreak(value: FnValue[js.UndefOr[BoxDecorationBreakProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitBoxDecorationBreak")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitBoxDecorationBreak: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitBoxDecorationBreak")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitBoxDirectionFunction1(value: /* data */ js.Any => js.UndefOr[BoxDirectionProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitBoxDirection")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitBoxDirection(value: FnValue[js.UndefOr[BoxDirectionProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitBoxDirection")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitBoxDirection: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitBoxDirection")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitBoxFlexFunction1(value: /* data */ js.Any => js.UndefOr[GlobalsNumber]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitBoxFlex")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitBoxFlex(value: FnValue[js.UndefOr[GlobalsNumber]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitBoxFlex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitBoxFlex: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitBoxFlex")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitBoxFlexGroupFunction1(value: /* data */ js.Any => js.UndefOr[GlobalsNumber]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitBoxFlexGroup")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitBoxFlexGroup(value: FnValue[js.UndefOr[GlobalsNumber]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitBoxFlexGroup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitBoxFlexGroup: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitBoxFlexGroup")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitBoxLinesFunction1(value: /* data */ js.Any => js.UndefOr[BoxLinesProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitBoxLines")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitBoxLines(value: FnValue[js.UndefOr[BoxLinesProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitBoxLines")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitBoxLines: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitBoxLines")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitBoxOrdinalGroupFunction1(value: /* data */ js.Any => js.UndefOr[GlobalsNumber]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitBoxOrdinalGroup")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitBoxOrdinalGroup(value: FnValue[js.UndefOr[GlobalsNumber]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitBoxOrdinalGroup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitBoxOrdinalGroup: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitBoxOrdinalGroup")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitBoxOrientFunction1(value: /* data */ js.Any => js.UndefOr[BoxOrientProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitBoxOrient")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitBoxOrient(value: FnValue[js.UndefOr[BoxOrientProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitBoxOrient")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitBoxOrient: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitBoxOrient")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitBoxPackFunction1(value: /* data */ js.Any => js.UndefOr[BoxPackProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitBoxPack")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitBoxPack(value: FnValue[js.UndefOr[BoxPackProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitBoxPack")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitBoxPack: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitBoxPack")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitBoxReflectFunction1(value: /* data */ js.Any => js.UndefOr[WebkitBoxReflectProperty[String | Double]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitBoxReflect")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitBoxReflect(value: FnValue[js.UndefOr[WebkitBoxReflectProperty[String | Double]]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitBoxReflect")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitBoxReflect: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitBoxReflect")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitBoxShadowFunction1(value: /* data */ js.Any => js.UndefOr[BoxShadowProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitBoxShadow")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitBoxShadow(value: FnValue[js.UndefOr[BoxShadowProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitBoxShadow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitBoxShadow: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitBoxShadow")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitBoxSizingFunction1(value: /* data */ js.Any => js.UndefOr[BoxSizingProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitBoxSizing")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitBoxSizing(value: FnValue[js.UndefOr[BoxSizingProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitBoxSizing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitBoxSizing: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitBoxSizing")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitClipPathFunction1(value: /* data */ js.Any => js.UndefOr[ClipPathProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitClipPath")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitClipPath(value: FnValue[js.UndefOr[ClipPathProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitClipPath")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitClipPath: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitClipPath")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitColorAdjustFunction1(value: /* data */ js.Any => js.UndefOr[ColorAdjustProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitColorAdjust")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitColorAdjust(value: FnValue[js.UndefOr[ColorAdjustProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitColorAdjust")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitColorAdjust: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitColorAdjust")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitColumnCountFunction1(value: /* data */ js.Any => js.UndefOr[ColumnCountProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitColumnCount")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitColumnCount(value: FnValue[js.UndefOr[ColumnCountProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitColumnCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitColumnCount: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitColumnCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitColumnFillFunction1(value: /* data */ js.Any => js.UndefOr[ColumnFillProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitColumnFill")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitColumnFill(value: FnValue[js.UndefOr[ColumnFillProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitColumnFill")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitColumnFill: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitColumnFill")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitColumnGapFunction1(value: /* data */ js.Any => js.UndefOr[ColumnGapProperty[String | Double]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitColumnGap")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitColumnGap(value: FnValue[js.UndefOr[ColumnGapProperty[String | Double]]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitColumnGap")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitColumnGap: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitColumnGap")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitColumnRuleFunction1(value: /* data */ js.Any => js.UndefOr[ColumnRuleProperty[String | Double]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitColumnRule")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitColumnRule(value: FnValue[js.UndefOr[ColumnRuleProperty[String | Double]]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitColumnRule")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitColumnRule: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitColumnRule")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitColumnRuleColorFunction1(value: /* data */ js.Any => js.UndefOr[ColumnRuleColorProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitColumnRuleColor")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitColumnRuleColor(value: FnValue[js.UndefOr[ColumnRuleColorProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitColumnRuleColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitColumnRuleColor: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitColumnRuleColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitColumnRuleStyleFunction1(value: /* data */ js.Any => js.UndefOr[ColumnRuleStyleProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitColumnRuleStyle")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitColumnRuleStyle(value: FnValue[js.UndefOr[ColumnRuleStyleProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitColumnRuleStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitColumnRuleStyle: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitColumnRuleStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitColumnRuleWidthFunction1(value: /* data */ js.Any => js.UndefOr[ColumnRuleWidthProperty[String | Double]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitColumnRuleWidth")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitColumnRuleWidth(value: FnValue[js.UndefOr[ColumnRuleWidthProperty[String | Double]]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitColumnRuleWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitColumnRuleWidth: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitColumnRuleWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitColumnSpanFunction1(value: /* data */ js.Any => js.UndefOr[ColumnSpanProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitColumnSpan")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitColumnSpan(value: FnValue[js.UndefOr[ColumnSpanProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitColumnSpan")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitColumnSpan: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitColumnSpan")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitColumnWidthFunction1(value: /* data */ js.Any => js.UndefOr[ColumnWidthProperty[String | Double]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitColumnWidth")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitColumnWidth(value: FnValue[js.UndefOr[ColumnWidthProperty[String | Double]]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitColumnWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitColumnWidth: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitColumnWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitColumnsFunction1(value: /* data */ js.Any => js.UndefOr[ColumnsProperty[String | Double]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitColumns")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitColumns(value: FnValue[js.UndefOr[ColumnsProperty[String | Double]]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitColumns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitColumns: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitColumns")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitFilterFunction1(value: /* data */ js.Any => js.UndefOr[FilterProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitFilter")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitFilter(value: FnValue[js.UndefOr[FilterProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitFilter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitFilter: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitFilter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitFlexFunction1(value: /* data */ js.Any => js.UndefOr[FlexProperty[String | Double]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitFlex")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitFlex(value: FnValue[js.UndefOr[FlexProperty[String | Double]]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitFlex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitFlex: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitFlex")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitFlexBasisFunction1(value: /* data */ js.Any => js.UndefOr[FlexBasisProperty[String | Double]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitFlexBasis")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitFlexBasis(value: FnValue[js.UndefOr[FlexBasisProperty[String | Double]]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitFlexBasis")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitFlexBasis: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitFlexBasis")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitFlexDirectionFunction1(value: /* data */ js.Any => js.UndefOr[FlexDirectionProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitFlexDirection")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitFlexDirection(value: FnValue[js.UndefOr[FlexDirectionProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitFlexDirection")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitFlexDirection: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitFlexDirection")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitFlexFlowFunction1(value: /* data */ js.Any => js.UndefOr[FlexFlowProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitFlexFlow")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitFlexFlow(value: FnValue[js.UndefOr[FlexFlowProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitFlexFlow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitFlexFlow: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitFlexFlow")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitFlexGrowFunction1(value: /* data */ js.Any => js.UndefOr[GlobalsNumber]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitFlexGrow")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitFlexGrow(value: FnValue[js.UndefOr[GlobalsNumber]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitFlexGrow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitFlexGrow: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitFlexGrow")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitFlexShrinkFunction1(value: /* data */ js.Any => js.UndefOr[GlobalsNumber]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitFlexShrink")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitFlexShrink(value: FnValue[js.UndefOr[GlobalsNumber]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitFlexShrink")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitFlexShrink: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitFlexShrink")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitFlexWrapFunction1(value: /* data */ js.Any => js.UndefOr[FlexWrapProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitFlexWrap")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitFlexWrap(value: FnValue[js.UndefOr[FlexWrapProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitFlexWrap")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitFlexWrap: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitFlexWrap")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitFontFeatureSettingsFunction1(value: /* data */ js.Any => js.UndefOr[FontFeatureSettingsProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitFontFeatureSettings")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitFontFeatureSettings(value: FnValue[js.UndefOr[FontFeatureSettingsProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitFontFeatureSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitFontFeatureSettings: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitFontFeatureSettings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitFontKerningFunction1(value: /* data */ js.Any => js.UndefOr[FontKerningProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitFontKerning")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitFontKerning(value: FnValue[js.UndefOr[FontKerningProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitFontKerning")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitFontKerning: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitFontKerning")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitFontVariantLigaturesFunction1(value: /* data */ js.Any => js.UndefOr[FontVariantLigaturesProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitFontVariantLigatures")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitFontVariantLigatures(value: FnValue[js.UndefOr[FontVariantLigaturesProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitFontVariantLigatures")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitFontVariantLigatures: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitFontVariantLigatures")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitHyphensFunction1(value: /* data */ js.Any => js.UndefOr[HyphensProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitHyphens")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitHyphens(value: FnValue[js.UndefOr[HyphensProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitHyphens")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitHyphens: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitHyphens")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitJustifyContentFunction1(value: /* data */ js.Any => js.UndefOr[JustifyContentProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitJustifyContent")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitJustifyContent(value: FnValue[js.UndefOr[JustifyContentProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitJustifyContent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitJustifyContent: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitJustifyContent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitLineBreakFunction1(value: /* data */ js.Any => js.UndefOr[LineBreakProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitLineBreak")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitLineBreak(value: FnValue[js.UndefOr[LineBreakProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitLineBreak")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitLineBreak: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitLineBreak")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitLineClampFunction1(value: /* data */ js.Any => js.UndefOr[WebkitLineClampProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitLineClamp")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitLineClamp(value: FnValue[js.UndefOr[WebkitLineClampProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitLineClamp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitLineClamp: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitLineClamp")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitMarginEndFunction1(value: /* data */ js.Any => js.UndefOr[MarginInlineEndProperty[String | Double]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitMarginEnd")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitMarginEnd(value: FnValue[js.UndefOr[MarginInlineEndProperty[String | Double]]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitMarginEnd")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitMarginEnd: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitMarginEnd")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitMarginStartFunction1(value: /* data */ js.Any => js.UndefOr[MarginInlineStartProperty[String | Double]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitMarginStart")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitMarginStart(value: FnValue[js.UndefOr[MarginInlineStartProperty[String | Double]]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitMarginStart")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitMarginStart: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitMarginStart")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitMaskFunction1(value: /* data */ js.Any => js.UndefOr[WebkitMaskProperty[String | Double]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitMask")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitMask(value: FnValue[js.UndefOr[WebkitMaskProperty[String | Double]]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitMask")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitMask: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitMask")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitMaskAttachmentFunction1(value: /* data */ js.Any => js.UndefOr[WebkitMaskAttachmentProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitMaskAttachment")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitMaskAttachment(value: FnValue[js.UndefOr[WebkitMaskAttachmentProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitMaskAttachment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitMaskAttachment: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitMaskAttachment")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitMaskClipFunction1(value: /* data */ js.Any => js.UndefOr[WebkitMaskClipProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitMaskClip")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitMaskClip(value: FnValue[js.UndefOr[WebkitMaskClipProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitMaskClip")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitMaskClip: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitMaskClip")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitMaskCompositeFunction1(value: /* data */ js.Any => js.UndefOr[WebkitMaskCompositeProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitMaskComposite")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitMaskComposite(value: FnValue[js.UndefOr[WebkitMaskCompositeProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitMaskComposite")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitMaskComposite: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitMaskComposite")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitMaskImageFunction1(value: /* data */ js.Any => js.UndefOr[WebkitMaskImageProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitMaskImage")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitMaskImage(value: FnValue[js.UndefOr[WebkitMaskImageProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitMaskImage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitMaskImage: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitMaskImage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitMaskOriginFunction1(value: /* data */ js.Any => js.UndefOr[WebkitMaskOriginProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitMaskOrigin")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitMaskOrigin(value: FnValue[js.UndefOr[WebkitMaskOriginProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitMaskOrigin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitMaskOrigin: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitMaskOrigin")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitMaskPositionFunction1(value: /* data */ js.Any => js.UndefOr[WebkitMaskPositionProperty[String | Double]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitMaskPosition")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitMaskPosition(value: FnValue[js.UndefOr[WebkitMaskPositionProperty[String | Double]]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitMaskPosition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitMaskPosition: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitMaskPosition")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitMaskPositionXFunction1(value: /* data */ js.Any => js.UndefOr[WebkitMaskPositionXProperty[String | Double]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitMaskPositionX")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitMaskPositionX(value: FnValue[js.UndefOr[WebkitMaskPositionXProperty[String | Double]]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitMaskPositionX")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitMaskPositionX: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitMaskPositionX")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitMaskPositionYFunction1(value: /* data */ js.Any => js.UndefOr[WebkitMaskPositionYProperty[String | Double]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitMaskPositionY")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitMaskPositionY(value: FnValue[js.UndefOr[WebkitMaskPositionYProperty[String | Double]]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitMaskPositionY")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitMaskPositionY: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitMaskPositionY")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitMaskRepeatFunction1(value: /* data */ js.Any => js.UndefOr[WebkitMaskRepeatProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitMaskRepeat")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitMaskRepeat(value: FnValue[js.UndefOr[WebkitMaskRepeatProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitMaskRepeat")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitMaskRepeat: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitMaskRepeat")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitMaskRepeatXFunction1(value: /* data */ js.Any => js.UndefOr[WebkitMaskRepeatXProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitMaskRepeatX")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitMaskRepeatX(value: FnValue[js.UndefOr[WebkitMaskRepeatXProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitMaskRepeatX")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitMaskRepeatX: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitMaskRepeatX")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitMaskRepeatYFunction1(value: /* data */ js.Any => js.UndefOr[WebkitMaskRepeatYProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitMaskRepeatY")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitMaskRepeatY(value: FnValue[js.UndefOr[WebkitMaskRepeatYProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitMaskRepeatY")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitMaskRepeatY: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitMaskRepeatY")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitMaskSizeFunction1(value: /* data */ js.Any => js.UndefOr[WebkitMaskSizeProperty[String | Double]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitMaskSize")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitMaskSize(value: FnValue[js.UndefOr[WebkitMaskSizeProperty[String | Double]]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitMaskSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitMaskSize: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitMaskSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitMaxInlineSizeFunction1(value: /* data */ js.Any => js.UndefOr[MaxInlineSizeProperty[String | Double]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitMaxInlineSize")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitMaxInlineSize(value: FnValue[js.UndefOr[MaxInlineSizeProperty[String | Double]]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitMaxInlineSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitMaxInlineSize: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitMaxInlineSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitOrderFunction1(value: /* data */ js.Any => js.UndefOr[GlobalsNumber]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitOrder")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitOrder(value: FnValue[js.UndefOr[GlobalsNumber]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitOrder")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitOrder: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitOrder")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitOverflowScrollingFunction1(value: /* data */ js.Any => js.UndefOr[WebkitOverflowScrollingProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitOverflowScrolling")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitOverflowScrolling(value: FnValue[js.UndefOr[WebkitOverflowScrollingProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitOverflowScrolling")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitOverflowScrolling: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitOverflowScrolling")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitPaddingEndFunction1(value: /* data */ js.Any => js.UndefOr[PaddingInlineEndProperty[String | Double]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitPaddingEnd")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitPaddingEnd(value: FnValue[js.UndefOr[PaddingInlineEndProperty[String | Double]]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitPaddingEnd")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitPaddingEnd: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitPaddingEnd")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitPaddingStartFunction1(value: /* data */ js.Any => js.UndefOr[PaddingInlineStartProperty[String | Double]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitPaddingStart")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitPaddingStart(value: FnValue[js.UndefOr[PaddingInlineStartProperty[String | Double]]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitPaddingStart")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitPaddingStart: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitPaddingStart")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitPerspectiveFunction1(value: /* data */ js.Any => js.UndefOr[PerspectiveProperty[String | Double]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitPerspective")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitPerspective(value: FnValue[js.UndefOr[PerspectiveProperty[String | Double]]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitPerspective")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitPerspective: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitPerspective")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitPerspectiveOriginFunction1(value: /* data */ js.Any => js.UndefOr[PerspectiveOriginProperty[String | Double]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitPerspectiveOrigin")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitPerspectiveOrigin(value: FnValue[js.UndefOr[PerspectiveOriginProperty[String | Double]]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitPerspectiveOrigin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitPerspectiveOrigin: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitPerspectiveOrigin")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitScrollSnapPointsXFunction1(value: /* data */ js.Any => js.UndefOr[ScrollSnapPointsXProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitScrollSnapPointsX")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitScrollSnapPointsX(value: FnValue[js.UndefOr[ScrollSnapPointsXProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitScrollSnapPointsX")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitScrollSnapPointsX: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitScrollSnapPointsX")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitScrollSnapPointsYFunction1(value: /* data */ js.Any => js.UndefOr[ScrollSnapPointsYProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitScrollSnapPointsY")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitScrollSnapPointsY(value: FnValue[js.UndefOr[ScrollSnapPointsYProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitScrollSnapPointsY")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitScrollSnapPointsY: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitScrollSnapPointsY")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitScrollSnapTypeFunction1(value: /* data */ js.Any => js.UndefOr[ScrollSnapTypeProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitScrollSnapType")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitScrollSnapType(value: FnValue[js.UndefOr[ScrollSnapTypeProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitScrollSnapType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitScrollSnapType: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitScrollSnapType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitShapeMarginFunction1(value: /* data */ js.Any => js.UndefOr[ShapeMarginProperty[String | Double]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitShapeMargin")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitShapeMargin(value: FnValue[js.UndefOr[ShapeMarginProperty[String | Double]]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitShapeMargin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitShapeMargin: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitShapeMargin")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitTapHighlightColorFunction1(value: /* data */ js.Any => js.UndefOr[WebkitTapHighlightColorProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitTapHighlightColor")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitTapHighlightColor(value: FnValue[js.UndefOr[WebkitTapHighlightColorProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitTapHighlightColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitTapHighlightColor: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitTapHighlightColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitTextCombineFunction1(value: /* data */ js.Any => js.UndefOr[TextCombineUprightProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitTextCombine")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitTextCombine(value: FnValue[js.UndefOr[TextCombineUprightProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitTextCombine")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitTextCombine: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitTextCombine")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitTextDecorationColorFunction1(value: /* data */ js.Any => js.UndefOr[TextDecorationColorProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitTextDecorationColor")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitTextDecorationColor(value: FnValue[js.UndefOr[TextDecorationColorProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitTextDecorationColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitTextDecorationColor: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitTextDecorationColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitTextDecorationLineFunction1(value: /* data */ js.Any => js.UndefOr[TextDecorationLineProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitTextDecorationLine")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitTextDecorationLine(value: FnValue[js.UndefOr[TextDecorationLineProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitTextDecorationLine")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitTextDecorationLine: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitTextDecorationLine")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitTextDecorationSkipFunction1(value: /* data */ js.Any => js.UndefOr[TextDecorationSkipProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitTextDecorationSkip")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitTextDecorationSkip(value: FnValue[js.UndefOr[TextDecorationSkipProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitTextDecorationSkip")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitTextDecorationSkip: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitTextDecorationSkip")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitTextDecorationStyleFunction1(value: /* data */ js.Any => js.UndefOr[TextDecorationStyleProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitTextDecorationStyle")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitTextDecorationStyle(value: FnValue[js.UndefOr[TextDecorationStyleProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitTextDecorationStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitTextDecorationStyle: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitTextDecorationStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitTextEmphasisFunction1(value: /* data */ js.Any => js.UndefOr[TextEmphasisProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitTextEmphasis")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitTextEmphasis(value: FnValue[js.UndefOr[TextEmphasisProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitTextEmphasis")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitTextEmphasis: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitTextEmphasis")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitTextEmphasisColorFunction1(value: /* data */ js.Any => js.UndefOr[TextEmphasisColorProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitTextEmphasisColor")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitTextEmphasisColor(value: FnValue[js.UndefOr[TextEmphasisColorProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitTextEmphasisColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitTextEmphasisColor: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitTextEmphasisColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitTextEmphasisPositionFunction1(value: /* data */ js.Any => js.UndefOr[GlobalsString]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitTextEmphasisPosition")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitTextEmphasisPosition(value: FnValue[js.UndefOr[GlobalsString]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitTextEmphasisPosition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitTextEmphasisPosition: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitTextEmphasisPosition")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitTextEmphasisStyleFunction1(value: /* data */ js.Any => js.UndefOr[TextEmphasisStyleProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitTextEmphasisStyle")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitTextEmphasisStyle(value: FnValue[js.UndefOr[TextEmphasisStyleProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitTextEmphasisStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitTextEmphasisStyle: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitTextEmphasisStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitTextFillColorFunction1(value: /* data */ js.Any => js.UndefOr[WebkitTextFillColorProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitTextFillColor")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitTextFillColor(value: FnValue[js.UndefOr[WebkitTextFillColorProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitTextFillColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitTextFillColor: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitTextFillColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitTextOrientationFunction1(value: /* data */ js.Any => js.UndefOr[TextOrientationProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitTextOrientation")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitTextOrientation(value: FnValue[js.UndefOr[TextOrientationProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitTextOrientation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitTextOrientation: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitTextOrientation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitTextSizeAdjustFunction1(value: /* data */ js.Any => js.UndefOr[TextSizeAdjustProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitTextSizeAdjust")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitTextSizeAdjust(value: FnValue[js.UndefOr[TextSizeAdjustProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitTextSizeAdjust")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitTextSizeAdjust: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitTextSizeAdjust")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitTextStrokeFunction1(value: /* data */ js.Any => js.UndefOr[WebkitTextStrokeProperty[String | Double]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitTextStroke")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitTextStroke(value: FnValue[js.UndefOr[WebkitTextStrokeProperty[String | Double]]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitTextStroke")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitTextStroke: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitTextStroke")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitTextStrokeColorFunction1(value: /* data */ js.Any => js.UndefOr[WebkitTextStrokeColorProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitTextStrokeColor")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitTextStrokeColor(value: FnValue[js.UndefOr[WebkitTextStrokeColorProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitTextStrokeColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitTextStrokeColor: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitTextStrokeColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitTextStrokeWidthFunction1(value: /* data */ js.Any => js.UndefOr[WebkitTextStrokeWidthProperty[String | Double]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitTextStrokeWidth")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitTextStrokeWidth(value: FnValue[js.UndefOr[WebkitTextStrokeWidthProperty[String | Double]]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitTextStrokeWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitTextStrokeWidth: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitTextStrokeWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitTouchCalloutFunction1(value: /* data */ js.Any => js.UndefOr[WebkitTouchCalloutProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitTouchCallout")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitTouchCallout(value: FnValue[js.UndefOr[WebkitTouchCalloutProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitTouchCallout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitTouchCallout: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitTouchCallout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitTransformFunction1(value: /* data */ js.Any => js.UndefOr[TransformProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitTransform")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitTransform(value: FnValue[js.UndefOr[TransformProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitTransform")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitTransform: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitTransform")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitTransformOriginFunction1(value: /* data */ js.Any => js.UndefOr[TransformOriginProperty[String | Double]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitTransformOrigin")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitTransformOrigin(value: FnValue[js.UndefOr[TransformOriginProperty[String | Double]]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitTransformOrigin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitTransformOrigin: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitTransformOrigin")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitTransformStyleFunction1(value: /* data */ js.Any => js.UndefOr[TransformStyleProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitTransformStyle")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitTransformStyle(value: FnValue[js.UndefOr[TransformStyleProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitTransformStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitTransformStyle: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitTransformStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitTransitionFunction1(value: /* data */ js.Any => js.UndefOr[TransitionProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitTransition")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitTransition(value: FnValue[js.UndefOr[TransitionProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitTransition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitTransition: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitTransition")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitTransitionDelayFunction1(value: /* data */ js.Any => js.UndefOr[GlobalsString]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitTransitionDelay")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitTransitionDelay(value: FnValue[js.UndefOr[GlobalsString]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitTransitionDelay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitTransitionDelay: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitTransitionDelay")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitTransitionDurationFunction1(value: /* data */ js.Any => js.UndefOr[GlobalsString]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitTransitionDuration")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitTransitionDuration(value: FnValue[js.UndefOr[GlobalsString]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitTransitionDuration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitTransitionDuration: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitTransitionDuration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitTransitionPropertyFunction1(value: /* data */ js.Any => js.UndefOr[TransitionPropertyProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitTransitionProperty")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitTransitionProperty(value: FnValue[js.UndefOr[TransitionPropertyProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitTransitionProperty")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitTransitionProperty: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitTransitionProperty")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitTransitionTimingFunctionFunction1(value: /* data */ js.Any => js.UndefOr[TransitionTimingFunctionProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitTransitionTimingFunction")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitTransitionTimingFunction(value: FnValue[js.UndefOr[TransitionTimingFunctionProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitTransitionTimingFunction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitTransitionTimingFunction: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitTransitionTimingFunction")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitUserModifyFunction1(value: /* data */ js.Any => js.UndefOr[WebkitUserModifyProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitUserModify")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitUserModify(value: FnValue[js.UndefOr[WebkitUserModifyProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitUserModify")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitUserModify: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitUserModify")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitUserSelectFunction1(value: /* data */ js.Any => js.UndefOr[UserSelectProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitUserSelect")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitUserSelect(value: FnValue[js.UndefOr[UserSelectProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitUserSelect")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitUserSelect: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitUserSelect")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitWritingModeFunction1(value: /* data */ js.Any => js.UndefOr[WritingModeProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitWritingMode")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitWritingMode(value: FnValue[js.UndefOr[WritingModeProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitWritingMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitWritingMode: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitWritingMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAlignContentFunction1(value: /* data */ js.Any => js.UndefOr[AlignContentProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alignContent")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withAlignContent(value: FnValue[js.UndefOr[AlignContentProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alignContent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlignContent: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alignContent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAlignItemsFunction1(value: /* data */ js.Any => js.UndefOr[AlignItemsProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alignItems")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withAlignItems(value: FnValue[js.UndefOr[AlignItemsProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alignItems")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlignItems: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alignItems")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAlignSelfFunction1(value: /* data */ js.Any => js.UndefOr[AlignSelfProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alignSelf")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withAlignSelf(value: FnValue[js.UndefOr[AlignSelfProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alignSelf")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlignSelf: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alignSelf")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAlignmentBaselineFunction1(value: /* data */ js.Any => js.UndefOr[AlignmentBaselineProperty]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alignmentBaseline")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withAlignmentBaseline(value: FnValue[js.UndefOr[AlignmentBaselineProperty]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alignmentBaseline")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlignmentBaseline: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alignmentBaseline")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAllFunction1(value: /* data */ js.Any => js.UndefOr[Globals]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("all")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withAll(value: FnValue[js.UndefOr[Globals]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("all")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAll: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("all")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

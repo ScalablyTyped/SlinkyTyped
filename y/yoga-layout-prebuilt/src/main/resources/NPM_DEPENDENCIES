@@ -1,0 +1,16 @@
+{
+  "compile-dependencies" : [
+    {
+      "yoga-layout-prebuilt" : "1.9.5"
+    }
+  ],
+  "test-dependencies" : [
+    {
+      "yoga-layout-prebuilt" : "1.9.5"
+    }
+  ],
+  "compile-devDependencies" : [
+  ],
+  "test-devDependencies" : [
+  ]
+}

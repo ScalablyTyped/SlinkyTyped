@@ -14,10 +14,29 @@ trait CreateUploadResult extends js.Object {
 
 object CreateUploadResult {
   @scala.inline
-  def apply(upload: Upload = null): CreateUploadResult = {
+  def apply(): CreateUploadResult = {
     val __obj = js.Dynamic.literal()
-    if (upload != null) __obj.updateDynamic("upload")(upload.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateUploadResult]
   }
+  @scala.inline
+  implicit class CreateUploadResultOps[Self <: CreateUploadResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withUpload(value: Upload): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("upload")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUpload: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("upload")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

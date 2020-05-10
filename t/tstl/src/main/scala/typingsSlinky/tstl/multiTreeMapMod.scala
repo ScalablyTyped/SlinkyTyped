@@ -13,7 +13,7 @@ import scala.scalajs.js.annotation._
 @JSImport("tstl/internal/container/associative/MultiTreeMap", JSImport.Namespace)
 @js.native
 object multiTreeMapMod extends js.Object {
-  /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+  /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
   - typingsSlinky.tstl.isizeMod.ISize because Already inherited
   - typingsSlinky.tstl.iforwardcontainerMod.IForwardContainer because Already inherited
   - typingsSlinky.tstl.ipushMod.IPush because Already inherited

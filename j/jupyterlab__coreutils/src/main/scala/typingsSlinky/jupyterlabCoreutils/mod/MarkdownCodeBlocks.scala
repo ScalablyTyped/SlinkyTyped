@@ -1,6 +1,5 @@
 package typingsSlinky.jupyterlabCoreutils.mod
 
-import typingsSlinky.jupyterlabCoreutils.jupyterlabCoreutilsStrings.GraveaccentGraveaccentGraveaccent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +13,7 @@ object MarkdownCodeBlocks extends js.Object {
     def this(startLine: Double) = this()
   }
   
-  val CODE_BLOCK_MARKER: GraveaccentGraveaccentGraveaccent = js.native
+  val CODE_BLOCK_MARKER: /* "```" */ String = js.native
   /**
     * Construct all code snippets from current text
     * (this could be potentially optimized if we can cache and detect differences)

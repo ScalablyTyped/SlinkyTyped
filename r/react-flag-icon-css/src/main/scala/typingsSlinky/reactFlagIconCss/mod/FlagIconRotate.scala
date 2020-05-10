@@ -15,16 +15,14 @@ trait FlagIconRotate extends js.Object
 
 object FlagIconRotate {
   @scala.inline
-  def `180`: typingsSlinky.reactFlagIconCss.reactFlagIconCssNumbers.`180` = this.cast(180)
+  def `180`: typingsSlinky.reactFlagIconCss.reactFlagIconCssNumbers.`180` = 180.asInstanceOf[typingsSlinky.reactFlagIconCss.reactFlagIconCssNumbers.`180`]
   @scala.inline
-  def `270`: typingsSlinky.reactFlagIconCss.reactFlagIconCssNumbers.`270` = this.cast(270)
+  def `270`: typingsSlinky.reactFlagIconCss.reactFlagIconCssNumbers.`270` = 270.asInstanceOf[typingsSlinky.reactFlagIconCss.reactFlagIconCssNumbers.`270`]
   @scala.inline
-  def `30`: typingsSlinky.reactFlagIconCss.reactFlagIconCssNumbers.`30` = this.cast(30)
+  def `30`: typingsSlinky.reactFlagIconCss.reactFlagIconCssNumbers.`30` = 30.asInstanceOf[typingsSlinky.reactFlagIconCss.reactFlagIconCssNumbers.`30`]
   @scala.inline
-  def `60`: typingsSlinky.reactFlagIconCss.reactFlagIconCssNumbers.`60` = this.cast(60)
+  def `60`: typingsSlinky.reactFlagIconCss.reactFlagIconCssNumbers.`60` = 60.asInstanceOf[typingsSlinky.reactFlagIconCss.reactFlagIconCssNumbers.`60`]
   @scala.inline
-  def `90`: typingsSlinky.reactFlagIconCss.reactFlagIconCssNumbers.`90` = this.cast(90)
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def `90`: typingsSlinky.reactFlagIconCss.reactFlagIconCssNumbers.`90` = 90.asInstanceOf[typingsSlinky.reactFlagIconCss.reactFlagIconCssNumbers.`90`]
 }
 

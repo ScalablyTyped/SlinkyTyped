@@ -5,19 +5,56 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ReaderPaginationMetadata extends js.Object {
-  val backward: AnonCount | Null
-  val forward: AnonCount | Null
-  val path: js.Array[String]
+  val backward: AnonCount | Null = js.native
+  val forward: AnonCount | Null = js.native
+  val path: js.Array[String] = js.native
 }
 
 object ReaderPaginationMetadata {
   @scala.inline
-  def apply(path: js.Array[String], backward: AnonCount = null, forward: AnonCount = null): ReaderPaginationMetadata = {
+  def apply(path: js.Array[String]): ReaderPaginationMetadata = {
     val __obj = js.Dynamic.literal(path = path.asInstanceOf[js.Any])
-    if (backward != null) __obj.updateDynamic("backward")(backward.asInstanceOf[js.Any])
-    if (forward != null) __obj.updateDynamic("forward")(forward.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReaderPaginationMetadata]
   }
+  @scala.inline
+  implicit class ReaderPaginationMetadataOps[Self <: ReaderPaginationMetadata] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPath(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBackward(value: AnonCount): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backward")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBackwardNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backward")(null)
+        ret
+    }
+    @scala.inline
+    def withForward(value: AnonCount): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("forward")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withForwardNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("forward")(null)
+        ret
+    }
+  }
+  
 }
 

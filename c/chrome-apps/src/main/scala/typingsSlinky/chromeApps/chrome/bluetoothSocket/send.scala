@@ -14,10 +14,10 @@ object send extends js.Object {
     * @param data The data to send.
     * @param [callback] Called with the number of bytes sent.
     */
-  def apply(socketId: integer, data: scala.scalajs.js.typedarray.ArrayBuffer): Unit = js.native
+  def apply(socketId: integer, data: js.typedarray.ArrayBuffer): Unit = js.native
   def apply(
     socketId: integer,
-    data: scala.scalajs.js.typedarray.ArrayBuffer,
+    data: js.typedarray.ArrayBuffer,
     callback: js.Function1[/* bytesSent */ integer, Unit]
   ): Unit = js.native
 }

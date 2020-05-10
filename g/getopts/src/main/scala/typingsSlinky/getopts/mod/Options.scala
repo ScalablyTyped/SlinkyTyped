@@ -5,33 +5,101 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Options extends js.Object {
-  var alias: js.UndefOr[StringDictionary[String | js.Array[String]]] = js.undefined
-  var boolean: js.UndefOr[js.Array[String]] = js.undefined
-  var default: js.UndefOr[StringDictionary[js.Any]] = js.undefined
-  var stopEarly: js.UndefOr[Boolean] = js.undefined
-  var string: js.UndefOr[js.Array[String]] = js.undefined
-  var unknown: js.UndefOr[js.Function1[/* optionName */ String, Boolean]] = js.undefined
+  var alias: js.UndefOr[StringDictionary[String | js.Array[String]]] = js.native
+  var boolean: js.UndefOr[js.Array[String]] = js.native
+  var default: js.UndefOr[StringDictionary[js.Any]] = js.native
+  var stopEarly: js.UndefOr[Boolean] = js.native
+  var string: js.UndefOr[js.Array[String]] = js.native
+  var unknown: js.UndefOr[js.Function1[/* optionName */ String, Boolean]] = js.native
 }
 
 object Options {
   @scala.inline
-  def apply(
-    alias: StringDictionary[String | js.Array[String]] = null,
-    boolean: js.Array[String] = null,
-    default: StringDictionary[js.Any] = null,
-    stopEarly: js.UndefOr[Boolean] = js.undefined,
-    string: js.Array[String] = null,
-    unknown: /* optionName */ String => Boolean = null
-  ): Options = {
+  def apply(): Options = {
     val __obj = js.Dynamic.literal()
-    if (alias != null) __obj.updateDynamic("alias")(alias.asInstanceOf[js.Any])
-    if (boolean != null) __obj.updateDynamic("boolean")(boolean.asInstanceOf[js.Any])
-    if (default != null) __obj.updateDynamic("default")(default.asInstanceOf[js.Any])
-    if (!js.isUndefined(stopEarly)) __obj.updateDynamic("stopEarly")(stopEarly.asInstanceOf[js.Any])
-    if (string != null) __obj.updateDynamic("string")(string.asInstanceOf[js.Any])
-    if (unknown != null) __obj.updateDynamic("unknown")(js.Any.fromFunction1(unknown))
     __obj.asInstanceOf[Options]
   }
+  @scala.inline
+  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAlias(value: StringDictionary[String | js.Array[String]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alias")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlias: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alias")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBoolean(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("boolean")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBoolean: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("boolean")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefault(value: StringDictionary[js.Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("default")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefault: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("default")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStopEarly(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stopEarly")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStopEarly: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stopEarly")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withString(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("string")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutString: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("string")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUnknown(value: /* optionName */ String => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unknown")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutUnknown: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unknown")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -17,10 +17,29 @@ trait SchemaRemoveTenantProjectRequest extends js.Object {
 
 object SchemaRemoveTenantProjectRequest {
   @scala.inline
-  def apply(tag: String = null): SchemaRemoveTenantProjectRequest = {
+  def apply(): SchemaRemoveTenantProjectRequest = {
     val __obj = js.Dynamic.literal()
-    if (tag != null) __obj.updateDynamic("tag")(tag.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaRemoveTenantProjectRequest]
   }
+  @scala.inline
+  implicit class SchemaRemoveTenantProjectRequestOps[Self <: SchemaRemoveTenantProjectRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withTag(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tag")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTag: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tag")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

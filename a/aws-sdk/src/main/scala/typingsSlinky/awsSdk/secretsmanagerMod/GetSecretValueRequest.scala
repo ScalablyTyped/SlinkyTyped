@@ -22,15 +22,47 @@ trait GetSecretValueRequest extends js.Object {
 
 object GetSecretValueRequest {
   @scala.inline
-  def apply(
-    SecretId: SecretIdType,
-    VersionId: SecretVersionIdType = null,
-    VersionStage: SecretVersionStageType = null
-  ): GetSecretValueRequest = {
+  def apply(SecretId: SecretIdType): GetSecretValueRequest = {
     val __obj = js.Dynamic.literal(SecretId = SecretId.asInstanceOf[js.Any])
-    if (VersionId != null) __obj.updateDynamic("VersionId")(VersionId.asInstanceOf[js.Any])
-    if (VersionStage != null) __obj.updateDynamic("VersionStage")(VersionStage.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetSecretValueRequest]
   }
+  @scala.inline
+  implicit class GetSecretValueRequestOps[Self <: GetSecretValueRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSecretId(value: SecretIdType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SecretId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVersionId(value: SecretVersionIdType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VersionId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVersionId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VersionId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVersionStage(value: SecretVersionStageType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VersionStage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVersionStage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VersionStage")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

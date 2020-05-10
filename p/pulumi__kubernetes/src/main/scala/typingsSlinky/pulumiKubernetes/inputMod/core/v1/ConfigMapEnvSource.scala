@@ -11,25 +11,56 @@ import scala.scalajs.js.annotation._
   * The contents of the target ConfigMap's Data field will represent the key-value pairs as
   * environment variables.
   */
+@js.native
 trait ConfigMapEnvSource extends js.Object {
   /**
     * Name of the referent. More info:
     * https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
     */
-  var name: js.UndefOr[Input[String]] = js.undefined
+  var name: js.UndefOr[Input[String]] = js.native
   /**
     * Specify whether the ConfigMap must be defined
     */
-  var optional: js.UndefOr[Input[Boolean]] = js.undefined
+  var optional: js.UndefOr[Input[Boolean]] = js.native
 }
 
 object ConfigMapEnvSource {
   @scala.inline
-  def apply(name: Input[String] = null, optional: Input[Boolean] = null): ConfigMapEnvSource = {
+  def apply(): ConfigMapEnvSource = {
     val __obj = js.Dynamic.literal()
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (optional != null) __obj.updateDynamic("optional")(optional.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConfigMapEnvSource]
   }
+  @scala.inline
+  implicit class ConfigMapEnvSourceOps[Self <: ConfigMapEnvSource] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withName(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOptional(value: Input[Boolean]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("optional")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOptional: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("optional")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

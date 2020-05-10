@@ -1,9 +1,7 @@
 package typingsSlinky.cavy.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.cavy.mod.TestHookStore
 import typingsSlinky.cavy.mod.TestReport
 import typingsSlinky.cavy.mod.TestScope
@@ -12,32 +10,32 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Tester
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.cavy.mod.Tester] {
+object Tester {
   @JSImport("cavy", "Tester")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    specs: js.Array[js.Function1[/* spec */ TestScope, Unit]],
-    store: TestHookStore,
-    clearAsyncStorage: js.UndefOr[Boolean] = js.undefined,
-    reporter: /* report */ TestReport => Unit = null,
-    sendReport: js.UndefOr[Boolean] = js.undefined,
-    startDelay: Int | Double = null,
-    waitTime: Int | Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.cavy.mod.Tester] = {
-    val __obj = js.Dynamic.literal(specs = specs.asInstanceOf[js.Any], store = store.asInstanceOf[js.Any])
-    if (!js.isUndefined(clearAsyncStorage)) __obj.updateDynamic("clearAsyncStorage")(clearAsyncStorage.asInstanceOf[js.Any])
-    if (reporter != null) __obj.updateDynamic("reporter")(js.Any.fromFunction1(reporter))
-    if (!js.isUndefined(sendReport)) __obj.updateDynamic("sendReport")(sendReport.asInstanceOf[js.Any])
-    if (startDelay != null) __obj.updateDynamic("startDelay")(startDelay.asInstanceOf[js.Any])
-    if (waitTime != null) __obj.updateDynamic("waitTime")(waitTime.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.cavy.mod.Tester] {
+    @scala.inline
+    def clearAsyncStorage(value: Boolean): this.type = set("clearAsyncStorage", value.asInstanceOf[js.Any])
+    @scala.inline
+    def reporter(value: /* report */ TestReport => Unit): this.type = set("reporter", js.Any.fromFunction1(value))
+    @scala.inline
+    def sendReport(value: Boolean): this.type = set("sendReport", value.asInstanceOf[js.Any])
+    @scala.inline
+    def startDelay(value: Double): this.type = set("startDelay", value.asInstanceOf[js.Any])
+    @scala.inline
+    def waitTime(value: Double): this.type = set("waitTime", value.asInstanceOf[js.Any])
   }
-  type Props = TesterProps
+  
+  def withProps(p: TesterProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(specs: js.Array[js.Function1[/* spec */ TestScope, Unit]], store: TestHookStore): Builder = {
+    val __props = js.Dynamic.literal(specs = specs.asInstanceOf[js.Any], store = store.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[TesterProps]))
+  }
 }
 

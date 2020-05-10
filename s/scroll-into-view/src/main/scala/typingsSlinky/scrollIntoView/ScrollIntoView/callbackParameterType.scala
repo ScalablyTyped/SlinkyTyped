@@ -13,10 +13,8 @@ trait callbackParameterType extends js.Object
 
 object callbackParameterType {
   @scala.inline
-  def canceled: typingsSlinky.scrollIntoView.scrollIntoViewStrings.canceled = this.cast("canceled")
+  def canceled: typingsSlinky.scrollIntoView.scrollIntoViewStrings.canceled = "canceled".asInstanceOf[typingsSlinky.scrollIntoView.scrollIntoViewStrings.canceled]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
-  @scala.inline
-  def complete: typingsSlinky.scrollIntoView.scrollIntoViewStrings.complete = this.cast("complete")
+  def complete: typingsSlinky.scrollIntoView.scrollIntoViewStrings.complete = "complete".asInstanceOf[typingsSlinky.scrollIntoView.scrollIntoViewStrings.complete]
 }
 

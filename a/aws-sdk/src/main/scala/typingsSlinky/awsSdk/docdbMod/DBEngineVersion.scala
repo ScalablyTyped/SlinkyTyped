@@ -42,26 +42,113 @@ trait DBEngineVersion extends js.Object {
 
 object DBEngineVersion {
   @scala.inline
-  def apply(
-    DBEngineDescription: String = null,
-    DBEngineVersionDescription: String = null,
-    DBParameterGroupFamily: String = null,
-    Engine: String = null,
-    EngineVersion: String = null,
-    ExportableLogTypes: LogTypeList = null,
-    SupportsLogExportsToCloudwatchLogs: js.UndefOr[scala.Boolean] = js.undefined,
-    ValidUpgradeTarget: ValidUpgradeTargetList = null
-  ): DBEngineVersion = {
+  def apply(): DBEngineVersion = {
     val __obj = js.Dynamic.literal()
-    if (DBEngineDescription != null) __obj.updateDynamic("DBEngineDescription")(DBEngineDescription.asInstanceOf[js.Any])
-    if (DBEngineVersionDescription != null) __obj.updateDynamic("DBEngineVersionDescription")(DBEngineVersionDescription.asInstanceOf[js.Any])
-    if (DBParameterGroupFamily != null) __obj.updateDynamic("DBParameterGroupFamily")(DBParameterGroupFamily.asInstanceOf[js.Any])
-    if (Engine != null) __obj.updateDynamic("Engine")(Engine.asInstanceOf[js.Any])
-    if (EngineVersion != null) __obj.updateDynamic("EngineVersion")(EngineVersion.asInstanceOf[js.Any])
-    if (ExportableLogTypes != null) __obj.updateDynamic("ExportableLogTypes")(ExportableLogTypes.asInstanceOf[js.Any])
-    if (!js.isUndefined(SupportsLogExportsToCloudwatchLogs)) __obj.updateDynamic("SupportsLogExportsToCloudwatchLogs")(SupportsLogExportsToCloudwatchLogs.asInstanceOf[js.Any])
-    if (ValidUpgradeTarget != null) __obj.updateDynamic("ValidUpgradeTarget")(ValidUpgradeTarget.asInstanceOf[js.Any])
     __obj.asInstanceOf[DBEngineVersion]
   }
+  @scala.inline
+  implicit class DBEngineVersionOps[Self <: DBEngineVersion] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDBEngineDescription(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DBEngineDescription")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDBEngineDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DBEngineDescription")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDBEngineVersionDescription(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DBEngineVersionDescription")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDBEngineVersionDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DBEngineVersionDescription")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDBParameterGroupFamily(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DBParameterGroupFamily")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDBParameterGroupFamily: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DBParameterGroupFamily")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEngine(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Engine")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEngine: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Engine")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEngineVersion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EngineVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEngineVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EngineVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExportableLogTypes(value: LogTypeList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExportableLogTypes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExportableLogTypes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExportableLogTypes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSupportsLogExportsToCloudwatchLogs(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SupportsLogExportsToCloudwatchLogs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSupportsLogExportsToCloudwatchLogs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SupportsLogExportsToCloudwatchLogs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValidUpgradeTarget(value: ValidUpgradeTargetList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ValidUpgradeTarget")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValidUpgradeTarget: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ValidUpgradeTarget")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

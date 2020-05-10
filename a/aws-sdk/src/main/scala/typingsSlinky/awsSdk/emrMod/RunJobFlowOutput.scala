@@ -18,11 +18,41 @@ trait RunJobFlowOutput extends js.Object {
 
 object RunJobFlowOutput {
   @scala.inline
-  def apply(ClusterArn: ArnType = null, JobFlowId: XmlStringMaxLen256 = null): RunJobFlowOutput = {
+  def apply(): RunJobFlowOutput = {
     val __obj = js.Dynamic.literal()
-    if (ClusterArn != null) __obj.updateDynamic("ClusterArn")(ClusterArn.asInstanceOf[js.Any])
-    if (JobFlowId != null) __obj.updateDynamic("JobFlowId")(JobFlowId.asInstanceOf[js.Any])
     __obj.asInstanceOf[RunJobFlowOutput]
   }
+  @scala.inline
+  implicit class RunJobFlowOutputOps[Self <: RunJobFlowOutput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClusterArn(value: ArnType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClusterArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClusterArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClusterArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withJobFlowId(value: XmlStringMaxLen256): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("JobFlowId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutJobFlowId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("JobFlowId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

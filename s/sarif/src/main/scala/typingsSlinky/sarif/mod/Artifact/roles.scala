@@ -33,52 +33,50 @@ trait roles extends js.Object
 
 object roles {
   @scala.inline
-  def added: typingsSlinky.sarif.sarifStrings.added = this.cast("added")
+  def added: typingsSlinky.sarif.sarifStrings.added = "added".asInstanceOf[typingsSlinky.sarif.sarifStrings.added]
   @scala.inline
-  def analysisTarget: typingsSlinky.sarif.sarifStrings.analysisTarget = this.cast("analysisTarget")
+  def analysisTarget: typingsSlinky.sarif.sarifStrings.analysisTarget = "analysisTarget".asInstanceOf[typingsSlinky.sarif.sarifStrings.analysisTarget]
   @scala.inline
-  def attachment: typingsSlinky.sarif.sarifStrings.attachment = this.cast("attachment")
+  def attachment: typingsSlinky.sarif.sarifStrings.attachment = "attachment".asInstanceOf[typingsSlinky.sarif.sarifStrings.attachment]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def debugOutputFile: typingsSlinky.sarif.sarifStrings.debugOutputFile = "debugOutputFile".asInstanceOf[typingsSlinky.sarif.sarifStrings.debugOutputFile]
   @scala.inline
-  def debugOutputFile: typingsSlinky.sarif.sarifStrings.debugOutputFile = this.cast("debugOutputFile")
+  def deleted: typingsSlinky.sarif.sarifStrings.deleted = "deleted".asInstanceOf[typingsSlinky.sarif.sarifStrings.deleted]
   @scala.inline
-  def deleted: typingsSlinky.sarif.sarifStrings.deleted = this.cast("deleted")
+  def directory: typingsSlinky.sarif.sarifStrings.directory = "directory".asInstanceOf[typingsSlinky.sarif.sarifStrings.directory]
   @scala.inline
-  def directory: typingsSlinky.sarif.sarifStrings.directory = this.cast("directory")
+  def driver: typingsSlinky.sarif.sarifStrings.driver = "driver".asInstanceOf[typingsSlinky.sarif.sarifStrings.driver]
   @scala.inline
-  def driver: typingsSlinky.sarif.sarifStrings.driver = this.cast("driver")
+  def extension: typingsSlinky.sarif.sarifStrings.extension = "extension".asInstanceOf[typingsSlinky.sarif.sarifStrings.extension]
   @scala.inline
-  def extension: typingsSlinky.sarif.sarifStrings.extension = this.cast("extension")
+  def memoryContents: typingsSlinky.sarif.sarifStrings.memoryContents = "memoryContents".asInstanceOf[typingsSlinky.sarif.sarifStrings.memoryContents]
   @scala.inline
-  def memoryContents: typingsSlinky.sarif.sarifStrings.memoryContents = this.cast("memoryContents")
+  def modified: typingsSlinky.sarif.sarifStrings.modified = "modified".asInstanceOf[typingsSlinky.sarif.sarifStrings.modified]
   @scala.inline
-  def modified: typingsSlinky.sarif.sarifStrings.modified = this.cast("modified")
+  def policy: typingsSlinky.sarif.sarifStrings.policy = "policy".asInstanceOf[typingsSlinky.sarif.sarifStrings.policy]
   @scala.inline
-  def policy: typingsSlinky.sarif.sarifStrings.policy = this.cast("policy")
+  def referencedOnCommandLine: typingsSlinky.sarif.sarifStrings.referencedOnCommandLine = "referencedOnCommandLine".asInstanceOf[typingsSlinky.sarif.sarifStrings.referencedOnCommandLine]
   @scala.inline
-  def referencedOnCommandLine: typingsSlinky.sarif.sarifStrings.referencedOnCommandLine = this.cast("referencedOnCommandLine")
+  def renamed: typingsSlinky.sarif.sarifStrings.renamed = "renamed".asInstanceOf[typingsSlinky.sarif.sarifStrings.renamed]
   @scala.inline
-  def renamed: typingsSlinky.sarif.sarifStrings.renamed = this.cast("renamed")
+  def responseFile: typingsSlinky.sarif.sarifStrings.responseFile = "responseFile".asInstanceOf[typingsSlinky.sarif.sarifStrings.responseFile]
   @scala.inline
-  def responseFile: typingsSlinky.sarif.sarifStrings.responseFile = this.cast("responseFile")
+  def resultFile: typingsSlinky.sarif.sarifStrings.resultFile = "resultFile".asInstanceOf[typingsSlinky.sarif.sarifStrings.resultFile]
   @scala.inline
-  def resultFile: typingsSlinky.sarif.sarifStrings.resultFile = this.cast("resultFile")
+  def standardStream: typingsSlinky.sarif.sarifStrings.standardStream = "standardStream".asInstanceOf[typingsSlinky.sarif.sarifStrings.standardStream]
   @scala.inline
-  def standardStream: typingsSlinky.sarif.sarifStrings.standardStream = this.cast("standardStream")
+  def taxonomy: typingsSlinky.sarif.sarifStrings.taxonomy = "taxonomy".asInstanceOf[typingsSlinky.sarif.sarifStrings.taxonomy]
   @scala.inline
-  def taxonomy: typingsSlinky.sarif.sarifStrings.taxonomy = this.cast("taxonomy")
+  def toolSpecifiedConfiguration: typingsSlinky.sarif.sarifStrings.toolSpecifiedConfiguration = "toolSpecifiedConfiguration".asInstanceOf[typingsSlinky.sarif.sarifStrings.toolSpecifiedConfiguration]
   @scala.inline
-  def toolSpecifiedConfiguration: typingsSlinky.sarif.sarifStrings.toolSpecifiedConfiguration = this.cast("toolSpecifiedConfiguration")
+  def tracedFile: typingsSlinky.sarif.sarifStrings.tracedFile = "tracedFile".asInstanceOf[typingsSlinky.sarif.sarifStrings.tracedFile]
   @scala.inline
-  def tracedFile: typingsSlinky.sarif.sarifStrings.tracedFile = this.cast("tracedFile")
+  def translation: typingsSlinky.sarif.sarifStrings.translation = "translation".asInstanceOf[typingsSlinky.sarif.sarifStrings.translation]
   @scala.inline
-  def translation: typingsSlinky.sarif.sarifStrings.translation = this.cast("translation")
+  def uncontrolled: typingsSlinky.sarif.sarifStrings.uncontrolled = "uncontrolled".asInstanceOf[typingsSlinky.sarif.sarifStrings.uncontrolled]
   @scala.inline
-  def uncontrolled: typingsSlinky.sarif.sarifStrings.uncontrolled = this.cast("uncontrolled")
+  def unmodified: typingsSlinky.sarif.sarifStrings.unmodified = "unmodified".asInstanceOf[typingsSlinky.sarif.sarifStrings.unmodified]
   @scala.inline
-  def unmodified: typingsSlinky.sarif.sarifStrings.unmodified = this.cast("unmodified")
-  @scala.inline
-  def userSpecifiedConfiguration: typingsSlinky.sarif.sarifStrings.userSpecifiedConfiguration = this.cast("userSpecifiedConfiguration")
+  def userSpecifiedConfiguration: typingsSlinky.sarif.sarifStrings.userSpecifiedConfiguration = "userSpecifiedConfiguration".asInstanceOf[typingsSlinky.sarif.sarifStrings.userSpecifiedConfiguration]
 }
 

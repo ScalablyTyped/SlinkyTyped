@@ -13,12 +13,10 @@ trait toolbarViewGroupOptions extends js.Object
 
 object toolbarViewGroupOptions {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def codeview: typingsSlinky.summernote.summernoteStrings.codeview = "codeview".asInstanceOf[typingsSlinky.summernote.summernoteStrings.codeview]
   @scala.inline
-  def codeview: typingsSlinky.summernote.summernoteStrings.codeview = this.cast("codeview")
+  def fullscreen: typingsSlinky.summernote.summernoteStrings.fullscreen = "fullscreen".asInstanceOf[typingsSlinky.summernote.summernoteStrings.fullscreen]
   @scala.inline
-  def fullscreen: typingsSlinky.summernote.summernoteStrings.fullscreen = this.cast("fullscreen")
-  @scala.inline
-  def help: typingsSlinky.summernote.summernoteStrings.help = this.cast("help")
+  def help: typingsSlinky.summernote.summernoteStrings.help = "help".asInstanceOf[typingsSlinky.summernote.summernoteStrings.help]
 }
 

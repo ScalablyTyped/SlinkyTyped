@@ -19,10 +19,29 @@ trait SchemaGoogleCloudVideointelligenceV1AnnotateVideoProgress extends js.Objec
 
 object SchemaGoogleCloudVideointelligenceV1AnnotateVideoProgress {
   @scala.inline
-  def apply(annotationProgress: js.Array[SchemaGoogleCloudVideointelligenceV1VideoAnnotationProgress] = null): SchemaGoogleCloudVideointelligenceV1AnnotateVideoProgress = {
+  def apply(): SchemaGoogleCloudVideointelligenceV1AnnotateVideoProgress = {
     val __obj = js.Dynamic.literal()
-    if (annotationProgress != null) __obj.updateDynamic("annotationProgress")(annotationProgress.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudVideointelligenceV1AnnotateVideoProgress]
   }
+  @scala.inline
+  implicit class SchemaGoogleCloudVideointelligenceV1AnnotateVideoProgressOps[Self <: SchemaGoogleCloudVideointelligenceV1AnnotateVideoProgress] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAnnotationProgress(value: js.Array[SchemaGoogleCloudVideointelligenceV1VideoAnnotationProgress]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("annotationProgress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnnotationProgress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("annotationProgress")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

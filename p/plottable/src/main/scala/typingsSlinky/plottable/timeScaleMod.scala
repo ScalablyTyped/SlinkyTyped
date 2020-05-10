@@ -2,7 +2,6 @@ package typingsSlinky.plottable
 
 import typingsSlinky.d3Time.mod.CountableTimeInterval
 import typingsSlinky.plottable.quantitativeScaleMod.QuantitativeScale
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,7 +15,8 @@ object timeScaleMod extends js.Object {
     *
     * @constructor
     */
-  class Time () extends QuantitativeScale[Date] {
+  class Time ()
+    extends QuantitativeScale[js.Date] {
     var _d3Scale: js.Any = js.native
     /**
       * Returns an array of ticks values separated by the specified interval.

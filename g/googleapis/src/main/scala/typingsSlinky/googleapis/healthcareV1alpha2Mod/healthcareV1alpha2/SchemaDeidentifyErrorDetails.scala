@@ -29,18 +29,65 @@ trait SchemaDeidentifyErrorDetails extends js.Object {
 
 object SchemaDeidentifyErrorDetails {
   @scala.inline
-  def apply(
-    failureResourceCount: String = null,
-    failureStoreCount: String = null,
-    successResourceCount: String = null,
-    successStoreCount: String = null
-  ): SchemaDeidentifyErrorDetails = {
+  def apply(): SchemaDeidentifyErrorDetails = {
     val __obj = js.Dynamic.literal()
-    if (failureResourceCount != null) __obj.updateDynamic("failureResourceCount")(failureResourceCount.asInstanceOf[js.Any])
-    if (failureStoreCount != null) __obj.updateDynamic("failureStoreCount")(failureStoreCount.asInstanceOf[js.Any])
-    if (successResourceCount != null) __obj.updateDynamic("successResourceCount")(successResourceCount.asInstanceOf[js.Any])
-    if (successStoreCount != null) __obj.updateDynamic("successStoreCount")(successStoreCount.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDeidentifyErrorDetails]
   }
+  @scala.inline
+  implicit class SchemaDeidentifyErrorDetailsOps[Self <: SchemaDeidentifyErrorDetails] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFailureResourceCount(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("failureResourceCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFailureResourceCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("failureResourceCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFailureStoreCount(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("failureStoreCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFailureStoreCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("failureStoreCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSuccessResourceCount(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("successResourceCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSuccessResourceCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("successResourceCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSuccessStoreCount(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("successStoreCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSuccessStoreCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("successStoreCount")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

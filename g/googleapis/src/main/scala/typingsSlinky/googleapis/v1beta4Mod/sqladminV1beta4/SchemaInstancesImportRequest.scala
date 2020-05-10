@@ -17,10 +17,29 @@ trait SchemaInstancesImportRequest extends js.Object {
 
 object SchemaInstancesImportRequest {
   @scala.inline
-  def apply(importContext: SchemaImportContext = null): SchemaInstancesImportRequest = {
+  def apply(): SchemaInstancesImportRequest = {
     val __obj = js.Dynamic.literal()
-    if (importContext != null) __obj.updateDynamic("importContext")(importContext.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaInstancesImportRequest]
   }
+  @scala.inline
+  implicit class SchemaInstancesImportRequestOps[Self <: SchemaInstancesImportRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withImportContext(value: SchemaImportContext): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("importContext")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImportContext: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("importContext")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -14,14 +14,12 @@ trait ButtonTypes extends js.Object
 
 object ButtonTypes {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def medium: typingsSlinky.fundamentalReact.fundamentalReactStrings.medium = "medium".asInstanceOf[typingsSlinky.fundamentalReact.fundamentalReactStrings.medium]
   @scala.inline
-  def medium: typingsSlinky.fundamentalReact.fundamentalReactStrings.medium = this.cast("medium")
+  def negative: typingsSlinky.fundamentalReact.fundamentalReactStrings.negative = "negative".asInstanceOf[typingsSlinky.fundamentalReact.fundamentalReactStrings.negative]
   @scala.inline
-  def negative: typingsSlinky.fundamentalReact.fundamentalReactStrings.negative = this.cast("negative")
+  def positive: typingsSlinky.fundamentalReact.fundamentalReactStrings.positive = "positive".asInstanceOf[typingsSlinky.fundamentalReact.fundamentalReactStrings.positive]
   @scala.inline
-  def positive: typingsSlinky.fundamentalReact.fundamentalReactStrings.positive = this.cast("positive")
-  @scala.inline
-  def standard: typingsSlinky.fundamentalReact.fundamentalReactStrings.standard = this.cast("standard")
+  def standard: typingsSlinky.fundamentalReact.fundamentalReactStrings.standard = "standard".asInstanceOf[typingsSlinky.fundamentalReact.fundamentalReactStrings.standard]
 }
 

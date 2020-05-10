@@ -1,6 +1,6 @@
 package typingsSlinky.officeUiFabricReact
 
-import typingsSlinky.officeUiFabricReact.focusZoneTypesMod.IFocusZoneProps
+import typingsSlinky.fluentuiReactFocus.focusZoneTypesMod.IFocusZoneProps
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactNumbers.`0`
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactNumbers.`1`
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactNumbers.`2`
@@ -27,13 +27,13 @@ object libFocusZoneMod extends js.Object {
   
   @js.native
   object FocusZoneDirection extends js.Object {
-    /* 2 */ val bidirectional: typingsSlinky.officeUiFabricReact.focusZoneTypesMod.FocusZoneDirection.bidirectional with Double = js.native
-    /* 3 */ val domOrder: typingsSlinky.officeUiFabricReact.focusZoneTypesMod.FocusZoneDirection.domOrder with Double = js.native
-    /* 1 */ val horizontal: typingsSlinky.officeUiFabricReact.focusZoneTypesMod.FocusZoneDirection.horizontal with Double = js.native
-    /* 0 */ val vertical: typingsSlinky.officeUiFabricReact.focusZoneTypesMod.FocusZoneDirection.vertical with Double = js.native
+    /* 2 */ val bidirectional: typingsSlinky.fluentuiReactFocus.focusZoneTypesMod.FocusZoneDirection.bidirectional with Double = js.native
+    /* 3 */ val domOrder: typingsSlinky.fluentuiReactFocus.focusZoneTypesMod.FocusZoneDirection.domOrder with Double = js.native
+    /* 1 */ val horizontal: typingsSlinky.fluentuiReactFocus.focusZoneTypesMod.FocusZoneDirection.horizontal with Double = js.native
+    /* 0 */ val vertical: typingsSlinky.fluentuiReactFocus.focusZoneTypesMod.FocusZoneDirection.vertical with Double = js.native
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[
-        typingsSlinky.officeUiFabricReact.focusZoneTypesMod.FocusZoneDirection with Double
+        typingsSlinky.fluentuiReactFocus.focusZoneTypesMod.FocusZoneDirection with Double
       ] = js.native
   }
   

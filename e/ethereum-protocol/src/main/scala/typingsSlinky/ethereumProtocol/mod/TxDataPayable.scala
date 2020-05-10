@@ -5,30 +5,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait TxDataPayable extends TxData {
   @JSName("value")
-  var value_TxDataPayable: js.UndefOr[default] = js.undefined
+  var value_TxDataPayable: js.UndefOr[default] = js.native
 }
 
 object TxDataPayable {
   @scala.inline
-  def apply(
-    from: String,
-    data: String = null,
-    gas: Double | String | default = null,
-    gasPrice: Double | String | default = null,
-    nonce: Int | Double = null,
-    to: String = null,
-    value: default = null
-  ): TxDataPayable = {
+  def apply(from: String): TxDataPayable = {
     val __obj = js.Dynamic.literal(from = from.asInstanceOf[js.Any])
-    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
-    if (gas != null) __obj.updateDynamic("gas")(gas.asInstanceOf[js.Any])
-    if (gasPrice != null) __obj.updateDynamic("gasPrice")(gasPrice.asInstanceOf[js.Any])
-    if (nonce != null) __obj.updateDynamic("nonce")(nonce.asInstanceOf[js.Any])
-    if (to != null) __obj.updateDynamic("to")(to.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     __obj.asInstanceOf[TxDataPayable]
   }
+  @scala.inline
+  implicit class TxDataPayableOps[Self <: TxDataPayable] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withValue(value: default): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 class PendingActions () extends Plugin[Unit] {
   var first: Null | Observablemessagestring = js.native
   val hasAny: Boolean = js.native
-  @JSName(scala.scalajs.js.Symbol.iterator)
+  @JSName(js.Symbol.iterator)
   var iterator: js.Function0[js.Iterator[Observablemessagestring]] = js.native
   def add(message: String): Observablemessagestring = js.native
   def remove(action: Observablemessagestring): Unit = js.native

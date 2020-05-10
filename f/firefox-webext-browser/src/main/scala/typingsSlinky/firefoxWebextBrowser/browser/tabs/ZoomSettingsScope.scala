@@ -16,10 +16,8 @@ trait ZoomSettingsScope extends js.Object
 
 object ZoomSettingsScope {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def `per-origin`: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.`per-origin` = "per-origin".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.`per-origin`]
   @scala.inline
-  def `per-origin`: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.`per-origin` = this.cast("per-origin")
-  @scala.inline
-  def `per-tab`: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.`per-tab` = this.cast("per-tab")
+  def `per-tab`: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.`per-tab` = "per-tab".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.`per-tab`]
 }
 

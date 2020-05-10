@@ -33,16 +33,53 @@ trait SchemaSpeechRecognitionResult extends js.Object {
 
 object SchemaSpeechRecognitionResult {
   @scala.inline
-  def apply(
-    alternatives: js.Array[SchemaSpeechRecognitionAlternative] = null,
-    channelTag: Int | Double = null,
-    languageCode: String = null
-  ): SchemaSpeechRecognitionResult = {
+  def apply(): SchemaSpeechRecognitionResult = {
     val __obj = js.Dynamic.literal()
-    if (alternatives != null) __obj.updateDynamic("alternatives")(alternatives.asInstanceOf[js.Any])
-    if (channelTag != null) __obj.updateDynamic("channelTag")(channelTag.asInstanceOf[js.Any])
-    if (languageCode != null) __obj.updateDynamic("languageCode")(languageCode.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSpeechRecognitionResult]
   }
+  @scala.inline
+  implicit class SchemaSpeechRecognitionResultOps[Self <: SchemaSpeechRecognitionResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAlternatives(value: js.Array[SchemaSpeechRecognitionAlternative]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alternatives")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlternatives: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alternatives")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withChannelTag(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("channelTag")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChannelTag: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("channelTag")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLanguageCode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("languageCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLanguageCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("languageCode")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

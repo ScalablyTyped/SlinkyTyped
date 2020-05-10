@@ -1,7 +1,6 @@
 package typingsSlinky.dateFns.esmMod
 
 import typingsSlinky.dateFns.AnonUseAdditionalDayOfYearTokens
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +10,7 @@ import scala.scalajs.js.annotation._
 object format extends js.Object {
   def apply(date: Double, format: String): String = js.native
   def apply(date: Double, format: String, options: AnonUseAdditionalDayOfYearTokens): String = js.native
-  def apply(date: Date, format: String): String = js.native
-  def apply(date: Date, format: String, options: AnonUseAdditionalDayOfYearTokens): String = js.native
+  def apply(date: js.Date, format: String): String = js.native
+  def apply(date: js.Date, format: String, options: AnonUseAdditionalDayOfYearTokens): String = js.native
 }
 

@@ -35,8 +35,8 @@ trait RangyRange extends Range {
   def refresh(): js.Any = js.native
   def select(): js.Any = js.native
   def setStartAndEnd(startNode: Node, startOffset: Double): js.Any = js.native
-  def setStartAndEnd(startNode: Node, startOffset: Double, endNode: typingsSlinky.std.Node): js.Any = js.native
-  def setStartAndEnd(startNode: Node, startOffset: Double, endNode: typingsSlinky.std.Node, endOffset: Double): js.Any = js.native
+  def setStartAndEnd(startNode: Node, startOffset: Double, endNode: Node): js.Any = js.native
+  def setStartAndEnd(startNode: Node, startOffset: Double, endNode: Node, endOffset: Double): js.Any = js.native
   def setStartAndEnd(startNode: Node, startOffset: Double, endOffset: Double): js.Any = js.native
   def splitBoundaries(): js.Any = js.native
   def toCharacterRange(containerNode: Node): AnonEnd = js.native

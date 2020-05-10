@@ -6,40 +6,123 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonDefaultValue extends js.Object {
-  var callback: js.UndefOr[ButtonTypeOnClickProp with js.UndefOr[js.Function0[_]]] = js.undefined
-  var defaultValue: js.UndefOr[js.Any] = js.undefined
-  var groupId: js.UndefOr[String] = js.undefined
-  var hideLabel: js.UndefOr[`true` with js.UndefOr[Boolean]] = js.undefined
-  var label: String
-  var name: String
-  var `type`: js.Any
-  var used: js.UndefOr[Boolean] = js.undefined
-  var value: js.UndefOr[scala.Nothing] = js.undefined
+  var callback: js.UndefOr[ButtonTypeOnClickProp with js.UndefOr[js.Function0[_]]] = js.native
+  var defaultValue: js.UndefOr[js.Any] = js.native
+  var groupId: js.UndefOr[String] = js.native
+  var hideLabel: js.UndefOr[`true` with js.UndefOr[Boolean]] = js.native
+  var label: String = js.native
+  var name: String = js.native
+  var `type`: js.Any = js.native
+  var used: js.UndefOr[Boolean] = js.native
+  var value: js.UndefOr[scala.Nothing] = js.native
 }
 
 object AnonDefaultValue {
   @scala.inline
-  def apply(
-    label: String,
-    name: String,
-    `type`: js.Any,
-    callback: ButtonTypeOnClickProp with js.UndefOr[js.Function0[_]] = null,
-    defaultValue: js.Any = null,
-    groupId: String = null,
-    hideLabel: `true` with js.UndefOr[Boolean] = null,
-    used: js.UndefOr[Boolean] = js.undefined,
-    value: js.UndefOr[scala.Nothing] = js.undefined
-  ): AnonDefaultValue = {
+  def apply(label: String, name: String, `type`: js.Any): AnonDefaultValue = {
     val __obj = js.Dynamic.literal(label = label.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (callback != null) __obj.updateDynamic("callback")(callback.asInstanceOf[js.Any])
-    if (defaultValue != null) __obj.updateDynamic("defaultValue")(defaultValue.asInstanceOf[js.Any])
-    if (groupId != null) __obj.updateDynamic("groupId")(groupId.asInstanceOf[js.Any])
-    if (hideLabel != null) __obj.updateDynamic("hideLabel")(hideLabel.asInstanceOf[js.Any])
-    if (!js.isUndefined(used)) __obj.updateDynamic("used")(used.asInstanceOf[js.Any])
-    if (!js.isUndefined(value)) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonDefaultValue]
   }
+  @scala.inline
+  implicit class AnonDefaultValueOps[Self <: AnonDefaultValue] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLabel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCallback(value: ButtonTypeOnClickProp with js.UndefOr[js.Function0[_]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("callback")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCallback: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("callback")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultValue(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGroupId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("groupId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGroupId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("groupId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHideLabel(value: `true` with js.UndefOr[Boolean]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hideLabel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHideLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hideLabel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUsed(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("used")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUsed: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("used")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValue(value: scala.Nothing): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

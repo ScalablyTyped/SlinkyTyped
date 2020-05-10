@@ -22,16 +22,53 @@ trait DolbyVision extends js.Object {
 
 object DolbyVision {
   @scala.inline
-  def apply(
-    L6Metadata: DolbyVisionLevel6Metadata = null,
-    L6Mode: DolbyVisionLevel6Mode = null,
-    Profile: DolbyVisionProfile = null
-  ): DolbyVision = {
+  def apply(): DolbyVision = {
     val __obj = js.Dynamic.literal()
-    if (L6Metadata != null) __obj.updateDynamic("L6Metadata")(L6Metadata.asInstanceOf[js.Any])
-    if (L6Mode != null) __obj.updateDynamic("L6Mode")(L6Mode.asInstanceOf[js.Any])
-    if (Profile != null) __obj.updateDynamic("Profile")(Profile.asInstanceOf[js.Any])
     __obj.asInstanceOf[DolbyVision]
   }
+  @scala.inline
+  implicit class DolbyVisionOps[Self <: DolbyVision] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withL6Metadata(value: DolbyVisionLevel6Metadata): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("L6Metadata")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutL6Metadata: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("L6Metadata")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withL6Mode(value: DolbyVisionLevel6Mode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("L6Mode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutL6Mode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("L6Mode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProfile(value: DolbyVisionProfile): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Profile")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProfile: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Profile")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

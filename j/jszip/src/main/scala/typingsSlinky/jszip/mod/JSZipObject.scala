@@ -33,9 +33,9 @@ trait JSZipObject extends js.Object {
   @JSName("async")
   def async_array(`type`: array, onUpdate: OnUpdateCallback): js.Promise[js.Array[Double]] = js.native
   @JSName("async")
-  def async_arraybuffer(`type`: arraybuffer): js.Promise[scala.scalajs.js.typedarray.ArrayBuffer] = js.native
+  def async_arraybuffer(`type`: arraybuffer): js.Promise[js.typedarray.ArrayBuffer] = js.native
   @JSName("async")
-  def async_arraybuffer(`type`: arraybuffer, onUpdate: OnUpdateCallback): js.Promise[scala.scalajs.js.typedarray.ArrayBuffer] = js.native
+  def async_arraybuffer(`type`: arraybuffer, onUpdate: OnUpdateCallback): js.Promise[js.typedarray.ArrayBuffer] = js.native
   /**
     * Prepare the content in the asked type.
     * @param type the type of the result.
@@ -67,9 +67,9 @@ trait JSZipObject extends js.Object {
   @JSName("async")
   def async_text(`type`: text, onUpdate: OnUpdateCallback): js.Promise[String] = js.native
   @JSName("async")
-  def async_uint8array(`type`: uint8array): js.Promise[scala.scalajs.js.typedarray.Uint8Array] = js.native
+  def async_uint8array(`type`: uint8array): js.Promise[js.typedarray.Uint8Array] = js.native
   @JSName("async")
-  def async_uint8array(`type`: uint8array, onUpdate: OnUpdateCallback): js.Promise[scala.scalajs.js.typedarray.Uint8Array] = js.native
+  def async_uint8array(`type`: uint8array, onUpdate: OnUpdateCallback): js.Promise[js.typedarray.Uint8Array] = js.native
   def nodeStream(): ReadableStream = js.native
   @JSName("nodeStream")
   def nodeStream_nodestream(`type`: nodestream): ReadableStream = js.native

@@ -6,17 +6,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonFirstSecond extends js.Object {
-  var first: IMapView[String, NamedResource]
-  var second: IMapView[String, NamedResource]
+  var first: IMapView[String, NamedResource] = js.native
+  var second: IMapView[String, NamedResource] = js.native
 }
 
 object AnonFirstSecond {
   @scala.inline
   def apply(first: IMapView[String, NamedResource], second: IMapView[String, NamedResource]): AnonFirstSecond = {
     val __obj = js.Dynamic.literal(first = first.asInstanceOf[js.Any], second = second.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[AnonFirstSecond]
   }
+  @scala.inline
+  implicit class AnonFirstSecondOps[Self <: AnonFirstSecond] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFirst(value: IMapView[String, NamedResource]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("first")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSecond(value: IMapView[String, NamedResource]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("second")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

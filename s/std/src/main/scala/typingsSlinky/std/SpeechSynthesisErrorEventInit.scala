@@ -4,32 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SpeechSynthesisErrorEventInit extends SpeechSynthesisEventInit {
-  var error: SpeechSynthesisErrorCode
+  var error: SpeechSynthesisErrorCode = js.native
 }
 
 object SpeechSynthesisErrorEventInit {
   @scala.inline
-  def apply(
-    error: SpeechSynthesisErrorCode,
-    utterance: SpeechSynthesisUtterance,
-    bubbles: js.UndefOr[scala.Boolean] = js.undefined,
-    cancelable: js.UndefOr[scala.Boolean] = js.undefined,
-    charIndex: Int | Double = null,
-    charLength: Int | Double = null,
-    composed: js.UndefOr[scala.Boolean] = js.undefined,
-    elapsedTime: Int | Double = null,
-    name: java.lang.String = null
-  ): SpeechSynthesisErrorEventInit = {
+  def apply(error: SpeechSynthesisErrorCode, utterance: SpeechSynthesisUtterance): SpeechSynthesisErrorEventInit = {
     val __obj = js.Dynamic.literal(error = error.asInstanceOf[js.Any], utterance = utterance.asInstanceOf[js.Any])
-    if (!js.isUndefined(bubbles)) __obj.updateDynamic("bubbles")(bubbles.asInstanceOf[js.Any])
-    if (!js.isUndefined(cancelable)) __obj.updateDynamic("cancelable")(cancelable.asInstanceOf[js.Any])
-    if (charIndex != null) __obj.updateDynamic("charIndex")(charIndex.asInstanceOf[js.Any])
-    if (charLength != null) __obj.updateDynamic("charLength")(charLength.asInstanceOf[js.Any])
-    if (!js.isUndefined(composed)) __obj.updateDynamic("composed")(composed.asInstanceOf[js.Any])
-    if (elapsedTime != null) __obj.updateDynamic("elapsedTime")(elapsedTime.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
     __obj.asInstanceOf[SpeechSynthesisErrorEventInit]
   }
+  @scala.inline
+  implicit class SpeechSynthesisErrorEventInitOps[Self <: SpeechSynthesisErrorEventInit] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withError(value: SpeechSynthesisErrorCode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

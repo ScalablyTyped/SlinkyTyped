@@ -2,6 +2,7 @@ package typingsSlinky.parcelBundler.mod
 
 import typingsSlinky.expressServeStaticCore.mod.NextFunction
 import typingsSlinky.expressServeStaticCore.mod.ParamsDictionary
+import typingsSlinky.expressServeStaticCore.mod.Query
 import typingsSlinky.expressServeStaticCore.mod.Request
 import typingsSlinky.expressServeStaticCore.mod.Response
 import typingsSlinky.node.httpMod.Server
@@ -21,7 +22,7 @@ trait ParcelBundler extends js.Object {
   def addPackager(`type`: String, packager: String): Unit = js.native
   def bundle(): js.Promise[ParcelBundle] = js.native
   def middleware(): js.Function3[
-    /* req */ Request[ParamsDictionary, _, _], 
+    /* req */ Request[ParamsDictionary, _, _, Query], 
     /* res */ Response[_], 
     /* next */ NextFunction, 
     _

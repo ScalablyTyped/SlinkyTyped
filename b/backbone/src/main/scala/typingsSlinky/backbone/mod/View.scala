@@ -47,11 +47,11 @@ class View[TModel /* <: Model */] () extends js.Object {
   def remove(): View[TModel] = js.native
   def render(): View[TModel] = js.native
   def setElement(element: js.Any): View[TModel] = js.native
-  def setElement(element: JQuery_[typingsSlinky.std.HTMLElement]): View[TModel] = js.native
-  def setElement(element: JQuery_[typingsSlinky.std.HTMLElement], delegate: Boolean): View[TModel] = js.native
+  def setElement(element: JQuery_[HTMLElement]): View[TModel] = js.native
+  def setElement(element: JQuery_[HTMLElement], delegate: Boolean): View[TModel] = js.native
   //template: (json, options?) => string;
-  def setElement(element: typingsSlinky.std.HTMLElement): View[TModel] = js.native
-  def setElement(element: typingsSlinky.std.HTMLElement, delegate: Boolean): View[TModel] = js.native
+  def setElement(element: HTMLElement): View[TModel] = js.native
+  def setElement(element: HTMLElement, delegate: Boolean): View[TModel] = js.native
   def undelegate(eventName: String): View[TModel] = js.native
   def undelegate(eventName: String, selector: String): View[TModel] = js.native
   def undelegate(eventName: String, selector: String, listener: js.Function): View[TModel] = js.native

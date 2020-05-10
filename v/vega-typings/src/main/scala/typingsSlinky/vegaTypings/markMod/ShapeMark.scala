@@ -1,57 +1,40 @@
 package typingsSlinky.vegaTypings.markMod
 
 import typingsSlinky.vegaTypings.encodeMod.Encodable
-import typingsSlinky.vegaTypings.encodeMod.Encode
 import typingsSlinky.vegaTypings.encodeMod.ShapeEncodeEntry
-import typingsSlinky.vegaTypings.onTriggerMod.OnMarkTrigger
-import typingsSlinky.vegaTypings.signalMod.SignalRef
-import typingsSlinky.vegaTypings.transformMod.Transforms
 import typingsSlinky.vegaTypings.vegaTypingsStrings.shape
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ShapeMark
   extends BaseMark
      with Encodable[ShapeEncodeEntry]
      with Mark {
-  var `type`: shape
+  var `type`: shape = js.native
 }
 
 object ShapeMark {
   @scala.inline
-  def apply(
-    `type`: shape,
-    clip: Clip = null,
-    description: String = null,
-    encode: Encode[ShapeEncodeEntry] = null,
-    from: From = null,
-    interactive: Boolean | SignalRef = null,
-    key: String = null,
-    name: String = null,
-    on: js.Array[OnMarkTrigger] = null,
-    role: String = null,
-    sort: Compare = null,
-    style: String | js.Array[String] = null,
-    transform: js.Array[Transforms] = null,
-    zindex: Int | Double = null
-  ): ShapeMark = {
+  def apply(`type`: shape): ShapeMark = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (clip != null) __obj.updateDynamic("clip")(clip.asInstanceOf[js.Any])
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (encode != null) __obj.updateDynamic("encode")(encode.asInstanceOf[js.Any])
-    if (from != null) __obj.updateDynamic("from")(from.asInstanceOf[js.Any])
-    if (interactive != null) __obj.updateDynamic("interactive")(interactive.asInstanceOf[js.Any])
-    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (on != null) __obj.updateDynamic("on")(on.asInstanceOf[js.Any])
-    if (role != null) __obj.updateDynamic("role")(role.asInstanceOf[js.Any])
-    if (sort != null) __obj.updateDynamic("sort")(sort.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (transform != null) __obj.updateDynamic("transform")(transform.asInstanceOf[js.Any])
-    if (zindex != null) __obj.updateDynamic("zindex")(zindex.asInstanceOf[js.Any])
     __obj.asInstanceOf[ShapeMark]
   }
+  @scala.inline
+  implicit class ShapeMarkOps[Self <: ShapeMark] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withType(value: shape): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

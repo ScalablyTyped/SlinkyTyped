@@ -4,7 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.std.Event_ because Already inherited
 - typingsSlinky.jqueryAjaxfile.BaseJQueryEventObject because Already inherited
 - typingsSlinky.jqueryAjaxfile.JQueryInputEventObject because Already inherited

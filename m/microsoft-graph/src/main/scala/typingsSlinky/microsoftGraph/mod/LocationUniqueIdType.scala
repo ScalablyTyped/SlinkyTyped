@@ -16,16 +16,14 @@ trait LocationUniqueIdType extends js.Object
 
 object LocationUniqueIdType {
   @scala.inline
-  def bing: typingsSlinky.microsoftGraph.microsoftGraphStrings.bing = this.cast("bing")
+  def bing: typingsSlinky.microsoftGraph.microsoftGraphStrings.bing = "bing".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.bing]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def directory: typingsSlinky.microsoftGraph.microsoftGraphStrings.directory = "directory".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.directory]
   @scala.inline
-  def directory: typingsSlinky.microsoftGraph.microsoftGraphStrings.directory = this.cast("directory")
+  def locationStore: typingsSlinky.microsoftGraph.microsoftGraphStrings.locationStore = "locationStore".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.locationStore]
   @scala.inline
-  def locationStore: typingsSlinky.microsoftGraph.microsoftGraphStrings.locationStore = this.cast("locationStore")
+  def `private`: typingsSlinky.microsoftGraph.microsoftGraphStrings.`private` = "private".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.`private`]
   @scala.inline
-  def `private`: typingsSlinky.microsoftGraph.microsoftGraphStrings.`private` = this.cast("private")
-  @scala.inline
-  def unknown: unknown_ = this.cast("unknown")
+  def unknown: unknown_ = "unknown".asInstanceOf[unknown_]
 }
 

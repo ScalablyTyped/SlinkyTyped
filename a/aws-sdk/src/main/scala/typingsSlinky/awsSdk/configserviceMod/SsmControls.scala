@@ -18,11 +18,41 @@ trait SsmControls extends js.Object {
 
 object SsmControls {
   @scala.inline
-  def apply(ConcurrentExecutionRatePercentage: Int | Double = null, ErrorPercentage: Int | Double = null): SsmControls = {
+  def apply(): SsmControls = {
     val __obj = js.Dynamic.literal()
-    if (ConcurrentExecutionRatePercentage != null) __obj.updateDynamic("ConcurrentExecutionRatePercentage")(ConcurrentExecutionRatePercentage.asInstanceOf[js.Any])
-    if (ErrorPercentage != null) __obj.updateDynamic("ErrorPercentage")(ErrorPercentage.asInstanceOf[js.Any])
     __obj.asInstanceOf[SsmControls]
   }
+  @scala.inline
+  implicit class SsmControlsOps[Self <: SsmControls] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConcurrentExecutionRatePercentage(value: Percentage): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConcurrentExecutionRatePercentage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConcurrentExecutionRatePercentage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConcurrentExecutionRatePercentage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withErrorPercentage(value: Percentage): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ErrorPercentage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutErrorPercentage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ErrorPercentage")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

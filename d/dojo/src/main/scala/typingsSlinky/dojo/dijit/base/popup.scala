@@ -10,5 +10,6 @@ import scala.scalajs.js.annotation._
   * Deprecated.   Old module for popups, new code should use dijit/popup directly.
   * 
   */
+@js.native
 trait popup extends js.Object
 

@@ -1,12 +1,7 @@
 package typingsSlinky.devextreme.mod.DevExpress.ui
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.devextreme.AnonComponentElement
 import typingsSlinky.devextreme.AnonDate
-import typingsSlinky.devextreme.AnonElement
-import typingsSlinky.devextreme.AnonJQueryEvent
-import typingsSlinky.devextreme.AnonModel
-import typingsSlinky.devextreme.AnonName
 import typingsSlinky.devextreme.AnonView
 import typingsSlinky.devextreme.devextremeNumbers.`0`
 import typingsSlinky.devextreme.devextremeNumbers.`1`
@@ -15,14 +10,9 @@ import typingsSlinky.devextreme.devextremeNumbers.`3`
 import typingsSlinky.devextreme.devextremeNumbers.`4`
 import typingsSlinky.devextreme.devextremeNumbers.`5`
 import typingsSlinky.devextreme.devextremeNumbers.`6`
-import typingsSlinky.devextreme.devextremeStrings.always
-import typingsSlinky.devextreme.devextremeStrings.auto
 import typingsSlinky.devextreme.devextremeStrings.century
 import typingsSlinky.devextreme.devextremeStrings.decade
-import typingsSlinky.devextreme.devextremeStrings.invalid
 import typingsSlinky.devextreme.devextremeStrings.month
-import typingsSlinky.devextreme.devextremeStrings.pending
-import typingsSlinky.devextreme.devextremeStrings.valid
 import typingsSlinky.devextreme.devextremeStrings.year
 import typingsSlinky.devextreme.mod.DevExpress.core.dxElement
 import typingsSlinky.devextreme.mod._Global_.JQuery
@@ -30,6 +20,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait dxCalendarOptions extends EditorOptions[dxCalendar] {
   /** Specifies a custom template for calendar cells. */
   var cellTemplate: js.UndefOr[
@@ -39,115 +30,234 @@ trait dxCalendarOptions extends EditorOptions[dxCalendar] {
       /* itemElement */ dxElement, 
       String | Element | JQuery
     ])
-  ] = js.undefined
+  ] = js.native
   /** Specifies the date-time value serialization format. Use it only if you do not specify the value at design time. */
-  var dateSerializationFormat: js.UndefOr[String] = js.undefined
+  var dateSerializationFormat: js.UndefOr[String] = js.native
   /** Specifies dates to be disabled. */
-  var disabledDates: js.UndefOr[js.Array[js.Date] | (js.Function1[/* data */ AnonView, Boolean])] = js.undefined
+  var disabledDates: js.UndefOr[js.Array[js.Date] | (js.Function1[/* data */ AnonView, Boolean])] = js.native
   /** Specifies the first day of a week. */
-  var firstDayOfWeek: js.UndefOr[`0` | `1` | `2` | `3` | `4` | `5` | `6`] = js.undefined
+  var firstDayOfWeek: js.UndefOr[`0` | `1` | `2` | `3` | `4` | `5` | `6`] = js.native
   /** The latest date the widget allows to select. */
-  var max: js.UndefOr[js.Date | Double | String] = js.undefined
+  var max: js.UndefOr[js.Date | Double | String] = js.native
   /** Specifies the maximum zoom level of the calendar. */
-  var maxZoomLevel: js.UndefOr[century | decade | month | year] = js.undefined
+  var maxZoomLevel: js.UndefOr[century | decade | month | year] = js.native
   /** The earliest date the widget allows to select. */
-  var min: js.UndefOr[js.Date | Double | String] = js.undefined
+  var min: js.UndefOr[js.Date | Double | String] = js.native
   /** Specifies the minimum zoom level of the calendar. */
-  var minZoomLevel: js.UndefOr[century | decade | month | year] = js.undefined
+  var minZoomLevel: js.UndefOr[century | decade | month | year] = js.native
   /** The value to be assigned to the `name` attribute of the underlying HTML element. */
-  var name: js.UndefOr[String] = js.undefined
+  var name: js.UndefOr[String] = js.native
   /** Specifies whether or not the widget displays a button that selects the current date. */
-  var showTodayButton: js.UndefOr[Boolean] = js.undefined
+  var showTodayButton: js.UndefOr[Boolean] = js.native
   /** An object or a value specifying the date and time currently selected in the calendar. */
   @JSName("value")
-  var value_dxCalendarOptions: js.UndefOr[js.Date | Double | String] = js.undefined
+  var value_dxCalendarOptions: js.UndefOr[js.Date | Double | String] = js.native
   /** Specifies the current calendar zoom level. */
-  var zoomLevel: js.UndefOr[century | decade | month | year] = js.undefined
+  var zoomLevel: js.UndefOr[century | decade | month | year] = js.native
 }
 
 object dxCalendarOptions {
   @scala.inline
-  def apply(
-    accessKey: String = null,
-    activeStateEnabled: js.UndefOr[Boolean] = js.undefined,
-    bindingOptions: js.Any = null,
-    cellTemplate: typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function3[
-      /* itemData */ AnonDate, 
-      /* itemIndex */ Double, 
-      /* itemElement */ dxElement, 
-      String | Element | JQuery
-    ]) = null,
-    dateSerializationFormat: String = null,
-    disabled: js.UndefOr[Boolean] = js.undefined,
-    disabledDates: js.Array[js.Date] | (js.Function1[/* data */ AnonView, Boolean]) = null,
-    elementAttr: js.Any = null,
-    firstDayOfWeek: `0` | `1` | `2` | `3` | `4` | `5` | `6` = null,
-    focusStateEnabled: js.UndefOr[Boolean] = js.undefined,
-    height: Double | String | (js.Function0[Double | String]) = null,
-    hint: String = null,
-    hoverStateEnabled: js.UndefOr[Boolean] = js.undefined,
-    isValid: js.UndefOr[Boolean] = js.undefined,
-    max: js.Date | Double | String = null,
-    maxZoomLevel: century | decade | month | year = null,
-    min: js.Date | Double | String = null,
-    minZoomLevel: century | decade | month | year = null,
-    name: String = null,
-    onContentReady: /* e */ AnonComponentElement[dxCalendar] => _ = null,
-    onDisposing: /* e */ AnonModel[dxCalendar] => _ = null,
-    onInitialized: /* e */ AnonElement[dxCalendar] => _ = null,
-    onOptionChanged: /* e */ AnonName[dxCalendar] => _ = null,
-    onValueChanged: /* e */ AnonJQueryEvent[dxCalendar] => _ = null,
-    readOnly: js.UndefOr[Boolean] = js.undefined,
-    rtlEnabled: js.UndefOr[Boolean] = js.undefined,
-    showTodayButton: js.UndefOr[Boolean] = js.undefined,
-    tabIndex: Int | Double = null,
-    validationError: js.Any = null,
-    validationErrors: js.Array[_] = null,
-    validationMessageMode: always | auto = null,
-    validationStatus: valid | invalid | pending = null,
-    value: js.Date | Double | String = null,
-    visible: js.UndefOr[Boolean] = js.undefined,
-    width: Double | String | (js.Function0[Double | String]) = null,
-    zoomLevel: century | decade | month | year = null
-  ): dxCalendarOptions = {
+  def apply(): dxCalendarOptions = {
     val __obj = js.Dynamic.literal()
-    if (accessKey != null) __obj.updateDynamic("accessKey")(accessKey.asInstanceOf[js.Any])
-    if (!js.isUndefined(activeStateEnabled)) __obj.updateDynamic("activeStateEnabled")(activeStateEnabled.asInstanceOf[js.Any])
-    if (bindingOptions != null) __obj.updateDynamic("bindingOptions")(bindingOptions.asInstanceOf[js.Any])
-    if (cellTemplate != null) __obj.updateDynamic("cellTemplate")(cellTemplate.asInstanceOf[js.Any])
-    if (dateSerializationFormat != null) __obj.updateDynamic("dateSerializationFormat")(dateSerializationFormat.asInstanceOf[js.Any])
-    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.asInstanceOf[js.Any])
-    if (disabledDates != null) __obj.updateDynamic("disabledDates")(disabledDates.asInstanceOf[js.Any])
-    if (elementAttr != null) __obj.updateDynamic("elementAttr")(elementAttr.asInstanceOf[js.Any])
-    if (firstDayOfWeek != null) __obj.updateDynamic("firstDayOfWeek")(firstDayOfWeek.asInstanceOf[js.Any])
-    if (!js.isUndefined(focusStateEnabled)) __obj.updateDynamic("focusStateEnabled")(focusStateEnabled.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (hint != null) __obj.updateDynamic("hint")(hint.asInstanceOf[js.Any])
-    if (!js.isUndefined(hoverStateEnabled)) __obj.updateDynamic("hoverStateEnabled")(hoverStateEnabled.asInstanceOf[js.Any])
-    if (!js.isUndefined(isValid)) __obj.updateDynamic("isValid")(isValid.asInstanceOf[js.Any])
-    if (max != null) __obj.updateDynamic("max")(max.asInstanceOf[js.Any])
-    if (maxZoomLevel != null) __obj.updateDynamic("maxZoomLevel")(maxZoomLevel.asInstanceOf[js.Any])
-    if (min != null) __obj.updateDynamic("min")(min.asInstanceOf[js.Any])
-    if (minZoomLevel != null) __obj.updateDynamic("minZoomLevel")(minZoomLevel.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (onContentReady != null) __obj.updateDynamic("onContentReady")(js.Any.fromFunction1(onContentReady))
-    if (onDisposing != null) __obj.updateDynamic("onDisposing")(js.Any.fromFunction1(onDisposing))
-    if (onInitialized != null) __obj.updateDynamic("onInitialized")(js.Any.fromFunction1(onInitialized))
-    if (onOptionChanged != null) __obj.updateDynamic("onOptionChanged")(js.Any.fromFunction1(onOptionChanged))
-    if (onValueChanged != null) __obj.updateDynamic("onValueChanged")(js.Any.fromFunction1(onValueChanged))
-    if (!js.isUndefined(readOnly)) __obj.updateDynamic("readOnly")(readOnly.asInstanceOf[js.Any])
-    if (!js.isUndefined(rtlEnabled)) __obj.updateDynamic("rtlEnabled")(rtlEnabled.asInstanceOf[js.Any])
-    if (!js.isUndefined(showTodayButton)) __obj.updateDynamic("showTodayButton")(showTodayButton.asInstanceOf[js.Any])
-    if (tabIndex != null) __obj.updateDynamic("tabIndex")(tabIndex.asInstanceOf[js.Any])
-    if (validationError != null) __obj.updateDynamic("validationError")(validationError.asInstanceOf[js.Any])
-    if (validationErrors != null) __obj.updateDynamic("validationErrors")(validationErrors.asInstanceOf[js.Any])
-    if (validationMessageMode != null) __obj.updateDynamic("validationMessageMode")(validationMessageMode.asInstanceOf[js.Any])
-    if (validationStatus != null) __obj.updateDynamic("validationStatus")(validationStatus.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
-    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
-    if (zoomLevel != null) __obj.updateDynamic("zoomLevel")(zoomLevel.asInstanceOf[js.Any])
     __obj.asInstanceOf[dxCalendarOptions]
   }
+  @scala.inline
+  implicit class dxCalendarOptionsOps[Self <: dxCalendarOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCellTemplateElement(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellTemplate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCellTemplateFunction3(
+      value: (/* itemData */ AnonDate, /* itemIndex */ Double, /* itemElement */ dxElement) => String | Element | JQuery
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellTemplate")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withCellTemplate(
+      value: typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function3[
+          /* itemData */ AnonDate, 
+          /* itemIndex */ Double, 
+          /* itemElement */ dxElement, 
+          String | Element | JQuery
+        ])
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellTemplate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCellTemplate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellTemplate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDateSerializationFormat(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dateSerializationFormat")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDateSerializationFormat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dateSerializationFormat")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisabledDatesFunction1(value: /* data */ AnonView => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disabledDates")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withDisabledDates(value: js.Array[js.Date] | (js.Function1[/* data */ AnonView, Boolean])): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disabledDates")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisabledDates: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disabledDates")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFirstDayOfWeek(value: `0` | `1` | `2` | `3` | `4` | `5` | `6`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("firstDayOfWeek")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFirstDayOfWeek: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("firstDayOfWeek")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMax(value: js.Date | Double | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMax: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxZoomLevel(value: century | decade | month | year): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxZoomLevel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxZoomLevel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxZoomLevel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMin(value: js.Date | Double | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinZoomLevel(value: century | decade | month | year): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minZoomLevel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinZoomLevel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minZoomLevel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowTodayButton(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showTodayButton")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowTodayButton: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showTodayButton")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValueDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withValue(value: js.Date | Double | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withZoomLevel(value: century | decade | month | year): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zoomLevel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutZoomLevel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zoomLevel")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

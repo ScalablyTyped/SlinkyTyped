@@ -10,5 +10,9 @@ trait webkitRTCPeerConnection extends RTCPeerConnection
 
 @JSGlobal("webkitRTCPeerConnection")
 @js.native
-object webkitRTCPeerConnection extends Instantiable1[/* configuration */ RTCConfiguration, webkitRTCPeerConnection]
+object webkitRTCPeerConnection
+  extends Instantiable1[
+      /* configuration */ org.scalajs.dom.experimental.webrtc.RTCConfiguration, 
+      webkitRTCPeerConnection
+    ]
 

@@ -21,7 +21,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.ionicCore.componentsMod.Components.IonInput because var conflicts: autocapitalize, autofocus, spellcheck. Inlined accept, autocomplete, autocorrect, clearInput, clearOnEdit, color, debounce, disabled, getInputElement, inputmode, max, maxlength, min, minlength, mode, multiple, name, pattern, placeholder, readonly, required, setFocus, size, step, `type`, value */ @js.native
 trait HTMLIonInputElement extends HTMLStencilElement {
   /**

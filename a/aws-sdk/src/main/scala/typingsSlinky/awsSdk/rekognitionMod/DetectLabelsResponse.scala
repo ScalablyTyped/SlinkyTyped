@@ -22,16 +22,53 @@ trait DetectLabelsResponse extends js.Object {
 
 object DetectLabelsResponse {
   @scala.inline
-  def apply(
-    LabelModelVersion: String = null,
-    Labels: Labels = null,
-    OrientationCorrection: OrientationCorrection = null
-  ): DetectLabelsResponse = {
+  def apply(): DetectLabelsResponse = {
     val __obj = js.Dynamic.literal()
-    if (LabelModelVersion != null) __obj.updateDynamic("LabelModelVersion")(LabelModelVersion.asInstanceOf[js.Any])
-    if (Labels != null) __obj.updateDynamic("Labels")(Labels.asInstanceOf[js.Any])
-    if (OrientationCorrection != null) __obj.updateDynamic("OrientationCorrection")(OrientationCorrection.asInstanceOf[js.Any])
     __obj.asInstanceOf[DetectLabelsResponse]
   }
+  @scala.inline
+  implicit class DetectLabelsResponseOps[Self <: DetectLabelsResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLabelModelVersion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LabelModelVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabelModelVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LabelModelVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabels(value: Labels): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Labels")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabels: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Labels")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOrientationCorrection(value: OrientationCorrection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OrientationCorrection")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOrientationCorrection: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OrientationCorrection")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

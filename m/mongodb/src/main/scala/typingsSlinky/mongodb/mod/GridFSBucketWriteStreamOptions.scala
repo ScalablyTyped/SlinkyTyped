@@ -1,43 +1,74 @@
 package typingsSlinky.mongodb.mod
 
-import typingsSlinky.mongodb.mongodbStrings.majority
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait GridFSBucketWriteStreamOptions extends WriteConcern {
   /**
     * The chunk size to use, in bytes
     */
-  var chunkSizeBytes: js.UndefOr[scala.Double] = js.undefined
+  var chunkSizeBytes: js.UndefOr[scala.Double] = js.native
   /**
     * Default false; If true, disables adding an md5 field to file data
     */
-  var disableMD5: js.UndefOr[Boolean] = js.undefined
+  var disableMD5: js.UndefOr[Boolean] = js.native
   /**
     * Custom file id for the GridFS file.
     */
-  var id: js.UndefOr[GridFSBucketWriteStreamId] = js.undefined
+  var id: js.UndefOr[GridFSBucketWriteStreamId] = js.native
 }
 
 object GridFSBucketWriteStreamOptions {
   @scala.inline
-  def apply(
-    chunkSizeBytes: Int | scala.Double = null,
-    disableMD5: js.UndefOr[Boolean] = js.undefined,
-    id: GridFSBucketWriteStreamId = null,
-    j: js.UndefOr[Boolean] = js.undefined,
-    w: scala.Double | majority | String = null,
-    wtimeout: Int | scala.Double = null
-  ): GridFSBucketWriteStreamOptions = {
+  def apply(): GridFSBucketWriteStreamOptions = {
     val __obj = js.Dynamic.literal()
-    if (chunkSizeBytes != null) __obj.updateDynamic("chunkSizeBytes")(chunkSizeBytes.asInstanceOf[js.Any])
-    if (!js.isUndefined(disableMD5)) __obj.updateDynamic("disableMD5")(disableMD5.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (!js.isUndefined(j)) __obj.updateDynamic("j")(j.asInstanceOf[js.Any])
-    if (w != null) __obj.updateDynamic("w")(w.asInstanceOf[js.Any])
-    if (wtimeout != null) __obj.updateDynamic("wtimeout")(wtimeout.asInstanceOf[js.Any])
     __obj.asInstanceOf[GridFSBucketWriteStreamOptions]
   }
+  @scala.inline
+  implicit class GridFSBucketWriteStreamOptionsOps[Self <: GridFSBucketWriteStreamOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withChunkSizeBytes(value: scala.Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("chunkSizeBytes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChunkSizeBytes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("chunkSizeBytes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisableMD5(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableMD5")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisableMD5: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableMD5")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: GridFSBucketWriteStreamId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

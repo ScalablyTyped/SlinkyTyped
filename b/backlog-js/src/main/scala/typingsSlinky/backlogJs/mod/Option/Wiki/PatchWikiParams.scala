@@ -4,20 +4,62 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait PatchWikiParams extends js.Object {
-  var content: js.UndefOr[String] = js.undefined
-  var mailNotify: js.UndefOr[Boolean] = js.undefined
-  var name: js.UndefOr[String] = js.undefined
+  var content: js.UndefOr[String] = js.native
+  var mailNotify: js.UndefOr[Boolean] = js.native
+  var name: js.UndefOr[String] = js.native
 }
 
 object PatchWikiParams {
   @scala.inline
-  def apply(content: String = null, mailNotify: js.UndefOr[Boolean] = js.undefined, name: String = null): PatchWikiParams = {
+  def apply(): PatchWikiParams = {
     val __obj = js.Dynamic.literal()
-    if (content != null) __obj.updateDynamic("content")(content.asInstanceOf[js.Any])
-    if (!js.isUndefined(mailNotify)) __obj.updateDynamic("mailNotify")(mailNotify.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
     __obj.asInstanceOf[PatchWikiParams]
   }
+  @scala.inline
+  implicit class PatchWikiParamsOps[Self <: PatchWikiParams] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withContent(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMailNotify(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mailNotify")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMailNotify: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mailNotify")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

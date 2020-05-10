@@ -7,29 +7,71 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait FingerprintOptions extends js.Object {
   /**
     * @description the delimiter to use between bytes for `hex` encoded output
     */
-  var delimiter: js.UndefOr[String] = js.undefined
+  var delimiter: js.UndefOr[String] = js.native
   /**
     * @description if not specified, the function will return `ByteStringBuffer`
     */
-  var encoding: js.UndefOr[hex | binary] = js.undefined
+  var encoding: js.UndefOr[hex | binary] = js.native
   /**
     * @description if not specified defaults to `md.md5`
     */
-  var md: js.UndefOr[MessageDigest] = js.undefined
+  var md: js.UndefOr[MessageDigest] = js.native
 }
 
 object FingerprintOptions {
   @scala.inline
-  def apply(delimiter: String = null, encoding: hex | binary = null, md: MessageDigest = null): FingerprintOptions = {
+  def apply(): FingerprintOptions = {
     val __obj = js.Dynamic.literal()
-    if (delimiter != null) __obj.updateDynamic("delimiter")(delimiter.asInstanceOf[js.Any])
-    if (encoding != null) __obj.updateDynamic("encoding")(encoding.asInstanceOf[js.Any])
-    if (md != null) __obj.updateDynamic("md")(md.asInstanceOf[js.Any])
     __obj.asInstanceOf[FingerprintOptions]
   }
+  @scala.inline
+  implicit class FingerprintOptionsOps[Self <: FingerprintOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDelimiter(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("delimiter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDelimiter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("delimiter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEncoding(value: hex | binary): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encoding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEncoding: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encoding")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMd(value: MessageDigest): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("md")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMd: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("md")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -14,14 +14,12 @@ trait uPartsPer extends js.Object
 
 object uPartsPer {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def ppb: typingsSlinky.convertUnits.convertUnitsStrings.ppb = "ppb".asInstanceOf[typingsSlinky.convertUnits.convertUnitsStrings.ppb]
   @scala.inline
-  def ppb: typingsSlinky.convertUnits.convertUnitsStrings.ppb = this.cast("ppb")
+  def ppm: typingsSlinky.convertUnits.convertUnitsStrings.ppm = "ppm".asInstanceOf[typingsSlinky.convertUnits.convertUnitsStrings.ppm]
   @scala.inline
-  def ppm: typingsSlinky.convertUnits.convertUnitsStrings.ppm = this.cast("ppm")
+  def ppq: typingsSlinky.convertUnits.convertUnitsStrings.ppq = "ppq".asInstanceOf[typingsSlinky.convertUnits.convertUnitsStrings.ppq]
   @scala.inline
-  def ppq: typingsSlinky.convertUnits.convertUnitsStrings.ppq = this.cast("ppq")
-  @scala.inline
-  def ppt: typingsSlinky.convertUnits.convertUnitsStrings.ppt = this.cast("ppt")
+  def ppt: typingsSlinky.convertUnits.convertUnitsStrings.ppt = "ppt".asInstanceOf[typingsSlinky.convertUnits.convertUnitsStrings.ppt]
 }
 

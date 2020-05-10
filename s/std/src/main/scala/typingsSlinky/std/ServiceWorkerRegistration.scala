@@ -46,7 +46,7 @@ trait ServiceWorkerRegistration extends EventTarget {
   def removeEventListener_updatefound(
     `type`: updatefound,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   def showNotification(title: java.lang.String): js.Promise[Unit] = js.native
   def showNotification(title: java.lang.String, options: org.scalajs.dom.experimental.NotificationOptions): js.Promise[Unit] = js.native
@@ -56,5 +56,6 @@ trait ServiceWorkerRegistration extends EventTarget {
 
 @JSGlobal("ServiceWorkerRegistration")
 @js.native
-object ServiceWorkerRegistration extends Instantiable0[ServiceWorkerRegistration]
+object ServiceWorkerRegistration
+  extends Instantiable0[org.scalajs.dom.experimental.serviceworkers.ServiceWorkerRegistration]
 

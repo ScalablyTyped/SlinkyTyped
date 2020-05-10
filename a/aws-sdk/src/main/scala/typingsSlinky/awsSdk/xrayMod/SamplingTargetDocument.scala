@@ -30,20 +30,77 @@ trait SamplingTargetDocument extends js.Object {
 
 object SamplingTargetDocument {
   @scala.inline
-  def apply(
-    FixedRate: Int | scala.Double = null,
-    Interval: Int | scala.Double = null,
-    ReservoirQuota: Int | scala.Double = null,
-    ReservoirQuotaTTL: js.Date = null,
-    RuleName: String = null
-  ): SamplingTargetDocument = {
+  def apply(): SamplingTargetDocument = {
     val __obj = js.Dynamic.literal()
-    if (FixedRate != null) __obj.updateDynamic("FixedRate")(FixedRate.asInstanceOf[js.Any])
-    if (Interval != null) __obj.updateDynamic("Interval")(Interval.asInstanceOf[js.Any])
-    if (ReservoirQuota != null) __obj.updateDynamic("ReservoirQuota")(ReservoirQuota.asInstanceOf[js.Any])
-    if (ReservoirQuotaTTL != null) __obj.updateDynamic("ReservoirQuotaTTL")(ReservoirQuotaTTL.asInstanceOf[js.Any])
-    if (RuleName != null) __obj.updateDynamic("RuleName")(RuleName.asInstanceOf[js.Any])
     __obj.asInstanceOf[SamplingTargetDocument]
   }
+  @scala.inline
+  implicit class SamplingTargetDocumentOps[Self <: SamplingTargetDocument] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFixedRate(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FixedRate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFixedRate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FixedRate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInterval(value: NullableInteger): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Interval")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInterval: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Interval")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReservoirQuota(value: NullableInteger): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReservoirQuota")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReservoirQuota: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReservoirQuota")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReservoirQuotaTTL(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReservoirQuotaTTL")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReservoirQuotaTTL: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReservoirQuotaTTL")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRuleName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RuleName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRuleName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RuleName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

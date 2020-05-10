@@ -1,9 +1,7 @@
 package typingsSlinky.fluentReact.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.fluent.mod.FluentBundle
 import typingsSlinky.fluentReact.mod.LocalizationProviderProps
 import typingsSlinky.fluentReact.mod.Node
@@ -12,23 +10,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object LocalizationProvider
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.fluentReact.mod.LocalizationProvider] {
+object LocalizationProvider {
   @JSImport("fluent-react", "LocalizationProvider")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    bundles: IterableIterator[FluentBundle],
-    parseMarkup: /* str */ String => js.Array[Node] = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.fluentReact.mod.LocalizationProvider] = {
-    val __obj = js.Dynamic.literal(bundles = bundles.asInstanceOf[js.Any])
-    if (parseMarkup != null) __obj.updateDynamic("parseMarkup")(js.Any.fromFunction1(parseMarkup))
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.fluentReact.mod.LocalizationProvider] {
+    @scala.inline
+    def parseMarkup(value: /* str */ String => js.Array[Node]): this.type = set("parseMarkup", js.Any.fromFunction1(value))
   }
-  type Props = LocalizationProviderProps
+  
+  def withProps(p: LocalizationProviderProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(bundles: IterableIterator[FluentBundle]): Builder = {
+    val __props = js.Dynamic.literal(bundles = bundles.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[LocalizationProviderProps]))
+  }
 }
 

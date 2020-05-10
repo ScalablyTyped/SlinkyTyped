@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait CloseConnectionOptions extends js.Object {
   /**
     * If drop is false, then the connection is returned to the pool for reuse.
@@ -12,15 +13,28 @@ trait CloseConnectionOptions extends js.Object {
     *
     * @default false
     */
-  var drop: Boolean
+  var drop: Boolean = js.native
 }
 
 object CloseConnectionOptions {
   @scala.inline
   def apply(drop: Boolean): CloseConnectionOptions = {
     val __obj = js.Dynamic.literal(drop = drop.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[CloseConnectionOptions]
   }
+  @scala.inline
+  implicit class CloseConnectionOptionsOps[Self <: CloseConnectionOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDrop(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("drop")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

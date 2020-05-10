@@ -8,7 +8,6 @@ import typingsSlinky.sharp.AnonData
 import typingsSlinky.sharp.AnonRaw
 import typingsSlinky.sharp.AnonResolveWithObject
 import typingsSlinky.std.ArrayLike
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -177,17 +176,6 @@ trait Sharp extends Duplex {
     */
   def jpeg(): Sharp = js.native
   def jpeg(options: JpegOptions): Sharp = js.native
-  def limitInputPixels(limit: Boolean): Sharp = js.native
-  /**
-    * Do not process input images where the number of pixels (width _ height) exceeds this limit.
-    * Assumes image dimensions contained in the input metadata can be trusted.
-    * The default limit is 268402689 (0x3FFF _ 0x3FFF) pixels.
-    * @param limit An integral Number of pixels, zero or false to remove limit, true to use default limit.
-    * @throws {Error} Invalid limit
-    * @returns A sharp instance that can be used to chain operations
-    * @deprecated since version 0.24.0 - moved to @see sharp.SharpOptions
-    */
-  def limitInputPixels(limit: Double): Sharp = js.native
   /**
     * Apply the linear formula a * input + b to the image (levels adjustment)
     * @param a multiplier (optional, default 1.0)
@@ -347,16 +335,6 @@ trait Sharp extends Duplex {
   def rotate(angle: Double): Sharp = js.native
   def rotate(angle: Double, options: RotateOptions): Sharp = js.native
   /**
-    * An advanced setting that switches the libvips access method to VIPS_ACCESS_SEQUENTIAL.
-    * This will reduce memory usage and can improve performance on some systems.
-    * The default behaviour before function call is false, meaning the libvips access method is not sequential.
-    * @param sequentialRead true to enable and false to disable (defaults to true)
-    * @returns A sharp instance that can be used to chain operations
-    * @deprecated since version 0.24.0 - moved to @see sharp.SharpOptions
-    */
-  def sequentialRead(): Sharp = js.native
-  def sequentialRead(sequentialRead: Boolean): Sharp = js.native
-  /**
     * Sharpen the image.
     * When used without parameters, performs a fast, mild sharpen of the output image.
     * When a sigma is provided, performs a slower, more accurate sharpen of the L channel in the LAB colour space.
@@ -434,7 +412,7 @@ trait Sharp extends Duplex {
     * @param callback Callback function called on completion with three arguments (err, buffer, info).
     * @returns A sharp instance that can be used to chain operations
     */
-  def toBuffer(callback: js.Function3[/* err */ Error, /* buffer */ Buffer, /* info */ OutputInfo, Unit]): Sharp = js.native
+  def toBuffer(callback: js.Function3[/* err */ js.Error, /* buffer */ Buffer, /* info */ OutputInfo, Unit]): Sharp = js.native
   /**
     * Write output to a Buffer. JPEG, PNG, WebP, TIFF and RAW output are supported.
     * By default, the format will match the input image, except GIF and SVG input which become PNG output.

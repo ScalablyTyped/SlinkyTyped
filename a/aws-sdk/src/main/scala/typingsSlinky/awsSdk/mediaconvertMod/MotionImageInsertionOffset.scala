@@ -18,11 +18,41 @@ trait MotionImageInsertionOffset extends js.Object {
 
 object MotionImageInsertionOffset {
   @scala.inline
-  def apply(ImageX: Int | Double = null, ImageY: Int | Double = null): MotionImageInsertionOffset = {
+  def apply(): MotionImageInsertionOffset = {
     val __obj = js.Dynamic.literal()
-    if (ImageX != null) __obj.updateDynamic("ImageX")(ImageX.asInstanceOf[js.Any])
-    if (ImageY != null) __obj.updateDynamic("ImageY")(ImageY.asInstanceOf[js.Any])
     __obj.asInstanceOf[MotionImageInsertionOffset]
   }
+  @scala.inline
+  implicit class MotionImageInsertionOffsetOps[Self <: MotionImageInsertionOffset] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withImageX(value: integerMin0Max2147483647): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ImageX")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImageX: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ImageX")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withImageY(value: integerMin0Max2147483647): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ImageY")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImageY: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ImageY")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

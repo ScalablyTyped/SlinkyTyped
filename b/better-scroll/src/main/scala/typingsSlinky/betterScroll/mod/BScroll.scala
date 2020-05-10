@@ -1,5 +1,6 @@
 package typingsSlinky.betterScroll.mod
 
+import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.betterScroll.betterScrollStrings.beforeScrollStart
 import typingsSlinky.betterScroll.betterScrollStrings.destroy
 import typingsSlinky.betterScroll.betterScrollStrings.flick
@@ -11,7 +12,6 @@ import typingsSlinky.betterScroll.betterScrollStrings.scrollCancel
 import typingsSlinky.betterScroll.betterScrollStrings.scrollEnd
 import typingsSlinky.betterScroll.betterScrollStrings.scrollStart
 import typingsSlinky.betterScroll.betterScrollStrings.touchEnd
-import typingsSlinky.std.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

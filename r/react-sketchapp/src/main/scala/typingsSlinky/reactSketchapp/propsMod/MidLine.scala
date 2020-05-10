@@ -12,10 +12,8 @@ trait MidLine extends js.Object
 
 object MidLine {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def sharp: typingsSlinky.reactSketchapp.reactSketchappStrings.sharp = "sharp".asInstanceOf[typingsSlinky.reactSketchapp.reactSketchappStrings.sharp]
   @scala.inline
-  def sharp: typingsSlinky.reactSketchapp.reactSketchappStrings.sharp = this.cast("sharp")
-  @scala.inline
-  def smooth: typingsSlinky.reactSketchapp.reactSketchappStrings.smooth = this.cast("smooth")
+  def smooth: typingsSlinky.reactSketchapp.reactSketchappStrings.smooth = "smooth".asInstanceOf[typingsSlinky.reactSketchapp.reactSketchappStrings.smooth]
 }
 

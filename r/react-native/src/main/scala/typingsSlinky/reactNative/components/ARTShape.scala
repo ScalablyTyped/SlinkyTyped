@@ -1,15 +1,21 @@
 package typingsSlinky.reactNative.components
 
 import typingsSlinky.reactNative.mod.ART.ShapeCls
+import typingsSlinky.reactNative.mod.ARTShapeProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ARTShape extends SharedApply_ARTShapeProps349477016[ShapeCls] {
+object ARTShape {
   @JSImport("react-native", "ART.Shape")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: ARTShapeProps): SharedBuilder_ARTShapeProps1152261087[ShapeCls] = new SharedBuilder_ARTShapeProps1152261087[ShapeCls](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(d: String): SharedBuilder_ARTShapeProps1152261087[ShapeCls] = {
+    val __props = js.Dynamic.literal(d = d.asInstanceOf[js.Any])
+    new SharedBuilder_ARTShapeProps1152261087[ShapeCls](js.Array(this.component, __props.asInstanceOf[ARTShapeProps]))
+  }
 }
 

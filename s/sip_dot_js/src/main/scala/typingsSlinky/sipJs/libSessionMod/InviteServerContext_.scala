@@ -15,7 +15,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.events.mod.EventEmitter because Already inherited
 - typingsSlinky.sipJs.serverContextMod.ServerContext because Inheritance from two classes. Inlined incomingRequest, request, transaction, progress, progress, accept, accept, reject, reject, reply, reply, onRequestTimeout, onTransportError */ @JSImport("sip.js/lib/Session", "InviteServerContext")
 @js.native

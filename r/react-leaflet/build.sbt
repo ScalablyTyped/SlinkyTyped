@@ -1,19 +1,19 @@
 organization := "org.scalablytyped.slinky"
 name := "react-leaflet"
-version := "2.5-dt-20200225Z-c45ab7"
+version := "2.5-dt-20200303Z-e08cf8"
 scalaVersion := "2.13.1"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
-  "me.shadaj" %%% "slinky-web" % "0.6.4",
-  "org.scalablytyped.slinky" %%% "csstype" % "2.6.6-89abae",
-  "org.scalablytyped.slinky" %%% "geojson" % "7946.0-dt-20190925Z-b49dde",
-  "org.scalablytyped.slinky" %%% "leaflet" % "1.5-dt-20200227Z-15697c",
-  "org.scalablytyped.slinky" %%% "prop-types" % "15.7-dt-20190924Z-6bb503",
-  "org.scalablytyped.slinky" %%% "react" % "16.9-dt-20200227Z-f18fda",
-  "org.scalablytyped.slinky" %%% "std" % "3.8-16327f")
+  "me.shadaj" %%% "slinky-web" % "0.6.5",
+  "org.scalablytyped.slinky" %%% "csstype" % "2.6.6-fa3762",
+  "org.scalablytyped.slinky" %%% "geojson" % "7946.0-dt-20190925Z-e99f8f",
+  "org.scalablytyped.slinky" %%% "leaflet" % "1.5-dt-20200320Z-73706d",
+  "org.scalablytyped.slinky" %%% "prop-types" % "15.7-dt-20190924Z-24495c",
+  "org.scalablytyped.slinky" %%% "react" % "16.9-dt-20200409Z-47fb9f",
+  "org.scalablytyped.slinky" %%% "std" % "3.8-8ac92e")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-g:notailcalls", "-P:scalajs:sjsDefinedByDefault")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
-bintrayRepository := "SlinkyTyped"
-resolvers += Resolver.bintrayRepo("oyvindberg", "SlinkyTyped")
+bintrayRepository := "ScalablyTyped"
+resolvers += Resolver.bintrayRepo("oyvindberg", "ScalablyTyped")

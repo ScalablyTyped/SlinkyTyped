@@ -1,29 +1,21 @@
 package typingsSlinky.firebaseFirestore.coreTypesMod
 
-import org.scalablytyped.runtime.TopLevel
+import typingsSlinky.firebaseFirestore.firebaseFirestoreNumbers.`0`
+import typingsSlinky.firebaseFirestore.firebaseFirestoreNumbers.`1`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
-sealed trait OnlineStateSource extends js.Object
+/* Rewritten from type alias, can be one of: 
+  - typingsSlinky.firebaseFirestore.firebaseFirestoreNumbers.`0`
+  - typingsSlinky.firebaseFirestore.firebaseFirestoreNumbers.`1`
+*/
+trait OnlineStateSource extends js.Object
 
-@JSImport("@firebase/firestore/dist/src/core/types", "OnlineStateSource")
-@js.native
-object OnlineStateSource extends js.Object {
-  @js.native
-  sealed trait RemoteStore extends OnlineStateSource
-  
-  @js.native
-  sealed trait SharedClientState extends OnlineStateSource
-  
-  @JSBracketAccess
-  def apply(value: Double): js.UndefOr[OnlineStateSource with Double] = js.native
-  /* 0 */ @js.native
-  object RemoteStore extends TopLevel[RemoteStore with Double]
-  
-  /* 1 */ @js.native
-  object SharedClientState extends TopLevel[SharedClientState with Double]
-  
+object OnlineStateSource {
+  @scala.inline
+  def RemoteStore: `0` = 0.asInstanceOf[`0`]
+  @scala.inline
+  def SharedClientState: `1` = 1.asInstanceOf[`1`]
 }
 

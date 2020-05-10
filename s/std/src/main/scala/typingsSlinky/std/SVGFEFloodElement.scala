@@ -44,11 +44,12 @@ trait SVGFEFloodElement
   override def removeEventListener(
     `type`: java.lang.String,
     callback: EventListenerOrEventListenerObject,
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
 }
 
 @JSGlobal("SVGFEFloodElement")
 @js.native
-object SVGFEFloodElement extends Instantiable0[SVGFEFloodElement]
+object SVGFEFloodElement
+  extends Instantiable0[org.scalajs.dom.raw.SVGFEFloodElement]
 

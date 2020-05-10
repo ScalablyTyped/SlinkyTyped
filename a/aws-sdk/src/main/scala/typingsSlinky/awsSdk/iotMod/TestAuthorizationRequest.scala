@@ -34,21 +34,83 @@ trait TestAuthorizationRequest extends js.Object {
 
 object TestAuthorizationRequest {
   @scala.inline
-  def apply(
-    authInfos: AuthInfos,
-    clientId: ClientId = null,
-    cognitoIdentityPoolId: CognitoIdentityPoolId = null,
-    policyNamesToAdd: PolicyNames = null,
-    policyNamesToSkip: PolicyNames = null,
-    principal: Principal = null
-  ): TestAuthorizationRequest = {
+  def apply(authInfos: AuthInfos): TestAuthorizationRequest = {
     val __obj = js.Dynamic.literal(authInfos = authInfos.asInstanceOf[js.Any])
-    if (clientId != null) __obj.updateDynamic("clientId")(clientId.asInstanceOf[js.Any])
-    if (cognitoIdentityPoolId != null) __obj.updateDynamic("cognitoIdentityPoolId")(cognitoIdentityPoolId.asInstanceOf[js.Any])
-    if (policyNamesToAdd != null) __obj.updateDynamic("policyNamesToAdd")(policyNamesToAdd.asInstanceOf[js.Any])
-    if (policyNamesToSkip != null) __obj.updateDynamic("policyNamesToSkip")(policyNamesToSkip.asInstanceOf[js.Any])
-    if (principal != null) __obj.updateDynamic("principal")(principal.asInstanceOf[js.Any])
     __obj.asInstanceOf[TestAuthorizationRequest]
   }
+  @scala.inline
+  implicit class TestAuthorizationRequestOps[Self <: TestAuthorizationRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAuthInfos(value: AuthInfos): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("authInfos")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withClientId(value: ClientId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clientId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClientId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clientId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCognitoIdentityPoolId(value: CognitoIdentityPoolId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cognitoIdentityPoolId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCognitoIdentityPoolId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cognitoIdentityPoolId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPolicyNamesToAdd(value: PolicyNames): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("policyNamesToAdd")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPolicyNamesToAdd: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("policyNamesToAdd")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPolicyNamesToSkip(value: PolicyNames): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("policyNamesToSkip")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPolicyNamesToSkip: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("policyNamesToSkip")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrincipal(value: Principal): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("principal")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrincipal: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("principal")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

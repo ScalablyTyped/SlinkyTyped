@@ -2,7 +2,6 @@ package typingsSlinky.ckeditorCkeditor5Engine.mod.model
 
 import typingsSlinky.ckeditorCkeditor5Engine.AnonDirection
 import typingsSlinky.ckeditorCkeditor5Engine.AnonDoNotResetEntireContent
-import typingsSlinky.std.Iterable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,14 +22,14 @@ object utils extends js.Object {
   def insertContent(model: Model, content: DocumentFragment, selectable: Position): Unit = js.native
   def insertContent(model: Model, content: DocumentFragment, selectable: Range): Unit = js.native
   def insertContent(model: Model, content: DocumentFragment, selectable: Selection): Unit = js.native
-  def insertContent(model: Model, content: DocumentFragment, selectable: Iterable[Range]): Unit = js.native
+  def insertContent(model: Model, content: DocumentFragment, selectable: js.Iterable[Range]): Unit = js.native
   def insertContent(model: Model, content: Item): Unit = js.native
   def insertContent(model: Model, content: Item, selectable: DocumentSelection): Unit = js.native
   def insertContent(model: Model, content: Item, selectable: Element): Unit = js.native
   def insertContent(model: Model, content: Item, selectable: Position): Unit = js.native
   def insertContent(model: Model, content: Item, selectable: Range): Unit = js.native
   def insertContent(model: Model, content: Item, selectable: Selection): Unit = js.native
-  def insertContent(model: Model, content: Item, selectable: Iterable[Range]): Unit = js.native
+  def insertContent(model: Model, content: Item, selectable: js.Iterable[Range]): Unit = js.native
   def modifySelection(model: Model, selection: DocumentSelection): Unit = js.native
   def modifySelection(model: Model, selection: DocumentSelection, options: AnonDirection): Unit = js.native
   def modifySelection(model: Model, selection: Selection): Unit = js.native

@@ -5,13 +5,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait RecursiveArray[T /* <: js.Any */] extends /* index */ NumberDictionary[T | RecursiveArray[T]]
 
 object RecursiveArray {
   @scala.inline
-  def apply[T /* <: js.Any */](NumberDictionary: /* index */ NumberDictionary[T | RecursiveArray[T]] = null): RecursiveArray[T] = {
+  def apply[T](): RecursiveArray[T] = {
     val __obj = js.Dynamic.literal()
-    if (NumberDictionary != null) js.Dynamic.global.Object.assign(__obj, NumberDictionary)
     __obj.asInstanceOf[RecursiveArray[T]]
   }
 }

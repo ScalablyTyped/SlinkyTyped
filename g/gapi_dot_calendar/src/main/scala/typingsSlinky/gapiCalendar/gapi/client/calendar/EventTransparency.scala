@@ -13,10 +13,8 @@ trait EventTransparency extends js.Object
 
 object EventTransparency {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def opaque: typingsSlinky.gapiCalendar.gapiCalendarStrings.opaque = "opaque".asInstanceOf[typingsSlinky.gapiCalendar.gapiCalendarStrings.opaque]
   @scala.inline
-  def opaque: typingsSlinky.gapiCalendar.gapiCalendarStrings.opaque = this.cast("opaque")
-  @scala.inline
-  def transparent: typingsSlinky.gapiCalendar.gapiCalendarStrings.transparent = this.cast("transparent")
+  def transparent: typingsSlinky.gapiCalendar.gapiCalendarStrings.transparent = "transparent".asInstanceOf[typingsSlinky.gapiCalendar.gapiCalendarStrings.transparent]
 }
 

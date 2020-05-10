@@ -33,16 +33,53 @@ trait SchemaGooglePrivacyDlpV2HotwordRule extends js.Object {
 
 object SchemaGooglePrivacyDlpV2HotwordRule {
   @scala.inline
-  def apply(
-    hotwordRegex: SchemaGooglePrivacyDlpV2Regex = null,
-    likelihoodAdjustment: SchemaGooglePrivacyDlpV2LikelihoodAdjustment = null,
-    proximity: SchemaGooglePrivacyDlpV2Proximity = null
-  ): SchemaGooglePrivacyDlpV2HotwordRule = {
+  def apply(): SchemaGooglePrivacyDlpV2HotwordRule = {
     val __obj = js.Dynamic.literal()
-    if (hotwordRegex != null) __obj.updateDynamic("hotwordRegex")(hotwordRegex.asInstanceOf[js.Any])
-    if (likelihoodAdjustment != null) __obj.updateDynamic("likelihoodAdjustment")(likelihoodAdjustment.asInstanceOf[js.Any])
-    if (proximity != null) __obj.updateDynamic("proximity")(proximity.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGooglePrivacyDlpV2HotwordRule]
   }
+  @scala.inline
+  implicit class SchemaGooglePrivacyDlpV2HotwordRuleOps[Self <: SchemaGooglePrivacyDlpV2HotwordRule] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHotwordRegex(value: SchemaGooglePrivacyDlpV2Regex): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hotwordRegex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHotwordRegex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hotwordRegex")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLikelihoodAdjustment(value: SchemaGooglePrivacyDlpV2LikelihoodAdjustment): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("likelihoodAdjustment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLikelihoodAdjustment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("likelihoodAdjustment")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProximity(value: SchemaGooglePrivacyDlpV2Proximity): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("proximity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProximity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("proximity")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

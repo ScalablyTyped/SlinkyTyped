@@ -22,10 +22,29 @@ trait SchemaFileReference extends js.Object {
 
 object SchemaFileReference {
   @scala.inline
-  def apply(fileUri: String = null): SchemaFileReference = {
+  def apply(): SchemaFileReference = {
     val __obj = js.Dynamic.literal()
-    if (fileUri != null) __obj.updateDynamic("fileUri")(fileUri.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaFileReference]
   }
+  @scala.inline
+  implicit class SchemaFileReferenceOps[Self <: SchemaFileReference] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFileUri(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fileUri")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFileUri: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fileUri")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

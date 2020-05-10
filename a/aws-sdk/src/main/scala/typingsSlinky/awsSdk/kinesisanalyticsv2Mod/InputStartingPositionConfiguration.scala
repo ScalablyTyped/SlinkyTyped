@@ -14,10 +14,29 @@ trait InputStartingPositionConfiguration extends js.Object {
 
 object InputStartingPositionConfiguration {
   @scala.inline
-  def apply(InputStartingPosition: InputStartingPosition = null): InputStartingPositionConfiguration = {
+  def apply(): InputStartingPositionConfiguration = {
     val __obj = js.Dynamic.literal()
-    if (InputStartingPosition != null) __obj.updateDynamic("InputStartingPosition")(InputStartingPosition.asInstanceOf[js.Any])
     __obj.asInstanceOf[InputStartingPositionConfiguration]
   }
+  @scala.inline
+  implicit class InputStartingPositionConfigurationOps[Self <: InputStartingPositionConfiguration] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withInputStartingPosition(value: InputStartingPosition): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InputStartingPosition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInputStartingPosition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InputStartingPosition")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

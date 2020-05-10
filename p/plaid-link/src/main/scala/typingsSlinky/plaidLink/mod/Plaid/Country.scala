@@ -13,12 +13,10 @@ trait Country extends js.Object
 
 object Country {
   @scala.inline
-  def CA: typingsSlinky.plaidLink.plaidLinkStrings.CA = this.cast("CA")
+  def CA: typingsSlinky.plaidLink.plaidLinkStrings.CA = "CA".asInstanceOf[typingsSlinky.plaidLink.plaidLinkStrings.CA]
   @scala.inline
-  def GB: typingsSlinky.plaidLink.plaidLinkStrings.GB = this.cast("GB")
+  def GB: typingsSlinky.plaidLink.plaidLinkStrings.GB = "GB".asInstanceOf[typingsSlinky.plaidLink.plaidLinkStrings.GB]
   @scala.inline
-  def US: typingsSlinky.plaidLink.plaidLinkStrings.US = this.cast("US")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def US: typingsSlinky.plaidLink.plaidLinkStrings.US = "US".asInstanceOf[typingsSlinky.plaidLink.plaidLinkStrings.US]
 }
 

@@ -26,32 +26,30 @@ trait CharacteristicProperties extends js.Object
 
 object CharacteristicProperties {
   @scala.inline
-  def authenticatedSignedWrites: typingsSlinky.chromeApps.chromeAppsStrings.authenticatedSignedWrites = this.cast("authenticatedSignedWrites")
+  def authenticatedSignedWrites: typingsSlinky.chromeApps.chromeAppsStrings.authenticatedSignedWrites = "authenticatedSignedWrites".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.authenticatedSignedWrites]
   @scala.inline
-  def broadcast: typingsSlinky.chromeApps.chromeAppsStrings.broadcast = this.cast("broadcast")
+  def broadcast: typingsSlinky.chromeApps.chromeAppsStrings.broadcast = "broadcast".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.broadcast]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def encryptAuthenticatedRead: typingsSlinky.chromeApps.chromeAppsStrings.encryptAuthenticatedRead = "encryptAuthenticatedRead".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.encryptAuthenticatedRead]
   @scala.inline
-  def encryptAuthenticatedRead: typingsSlinky.chromeApps.chromeAppsStrings.encryptAuthenticatedRead = this.cast("encryptAuthenticatedRead")
+  def encryptAuthenticatedWrite: typingsSlinky.chromeApps.chromeAppsStrings.encryptAuthenticatedWrite = "encryptAuthenticatedWrite".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.encryptAuthenticatedWrite]
   @scala.inline
-  def encryptAuthenticatedWrite: typingsSlinky.chromeApps.chromeAppsStrings.encryptAuthenticatedWrite = this.cast("encryptAuthenticatedWrite")
+  def encryptRead: typingsSlinky.chromeApps.chromeAppsStrings.encryptRead = "encryptRead".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.encryptRead]
   @scala.inline
-  def encryptRead: typingsSlinky.chromeApps.chromeAppsStrings.encryptRead = this.cast("encryptRead")
+  def encryptWrite: typingsSlinky.chromeApps.chromeAppsStrings.encryptWrite = "encryptWrite".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.encryptWrite]
   @scala.inline
-  def encryptWrite: typingsSlinky.chromeApps.chromeAppsStrings.encryptWrite = this.cast("encryptWrite")
+  def extendedProperties: typingsSlinky.chromeApps.chromeAppsStrings.extendedProperties = "extendedProperties".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.extendedProperties]
   @scala.inline
-  def extendedProperties: typingsSlinky.chromeApps.chromeAppsStrings.extendedProperties = this.cast("extendedProperties")
+  def indicate: typingsSlinky.chromeApps.chromeAppsStrings.indicate = "indicate".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.indicate]
   @scala.inline
-  def indicate: typingsSlinky.chromeApps.chromeAppsStrings.indicate = this.cast("indicate")
+  def read: read_ = "read".asInstanceOf[read_]
   @scala.inline
-  def read: read_ = this.cast("read")
+  def reliableWrite: typingsSlinky.chromeApps.chromeAppsStrings.reliableWrite = "reliableWrite".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.reliableWrite]
   @scala.inline
-  def reliableWrite: typingsSlinky.chromeApps.chromeAppsStrings.reliableWrite = this.cast("reliableWrite")
+  def writableAuxiliaries: typingsSlinky.chromeApps.chromeAppsStrings.writableAuxiliaries = "writableAuxiliaries".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.writableAuxiliaries]
   @scala.inline
-  def writableAuxiliaries: typingsSlinky.chromeApps.chromeAppsStrings.writableAuxiliaries = this.cast("writableAuxiliaries")
+  def write: write_ = "write".asInstanceOf[write_]
   @scala.inline
-  def write: write_ = this.cast("write")
-  @scala.inline
-  def writeWithoutResponse: typingsSlinky.chromeApps.chromeAppsStrings.writeWithoutResponse = this.cast("writeWithoutResponse")
+  def writeWithoutResponse: typingsSlinky.chromeApps.chromeAppsStrings.writeWithoutResponse = "writeWithoutResponse".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.writeWithoutResponse]
 }
 

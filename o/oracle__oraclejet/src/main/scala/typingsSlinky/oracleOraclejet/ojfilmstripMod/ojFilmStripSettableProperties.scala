@@ -17,15 +17,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ojFilmStripSettableProperties extends baseComponentSettableProperties {
-  var arrowPlacement: adjacent | overlay
-  var arrowVisibility: visible | hidden | hover | auto
-  var currentItem: AnonId
-  var looping: off | page
-  var maxItemsPerPage: Double
-  var orientation: horizontal | vertical
+  var arrowPlacement: adjacent | overlay = js.native
+  var arrowVisibility: visible | hidden | hover | auto = js.native
+  var currentItem: AnonId = js.native
+  var looping: off | page = js.native
+  var maxItemsPerPage: Double = js.native
+  var orientation: horizontal | vertical = js.native
   @JSName("translations")
-  var translations_ojFilmStripSettableProperties: AnonLabelAccArrowNextPage
+  var translations_ojFilmStripSettableProperties: AnonLabelAccArrowNextPage = js.native
 }
 
 object ojFilmStripSettableProperties {
@@ -40,8 +41,57 @@ object ojFilmStripSettableProperties {
     translations: AnonLabelAccArrowNextPage
   ): ojFilmStripSettableProperties = {
     val __obj = js.Dynamic.literal(arrowPlacement = arrowPlacement.asInstanceOf[js.Any], arrowVisibility = arrowVisibility.asInstanceOf[js.Any], currentItem = currentItem.asInstanceOf[js.Any], looping = looping.asInstanceOf[js.Any], maxItemsPerPage = maxItemsPerPage.asInstanceOf[js.Any], orientation = orientation.asInstanceOf[js.Any], translations = translations.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[ojFilmStripSettableProperties]
   }
+  @scala.inline
+  implicit class ojFilmStripSettablePropertiesOps[Self <: ojFilmStripSettableProperties] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withArrowPlacement(value: adjacent | overlay): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arrowPlacement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withArrowVisibility(value: visible | hidden | hover | auto): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arrowVisibility")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCurrentItem(value: AnonId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currentItem")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLooping(value: off | page): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("looping")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMaxItemsPerPage(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxItemsPerPage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOrientation(value: horizontal | vertical): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("orientation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTranslations(value: AnonLabelAccArrowNextPage): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("translations")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

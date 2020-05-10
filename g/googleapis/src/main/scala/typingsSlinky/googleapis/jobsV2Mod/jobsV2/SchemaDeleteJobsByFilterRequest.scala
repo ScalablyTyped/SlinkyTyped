@@ -25,11 +25,41 @@ trait SchemaDeleteJobsByFilterRequest extends js.Object {
 
 object SchemaDeleteJobsByFilterRequest {
   @scala.inline
-  def apply(disableFastProcess: js.UndefOr[Boolean] = js.undefined, filter: SchemaFilter = null): SchemaDeleteJobsByFilterRequest = {
+  def apply(): SchemaDeleteJobsByFilterRequest = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(disableFastProcess)) __obj.updateDynamic("disableFastProcess")(disableFastProcess.asInstanceOf[js.Any])
-    if (filter != null) __obj.updateDynamic("filter")(filter.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDeleteJobsByFilterRequest]
   }
+  @scala.inline
+  implicit class SchemaDeleteJobsByFilterRequestOps[Self <: SchemaDeleteJobsByFilterRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDisableFastProcess(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableFastProcess")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisableFastProcess: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableFastProcess")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFilter(value: SchemaFilter): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFilter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

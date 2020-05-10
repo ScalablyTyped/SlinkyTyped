@@ -30,18 +30,65 @@ trait BuildConfiguration extends js.Object {
 
 object BuildConfiguration {
   @scala.inline
-  def apply(
-    CodeBuildServiceRole: NonEmptyString,
-    Image: NonEmptyString,
-    ArtifactName: String = null,
-    ComputeType: ComputeType = null,
-    TimeoutInMinutes: Int | Double = null
-  ): BuildConfiguration = {
+  def apply(CodeBuildServiceRole: NonEmptyString, Image: NonEmptyString): BuildConfiguration = {
     val __obj = js.Dynamic.literal(CodeBuildServiceRole = CodeBuildServiceRole.asInstanceOf[js.Any], Image = Image.asInstanceOf[js.Any])
-    if (ArtifactName != null) __obj.updateDynamic("ArtifactName")(ArtifactName.asInstanceOf[js.Any])
-    if (ComputeType != null) __obj.updateDynamic("ComputeType")(ComputeType.asInstanceOf[js.Any])
-    if (TimeoutInMinutes != null) __obj.updateDynamic("TimeoutInMinutes")(TimeoutInMinutes.asInstanceOf[js.Any])
     __obj.asInstanceOf[BuildConfiguration]
   }
+  @scala.inline
+  implicit class BuildConfigurationOps[Self <: BuildConfiguration] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCodeBuildServiceRole(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CodeBuildServiceRole")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withImage(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Image")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withArtifactName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ArtifactName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutArtifactName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ArtifactName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withComputeType(value: ComputeType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ComputeType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutComputeType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ComputeType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimeoutInMinutes(value: BoxedInt): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TimeoutInMinutes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimeoutInMinutes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TimeoutInMinutes")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

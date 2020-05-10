@@ -15,16 +15,14 @@ trait GridItemsAlignment extends js.Object
 
 object GridItemsAlignment {
   @scala.inline
-  def baseline: typingsSlinky.materialUiCore.materialUiCoreStrings.baseline = this.cast("baseline")
+  def baseline: typingsSlinky.materialUiCore.materialUiCoreStrings.baseline = "baseline".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.baseline]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def center: typingsSlinky.materialUiCore.materialUiCoreStrings.center = "center".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.center]
   @scala.inline
-  def center: typingsSlinky.materialUiCore.materialUiCoreStrings.center = this.cast("center")
+  def `flex-end`: typingsSlinky.materialUiCore.materialUiCoreStrings.`flex-end` = "flex-end".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.`flex-end`]
   @scala.inline
-  def `flex-end`: typingsSlinky.materialUiCore.materialUiCoreStrings.`flex-end` = this.cast("flex-end")
+  def `flex-start`: typingsSlinky.materialUiCore.materialUiCoreStrings.`flex-start` = "flex-start".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.`flex-start`]
   @scala.inline
-  def `flex-start`: typingsSlinky.materialUiCore.materialUiCoreStrings.`flex-start` = this.cast("flex-start")
-  @scala.inline
-  def stretch: typingsSlinky.materialUiCore.materialUiCoreStrings.stretch = this.cast("stretch")
+  def stretch: typingsSlinky.materialUiCore.materialUiCoreStrings.stretch = "stretch".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.stretch]
 }
 

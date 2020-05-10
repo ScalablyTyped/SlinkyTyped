@@ -1,6 +1,6 @@
 package typingsSlinky.expo.aRMod
 
-import typingsSlinky.react.mod.Component
+import slinky.core.ReactComponentClass
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,6 +9,6 @@ import scala.scalajs.js.annotation._
 @js.native
 object startAsync extends js.Object {
   def apply(node: ReactNativeNodeHandle, configuration: TrackingConfiguration): js.Promise[ARStartResult] = js.native
-  def apply(node: Component[js.Object, js.Object, _], configuration: TrackingConfiguration): js.Promise[ARStartResult] = js.native
+  def apply(node: ReactComponentClass[js.Object], configuration: TrackingConfiguration): js.Promise[ARStartResult] = js.native
 }
 

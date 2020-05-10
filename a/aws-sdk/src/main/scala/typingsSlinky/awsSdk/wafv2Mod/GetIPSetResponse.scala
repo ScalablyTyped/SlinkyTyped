@@ -18,11 +18,41 @@ trait GetIPSetResponse extends js.Object {
 
 object GetIPSetResponse {
   @scala.inline
-  def apply(IPSet: IPSet = null, LockToken: LockToken = null): GetIPSetResponse = {
+  def apply(): GetIPSetResponse = {
     val __obj = js.Dynamic.literal()
-    if (IPSet != null) __obj.updateDynamic("IPSet")(IPSet.asInstanceOf[js.Any])
-    if (LockToken != null) __obj.updateDynamic("LockToken")(LockToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetIPSetResponse]
   }
+  @scala.inline
+  implicit class GetIPSetResponseOps[Self <: GetIPSetResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIPSet(value: IPSet): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IPSet")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIPSet: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IPSet")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLockToken(value: LockToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LockToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLockToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LockToken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -46,28 +46,125 @@ trait GetReservedInstancesExchangeQuoteResult extends js.Object {
 
 object GetReservedInstancesExchangeQuoteResult {
   @scala.inline
-  def apply(
-    CurrencyCode: String = null,
-    IsValidExchange: js.UndefOr[scala.Boolean] = js.undefined,
-    OutputReservedInstancesWillExpireAt: js.Date = null,
-    PaymentDue: String = null,
-    ReservedInstanceValueRollup: ReservationValue = null,
-    ReservedInstanceValueSet: ReservedInstanceReservationValueSet = null,
-    TargetConfigurationValueRollup: ReservationValue = null,
-    TargetConfigurationValueSet: TargetReservationValueSet = null,
-    ValidationFailureReason: String = null
-  ): GetReservedInstancesExchangeQuoteResult = {
+  def apply(): GetReservedInstancesExchangeQuoteResult = {
     val __obj = js.Dynamic.literal()
-    if (CurrencyCode != null) __obj.updateDynamic("CurrencyCode")(CurrencyCode.asInstanceOf[js.Any])
-    if (!js.isUndefined(IsValidExchange)) __obj.updateDynamic("IsValidExchange")(IsValidExchange.asInstanceOf[js.Any])
-    if (OutputReservedInstancesWillExpireAt != null) __obj.updateDynamic("OutputReservedInstancesWillExpireAt")(OutputReservedInstancesWillExpireAt.asInstanceOf[js.Any])
-    if (PaymentDue != null) __obj.updateDynamic("PaymentDue")(PaymentDue.asInstanceOf[js.Any])
-    if (ReservedInstanceValueRollup != null) __obj.updateDynamic("ReservedInstanceValueRollup")(ReservedInstanceValueRollup.asInstanceOf[js.Any])
-    if (ReservedInstanceValueSet != null) __obj.updateDynamic("ReservedInstanceValueSet")(ReservedInstanceValueSet.asInstanceOf[js.Any])
-    if (TargetConfigurationValueRollup != null) __obj.updateDynamic("TargetConfigurationValueRollup")(TargetConfigurationValueRollup.asInstanceOf[js.Any])
-    if (TargetConfigurationValueSet != null) __obj.updateDynamic("TargetConfigurationValueSet")(TargetConfigurationValueSet.asInstanceOf[js.Any])
-    if (ValidationFailureReason != null) __obj.updateDynamic("ValidationFailureReason")(ValidationFailureReason.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetReservedInstancesExchangeQuoteResult]
   }
+  @scala.inline
+  implicit class GetReservedInstancesExchangeQuoteResultOps[Self <: GetReservedInstancesExchangeQuoteResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCurrencyCode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrencyCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCurrencyCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrencyCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsValidExchange(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IsValidExchange")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsValidExchange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IsValidExchange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOutputReservedInstancesWillExpireAt(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OutputReservedInstancesWillExpireAt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOutputReservedInstancesWillExpireAt: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OutputReservedInstancesWillExpireAt")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPaymentDue(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PaymentDue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPaymentDue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PaymentDue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReservedInstanceValueRollup(value: ReservationValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReservedInstanceValueRollup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReservedInstanceValueRollup: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReservedInstanceValueRollup")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReservedInstanceValueSet(value: ReservedInstanceReservationValueSet): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReservedInstanceValueSet")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReservedInstanceValueSet: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReservedInstanceValueSet")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTargetConfigurationValueRollup(value: ReservationValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetConfigurationValueRollup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTargetConfigurationValueRollup: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetConfigurationValueRollup")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTargetConfigurationValueSet(value: TargetReservationValueSet): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetConfigurationValueSet")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTargetConfigurationValueSet: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetConfigurationValueSet")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValidationFailureReason(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ValidationFailureReason")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValidationFailureReason: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ValidationFailureReason")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

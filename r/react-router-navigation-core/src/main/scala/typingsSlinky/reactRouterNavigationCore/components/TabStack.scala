@@ -1,10 +1,8 @@
 package typingsSlinky.reactRouterNavigationCore.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.ViewStyle
 import typingsSlinky.reactRouterNavigationCore.mod.TabStackProps
@@ -13,27 +11,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object TabStack
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactRouterNavigationCore.mod.TabStack] {
+object TabStack {
   @JSImport("react-router-navigation-core", "TabStack")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    render: TabsRendererProps => TagMod[Any],
-    forceSync: js.UndefOr[Boolean] = js.undefined,
-    `lazy`: js.UndefOr[Boolean] = js.undefined,
-    style: StyleProp[ViewStyle] = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactRouterNavigationCore.mod.TabStack] = {
-    val __obj = js.Dynamic.literal(render = js.Any.fromFunction1(render))
-    if (!js.isUndefined(forceSync)) __obj.updateDynamic("forceSync")(forceSync.asInstanceOf[js.Any])
-    if (!js.isUndefined(`lazy`)) __obj.updateDynamic("lazy")(`lazy`.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactRouterNavigationCore.mod.TabStack] {
+    @scala.inline
+    def forceSync(value: Boolean): this.type = set("forceSync", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `lazy`(value: Boolean): this.type = set("lazy", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: StyleProp[ViewStyle]): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def styleNull: this.type = set("style", null)
   }
-  type Props = TabStackProps
+  
+  def withProps(p: TabStackProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(render: TabsRendererProps => TagMod[Any]): Builder = {
+    val __props = js.Dynamic.literal(render = js.Any.fromFunction1(render))
+    new Builder(js.Array(this.component, __props.asInstanceOf[TabStackProps]))
+  }
 }
 

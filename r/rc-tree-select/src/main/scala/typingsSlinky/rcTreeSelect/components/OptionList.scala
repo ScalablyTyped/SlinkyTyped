@@ -1,12 +1,11 @@
 package typingsSlinky.rcTreeSelect.components
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLDivElement
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.SyntheticUIEvent
 import slinky.web.html.div.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.rcTreeSelect.AnonSelected
 import typingsSlinky.rcTreeSelect.interfaceMod.DataNode
 import typingsSlinky.rcTreeSelect.interfaceMod.FlattenDataNode
@@ -19,13 +18,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object OptionList
-  extends ExternalComponentWithAttributesWithRefType[tag.type, Ref[js.Any] with js.Object] {
+object OptionList {
   @JSImport("rc-tree-select/lib/OptionList", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, Ref[js.Any] with js.Object] {
+    @scala.inline
+    def defaultActiveFirstOption(value: Boolean): this.type = set("defaultActiveFirstOption", value.asInstanceOf[js.Any])
+    @scala.inline
+    def menuItemSelectedIcon(value: js.Any): this.type = set("menuItemSelectedIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def notFoundContentReactElement(value: ReactElement): this.type = set("notFoundContent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def notFoundContent(value: TagMod[Any]): this.type = set("notFoundContent", value.asInstanceOf[js.Any])
+  }
+  
+  def withProps(p: OptionListProps[js.Array[DataNode]] with RefAttributes[js.Any]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
   def apply(
     childrenAsData: Boolean,
     flattenOptions: js.Array[FlattenDataNode],
@@ -41,19 +54,10 @@ object OptionList
     options: js.Array[DataNode],
     prefixCls: String,
     searchValue: String,
-    values: Set[RawValueType],
-    defaultActiveFirstOption: js.UndefOr[Boolean] = js.undefined,
-    menuItemSelectedIcon: js.Any = null,
-    notFoundContent: TagMod[Any] = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, Ref[js.Any] with js.Object] = {
-    val __obj = js.Dynamic.literal(childrenAsData = childrenAsData.asInstanceOf[js.Any], flattenOptions = flattenOptions.asInstanceOf[js.Any], height = height.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], itemHeight = itemHeight.asInstanceOf[js.Any], multiple = multiple.asInstanceOf[js.Any], onActiveValue = js.Any.fromFunction2(onActiveValue), onScroll = js.Any.fromFunction1(onScroll), onSelect = js.Any.fromFunction2(onSelect), onToggleOpen = js.Any.fromFunction1(onToggleOpen), open = open.asInstanceOf[js.Any], options = options.asInstanceOf[js.Any], prefixCls = prefixCls.asInstanceOf[js.Any], searchValue = searchValue.asInstanceOf[js.Any], values = values.asInstanceOf[js.Any])
-    if (!js.isUndefined(defaultActiveFirstOption)) __obj.updateDynamic("defaultActiveFirstOption")(defaultActiveFirstOption.asInstanceOf[js.Any])
-    if (menuItemSelectedIcon != null) __obj.updateDynamic("menuItemSelectedIcon")(menuItemSelectedIcon.asInstanceOf[js.Any])
-    if (notFoundContent != null) __obj.updateDynamic("notFoundContent")(notFoundContent.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+    values: Set[RawValueType]
+  ): Builder = {
+    val __props = js.Dynamic.literal(childrenAsData = childrenAsData.asInstanceOf[js.Any], flattenOptions = flattenOptions.asInstanceOf[js.Any], height = height.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], itemHeight = itemHeight.asInstanceOf[js.Any], multiple = multiple.asInstanceOf[js.Any], onActiveValue = js.Any.fromFunction2(onActiveValue), onScroll = js.Any.fromFunction1(onScroll), onSelect = js.Any.fromFunction2(onSelect), onToggleOpen = js.Any.fromFunction1(onToggleOpen), open = open.asInstanceOf[js.Any], options = options.asInstanceOf[js.Any], prefixCls = prefixCls.asInstanceOf[js.Any], searchValue = searchValue.asInstanceOf[js.Any], values = values.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[OptionListProps[js.Array[DataNode]] with RefAttributes[js.Any]]))
   }
-  type Props = OptionListProps[js.Array[DataNode]] with RefAttributes[js.Any]
 }
 

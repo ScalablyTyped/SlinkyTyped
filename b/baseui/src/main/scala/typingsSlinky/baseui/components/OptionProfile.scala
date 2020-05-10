@@ -1,11 +1,9 @@
 package typingsSlinky.baseui.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.ReactComponentClass
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.baseui.AnonBody
 import typingsSlinky.baseui.AnonListItemProfile
 import typingsSlinky.baseui.menuMod.OptionProfileProps
@@ -13,34 +11,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object OptionProfile
-  extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+object OptionProfile {
   @JSImport("baseui/menu", "OptionProfile")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, js.Object] {
+    @scala.inline
+    def $isHighlighted(value: Boolean): this.type = set("$isHighlighted", value.asInstanceOf[js.Any])
+    @scala.inline
+    def getChildMenu(value: /* item */ js.Any => TagMod[Any]): this.type = set("getChildMenu", js.Any.fromFunction1(value))
+    @scala.inline
+    def overrides(value: AnonListItemProfile): this.type = set("overrides", value.asInstanceOf[js.Any])
+    @scala.inline
+    def renderAll(value: Boolean): this.type = set("renderAll", value.asInstanceOf[js.Any])
+    @scala.inline
+    def resetMenu(value: () => Unit): this.type = set("resetMenu", js.Any.fromFunction0(value))
+  }
+  
+  def withProps(p: OptionProfileProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
   def apply(
     getProfileItemImg: js.Any => String | ReactComponentClass[_],
     getProfileItemImgText: js.Any => String,
     getProfileItemLabels: js.Any => AnonBody,
-    item: js.Any,
-    $isHighlighted: js.UndefOr[Boolean] = js.undefined,
-    getChildMenu: /* item */ js.Any => TagMod[Any] = null,
-    overrides: AnonListItemProfile = null,
-    renderAll: js.UndefOr[Boolean] = js.undefined,
-    resetMenu: () => Unit = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, js.Object] = {
-    val __obj = js.Dynamic.literal(getProfileItemImg = js.Any.fromFunction1(getProfileItemImg), getProfileItemImgText = js.Any.fromFunction1(getProfileItemImgText), getProfileItemLabels = js.Any.fromFunction1(getProfileItemLabels), item = item.asInstanceOf[js.Any])
-    if (!js.isUndefined($isHighlighted)) __obj.updateDynamic("$isHighlighted")($isHighlighted.asInstanceOf[js.Any])
-    if (getChildMenu != null) __obj.updateDynamic("getChildMenu")(js.Any.fromFunction1(getChildMenu))
-    if (overrides != null) __obj.updateDynamic("overrides")(overrides.asInstanceOf[js.Any])
-    if (!js.isUndefined(renderAll)) __obj.updateDynamic("renderAll")(renderAll.asInstanceOf[js.Any])
-    if (resetMenu != null) __obj.updateDynamic("resetMenu")(js.Any.fromFunction0(resetMenu))
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+    item: js.Any
+  ): Builder = {
+    val __props = js.Dynamic.literal(getProfileItemImg = js.Any.fromFunction1(getProfileItemImg), getProfileItemImgText = js.Any.fromFunction1(getProfileItemImgText), getProfileItemLabels = js.Any.fromFunction1(getProfileItemLabels), item = item.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[OptionProfileProps]))
   }
-  type Props = OptionProfileProps
 }
 

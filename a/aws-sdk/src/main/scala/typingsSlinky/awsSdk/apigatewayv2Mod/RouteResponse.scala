@@ -30,19 +30,71 @@ trait RouteResponse extends js.Object {
 
 object RouteResponse {
   @scala.inline
-  def apply(
-    RouteResponseKey: SelectionKey,
-    ModelSelectionExpression: SelectionExpression = null,
-    ResponseModels: RouteModels = null,
-    ResponseParameters: RouteParameters = null,
-    RouteResponseId: Id = null
-  ): RouteResponse = {
+  def apply(RouteResponseKey: SelectionKey): RouteResponse = {
     val __obj = js.Dynamic.literal(RouteResponseKey = RouteResponseKey.asInstanceOf[js.Any])
-    if (ModelSelectionExpression != null) __obj.updateDynamic("ModelSelectionExpression")(ModelSelectionExpression.asInstanceOf[js.Any])
-    if (ResponseModels != null) __obj.updateDynamic("ResponseModels")(ResponseModels.asInstanceOf[js.Any])
-    if (ResponseParameters != null) __obj.updateDynamic("ResponseParameters")(ResponseParameters.asInstanceOf[js.Any])
-    if (RouteResponseId != null) __obj.updateDynamic("RouteResponseId")(RouteResponseId.asInstanceOf[js.Any])
     __obj.asInstanceOf[RouteResponse]
   }
+  @scala.inline
+  implicit class RouteResponseOps[Self <: RouteResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRouteResponseKey(value: SelectionKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RouteResponseKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withModelSelectionExpression(value: SelectionExpression): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ModelSelectionExpression")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutModelSelectionExpression: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ModelSelectionExpression")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResponseModels(value: RouteModels): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResponseModels")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResponseModels: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResponseModels")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResponseParameters(value: RouteParameters): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResponseParameters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResponseParameters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResponseParameters")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRouteResponseId(value: Id): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RouteResponseId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRouteResponseId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RouteResponseId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

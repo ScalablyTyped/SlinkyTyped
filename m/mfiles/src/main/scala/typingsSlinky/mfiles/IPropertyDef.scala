@@ -14,34 +14,35 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IPropertyDef extends js.Object {
-  var AccessControlList: IAccessControlList
-  var AllObjectTypes: Boolean
-  var AllowedAsGroupingLevel: Boolean
-  var AutomaticValueDefinition: ITypedValue
-  var AutomaticValueType: MFAutomaticValueType
-  var BasedOnValueList: Boolean
-  var ContentType: MFContentType
-  var DataType: MFDataType
-  var DependencyPD: Double
-  var DependencyRelation: MFDependencyRelation
-  var FormattingType: MFFormattingType
-  val GUID: String
-  var ID: Double
-  var Name: String
-  var ObjectType: MFBuiltInObjectType | Double
-  var OwnerPropertyDef: IOwnerPropertyDef
-  var Predefined: Boolean
-  var SortAscending: Boolean
-  var StaticFilter: ISearchConditions
-  val ThisIsConflictPD: Boolean
-  val ThisIsDefaultPD: Boolean
-  val ThisIsOwnerPD: Boolean
-  var UpdateType: MFUpdateType
-  var ValidationType: MFValidationType
-  var ValueList: MFBuiltInValueList | Double
-  var ValueListSortingType: MFValueListSortingType
-  def Clone(): IPropertyDef
+  var AccessControlList: IAccessControlList = js.native
+  var AllObjectTypes: Boolean = js.native
+  var AllowedAsGroupingLevel: Boolean = js.native
+  var AutomaticValueDefinition: ITypedValue = js.native
+  var AutomaticValueType: MFAutomaticValueType = js.native
+  var BasedOnValueList: Boolean = js.native
+  var ContentType: MFContentType = js.native
+  var DataType: MFDataType = js.native
+  var DependencyPD: Double = js.native
+  var DependencyRelation: MFDependencyRelation = js.native
+  var FormattingType: MFFormattingType = js.native
+  val GUID: String = js.native
+  var ID: Double = js.native
+  var Name: String = js.native
+  var ObjectType: MFBuiltInObjectType | Double = js.native
+  var OwnerPropertyDef: IOwnerPropertyDef = js.native
+  var Predefined: Boolean = js.native
+  var SortAscending: Boolean = js.native
+  var StaticFilter: ISearchConditions = js.native
+  val ThisIsConflictPD: Boolean = js.native
+  val ThisIsDefaultPD: Boolean = js.native
+  val ThisIsOwnerPD: Boolean = js.native
+  var UpdateType: MFUpdateType = js.native
+  var ValidationType: MFValidationType = js.native
+  var ValueList: MFBuiltInValueList | Double = js.native
+  var ValueListSortingType: MFValueListSortingType = js.native
+  def Clone(): IPropertyDef = js.native
 }
 
 object IPropertyDef {
@@ -76,8 +77,177 @@ object IPropertyDef {
     ValueListSortingType: MFValueListSortingType
   ): IPropertyDef = {
     val __obj = js.Dynamic.literal(AccessControlList = AccessControlList.asInstanceOf[js.Any], AllObjectTypes = AllObjectTypes.asInstanceOf[js.Any], AllowedAsGroupingLevel = AllowedAsGroupingLevel.asInstanceOf[js.Any], AutomaticValueDefinition = AutomaticValueDefinition.asInstanceOf[js.Any], AutomaticValueType = AutomaticValueType.asInstanceOf[js.Any], BasedOnValueList = BasedOnValueList.asInstanceOf[js.Any], Clone = js.Any.fromFunction0(Clone), ContentType = ContentType.asInstanceOf[js.Any], DataType = DataType.asInstanceOf[js.Any], DependencyPD = DependencyPD.asInstanceOf[js.Any], DependencyRelation = DependencyRelation.asInstanceOf[js.Any], FormattingType = FormattingType.asInstanceOf[js.Any], GUID = GUID.asInstanceOf[js.Any], ID = ID.asInstanceOf[js.Any], Name = Name.asInstanceOf[js.Any], ObjectType = ObjectType.asInstanceOf[js.Any], OwnerPropertyDef = OwnerPropertyDef.asInstanceOf[js.Any], Predefined = Predefined.asInstanceOf[js.Any], SortAscending = SortAscending.asInstanceOf[js.Any], StaticFilter = StaticFilter.asInstanceOf[js.Any], ThisIsConflictPD = ThisIsConflictPD.asInstanceOf[js.Any], ThisIsDefaultPD = ThisIsDefaultPD.asInstanceOf[js.Any], ThisIsOwnerPD = ThisIsOwnerPD.asInstanceOf[js.Any], UpdateType = UpdateType.asInstanceOf[js.Any], ValidationType = ValidationType.asInstanceOf[js.Any], ValueList = ValueList.asInstanceOf[js.Any], ValueListSortingType = ValueListSortingType.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[IPropertyDef]
   }
+  @scala.inline
+  implicit class IPropertyDefOps[Self <: IPropertyDef] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAccessControlList(value: IAccessControlList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AccessControlList")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAllObjectTypes(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AllObjectTypes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAllowedAsGroupingLevel(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AllowedAsGroupingLevel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAutomaticValueDefinition(value: ITypedValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AutomaticValueDefinition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAutomaticValueType(value: MFAutomaticValueType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AutomaticValueType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBasedOnValueList(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BasedOnValueList")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withClone(value: () => IPropertyDef): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Clone")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withContentType(value: MFContentType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ContentType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDataType(value: MFDataType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DataType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDependencyPD(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DependencyPD")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDependencyRelation(value: MFDependencyRelation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DependencyRelation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFormattingType(value: MFFormattingType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FormattingType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGUID(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GUID")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withID(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ID")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withObjectType(value: MFBuiltInObjectType | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ObjectType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOwnerPropertyDef(value: IOwnerPropertyDef): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OwnerPropertyDef")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPredefined(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Predefined")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSortAscending(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SortAscending")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStaticFilter(value: ISearchConditions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StaticFilter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withThisIsConflictPD(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ThisIsConflictPD")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withThisIsDefaultPD(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ThisIsDefaultPD")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withThisIsOwnerPD(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ThisIsOwnerPD")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUpdateType(value: MFUpdateType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UpdateType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withValidationType(value: MFValidationType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ValidationType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withValueList(value: MFBuiltInValueList | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ValueList")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withValueListSortingType(value: MFValueListSortingType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ValueListSortingType")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

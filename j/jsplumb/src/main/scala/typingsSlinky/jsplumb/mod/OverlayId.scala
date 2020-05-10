@@ -14,14 +14,12 @@ trait OverlayId extends js.Object
 
 object OverlayId {
   @scala.inline
-  def Arrow: typingsSlinky.jsplumb.jsplumbStrings.Arrow = this.cast("Arrow")
+  def Arrow: typingsSlinky.jsplumb.jsplumbStrings.Arrow = "Arrow".asInstanceOf[typingsSlinky.jsplumb.jsplumbStrings.Arrow]
   @scala.inline
-  def Custom: typingsSlinky.jsplumb.jsplumbStrings.Custom = this.cast("Custom")
+  def Custom: typingsSlinky.jsplumb.jsplumbStrings.Custom = "Custom".asInstanceOf[typingsSlinky.jsplumb.jsplumbStrings.Custom]
   @scala.inline
-  def Label: typingsSlinky.jsplumb.jsplumbStrings.Label = this.cast("Label")
+  def Label: typingsSlinky.jsplumb.jsplumbStrings.Label = "Label".asInstanceOf[typingsSlinky.jsplumb.jsplumbStrings.Label]
   @scala.inline
-  def PlainArrow: typingsSlinky.jsplumb.jsplumbStrings.PlainArrow = this.cast("PlainArrow")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def PlainArrow: typingsSlinky.jsplumb.jsplumbStrings.PlainArrow = "PlainArrow".asInstanceOf[typingsSlinky.jsplumb.jsplumbStrings.PlainArrow]
 }
 

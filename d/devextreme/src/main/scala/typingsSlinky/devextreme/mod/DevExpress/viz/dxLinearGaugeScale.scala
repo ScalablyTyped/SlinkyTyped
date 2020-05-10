@@ -1,6 +1,5 @@
 package typingsSlinky.devextreme.mod.DevExpress.viz
 
-import typingsSlinky.devextreme.AnonColorLength
 import typingsSlinky.devextreme.devextremeStrings.bottom
 import typingsSlinky.devextreme.devextremeStrings.center
 import typingsSlinky.devextreme.devextremeStrings.left
@@ -10,48 +9,66 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait dxLinearGaugeScale extends BaseGaugeScale {
   /** Specifies the orientation of scale ticks. Applies only if the geometry.orientation option is "vertical". */
-  var horizontalOrientation: js.UndefOr[center | left | right] = js.undefined
+  var horizontalOrientation: js.UndefOr[center | left | right] = js.native
   /** Specifies common options for scale labels. */
   @JSName("label")
-  var label_dxLinearGaugeScale: js.UndefOr[dxLinearGaugeScaleLabel] = js.undefined
+  var label_dxLinearGaugeScale: js.UndefOr[dxLinearGaugeScaleLabel] = js.native
   /** Specifies the orientation of scale ticks. Applies only if the geometry.orientation option is "horizontal". */
-  var verticalOrientation: js.UndefOr[bottom | center | top] = js.undefined
+  var verticalOrientation: js.UndefOr[bottom | center | top] = js.native
 }
 
 object dxLinearGaugeScale {
   @scala.inline
-  def apply(
-    allowDecimals: js.UndefOr[Boolean] = js.undefined,
-    customMinorTicks: js.Array[Double] = null,
-    customTicks: js.Array[Double] = null,
-    endValue: Int | Double = null,
-    horizontalOrientation: center | left | right = null,
-    label: dxLinearGaugeScaleLabel = null,
-    minorTick: AnonColorLength = null,
-    minorTickInterval: Int | Double = null,
-    scaleDivisionFactor: Int | Double = null,
-    startValue: Int | Double = null,
-    tick: AnonColorLength = null,
-    tickInterval: Int | Double = null,
-    verticalOrientation: bottom | center | top = null
-  ): dxLinearGaugeScale = {
+  def apply(): dxLinearGaugeScale = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(allowDecimals)) __obj.updateDynamic("allowDecimals")(allowDecimals.asInstanceOf[js.Any])
-    if (customMinorTicks != null) __obj.updateDynamic("customMinorTicks")(customMinorTicks.asInstanceOf[js.Any])
-    if (customTicks != null) __obj.updateDynamic("customTicks")(customTicks.asInstanceOf[js.Any])
-    if (endValue != null) __obj.updateDynamic("endValue")(endValue.asInstanceOf[js.Any])
-    if (horizontalOrientation != null) __obj.updateDynamic("horizontalOrientation")(horizontalOrientation.asInstanceOf[js.Any])
-    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
-    if (minorTick != null) __obj.updateDynamic("minorTick")(minorTick.asInstanceOf[js.Any])
-    if (minorTickInterval != null) __obj.updateDynamic("minorTickInterval")(minorTickInterval.asInstanceOf[js.Any])
-    if (scaleDivisionFactor != null) __obj.updateDynamic("scaleDivisionFactor")(scaleDivisionFactor.asInstanceOf[js.Any])
-    if (startValue != null) __obj.updateDynamic("startValue")(startValue.asInstanceOf[js.Any])
-    if (tick != null) __obj.updateDynamic("tick")(tick.asInstanceOf[js.Any])
-    if (tickInterval != null) __obj.updateDynamic("tickInterval")(tickInterval.asInstanceOf[js.Any])
-    if (verticalOrientation != null) __obj.updateDynamic("verticalOrientation")(verticalOrientation.asInstanceOf[js.Any])
     __obj.asInstanceOf[dxLinearGaugeScale]
   }
+  @scala.inline
+  implicit class dxLinearGaugeScaleOps[Self <: dxLinearGaugeScale] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHorizontalOrientation(value: center | left | right): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("horizontalOrientation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHorizontalOrientation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("horizontalOrientation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabel(value: dxLinearGaugeScaleLabel): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVerticalOrientation(value: bottom | center | top): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("verticalOrientation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVerticalOrientation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("verticalOrientation")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -20,8 +20,27 @@ object TaskRunSortCriteria {
   @scala.inline
   def apply(Column: TaskRunSortColumnType, SortDirection: SortDirectionType): TaskRunSortCriteria = {
     val __obj = js.Dynamic.literal(Column = Column.asInstanceOf[js.Any], SortDirection = SortDirection.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[TaskRunSortCriteria]
   }
+  @scala.inline
+  implicit class TaskRunSortCriteriaOps[Self <: TaskRunSortCriteria] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withColumn(value: TaskRunSortColumnType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Column")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSortDirection(value: SortDirectionType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SortDirection")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

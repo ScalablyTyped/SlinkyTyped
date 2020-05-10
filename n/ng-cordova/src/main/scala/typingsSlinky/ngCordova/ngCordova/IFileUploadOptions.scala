@@ -5,35 +5,49 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IFileUploadOptions extends FileUploadOptions {
-  var encodeURI: js.UndefOr[Boolean] = js.undefined
-  var timeout: js.UndefOr[Double] = js.undefined
+  var encodeURI: js.UndefOr[Boolean] = js.native
+  var timeout: js.UndefOr[Double] = js.native
 }
 
 object IFileUploadOptions {
   @scala.inline
-  def apply(
-    chunkedMode: js.UndefOr[Boolean] = js.undefined,
-    encodeURI: js.UndefOr[Boolean] = js.undefined,
-    fileKey: String = null,
-    fileName: String = null,
-    headers: js.Object = null,
-    httpMethod: String = null,
-    mimeType: String = null,
-    params: js.Object = null,
-    timeout: Int | Double = null
-  ): IFileUploadOptions = {
+  def apply(): IFileUploadOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(chunkedMode)) __obj.updateDynamic("chunkedMode")(chunkedMode.asInstanceOf[js.Any])
-    if (!js.isUndefined(encodeURI)) __obj.updateDynamic("encodeURI")(encodeURI.asInstanceOf[js.Any])
-    if (fileKey != null) __obj.updateDynamic("fileKey")(fileKey.asInstanceOf[js.Any])
-    if (fileName != null) __obj.updateDynamic("fileName")(fileName.asInstanceOf[js.Any])
-    if (headers != null) __obj.updateDynamic("headers")(headers.asInstanceOf[js.Any])
-    if (httpMethod != null) __obj.updateDynamic("httpMethod")(httpMethod.asInstanceOf[js.Any])
-    if (mimeType != null) __obj.updateDynamic("mimeType")(mimeType.asInstanceOf[js.Any])
-    if (params != null) __obj.updateDynamic("params")(params.asInstanceOf[js.Any])
-    if (timeout != null) __obj.updateDynamic("timeout")(timeout.asInstanceOf[js.Any])
     __obj.asInstanceOf[IFileUploadOptions]
   }
+  @scala.inline
+  implicit class IFileUploadOptionsOps[Self <: IFileUploadOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEncodeURI(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encodeURI")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEncodeURI: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encodeURI")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimeout(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimeout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,48 +1,79 @@
 package typingsSlinky.passportAzureAd.bearerStrategyMod
 
 import typingsSlinky.passportAzureAd.commonMod.IBaseStrategyOption
-import typingsSlinky.passportAzureAd.passportAzureAdStrings.error
-import typingsSlinky.passportAzureAd.passportAzureAdStrings.info
-import typingsSlinky.passportAzureAd.passportAzureAdStrings.warn
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IBearerStrategyOption extends IBaseStrategyOption {
-  var allowMultiAudiencesInToken: js.UndefOr[Boolean] = js.undefined
-  var audience: js.UndefOr[String | js.Array[String]] = js.undefined
-  var policyName: js.UndefOr[String] = js.undefined
-  var scope: js.UndefOr[js.Array[String]] = js.undefined
+  var allowMultiAudiencesInToken: js.UndefOr[Boolean] = js.native
+  var audience: js.UndefOr[String | js.Array[String]] = js.native
+  var policyName: js.UndefOr[String] = js.native
+  var scope: js.UndefOr[js.Array[String]] = js.native
 }
 
 object IBearerStrategyOption {
   @scala.inline
-  def apply(
-    clientID: String,
-    identityMetadata: String,
-    allowMultiAudiencesInToken: js.UndefOr[Boolean] = js.undefined,
-    audience: String | js.Array[String] = null,
-    clockSkew: Int | Double = null,
-    isB2C: js.UndefOr[Boolean] = js.undefined,
-    issuer: String | js.Array[String] = null,
-    loggingLevel: info | warn | error = null,
-    loggingNoPII: js.UndefOr[Boolean] = js.undefined,
-    policyName: String = null,
-    scope: js.Array[String] = null,
-    validateIssuer: js.UndefOr[Boolean] = js.undefined
-  ): IBearerStrategyOption = {
+  def apply(clientID: String, identityMetadata: String): IBearerStrategyOption = {
     val __obj = js.Dynamic.literal(clientID = clientID.asInstanceOf[js.Any], identityMetadata = identityMetadata.asInstanceOf[js.Any])
-    if (!js.isUndefined(allowMultiAudiencesInToken)) __obj.updateDynamic("allowMultiAudiencesInToken")(allowMultiAudiencesInToken.asInstanceOf[js.Any])
-    if (audience != null) __obj.updateDynamic("audience")(audience.asInstanceOf[js.Any])
-    if (clockSkew != null) __obj.updateDynamic("clockSkew")(clockSkew.asInstanceOf[js.Any])
-    if (!js.isUndefined(isB2C)) __obj.updateDynamic("isB2C")(isB2C.asInstanceOf[js.Any])
-    if (issuer != null) __obj.updateDynamic("issuer")(issuer.asInstanceOf[js.Any])
-    if (loggingLevel != null) __obj.updateDynamic("loggingLevel")(loggingLevel.asInstanceOf[js.Any])
-    if (!js.isUndefined(loggingNoPII)) __obj.updateDynamic("loggingNoPII")(loggingNoPII.asInstanceOf[js.Any])
-    if (policyName != null) __obj.updateDynamic("policyName")(policyName.asInstanceOf[js.Any])
-    if (scope != null) __obj.updateDynamic("scope")(scope.asInstanceOf[js.Any])
-    if (!js.isUndefined(validateIssuer)) __obj.updateDynamic("validateIssuer")(validateIssuer.asInstanceOf[js.Any])
     __obj.asInstanceOf[IBearerStrategyOption]
   }
+  @scala.inline
+  implicit class IBearerStrategyOptionOps[Self <: IBearerStrategyOption] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAllowMultiAudiencesInToken(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowMultiAudiencesInToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowMultiAudiencesInToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowMultiAudiencesInToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAudience(value: String | js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("audience")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAudience: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("audience")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPolicyName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("policyName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPolicyName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("policyName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScope(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scope")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScope: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scope")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

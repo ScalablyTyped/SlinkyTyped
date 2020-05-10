@@ -14,8 +14,27 @@ object GlacierComputeChecksumsOutput {
   @scala.inline
   def apply(linearHash: String, treeHash: String): GlacierComputeChecksumsOutput = {
     val __obj = js.Dynamic.literal(linearHash = linearHash.asInstanceOf[js.Any], treeHash = treeHash.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[GlacierComputeChecksumsOutput]
   }
+  @scala.inline
+  implicit class GlacierComputeChecksumsOutputOps[Self <: GlacierComputeChecksumsOutput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLinearHash(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("linearHash")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTreeHash(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("treeHash")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

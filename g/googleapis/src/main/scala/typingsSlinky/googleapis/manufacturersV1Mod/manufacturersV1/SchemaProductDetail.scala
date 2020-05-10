@@ -26,12 +26,53 @@ trait SchemaProductDetail extends js.Object {
 
 object SchemaProductDetail {
   @scala.inline
-  def apply(attributeName: String = null, attributeValue: String = null, sectionName: String = null): SchemaProductDetail = {
+  def apply(): SchemaProductDetail = {
     val __obj = js.Dynamic.literal()
-    if (attributeName != null) __obj.updateDynamic("attributeName")(attributeName.asInstanceOf[js.Any])
-    if (attributeValue != null) __obj.updateDynamic("attributeValue")(attributeValue.asInstanceOf[js.Any])
-    if (sectionName != null) __obj.updateDynamic("sectionName")(sectionName.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaProductDetail]
   }
+  @scala.inline
+  implicit class SchemaProductDetailOps[Self <: SchemaProductDetail] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAttributeName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attributeName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAttributeName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attributeName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAttributeValue(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attributeValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAttributeValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attributeValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSectionName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sectionName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSectionName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sectionName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

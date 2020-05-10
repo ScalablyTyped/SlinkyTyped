@@ -14,10 +14,29 @@ trait SchemaGoogleDevtoolsRemotebuildexecutionAdminV1alphaListInstancesRequest e
 
 object SchemaGoogleDevtoolsRemotebuildexecutionAdminV1alphaListInstancesRequest {
   @scala.inline
-  def apply(parent: String = null): SchemaGoogleDevtoolsRemotebuildexecutionAdminV1alphaListInstancesRequest = {
+  def apply(): SchemaGoogleDevtoolsRemotebuildexecutionAdminV1alphaListInstancesRequest = {
     val __obj = js.Dynamic.literal()
-    if (parent != null) __obj.updateDynamic("parent")(parent.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleDevtoolsRemotebuildexecutionAdminV1alphaListInstancesRequest]
   }
+  @scala.inline
+  implicit class SchemaGoogleDevtoolsRemotebuildexecutionAdminV1alphaListInstancesRequestOps[Self <: SchemaGoogleDevtoolsRemotebuildexecutionAdminV1alphaListInstancesRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withParent(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parent")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

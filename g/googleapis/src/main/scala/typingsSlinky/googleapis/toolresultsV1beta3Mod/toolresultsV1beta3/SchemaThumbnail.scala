@@ -32,18 +32,65 @@ trait SchemaThumbnail extends js.Object {
 
 object SchemaThumbnail {
   @scala.inline
-  def apply(
-    contentType: String = null,
-    data: String = null,
-    heightPx: Int | Double = null,
-    widthPx: Int | Double = null
-  ): SchemaThumbnail = {
+  def apply(): SchemaThumbnail = {
     val __obj = js.Dynamic.literal()
-    if (contentType != null) __obj.updateDynamic("contentType")(contentType.asInstanceOf[js.Any])
-    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
-    if (heightPx != null) __obj.updateDynamic("heightPx")(heightPx.asInstanceOf[js.Any])
-    if (widthPx != null) __obj.updateDynamic("widthPx")(widthPx.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaThumbnail]
   }
+  @scala.inline
+  implicit class SchemaThumbnailOps[Self <: SchemaThumbnail] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withContentType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContentType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withData(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeightPx(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("heightPx")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeightPx: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("heightPx")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWidthPx(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("widthPx")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWidthPx: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("widthPx")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

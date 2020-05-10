@@ -12,11 +12,11 @@ class LocalOctetStringValueBlock ()
   def this(params: LocalOctetStringValueBlockParams) = this()
   var isConstructed: scala.Boolean = js.native
   /* InferMemberOverrides */
-  override def fromBER(inputBuffer: scala.scalajs.js.typedarray.ArrayBuffer, inputOffset: Double, inputLength: Double): Unit with Double = js.native
+  override def fromBER(inputBuffer: js.typedarray.ArrayBuffer, inputOffset: Double, inputLength: Double): Unit with Double = js.native
   /* InferMemberOverrides */
-  override def toBER(): scala.scalajs.js.typedarray.ArrayBuffer = js.native
+  override def toBER(): js.typedarray.ArrayBuffer = js.native
   /* InferMemberOverrides */
-  override def toBER(sizeOnly: scala.Boolean): scala.scalajs.js.typedarray.ArrayBuffer = js.native
+  override def toBER(sizeOnly: scala.Boolean): js.typedarray.ArrayBuffer = js.native
   /**
     * Convertion for the block to JSON object
     * 

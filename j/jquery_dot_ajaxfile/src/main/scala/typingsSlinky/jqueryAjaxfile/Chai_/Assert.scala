@@ -1,7 +1,6 @@
 package typingsSlinky.jqueryAjaxfile.Chai_
 
 import typingsSlinky.jqueryAjaxfile.Object
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,9 +16,9 @@ trait Assert extends js.Object {
   def Throw(fn: js.Function): Unit = js.native
   def Throw(fn: js.Function, errType: js.Function): Unit = js.native
   def Throw(fn: js.Function, errType: js.Function, msg: String): Unit = js.native
-  def Throw(fn: js.Function, errType: js.Function, regExp: RegExp): Unit = js.native
+  def Throw(fn: js.Function, errType: js.Function, regExp: js.RegExp): Unit = js.native
   def Throw(fn: js.Function, msg: String): Unit = js.native
-  def Throw(fn: js.Function, regExp: RegExp): Unit = js.native
+  def Throw(fn: js.Function, regExp: js.RegExp): Unit = js.native
   def closeTo(act: Double, exp: Double, delta: Double): Unit = js.native
   def closeTo(act: Double, exp: Double, delta: Double, msg: String): Unit = js.native
   def deepEqual(act: js.Any, exp: js.Any): Unit = js.native
@@ -33,9 +32,9 @@ trait Assert extends js.Object {
   def doesNotThrow(fn: js.Function): Unit = js.native
   def doesNotThrow(fn: js.Function, errType: js.Function): Unit = js.native
   def doesNotThrow(fn: js.Function, errType: js.Function, msg: String): Unit = js.native
-  def doesNotThrow(fn: js.Function, errType: js.Function, regExp: RegExp): Unit = js.native
+  def doesNotThrow(fn: js.Function, errType: js.Function, regExp: js.RegExp): Unit = js.native
   def doesNotThrow(fn: js.Function, msg: String): Unit = js.native
-  def doesNotThrow(fn: js.Function, regExp: RegExp): Unit = js.native
+  def doesNotThrow(fn: js.Function, regExp: js.RegExp): Unit = js.native
   def equal(act: js.Any, exp: js.Any): Unit = js.native
   def equal(act: js.Any, exp: js.Any, msg: String): Unit = js.native
   def fail(): Unit = js.native
@@ -133,15 +132,15 @@ trait Assert extends js.Object {
   def `throw`(fn: js.Function): Unit = js.native
   def `throw`(fn: js.Function, errType: js.Function): Unit = js.native
   def `throw`(fn: js.Function, errType: js.Function, msg: String): Unit = js.native
-  def `throw`(fn: js.Function, errType: js.Function, regExp: RegExp): Unit = js.native
+  def `throw`(fn: js.Function, errType: js.Function, regExp: js.RegExp): Unit = js.native
   def `throw`(fn: js.Function, msg: String): Unit = js.native
-  def `throw`(fn: js.Function, regExp: RegExp): Unit = js.native
+  def `throw`(fn: js.Function, regExp: js.RegExp): Unit = js.native
   def throws(fn: js.Function): Unit = js.native
   def throws(fn: js.Function, errType: js.Function): Unit = js.native
   def throws(fn: js.Function, errType: js.Function, msg: String): Unit = js.native
-  def throws(fn: js.Function, errType: js.Function, regExp: RegExp): Unit = js.native
+  def throws(fn: js.Function, errType: js.Function, regExp: js.RegExp): Unit = js.native
   def throws(fn: js.Function, msg: String): Unit = js.native
-  def throws(fn: js.Function, regExp: RegExp): Unit = js.native
+  def throws(fn: js.Function, regExp: js.RegExp): Unit = js.native
   def typeOf(`val`: js.Any, `type`: String): Unit = js.native
   def typeOf(`val`: js.Any, `type`: String, msg: String): Unit = js.native
 }

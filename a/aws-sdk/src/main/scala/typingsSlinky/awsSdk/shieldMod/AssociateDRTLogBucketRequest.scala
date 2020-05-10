@@ -16,8 +16,21 @@ object AssociateDRTLogBucketRequest {
   @scala.inline
   def apply(LogBucket: LogBucket): AssociateDRTLogBucketRequest = {
     val __obj = js.Dynamic.literal(LogBucket = LogBucket.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[AssociateDRTLogBucketRequest]
   }
+  @scala.inline
+  implicit class AssociateDRTLogBucketRequestOps[Self <: AssociateDRTLogBucketRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLogBucket(value: LogBucket): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LogBucket")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -376,11 +376,14 @@ trait WebviewTag_ extends HTMLElement {
   @JSName("addEventListener")
   def addEventListener_close(event: close, listener: js.Function1[/* event */ Event, Unit], useCapture: Boolean): this.type = js.native
   @JSName("addEventListener")
-  def addEventListener_close(`type`: close, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def addEventListener_close(
+    `type`: close,
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ Event_, _]
+  ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_close(
     `type`: close,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ Event_, _],
     useCapture: Boolean
   ): Unit = js.native
   /**
@@ -1861,11 +1864,14 @@ trait WebviewTag_ extends HTMLElement {
   @JSName("removeEventListener")
   def removeEventListener_close(event: close, listener: js.Function1[/* event */ Event, Unit]): this.type = js.native
   @JSName("removeEventListener")
-  def removeEventListener_close(`type`: close, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def removeEventListener_close(
+    `type`: close,
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ Event_, _]
+  ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_close(
     `type`: close,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ Event_, _],
     useCapture: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")

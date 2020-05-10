@@ -53,20 +53,12 @@ trait KnockoutStatic extends js.Object {
   var virtualElements: KnockoutVirtualElements = js.native
   def applyBindingAccessorsToNode(
     node: Node,
-    bindings: js.Function2[
-      /* bindingContext */ KnockoutBindingContext, 
-      /* node */ typingsSlinky.std.Node, 
-      js.Object
-    ],
+    bindings: js.Function2[/* bindingContext */ KnockoutBindingContext, /* node */ Node, js.Object],
     bindingContext: KnockoutBindingContext
   ): Unit = js.native
   def applyBindingAccessorsToNode(
     node: Node,
-    bindings: js.Function2[
-      /* bindingContext */ KnockoutBindingContext, 
-      /* node */ typingsSlinky.std.Node, 
-      js.Object
-    ],
+    bindings: js.Function2[/* bindingContext */ KnockoutBindingContext, /* node */ Node, js.Object],
     viewModel: js.Any
   ): Unit = js.native
   def applyBindingAccessorsToNode(node: Node, bindings: js.Object, bindingContext: KnockoutBindingContext): Unit = js.native
@@ -111,56 +103,56 @@ trait KnockoutStatic extends js.Object {
     template: js.Any,
     dataOrBindingContext: js.Any,
     options: js.Object,
-    targetNodeOrNodeArray: js.Array[typingsSlinky.std.Node],
+    targetNodeOrNodeArray: js.Array[Node],
     renderMode: String
   ): js.Any = js.native
   def renderTemplate(
     template: js.Any,
     dataOrBindingContext: js.Any,
     options: js.Object,
-    targetNodeOrNodeArray: typingsSlinky.std.Node,
+    targetNodeOrNodeArray: Node,
     renderMode: String
   ): js.Any = js.native
   def renderTemplate(
     template: js.Any,
     dataOrBindingContext: KnockoutBindingContext,
     options: js.Object,
-    targetNodeOrNodeArray: js.Array[typingsSlinky.std.Node],
+    targetNodeOrNodeArray: js.Array[Node],
     renderMode: String
   ): js.Any = js.native
   def renderTemplate(
     template: js.Any,
     dataOrBindingContext: KnockoutBindingContext,
     options: js.Object,
-    targetNodeOrNodeArray: typingsSlinky.std.Node,
+    targetNodeOrNodeArray: Node,
     renderMode: String
   ): js.Any = js.native
   def renderTemplate(
     template: js.Function,
     dataOrBindingContext: js.Any,
     options: js.Object,
-    targetNodeOrNodeArray: js.Array[typingsSlinky.std.Node],
+    targetNodeOrNodeArray: js.Array[Node],
     renderMode: String
   ): js.Any = js.native
   def renderTemplate(
     template: js.Function,
     dataOrBindingContext: js.Any,
     options: js.Object,
-    targetNodeOrNodeArray: typingsSlinky.std.Node,
+    targetNodeOrNodeArray: Node,
     renderMode: String
   ): js.Any = js.native
   def renderTemplate(
     template: js.Function,
     dataOrBindingContext: KnockoutBindingContext,
     options: js.Object,
-    targetNodeOrNodeArray: js.Array[typingsSlinky.std.Node],
+    targetNodeOrNodeArray: js.Array[Node],
     renderMode: String
   ): js.Any = js.native
   def renderTemplate(
     template: js.Function,
     dataOrBindingContext: KnockoutBindingContext,
     options: js.Object,
-    targetNodeOrNodeArray: typingsSlinky.std.Node,
+    targetNodeOrNodeArray: Node,
     renderMode: String
   ): js.Any = js.native
   def renderTemplate(template: js.Function, viewModel: js.Any): js.Any = js.native

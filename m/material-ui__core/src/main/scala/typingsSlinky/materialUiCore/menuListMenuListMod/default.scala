@@ -1,9 +1,8 @@
 package typingsSlinky.materialUiCore.menuListMenuListMod
 
 import org.scalablytyped.runtime.TopLevel
+import slinky.core.ReactComponentClass
 import typingsSlinky.react.mod.Component
-import typingsSlinky.react.mod.ComponentState
-import typingsSlinky.react.mod.ComponentType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,12 +10,12 @@ import scala.scalajs.js.annotation._
 @JSImport("@material-ui/core/MenuList/MenuList", JSImport.Default)
 @js.native
 class default protected ()
-  extends Component[MenuListProps, ComponentState, js.Any] {
+  extends Component[MenuListProps, js.Object, js.Any] {
   def this(props: MenuListProps) = this()
   def this(props: MenuListProps, context: js.Any) = this()
 }
 
 @JSImport("@material-ui/core/MenuList/MenuList", JSImport.Default)
 @js.native
-object default extends TopLevel[ComponentType[MenuListProps]]
+object default extends TopLevel[ReactComponentClass[MenuListProps]]
 

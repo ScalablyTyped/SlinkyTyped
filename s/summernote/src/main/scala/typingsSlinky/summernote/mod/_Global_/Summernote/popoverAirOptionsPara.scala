@@ -12,10 +12,8 @@ trait popoverAirOptionsPara extends js.Object
 
 object popoverAirOptionsPara {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def paragraph: typingsSlinky.summernote.summernoteStrings.paragraph = "paragraph".asInstanceOf[typingsSlinky.summernote.summernoteStrings.paragraph]
   @scala.inline
-  def paragraph: typingsSlinky.summernote.summernoteStrings.paragraph = this.cast("paragraph")
-  @scala.inline
-  def ul: typingsSlinky.summernote.summernoteStrings.ul = this.cast("ul")
+  def ul: typingsSlinky.summernote.summernoteStrings.ul = "ul".asInstanceOf[typingsSlinky.summernote.summernoteStrings.ul]
 }
 

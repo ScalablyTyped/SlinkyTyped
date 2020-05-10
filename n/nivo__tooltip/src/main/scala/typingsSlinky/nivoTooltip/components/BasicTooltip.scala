@@ -1,41 +1,40 @@
 package typingsSlinky.nivoTooltip.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.nivoTooltip.Pickanytooltip
 import typingsSlinky.nivoTooltip.mod.BasicTooltipProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object BasicTooltip
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.nivoTooltip.mod.BasicTooltip] {
+object BasicTooltip {
   @JSImport("@nivo/tooltip", "BasicTooltip")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    color: String,
-    id: TagMod[Any],
-    theme: Pickanytooltip,
-    enableChip: js.UndefOr[Boolean] = js.undefined,
-    format: /* value */ Double | String => Double | String = null,
-    renderContent: () => TagMod[Any] = null,
-    value: String | Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.nivoTooltip.mod.BasicTooltip] = {
-    val __obj = js.Dynamic.literal(color = color.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], theme = theme.asInstanceOf[js.Any])
-    if (!js.isUndefined(enableChip)) __obj.updateDynamic("enableChip")(enableChip.asInstanceOf[js.Any])
-    if (format != null) __obj.updateDynamic("format")(js.Any.fromFunction1(format))
-    if (renderContent != null) __obj.updateDynamic("renderContent")(js.Any.fromFunction0(renderContent))
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.nivoTooltip.mod.BasicTooltip] {
+    @scala.inline
+    def enableChip(value: Boolean): this.type = set("enableChip", value.asInstanceOf[js.Any])
+    @scala.inline
+    def format(value: /* value */ Double | String => Double | String): this.type = set("format", js.Any.fromFunction1(value))
+    @scala.inline
+    def id(value: TagMod[Any]): this.type = set("id", value.asInstanceOf[js.Any])
+    @scala.inline
+    def renderContent(value: () => TagMod[Any]): this.type = set("renderContent", js.Any.fromFunction0(value))
+    @scala.inline
+    def value(value: String | Double): this.type = set("value", value.asInstanceOf[js.Any])
   }
-  type Props = BasicTooltipProps
+  
+  def withProps(p: BasicTooltipProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(color: String, theme: Pickanytooltip): Builder = {
+    val __props = js.Dynamic.literal(color = color.asInstanceOf[js.Any], theme = theme.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[BasicTooltipProps]))
+  }
 }
 

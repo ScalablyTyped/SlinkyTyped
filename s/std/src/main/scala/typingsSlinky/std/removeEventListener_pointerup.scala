@@ -20,7 +20,7 @@ object removeEventListener_pointerup extends js.Object {
   def apply(
     `type`: pointerup,
     listener: js.ThisFunction1[/* this */ Window_, /* ev */ org.scalajs.dom.raw.PointerEvent, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
 }
 

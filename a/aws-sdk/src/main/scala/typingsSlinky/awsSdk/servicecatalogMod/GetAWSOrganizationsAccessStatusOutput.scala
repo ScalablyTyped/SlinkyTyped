@@ -14,10 +14,29 @@ trait GetAWSOrganizationsAccessStatusOutput extends js.Object {
 
 object GetAWSOrganizationsAccessStatusOutput {
   @scala.inline
-  def apply(AccessStatus: AccessStatus = null): GetAWSOrganizationsAccessStatusOutput = {
+  def apply(): GetAWSOrganizationsAccessStatusOutput = {
     val __obj = js.Dynamic.literal()
-    if (AccessStatus != null) __obj.updateDynamic("AccessStatus")(AccessStatus.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetAWSOrganizationsAccessStatusOutput]
   }
+  @scala.inline
+  implicit class GetAWSOrganizationsAccessStatusOutputOps[Self <: GetAWSOrganizationsAccessStatusOutput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAccessStatus(value: AccessStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AccessStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccessStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AccessStatus")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

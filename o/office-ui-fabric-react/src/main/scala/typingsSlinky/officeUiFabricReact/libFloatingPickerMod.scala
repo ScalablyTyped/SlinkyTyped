@@ -5,6 +5,7 @@ import typingsSlinky.officeUiFabricReact.floatingPeoplePickerMod.IPeopleFloating
 import typingsSlinky.officeUiFabricReact.personaTypesMod.IPersonaProps
 import typingsSlinky.officeUiFabricReact.suggestionsDottypesMod.ISuggestionsControlProps
 import typingsSlinky.officeUiFabricReact.suggestionsDottypesMod.ISuggestionsCoreProps
+import typingsSlinky.officeUiFabricReact.suggestionsDottypesMod.ISuggestionsHeaderFooterItemProps
 import typingsSlinky.officeUiFabricReact.suggestionsStoreMod.SuggestionsStoreOptions
 import typingsSlinky.officeUiFabricReact.suggestionsTypesMod.ISuggestionModel
 import scala.scalajs.js
@@ -41,8 +42,10 @@ object libFloatingPickerMod extends js.Object {
   }
   
   @js.native
-  class SuggestionsHeaderFooterItem ()
-    extends typingsSlinky.officeUiFabricReact.suggestionsControlMod.SuggestionsHeaderFooterItem
+  class SuggestionsHeaderFooterItem protected ()
+    extends typingsSlinky.officeUiFabricReact.floatingPickerMod.SuggestionsHeaderFooterItem {
+    def this(props: ISuggestionsHeaderFooterItemProps) = this()
+  }
   
   @js.native
   class SuggestionsStore[T] ()

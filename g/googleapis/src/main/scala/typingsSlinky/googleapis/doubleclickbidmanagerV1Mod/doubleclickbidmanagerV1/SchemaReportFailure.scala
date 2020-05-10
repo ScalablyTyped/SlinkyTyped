@@ -17,10 +17,29 @@ trait SchemaReportFailure extends js.Object {
 
 object SchemaReportFailure {
   @scala.inline
-  def apply(errorCode: String = null): SchemaReportFailure = {
+  def apply(): SchemaReportFailure = {
     val __obj = js.Dynamic.literal()
-    if (errorCode != null) __obj.updateDynamic("errorCode")(errorCode.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaReportFailure]
   }
+  @scala.inline
+  implicit class SchemaReportFailureOps[Self <: SchemaReportFailure] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withErrorCode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errorCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutErrorCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errorCode")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -9,45 +9,136 @@ import typingsSlinky.expressRouters.expressRoutersMod.RouteConfig
 import typingsSlinky.expressRouters.expressRoutersMod.RouteConfigAlternative
 import typingsSlinky.expressServeStaticCore.mod.NextFunction
 import typingsSlinky.expressServeStaticCore.mod.ParamsDictionary
+import typingsSlinky.expressServeStaticCore.mod.Query
 import typingsSlinky.expressServeStaticCore.mod.Request
 import typingsSlinky.expressServeStaticCore.mod.Response
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ExpressFrappeConfig extends js.Object {
-  var bodyParser: js.UndefOr[Boolean | AnonJson] = js.undefined
-  var cors: js.UndefOr[Boolean | CorsOptions] = js.undefined
-  var errorHandler: js.UndefOr[ErrorRequestHandler[ParamsDictionary]] = js.undefined
-  var io: js.UndefOr[ExpressFrappeSocketIOConfig] = js.undefined
-  var middleware: js.UndefOr[js.Array[RequestHandler[ParamsDictionary]]] = js.undefined
-  var morgan: js.UndefOr[Boolean] = js.undefined
-  var routes: js.UndefOr[js.Array[RouteConfig] | RouteConfigAlternative] = js.undefined
-  var static: js.UndefOr[String | AnonOptions] = js.undefined
+  var bodyParser: js.UndefOr[Boolean | AnonJson] = js.native
+  var cors: js.UndefOr[Boolean | CorsOptions] = js.native
+  var errorHandler: js.UndefOr[ErrorRequestHandler[ParamsDictionary, _, _, Query]] = js.native
+  var io: js.UndefOr[ExpressFrappeSocketIOConfig] = js.native
+  var middleware: js.UndefOr[js.Array[RequestHandler[ParamsDictionary, _, _, Query]]] = js.native
+  var morgan: js.UndefOr[Boolean] = js.native
+  var routes: js.UndefOr[js.Array[RouteConfig] | RouteConfigAlternative] = js.native
+  var static: js.UndefOr[String | AnonOptions] = js.native
 }
 
 object ExpressFrappeConfig {
   @scala.inline
-  def apply(
-    bodyParser: Boolean | AnonJson = null,
-    cors: Boolean | CorsOptions = null,
-    errorHandler: (/* err */ js.Any, /* req */ Request[ParamsDictionary, js.Any, js.Any], /* res */ Response[js.Any], /* next */ NextFunction) => js.Any = null,
-    io: ExpressFrappeSocketIOConfig = null,
-    middleware: js.Array[RequestHandler[ParamsDictionary]] = null,
-    morgan: js.UndefOr[Boolean] = js.undefined,
-    routes: js.Array[RouteConfig] | RouteConfigAlternative = null,
-    static: String | AnonOptions = null
-  ): ExpressFrappeConfig = {
+  def apply(): ExpressFrappeConfig = {
     val __obj = js.Dynamic.literal()
-    if (bodyParser != null) __obj.updateDynamic("bodyParser")(bodyParser.asInstanceOf[js.Any])
-    if (cors != null) __obj.updateDynamic("cors")(cors.asInstanceOf[js.Any])
-    if (errorHandler != null) __obj.updateDynamic("errorHandler")(js.Any.fromFunction4(errorHandler))
-    if (io != null) __obj.updateDynamic("io")(io.asInstanceOf[js.Any])
-    if (middleware != null) __obj.updateDynamic("middleware")(middleware.asInstanceOf[js.Any])
-    if (!js.isUndefined(morgan)) __obj.updateDynamic("morgan")(morgan.asInstanceOf[js.Any])
-    if (routes != null) __obj.updateDynamic("routes")(routes.asInstanceOf[js.Any])
-    if (static != null) __obj.updateDynamic("static")(static.asInstanceOf[js.Any])
     __obj.asInstanceOf[ExpressFrappeConfig]
   }
+  @scala.inline
+  implicit class ExpressFrappeConfigOps[Self <: ExpressFrappeConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBodyParser(value: Boolean | AnonJson): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bodyParser")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBodyParser: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bodyParser")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCors(value: Boolean | CorsOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cors")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCors: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cors")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withErrorHandler(
+      value: (/* err */ js.Any, /* req */ Request[ParamsDictionary, _, _, Query], /* res */ Response[_], /* next */ NextFunction) => js.Any
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errorHandler")(js.Any.fromFunction4(value))
+        ret
+    }
+    @scala.inline
+    def withoutErrorHandler: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errorHandler")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIo(value: ExpressFrappeSocketIOConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("io")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("io")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMiddleware(value: js.Array[RequestHandler[ParamsDictionary, _, _, Query]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("middleware")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMiddleware: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("middleware")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMorgan(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("morgan")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMorgan: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("morgan")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRoutes(value: js.Array[RouteConfig] | RouteConfigAlternative): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("routes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRoutes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("routes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatic(value: String | AnonOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("static")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatic: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("static")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

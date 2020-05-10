@@ -5,13 +5,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait PersistenceLoadingOnInfo extends js.Object {
-  var loading: ON
-  var loading_eta_seconds: String
-  var loading_loaded_bytes: String
-  var loading_loaded_perc: String
-  var loading_start_time: String
-  var loading_total_bytes: String
+  var loading: ON = js.native
+  var loading_eta_seconds: String = js.native
+  var loading_loaded_bytes: String = js.native
+  var loading_loaded_perc: String = js.native
+  var loading_start_time: String = js.native
+  var loading_total_bytes: String = js.native
 }
 
 object PersistenceLoadingOnInfo {
@@ -25,8 +26,51 @@ object PersistenceLoadingOnInfo {
     loading_total_bytes: String
   ): PersistenceLoadingOnInfo = {
     val __obj = js.Dynamic.literal(loading = loading.asInstanceOf[js.Any], loading_eta_seconds = loading_eta_seconds.asInstanceOf[js.Any], loading_loaded_bytes = loading_loaded_bytes.asInstanceOf[js.Any], loading_loaded_perc = loading_loaded_perc.asInstanceOf[js.Any], loading_start_time = loading_start_time.asInstanceOf[js.Any], loading_total_bytes = loading_total_bytes.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[PersistenceLoadingOnInfo]
   }
+  @scala.inline
+  implicit class PersistenceLoadingOnInfoOps[Self <: PersistenceLoadingOnInfo] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLoading(value: ON): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loading")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLoading_eta_seconds(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loading_eta_seconds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLoading_loaded_bytes(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loading_loaded_bytes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLoading_loaded_perc(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loading_loaded_perc")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLoading_start_time(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loading_start_time")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLoading_total_bytes(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loading_total_bytes")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

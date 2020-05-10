@@ -22,16 +22,53 @@ trait SchemaProductAmount extends js.Object {
 
 object SchemaProductAmount {
   @scala.inline
-  def apply(
-    priceAmount: SchemaPrice = null,
-    remittedTaxAmount: SchemaPrice = null,
-    taxAmount: SchemaPrice = null
-  ): SchemaProductAmount = {
+  def apply(): SchemaProductAmount = {
     val __obj = js.Dynamic.literal()
-    if (priceAmount != null) __obj.updateDynamic("priceAmount")(priceAmount.asInstanceOf[js.Any])
-    if (remittedTaxAmount != null) __obj.updateDynamic("remittedTaxAmount")(remittedTaxAmount.asInstanceOf[js.Any])
-    if (taxAmount != null) __obj.updateDynamic("taxAmount")(taxAmount.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaProductAmount]
   }
+  @scala.inline
+  implicit class SchemaProductAmountOps[Self <: SchemaProductAmount] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPriceAmount(value: SchemaPrice): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("priceAmount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPriceAmount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("priceAmount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRemittedTaxAmount(value: SchemaPrice): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("remittedTaxAmount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRemittedTaxAmount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("remittedTaxAmount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTaxAmount(value: SchemaPrice): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("taxAmount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTaxAmount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("taxAmount")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

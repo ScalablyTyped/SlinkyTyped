@@ -6,54 +6,192 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ServerOptions extends js.Object {
-  var allowNonSecure: js.UndefOr[Boolean] = js.undefined
-  var ascoltatore: js.UndefOr[js.Any] = js.undefined
-  var backend: js.UndefOr[js.Any] = js.undefined
-  var bundle: js.UndefOr[js.Any] = js.undefined
-  var host: js.UndefOr[String] = js.undefined
-  var http: js.UndefOr[AnonPort] = js.undefined
-  var logger: js.UndefOr[js.Any] = js.undefined
-  var maxInflightMessages: js.UndefOr[Double] = js.undefined
-  var persistence: js.UndefOr[js.Any] = js.undefined
-  var port: js.UndefOr[Double] = js.undefined
-  var secure: js.UndefOr[AnonCertPath] = js.undefined
-  var static: js.UndefOr[js.Any] = js.undefined
-  var stats: js.UndefOr[js.Any] = js.undefined
+  var allowNonSecure: js.UndefOr[Boolean] = js.native
+  var ascoltatore: js.UndefOr[js.Any] = js.native
+  var backend: js.UndefOr[js.Any] = js.native
+  var bundle: js.UndefOr[js.Any] = js.native
+  var host: js.UndefOr[String] = js.native
+  var http: js.UndefOr[AnonPort] = js.native
+  var logger: js.UndefOr[js.Any] = js.native
+  var maxInflightMessages: js.UndefOr[Double] = js.native
+  var persistence: js.UndefOr[js.Any] = js.native
+  var port: js.UndefOr[Double] = js.native
+  var secure: js.UndefOr[AnonCertPath] = js.native
+  var static: js.UndefOr[js.Any] = js.native
+  var stats: js.UndefOr[js.Any] = js.native
 }
 
 object ServerOptions {
   @scala.inline
-  def apply(
-    allowNonSecure: js.UndefOr[Boolean] = js.undefined,
-    ascoltatore: js.Any = null,
-    backend: js.Any = null,
-    bundle: js.Any = null,
-    host: String = null,
-    http: AnonPort = null,
-    logger: js.Any = null,
-    maxInflightMessages: Int | Double = null,
-    persistence: js.Any = null,
-    port: Int | Double = null,
-    secure: AnonCertPath = null,
-    static: js.Any = null,
-    stats: js.Any = null
-  ): ServerOptions = {
+  def apply(): ServerOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(allowNonSecure)) __obj.updateDynamic("allowNonSecure")(allowNonSecure.asInstanceOf[js.Any])
-    if (ascoltatore != null) __obj.updateDynamic("ascoltatore")(ascoltatore.asInstanceOf[js.Any])
-    if (backend != null) __obj.updateDynamic("backend")(backend.asInstanceOf[js.Any])
-    if (bundle != null) __obj.updateDynamic("bundle")(bundle.asInstanceOf[js.Any])
-    if (host != null) __obj.updateDynamic("host")(host.asInstanceOf[js.Any])
-    if (http != null) __obj.updateDynamic("http")(http.asInstanceOf[js.Any])
-    if (logger != null) __obj.updateDynamic("logger")(logger.asInstanceOf[js.Any])
-    if (maxInflightMessages != null) __obj.updateDynamic("maxInflightMessages")(maxInflightMessages.asInstanceOf[js.Any])
-    if (persistence != null) __obj.updateDynamic("persistence")(persistence.asInstanceOf[js.Any])
-    if (port != null) __obj.updateDynamic("port")(port.asInstanceOf[js.Any])
-    if (secure != null) __obj.updateDynamic("secure")(secure.asInstanceOf[js.Any])
-    if (static != null) __obj.updateDynamic("static")(static.asInstanceOf[js.Any])
-    if (stats != null) __obj.updateDynamic("stats")(stats.asInstanceOf[js.Any])
     __obj.asInstanceOf[ServerOptions]
   }
+  @scala.inline
+  implicit class ServerOptionsOps[Self <: ServerOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAllowNonSecure(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowNonSecure")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowNonSecure: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowNonSecure")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAscoltatore(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ascoltatore")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAscoltatore: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ascoltatore")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBackend(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backend")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackend: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backend")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBundle(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bundle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBundle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bundle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHost(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("host")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHost: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("host")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHttp(value: AnonPort): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("http")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHttp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("http")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLogger(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("logger")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLogger: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("logger")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxInflightMessages(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxInflightMessages")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxInflightMessages: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxInflightMessages")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPersistence(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("persistence")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPersistence: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("persistence")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPort(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("port")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPort: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("port")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSecure(value: AnonCertPath): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("secure")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSecure: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("secure")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatic(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("static")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatic: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("static")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStats(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stats")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStats: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stats")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

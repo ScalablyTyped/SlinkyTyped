@@ -1,11 +1,10 @@
 package typingsSlinky.materialUiCore.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.materialUiCore.PartialClassNameMapGridLiActionIcon
 import typingsSlinky.materialUiCore.gridListTileBarGridListTileBarMod.GridListTileBarProps
 import typingsSlinky.materialUiCore.gridListTileBarMod.default
@@ -13,43 +12,54 @@ import typingsSlinky.materialUiCore.materialUiCoreStrings.bottom
 import typingsSlinky.materialUiCore.materialUiCoreStrings.left
 import typingsSlinky.materialUiCore.materialUiCoreStrings.right
 import typingsSlinky.materialUiCore.materialUiCoreStrings.top
+import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.Ref
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object GridListTileBar
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object GridListTileBar {
   @JSImport("@material-ui/core/GridListTileBar", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, style */
-  def apply(
-    actionIcon: TagMod[Any] = null,
-    actionPosition: left | right = null,
-    classes: PartialClassNameMapGridLiActionIcon = null,
-    innerRef: Ref[_] | ReactRef[_] = null,
-    subtitle: TagMod[Any] = null,
-    title: TagMod[Any] = null,
-    titlePosition: top | bottom = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (actionIcon != null) __obj.updateDynamic("actionIcon")(actionIcon.asInstanceOf[js.Any])
-    if (actionPosition != null) __obj.updateDynamic("actionPosition")(actionPosition.asInstanceOf[js.Any])
-    if (classes != null) __obj.updateDynamic("classes")(classes.asInstanceOf[js.Any])
-    if (innerRef != null) __obj.updateDynamic("innerRef")(innerRef.asInstanceOf[js.Any])
-    if (subtitle != null) __obj.updateDynamic("subtitle")(subtitle.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
-    if (titlePosition != null) __obj.updateDynamic("titlePosition")(titlePosition.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def actionIconReactElement(value: ReactElement): this.type = set("actionIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def actionIcon(value: TagMod[Any]): this.type = set("actionIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def actionPosition(value: left | right): this.type = set("actionPosition", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def classes(value: PartialClassNameMapGridLiActionIcon): this.type = set("classes", value.asInstanceOf[js.Any])
+    @scala.inline
+    def innerRefRefObject(value: ReactRef[_]): this.type = set("innerRef", value.asInstanceOf[js.Any])
+    @scala.inline
+    def innerRefFunction1(value: /* instance */ _ | Null => Unit): this.type = set("innerRef", js.Any.fromFunction1(value))
+    @scala.inline
+    def innerRef(value: Ref[_] | ReactRef[_]): this.type = set("innerRef", value.asInstanceOf[js.Any])
+    @scala.inline
+    def innerRefNull: this.type = set("innerRef", null)
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def subtitleReactElement(value: ReactElement): this.type = set("subtitle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def subtitle(value: TagMod[Any]): this.type = set("subtitle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
+    @scala.inline
+    def title(value: TagMod[Any]): this.type = set("title", value.asInstanceOf[js.Any])
+    @scala.inline
+    def titlePosition(value: top | bottom): this.type = set("titlePosition", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[
-  slinky.web.html.`*`.tag.type, 
-  typingsSlinky.materialUiCore.gridListTileBarMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = GridListTileBarProps
+  
+  def withProps(p: GridListTileBarProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: GridListTileBar.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

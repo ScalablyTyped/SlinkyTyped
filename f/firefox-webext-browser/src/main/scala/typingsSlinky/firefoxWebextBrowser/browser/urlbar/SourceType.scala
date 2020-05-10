@@ -21,18 +21,16 @@ trait SourceType extends js.Object
 
 object SourceType {
   @scala.inline
-  def bookmarks: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.bookmarks = this.cast("bookmarks")
+  def bookmarks: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.bookmarks = "bookmarks".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.bookmarks]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def history: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.history = "history".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.history]
   @scala.inline
-  def history: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.history = this.cast("history")
+  def local: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.local = "local".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.local]
   @scala.inline
-  def local: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.local = this.cast("local")
+  def network: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.network = "network".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.network]
   @scala.inline
-  def network: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.network = this.cast("network")
+  def search: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.search = "search".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.search]
   @scala.inline
-  def search: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.search = this.cast("search")
-  @scala.inline
-  def tabs: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.tabs = this.cast("tabs")
+  def tabs: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.tabs = "tabs".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.tabs]
 }
 

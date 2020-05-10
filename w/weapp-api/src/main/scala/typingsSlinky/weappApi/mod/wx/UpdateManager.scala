@@ -4,23 +4,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait UpdateManager extends js.Object {
   /**
     * 强制小程序重启并使用新版本。在小程序新版本下载完成后（即收到 onUpdateReady 回调）调用。
     */
-  def applyUpdate(callback: DataResponseCallback): Unit
+  def applyUpdate(callback: DataResponseCallback): Unit = js.native
   /**
     * 监听向微信后台请求检查更新结果事件。微信在小程序冷启动时自动检查更新，不需由开发者主动触发。
     */
-  def onCheckForUpdate(): Unit
+  def onCheckForUpdate(): Unit = js.native
   /**
     * 监听小程序更新失败事件。小程序有新版本，客户端主动触发下载（无需开发者触发），下载失败（可能是网络原因等）后回调
     */
-  def onUpdateFailed(callback: NoneParamCallback): Unit
+  def onUpdateFailed(callback: NoneParamCallback): Unit = js.native
   /**
     * 监听小程序有版本更新事件。客户端主动触发下载（无需开发者触发），下载成功后回调
     */
-  def onUpdateReady(callback: NoneParamCallback): Unit
+  def onUpdateReady(callback: NoneParamCallback): Unit = js.native
 }
 
 object UpdateManager {
@@ -32,8 +33,39 @@ object UpdateManager {
     onUpdateReady: NoneParamCallback => Unit
   ): UpdateManager = {
     val __obj = js.Dynamic.literal(applyUpdate = js.Any.fromFunction1(applyUpdate), onCheckForUpdate = js.Any.fromFunction0(onCheckForUpdate), onUpdateFailed = js.Any.fromFunction1(onUpdateFailed), onUpdateReady = js.Any.fromFunction1(onUpdateReady))
-  
     __obj.asInstanceOf[UpdateManager]
   }
+  @scala.inline
+  implicit class UpdateManagerOps[Self <: UpdateManager] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withApplyUpdate(value: DataResponseCallback => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("applyUpdate")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOnCheckForUpdate(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onCheckForUpdate")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withOnUpdateFailed(value: NoneParamCallback => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onUpdateFailed")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOnUpdateReady(value: NoneParamCallback => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onUpdateReady")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

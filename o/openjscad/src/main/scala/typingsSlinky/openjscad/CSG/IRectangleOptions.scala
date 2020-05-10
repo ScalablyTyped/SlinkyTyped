@@ -4,27 +4,75 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IRectangleOptions extends js.Object {
-  var center: js.UndefOr[Vector2D] = js.undefined
-  var corner1: js.UndefOr[Vector2D] = js.undefined
-  var corner2: js.UndefOr[Vector2D] = js.undefined
-  var radius: js.UndefOr[Vector2D] = js.undefined
+  var center: js.UndefOr[Vector2D] = js.native
+  var corner1: js.UndefOr[Vector2D] = js.native
+  var corner2: js.UndefOr[Vector2D] = js.native
+  var radius: js.UndefOr[Vector2D] = js.native
 }
 
 object IRectangleOptions {
   @scala.inline
-  def apply(
-    center: Vector2D = null,
-    corner1: Vector2D = null,
-    corner2: Vector2D = null,
-    radius: Vector2D = null
-  ): IRectangleOptions = {
+  def apply(): IRectangleOptions = {
     val __obj = js.Dynamic.literal()
-    if (center != null) __obj.updateDynamic("center")(center.asInstanceOf[js.Any])
-    if (corner1 != null) __obj.updateDynamic("corner1")(corner1.asInstanceOf[js.Any])
-    if (corner2 != null) __obj.updateDynamic("corner2")(corner2.asInstanceOf[js.Any])
-    if (radius != null) __obj.updateDynamic("radius")(radius.asInstanceOf[js.Any])
     __obj.asInstanceOf[IRectangleOptions]
   }
+  @scala.inline
+  implicit class IRectangleOptionsOps[Self <: IRectangleOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCenter(value: Vector2D): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("center")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCenter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("center")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCorner1(value: Vector2D): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("corner1")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCorner1: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("corner1")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCorner2(value: Vector2D): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("corner2")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCorner2: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("corner2")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRadius(value: Vector2D): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("radius")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRadius: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("radius")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

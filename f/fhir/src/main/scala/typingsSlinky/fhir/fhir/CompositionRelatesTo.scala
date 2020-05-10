@@ -7,50 +7,81 @@ import scala.scalajs.js.annotation._
 /**
   * Relationships to other compositions/documents
   */
+@js.native
 trait CompositionRelatesTo extends BackboneElement {
   /**
     * Contains extended information for property 'code'.
     */
-  var _code: js.UndefOr[Element] = js.undefined
+  var _code: js.UndefOr[Element] = js.native
   /**
     * replaces | transforms | signs | appends
     */
-  var code: typingsSlinky.fhir.fhir.code
+  var code: typingsSlinky.fhir.fhir.code = js.native
   /**
     * Target of the relationship
     */
-  var targetIdentifier: js.UndefOr[Identifier] = js.undefined
+  var targetIdentifier: js.UndefOr[Identifier] = js.native
   /**
     * Target of the relationship
     */
-  var targetReference: js.UndefOr[Reference] = js.undefined
+  var targetReference: js.UndefOr[Reference] = js.native
 }
 
 object CompositionRelatesTo {
   @scala.inline
-  def apply(
-    code: code,
-    _code: Element = null,
-    _fhir_comments: js.Array[Element] = null,
-    _id: Element = null,
-    extension: js.Array[Extension] = null,
-    fhir_comments: js.Array[String] = null,
-    id: String = null,
-    modifierExtension: js.Array[Extension] = null,
-    targetIdentifier: Identifier = null,
-    targetReference: Reference = null
-  ): CompositionRelatesTo = {
+  def apply(code: code): CompositionRelatesTo = {
     val __obj = js.Dynamic.literal(code = code.asInstanceOf[js.Any])
-    if (_code != null) __obj.updateDynamic("_code")(_code.asInstanceOf[js.Any])
-    if (_fhir_comments != null) __obj.updateDynamic("_fhir_comments")(_fhir_comments.asInstanceOf[js.Any])
-    if (_id != null) __obj.updateDynamic("_id")(_id.asInstanceOf[js.Any])
-    if (extension != null) __obj.updateDynamic("extension")(extension.asInstanceOf[js.Any])
-    if (fhir_comments != null) __obj.updateDynamic("fhir_comments")(fhir_comments.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (modifierExtension != null) __obj.updateDynamic("modifierExtension")(modifierExtension.asInstanceOf[js.Any])
-    if (targetIdentifier != null) __obj.updateDynamic("targetIdentifier")(targetIdentifier.asInstanceOf[js.Any])
-    if (targetReference != null) __obj.updateDynamic("targetReference")(targetReference.asInstanceOf[js.Any])
     __obj.asInstanceOf[CompositionRelatesTo]
   }
+  @scala.inline
+  implicit class CompositionRelatesToOps[Self <: CompositionRelatesTo] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCode(value: code): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("code")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_code(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_code")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_code: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_code")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTargetIdentifier(value: Identifier): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetIdentifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTargetIdentifier: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetIdentifier")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTargetReference(value: Reference): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetReference")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTargetReference: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetReference")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

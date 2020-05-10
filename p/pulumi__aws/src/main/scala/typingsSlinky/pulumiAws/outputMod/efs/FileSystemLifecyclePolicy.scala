@@ -14,10 +14,29 @@ trait FileSystemLifecyclePolicy extends js.Object {
 
 object FileSystemLifecyclePolicy {
   @scala.inline
-  def apply(transitionToIa: String = null): FileSystemLifecyclePolicy = {
+  def apply(): FileSystemLifecyclePolicy = {
     val __obj = js.Dynamic.literal()
-    if (transitionToIa != null) __obj.updateDynamic("transitionToIa")(transitionToIa.asInstanceOf[js.Any])
     __obj.asInstanceOf[FileSystemLifecyclePolicy]
   }
+  @scala.inline
+  implicit class FileSystemLifecyclePolicyOps[Self <: FileSystemLifecyclePolicy] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withTransitionToIa(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transitionToIa")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTransitionToIa: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transitionToIa")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

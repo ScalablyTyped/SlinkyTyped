@@ -23,7 +23,7 @@ package object dmsMod {
   type Boolean = scala.Boolean
   type BooleanOptional = scala.Boolean
   type CertificateList = js.Array[typingsSlinky.awsSdk.dmsMod.Certificate]
-  type CertificateWallet = typingsSlinky.node.Buffer | scala.scalajs.js.typedarray.Uint8Array | typingsSlinky.awsSdk.dmsMod.Blob | java.lang.String
+  type CertificateWallet = typingsSlinky.node.Buffer | js.typedarray.Uint8Array | typingsSlinky.awsSdk.dmsMod.Blob | java.lang.String
   type ClientConfiguration = typingsSlinky.awsSdk.serviceMod.ServiceConfigurationOptions with typingsSlinky.awsSdk.dmsMod.ClientApiVersions
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.none__
@@ -70,7 +70,12 @@ package object dmsMod {
   type IntegerOptional = scala.Double
   type KeyList = js.Array[typingsSlinky.awsSdk.dmsMod.String]
   type Long = scala.Double
-  type MessageFormatValue = typingsSlinky.awsSdk.awsSdkStrings.json_ | java.lang.String
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.json_
+    - typingsSlinky.awsSdk.awsSdkStrings.`json-unformatted`
+    - java.lang.String
+  */
+  type MessageFormatValue = typingsSlinky.awsSdk.dmsMod._MessageFormatValue | java.lang.String
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.`full-load`
     - typingsSlinky.awsSdk.awsSdkStrings.cdc

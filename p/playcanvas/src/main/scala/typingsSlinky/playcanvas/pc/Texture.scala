@@ -1,10 +1,10 @@
 package typingsSlinky.playcanvas.pc
 
+import org.scalajs.dom.raw.HTMLCanvasElement
 import org.scalajs.dom.raw.HTMLImageElement
+import org.scalajs.dom.raw.HTMLVideoElement
 import typingsSlinky.playcanvas.AnonAddressU
 import typingsSlinky.playcanvas.AnonFace
-import typingsSlinky.std.HTMLCanvasElement
-import typingsSlinky.std.HTMLVideoElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -294,13 +294,10 @@ class Texture protected () extends js.Object {
     * @param {number} [options.face] - If the texture is a cubemap, this is the index of the face to lock.
     * @returns {Uint8Array|Uint16Array|Float32Array} A typed array containing the pixel data of the locked mip level.
     */
-  def lock(): scala.scalajs.js.typedarray.Uint8Array | scala.scalajs.js.typedarray.Uint16Array | scala.scalajs.js.typedarray.Float32Array = js.native
-  def lock(options: AnonFace): scala.scalajs.js.typedarray.Uint8Array | scala.scalajs.js.typedarray.Uint16Array | scala.scalajs.js.typedarray.Float32Array = js.native
-  def setSource(source: js.Array[HTMLCanvasElement | typingsSlinky.std.HTMLImageElement | HTMLVideoElement]): Unit = js.native
-  def setSource(
-    source: js.Array[HTMLCanvasElement | typingsSlinky.std.HTMLImageElement | HTMLVideoElement],
-    mipLevel: Double
-  ): Unit = js.native
+  def lock(): js.typedarray.Uint8Array | js.typedarray.Uint16Array | js.typedarray.Float32Array = js.native
+  def lock(options: AnonFace): js.typedarray.Uint8Array | js.typedarray.Uint16Array | js.typedarray.Float32Array = js.native
+  def setSource(source: js.Array[HTMLCanvasElement | HTMLImageElement | HTMLVideoElement]): Unit = js.native
+  def setSource(source: js.Array[HTMLCanvasElement | HTMLImageElement | HTMLVideoElement], mipLevel: Double): Unit = js.native
   /**
     * @function
     * @name pc.Texture#setSource
@@ -313,8 +310,8 @@ class Texture protected () extends js.Object {
     */
   def setSource(source: HTMLCanvasElement): Unit = js.native
   def setSource(source: HTMLCanvasElement, mipLevel: Double): Unit = js.native
-  def setSource(source: typingsSlinky.std.HTMLImageElement): Unit = js.native
-  def setSource(source: typingsSlinky.std.HTMLImageElement, mipLevel: Double): Unit = js.native
+  def setSource(source: HTMLImageElement): Unit = js.native
+  def setSource(source: HTMLImageElement, mipLevel: Double): Unit = js.native
   def setSource(source: HTMLVideoElement): Unit = js.native
   def setSource(source: HTMLVideoElement, mipLevel: Double): Unit = js.native
   /**

@@ -5,9 +5,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait EventTask extends Task {
   @JSName("type")
-  var type_EventTask: eventTask
+  var type_EventTask: eventTask = js.native
 }
 
 object EventTask {
@@ -20,17 +21,25 @@ object EventTask {
     source: String,
     state: TaskState,
     `type`: eventTask,
-    zone: Zone,
-    cancelFn: /* task */ Task => Unit = null,
-    data: TaskData = null,
-    scheduleFn: /* task */ Task => Unit = null
+    zone: Zone
   ): EventTask = {
     val __obj = js.Dynamic.literal(callback = callback.asInstanceOf[js.Any], cancelScheduleRequest = js.Any.fromFunction0(cancelScheduleRequest), invoke = invoke.asInstanceOf[js.Any], runCount = runCount.asInstanceOf[js.Any], source = source.asInstanceOf[js.Any], state = state.asInstanceOf[js.Any], zone = zone.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (cancelFn != null) __obj.updateDynamic("cancelFn")(js.Any.fromFunction1(cancelFn))
-    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
-    if (scheduleFn != null) __obj.updateDynamic("scheduleFn")(js.Any.fromFunction1(scheduleFn))
     __obj.asInstanceOf[EventTask]
   }
+  @scala.inline
+  implicit class EventTaskOps[Self <: EventTask] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withType(value: eventTask): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

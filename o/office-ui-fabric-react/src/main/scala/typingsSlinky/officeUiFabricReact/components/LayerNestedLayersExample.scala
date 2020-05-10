@@ -1,20 +1,23 @@
 package typingsSlinky.officeUiFabricReact.components
 
-import slinky.core.ExternalComponentNoPropsWithAttributesWithRefType
-import slinky.web.html.`*`.tag
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object LayerNestedLayersExample
-  extends ExternalComponentNoPropsWithAttributesWithRefType[
-      tag.type, 
-      typingsSlinky.officeUiFabricReact.layerNestedLayersExampleMod.LayerNestedLayersExample
-    ] {
+object LayerNestedLayersExample {
   @JSImport("office-ui-fabric-react/lib/components/Layer/examples/Layer.NestedLayers.Example", "LayerNestedLayersExample")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: js.Object): SharedBuilder_Object_159303587[
+    typingsSlinky.officeUiFabricReact.layerNestedLayersExampleMod.LayerNestedLayersExample
+  ] = new SharedBuilder_Object_159303587[
+    typingsSlinky.officeUiFabricReact.layerNestedLayersExampleMod.LayerNestedLayersExample
+  ](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: LayerNestedLayersExample.type): SharedBuilder_Object_159303587[
+    typingsSlinky.officeUiFabricReact.layerNestedLayersExampleMod.LayerNestedLayersExample
+  ] = new SharedBuilder_Object_159303587[
+    typingsSlinky.officeUiFabricReact.layerNestedLayersExampleMod.LayerNestedLayersExample
+  ](js.Array(this.component, js.Dictionary.empty))()
 }
 

@@ -1,6 +1,5 @@
 package typingsSlinky.hoek.mod
 
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,6 +8,6 @@ import scala.scalajs.js.annotation._
 @js.native
 object abort extends js.Object {
   def apply(message: String): Unit = js.native
-  def apply(message: Error): Unit = js.native
+  def apply(message: js.Error): Unit = js.native
 }
 

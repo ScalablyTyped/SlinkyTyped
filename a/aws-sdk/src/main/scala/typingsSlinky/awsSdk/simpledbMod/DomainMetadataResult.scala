@@ -38,24 +38,101 @@ trait DomainMetadataResult extends js.Object {
 
 object DomainMetadataResult {
   @scala.inline
-  def apply(
-    AttributeNameCount: Int | Double = null,
-    AttributeNamesSizeBytes: Int | Double = null,
-    AttributeValueCount: Int | Double = null,
-    AttributeValuesSizeBytes: Int | Double = null,
-    ItemCount: Int | Double = null,
-    ItemNamesSizeBytes: Int | Double = null,
-    Timestamp: Int | Double = null
-  ): DomainMetadataResult = {
+  def apply(): DomainMetadataResult = {
     val __obj = js.Dynamic.literal()
-    if (AttributeNameCount != null) __obj.updateDynamic("AttributeNameCount")(AttributeNameCount.asInstanceOf[js.Any])
-    if (AttributeNamesSizeBytes != null) __obj.updateDynamic("AttributeNamesSizeBytes")(AttributeNamesSizeBytes.asInstanceOf[js.Any])
-    if (AttributeValueCount != null) __obj.updateDynamic("AttributeValueCount")(AttributeValueCount.asInstanceOf[js.Any])
-    if (AttributeValuesSizeBytes != null) __obj.updateDynamic("AttributeValuesSizeBytes")(AttributeValuesSizeBytes.asInstanceOf[js.Any])
-    if (ItemCount != null) __obj.updateDynamic("ItemCount")(ItemCount.asInstanceOf[js.Any])
-    if (ItemNamesSizeBytes != null) __obj.updateDynamic("ItemNamesSizeBytes")(ItemNamesSizeBytes.asInstanceOf[js.Any])
-    if (Timestamp != null) __obj.updateDynamic("Timestamp")(Timestamp.asInstanceOf[js.Any])
     __obj.asInstanceOf[DomainMetadataResult]
   }
+  @scala.inline
+  implicit class DomainMetadataResultOps[Self <: DomainMetadataResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAttributeNameCount(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AttributeNameCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAttributeNameCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AttributeNameCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAttributeNamesSizeBytes(value: Long): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AttributeNamesSizeBytes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAttributeNamesSizeBytes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AttributeNamesSizeBytes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAttributeValueCount(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AttributeValueCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAttributeValueCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AttributeValueCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAttributeValuesSizeBytes(value: Long): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AttributeValuesSizeBytes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAttributeValuesSizeBytes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AttributeValuesSizeBytes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withItemCount(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ItemCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutItemCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ItemCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withItemNamesSizeBytes(value: Long): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ItemNamesSizeBytes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutItemNamesSizeBytes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ItemNamesSizeBytes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimestamp(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Timestamp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimestamp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Timestamp")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

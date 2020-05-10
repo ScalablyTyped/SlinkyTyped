@@ -12,10 +12,8 @@ trait SupportedThemes extends js.Object
 
 object SupportedThemes {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def dark: typingsSlinky.reactNavigation.reactNavigationStrings.dark = "dark".asInstanceOf[typingsSlinky.reactNavigation.reactNavigationStrings.dark]
   @scala.inline
-  def dark: typingsSlinky.reactNavigation.reactNavigationStrings.dark = this.cast("dark")
-  @scala.inline
-  def light: typingsSlinky.reactNavigation.reactNavigationStrings.light = this.cast("light")
+  def light: typingsSlinky.reactNavigation.reactNavigationStrings.light = "light".asInstanceOf[typingsSlinky.reactNavigation.reactNavigationStrings.light]
 }
 

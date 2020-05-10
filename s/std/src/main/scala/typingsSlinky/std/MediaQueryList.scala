@@ -41,7 +41,7 @@ trait MediaQueryList extends EventTarget {
   def removeEventListener_change(
     `type`: change,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ MediaQueryListEvent, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   def removeListener(): Unit = js.native
   /** @deprecated */
@@ -50,5 +50,6 @@ trait MediaQueryList extends EventTarget {
 
 @JSGlobal("MediaQueryList")
 @js.native
-object MediaQueryList extends Instantiable0[MediaQueryList]
+object MediaQueryList
+  extends Instantiable0[org.scalajs.dom.raw.MediaQueryList]
 

@@ -14,10 +14,29 @@ trait DescribeSeverityLevelsResponse extends js.Object {
 
 object DescribeSeverityLevelsResponse {
   @scala.inline
-  def apply(severityLevels: SeverityLevelsList = null): DescribeSeverityLevelsResponse = {
+  def apply(): DescribeSeverityLevelsResponse = {
     val __obj = js.Dynamic.literal()
-    if (severityLevels != null) __obj.updateDynamic("severityLevels")(severityLevels.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeSeverityLevelsResponse]
   }
+  @scala.inline
+  implicit class DescribeSeverityLevelsResponseOps[Self <: DescribeSeverityLevelsResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSeverityLevels(value: SeverityLevelsList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("severityLevels")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSeverityLevels: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("severityLevels")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

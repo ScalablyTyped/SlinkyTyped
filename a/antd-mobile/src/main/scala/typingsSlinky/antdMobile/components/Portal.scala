@@ -1,27 +1,24 @@
 package typingsSlinky.antdMobile.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
+import org.scalajs.dom.raw.Element
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent.Default
 import typingsSlinky.antdMobile.portalMod.PortalProps
 import typingsSlinky.antdMobile.portalMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Portal
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object Portal {
   @JSImport("antd-mobile/lib/input-item/Portal", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(getContainer: () => org.scalajs.dom.raw.Element, _overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(getContainer = js.Any.fromFunction0(getContainer))
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  def withProps(p: PortalProps): Default[tag.type, default] = new Default[tag.type, default](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(getContainer: () => Element): Default[tag.type, default] = {
+    val __props = js.Dynamic.literal(getContainer = js.Any.fromFunction0(getContainer))
+    new Default[tag.type, default](js.Array(this.component, __props.asInstanceOf[PortalProps]))
   }
-  type Props = PortalProps
 }
 

@@ -7,102 +7,400 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 // http://foundation.zurb.com/docs/components/joyride.html#optional-javascript-configuration
+@js.native
 trait JoyrideOptions extends js.Object {
-  var cookie_domain: js.UndefOr[Boolean] = js.undefined
-  var cookie_expires: js.UndefOr[Double] = js.undefined
-  var cookie_monster: js.UndefOr[Boolean] = js.undefined
-  var cookie_name: js.UndefOr[String] = js.undefined
-  var expose: js.UndefOr[Boolean] = js.undefined
-  var expose_add_class: js.UndefOr[String] = js.undefined
-  var exposed: js.UndefOr[js.Array[String]] = js.undefined
-  var keyboard: js.UndefOr[Boolean] = js.undefined
-  var modal: js.UndefOr[Boolean] = js.undefined
-  var next_button: js.UndefOr[Boolean] = js.undefined
-  var nub_position: js.UndefOr[String] = js.undefined
-  var pause_after: js.UndefOr[js.Array[Double]] = js.undefined
-  var post_expose_callback: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var post_ride_callback: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var post_step_callback: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var pre_ride_callback: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var pre_step_callback: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var prev_button: js.UndefOr[Boolean] = js.undefined
-  var scroll_animation: js.UndefOr[String] = js.undefined
-  var scroll_speed: js.UndefOr[Double] = js.undefined
-  var start_offset: js.UndefOr[Double] = js.undefined
-  var start_timer_on_click: js.UndefOr[Boolean] = js.undefined
-  var template: js.UndefOr[AnonButton] = js.undefined
-  var timer: js.UndefOr[Double] = js.undefined
-  var tip_animation: js.UndefOr[String] = js.undefined
-  var tip_animation_fade_speed: js.UndefOr[Double] = js.undefined
-  var tip_container: js.UndefOr[String] = js.undefined
-  var tip_location: js.UndefOr[String] = js.undefined
-  var tip_location_patterns: js.UndefOr[AnonBottom] = js.undefined
+  var cookie_domain: js.UndefOr[Boolean] = js.native
+  var cookie_expires: js.UndefOr[Double] = js.native
+  var cookie_monster: js.UndefOr[Boolean] = js.native
+  var cookie_name: js.UndefOr[String] = js.native
+  var expose: js.UndefOr[Boolean] = js.native
+  var expose_add_class: js.UndefOr[String] = js.native
+  var exposed: js.UndefOr[js.Array[String]] = js.native
+  var keyboard: js.UndefOr[Boolean] = js.native
+  var modal: js.UndefOr[Boolean] = js.native
+  var next_button: js.UndefOr[Boolean] = js.native
+  var nub_position: js.UndefOr[String] = js.native
+  var pause_after: js.UndefOr[js.Array[Double]] = js.native
+  var post_expose_callback: js.UndefOr[js.Function0[Unit]] = js.native
+  var post_ride_callback: js.UndefOr[js.Function0[Unit]] = js.native
+  var post_step_callback: js.UndefOr[js.Function0[Unit]] = js.native
+  var pre_ride_callback: js.UndefOr[js.Function0[Unit]] = js.native
+  var pre_step_callback: js.UndefOr[js.Function0[Unit]] = js.native
+  var prev_button: js.UndefOr[Boolean] = js.native
+  var scroll_animation: js.UndefOr[String] = js.native
+  var scroll_speed: js.UndefOr[Double] = js.native
+  var start_offset: js.UndefOr[Double] = js.native
+  var start_timer_on_click: js.UndefOr[Boolean] = js.native
+  var template: js.UndefOr[AnonButton] = js.native
+  var timer: js.UndefOr[Double] = js.native
+  var tip_animation: js.UndefOr[String] = js.native
+  var tip_animation_fade_speed: js.UndefOr[Double] = js.native
+  var tip_container: js.UndefOr[String] = js.native
+  var tip_location: js.UndefOr[String] = js.native
+  var tip_location_patterns: js.UndefOr[AnonBottom] = js.native
 }
 
 object JoyrideOptions {
   @scala.inline
-  def apply(
-    cookie_domain: js.UndefOr[Boolean] = js.undefined,
-    cookie_expires: Int | Double = null,
-    cookie_monster: js.UndefOr[Boolean] = js.undefined,
-    cookie_name: String = null,
-    expose: js.UndefOr[Boolean] = js.undefined,
-    expose_add_class: String = null,
-    exposed: js.Array[String] = null,
-    keyboard: js.UndefOr[Boolean] = js.undefined,
-    modal: js.UndefOr[Boolean] = js.undefined,
-    next_button: js.UndefOr[Boolean] = js.undefined,
-    nub_position: String = null,
-    pause_after: js.Array[Double] = null,
-    post_expose_callback: () => Unit = null,
-    post_ride_callback: () => Unit = null,
-    post_step_callback: () => Unit = null,
-    pre_ride_callback: () => Unit = null,
-    pre_step_callback: () => Unit = null,
-    prev_button: js.UndefOr[Boolean] = js.undefined,
-    scroll_animation: String = null,
-    scroll_speed: Int | Double = null,
-    start_offset: Int | Double = null,
-    start_timer_on_click: js.UndefOr[Boolean] = js.undefined,
-    template: AnonButton = null,
-    timer: Int | Double = null,
-    tip_animation: String = null,
-    tip_animation_fade_speed: Int | Double = null,
-    tip_container: String = null,
-    tip_location: String = null,
-    tip_location_patterns: AnonBottom = null
-  ): JoyrideOptions = {
+  def apply(): JoyrideOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(cookie_domain)) __obj.updateDynamic("cookie_domain")(cookie_domain.asInstanceOf[js.Any])
-    if (cookie_expires != null) __obj.updateDynamic("cookie_expires")(cookie_expires.asInstanceOf[js.Any])
-    if (!js.isUndefined(cookie_monster)) __obj.updateDynamic("cookie_monster")(cookie_monster.asInstanceOf[js.Any])
-    if (cookie_name != null) __obj.updateDynamic("cookie_name")(cookie_name.asInstanceOf[js.Any])
-    if (!js.isUndefined(expose)) __obj.updateDynamic("expose")(expose.asInstanceOf[js.Any])
-    if (expose_add_class != null) __obj.updateDynamic("expose_add_class")(expose_add_class.asInstanceOf[js.Any])
-    if (exposed != null) __obj.updateDynamic("exposed")(exposed.asInstanceOf[js.Any])
-    if (!js.isUndefined(keyboard)) __obj.updateDynamic("keyboard")(keyboard.asInstanceOf[js.Any])
-    if (!js.isUndefined(modal)) __obj.updateDynamic("modal")(modal.asInstanceOf[js.Any])
-    if (!js.isUndefined(next_button)) __obj.updateDynamic("next_button")(next_button.asInstanceOf[js.Any])
-    if (nub_position != null) __obj.updateDynamic("nub_position")(nub_position.asInstanceOf[js.Any])
-    if (pause_after != null) __obj.updateDynamic("pause_after")(pause_after.asInstanceOf[js.Any])
-    if (post_expose_callback != null) __obj.updateDynamic("post_expose_callback")(js.Any.fromFunction0(post_expose_callback))
-    if (post_ride_callback != null) __obj.updateDynamic("post_ride_callback")(js.Any.fromFunction0(post_ride_callback))
-    if (post_step_callback != null) __obj.updateDynamic("post_step_callback")(js.Any.fromFunction0(post_step_callback))
-    if (pre_ride_callback != null) __obj.updateDynamic("pre_ride_callback")(js.Any.fromFunction0(pre_ride_callback))
-    if (pre_step_callback != null) __obj.updateDynamic("pre_step_callback")(js.Any.fromFunction0(pre_step_callback))
-    if (!js.isUndefined(prev_button)) __obj.updateDynamic("prev_button")(prev_button.asInstanceOf[js.Any])
-    if (scroll_animation != null) __obj.updateDynamic("scroll_animation")(scroll_animation.asInstanceOf[js.Any])
-    if (scroll_speed != null) __obj.updateDynamic("scroll_speed")(scroll_speed.asInstanceOf[js.Any])
-    if (start_offset != null) __obj.updateDynamic("start_offset")(start_offset.asInstanceOf[js.Any])
-    if (!js.isUndefined(start_timer_on_click)) __obj.updateDynamic("start_timer_on_click")(start_timer_on_click.asInstanceOf[js.Any])
-    if (template != null) __obj.updateDynamic("template")(template.asInstanceOf[js.Any])
-    if (timer != null) __obj.updateDynamic("timer")(timer.asInstanceOf[js.Any])
-    if (tip_animation != null) __obj.updateDynamic("tip_animation")(tip_animation.asInstanceOf[js.Any])
-    if (tip_animation_fade_speed != null) __obj.updateDynamic("tip_animation_fade_speed")(tip_animation_fade_speed.asInstanceOf[js.Any])
-    if (tip_container != null) __obj.updateDynamic("tip_container")(tip_container.asInstanceOf[js.Any])
-    if (tip_location != null) __obj.updateDynamic("tip_location")(tip_location.asInstanceOf[js.Any])
-    if (tip_location_patterns != null) __obj.updateDynamic("tip_location_patterns")(tip_location_patterns.asInstanceOf[js.Any])
     __obj.asInstanceOf[JoyrideOptions]
   }
+  @scala.inline
+  implicit class JoyrideOptionsOps[Self <: JoyrideOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCookie_domain(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cookie_domain")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCookie_domain: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cookie_domain")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCookie_expires(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cookie_expires")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCookie_expires: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cookie_expires")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCookie_monster(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cookie_monster")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCookie_monster: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cookie_monster")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCookie_name(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cookie_name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCookie_name: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cookie_name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExpose(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expose")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExpose: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expose")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExpose_add_class(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expose_add_class")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExpose_add_class: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expose_add_class")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExposed(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exposed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExposed: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exposed")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKeyboard(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keyboard")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKeyboard: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keyboard")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withModal(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("modal")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutModal: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("modal")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNext_button(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("next_button")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNext_button: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("next_button")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNub_position(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nub_position")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNub_position: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nub_position")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPause_after(value: js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pause_after")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPause_after: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pause_after")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPost_expose_callback(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("post_expose_callback")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutPost_expose_callback: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("post_expose_callback")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPost_ride_callback(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("post_ride_callback")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutPost_ride_callback: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("post_ride_callback")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPost_step_callback(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("post_step_callback")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutPost_step_callback: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("post_step_callback")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPre_ride_callback(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pre_ride_callback")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutPre_ride_callback: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pre_ride_callback")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPre_step_callback(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pre_step_callback")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutPre_step_callback: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pre_step_callback")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrev_button(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prev_button")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrev_button: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prev_button")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScroll_animation(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scroll_animation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScroll_animation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scroll_animation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScroll_speed(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scroll_speed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScroll_speed: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scroll_speed")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStart_offset(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("start_offset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStart_offset: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("start_offset")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStart_timer_on_click(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("start_timer_on_click")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStart_timer_on_click: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("start_timer_on_click")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTemplate(value: AnonButton): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("template")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTemplate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("template")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimer(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTip_animation(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tip_animation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTip_animation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tip_animation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTip_animation_fade_speed(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tip_animation_fade_speed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTip_animation_fade_speed: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tip_animation_fade_speed")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTip_container(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tip_container")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTip_container: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tip_container")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTip_location(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tip_location")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTip_location: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tip_location")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTip_location_patterns(value: AnonBottom): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tip_location_patterns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTip_location_patterns: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tip_location_patterns")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

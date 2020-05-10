@@ -22,6 +22,7 @@ import typingsSlinky.node.fsMod.symlink.Type
 import typingsSlinky.node.perfHooksMod.EntryType
 import typingsSlinky.node.tlsMod.SecureVersion
 import typingsSlinky.node.utilMod.Style
+import typingsSlinky.node.vmMod.MeasureMemoryMode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -636,6 +637,9 @@ object nodeStrings {
   sealed trait der extends KeyFormat
   
   @js.native
+  sealed trait detailed extends MeasureMemoryMode
+  
+  @js.native
   sealed trait dir extends Type
   
   @js.native
@@ -836,6 +840,9 @@ object nodeStrings {
   sealed trait readable extends js.Object
   
   @js.native
+  sealed trait ready extends js.Object
+  
+  @js.native
   sealed trait regexp extends Style
   
   @js.native
@@ -917,6 +924,9 @@ object nodeStrings {
   sealed trait string extends Style
   
   @js.native
+  sealed trait summary extends MeasureMemoryMode
+  
+  @js.native
   sealed trait sunos extends Platform
   
   @js.native
@@ -947,6 +957,9 @@ object nodeStrings {
   
   @js.native
   sealed trait uncaughtException extends js.Object
+  
+  @js.native
+  sealed trait uncaughtExceptionMonitor extends js.Object
   
   @js.native
   sealed trait uncompressed extends ECDHKeyFormat
@@ -1389,6 +1402,8 @@ object nodeStrings {
   @scala.inline
   def der: der = "der".asInstanceOf[der]
   @scala.inline
+  def detailed: detailed = "detailed".asInstanceOf[detailed]
+  @scala.inline
   def dir: dir = "dir".asInstanceOf[dir]
   @scala.inline
   def disconnect: disconnect = "disconnect".asInstanceOf[disconnect]
@@ -1515,6 +1530,8 @@ object nodeStrings {
   @scala.inline
   def readable: readable = "readable".asInstanceOf[readable]
   @scala.inline
+  def ready: ready = "ready".asInstanceOf[ready]
+  @scala.inline
   def regexp: regexp = "regexp".asInstanceOf[regexp]
   @scala.inline
   def reject: reject = "reject".asInstanceOf[reject]
@@ -1569,6 +1586,8 @@ object nodeStrings {
   @scala.inline
   def string: string = "string".asInstanceOf[string]
   @scala.inline
+  def summary: summary = "summary".asInstanceOf[summary]
+  @scala.inline
   def sunos: sunos = "sunos".asInstanceOf[sunos]
   @scala.inline
   def symbol: symbol = "symbol".asInstanceOf[symbol]
@@ -1588,6 +1607,8 @@ object nodeStrings {
   def udp6: udp6 = "udp6".asInstanceOf[udp6]
   @scala.inline
   def uncaughtException: uncaughtException = "uncaughtException".asInstanceOf[uncaughtException]
+  @scala.inline
+  def uncaughtExceptionMonitor: uncaughtExceptionMonitor = "uncaughtExceptionMonitor".asInstanceOf[uncaughtExceptionMonitor]
   @scala.inline
   def uncompressed: uncompressed = "uncompressed".asInstanceOf[uncompressed]
   @scala.inline

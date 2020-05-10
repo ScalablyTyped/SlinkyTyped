@@ -18,11 +18,41 @@ trait DescribeTemplateResponse extends js.Object {
 
 object DescribeTemplateResponse {
   @scala.inline
-  def apply(Status: Int | scala.Double = null, Template: Template = null): DescribeTemplateResponse = {
+  def apply(): DescribeTemplateResponse = {
     val __obj = js.Dynamic.literal()
-    if (Status != null) __obj.updateDynamic("Status")(Status.asInstanceOf[js.Any])
-    if (Template != null) __obj.updateDynamic("Template")(Template.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeTemplateResponse]
   }
+  @scala.inline
+  implicit class DescribeTemplateResponseOps[Self <: DescribeTemplateResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withStatus(value: StatusCode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTemplate(value: Template): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Template")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTemplate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Template")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

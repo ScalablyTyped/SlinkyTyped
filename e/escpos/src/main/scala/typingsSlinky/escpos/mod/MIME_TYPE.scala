@@ -15,16 +15,14 @@ trait MIME_TYPE extends js.Object
 
 object MIME_TYPE {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def imageSlashbmp: typingsSlinky.escpos.escposStrings.imageSlashbmp = "image/bmp".asInstanceOf[typingsSlinky.escpos.escposStrings.imageSlashbmp]
   @scala.inline
-  def imageSlashbmp: typingsSlinky.escpos.escposStrings.imageSlashbmp = this.cast("image/bmp")
+  def imageSlashgif: typingsSlinky.escpos.escposStrings.imageSlashgif = "image/gif".asInstanceOf[typingsSlinky.escpos.escposStrings.imageSlashgif]
   @scala.inline
-  def imageSlashgif: typingsSlinky.escpos.escposStrings.imageSlashgif = this.cast("image/gif")
+  def imageSlashjpeg: typingsSlinky.escpos.escposStrings.imageSlashjpeg = "image/jpeg".asInstanceOf[typingsSlinky.escpos.escposStrings.imageSlashjpeg]
   @scala.inline
-  def imageSlashjpeg: typingsSlinky.escpos.escposStrings.imageSlashjpeg = this.cast("image/jpeg")
+  def imageSlashjpg: typingsSlinky.escpos.escposStrings.imageSlashjpg = "image/jpg".asInstanceOf[typingsSlinky.escpos.escposStrings.imageSlashjpg]
   @scala.inline
-  def imageSlashjpg: typingsSlinky.escpos.escposStrings.imageSlashjpg = this.cast("image/jpg")
-  @scala.inline
-  def imageSlashpng: typingsSlinky.escpos.escposStrings.imageSlashpng = this.cast("image/png")
+  def imageSlashpng: typingsSlinky.escpos.escposStrings.imageSlashpng = "image/png".asInstanceOf[typingsSlinky.escpos.escposStrings.imageSlashpng]
 }
 

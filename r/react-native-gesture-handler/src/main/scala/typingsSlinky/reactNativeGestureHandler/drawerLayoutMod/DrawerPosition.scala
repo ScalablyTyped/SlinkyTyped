@@ -12,10 +12,8 @@ trait DrawerPosition extends js.Object
 
 object DrawerPosition {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def left: typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.left = "left".asInstanceOf[typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.left]
   @scala.inline
-  def left: typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.left = this.cast("left")
-  @scala.inline
-  def right: typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.right = this.cast("right")
+  def right: typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.right = "right".asInstanceOf[typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.right]
 }
 

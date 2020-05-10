@@ -4,14 +4,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.asn1js.mod.ILocalHexBlock because var conflicts: isHexOnly, valueHex. Inlined 
 - typingsSlinky.asn1js.mod.LocalHexBlock because Inheritance from two classes. Inlined isHexOnly, valueHex, fromBER, toBER, toBER, toJSON */ @JSImport("asn1js", "LocalUtf8StringValueBlock")
 @js.native
 class LocalUtf8StringValueBlock () extends LocalBaseBlock {
   def this(params: LocalSidValueBlockParams) = this()
   var isHexOnly: scala.Boolean = js.native
-  var valueHex: scala.scalajs.js.typedarray.ArrayBuffer = js.native
+  var valueHex: js.typedarray.ArrayBuffer = js.native
   /**
     * Base function for converting block from BER encoded array of bytes
     * 
@@ -22,7 +22,7 @@ class LocalUtf8StringValueBlock () extends LocalBaseBlock {
     * 
     * @memberOf LocalHexBlockMixin
     */
-  def fromBER(inputBuffer: scala.scalajs.js.typedarray.ArrayBuffer, inputOffset: Double, inputLength: Double): Double = js.native
+  def fromBER(inputBuffer: js.typedarray.ArrayBuffer, inputOffset: Double, inputLength: Double): Double = js.native
   /**
     * Encoding of current ASN.1 block into ASN.1 encoded array (BER rules)
     * 
@@ -31,7 +31,7 @@ class LocalUtf8StringValueBlock () extends LocalBaseBlock {
     * 
     * @memberOf LocalHexBlockMixin
     */
-  def toBER(): scala.scalajs.js.typedarray.ArrayBuffer = js.native
-  def toBER(sizeOnly: scala.Boolean): scala.scalajs.js.typedarray.ArrayBuffer = js.native
+  def toBER(): js.typedarray.ArrayBuffer = js.native
+  def toBER(sizeOnly: scala.Boolean): js.typedarray.ArrayBuffer = js.native
 }
 

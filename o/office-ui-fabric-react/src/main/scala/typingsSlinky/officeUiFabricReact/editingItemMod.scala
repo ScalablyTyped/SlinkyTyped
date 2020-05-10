@@ -2,7 +2,7 @@ package typingsSlinky.officeUiFabricReact
 
 import typingsSlinky.officeUiFabricReact.editingItemTypesMod.IEditingSelectedPeopleItemProps
 import typingsSlinky.officeUiFabricReact.extendedSelectedItemMod.IPeoplePickerItemState
-import typingsSlinky.officeUiFabricReact.utilitiesMod.BaseComponent
+import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,8 @@ import scala.scalajs.js.annotation._
 @js.native
 object editingItemMod extends js.Object {
   @js.native
-  class EditingItem protected () extends BaseComponent[IEditingSelectedPeopleItemProps, IPeoplePickerItemState] {
+  class EditingItem protected ()
+    extends Component[IEditingSelectedPeopleItemProps, IPeoplePickerItemState, js.Any] {
     def this(props: IEditingSelectedPeopleItemProps) = this()
     var _editingFloatingPicker: js.Any = js.native
     var _editingInput: js.Any = js.native

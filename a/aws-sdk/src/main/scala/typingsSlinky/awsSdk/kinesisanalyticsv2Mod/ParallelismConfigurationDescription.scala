@@ -30,20 +30,77 @@ trait ParallelismConfigurationDescription extends js.Object {
 
 object ParallelismConfigurationDescription {
   @scala.inline
-  def apply(
-    AutoScalingEnabled: js.UndefOr[Boolean] = js.undefined,
-    ConfigurationType: ConfigurationType = null,
-    CurrentParallelism: Int | Double = null,
-    Parallelism: Int | Double = null,
-    ParallelismPerKPU: Int | Double = null
-  ): ParallelismConfigurationDescription = {
+  def apply(): ParallelismConfigurationDescription = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(AutoScalingEnabled)) __obj.updateDynamic("AutoScalingEnabled")(AutoScalingEnabled.asInstanceOf[js.Any])
-    if (ConfigurationType != null) __obj.updateDynamic("ConfigurationType")(ConfigurationType.asInstanceOf[js.Any])
-    if (CurrentParallelism != null) __obj.updateDynamic("CurrentParallelism")(CurrentParallelism.asInstanceOf[js.Any])
-    if (Parallelism != null) __obj.updateDynamic("Parallelism")(Parallelism.asInstanceOf[js.Any])
-    if (ParallelismPerKPU != null) __obj.updateDynamic("ParallelismPerKPU")(ParallelismPerKPU.asInstanceOf[js.Any])
     __obj.asInstanceOf[ParallelismConfigurationDescription]
   }
+  @scala.inline
+  implicit class ParallelismConfigurationDescriptionOps[Self <: ParallelismConfigurationDescription] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAutoScalingEnabled(value: BooleanObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoScalingEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoScalingEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoScalingEnabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConfigurationType(value: ConfigurationType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConfigurationType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConfigurationType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConfigurationType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCurrentParallelism(value: Parallelism): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrentParallelism")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCurrentParallelism: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrentParallelism")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParallelism(value: Parallelism): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Parallelism")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParallelism: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Parallelism")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParallelismPerKPU(value: ParallelismPerKPU): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ParallelismPerKPU")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParallelismPerKPU: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ParallelismPerKPU")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

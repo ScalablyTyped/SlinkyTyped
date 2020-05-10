@@ -1,22 +1,69 @@
 package typingsSlinky.reactAsync
 
+import slinky.core.TagMod
+import slinky.core.facade.ReactElement
+import typingsSlinky.reactAsync.mod.AsyncFulfilled
+import typingsSlinky.reactAsync.mod.AsyncRejected
 import typingsSlinky.reactAsync.mod.SettledChildren
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonChildrenSettledChildren[T] extends js.Object {
-  var children: js.UndefOr[SettledChildren[T]] = js.undefined
-  var persist: js.UndefOr[Boolean] = js.undefined
+  var children: js.UndefOr[SettledChildren[T]] = js.native
+  var persist: js.UndefOr[Boolean] = js.native
 }
 
 object AnonChildrenSettledChildren {
   @scala.inline
-  def apply[T](children: SettledChildren[T] = null, persist: js.UndefOr[Boolean] = js.undefined): AnonChildrenSettledChildren[T] = {
+  def apply[T](): AnonChildrenSettledChildren[T] = {
     val __obj = js.Dynamic.literal()
-    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
-    if (!js.isUndefined(persist)) __obj.updateDynamic("persist")(persist.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonChildrenSettledChildren[T]]
   }
+  @scala.inline
+  implicit class AnonChildrenSettledChildrenOps[Self[t] <: AnonChildrenSettledChildren[t], T] (val x: Self[T]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
+    @scala.inline
+    def withChildrenReactElement(value: ReactElement): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withChildrenFunction1(value: /* state */ AsyncFulfilled[T] | AsyncRejected[T] => TagMod[Any]): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withChildren(value: SettledChildren[T]): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChildren: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPersist(value: Boolean): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("persist")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPersist: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("persist")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

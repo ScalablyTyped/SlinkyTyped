@@ -4,19 +4,33 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait StopReturnType extends js.Object {
   /**
     * Recorded profile.
     */
-  var profile: Profile
+  var profile: Profile = js.native
 }
 
 object StopReturnType {
   @scala.inline
   def apply(profile: Profile): StopReturnType = {
     val __obj = js.Dynamic.literal(profile = profile.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[StopReturnType]
   }
+  @scala.inline
+  implicit class StopReturnTypeOps[Self <: StopReturnType] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withProfile(value: Profile): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("profile")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

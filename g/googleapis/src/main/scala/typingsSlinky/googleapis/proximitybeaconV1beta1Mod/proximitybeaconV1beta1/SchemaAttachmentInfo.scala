@@ -39,12 +39,53 @@ trait SchemaAttachmentInfo extends js.Object {
 
 object SchemaAttachmentInfo {
   @scala.inline
-  def apply(data: String = null, maxDistanceMeters: Int | Double = null, namespacedType: String = null): SchemaAttachmentInfo = {
+  def apply(): SchemaAttachmentInfo = {
     val __obj = js.Dynamic.literal()
-    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
-    if (maxDistanceMeters != null) __obj.updateDynamic("maxDistanceMeters")(maxDistanceMeters.asInstanceOf[js.Any])
-    if (namespacedType != null) __obj.updateDynamic("namespacedType")(namespacedType.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAttachmentInfo]
   }
+  @scala.inline
+  implicit class SchemaAttachmentInfoOps[Self <: SchemaAttachmentInfo] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withData(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxDistanceMeters(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDistanceMeters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxDistanceMeters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDistanceMeters")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNamespacedType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("namespacedType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNamespacedType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("namespacedType")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

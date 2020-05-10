@@ -14,10 +14,29 @@ trait StartDataCollectionByAgentIdsResponse extends js.Object {
 
 object StartDataCollectionByAgentIdsResponse {
   @scala.inline
-  def apply(agentsConfigurationStatus: AgentConfigurationStatusList = null): StartDataCollectionByAgentIdsResponse = {
+  def apply(): StartDataCollectionByAgentIdsResponse = {
     val __obj = js.Dynamic.literal()
-    if (agentsConfigurationStatus != null) __obj.updateDynamic("agentsConfigurationStatus")(agentsConfigurationStatus.asInstanceOf[js.Any])
     __obj.asInstanceOf[StartDataCollectionByAgentIdsResponse]
   }
+  @scala.inline
+  implicit class StartDataCollectionByAgentIdsResponseOps[Self <: StartDataCollectionByAgentIdsResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAgentsConfigurationStatus(value: AgentConfigurationStatusList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("agentsConfigurationStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAgentsConfigurationStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("agentsConfigurationStatus")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

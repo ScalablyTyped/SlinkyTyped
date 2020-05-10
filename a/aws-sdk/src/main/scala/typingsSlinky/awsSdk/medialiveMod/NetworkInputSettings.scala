@@ -18,11 +18,41 @@ trait NetworkInputSettings extends js.Object {
 
 object NetworkInputSettings {
   @scala.inline
-  def apply(HlsInputSettings: HlsInputSettings = null, ServerValidation: NetworkInputServerValidation = null): NetworkInputSettings = {
+  def apply(): NetworkInputSettings = {
     val __obj = js.Dynamic.literal()
-    if (HlsInputSettings != null) __obj.updateDynamic("HlsInputSettings")(HlsInputSettings.asInstanceOf[js.Any])
-    if (ServerValidation != null) __obj.updateDynamic("ServerValidation")(ServerValidation.asInstanceOf[js.Any])
     __obj.asInstanceOf[NetworkInputSettings]
   }
+  @scala.inline
+  implicit class NetworkInputSettingsOps[Self <: NetworkInputSettings] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHlsInputSettings(value: HlsInputSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HlsInputSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHlsInputSettings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HlsInputSettings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withServerValidation(value: NetworkInputServerValidation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ServerValidation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutServerValidation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ServerValidation")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

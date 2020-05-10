@@ -4,17 +4,31 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ResolveModuleIdParams extends js.Object {
   /** The identifier of the module being declared in the generated d.ts */
-  var currentModuleId: String
+  var currentModuleId: String = js.native
 }
 
 object ResolveModuleIdParams {
   @scala.inline
   def apply(currentModuleId: String): ResolveModuleIdParams = {
     val __obj = js.Dynamic.literal(currentModuleId = currentModuleId.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[ResolveModuleIdParams]
   }
+  @scala.inline
+  implicit class ResolveModuleIdParamsOps[Self <: ResolveModuleIdParams] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCurrentModuleId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currentModuleId")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

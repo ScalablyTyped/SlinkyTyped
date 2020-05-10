@@ -18,11 +18,41 @@ trait RevisionInfo extends js.Object {
 
 object RevisionInfo {
   @scala.inline
-  def apply(genericRevisionInfo: GenericRevisionInfo = null, revisionLocation: RevisionLocation = null): RevisionInfo = {
+  def apply(): RevisionInfo = {
     val __obj = js.Dynamic.literal()
-    if (genericRevisionInfo != null) __obj.updateDynamic("genericRevisionInfo")(genericRevisionInfo.asInstanceOf[js.Any])
-    if (revisionLocation != null) __obj.updateDynamic("revisionLocation")(revisionLocation.asInstanceOf[js.Any])
     __obj.asInstanceOf[RevisionInfo]
   }
+  @scala.inline
+  implicit class RevisionInfoOps[Self <: RevisionInfo] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGenericRevisionInfo(value: GenericRevisionInfo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("genericRevisionInfo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGenericRevisionInfo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("genericRevisionInfo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRevisionLocation(value: RevisionLocation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("revisionLocation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRevisionLocation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("revisionLocation")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

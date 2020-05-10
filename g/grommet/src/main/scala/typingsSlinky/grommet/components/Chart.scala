@@ -1,9 +1,7 @@
 package typingsSlinky.grommet.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.grommet.AnonColor
 import typingsSlinky.grommet.AnonHeight
 import typingsSlinky.grommet.AnonLabel
@@ -31,49 +29,50 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Chart
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.grommet.mod.Chart] {
+object Chart {
   @JSImport("grommet", "Chart")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    values: js.Array[Double | js.Array[Double] | AnonLabel],
-    a11yTitle: A11yTitleType = null,
-    alignSelf: AlignSelfType = null,
-    bounds: js.Array[js.Array[Double]] = null,
-    color: String | AnonColor | js.Array[AnonValue] = null,
-    gap: GapType = null,
-    gridArea: GridAreaType = null,
-    margin: MarginType = null,
-    onClick: /* repeated */ js.Any => _ = null,
-    onHover: /* repeated */ js.Any => _ = null,
-    overflow: js.UndefOr[Boolean] = js.undefined,
-    round: js.UndefOr[Boolean] = js.undefined,
-    size: xxsmall | xsmall | small | medium | large | xlarge | full | AnonHeight | String = null,
-    thickness: hair | xsmall | small | medium | large | xlarge | none | String = null,
-    `type`: bar | line | area | point = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.grommet.mod.Chart] = {
-    val __obj = js.Dynamic.literal(values = values.asInstanceOf[js.Any])
-    if (a11yTitle != null) __obj.updateDynamic("a11yTitle")(a11yTitle.asInstanceOf[js.Any])
-    if (alignSelf != null) __obj.updateDynamic("alignSelf")(alignSelf.asInstanceOf[js.Any])
-    if (bounds != null) __obj.updateDynamic("bounds")(bounds.asInstanceOf[js.Any])
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (gap != null) __obj.updateDynamic("gap")(gap.asInstanceOf[js.Any])
-    if (gridArea != null) __obj.updateDynamic("gridArea")(gridArea.asInstanceOf[js.Any])
-    if (margin != null) __obj.updateDynamic("margin")(margin.asInstanceOf[js.Any])
-    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction1(onClick))
-    if (onHover != null) __obj.updateDynamic("onHover")(js.Any.fromFunction1(onHover))
-    if (!js.isUndefined(overflow)) __obj.updateDynamic("overflow")(overflow.asInstanceOf[js.Any])
-    if (!js.isUndefined(round)) __obj.updateDynamic("round")(round.asInstanceOf[js.Any])
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
-    if (thickness != null) __obj.updateDynamic("thickness")(thickness.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.grommet.mod.Chart] {
+    @scala.inline
+    def a11yTitle(value: A11yTitleType): this.type = set("a11yTitle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def alignSelf(value: AlignSelfType): this.type = set("alignSelf", value.asInstanceOf[js.Any])
+    @scala.inline
+    def bounds(value: js.Array[js.Array[Double]]): this.type = set("bounds", value.asInstanceOf[js.Any])
+    @scala.inline
+    def color(value: String | AnonColor | js.Array[AnonValue]): this.type = set("color", value.asInstanceOf[js.Any])
+    @scala.inline
+    def gap(value: GapType): this.type = set("gap", value.asInstanceOf[js.Any])
+    @scala.inline
+    def gridArea(value: GridAreaType): this.type = set("gridArea", value.asInstanceOf[js.Any])
+    @scala.inline
+    def margin(value: MarginType): this.type = set("margin", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onClick(value: /* repeated */ js.Any => _): this.type = set("onClick", js.Any.fromFunction1(value))
+    @scala.inline
+    def onHover(value: /* repeated */ js.Any => _): this.type = set("onHover", js.Any.fromFunction1(value))
+    @scala.inline
+    def overflow(value: Boolean): this.type = set("overflow", value.asInstanceOf[js.Any])
+    @scala.inline
+    def round(value: Boolean): this.type = set("round", value.asInstanceOf[js.Any])
+    @scala.inline
+    def size(value: xxsmall | xsmall | small | medium | large | xlarge | full | AnonHeight | String): this.type = set("size", value.asInstanceOf[js.Any])
+    @scala.inline
+    def thickness(value: hair | xsmall | small | medium | large | xlarge | none | String): this.type = set("thickness", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `type`(value: bar | line | area | point): this.type = set("type", value.asInstanceOf[js.Any])
   }
-  type Props = ChartProps
+  
+  def withProps(p: ChartProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(values: js.Array[Double | js.Array[Double] | AnonLabel]): Builder = {
+    val __props = js.Dynamic.literal(values = values.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ChartProps]))
+  }
 }
 

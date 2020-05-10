@@ -14,10 +14,29 @@ trait DetectEntitiesResponse extends js.Object {
 
 object DetectEntitiesResponse {
   @scala.inline
-  def apply(Entities: ListOfEntities = null): DetectEntitiesResponse = {
+  def apply(): DetectEntitiesResponse = {
     val __obj = js.Dynamic.literal()
-    if (Entities != null) __obj.updateDynamic("Entities")(Entities.asInstanceOf[js.Any])
     __obj.asInstanceOf[DetectEntitiesResponse]
   }
+  @scala.inline
+  implicit class DetectEntitiesResponseOps[Self <: DetectEntitiesResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEntities(value: ListOfEntities): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Entities")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEntities: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Entities")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

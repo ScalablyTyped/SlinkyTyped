@@ -7,16 +7,30 @@ import scala.scalajs.js.annotation._
 /**
   * GenericBookmarkListLayout width extend GenericBaseLayout
   */
+@js.native
 trait IGenericBookmarkListLayout extends IGenericBaseLayout {
-  var qBookmarkList: IBookmarkList
+  var qBookmarkList: IBookmarkList = js.native
 }
 
 object IGenericBookmarkListLayout {
   @scala.inline
   def apply(qBookmarkList: IBookmarkList, qInfo: INxInfo, qMeta: INxMeta): IGenericBookmarkListLayout = {
     val __obj = js.Dynamic.literal(qBookmarkList = qBookmarkList.asInstanceOf[js.Any], qInfo = qInfo.asInstanceOf[js.Any], qMeta = qMeta.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[IGenericBookmarkListLayout]
   }
+  @scala.inline
+  implicit class IGenericBookmarkListLayoutOps[Self <: IGenericBookmarkListLayout] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withQBookmarkList(value: IBookmarkList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("qBookmarkList")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -59,22 +59,120 @@ object Policy {
     PolicyName: ResourceName,
     RemediationEnabled: Boolean,
     ResourceType: ResourceType,
-    SecurityServicePolicyData: SecurityServicePolicyData,
-    ExcludeMap: CustomerPolicyScopeMap = null,
-    IncludeMap: CustomerPolicyScopeMap = null,
-    PolicyId: PolicyId = null,
-    PolicyUpdateToken: PolicyUpdateToken = null,
-    ResourceTags: ResourceTags = null,
-    ResourceTypeList: ResourceTypeList = null
+    SecurityServicePolicyData: SecurityServicePolicyData
   ): Policy = {
     val __obj = js.Dynamic.literal(ExcludeResourceTags = ExcludeResourceTags.asInstanceOf[js.Any], PolicyName = PolicyName.asInstanceOf[js.Any], RemediationEnabled = RemediationEnabled.asInstanceOf[js.Any], ResourceType = ResourceType.asInstanceOf[js.Any], SecurityServicePolicyData = SecurityServicePolicyData.asInstanceOf[js.Any])
-    if (ExcludeMap != null) __obj.updateDynamic("ExcludeMap")(ExcludeMap.asInstanceOf[js.Any])
-    if (IncludeMap != null) __obj.updateDynamic("IncludeMap")(IncludeMap.asInstanceOf[js.Any])
-    if (PolicyId != null) __obj.updateDynamic("PolicyId")(PolicyId.asInstanceOf[js.Any])
-    if (PolicyUpdateToken != null) __obj.updateDynamic("PolicyUpdateToken")(PolicyUpdateToken.asInstanceOf[js.Any])
-    if (ResourceTags != null) __obj.updateDynamic("ResourceTags")(ResourceTags.asInstanceOf[js.Any])
-    if (ResourceTypeList != null) __obj.updateDynamic("ResourceTypeList")(ResourceTypeList.asInstanceOf[js.Any])
     __obj.asInstanceOf[Policy]
   }
+  @scala.inline
+  implicit class PolicyOps[Self <: Policy] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withExcludeResourceTags(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExcludeResourceTags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPolicyName(value: ResourceName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PolicyName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRemediationEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RemediationEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withResourceType(value: ResourceType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSecurityServicePolicyData(value: SecurityServicePolicyData): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SecurityServicePolicyData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withExcludeMap(value: CustomerPolicyScopeMap): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExcludeMap")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExcludeMap: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExcludeMap")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIncludeMap(value: CustomerPolicyScopeMap): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IncludeMap")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIncludeMap: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IncludeMap")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPolicyId(value: PolicyId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PolicyId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPolicyId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PolicyId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPolicyUpdateToken(value: PolicyUpdateToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PolicyUpdateToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPolicyUpdateToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PolicyUpdateToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResourceTags(value: ResourceTags): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceTags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResourceTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceTags")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResourceTypeList(value: ResourceTypeList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceTypeList")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResourceTypeList: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceTypeList")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

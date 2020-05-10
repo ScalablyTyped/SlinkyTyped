@@ -1,39 +1,53 @@
 package typingsSlinky.reactColor.hueHueMod
 
-import typingsSlinky.react.mod.Key
-import typingsSlinky.react.mod.LegacyRef
-import typingsSlinky.reactColor.mod.Color
 import typingsSlinky.reactColor.mod.ColorPickerProps
-import typingsSlinky.reactColor.mod.ColorResult
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait HuePickerProps extends ColorPickerProps[HuePicker] {
-  var height: js.UndefOr[String] = js.undefined
-  var width: js.UndefOr[String] = js.undefined
+  var height: js.UndefOr[String] = js.native
+  var width: js.UndefOr[String] = js.native
 }
 
 object HuePickerProps {
   @scala.inline
-  def apply(
-    color: Color = null,
-    height: String = null,
-    key: Key = null,
-    onChange: /* color */ ColorResult => Unit = null,
-    onChangeComplete: /* color */ ColorResult => Unit = null,
-    ref: LegacyRef[HuePicker] = null,
-    width: String = null
-  ): HuePickerProps = {
+  def apply(): HuePickerProps = {
     val __obj = js.Dynamic.literal()
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
-    if (onChangeComplete != null) __obj.updateDynamic("onChangeComplete")(js.Any.fromFunction1(onChangeComplete))
-    if (ref != null) __obj.updateDynamic("ref")(ref.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     __obj.asInstanceOf[HuePickerProps]
   }
+  @scala.inline
+  implicit class HuePickerPropsOps[Self <: HuePickerProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHeight(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWidth(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

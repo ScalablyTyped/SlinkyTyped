@@ -1,14 +1,14 @@
 package typingsSlinky.grommet.diagramMod
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.react.mod.FC
+import org.scalajs.dom.raw.SVGSVGElement
+import slinky.core.ReactComponentClass
 import typingsSlinky.react.mod.SVGProps
-import typingsSlinky.std.SVGSVGElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSImport("grommet/components/Diagram", "Diagram")
 @js.native
-object Diagram extends TopLevel[FC[DiagramProps with SVGProps[SVGSVGElement]]]
+object Diagram extends TopLevel[ReactComponentClass[DiagramProps with SVGProps[SVGSVGElement]]]
 

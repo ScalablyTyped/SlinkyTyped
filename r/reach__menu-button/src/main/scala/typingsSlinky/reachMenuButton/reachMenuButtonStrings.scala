@@ -523,6 +523,9 @@ object reachMenuButtonStrings {
   sealed trait select extends _SupportedMenuLinkComponent
   
   @js.native
+  sealed trait slot extends _SupportedMenuLinkComponent
+  
+  @js.native
   sealed trait small extends _SupportedMenuLinkComponent
   
   @js.native
@@ -655,7 +658,7 @@ object reachMenuButtonStrings {
   @scala.inline
   def additions: additions = "additions".asInstanceOf[additions]
   @scala.inline
-  def `additions text`: `additions text` = "additions text".asInstanceOf[`additions text`]
+  def `additions text`: `additions text` = ("additions text").asInstanceOf[`additions text`]
   @scala.inline
   def address: address = "address".asInstanceOf[address]
   @scala.inline
@@ -992,6 +995,8 @@ object reachMenuButtonStrings {
   def section: section = "section".asInstanceOf[section]
   @scala.inline
   def select: select = "select".asInstanceOf[select]
+  @scala.inline
+  def slot: slot = "slot".asInstanceOf[slot]
   @scala.inline
   def small: small = "small".asInstanceOf[small]
   @scala.inline

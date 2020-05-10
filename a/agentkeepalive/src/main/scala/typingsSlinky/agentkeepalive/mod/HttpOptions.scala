@@ -5,34 +5,62 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait HttpOptions extends AgentOptions {
-  var freeSocketKeepAliveTimeout: js.UndefOr[Double] = js.undefined
-  var freeSocketTimeout: js.UndefOr[Double] = js.undefined
-  var socketActiveTTL: js.UndefOr[Double] = js.undefined
+  var freeSocketKeepAliveTimeout: js.UndefOr[Double] = js.native
+  var freeSocketTimeout: js.UndefOr[Double] = js.native
+  var socketActiveTTL: js.UndefOr[Double] = js.native
 }
 
 object HttpOptions {
   @scala.inline
-  def apply(
-    freeSocketKeepAliveTimeout: Int | Double = null,
-    freeSocketTimeout: Int | Double = null,
-    keepAlive: js.UndefOr[Boolean] = js.undefined,
-    keepAliveMsecs: Int | Double = null,
-    maxFreeSockets: Int | Double = null,
-    maxSockets: Int | Double = null,
-    socketActiveTTL: Int | Double = null,
-    timeout: Int | Double = null
-  ): HttpOptions = {
+  def apply(): HttpOptions = {
     val __obj = js.Dynamic.literal()
-    if (freeSocketKeepAliveTimeout != null) __obj.updateDynamic("freeSocketKeepAliveTimeout")(freeSocketKeepAliveTimeout.asInstanceOf[js.Any])
-    if (freeSocketTimeout != null) __obj.updateDynamic("freeSocketTimeout")(freeSocketTimeout.asInstanceOf[js.Any])
-    if (!js.isUndefined(keepAlive)) __obj.updateDynamic("keepAlive")(keepAlive.asInstanceOf[js.Any])
-    if (keepAliveMsecs != null) __obj.updateDynamic("keepAliveMsecs")(keepAliveMsecs.asInstanceOf[js.Any])
-    if (maxFreeSockets != null) __obj.updateDynamic("maxFreeSockets")(maxFreeSockets.asInstanceOf[js.Any])
-    if (maxSockets != null) __obj.updateDynamic("maxSockets")(maxSockets.asInstanceOf[js.Any])
-    if (socketActiveTTL != null) __obj.updateDynamic("socketActiveTTL")(socketActiveTTL.asInstanceOf[js.Any])
-    if (timeout != null) __obj.updateDynamic("timeout")(timeout.asInstanceOf[js.Any])
     __obj.asInstanceOf[HttpOptions]
   }
+  @scala.inline
+  implicit class HttpOptionsOps[Self <: HttpOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFreeSocketKeepAliveTimeout(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("freeSocketKeepAliveTimeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFreeSocketKeepAliveTimeout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("freeSocketKeepAliveTimeout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFreeSocketTimeout(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("freeSocketTimeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFreeSocketTimeout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("freeSocketTimeout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSocketActiveTTL(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("socketActiveTTL")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSocketActiveTTL: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("socketActiveTTL")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

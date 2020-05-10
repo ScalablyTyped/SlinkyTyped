@@ -18,11 +18,41 @@ trait DescribeElasticLoadBalancersRequest extends js.Object {
 
 object DescribeElasticLoadBalancersRequest {
   @scala.inline
-  def apply(LayerIds: Strings = null, StackId: String = null): DescribeElasticLoadBalancersRequest = {
+  def apply(): DescribeElasticLoadBalancersRequest = {
     val __obj = js.Dynamic.literal()
-    if (LayerIds != null) __obj.updateDynamic("LayerIds")(LayerIds.asInstanceOf[js.Any])
-    if (StackId != null) __obj.updateDynamic("StackId")(StackId.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeElasticLoadBalancersRequest]
   }
+  @scala.inline
+  implicit class DescribeElasticLoadBalancersRequestOps[Self <: DescribeElasticLoadBalancersRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLayerIds(value: Strings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LayerIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLayerIds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LayerIds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStackId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StackId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStackId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StackId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

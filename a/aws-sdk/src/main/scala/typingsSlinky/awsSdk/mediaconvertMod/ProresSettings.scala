@@ -56,32 +56,149 @@ trait ProresSettings extends js.Object {
 
 object ProresSettings {
   @scala.inline
-  def apply(
-    CodecProfile: ProresCodecProfile = null,
-    FramerateControl: ProresFramerateControl = null,
-    FramerateConversionAlgorithm: ProresFramerateConversionAlgorithm = null,
-    FramerateDenominator: Int | Double = null,
-    FramerateNumerator: Int | Double = null,
-    InterlaceMode: ProresInterlaceMode = null,
-    ParControl: ProresParControl = null,
-    ParDenominator: Int | Double = null,
-    ParNumerator: Int | Double = null,
-    SlowPal: ProresSlowPal = null,
-    Telecine: ProresTelecine = null
-  ): ProresSettings = {
+  def apply(): ProresSettings = {
     val __obj = js.Dynamic.literal()
-    if (CodecProfile != null) __obj.updateDynamic("CodecProfile")(CodecProfile.asInstanceOf[js.Any])
-    if (FramerateControl != null) __obj.updateDynamic("FramerateControl")(FramerateControl.asInstanceOf[js.Any])
-    if (FramerateConversionAlgorithm != null) __obj.updateDynamic("FramerateConversionAlgorithm")(FramerateConversionAlgorithm.asInstanceOf[js.Any])
-    if (FramerateDenominator != null) __obj.updateDynamic("FramerateDenominator")(FramerateDenominator.asInstanceOf[js.Any])
-    if (FramerateNumerator != null) __obj.updateDynamic("FramerateNumerator")(FramerateNumerator.asInstanceOf[js.Any])
-    if (InterlaceMode != null) __obj.updateDynamic("InterlaceMode")(InterlaceMode.asInstanceOf[js.Any])
-    if (ParControl != null) __obj.updateDynamic("ParControl")(ParControl.asInstanceOf[js.Any])
-    if (ParDenominator != null) __obj.updateDynamic("ParDenominator")(ParDenominator.asInstanceOf[js.Any])
-    if (ParNumerator != null) __obj.updateDynamic("ParNumerator")(ParNumerator.asInstanceOf[js.Any])
-    if (SlowPal != null) __obj.updateDynamic("SlowPal")(SlowPal.asInstanceOf[js.Any])
-    if (Telecine != null) __obj.updateDynamic("Telecine")(Telecine.asInstanceOf[js.Any])
     __obj.asInstanceOf[ProresSettings]
   }
+  @scala.inline
+  implicit class ProresSettingsOps[Self <: ProresSettings] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCodecProfile(value: ProresCodecProfile): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CodecProfile")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCodecProfile: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CodecProfile")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFramerateControl(value: ProresFramerateControl): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FramerateControl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFramerateControl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FramerateControl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFramerateConversionAlgorithm(value: ProresFramerateConversionAlgorithm): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FramerateConversionAlgorithm")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFramerateConversionAlgorithm: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FramerateConversionAlgorithm")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFramerateDenominator(value: integerMin1Max2147483647): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FramerateDenominator")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFramerateDenominator: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FramerateDenominator")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFramerateNumerator(value: integerMin1Max2147483647): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FramerateNumerator")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFramerateNumerator: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FramerateNumerator")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInterlaceMode(value: ProresInterlaceMode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InterlaceMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInterlaceMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InterlaceMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParControl(value: ProresParControl): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ParControl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParControl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ParControl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParDenominator(value: integerMin1Max2147483647): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ParDenominator")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParDenominator: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ParDenominator")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParNumerator(value: integerMin1Max2147483647): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ParNumerator")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParNumerator: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ParNumerator")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSlowPal(value: ProresSlowPal): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SlowPal")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSlowPal: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SlowPal")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTelecine(value: ProresTelecine): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Telecine")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTelecine: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Telecine")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

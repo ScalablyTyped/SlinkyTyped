@@ -26,18 +26,65 @@ trait TransitionState extends js.Object {
 
 object TransitionState {
   @scala.inline
-  def apply(
-    disabledReason: DisabledReason = null,
-    enabled: js.UndefOr[scala.Boolean] = js.undefined,
-    lastChangedAt: js.Date = null,
-    lastChangedBy: LastChangedBy = null
-  ): TransitionState = {
+  def apply(): TransitionState = {
     val __obj = js.Dynamic.literal()
-    if (disabledReason != null) __obj.updateDynamic("disabledReason")(disabledReason.asInstanceOf[js.Any])
-    if (!js.isUndefined(enabled)) __obj.updateDynamic("enabled")(enabled.asInstanceOf[js.Any])
-    if (lastChangedAt != null) __obj.updateDynamic("lastChangedAt")(lastChangedAt.asInstanceOf[js.Any])
-    if (lastChangedBy != null) __obj.updateDynamic("lastChangedBy")(lastChangedBy.asInstanceOf[js.Any])
     __obj.asInstanceOf[TransitionState]
   }
+  @scala.inline
+  implicit class TransitionStateOps[Self <: TransitionState] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDisabledReason(value: DisabledReason): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disabledReason")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisabledReason: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disabledReason")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnabled(value: Enabled): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLastChangedAt(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastChangedAt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLastChangedAt: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastChangedAt")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLastChangedBy(value: LastChangedBy): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastChangedBy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLastChangedBy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastChangedBy")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,45 +1,100 @@
 package typingsSlinky.antDesignProLayout.pageHeaderWrapperMod
 
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.antDesignProLayout.antDesignProLayoutBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* import warning: RemoveDifficultInheritance.summarizeChanges 
-- Dropped {[ P in std.Exclude<keyof / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify PageHeaderProps * / any, 'title'> ]: / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify PageHeaderProps * / any[P]} */ trait PageHeaderWrapperProps extends PageHeaderTabConfig {
-  var content: js.UndefOr[TagMod[Any]] = js.undefined
-  var extraContent: js.UndefOr[TagMod[Any]] = js.undefined
-  var pageHeaderRender: js.UndefOr[js.Function1[/* props */ PageHeaderWrapperProps, TagMod[Any]]] = js.undefined
-  var title: js.UndefOr[TagMod[Any] | `false`] = js.undefined
+- Dropped {[ P in std.Exclude<keyof / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify PageHeaderProps * / any, 'title'> ]: / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify PageHeaderProps * / any[P]} */ @js.native
+trait PageHeaderWrapperProps extends PageHeaderTabConfig {
+  var content: js.UndefOr[TagMod[Any]] = js.native
+  var extraContent: js.UndefOr[TagMod[Any]] = js.native
+  var pageHeaderRender: js.UndefOr[js.Function1[/* props */ PageHeaderWrapperProps, TagMod[Any]]] = js.native
+  var title: js.UndefOr[TagMod[Any] | `false`] = js.native
 }
 
 object PageHeaderWrapperProps {
   @scala.inline
-  def apply(
-    content: TagMod[Any] = null,
-    extraContent: TagMod[Any] = null,
-    onTabChange: /* import warning: importer.ImportType#apply Failed type conversion: / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify TabsProps * / any['onChange'] */ js.Any = null,
-    pageHeaderRender: /* props */ PageHeaderWrapperProps => TagMod[Any] = null,
-    tabActiveKey: /* import warning: importer.ImportType#apply Failed type conversion: / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify TabsProps * / any['activeKey'] */ js.Any = null,
-    tabBarExtraContent: /* import warning: importer.ImportType#apply Failed type conversion: / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify TabsProps * / any['tabBarExtraContent'] */ js.Any = null,
-    tabList: js.Array[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify TabPaneProps */ _
-    ] = null,
-    tabProps: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify TabsProps */ js.Any = null,
-    title: TagMod[Any] | `false` = null
-  ): PageHeaderWrapperProps = {
+  def apply(): PageHeaderWrapperProps = {
     val __obj = js.Dynamic.literal()
-    if (content != null) __obj.updateDynamic("content")(content.asInstanceOf[js.Any])
-    if (extraContent != null) __obj.updateDynamic("extraContent")(extraContent.asInstanceOf[js.Any])
-    if (onTabChange != null) __obj.updateDynamic("onTabChange")(onTabChange.asInstanceOf[js.Any])
-    if (pageHeaderRender != null) __obj.updateDynamic("pageHeaderRender")(js.Any.fromFunction1(pageHeaderRender))
-    if (tabActiveKey != null) __obj.updateDynamic("tabActiveKey")(tabActiveKey.asInstanceOf[js.Any])
-    if (tabBarExtraContent != null) __obj.updateDynamic("tabBarExtraContent")(tabBarExtraContent.asInstanceOf[js.Any])
-    if (tabList != null) __obj.updateDynamic("tabList")(tabList.asInstanceOf[js.Any])
-    if (tabProps != null) __obj.updateDynamic("tabProps")(tabProps.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     __obj.asInstanceOf[PageHeaderWrapperProps]
   }
+  @scala.inline
+  implicit class PageHeaderWrapperPropsOps[Self <: PageHeaderWrapperProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withContentReactElement(value: ReactElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withContent(value: TagMod[Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExtraContentReactElement(value: ReactElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extraContent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withExtraContent(value: TagMod[Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extraContent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExtraContent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extraContent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPageHeaderRender(value: /* props */ PageHeaderWrapperProps => TagMod[Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pageHeaderRender")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutPageHeaderRender: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pageHeaderRender")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitleReactElement(value: ReactElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTitle(value: TagMod[Any] | `false`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

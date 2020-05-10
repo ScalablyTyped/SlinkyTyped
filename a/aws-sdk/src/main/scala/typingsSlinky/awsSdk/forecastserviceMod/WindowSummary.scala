@@ -30,20 +30,77 @@ trait WindowSummary extends js.Object {
 
 object WindowSummary {
   @scala.inline
-  def apply(
-    EvaluationType: EvaluationType = null,
-    ItemCount: Int | scala.Double = null,
-    Metrics: Metrics = null,
-    TestWindowEnd: js.Date = null,
-    TestWindowStart: js.Date = null
-  ): WindowSummary = {
+  def apply(): WindowSummary = {
     val __obj = js.Dynamic.literal()
-    if (EvaluationType != null) __obj.updateDynamic("EvaluationType")(EvaluationType.asInstanceOf[js.Any])
-    if (ItemCount != null) __obj.updateDynamic("ItemCount")(ItemCount.asInstanceOf[js.Any])
-    if (Metrics != null) __obj.updateDynamic("Metrics")(Metrics.asInstanceOf[js.Any])
-    if (TestWindowEnd != null) __obj.updateDynamic("TestWindowEnd")(TestWindowEnd.asInstanceOf[js.Any])
-    if (TestWindowStart != null) __obj.updateDynamic("TestWindowStart")(TestWindowStart.asInstanceOf[js.Any])
     __obj.asInstanceOf[WindowSummary]
   }
+  @scala.inline
+  implicit class WindowSummaryOps[Self <: WindowSummary] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEvaluationType(value: EvaluationType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EvaluationType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEvaluationType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EvaluationType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withItemCount(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ItemCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutItemCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ItemCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMetrics(value: Metrics): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Metrics")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMetrics: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Metrics")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTestWindowEnd(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TestWindowEnd")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTestWindowEnd: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TestWindowEnd")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTestWindowStart(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TestWindowStart")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTestWindowStart: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TestWindowStart")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

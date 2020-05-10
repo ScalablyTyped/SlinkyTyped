@@ -11,12 +11,6 @@ object selectGpuMod extends js.Object {
   @js.native
   class SelectProgram protected () extends GPGPUProgram {
     def this(cRank: Double, shape: js.Array[Double], rank: Double) = this()
-    /* CompleteClass */
-    override var outputShape: js.Array[Double] = js.native
-    /* CompleteClass */
-    override var userCode: String = js.native
-    /* CompleteClass */
-    override var variableNames: js.Array[String] = js.native
   }
   
 }

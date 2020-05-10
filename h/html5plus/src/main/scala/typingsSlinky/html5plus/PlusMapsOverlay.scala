@@ -10,6 +10,7 @@ import scala.scalajs.js.annotation._
   * 
   * 参考: [http://www.html5plus.org/doc/zh_cn/maps.html](http://www.html5plus.org/doc/zh_cn/maps.html)
   */
+@js.native
 trait PlusMapsOverlay extends js.Object {
   /**
     * 隐藏地图上的覆盖物
@@ -19,14 +20,14 @@ trait PlusMapsOverlay extends js.Object {
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/maps.html](http://www.html5plus.org/doc/zh_cn/maps.html)
     */
-  def hide(): Unit
+  def hide(): Unit = js.native
   /**
     * 判断地图覆盖物是否可见
     * 地图覆盖物对象默认为可见；地图覆盖物对象是否可见由其自身状态决定，不管其是否被添加到地图层中。
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/maps.html](http://www.html5plus.org/doc/zh_cn/maps.html)
     */
-  def isVisible(): Boolean
+  def isVisible(): Boolean = js.native
   /**
     * 显示地图上的覆盖物
     * 常用于地图覆盖物在隐藏后调用此方法来显示。
@@ -35,15 +36,40 @@ trait PlusMapsOverlay extends js.Object {
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/maps.html](http://www.html5plus.org/doc/zh_cn/maps.html)
     */
-  def show(): Unit
+  def show(): Unit = js.native
 }
 
 object PlusMapsOverlay {
   @scala.inline
   def apply(hide: () => Unit, isVisible: () => Boolean, show: () => Unit): PlusMapsOverlay = {
     val __obj = js.Dynamic.literal(hide = js.Any.fromFunction0(hide), isVisible = js.Any.fromFunction0(isVisible), show = js.Any.fromFunction0(show))
-  
     __obj.asInstanceOf[PlusMapsOverlay]
   }
+  @scala.inline
+  implicit class PlusMapsOverlayOps[Self <: PlusMapsOverlay] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHide(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hide")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withIsVisible(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isVisible")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withShow(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("show")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

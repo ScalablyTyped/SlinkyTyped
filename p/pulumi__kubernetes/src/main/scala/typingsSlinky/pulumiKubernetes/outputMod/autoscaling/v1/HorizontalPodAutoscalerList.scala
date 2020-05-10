@@ -9,6 +9,7 @@ import scala.scalajs.js.annotation._
 /**
   * list of horizontal pod autoscaler objects.
   */
+@js.native
 trait HorizontalPodAutoscalerList extends js.Object {
   /**
     * APIVersion defines the versioned schema of this representation of an object. Servers should
@@ -16,22 +17,22 @@ trait HorizontalPodAutoscalerList extends js.Object {
     * values. More info:
     * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
     */
-  val apiVersion: autoscalingSlashv1
+  val apiVersion: autoscalingSlashv1 = js.native
   /**
     * list of horizontal pod autoscaler objects.
     */
-  val items: js.Array[HorizontalPodAutoscaler]
+  val items: js.Array[HorizontalPodAutoscaler] = js.native
   /**
     * Kind is a string value representing the REST resource this object represents. Servers may
     * infer this from the endpoint the client submits requests to. Cannot be updated. In
     * CamelCase. More info:
     * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
     */
-  val kind: typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.HorizontalPodAutoscalerList
+  val kind: typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.HorizontalPodAutoscalerList = js.native
   /**
     * Standard list metadata.
     */
-  val metadata: ListMeta
+  val metadata: ListMeta = js.native
 }
 
 object HorizontalPodAutoscalerList {
@@ -43,8 +44,39 @@ object HorizontalPodAutoscalerList {
     metadata: ListMeta
   ): HorizontalPodAutoscalerList = {
     val __obj = js.Dynamic.literal(apiVersion = apiVersion.asInstanceOf[js.Any], items = items.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], metadata = metadata.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[HorizontalPodAutoscalerList]
   }
+  @scala.inline
+  implicit class HorizontalPodAutoscalerListOps[Self <: HorizontalPodAutoscalerList] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withApiVersion(value: autoscalingSlashv1): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("apiVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withItems(value: js.Array[HorizontalPodAutoscaler]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withKind(value: typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.HorizontalPodAutoscalerList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMetadata(value: ListMeta): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

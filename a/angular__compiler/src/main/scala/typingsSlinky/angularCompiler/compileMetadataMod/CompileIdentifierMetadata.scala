@@ -4,16 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait CompileIdentifierMetadata extends js.Object {
-  var reference: js.Any
+  var reference: js.Any = js.native
 }
 
 object CompileIdentifierMetadata {
   @scala.inline
   def apply(reference: js.Any): CompileIdentifierMetadata = {
     val __obj = js.Dynamic.literal(reference = reference.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[CompileIdentifierMetadata]
   }
+  @scala.inline
+  implicit class CompileIdentifierMetadataOps[Self <: CompileIdentifierMetadata] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withReference(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reference")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -16,6 +16,7 @@ import scala.scalajs.js.annotation._
   *
   * @publicApi
   */
+@js.native
 trait ElementRef[T /* <: js.Any */] extends js.Object {
   /**
     * The underlying native element or `null` if direct access to native elements is not supported
@@ -38,15 +39,28 @@ trait ElementRef[T /* <: js.Any */] extends js.Object {
     * </div>
     *
     */
-  var nativeElement: T
+  var nativeElement: T = js.native
 }
 
 object ElementRef {
   @scala.inline
-  def apply[T /* <: js.Any */](nativeElement: T): ElementRef[T] = {
+  def apply[T](nativeElement: T): ElementRef[T] = {
     val __obj = js.Dynamic.literal(nativeElement = nativeElement.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[ElementRef[T]]
   }
+  @scala.inline
+  implicit class ElementRefOps[Self[t] <: ElementRef[t], T] (val x: Self[T]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
+    @scala.inline
+    def withNativeElement(value: T): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nativeElement")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

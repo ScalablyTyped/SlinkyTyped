@@ -13,12 +13,53 @@ trait AnonBenchmarkIndex extends js.Object {
 
 object AnonBenchmarkIndex {
   @scala.inline
-  def apply(benchmarkIndex: Int | Double = null, hostUserAgent: String = null, networkUserAgent: String = null): AnonBenchmarkIndex = {
+  def apply(): AnonBenchmarkIndex = {
     val __obj = js.Dynamic.literal()
-    if (benchmarkIndex != null) __obj.updateDynamic("benchmarkIndex")(benchmarkIndex.asInstanceOf[js.Any])
-    if (hostUserAgent != null) __obj.updateDynamic("hostUserAgent")(hostUserAgent.asInstanceOf[js.Any])
-    if (networkUserAgent != null) __obj.updateDynamic("networkUserAgent")(networkUserAgent.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonBenchmarkIndex]
   }
+  @scala.inline
+  implicit class AnonBenchmarkIndexOps[Self <: AnonBenchmarkIndex] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBenchmarkIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("benchmarkIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBenchmarkIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("benchmarkIndex")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHostUserAgent(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hostUserAgent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHostUserAgent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hostUserAgent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNetworkUserAgent(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("networkUserAgent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNetworkUserAgent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("networkUserAgent")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

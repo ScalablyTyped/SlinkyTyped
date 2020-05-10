@@ -30,20 +30,77 @@ trait CreateProvisionedProductPlanOutput extends js.Object {
 
 object CreateProvisionedProductPlanOutput {
   @scala.inline
-  def apply(
-    PlanId: Id = null,
-    PlanName: ProvisionedProductPlanName = null,
-    ProvisionProductId: Id = null,
-    ProvisionedProductName: ProvisionedProductName = null,
-    ProvisioningArtifactId: Id = null
-  ): CreateProvisionedProductPlanOutput = {
+  def apply(): CreateProvisionedProductPlanOutput = {
     val __obj = js.Dynamic.literal()
-    if (PlanId != null) __obj.updateDynamic("PlanId")(PlanId.asInstanceOf[js.Any])
-    if (PlanName != null) __obj.updateDynamic("PlanName")(PlanName.asInstanceOf[js.Any])
-    if (ProvisionProductId != null) __obj.updateDynamic("ProvisionProductId")(ProvisionProductId.asInstanceOf[js.Any])
-    if (ProvisionedProductName != null) __obj.updateDynamic("ProvisionedProductName")(ProvisionedProductName.asInstanceOf[js.Any])
-    if (ProvisioningArtifactId != null) __obj.updateDynamic("ProvisioningArtifactId")(ProvisioningArtifactId.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateProvisionedProductPlanOutput]
   }
+  @scala.inline
+  implicit class CreateProvisionedProductPlanOutputOps[Self <: CreateProvisionedProductPlanOutput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPlanId(value: Id): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PlanId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlanId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PlanId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlanName(value: ProvisionedProductPlanName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PlanName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlanName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PlanName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProvisionProductId(value: Id): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProvisionProductId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProvisionProductId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProvisionProductId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProvisionedProductName(value: ProvisionedProductName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProvisionedProductName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProvisionedProductName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProvisionedProductName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProvisioningArtifactId(value: Id): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProvisioningArtifactId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProvisioningArtifactId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProvisioningArtifactId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

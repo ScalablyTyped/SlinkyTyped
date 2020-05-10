@@ -2,6 +2,7 @@ package typingsSlinky.swaggerUiExpress.mod
 
 import typingsSlinky.express.mod.RequestHandler
 import typingsSlinky.expressServeStaticCore.mod.ParamsDictionary
+import typingsSlinky.expressServeStaticCore.mod.Query
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation._
 @JSImport("swagger-ui-express", "setup")
 @js.native
 object setup extends js.Object {
-  def apply(): RequestHandler[ParamsDictionary] = js.native
+  def apply(): RequestHandler[ParamsDictionary, _, _, Query] = js.native
   def apply(
     swaggerDoc: js.UndefOr[JsonObject],
     opts: js.UndefOr[SwaggerUiOptions],
@@ -18,8 +19,8 @@ object setup extends js.Object {
     customfavIcon: js.UndefOr[String],
     swaggerUrl: js.UndefOr[String],
     customSiteTitle: js.UndefOr[String]
-  ): RequestHandler[ParamsDictionary] = js.native
-  def apply(swaggerDoc: JsonObject): RequestHandler[ParamsDictionary] = js.native
-  def apply(swaggerDoc: JsonObject, isExplorer: Boolean): RequestHandler[ParamsDictionary] = js.native
+  ): RequestHandler[ParamsDictionary, _, _, Query] = js.native
+  def apply(swaggerDoc: JsonObject): RequestHandler[ParamsDictionary, _, _, Query] = js.native
+  def apply(swaggerDoc: JsonObject, isExplorer: Boolean): RequestHandler[ParamsDictionary, _, _, Query] = js.native
 }
 

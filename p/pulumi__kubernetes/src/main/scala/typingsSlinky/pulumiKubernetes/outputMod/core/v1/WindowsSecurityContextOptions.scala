@@ -7,6 +7,7 @@ import scala.scalajs.js.annotation._
 /**
   * WindowsSecurityContextOptions contain Windows-specific options and credentials.
   */
+@js.native
 trait WindowsSecurityContextOptions extends js.Object {
   /**
     * GMSACredentialSpec is where the GMSA admission webhook
@@ -14,12 +15,12 @@ trait WindowsSecurityContextOptions extends js.Object {
     * credential spec named by the GMSACredentialSpecName field. This field is alpha-level and is
     * only honored by servers that enable the WindowsGMSA feature flag.
     */
-  val gmsaCredentialSpec: String
+  val gmsaCredentialSpec: String = js.native
   /**
     * GMSACredentialSpecName is the name of the GMSA credential spec to use. This field is
     * alpha-level and is only honored by servers that enable the WindowsGMSA feature flag.
     */
-  val gmsaCredentialSpecName: String
+  val gmsaCredentialSpecName: String = js.native
   /**
     * The UserName in Windows to run the entrypoint of the container process. Defaults to the
     * user specified in image metadata if unspecified. May also be set in PodSecurityContext. If
@@ -27,15 +28,40 @@ trait WindowsSecurityContextOptions extends js.Object {
     * takes precedence. This field is beta-level and may be disabled with the
     * WindowsRunAsUserName feature flag.
     */
-  val runAsUserName: String
+  val runAsUserName: String = js.native
 }
 
 object WindowsSecurityContextOptions {
   @scala.inline
   def apply(gmsaCredentialSpec: String, gmsaCredentialSpecName: String, runAsUserName: String): WindowsSecurityContextOptions = {
     val __obj = js.Dynamic.literal(gmsaCredentialSpec = gmsaCredentialSpec.asInstanceOf[js.Any], gmsaCredentialSpecName = gmsaCredentialSpecName.asInstanceOf[js.Any], runAsUserName = runAsUserName.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[WindowsSecurityContextOptions]
   }
+  @scala.inline
+  implicit class WindowsSecurityContextOptionsOps[Self <: WindowsSecurityContextOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGmsaCredentialSpec(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gmsaCredentialSpec")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGmsaCredentialSpecName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gmsaCredentialSpecName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRunAsUserName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("runAsUserName")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

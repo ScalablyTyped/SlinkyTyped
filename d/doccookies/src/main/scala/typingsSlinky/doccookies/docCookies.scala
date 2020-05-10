@@ -1,7 +1,6 @@
 package typingsSlinky.doccookies
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -46,10 +45,10 @@ trait docCookies extends js.Object {
   def setItem(sKey: String, sValue: String, vEnd: Double, sPath: String): Boolean = js.native
   def setItem(sKey: String, sValue: String, vEnd: Double, sPath: String, sDomain: String): Boolean = js.native
   def setItem(sKey: String, sValue: String, vEnd: Double, sPath: String, sDomain: String, bSecure: Boolean): Boolean = js.native
-  def setItem(sKey: String, sValue: String, vEnd: Date): Boolean = js.native
-  def setItem(sKey: String, sValue: String, vEnd: Date, sPath: String): Boolean = js.native
-  def setItem(sKey: String, sValue: String, vEnd: Date, sPath: String, sDomain: String): Boolean = js.native
-  def setItem(sKey: String, sValue: String, vEnd: Date, sPath: String, sDomain: String, bSecure: Boolean): Boolean = js.native
+  def setItem(sKey: String, sValue: String, vEnd: js.Date): Boolean = js.native
+  def setItem(sKey: String, sValue: String, vEnd: js.Date, sPath: String): Boolean = js.native
+  def setItem(sKey: String, sValue: String, vEnd: js.Date, sPath: String, sDomain: String): Boolean = js.native
+  def setItem(sKey: String, sValue: String, vEnd: js.Date, sPath: String, sDomain: String, bSecure: Boolean): Boolean = js.native
 }
 
 @JSGlobal("docCookies")

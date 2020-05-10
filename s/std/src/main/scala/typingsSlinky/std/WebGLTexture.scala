@@ -7,5 +7,6 @@ import scala.scalajs.js.annotation._
 
 @JSGlobal("WebGLTexture")
 @js.native
-object WebGLTexture extends Instantiable0[WebGLTexture]
+object WebGLTexture
+  extends Instantiable0[org.scalajs.dom.raw.WebGLTexture]
 

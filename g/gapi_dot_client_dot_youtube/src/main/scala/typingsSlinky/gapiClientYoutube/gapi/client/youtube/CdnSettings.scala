@@ -4,35 +4,93 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait CdnSettings extends js.Object {
   /** The format of the video stream that you are sending to Youtube. */
-  var format: js.UndefOr[String] = js.undefined
+  var format: js.UndefOr[String] = js.native
   /** The frame rate of the inbound video data. */
-  var frameRate: js.UndefOr[String] = js.undefined
+  var frameRate: js.UndefOr[String] = js.native
   /** The ingestionInfo object contains information that YouTube provides that you need to transmit your RTMP or HTTP stream to YouTube. */
-  var ingestionInfo: js.UndefOr[IngestionInfo] = js.undefined
+  var ingestionInfo: js.UndefOr[IngestionInfo] = js.native
   /** The method or protocol used to transmit the video stream. */
-  var ingestionType: js.UndefOr[String] = js.undefined
+  var ingestionType: js.UndefOr[String] = js.native
   /** The resolution of the inbound video data. */
-  var resolution: js.UndefOr[String] = js.undefined
+  var resolution: js.UndefOr[String] = js.native
 }
 
 object CdnSettings {
   @scala.inline
-  def apply(
-    format: String = null,
-    frameRate: String = null,
-    ingestionInfo: IngestionInfo = null,
-    ingestionType: String = null,
-    resolution: String = null
-  ): CdnSettings = {
+  def apply(): CdnSettings = {
     val __obj = js.Dynamic.literal()
-    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
-    if (frameRate != null) __obj.updateDynamic("frameRate")(frameRate.asInstanceOf[js.Any])
-    if (ingestionInfo != null) __obj.updateDynamic("ingestionInfo")(ingestionInfo.asInstanceOf[js.Any])
-    if (ingestionType != null) __obj.updateDynamic("ingestionType")(ingestionType.asInstanceOf[js.Any])
-    if (resolution != null) __obj.updateDynamic("resolution")(resolution.asInstanceOf[js.Any])
     __obj.asInstanceOf[CdnSettings]
   }
+  @scala.inline
+  implicit class CdnSettingsOps[Self <: CdnSettings] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFormat(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFormat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFrameRate(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("frameRate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFrameRate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("frameRate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIngestionInfo(value: IngestionInfo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ingestionInfo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIngestionInfo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ingestionInfo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIngestionType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ingestionType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIngestionType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ingestionType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResolution(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resolution")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResolution: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resolution")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

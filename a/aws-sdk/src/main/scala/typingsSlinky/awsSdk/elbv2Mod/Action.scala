@@ -42,25 +42,107 @@ trait Action extends js.Object {
 
 object Action {
   @scala.inline
-  def apply(
-    Type: ActionTypeEnum,
-    AuthenticateCognitoConfig: AuthenticateCognitoActionConfig = null,
-    AuthenticateOidcConfig: AuthenticateOidcActionConfig = null,
-    FixedResponseConfig: FixedResponseActionConfig = null,
-    ForwardConfig: ForwardActionConfig = null,
-    Order: Int | Double = null,
-    RedirectConfig: RedirectActionConfig = null,
-    TargetGroupArn: TargetGroupArn = null
-  ): Action = {
+  def apply(Type: ActionTypeEnum): Action = {
     val __obj = js.Dynamic.literal(Type = Type.asInstanceOf[js.Any])
-    if (AuthenticateCognitoConfig != null) __obj.updateDynamic("AuthenticateCognitoConfig")(AuthenticateCognitoConfig.asInstanceOf[js.Any])
-    if (AuthenticateOidcConfig != null) __obj.updateDynamic("AuthenticateOidcConfig")(AuthenticateOidcConfig.asInstanceOf[js.Any])
-    if (FixedResponseConfig != null) __obj.updateDynamic("FixedResponseConfig")(FixedResponseConfig.asInstanceOf[js.Any])
-    if (ForwardConfig != null) __obj.updateDynamic("ForwardConfig")(ForwardConfig.asInstanceOf[js.Any])
-    if (Order != null) __obj.updateDynamic("Order")(Order.asInstanceOf[js.Any])
-    if (RedirectConfig != null) __obj.updateDynamic("RedirectConfig")(RedirectConfig.asInstanceOf[js.Any])
-    if (TargetGroupArn != null) __obj.updateDynamic("TargetGroupArn")(TargetGroupArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[Action]
   }
+  @scala.inline
+  implicit class ActionOps[Self <: Action] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withType(value: ActionTypeEnum): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAuthenticateCognitoConfig(value: AuthenticateCognitoActionConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AuthenticateCognitoConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAuthenticateCognitoConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AuthenticateCognitoConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAuthenticateOidcConfig(value: AuthenticateOidcActionConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AuthenticateOidcConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAuthenticateOidcConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AuthenticateOidcConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFixedResponseConfig(value: FixedResponseActionConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FixedResponseConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFixedResponseConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FixedResponseConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withForwardConfig(value: ForwardActionConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ForwardConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutForwardConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ForwardConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOrder(value: ActionOrder): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Order")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOrder: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Order")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRedirectConfig(value: RedirectActionConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RedirectConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRedirectConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RedirectConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTargetGroupArn(value: TargetGroupArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetGroupArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTargetGroupArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetGroupArn")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -36,7 +36,7 @@ class IndexBuffer protected ()
     format: Double,
     numIndices: Double,
     usage: Double,
-    initialData: scala.scalajs.js.typedarray.ArrayBuffer
+    initialData: js.typedarray.ArrayBuffer
   ) = this()
 }
 

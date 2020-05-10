@@ -1,0 +1,39 @@
+package typingsSlinky.titanium.Titanium.UI
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/**
+		 * Fired when the return key is pressed on the keyboard.
+		 */
+@js.native
+trait TextFieldReturnEvent extends TextFieldBaseEvent {
+  /**
+  			 * Value of this text area.
+  			 */
+  var value: String = js.native
+}
+
+object TextFieldReturnEvent {
+  @scala.inline
+  def apply(source: TextField, value: String): TextFieldReturnEvent = {
+    val __obj = js.Dynamic.literal(source = source.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
+    __obj.asInstanceOf[TextFieldReturnEvent]
+  }
+  @scala.inline
+  implicit class TextFieldReturnEventOps[Self <: TextFieldReturnEvent] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withValue(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
+

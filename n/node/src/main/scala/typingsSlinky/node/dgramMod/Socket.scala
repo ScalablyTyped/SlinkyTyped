@@ -8,8 +8,6 @@ import typingsSlinky.node.nodeStrings.connect
 import typingsSlinky.node.nodeStrings.error
 import typingsSlinky.node.nodeStrings.listening
 import typingsSlinky.node.nodeStrings.message
-import typingsSlinky.std.Error
-import typingsSlinky.std.Uint8Array
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -126,13 +124,13 @@ class Socket () extends EventEmitter {
   def ref(): this.type = js.native
   def remoteAddress(): AddressInfo = js.native
   def send(msg: String): Unit = js.native
-  def send(msg: String, callback: js.Function2[/* error */ Error | Null, /* bytes */ Double, Unit]): Unit = js.native
+  def send(msg: String, callback: js.Function2[/* error */ js.Error | Null, /* bytes */ Double, Unit]): Unit = js.native
   def send(msg: String, offset: Double, length: Double): Unit = js.native
   def send(
     msg: String,
     offset: Double,
     length: Double,
-    callback: js.Function2[/* error */ Error | Null, /* bytes */ Double, Unit]
+    callback: js.Function2[/* error */ js.Error | Null, /* bytes */ Double, Unit]
   ): Unit = js.native
   def send(msg: String, offset: Double, length: Double, port: Double): Unit = js.native
   def send(msg: String, offset: Double, length: Double, port: Double, address: String): Unit = js.native
@@ -149,7 +147,7 @@ class Socket () extends EventEmitter {
     offset: Double,
     length: Double,
     port: Double,
-    callback: js.Function2[/* error */ Error | Null, /* bytes */ Double, Unit]
+    callback: js.Function2[/* error */ js.Error | Null, /* bytes */ Double, Unit]
   ): Unit = js.native
   def send(msg: String, port: Double): Unit = js.native
   def send(msg: String, port: Double, address: String): Unit = js.native
@@ -157,41 +155,44 @@ class Socket () extends EventEmitter {
     msg: String,
     port: Double,
     address: String,
-    callback: js.Function2[/* error */ Error | Null, /* bytes */ Double, Unit]
+    callback: js.Function2[/* error */ js.Error | Null, /* bytes */ Double, Unit]
   ): Unit = js.native
   def send(
     msg: String,
     port: Double,
-    callback: js.Function2[/* error */ Error | Null, /* bytes */ Double, Unit]
+    callback: js.Function2[/* error */ js.Error | Null, /* bytes */ Double, Unit]
   ): Unit = js.native
   def send(msg: js.Array[_]): Unit = js.native
-  def send(msg: js.Array[_], callback: js.Function2[/* error */ Error | Null, /* bytes */ Double, Unit]): Unit = js.native
+  def send(msg: js.Array[_], callback: js.Function2[/* error */ js.Error | Null, /* bytes */ Double, Unit]): Unit = js.native
   def send(msg: js.Array[_], port: Double): Unit = js.native
   def send(msg: js.Array[_], port: Double, address: String): Unit = js.native
   def send(
     msg: js.Array[_],
     port: Double,
     address: String,
-    callback: js.Function2[/* error */ Error | Null, /* bytes */ Double, Unit]
+    callback: js.Function2[/* error */ js.Error | Null, /* bytes */ Double, Unit]
   ): Unit = js.native
   def send(
     msg: js.Array[_],
     port: Double,
-    callback: js.Function2[/* error */ Error | Null, /* bytes */ Double, Unit]
+    callback: js.Function2[/* error */ js.Error | Null, /* bytes */ Double, Unit]
   ): Unit = js.native
-  def send(msg: Uint8Array): Unit = js.native
-  def send(msg: Uint8Array, callback: js.Function2[/* error */ Error | Null, /* bytes */ Double, Unit]): Unit = js.native
-  def send(msg: Uint8Array, offset: Double, length: Double): Unit = js.native
+  def send(msg: js.typedarray.Uint8Array): Unit = js.native
   def send(
-    msg: Uint8Array,
+    msg: js.typedarray.Uint8Array,
+    callback: js.Function2[/* error */ js.Error | Null, /* bytes */ Double, Unit]
+  ): Unit = js.native
+  def send(msg: js.typedarray.Uint8Array, offset: Double, length: Double): Unit = js.native
+  def send(
+    msg: js.typedarray.Uint8Array,
     offset: Double,
     length: Double,
-    callback: js.Function2[/* error */ Error | Null, /* bytes */ Double, Unit]
+    callback: js.Function2[/* error */ js.Error | Null, /* bytes */ Double, Unit]
   ): Unit = js.native
-  def send(msg: Uint8Array, offset: Double, length: Double, port: Double): Unit = js.native
-  def send(msg: Uint8Array, offset: Double, length: Double, port: Double, address: String): Unit = js.native
+  def send(msg: js.typedarray.Uint8Array, offset: Double, length: Double, port: Double): Unit = js.native
+  def send(msg: js.typedarray.Uint8Array, offset: Double, length: Double, port: Double, address: String): Unit = js.native
   def send(
-    msg: Uint8Array,
+    msg: js.typedarray.Uint8Array,
     offset: Double,
     length: Double,
     port: Double,
@@ -199,24 +200,24 @@ class Socket () extends EventEmitter {
     callback: js.Function2[/* error */ js.Error | Null, /* bytes */ Double, Unit]
   ): Unit = js.native
   def send(
-    msg: Uint8Array,
+    msg: js.typedarray.Uint8Array,
     offset: Double,
     length: Double,
     port: Double,
-    callback: js.Function2[/* error */ Error | Null, /* bytes */ Double, Unit]
+    callback: js.Function2[/* error */ js.Error | Null, /* bytes */ Double, Unit]
   ): Unit = js.native
-  def send(msg: Uint8Array, port: Double): Unit = js.native
-  def send(msg: Uint8Array, port: Double, address: String): Unit = js.native
+  def send(msg: js.typedarray.Uint8Array, port: Double): Unit = js.native
+  def send(msg: js.typedarray.Uint8Array, port: Double, address: String): Unit = js.native
   def send(
-    msg: Uint8Array,
+    msg: js.typedarray.Uint8Array,
     port: Double,
     address: String,
-    callback: js.Function2[/* error */ Error | Null, /* bytes */ Double, Unit]
+    callback: js.Function2[/* error */ js.Error | Null, /* bytes */ Double, Unit]
   ): Unit = js.native
   def send(
-    msg: Uint8Array,
+    msg: js.typedarray.Uint8Array,
     port: Double,
-    callback: js.Function2[/* error */ Error | Null, /* bytes */ Double, Unit]
+    callback: js.Function2[/* error */ js.Error | Null, /* bytes */ Double, Unit]
   ): Unit = js.native
   def setBroadcast(flag: Boolean): Unit = js.native
   def setMulticastInterface(multicastInterface: String): Unit = js.native

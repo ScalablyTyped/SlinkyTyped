@@ -14,7 +14,7 @@ import scala.scalajs.js.annotation._
 /**
   * See: {@link https://docs.mendix.com/refguide7/data-sets relevant section in reference guide}
   */
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.mendixmodelsdk.structuresMod.IStructure because Already inherited
 - typingsSlinky.mendixmodelsdk.elementsMod.IAbstractElement because Already inherited
 - typingsSlinky.mendixmodelsdk.unitsMod.IAbstractUnit because Already inherited
@@ -37,11 +37,11 @@ class DataSet protected () extends Document {
   @JSName("parameters")
   val parameters_FDataSet: IList[IDataSetParameter] = js.native
   @JSName("containerAsFolderBase")
-  def containerAsFolderBase_MDataSet(): FolderBase = js.native
-  def dataSetAccess(): DataSetAccess = js.native
+  def containerAsFolderBase_MDataSet: FolderBase = js.native
+  def dataSetAccess: DataSetAccess = js.native
   def dataSetAccess(newValue: DataSetAccess): js.Any = js.native
-  def parameters(): IList[DataSetParameter] = js.native
-  def source(): DataSetSource = js.native
+  def parameters: IList[DataSetParameter] = js.native
+  def source: DataSetSource = js.native
   def source(newValue: DataSetSource): js.Any = js.native
 }
 

@@ -18,8 +18,8 @@ object mod extends js.Object {
       * @param k number of hashes
       */
     def this(m: Double, k: Double) = this()
-    def this(m: scala.scalajs.js.typedarray.Int32Array, k: Double) = this()
-    var buckets: scala.scalajs.js.typedarray.Int32Array = js.native
+    def this(m: js.typedarray.Int32Array, k: Double) = this()
+    var buckets: js.typedarray.Int32Array = js.native
     /**
       * Add a value to a bloom filter
       * @param value

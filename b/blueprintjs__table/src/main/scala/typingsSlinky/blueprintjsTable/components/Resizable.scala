@@ -1,45 +1,43 @@
 package typingsSlinky.blueprintjsTable.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.blueprintjsTable.resizableMod.IResizableProps
 import typingsSlinky.blueprintjsTable.resizeHandleMod.Orientation
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Resizable
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.blueprintjsTable.resizableMod.Resizable] {
+object Resizable {
   @JSImport("@blueprintjs/table/lib/esm/interactions/resizable", "Resizable")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className */
-  def apply(
-    onLayoutLock: js.UndefOr[Boolean] => Unit,
-    orientation: Orientation,
-    size: Double,
-    isResizable: js.UndefOr[Boolean] = js.undefined,
-    maxSize: Int | Double = null,
-    minSize: Int | Double = null,
-    onDoubleClick: () => Unit = null,
-    onResizeEnd: /* size */ Double => Unit = null,
-    onSizeChanged: /* size */ Double => Unit = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.blueprintjsTable.resizableMod.Resizable] = {
-    val __obj = js.Dynamic.literal(onLayoutLock = js.Any.fromFunction1(onLayoutLock), orientation = orientation.asInstanceOf[js.Any], size = size.asInstanceOf[js.Any])
-    if (!js.isUndefined(isResizable)) __obj.updateDynamic("isResizable")(isResizable.asInstanceOf[js.Any])
-    if (maxSize != null) __obj.updateDynamic("maxSize")(maxSize.asInstanceOf[js.Any])
-    if (minSize != null) __obj.updateDynamic("minSize")(minSize.asInstanceOf[js.Any])
-    if (onDoubleClick != null) __obj.updateDynamic("onDoubleClick")(js.Any.fromFunction0(onDoubleClick))
-    if (onResizeEnd != null) __obj.updateDynamic("onResizeEnd")(js.Any.fromFunction1(onResizeEnd))
-    if (onSizeChanged != null) __obj.updateDynamic("onSizeChanged")(js.Any.fromFunction1(onSizeChanged))
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.blueprintjsTable.resizableMod.Resizable] {
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def isResizable(value: Boolean): this.type = set("isResizable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def maxSize(value: Double): this.type = set("maxSize", value.asInstanceOf[js.Any])
+    @scala.inline
+    def minSize(value: Double): this.type = set("minSize", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onDoubleClick(value: () => Unit): this.type = set("onDoubleClick", js.Any.fromFunction0(value))
+    @scala.inline
+    def onResizeEnd(value: /* size */ Double => Unit): this.type = set("onResizeEnd", js.Any.fromFunction1(value))
+    @scala.inline
+    def onSizeChanged(value: /* size */ Double => Unit): this.type = set("onSizeChanged", js.Any.fromFunction1(value))
   }
-  type Props = IResizableProps
+  
+  def withProps(p: IResizableProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(onLayoutLock: js.UndefOr[Boolean] => Unit, orientation: Orientation, size: Double): Builder = {
+    val __props = js.Dynamic.literal(onLayoutLock = js.Any.fromFunction1(onLayoutLock), orientation = orientation.asInstanceOf[js.Any], size = size.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[IResizableProps]))
+  }
 }
 

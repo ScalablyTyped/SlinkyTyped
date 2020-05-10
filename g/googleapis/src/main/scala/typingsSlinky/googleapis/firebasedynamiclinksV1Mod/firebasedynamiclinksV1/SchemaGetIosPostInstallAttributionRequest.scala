@@ -54,26 +54,113 @@ trait SchemaGetIosPostInstallAttributionRequest extends js.Object {
 
 object SchemaGetIosPostInstallAttributionRequest {
   @scala.inline
-  def apply(
-    appInstallationTime: String = null,
-    bundleId: String = null,
-    device: SchemaDeviceInfo = null,
-    iosVersion: String = null,
-    retrievalMethod: String = null,
-    sdkVersion: String = null,
-    uniqueMatchLinkToCheck: String = null,
-    visualStyle: String = null
-  ): SchemaGetIosPostInstallAttributionRequest = {
+  def apply(): SchemaGetIosPostInstallAttributionRequest = {
     val __obj = js.Dynamic.literal()
-    if (appInstallationTime != null) __obj.updateDynamic("appInstallationTime")(appInstallationTime.asInstanceOf[js.Any])
-    if (bundleId != null) __obj.updateDynamic("bundleId")(bundleId.asInstanceOf[js.Any])
-    if (device != null) __obj.updateDynamic("device")(device.asInstanceOf[js.Any])
-    if (iosVersion != null) __obj.updateDynamic("iosVersion")(iosVersion.asInstanceOf[js.Any])
-    if (retrievalMethod != null) __obj.updateDynamic("retrievalMethod")(retrievalMethod.asInstanceOf[js.Any])
-    if (sdkVersion != null) __obj.updateDynamic("sdkVersion")(sdkVersion.asInstanceOf[js.Any])
-    if (uniqueMatchLinkToCheck != null) __obj.updateDynamic("uniqueMatchLinkToCheck")(uniqueMatchLinkToCheck.asInstanceOf[js.Any])
-    if (visualStyle != null) __obj.updateDynamic("visualStyle")(visualStyle.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGetIosPostInstallAttributionRequest]
   }
+  @scala.inline
+  implicit class SchemaGetIosPostInstallAttributionRequestOps[Self <: SchemaGetIosPostInstallAttributionRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAppInstallationTime(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appInstallationTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAppInstallationTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appInstallationTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBundleId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bundleId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBundleId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bundleId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDevice(value: SchemaDeviceInfo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("device")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDevice: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("device")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIosVersion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iosVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIosVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iosVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRetrievalMethod(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("retrievalMethod")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRetrievalMethod: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("retrievalMethod")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSdkVersion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sdkVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSdkVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sdkVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUniqueMatchLinkToCheck(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("uniqueMatchLinkToCheck")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUniqueMatchLinkToCheck: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("uniqueMatchLinkToCheck")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVisualStyle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visualStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVisualStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visualStyle")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

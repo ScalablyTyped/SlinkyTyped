@@ -1,9 +1,7 @@
 package typingsSlinky.recharts.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.recharts.AnonErrorVal
 import typingsSlinky.recharts.mod.DataKey
 import typingsSlinky.recharts.mod.ErrorBarProps
@@ -11,39 +9,40 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ErrorBar
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.recharts.mod.ErrorBar] {
+object ErrorBar {
   @JSImport("recharts", "ErrorBar")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    dataKey: DataKey,
-    data: js.Array[_] = null,
-    dataPointFormatter: (/* entry */ js.Any, /* dataKey */ DataKey) => AnonErrorVal = null,
-    layout: String = null,
-    offset: Int | Double = null,
-    stroke: String = null,
-    strokeWidth: Int | Double = null,
-    width: Int | Double = null,
-    xAxis: js.Object = null,
-    yAxis: js.Object = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.recharts.mod.ErrorBar] = {
-    val __obj = js.Dynamic.literal(dataKey = dataKey.asInstanceOf[js.Any])
-    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
-    if (dataPointFormatter != null) __obj.updateDynamic("dataPointFormatter")(js.Any.fromFunction2(dataPointFormatter))
-    if (layout != null) __obj.updateDynamic("layout")(layout.asInstanceOf[js.Any])
-    if (offset != null) __obj.updateDynamic("offset")(offset.asInstanceOf[js.Any])
-    if (stroke != null) __obj.updateDynamic("stroke")(stroke.asInstanceOf[js.Any])
-    if (strokeWidth != null) __obj.updateDynamic("strokeWidth")(strokeWidth.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
-    if (xAxis != null) __obj.updateDynamic("xAxis")(xAxis.asInstanceOf[js.Any])
-    if (yAxis != null) __obj.updateDynamic("yAxis")(yAxis.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.recharts.mod.ErrorBar] {
+    @scala.inline
+    def data(value: js.Array[_]): this.type = set("data", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dataPointFormatter(value: (/* entry */ js.Any, /* dataKey */ DataKey) => AnonErrorVal): this.type = set("dataPointFormatter", js.Any.fromFunction2(value))
+    @scala.inline
+    def layout(value: String): this.type = set("layout", value.asInstanceOf[js.Any])
+    @scala.inline
+    def offset(value: Double): this.type = set("offset", value.asInstanceOf[js.Any])
+    @scala.inline
+    def stroke(value: String): this.type = set("stroke", value.asInstanceOf[js.Any])
+    @scala.inline
+    def strokeWidth(value: Double): this.type = set("strokeWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def width(value: Double): this.type = set("width", value.asInstanceOf[js.Any])
+    @scala.inline
+    def xAxis(value: js.Object): this.type = set("xAxis", value.asInstanceOf[js.Any])
+    @scala.inline
+    def yAxis(value: js.Object): this.type = set("yAxis", value.asInstanceOf[js.Any])
   }
-  type Props = ErrorBarProps
+  
+  def withProps(p: ErrorBarProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(dataKey: DataKey): Builder = {
+    val __props = js.Dynamic.literal(dataKey = dataKey.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ErrorBarProps]))
+  }
 }
 

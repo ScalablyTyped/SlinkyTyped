@@ -1,53 +1,78 @@
 package typingsSlinky.athenajs.mod
 
-import typingsSlinky.athenajs.AnonInstantiable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SpriteOptions extends DrawableOptions {
-  var animations: js.UndefOr[Animations] = js.undefined
-  var data: js.UndefOr[JSObject] = js.undefined
-  var easing: js.UndefOr[String] = js.undefined
-  var imageId: js.UndefOr[String] = js.undefined
+  var animations: js.UndefOr[Animations] = js.native
+  var data: js.UndefOr[JSObject] = js.native
+  var easing: js.UndefOr[String] = js.native
+  var imageId: js.UndefOr[String] = js.native
 }
 
 object SpriteOptions {
   @scala.inline
-  def apply(
-    animations: Animations = null,
-    behavior: AnonInstantiable = null,
-    canCollide: js.UndefOr[Boolean] = js.undefined,
-    canCollideFriendBullet: js.UndefOr[Boolean] = js.undefined,
-    collideGroup: Int | Double = null,
-    data: JSObject = null,
-    easing: String = null,
-    imageId: String = null,
-    layer: Int | Double = null,
-    map: Map = null,
-    objectId: String = null,
-    pool: Int | Double = null,
-    visible: js.UndefOr[Boolean] = js.undefined,
-    x: Int | Double = null,
-    y: Int | Double = null
-  ): SpriteOptions = {
+  def apply(): SpriteOptions = {
     val __obj = js.Dynamic.literal()
-    if (animations != null) __obj.updateDynamic("animations")(animations.asInstanceOf[js.Any])
-    if (behavior != null) __obj.updateDynamic("behavior")(behavior.asInstanceOf[js.Any])
-    if (!js.isUndefined(canCollide)) __obj.updateDynamic("canCollide")(canCollide.asInstanceOf[js.Any])
-    if (!js.isUndefined(canCollideFriendBullet)) __obj.updateDynamic("canCollideFriendBullet")(canCollideFriendBullet.asInstanceOf[js.Any])
-    if (collideGroup != null) __obj.updateDynamic("collideGroup")(collideGroup.asInstanceOf[js.Any])
-    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
-    if (easing != null) __obj.updateDynamic("easing")(easing.asInstanceOf[js.Any])
-    if (imageId != null) __obj.updateDynamic("imageId")(imageId.asInstanceOf[js.Any])
-    if (layer != null) __obj.updateDynamic("layer")(layer.asInstanceOf[js.Any])
-    if (map != null) __obj.updateDynamic("map")(map.asInstanceOf[js.Any])
-    if (objectId != null) __obj.updateDynamic("objectId")(objectId.asInstanceOf[js.Any])
-    if (pool != null) __obj.updateDynamic("pool")(pool.asInstanceOf[js.Any])
-    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.asInstanceOf[js.Any])
-    if (x != null) __obj.updateDynamic("x")(x.asInstanceOf[js.Any])
-    if (y != null) __obj.updateDynamic("y")(y.asInstanceOf[js.Any])
     __obj.asInstanceOf[SpriteOptions]
   }
+  @scala.inline
+  implicit class SpriteOptionsOps[Self <: SpriteOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAnimations(value: Animations): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animations")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimations: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animations")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withData(value: JSObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEasing(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("easing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEasing: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("easing")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withImageId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imageId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImageId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imageId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

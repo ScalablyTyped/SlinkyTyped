@@ -1,5 +1,8 @@
 package typingsSlinky.ol.helperMod
 
+import org.scalajs.dom.raw.HTMLCanvasElement
+import org.scalajs.dom.raw.HTMLImageElement
+import org.scalajs.dom.raw.ImageData
 import org.scalajs.dom.raw.WebGLProgram
 import org.scalajs.dom.raw.WebGLRenderingContext
 import org.scalajs.dom.raw.WebGLShader
@@ -7,9 +10,6 @@ import org.scalajs.dom.raw.WebGLTexture
 import org.scalajs.dom.raw.WebGLUniformLocation
 import typingsSlinky.ol.olMod.Transform
 import typingsSlinky.ol.pluggableMapMod.FrameState
-import typingsSlinky.std.HTMLCanvasElement
-import typingsSlinky.std.HTMLImageElement
-import typingsSlinky.std.ImageData
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -32,7 +32,7 @@ trait WebGLHelper
   def finalizeDraw(frameState: FrameState): Unit = js.native
   def flushBufferData(buffer: typingsSlinky.ol.bufferMod.default): Unit = js.native
   def getAttributeLocation(name: String): Double = js.native
-  def getCanvas(): org.scalajs.dom.raw.HTMLCanvasElement = js.native
+  def getCanvas(): HTMLCanvasElement = js.native
   def getGL(): WebGLRenderingContext = js.native
   def getProgram(fragmentShaderSource: String, vertexShaderSource: String): WebGLProgram = js.native
   def getShaderCompileErrors(): String = js.native

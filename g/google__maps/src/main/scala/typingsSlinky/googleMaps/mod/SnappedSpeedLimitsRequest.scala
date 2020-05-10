@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SnappedSpeedLimitsRequest extends js.Object {
   /**
     * A list of latitude/longitude pairs representing a path. Latitude and longitude values must be separated by commas.
@@ -15,21 +16,46 @@ trait SnappedSpeedLimitsRequest extends js.Object {
     * The following example shows the `path` parameter with three latitude/longitude pairs:
     * `path=60.170880,24.942795|60.170879,24.942796|60.170877,24.942796`.
     */
-  var path: js.Array[LatLng]
+  var path: js.Array[LatLng] = js.native
   /**
     * Whether to return speed limits in kilometers or miles per hour. This can be set to either `KPH` or `MPH`.
     *
     * @default SpeedLimitUnit.KPH
     */
-  var units: js.UndefOr[SpeedLimitUnit] = js.undefined
+  var units: js.UndefOr[SpeedLimitUnit] = js.native
 }
 
 object SnappedSpeedLimitsRequest {
   @scala.inline
-  def apply(path: js.Array[LatLng], units: SpeedLimitUnit = null): SnappedSpeedLimitsRequest = {
+  def apply(path: js.Array[LatLng]): SnappedSpeedLimitsRequest = {
     val __obj = js.Dynamic.literal(path = path.asInstanceOf[js.Any])
-    if (units != null) __obj.updateDynamic("units")(units.asInstanceOf[js.Any])
     __obj.asInstanceOf[SnappedSpeedLimitsRequest]
   }
+  @scala.inline
+  implicit class SnappedSpeedLimitsRequestOps[Self <: SnappedSpeedLimitsRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPath(value: js.Array[LatLng]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUnits(value: SpeedLimitUnit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("units")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUnits: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("units")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

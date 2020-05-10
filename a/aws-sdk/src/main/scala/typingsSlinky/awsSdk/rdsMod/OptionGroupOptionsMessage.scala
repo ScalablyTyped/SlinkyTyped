@@ -15,11 +15,41 @@ trait OptionGroupOptionsMessage extends js.Object {
 
 object OptionGroupOptionsMessage {
   @scala.inline
-  def apply(Marker: String = null, OptionGroupOptions: OptionGroupOptionsList = null): OptionGroupOptionsMessage = {
+  def apply(): OptionGroupOptionsMessage = {
     val __obj = js.Dynamic.literal()
-    if (Marker != null) __obj.updateDynamic("Marker")(Marker.asInstanceOf[js.Any])
-    if (OptionGroupOptions != null) __obj.updateDynamic("OptionGroupOptions")(OptionGroupOptions.asInstanceOf[js.Any])
     __obj.asInstanceOf[OptionGroupOptionsMessage]
   }
+  @scala.inline
+  implicit class OptionGroupOptionsMessageOps[Self <: OptionGroupOptionsMessage] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMarker(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMarker: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOptionGroupOptions(value: OptionGroupOptionsList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OptionGroupOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOptionGroupOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OptionGroupOptions")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

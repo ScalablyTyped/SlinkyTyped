@@ -6,5 +6,5 @@ import scala.scalajs.js.annotation._
 
 package object buttonToggleMod {
   type ButtonToggle[T] = slinky.core.ReactComponentClass[typingsSlinky.reactstrap.buttonToggleMod.ButtonToggleProps]
-  type Omit[T, K] = typingsSlinky.std.Pick[T, typingsSlinky.std.Exclude[java.lang.String, K]]
+  type Omit[T, K] = typingsSlinky.std.Pick[T, typingsSlinky.std.Exclude[/* keyof T */ java.lang.String, K]]
 }

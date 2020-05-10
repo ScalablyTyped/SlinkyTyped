@@ -14,14 +14,12 @@ trait SpinnerLabelPosition extends js.Object
 
 object SpinnerLabelPosition {
   @scala.inline
-  def bottom: typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.bottom = this.cast("bottom")
+  def bottom: typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.bottom = "bottom".asInstanceOf[typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.bottom]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def left: typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.left = "left".asInstanceOf[typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.left]
   @scala.inline
-  def left: typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.left = this.cast("left")
+  def right: typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.right = "right".asInstanceOf[typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.right]
   @scala.inline
-  def right: typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.right = this.cast("right")
-  @scala.inline
-  def top: typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.top = this.cast("top")
+  def top: typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.top = "top".asInstanceOf[typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.top]
 }
 

@@ -220,9 +220,7 @@ class Tensor[R /* <: Rank */] protected () extends js.Object {
   /** @doc {heading: 'Tensors', subheading: 'Classes'} */
   def bufferSync(): TensorBuffer[R, float32] = js.native
   /** Returns the underlying bytes of the tensor's data. */
-  def bytes(): js.Promise[
-    js.Array[scala.scalajs.js.typedarray.Uint8Array] | scala.scalajs.js.typedarray.Uint8Array
-  ] = js.native
+  def bytes(): js.Promise[js.Array[js.typedarray.Uint8Array] | js.typedarray.Uint8Array] = js.native
   def cast[T /* <: this.type */](dtype: DataType): T = js.native
   def ceil[T /* <: Tensor[Rank] */](): T = js.native
   def clipByValue(min: Double, max: Double): Tensor[R] = js.native
@@ -314,8 +312,8 @@ class Tensor[R /* <: Rank */] protected () extends js.Object {
     * promise of `TypedArray` that resolves when the computation has finished.
     */
   /** @doc {heading: 'Tensors', subheading: 'Classes'} */
-  def data(): js.Promise[scala.scalajs.js.typedarray.Float32Array] = js.native
-  def dataSync(): scala.scalajs.js.typedarray.Int32Array = js.native
+  def data(): js.Promise[js.typedarray.Float32Array] = js.native
+  def dataSync(): js.typedarray.Int32Array = js.native
   @JSName("dataSync")
   def dataSync_Array(): js.Array[String] = js.native
   /**
@@ -324,9 +322,9 @@ class Tensor[R /* <: Rank */] protected () extends js.Object {
     */
   /** @doc {heading: 'Tensors', subheading: 'Classes'} */
   @JSName("dataSync")
-  def dataSync_Float32Array(): scala.scalajs.js.typedarray.Float32Array = js.native
+  def dataSync_Float32Array(): js.typedarray.Float32Array = js.native
   @JSName("dataSync")
-  def dataSync_Uint8Array(): scala.scalajs.js.typedarray.Uint8Array = js.native
+  def dataSync_Uint8Array(): js.typedarray.Uint8Array = js.native
   @JSName("depthToSpace")
   def depthToSpace_NCHW(blockSize: Double, dataFormat: NCHW): Tensor4D = js.native
   @JSName("depthToSpace")
@@ -639,8 +637,8 @@ class Tensor[R /* <: Rank */] protected () extends js.Object {
   def split[T /* <: Tensor[Rank] */](numOrSizeSplits: Double, axis: Double): js.Array[T] = js.native
   def sqrt[T /* <: Tensor[Rank] */](): T = js.native
   def square[T /* <: Tensor[Rank] */](): T = js.native
-  def squaredDifference[T /* <: Tensor[Rank] */](x: TensorLike): T = js.native
-  def squaredDifference[T /* <: Tensor[Rank] */](x: Tensor[Rank]): T = js.native
+  def squaredDifference[T /* <: Tensor[Rank] */](b: TensorLike): T = js.native
+  def squaredDifference[T /* <: Tensor[Rank] */](b: Tensor[Rank]): T = js.native
   def squaredDifferenceStrict[T /* <: this.type */](x: T): T = js.native
   def squaredDifferenceStrict[T /* <: this.type */](x: TensorLike): T = js.native
   /**

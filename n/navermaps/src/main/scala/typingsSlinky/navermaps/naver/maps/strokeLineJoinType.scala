@@ -13,12 +13,10 @@ trait strokeLineJoinType extends js.Object
 
 object strokeLineJoinType {
   @scala.inline
-  def bevel: typingsSlinky.navermaps.navermapsStrings.bevel = this.cast("bevel")
+  def bevel: typingsSlinky.navermaps.navermapsStrings.bevel = "bevel".asInstanceOf[typingsSlinky.navermaps.navermapsStrings.bevel]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def miter: typingsSlinky.navermaps.navermapsStrings.miter = "miter".asInstanceOf[typingsSlinky.navermaps.navermapsStrings.miter]
   @scala.inline
-  def miter: typingsSlinky.navermaps.navermapsStrings.miter = this.cast("miter")
-  @scala.inline
-  def `round `: typingsSlinky.navermaps.navermapsStrings.`round ` = this.cast("round ")
+  def `round `: typingsSlinky.navermaps.navermapsStrings.`round ` = ("round ").asInstanceOf[typingsSlinky.navermaps.navermapsStrings.`round `]
 }
 

@@ -11,18 +11,48 @@ trait GetBlueprintsResult extends js.Object {
     */
   var blueprints: js.UndefOr[BlueprintList] = js.native
   /**
-    * A token used for advancing to the next page of results from your get blueprints request.
+    * The token to advance to the next page of resutls from your request. A next page token is not returned if there are no more results to display. To get the next page of results, perform another GetBlueprints request and specify the next page token using the pageToken parameter.
     */
   var nextPageToken: js.UndefOr[String] = js.native
 }
 
 object GetBlueprintsResult {
   @scala.inline
-  def apply(blueprints: BlueprintList = null, nextPageToken: String = null): GetBlueprintsResult = {
+  def apply(): GetBlueprintsResult = {
     val __obj = js.Dynamic.literal()
-    if (blueprints != null) __obj.updateDynamic("blueprints")(blueprints.asInstanceOf[js.Any])
-    if (nextPageToken != null) __obj.updateDynamic("nextPageToken")(nextPageToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetBlueprintsResult]
   }
+  @scala.inline
+  implicit class GetBlueprintsResultOps[Self <: GetBlueprintsResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBlueprints(value: BlueprintList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("blueprints")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBlueprints: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("blueprints")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextPageToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextPageToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

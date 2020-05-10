@@ -1,5 +1,6 @@
 package typingsSlinky.ramda
 
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.ramda.toolsMod.ValueOfRecord
 import typingsSlinky.std.Parameters
 import typingsSlinky.std.Record
@@ -14,7 +15,7 @@ object applySpecMod extends js.Object {
     /* args */ Parameters[ValueOfRecord[Obj]], 
     /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ Key in keyof Obj ]: std.ReturnType<Obj[Key]>}
-    */ typingsSlinky.ramda.ramdaStrings.default with Obj
+    */ typingsSlinky.ramda.ramdaStrings.default with TopLevel[Obj]
   ] = js.native
   def default[T](obj: js.Any): js.Function1[/* repeated */ js.Any, T] = js.native
 }

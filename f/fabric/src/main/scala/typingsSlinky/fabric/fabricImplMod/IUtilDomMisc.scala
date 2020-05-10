@@ -18,7 +18,7 @@ trait IUtilDomMisc extends js.Object {
   	 * Takes id and returns an element with that id (if one exists in a document)
   	 */
   def getById(id: String): HTMLElement = js.native
-  def getById(id: typingsSlinky.std.HTMLElement): HTMLElement = js.native
+  def getById(id: HTMLElement): HTMLElement = js.native
   /**
   	 * Returns offset for a given element
   	 * @param element Element to get offset for
@@ -71,7 +71,7 @@ trait IUtilDomMisc extends js.Object {
   	 * @param wrapper Element to wrap with
   	 * @param [attributes] Attributes to set on a wrapper
   	 */
-  def wrapElement(element: HTMLElement, wrapper: typingsSlinky.std.HTMLElement): HTMLElement = js.native
-  def wrapElement(element: HTMLElement, wrapper: typingsSlinky.std.HTMLElement, attributes: js.Any): HTMLElement = js.native
+  def wrapElement(element: HTMLElement, wrapper: HTMLElement): HTMLElement = js.native
+  def wrapElement(element: HTMLElement, wrapper: HTMLElement, attributes: js.Any): HTMLElement = js.native
 }
 

@@ -1,12 +1,9 @@
 package typingsSlinky.reactDraggable.components
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.MouseEvent
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactDraggable.PartialDraggableProps
 import typingsSlinky.reactDraggable.mod.ControlPosition
 import typingsSlinky.reactDraggable.mod.DraggableBounds
@@ -23,60 +20,58 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactDraggable
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object ReactDraggable {
   @JSImport("react-draggable", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: disabled */
-  def apply(
-    allowAnyClick: js.UndefOr[Boolean] = js.undefined,
-    axis: both | x | y | none = null,
-    bounds: DraggableBounds | String | `false` = null,
-    cancel: String = null,
-    defaultClassName: String = null,
-    defaultClassNameDragged: String = null,
-    defaultClassNameDragging: String = null,
-    defaultPosition: ControlPosition = null,
-    enableUserSelectHack: js.UndefOr[Boolean] = js.undefined,
-    grid: js.Tuple2[Double, Double] = null,
-    handle: String = null,
-    offsetParent: HTMLElement = null,
-    onDrag: (/* e */ DraggableEvent, /* data */ DraggableData) => Unit | `false` = null,
-    onMouseDown: /* e */ MouseEvent => Unit = null,
-    onStart: (/* e */ DraggableEvent, /* data */ DraggableData) => Unit | `false` = null,
-    onStop: (/* e */ DraggableEvent, /* data */ DraggableData) => Unit | `false` = null,
-    position: ControlPosition = null,
-    positionOffset: PositionOffsetControlPosition = null,
-    scale: Int | Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(allowAnyClick)) __obj.updateDynamic("allowAnyClick")(allowAnyClick.asInstanceOf[js.Any])
-    if (axis != null) __obj.updateDynamic("axis")(axis.asInstanceOf[js.Any])
-    if (bounds != null) __obj.updateDynamic("bounds")(bounds.asInstanceOf[js.Any])
-    if (cancel != null) __obj.updateDynamic("cancel")(cancel.asInstanceOf[js.Any])
-    if (defaultClassName != null) __obj.updateDynamic("defaultClassName")(defaultClassName.asInstanceOf[js.Any])
-    if (defaultClassNameDragged != null) __obj.updateDynamic("defaultClassNameDragged")(defaultClassNameDragged.asInstanceOf[js.Any])
-    if (defaultClassNameDragging != null) __obj.updateDynamic("defaultClassNameDragging")(defaultClassNameDragging.asInstanceOf[js.Any])
-    if (defaultPosition != null) __obj.updateDynamic("defaultPosition")(defaultPosition.asInstanceOf[js.Any])
-    if (!js.isUndefined(enableUserSelectHack)) __obj.updateDynamic("enableUserSelectHack")(enableUserSelectHack.asInstanceOf[js.Any])
-    if (grid != null) __obj.updateDynamic("grid")(grid.asInstanceOf[js.Any])
-    if (handle != null) __obj.updateDynamic("handle")(handle.asInstanceOf[js.Any])
-    if (offsetParent != null) __obj.updateDynamic("offsetParent")(offsetParent.asInstanceOf[js.Any])
-    if (onDrag != null) __obj.updateDynamic("onDrag")(js.Any.fromFunction2(onDrag))
-    if (onMouseDown != null) __obj.updateDynamic("onMouseDown")(js.Any.fromFunction1(onMouseDown))
-    if (onStart != null) __obj.updateDynamic("onStart")(js.Any.fromFunction2(onStart))
-    if (onStop != null) __obj.updateDynamic("onStop")(js.Any.fromFunction2(onStop))
-    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
-    if (positionOffset != null) __obj.updateDynamic("positionOffset")(positionOffset.asInstanceOf[js.Any])
-    if (scale != null) __obj.updateDynamic("scale")(scale.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def allowAnyClick(value: Boolean): this.type = set("allowAnyClick", value.asInstanceOf[js.Any])
+    @scala.inline
+    def axis(value: both | x | y | none): this.type = set("axis", value.asInstanceOf[js.Any])
+    @scala.inline
+    def bounds(value: DraggableBounds | String | `false`): this.type = set("bounds", value.asInstanceOf[js.Any])
+    @scala.inline
+    def cancel(value: String): this.type = set("cancel", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultClassName(value: String): this.type = set("defaultClassName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultClassNameDragged(value: String): this.type = set("defaultClassNameDragged", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultClassNameDragging(value: String): this.type = set("defaultClassNameDragging", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultPosition(value: ControlPosition): this.type = set("defaultPosition", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def enableUserSelectHack(value: Boolean): this.type = set("enableUserSelectHack", value.asInstanceOf[js.Any])
+    @scala.inline
+    def grid(value: js.Tuple2[Double, Double]): this.type = set("grid", value.asInstanceOf[js.Any])
+    @scala.inline
+    def handle(value: String): this.type = set("handle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def offsetParent(value: HTMLElement): this.type = set("offsetParent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onDrag(value: (/* e */ DraggableEvent, /* data */ DraggableData) => Unit | `false`): this.type = set("onDrag", js.Any.fromFunction2(value))
+    @scala.inline
+    def onMouseDown(value: /* e */ MouseEvent => Unit): this.type = set("onMouseDown", js.Any.fromFunction1(value))
+    @scala.inline
+    def onStart(value: (/* e */ DraggableEvent, /* data */ DraggableData) => Unit | `false`): this.type = set("onStart", js.Any.fromFunction2(value))
+    @scala.inline
+    def onStop(value: (/* e */ DraggableEvent, /* data */ DraggableData) => Unit | `false`): this.type = set("onStop", js.Any.fromFunction2(value))
+    @scala.inline
+    def position(value: ControlPosition): this.type = set("position", value.asInstanceOf[js.Any])
+    @scala.inline
+    def positionOffset(value: PositionOffsetControlPosition): this.type = set("positionOffset", value.asInstanceOf[js.Any])
+    @scala.inline
+    def scale(value: Double): this.type = set("scale", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactDraggable.mod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = PartialDraggableProps
+  
+  def withProps(p: PartialDraggableProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: ReactDraggable.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

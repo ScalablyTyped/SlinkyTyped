@@ -19,11 +19,41 @@ trait PatchGroupState extends js.Object {
 
 object PatchGroupState {
   @scala.inline
-  def apply(baselineId: Input[String] = null, patchGroup: Input[String] = null): PatchGroupState = {
+  def apply(): PatchGroupState = {
     val __obj = js.Dynamic.literal()
-    if (baselineId != null) __obj.updateDynamic("baselineId")(baselineId.asInstanceOf[js.Any])
-    if (patchGroup != null) __obj.updateDynamic("patchGroup")(patchGroup.asInstanceOf[js.Any])
     __obj.asInstanceOf[PatchGroupState]
   }
+  @scala.inline
+  implicit class PatchGroupStateOps[Self <: PatchGroupState] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBaselineId(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("baselineId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBaselineId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("baselineId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPatchGroup(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("patchGroup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPatchGroup: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("patchGroup")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

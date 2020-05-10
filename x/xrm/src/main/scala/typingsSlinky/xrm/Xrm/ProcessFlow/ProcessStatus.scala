@@ -17,12 +17,10 @@ trait ProcessStatus extends js.Object
 
 object ProcessStatus {
   @scala.inline
-  def aborted: typingsSlinky.xrm.xrmStrings.aborted = this.cast("aborted")
+  def aborted: typingsSlinky.xrm.xrmStrings.aborted = "aborted".asInstanceOf[typingsSlinky.xrm.xrmStrings.aborted]
   @scala.inline
-  def active: typingsSlinky.xrm.xrmStrings.active = this.cast("active")
+  def active: typingsSlinky.xrm.xrmStrings.active = "active".asInstanceOf[typingsSlinky.xrm.xrmStrings.active]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
-  @scala.inline
-  def finished: typingsSlinky.xrm.xrmStrings.finished = this.cast("finished")
+  def finished: typingsSlinky.xrm.xrmStrings.finished = "finished".asInstanceOf[typingsSlinky.xrm.xrmStrings.finished]
 }
 

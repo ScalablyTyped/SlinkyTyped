@@ -23,18 +23,67 @@ trait TransitionsOptions extends js.Object {
 
 object TransitionsOptions {
   @scala.inline
-  def apply(
-    create: (/* props */ String | js.Array[String], /* options */ js.UndefOr[Partialdurationnumberstri]) => String = null,
-    duration: PartialDuration = null,
-    easing: PartialEasing = null,
-    getAutoHeightDuration: /* height */ Double => Double = null
-  ): TransitionsOptions = {
+  def apply(): TransitionsOptions = {
     val __obj = js.Dynamic.literal()
-    if (create != null) __obj.updateDynamic("create")(js.Any.fromFunction2(create))
-    if (duration != null) __obj.updateDynamic("duration")(duration.asInstanceOf[js.Any])
-    if (easing != null) __obj.updateDynamic("easing")(easing.asInstanceOf[js.Any])
-    if (getAutoHeightDuration != null) __obj.updateDynamic("getAutoHeightDuration")(js.Any.fromFunction1(getAutoHeightDuration))
     __obj.asInstanceOf[TransitionsOptions]
   }
+  @scala.inline
+  implicit class TransitionsOptionsOps[Self <: TransitionsOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCreate(
+      value: (/* props */ String | js.Array[String], /* options */ js.UndefOr[Partialdurationnumberstri]) => String
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutCreate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDuration(value: PartialDuration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDuration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEasing(value: PartialEasing): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("easing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEasing: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("easing")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetAutoHeightDuration(value: /* height */ Double => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getAutoHeightDuration")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetAutoHeightDuration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getAutoHeightDuration")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

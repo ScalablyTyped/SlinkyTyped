@@ -18,11 +18,41 @@ trait GetCertificateAuthorityCertificateResponse extends js.Object {
 
 object GetCertificateAuthorityCertificateResponse {
   @scala.inline
-  def apply(Certificate: CertificateBody = null, CertificateChain: CertificateChain = null): GetCertificateAuthorityCertificateResponse = {
+  def apply(): GetCertificateAuthorityCertificateResponse = {
     val __obj = js.Dynamic.literal()
-    if (Certificate != null) __obj.updateDynamic("Certificate")(Certificate.asInstanceOf[js.Any])
-    if (CertificateChain != null) __obj.updateDynamic("CertificateChain")(CertificateChain.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetCertificateAuthorityCertificateResponse]
   }
+  @scala.inline
+  implicit class GetCertificateAuthorityCertificateResponseOps[Self <: GetCertificateAuthorityCertificateResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCertificate(value: CertificateBody): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Certificate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCertificate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Certificate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCertificateChain(value: CertificateChain): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CertificateChain")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCertificateChain: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CertificateChain")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

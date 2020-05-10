@@ -13,10 +13,8 @@ trait AuthStates extends js.Object
 
 object AuthStates {
   @scala.inline
-  def authenticated: typingsSlinky.socketclusterClient.socketclusterClientStrings.authenticated = this.cast("authenticated")
+  def authenticated: typingsSlinky.socketclusterClient.socketclusterClientStrings.authenticated = "authenticated".asInstanceOf[typingsSlinky.socketclusterClient.socketclusterClientStrings.authenticated]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
-  @scala.inline
-  def unauthenticated: typingsSlinky.socketclusterClient.socketclusterClientStrings.unauthenticated = this.cast("unauthenticated")
+  def unauthenticated: typingsSlinky.socketclusterClient.socketclusterClientStrings.unauthenticated = "unauthenticated".asInstanceOf[typingsSlinky.socketclusterClient.socketclusterClientStrings.unauthenticated]
 }
 

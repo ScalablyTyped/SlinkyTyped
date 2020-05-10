@@ -7,25 +7,63 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonBodyContract extends js.Object {
-  var body: Contract
-  var headers: js.UndefOr[Headers] = js.undefined
-  var options: js.UndefOr[Options] = js.undefined
-  var resourceType: typingsSlinky.fhirKitClient.fhirKitClientStrings.Contract
+  var body: Contract = js.native
+  var headers: js.UndefOr[Headers] = js.native
+  var options: js.UndefOr[Options] = js.native
+  var resourceType: typingsSlinky.fhirKitClient.fhirKitClientStrings.Contract = js.native
 }
 
 object AnonBodyContract {
   @scala.inline
-  def apply(
-    body: Contract,
-    resourceType: typingsSlinky.fhirKitClient.fhirKitClientStrings.Contract,
-    headers: Headers = null,
-    options: Options = null
-  ): AnonBodyContract = {
+  def apply(body: Contract, resourceType: typingsSlinky.fhirKitClient.fhirKitClientStrings.Contract): AnonBodyContract = {
     val __obj = js.Dynamic.literal(body = body.asInstanceOf[js.Any], resourceType = resourceType.asInstanceOf[js.Any])
-    if (headers != null) __obj.updateDynamic("headers")(headers.asInstanceOf[js.Any])
-    if (options != null) __obj.updateDynamic("options")(options.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonBodyContract]
   }
+  @scala.inline
+  implicit class AnonBodyContractOps[Self <: AnonBodyContract] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBody(value: Contract): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withResourceType(value: typingsSlinky.fhirKitClient.fhirKitClientStrings.Contract): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHeaders(value: Headers): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeaders: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOptions(value: Options): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -16,8 +16,8 @@ object headerMarshallerMod extends js.Object {
     var formatHeaderValue: js.Any = js.native
     val fromUtf8: js.Any = js.native
     val toUtf8: js.Any = js.native
-    def format(headers: MessageHeaders): scala.scalajs.js.typedarray.Uint8Array = js.native
-    def parse(headers: scala.scalajs.js.typedarray.DataView): MessageHeaders = js.native
+    def format(headers: MessageHeaders): js.typedarray.Uint8Array = js.native
+    def parse(headers: js.typedarray.DataView): MessageHeaders = js.native
   }
   
 }

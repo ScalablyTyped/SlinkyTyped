@@ -13,26 +13,27 @@ import scala.scalajs.js.annotation._
   * basic api to provide renderer-specific implementations for each shape.
   *
   */
+@js.native
 trait shape extends js.Object {
   /**
     * Returns the shape that matches the specified id.
     *
     * @param id The unique identifier for this Shape.
     */
-  def byId(id: String): Shape
+  def byId(id: String): Shape = js.native
   /**
     * Removes the specified shape from the registry.
     *
     * @param s The shape to unregister.
     * @param recurse               Optional
     */
-  def dispose(s: Shape, recurse: Boolean): Unit
+  def dispose(s: Shape, recurse: Boolean): Unit = js.native
   /**
     * Register the specified shape into the graphics registry.
     *
     * @param s The shape to register.
     */
-  def register(s: Shape): Double
+  def register(s: Shape): Double = js.native
 }
 
 @JSGlobal("dojox.gfx.shape")

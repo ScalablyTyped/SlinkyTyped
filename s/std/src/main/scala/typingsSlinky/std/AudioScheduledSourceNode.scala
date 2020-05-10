@@ -35,7 +35,7 @@ trait AudioScheduledSourceNode extends AudioNode {
   def removeEventListener_ended(
     `type`: ended,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   def start(): Unit = js.native
   def start(when: Double): Unit = js.native

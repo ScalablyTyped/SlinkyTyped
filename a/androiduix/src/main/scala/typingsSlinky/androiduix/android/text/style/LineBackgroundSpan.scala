@@ -6,6 +6,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait LineBackgroundSpan extends ParagraphStyle {
   def drawBackground(
     c: Canvas,
@@ -19,7 +20,7 @@ trait LineBackgroundSpan extends ParagraphStyle {
     start: Double,
     end: Double,
     lnum: Double
-  ): Unit
+  ): Unit = js.native
 }
 
 @JSGlobal("android.text.style.LineBackgroundSpan")

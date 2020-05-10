@@ -86,48 +86,245 @@ trait ReservationPurchaseRecommendationDetail extends js.Object {
 
 object ReservationPurchaseRecommendationDetail {
   @scala.inline
-  def apply(
-    AccountId: GenericString = null,
-    AverageNormalizedUnitsUsedPerHour: GenericString = null,
-    AverageNumberOfInstancesUsedPerHour: GenericString = null,
-    AverageUtilization: GenericString = null,
-    CurrencyCode: GenericString = null,
-    EstimatedBreakEvenInMonths: GenericString = null,
-    EstimatedMonthlyOnDemandCost: GenericString = null,
-    EstimatedMonthlySavingsAmount: GenericString = null,
-    EstimatedMonthlySavingsPercentage: GenericString = null,
-    EstimatedReservationCostForLookbackPeriod: GenericString = null,
-    InstanceDetails: InstanceDetails = null,
-    MaximumNormalizedUnitsUsedPerHour: GenericString = null,
-    MaximumNumberOfInstancesUsedPerHour: GenericString = null,
-    MinimumNormalizedUnitsUsedPerHour: GenericString = null,
-    MinimumNumberOfInstancesUsedPerHour: GenericString = null,
-    RecommendedNormalizedUnitsToPurchase: GenericString = null,
-    RecommendedNumberOfInstancesToPurchase: GenericString = null,
-    RecurringStandardMonthlyCost: GenericString = null,
-    UpfrontCost: GenericString = null
-  ): ReservationPurchaseRecommendationDetail = {
+  def apply(): ReservationPurchaseRecommendationDetail = {
     val __obj = js.Dynamic.literal()
-    if (AccountId != null) __obj.updateDynamic("AccountId")(AccountId.asInstanceOf[js.Any])
-    if (AverageNormalizedUnitsUsedPerHour != null) __obj.updateDynamic("AverageNormalizedUnitsUsedPerHour")(AverageNormalizedUnitsUsedPerHour.asInstanceOf[js.Any])
-    if (AverageNumberOfInstancesUsedPerHour != null) __obj.updateDynamic("AverageNumberOfInstancesUsedPerHour")(AverageNumberOfInstancesUsedPerHour.asInstanceOf[js.Any])
-    if (AverageUtilization != null) __obj.updateDynamic("AverageUtilization")(AverageUtilization.asInstanceOf[js.Any])
-    if (CurrencyCode != null) __obj.updateDynamic("CurrencyCode")(CurrencyCode.asInstanceOf[js.Any])
-    if (EstimatedBreakEvenInMonths != null) __obj.updateDynamic("EstimatedBreakEvenInMonths")(EstimatedBreakEvenInMonths.asInstanceOf[js.Any])
-    if (EstimatedMonthlyOnDemandCost != null) __obj.updateDynamic("EstimatedMonthlyOnDemandCost")(EstimatedMonthlyOnDemandCost.asInstanceOf[js.Any])
-    if (EstimatedMonthlySavingsAmount != null) __obj.updateDynamic("EstimatedMonthlySavingsAmount")(EstimatedMonthlySavingsAmount.asInstanceOf[js.Any])
-    if (EstimatedMonthlySavingsPercentage != null) __obj.updateDynamic("EstimatedMonthlySavingsPercentage")(EstimatedMonthlySavingsPercentage.asInstanceOf[js.Any])
-    if (EstimatedReservationCostForLookbackPeriod != null) __obj.updateDynamic("EstimatedReservationCostForLookbackPeriod")(EstimatedReservationCostForLookbackPeriod.asInstanceOf[js.Any])
-    if (InstanceDetails != null) __obj.updateDynamic("InstanceDetails")(InstanceDetails.asInstanceOf[js.Any])
-    if (MaximumNormalizedUnitsUsedPerHour != null) __obj.updateDynamic("MaximumNormalizedUnitsUsedPerHour")(MaximumNormalizedUnitsUsedPerHour.asInstanceOf[js.Any])
-    if (MaximumNumberOfInstancesUsedPerHour != null) __obj.updateDynamic("MaximumNumberOfInstancesUsedPerHour")(MaximumNumberOfInstancesUsedPerHour.asInstanceOf[js.Any])
-    if (MinimumNormalizedUnitsUsedPerHour != null) __obj.updateDynamic("MinimumNormalizedUnitsUsedPerHour")(MinimumNormalizedUnitsUsedPerHour.asInstanceOf[js.Any])
-    if (MinimumNumberOfInstancesUsedPerHour != null) __obj.updateDynamic("MinimumNumberOfInstancesUsedPerHour")(MinimumNumberOfInstancesUsedPerHour.asInstanceOf[js.Any])
-    if (RecommendedNormalizedUnitsToPurchase != null) __obj.updateDynamic("RecommendedNormalizedUnitsToPurchase")(RecommendedNormalizedUnitsToPurchase.asInstanceOf[js.Any])
-    if (RecommendedNumberOfInstancesToPurchase != null) __obj.updateDynamic("RecommendedNumberOfInstancesToPurchase")(RecommendedNumberOfInstancesToPurchase.asInstanceOf[js.Any])
-    if (RecurringStandardMonthlyCost != null) __obj.updateDynamic("RecurringStandardMonthlyCost")(RecurringStandardMonthlyCost.asInstanceOf[js.Any])
-    if (UpfrontCost != null) __obj.updateDynamic("UpfrontCost")(UpfrontCost.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReservationPurchaseRecommendationDetail]
   }
+  @scala.inline
+  implicit class ReservationPurchaseRecommendationDetailOps[Self <: ReservationPurchaseRecommendationDetail] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAccountId(value: GenericString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AccountId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccountId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AccountId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAverageNormalizedUnitsUsedPerHour(value: GenericString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AverageNormalizedUnitsUsedPerHour")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAverageNormalizedUnitsUsedPerHour: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AverageNormalizedUnitsUsedPerHour")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAverageNumberOfInstancesUsedPerHour(value: GenericString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AverageNumberOfInstancesUsedPerHour")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAverageNumberOfInstancesUsedPerHour: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AverageNumberOfInstancesUsedPerHour")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAverageUtilization(value: GenericString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AverageUtilization")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAverageUtilization: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AverageUtilization")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCurrencyCode(value: GenericString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrencyCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCurrencyCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrencyCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEstimatedBreakEvenInMonths(value: GenericString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EstimatedBreakEvenInMonths")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEstimatedBreakEvenInMonths: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EstimatedBreakEvenInMonths")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEstimatedMonthlyOnDemandCost(value: GenericString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EstimatedMonthlyOnDemandCost")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEstimatedMonthlyOnDemandCost: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EstimatedMonthlyOnDemandCost")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEstimatedMonthlySavingsAmount(value: GenericString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EstimatedMonthlySavingsAmount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEstimatedMonthlySavingsAmount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EstimatedMonthlySavingsAmount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEstimatedMonthlySavingsPercentage(value: GenericString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EstimatedMonthlySavingsPercentage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEstimatedMonthlySavingsPercentage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EstimatedMonthlySavingsPercentage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEstimatedReservationCostForLookbackPeriod(value: GenericString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EstimatedReservationCostForLookbackPeriod")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEstimatedReservationCostForLookbackPeriod: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EstimatedReservationCostForLookbackPeriod")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInstanceDetails(value: InstanceDetails): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceDetails")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstanceDetails: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceDetails")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaximumNormalizedUnitsUsedPerHour(value: GenericString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaximumNormalizedUnitsUsedPerHour")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaximumNormalizedUnitsUsedPerHour: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaximumNormalizedUnitsUsedPerHour")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaximumNumberOfInstancesUsedPerHour(value: GenericString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaximumNumberOfInstancesUsedPerHour")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaximumNumberOfInstancesUsedPerHour: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaximumNumberOfInstancesUsedPerHour")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinimumNormalizedUnitsUsedPerHour(value: GenericString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MinimumNormalizedUnitsUsedPerHour")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinimumNormalizedUnitsUsedPerHour: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MinimumNormalizedUnitsUsedPerHour")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinimumNumberOfInstancesUsedPerHour(value: GenericString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MinimumNumberOfInstancesUsedPerHour")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinimumNumberOfInstancesUsedPerHour: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MinimumNumberOfInstancesUsedPerHour")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRecommendedNormalizedUnitsToPurchase(value: GenericString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RecommendedNormalizedUnitsToPurchase")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRecommendedNormalizedUnitsToPurchase: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RecommendedNormalizedUnitsToPurchase")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRecommendedNumberOfInstancesToPurchase(value: GenericString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RecommendedNumberOfInstancesToPurchase")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRecommendedNumberOfInstancesToPurchase: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RecommendedNumberOfInstancesToPurchase")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRecurringStandardMonthlyCost(value: GenericString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RecurringStandardMonthlyCost")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRecurringStandardMonthlyCost: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RecurringStandardMonthlyCost")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUpfrontCost(value: GenericString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UpfrontCost")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUpfrontCost: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UpfrontCost")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

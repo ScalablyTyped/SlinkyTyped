@@ -13,7 +13,7 @@ import scala.scalajs.js.annotation._
   * In version 8.5.0: removed experimental
   * In version 8.4.0: introduced
   */
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.mendixmodelsdk.structuresMod.IStructure because Already inherited
 - typingsSlinky.mendixmodelsdk.elementsMod.IAbstractElement because Already inherited
 - typingsSlinky.mendixmodelsdk.elementsMod.IElement because Already inherited
@@ -32,7 +32,7 @@ class StringTemplateParameterType protected () extends ParameterType {
   @JSName("model")
   var model_FStringTemplateParameterType: IModel = js.native
   @JSName("containerAsCodeActionParameter")
-  def containerAsCodeActionParameter_MStringTemplateParameterType(): CodeActionParameter = js.native
+  def containerAsCodeActionParameter_MStringTemplateParameterType: CodeActionParameter = js.native
 }
 
 /* static members */

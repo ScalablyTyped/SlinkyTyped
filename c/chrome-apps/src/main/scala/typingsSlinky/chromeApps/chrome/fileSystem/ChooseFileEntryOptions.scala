@@ -7,8 +7,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typingsSlinky.chromeApps.chrome.fileSystem.ChooseEntryOptions because Already inherited */ trait ChooseFileEntryOptions extends ChooseEntryOptionsBase {
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
+- typingsSlinky.chromeApps.chrome.fileSystem.ChooseEntryOptions because Already inherited */ @js.native
+trait ChooseFileEntryOptions extends ChooseEntryOptionsBase {
   /**
     * Whether to accept multiple files. This is only supported for openFile and openWritableFile.
     * The callback to chooseEntry will be called with a list of entries if this is set to true.
@@ -16,26 +17,42 @@ import scala.scalajs.js.annotation._
     * @default false
     * @since Chrome 30.
     */
-  var acceptsMultiple: js.UndefOr[`false`] = js.undefined
-  var `type`: openFile | openWritableFile
+  var acceptsMultiple: js.UndefOr[`false`] = js.native
+  var `type`: openFile | openWritableFile = js.native
 }
 
 object ChooseFileEntryOptions {
   @scala.inline
-  def apply(
-    `type`: openFile | openWritableFile,
-    accepts: js.Array[AcceptOptions] = null,
-    acceptsAllTypes: js.UndefOr[Boolean] = js.undefined,
-    acceptsMultiple: `false` = null,
-    suggestedName: String = null
-  ): ChooseFileEntryOptions = {
+  def apply(`type`: openFile | openWritableFile): ChooseFileEntryOptions = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (accepts != null) __obj.updateDynamic("accepts")(accepts.asInstanceOf[js.Any])
-    if (!js.isUndefined(acceptsAllTypes)) __obj.updateDynamic("acceptsAllTypes")(acceptsAllTypes.asInstanceOf[js.Any])
-    if (acceptsMultiple != null) __obj.updateDynamic("acceptsMultiple")(acceptsMultiple.asInstanceOf[js.Any])
-    if (suggestedName != null) __obj.updateDynamic("suggestedName")(suggestedName.asInstanceOf[js.Any])
     __obj.asInstanceOf[ChooseFileEntryOptions]
   }
+  @scala.inline
+  implicit class ChooseFileEntryOptionsOps[Self <: ChooseFileEntryOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withType(value: openFile | openWritableFile): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAcceptsMultiple(value: `false`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("acceptsMultiple")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAcceptsMultiple: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("acceptsMultiple")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

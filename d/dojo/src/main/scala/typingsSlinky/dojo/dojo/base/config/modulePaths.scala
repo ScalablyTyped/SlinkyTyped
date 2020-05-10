@@ -15,5 +15,6 @@ import scala.scalajs.js.annotation._
   * modules may be configured via djConfig.modulePaths.
   *
   */
+@js.native
 trait modulePaths extends js.Object
 

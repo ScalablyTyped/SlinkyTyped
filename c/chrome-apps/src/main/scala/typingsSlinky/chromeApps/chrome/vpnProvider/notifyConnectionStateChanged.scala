@@ -2,8 +2,10 @@ package typingsSlinky.chromeApps.chrome.vpnProvider
 
 import typingsSlinky.chromeApps.AnonCONNECTEDFAILURE
 import typingsSlinky.chromeApps.chrome.ToStringLiteral
-import typingsSlinky.chromeApps.chromeAppsStrings.connected_
-import typingsSlinky.chromeApps.chromeAppsStrings.failure
+import typingsSlinky.chromeApps.chromeAppsStrings.CONNECTED
+import typingsSlinky.chromeApps.chromeAppsStrings.FAILURE
+import typingsSlinky.chromeApps.chromeAppsStrings.connected__
+import typingsSlinky.chromeApps.chromeAppsStrings.failure_
 import typingsSlinky.std.Exclude
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -20,9 +22,25 @@ object notifyConnectionStateChanged extends js.Object {
     * @see enum VpnConnectionState
     * @param callback Called when the notification is complete or if there is an error.
     */
-  def apply(state: ToStringLiteral[AnonCONNECTEDFAILURE, String, Exclude[String, connected_ | failure]]): Unit = js.native
   def apply(
-    state: ToStringLiteral[AnonCONNECTEDFAILURE, String, Exclude[String, connected_ | failure]],
+    state: ToStringLiteral[
+      AnonCONNECTEDFAILURE, 
+      /* keyof chrome-apps.AnonCONNECTEDFAILURE */ CONNECTED | FAILURE, 
+      Exclude[
+        /* keyof chrome-apps.AnonCONNECTEDFAILURE */ CONNECTED | FAILURE, 
+        connected__ | failure_
+      ]
+    ]
+  ): Unit = js.native
+  def apply(
+    state: ToStringLiteral[
+      AnonCONNECTEDFAILURE, 
+      /* keyof chrome-apps.AnonCONNECTEDFAILURE */ CONNECTED | FAILURE, 
+      Exclude[
+        /* keyof chrome-apps.AnonCONNECTEDFAILURE */ CONNECTED | FAILURE, 
+        connected__ | failure_
+      ]
+    ],
     callback: js.Function0[Unit]
   ): Unit = js.native
 }

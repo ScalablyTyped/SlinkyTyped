@@ -12,10 +12,8 @@ trait ModalClassKey extends js.Object
 
 object ModalClassKey {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def hidden: typingsSlinky.materialUiCore.materialUiCoreStrings.hidden = "hidden".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.hidden]
   @scala.inline
-  def hidden: typingsSlinky.materialUiCore.materialUiCoreStrings.hidden = this.cast("hidden")
-  @scala.inline
-  def root: typingsSlinky.materialUiCore.materialUiCoreStrings.root = this.cast("root")
+  def root: typingsSlinky.materialUiCore.materialUiCoreStrings.root = "root".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.root]
 }
 

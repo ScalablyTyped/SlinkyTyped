@@ -1,6 +1,7 @@
 package typingsSlinky.antDesignProLayout.headerMod
 
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.antDesignProLayout.AnonDefaultOpenAll
 import typingsSlinky.antDesignProLayout.antDesignProLayoutStrings.realDark
 import typingsSlinky.antDesignProLayout.antDesignProLayoutStrings.sidemenu
@@ -14,25 +15,26 @@ import scala.scalajs.js.annotation._
 
 /* Inlined parent std.Partial<@ant-design/pro-layout.@ant-design/pro-layout/lib/defaultSettings.Settings> */
 /* Inlined parent @ant-design/pro-layout.@ant-design/pro-layout/lib/GlobalHeader.GlobalHeaderProps */
+@js.native
 trait HeaderViewProps extends js.Object {
-  var className: js.UndefOr[String] = js.undefined
-  var collapsed: js.UndefOr[Boolean] = js.undefined
-  var collapsedButtonRender: js.UndefOr[WithFalse[js.Function1[/* collapsed */ js.UndefOr[Boolean], TagMod[Any]]]] = js.undefined
-  var colorWeak: js.UndefOr[Boolean] = js.undefined
-  var contentWidth: js.UndefOr[ContentWidth] = js.undefined
-  var fixSiderbar: js.UndefOr[Boolean] = js.undefined
-  var fixedHeader: js.UndefOr[Boolean] = js.undefined
-  var hasSiderMenu: js.UndefOr[Boolean] = js.undefined
+  var className: js.UndefOr[String] = js.native
+  var collapsed: js.UndefOr[Boolean] = js.native
+  var collapsedButtonRender: js.UndefOr[WithFalse[js.Function1[/* collapsed */ js.UndefOr[Boolean], TagMod[Any]]]] = js.native
+  var colorWeak: js.UndefOr[Boolean] = js.native
+  var contentWidth: js.UndefOr[ContentWidth] = js.native
+  var fixSiderbar: js.UndefOr[Boolean] = js.native
+  var fixedHeader: js.UndefOr[Boolean] = js.native
+  var hasSiderMenu: js.UndefOr[Boolean] = js.native
   var headerRender: js.UndefOr[
     WithFalse[
       js.Function2[/* props */ HeaderViewProps, /* defaultDom */ TagMod[Any], TagMod[Any]]
     ]
-  ] = js.undefined
-  var iconfontUrl: js.UndefOr[String] = js.undefined
-  var isMobile: js.UndefOr[Boolean] = js.undefined
-  var layout: js.UndefOr[sidemenu | topmenu] = js.undefined
-  var logo: js.UndefOr[TagMod[Any]] = js.undefined
-  var menu: js.UndefOr[AnonDefaultOpenAll] = js.undefined
+  ] = js.native
+  var iconfontUrl: js.UndefOr[String] = js.native
+  var isMobile: js.UndefOr[Boolean] = js.native
+  var layout: js.UndefOr[sidemenu | topmenu] = js.native
+  var logo: js.UndefOr[TagMod[Any]] = js.native
+  var menu: js.UndefOr[AnonDefaultOpenAll] = js.native
   var menuHeaderRender: js.UndefOr[
     WithFalse[
       js.Function3[
@@ -42,86 +44,369 @@ trait HeaderViewProps extends js.Object {
         TagMod[Any]
       ]
     ]
-  ] = js.undefined
+  ] = js.native
   var menuRender: js.UndefOr[
     WithFalse[
       js.Function2[/* props */ HeaderViewProps, /* defaultDom */ TagMod[Any], TagMod[Any]]
     ]
-  ] = js.undefined
+  ] = js.native
   var navTheme: js.UndefOr[
     (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify MenuTheme */ js.Any) | realDark
-  ] = js.undefined
-  var onCollapse: js.UndefOr[js.Function1[/* collapsed */ Boolean, Unit]] = js.undefined
-  var primaryColor: js.UndefOr[String] = js.undefined
-  var rightContentRender: js.UndefOr[WithFalse[js.Function1[/* props */ this.type, TagMod[Any]]]] = js.undefined
-  var siderWidth: js.UndefOr[Double] = js.undefined
-  var style: js.UndefOr[CSSProperties] = js.undefined
-  var title: js.UndefOr[String] = js.undefined
+  ] = js.native
+  var onCollapse: js.UndefOr[js.Function1[/* collapsed */ Boolean, Unit]] = js.native
+  var primaryColor: js.UndefOr[String] = js.native
+  var rightContentRender: js.UndefOr[WithFalse[js.Function1[/* props */ this.type, TagMod[Any]]]] = js.native
+  var siderWidth: js.UndefOr[Double] = js.native
+  var style: js.UndefOr[CSSProperties] = js.native
+  var title: js.UndefOr[String] = js.native
 }
 
 object HeaderViewProps {
   @scala.inline
-  def apply(
-    className: String = null,
-    collapsed: js.UndefOr[Boolean] = js.undefined,
-    collapsedButtonRender: WithFalse[js.Function1[/* collapsed */ js.UndefOr[Boolean], TagMod[Any]]] = null,
-    colorWeak: js.UndefOr[Boolean] = js.undefined,
-    contentWidth: ContentWidth = null,
-    fixSiderbar: js.UndefOr[Boolean] = js.undefined,
-    fixedHeader: js.UndefOr[Boolean] = js.undefined,
-    hasSiderMenu: js.UndefOr[Boolean] = js.undefined,
-    headerRender: WithFalse[
-      js.Function2[/* props */ HeaderViewProps, /* defaultDom */ TagMod[Any], TagMod[Any]]
-    ] = null,
-    iconfontUrl: String = null,
-    isMobile: js.UndefOr[Boolean] = js.undefined,
-    layout: sidemenu | topmenu = null,
-    logo: TagMod[Any] = null,
-    menu: AnonDefaultOpenAll = null,
-    menuHeaderRender: WithFalse[
-      js.Function3[
-        /* logo */ TagMod[Any], 
-        /* title */ TagMod[Any], 
-        /* props */ js.UndefOr[HeaderViewProps], 
-        TagMod[Any]
-      ]
-    ] = null,
-    menuRender: WithFalse[
-      js.Function2[/* props */ HeaderViewProps, /* defaultDom */ TagMod[Any], TagMod[Any]]
-    ] = null,
-    navTheme: (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify MenuTheme */ js.Any) | realDark = null,
-    onCollapse: /* collapsed */ Boolean => Unit = null,
-    primaryColor: String = null,
-    rightContentRender: WithFalse[js.Function1[HeaderViewProps, TagMod[Any]]] = null,
-    siderWidth: Int | Double = null,
-    style: CSSProperties = null,
-    title: String = null
-  ): HeaderViewProps = {
+  def apply(): HeaderViewProps = {
     val __obj = js.Dynamic.literal()
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (!js.isUndefined(collapsed)) __obj.updateDynamic("collapsed")(collapsed.asInstanceOf[js.Any])
-    if (collapsedButtonRender != null) __obj.updateDynamic("collapsedButtonRender")(collapsedButtonRender.asInstanceOf[js.Any])
-    if (!js.isUndefined(colorWeak)) __obj.updateDynamic("colorWeak")(colorWeak.asInstanceOf[js.Any])
-    if (contentWidth != null) __obj.updateDynamic("contentWidth")(contentWidth.asInstanceOf[js.Any])
-    if (!js.isUndefined(fixSiderbar)) __obj.updateDynamic("fixSiderbar")(fixSiderbar.asInstanceOf[js.Any])
-    if (!js.isUndefined(fixedHeader)) __obj.updateDynamic("fixedHeader")(fixedHeader.asInstanceOf[js.Any])
-    if (!js.isUndefined(hasSiderMenu)) __obj.updateDynamic("hasSiderMenu")(hasSiderMenu.asInstanceOf[js.Any])
-    if (headerRender != null) __obj.updateDynamic("headerRender")(headerRender.asInstanceOf[js.Any])
-    if (iconfontUrl != null) __obj.updateDynamic("iconfontUrl")(iconfontUrl.asInstanceOf[js.Any])
-    if (!js.isUndefined(isMobile)) __obj.updateDynamic("isMobile")(isMobile.asInstanceOf[js.Any])
-    if (layout != null) __obj.updateDynamic("layout")(layout.asInstanceOf[js.Any])
-    if (logo != null) __obj.updateDynamic("logo")(logo.asInstanceOf[js.Any])
-    if (menu != null) __obj.updateDynamic("menu")(menu.asInstanceOf[js.Any])
-    if (menuHeaderRender != null) __obj.updateDynamic("menuHeaderRender")(menuHeaderRender.asInstanceOf[js.Any])
-    if (menuRender != null) __obj.updateDynamic("menuRender")(menuRender.asInstanceOf[js.Any])
-    if (navTheme != null) __obj.updateDynamic("navTheme")(navTheme.asInstanceOf[js.Any])
-    if (onCollapse != null) __obj.updateDynamic("onCollapse")(js.Any.fromFunction1(onCollapse))
-    if (primaryColor != null) __obj.updateDynamic("primaryColor")(primaryColor.asInstanceOf[js.Any])
-    if (rightContentRender != null) __obj.updateDynamic("rightContentRender")(rightContentRender.asInstanceOf[js.Any])
-    if (siderWidth != null) __obj.updateDynamic("siderWidth")(siderWidth.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     __obj.asInstanceOf[HeaderViewProps]
   }
+  @scala.inline
+  implicit class HeaderViewPropsOps[Self <: HeaderViewProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClassName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClassName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCollapsed(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("collapsed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCollapsed: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("collapsed")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCollapsedButtonRenderFunction1(value: /* collapsed */ js.UndefOr[Boolean] => TagMod[Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("collapsedButtonRender")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withCollapsedButtonRender(value: WithFalse[js.Function1[/* collapsed */ js.UndefOr[Boolean], TagMod[Any]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("collapsedButtonRender")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCollapsedButtonRender: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("collapsedButtonRender")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColorWeak(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colorWeak")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColorWeak: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colorWeak")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContentWidth(value: ContentWidth): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContentWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFixSiderbar(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixSiderbar")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFixSiderbar: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixSiderbar")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFixedHeader(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedHeader")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFixedHeader: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedHeader")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHasSiderMenu(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hasSiderMenu")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHasSiderMenu: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hasSiderMenu")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeaderRenderFunction2(value: (/* props */ HeaderViewProps, /* defaultDom */ TagMod[Any]) => TagMod[Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headerRender")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withHeaderRender(
+      value: WithFalse[
+          js.Function2[/* props */ HeaderViewProps, /* defaultDom */ TagMod[Any], TagMod[Any]]
+        ]
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headerRender")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeaderRender: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headerRender")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIconfontUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iconfontUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIconfontUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iconfontUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsMobile(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isMobile")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsMobile: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isMobile")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLayout(value: sidemenu | topmenu): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("layout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLayout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("layout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLogoReactElement(value: ReactElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("logo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLogo(value: TagMod[Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("logo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLogo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("logo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMenu(value: AnonDefaultOpenAll): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("menu")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMenu: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("menu")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMenuHeaderRenderFunction3(
+      value: (/* logo */ TagMod[Any], /* title */ TagMod[Any], /* props */ js.UndefOr[HeaderViewProps]) => TagMod[Any]
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("menuHeaderRender")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withMenuHeaderRender(
+      value: WithFalse[
+          js.Function3[
+            /* logo */ TagMod[Any], 
+            /* title */ TagMod[Any], 
+            /* props */ js.UndefOr[HeaderViewProps], 
+            TagMod[Any]
+          ]
+        ]
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("menuHeaderRender")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMenuHeaderRender: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("menuHeaderRender")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMenuRenderFunction2(value: (/* props */ HeaderViewProps, /* defaultDom */ TagMod[Any]) => TagMod[Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("menuRender")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withMenuRender(
+      value: WithFalse[
+          js.Function2[/* props */ HeaderViewProps, /* defaultDom */ TagMod[Any], TagMod[Any]]
+        ]
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("menuRender")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMenuRender: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("menuRender")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNavTheme(
+      value: (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify MenuTheme */ js.Any) | realDark
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("navTheme")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNavTheme: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("navTheme")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnCollapse(value: /* collapsed */ Boolean => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onCollapse")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnCollapse: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onCollapse")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrimaryColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("primaryColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrimaryColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("primaryColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRightContentRenderFunction1(value: HeaderViewProps => TagMod[Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rightContentRender")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withRightContentRender(value: WithFalse[js.Function1[HeaderViewProps, TagMod[Any]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rightContentRender")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRightContentRender: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rightContentRender")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSiderWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("siderWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSiderWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("siderWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyle(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,15 +1,17 @@
 package typingsSlinky.reactDayPicker.components
 
 import typingsSlinky.reactDayPicker.mod.default
+import typingsSlinky.reactDayPicker.propsMod.DayPickerProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactDayPicker extends SharedApply_DayPickerProps1303028881[default] {
+object ReactDayPicker {
   @JSImport("react-day-picker", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: DayPickerProps): SharedBuilder_DayPickerProps821347195[default] = new SharedBuilder_DayPickerProps821347195[default](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: ReactDayPicker.type): SharedBuilder_DayPickerProps821347195[default] = new SharedBuilder_DayPickerProps821347195[default](js.Array(this.component, js.Dictionary.empty))()
 }
 

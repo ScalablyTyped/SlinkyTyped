@@ -18,22 +18,20 @@ trait CardBrand extends js.Object
 
 object CardBrand {
   @scala.inline
-  def `american-express`: typingsSlinky.creditCardType.creditCardTypeStrings.`american-express` = this.cast("american-express")
+  def `american-express`: typingsSlinky.creditCardType.creditCardTypeStrings.`american-express` = "american-express".asInstanceOf[typingsSlinky.creditCardType.creditCardTypeStrings.`american-express`]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def `diners-club`: typingsSlinky.creditCardType.creditCardTypeStrings.`diners-club` = "diners-club".asInstanceOf[typingsSlinky.creditCardType.creditCardTypeStrings.`diners-club`]
   @scala.inline
-  def `diners-club`: typingsSlinky.creditCardType.creditCardTypeStrings.`diners-club` = this.cast("diners-club")
+  def discover: typingsSlinky.creditCardType.creditCardTypeStrings.discover = "discover".asInstanceOf[typingsSlinky.creditCardType.creditCardTypeStrings.discover]
   @scala.inline
-  def discover: typingsSlinky.creditCardType.creditCardTypeStrings.discover = this.cast("discover")
+  def jcb: typingsSlinky.creditCardType.creditCardTypeStrings.jcb = "jcb".asInstanceOf[typingsSlinky.creditCardType.creditCardTypeStrings.jcb]
   @scala.inline
-  def jcb: typingsSlinky.creditCardType.creditCardTypeStrings.jcb = this.cast("jcb")
+  def maestro: typingsSlinky.creditCardType.creditCardTypeStrings.maestro = "maestro".asInstanceOf[typingsSlinky.creditCardType.creditCardTypeStrings.maestro]
   @scala.inline
-  def maestro: typingsSlinky.creditCardType.creditCardTypeStrings.maestro = this.cast("maestro")
+  def mastercard: typingsSlinky.creditCardType.creditCardTypeStrings.mastercard = "mastercard".asInstanceOf[typingsSlinky.creditCardType.creditCardTypeStrings.mastercard]
   @scala.inline
-  def mastercard: typingsSlinky.creditCardType.creditCardTypeStrings.mastercard = this.cast("mastercard")
+  def unionpay: typingsSlinky.creditCardType.creditCardTypeStrings.unionpay = "unionpay".asInstanceOf[typingsSlinky.creditCardType.creditCardTypeStrings.unionpay]
   @scala.inline
-  def unionpay: typingsSlinky.creditCardType.creditCardTypeStrings.unionpay = this.cast("unionpay")
-  @scala.inline
-  def visa: typingsSlinky.creditCardType.creditCardTypeStrings.visa = this.cast("visa")
+  def visa: typingsSlinky.creditCardType.creditCardTypeStrings.visa = "visa".asInstanceOf[typingsSlinky.creditCardType.creditCardTypeStrings.visa]
 }
 

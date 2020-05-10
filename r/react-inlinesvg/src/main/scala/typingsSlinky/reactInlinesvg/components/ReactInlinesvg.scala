@@ -1,11 +1,11 @@
 package typingsSlinky.reactInlinesvg.components
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLElement
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
+import slinky.core.facade.ReactRef
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.Ref
 import typingsSlinky.reactInlinesvg.helpersMod.InlineSVGError
 import typingsSlinky.reactInlinesvg.mod.IFetchError
@@ -15,42 +15,52 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactInlinesvg
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object ReactInlinesvg {
   @JSImport("react-inlinesvg", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: title */
-  def apply(
-    src: String,
-    baseURL: String = null,
-    cacheRequests: js.UndefOr[Boolean] = js.undefined,
-    description: String = null,
-    innerRef: Ref[HTMLElement] = null,
-    loader: TagMod[Any] = null,
-    onError: /* error */ InlineSVGError | IFetchError => Unit = null,
-    onLoad: (/* src */ String, /* isCached */ Boolean) => Unit = null,
-    preProcessor: /* code */ String => String = null,
-    uniqueHash: String = null,
-    uniquifyIDs: js.UndefOr[Boolean] = js.undefined,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(src = src.asInstanceOf[js.Any])
-    if (baseURL != null) __obj.updateDynamic("baseURL")(baseURL.asInstanceOf[js.Any])
-    if (!js.isUndefined(cacheRequests)) __obj.updateDynamic("cacheRequests")(cacheRequests.asInstanceOf[js.Any])
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (innerRef != null) __obj.updateDynamic("innerRef")(innerRef.asInstanceOf[js.Any])
-    if (loader != null) __obj.updateDynamic("loader")(loader.asInstanceOf[js.Any])
-    if (onError != null) __obj.updateDynamic("onError")(js.Any.fromFunction1(onError))
-    if (onLoad != null) __obj.updateDynamic("onLoad")(js.Any.fromFunction2(onLoad))
-    if (preProcessor != null) __obj.updateDynamic("preProcessor")(js.Any.fromFunction1(preProcessor))
-    if (uniqueHash != null) __obj.updateDynamic("uniqueHash")(uniqueHash.asInstanceOf[js.Any])
-    if (!js.isUndefined(uniquifyIDs)) __obj.updateDynamic("uniquifyIDs")(uniquifyIDs.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def baseURL(value: String): this.type = set("baseURL", value.asInstanceOf[js.Any])
+    @scala.inline
+    def cacheRequests(value: Boolean): this.type = set("cacheRequests", value.asInstanceOf[js.Any])
+    @scala.inline
+    def description(value: String): this.type = set("description", value.asInstanceOf[js.Any])
+    @scala.inline
+    def innerRefRefObject(value: ReactRef[HTMLElement]): this.type = set("innerRef", value.asInstanceOf[js.Any])
+    @scala.inline
+    def innerRefFunction1(value: /* instance */ HTMLElement | Null => Unit): this.type = set("innerRef", js.Any.fromFunction1(value))
+    @scala.inline
+    def innerRef(value: Ref[HTMLElement]): this.type = set("innerRef", value.asInstanceOf[js.Any])
+    @scala.inline
+    def innerRefNull: this.type = set("innerRef", null)
+    @scala.inline
+    def loaderReactElement(value: ReactElement): this.type = set("loader", value.asInstanceOf[js.Any])
+    @scala.inline
+    def loader(value: TagMod[Any]): this.type = set("loader", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onError(value: /* error */ InlineSVGError | IFetchError => Unit): this.type = set("onError", js.Any.fromFunction1(value))
+    @scala.inline
+    def onLoad(value: (/* src */ String, /* isCached */ Boolean) => Unit): this.type = set("onLoad", js.Any.fromFunction2(value))
+    @scala.inline
+    def preProcessor(value: /* code */ String => String): this.type = set("preProcessor", js.Any.fromFunction1(value))
+    @scala.inline
+    def title(value: String): this.type = set("title", value.asInstanceOf[js.Any])
+    @scala.inline
+    def uniqueHash(value: String): this.type = set("uniqueHash", value.asInstanceOf[js.Any])
+    @scala.inline
+    def uniquifyIDs(value: Boolean): this.type = set("uniquifyIDs", value.asInstanceOf[js.Any])
   }
-  type Props = IProps
+  
+  def withProps(p: IProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(src: String): Builder = {
+    val __props = js.Dynamic.literal(src = src.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[IProps]))
+  }
 }
 

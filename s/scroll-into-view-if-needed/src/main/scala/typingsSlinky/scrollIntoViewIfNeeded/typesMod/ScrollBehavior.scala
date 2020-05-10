@@ -12,10 +12,8 @@ trait ScrollBehavior extends js.Object
 
 object ScrollBehavior {
   @scala.inline
-  def auto: typingsSlinky.scrollIntoViewIfNeeded.scrollIntoViewIfNeededStrings.auto = this.cast("auto")
+  def auto: typingsSlinky.scrollIntoViewIfNeeded.scrollIntoViewIfNeededStrings.auto = "auto".asInstanceOf[typingsSlinky.scrollIntoViewIfNeeded.scrollIntoViewIfNeededStrings.auto]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
-  @scala.inline
-  def smooth: typingsSlinky.scrollIntoViewIfNeeded.scrollIntoViewIfNeededStrings.smooth = this.cast("smooth")
+  def smooth: typingsSlinky.scrollIntoViewIfNeeded.scrollIntoViewIfNeededStrings.smooth = "smooth".asInstanceOf[typingsSlinky.scrollIntoViewIfNeeded.scrollIntoViewIfNeededStrings.smooth]
 }
 

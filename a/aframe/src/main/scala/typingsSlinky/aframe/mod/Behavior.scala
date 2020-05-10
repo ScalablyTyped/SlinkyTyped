@@ -4,16 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Behavior extends js.Object {
-  def tick(): Unit
+  def tick(): Unit = js.native
 }
 
 object Behavior {
   @scala.inline
   def apply(tick: () => Unit): Behavior = {
     val __obj = js.Dynamic.literal(tick = js.Any.fromFunction0(tick))
-  
     __obj.asInstanceOf[Behavior]
   }
+  @scala.inline
+  implicit class BehaviorOps[Self <: Behavior] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withTick(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tick")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

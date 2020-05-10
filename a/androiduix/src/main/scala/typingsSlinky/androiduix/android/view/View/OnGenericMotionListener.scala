@@ -5,8 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait OnGenericMotionListener extends js.Object {
-  def onGenericMotion(v: typingsSlinky.androiduix.android.view.View, event: MotionEvent): js.Any
+  def onGenericMotion(v: typingsSlinky.androiduix.android.view.View, event: MotionEvent): js.Any = js.native
 }
 
 @JSGlobal("android.view.View.OnGenericMotionListener")

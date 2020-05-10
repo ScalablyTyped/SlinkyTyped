@@ -1,14 +1,6 @@
 package typingsSlinky.xmldsigjs
 
 import typingsSlinky.xmldsigjs.algorithmMod.HashAlgorithm
-import typingsSlinky.xmldsigjs.xmldsigjsStrings.`SHA-1`
-import typingsSlinky.xmldsigjs.xmldsigjsStrings.`SHA-256`
-import typingsSlinky.xmldsigjs.xmldsigjsStrings.`SHA-384`
-import typingsSlinky.xmldsigjs.xmldsigjsStrings.`SHA-512`
-import typingsSlinky.xmldsigjs.xmldsigjsStrings.`httpColonSlashSlashwwwDotw3DotorgSlash2001Slash04Slashxmldsig-moreNumbersignsha384`
-import typingsSlinky.xmldsigjs.xmldsigjsStrings.httpColonSlashSlashwwwDotw3DotorgSlash2000Slash09SlashxmldsigNumbersignsha1
-import typingsSlinky.xmldsigjs.xmldsigjsStrings.httpColonSlashSlashwwwDotw3DotorgSlash2001Slash04SlashxmlencNumbersignsha256
-import typingsSlinky.xmldsigjs.xmldsigjsStrings.httpColonSlashSlashwwwDotw3DotorgSlash2001Slash04SlashxmlencNumbersignsha512
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -41,16 +33,16 @@ object rsaHashMod extends js.Object {
   }
   
   @JSName("SHA1")
-  val SHA1_ : `SHA-1` = js.native
-  val SHA1_NAMESPACE: httpColonSlashSlashwwwDotw3DotorgSlash2000Slash09SlashxmldsigNumbersignsha1 = js.native
+  val SHA1_ : /* "SHA-1" */ String = js.native
+  val SHA1_NAMESPACE: /* "http://www.w3.org/2000/09/xmldsig#sha1" */ String = js.native
   @JSName("SHA256")
-  val SHA256_ : `SHA-256` = js.native
-  val SHA256_NAMESPACE: httpColonSlashSlashwwwDotw3DotorgSlash2001Slash04SlashxmlencNumbersignsha256 = js.native
+  val SHA256_ : /* "SHA-256" */ String = js.native
+  val SHA256_NAMESPACE: /* "http://www.w3.org/2001/04/xmlenc#sha256" */ String = js.native
   @JSName("SHA384")
-  val SHA384_ : `SHA-384` = js.native
-  val SHA384_NAMESPACE: `httpColonSlashSlashwwwDotw3DotorgSlash2001Slash04Slashxmldsig-moreNumbersignsha384` = js.native
+  val SHA384_ : /* "SHA-384" */ String = js.native
+  val SHA384_NAMESPACE: /* "http://www.w3.org/2001/04/xmldsig-more#sha384" */ String = js.native
   @JSName("SHA512")
-  val SHA512_ : `SHA-512` = js.native
-  val SHA512_NAMESPACE: httpColonSlashSlashwwwDotw3DotorgSlash2001Slash04SlashxmlencNumbersignsha512 = js.native
+  val SHA512_ : /* "SHA-512" */ String = js.native
+  val SHA512_NAMESPACE: /* "http://www.w3.org/2001/04/xmlenc#sha512" */ String = js.native
 }
 

@@ -1,23 +1,42 @@
 package typingsSlinky.reactFontawesome.mod
 
+import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.react.mod.AllHTMLAttributes
-import typingsSlinky.std.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Intermediate extends AllHTMLAttributes[HTMLElement] {
   @JSName("size")
-  var size_Intermediate: js.UndefOr[js.Any] = js.undefined
+  var size_Intermediate: js.UndefOr[js.Any] = js.native
 }
 
 object Intermediate {
   @scala.inline
-  def apply(AllHTMLAttributes: AllHTMLAttributes[org.scalajs.dom.raw.HTMLElement] = null, size: js.Any = null): Intermediate = {
+  def apply(): Intermediate = {
     val __obj = js.Dynamic.literal()
-    if (AllHTMLAttributes != null) js.Dynamic.global.Object.assign(__obj, AllHTMLAttributes)
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
     __obj.asInstanceOf[Intermediate]
   }
+  @scala.inline
+  implicit class IntermediateOps[Self <: Intermediate] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSize(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

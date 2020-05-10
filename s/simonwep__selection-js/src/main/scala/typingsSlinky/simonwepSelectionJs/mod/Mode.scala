@@ -13,12 +13,10 @@ trait Mode extends js.Object
 
 object Mode {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def center: typingsSlinky.simonwepSelectionJs.simonwepSelectionJsStrings.center = "center".asInstanceOf[typingsSlinky.simonwepSelectionJs.simonwepSelectionJsStrings.center]
   @scala.inline
-  def center: typingsSlinky.simonwepSelectionJs.simonwepSelectionJsStrings.center = this.cast("center")
+  def cover: typingsSlinky.simonwepSelectionJs.simonwepSelectionJsStrings.cover = "cover".asInstanceOf[typingsSlinky.simonwepSelectionJs.simonwepSelectionJsStrings.cover]
   @scala.inline
-  def cover: typingsSlinky.simonwepSelectionJs.simonwepSelectionJsStrings.cover = this.cast("cover")
-  @scala.inline
-  def touch: typingsSlinky.simonwepSelectionJs.simonwepSelectionJsStrings.touch = this.cast("touch")
+  def touch: typingsSlinky.simonwepSelectionJs.simonwepSelectionJsStrings.touch = "touch".asInstanceOf[typingsSlinky.simonwepSelectionJs.simonwepSelectionJsStrings.touch]
 }
 

@@ -16,12 +16,10 @@ trait EdgeLocation extends js.Object
 
 object EdgeLocation {
   @scala.inline
-  def bottom: typingsSlinky.jupyterlabCodeeditor.jupyterlabCodeeditorStrings.bottom = this.cast("bottom")
+  def bottom: typingsSlinky.jupyterlabCodeeditor.jupyterlabCodeeditorStrings.bottom = "bottom".asInstanceOf[typingsSlinky.jupyterlabCodeeditor.jupyterlabCodeeditorStrings.bottom]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def top: typingsSlinky.jupyterlabCodeeditor.jupyterlabCodeeditorStrings.top = "top".asInstanceOf[typingsSlinky.jupyterlabCodeeditor.jupyterlabCodeeditorStrings.top]
   @scala.inline
-  def top: typingsSlinky.jupyterlabCodeeditor.jupyterlabCodeeditorStrings.top = this.cast("top")
-  @scala.inline
-  def topLine: typingsSlinky.jupyterlabCodeeditor.jupyterlabCodeeditorStrings.topLine = this.cast("topLine")
+  def topLine: typingsSlinky.jupyterlabCodeeditor.jupyterlabCodeeditorStrings.topLine = "topLine".asInstanceOf[typingsSlinky.jupyterlabCodeeditor.jupyterlabCodeeditorStrings.topLine]
 }
 

@@ -5,6 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonLength2
   extends /**
   * Some properties like "normal" or "emphasis" are not documented.
@@ -17,32 +18,32 @@ trait AnonLength2
     *
     * @see https://echarts.apache.org/en/option.html#series-pie.labelLine.emphasis
     */
-  var emphasis: js.UndefOr[AnonShow] = js.undefined
+  var emphasis: js.UndefOr[AnonShow] = js.native
   /**
     * The length of the first segment of visual guide line.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-pie.labelLine.length
     */
-  var length: js.UndefOr[Double] = js.undefined
+  var length: js.UndefOr[Double] = js.native
   /**
     * The length of the second segment of visual guide line.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-pie.labelLine.length2
     */
-  var length2: js.UndefOr[Double] = js.undefined
+  var length2: js.UndefOr[Double] = js.native
   /**
     * @see https://echarts.apache.org/en/option.html#series-pie.labelLine.lineStyle
     */
-  var lineStyle: js.UndefOr[AnonShadowBlur] = js.undefined
+  var lineStyle: js.UndefOr[AnonShadowBlur] = js.native
   /**
     * Whether to show the visual guide ine.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-pie.labelLine.show
     */
-  var show: js.UndefOr[Boolean] = js.undefined
+  var show: js.UndefOr[Boolean] = js.native
   /**
     * Whether to smooth the visual guide line.
     * It defaults to be `false` and can be set as `true` or the
@@ -51,33 +52,94 @@ trait AnonLength2
     *
     * @see https://echarts.apache.org/en/option.html#series-pie.labelLine.smooth
     */
-  var smooth: js.UndefOr[Boolean | Double] = js.undefined
+  var smooth: js.UndefOr[Boolean | Double] = js.native
 }
 
 object AnonLength2 {
   @scala.inline
-  def apply(
-    StringDictionary: /**
-    * Some properties like "normal" or "emphasis" are not documented.
-    * Please, write description for them
-    */
-  /* unknownProperty */ StringDictionary[js.Any] = null,
-    emphasis: AnonShow = null,
-    length: Int | Double = null,
-    length2: Int | Double = null,
-    lineStyle: AnonShadowBlur = null,
-    show: js.UndefOr[Boolean] = js.undefined,
-    smooth: Boolean | Double = null
-  ): AnonLength2 = {
+  def apply(): AnonLength2 = {
     val __obj = js.Dynamic.literal()
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
-    if (emphasis != null) __obj.updateDynamic("emphasis")(emphasis.asInstanceOf[js.Any])
-    if (length != null) __obj.updateDynamic("length")(length.asInstanceOf[js.Any])
-    if (length2 != null) __obj.updateDynamic("length2")(length2.asInstanceOf[js.Any])
-    if (lineStyle != null) __obj.updateDynamic("lineStyle")(lineStyle.asInstanceOf[js.Any])
-    if (!js.isUndefined(show)) __obj.updateDynamic("show")(show.asInstanceOf[js.Any])
-    if (smooth != null) __obj.updateDynamic("smooth")(smooth.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonLength2]
   }
+  @scala.inline
+  implicit class AnonLength2Ops[Self <: AnonLength2] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEmphasis(value: AnonShow): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("emphasis")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEmphasis: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("emphasis")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLength(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("length")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLength: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("length")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLength2(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("length2")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLength2: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("length2")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLineStyle(value: AnonShadowBlur): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLineStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShow(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("show")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("show")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSmooth(value: Boolean | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("smooth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSmooth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("smooth")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

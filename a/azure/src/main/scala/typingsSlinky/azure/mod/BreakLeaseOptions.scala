@@ -4,26 +4,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait BreakLeaseOptions extends AccessConditionsOptions {
-  var leaseBreakPeriod: js.UndefOr[Double] = js.undefined
+  var leaseBreakPeriod: js.UndefOr[Double] = js.native
 }
 
 object BreakLeaseOptions {
   @scala.inline
-  def apply(
-    accessConditions: StorageAccessCondition = null,
-    leaseBreakPeriod: Int | Double = null,
-    locationMode: String = null,
-    maximumExecutionTimeInMs: Int | Double = null,
-    timeoutIntervalInMs: Int | Double = null
-  ): BreakLeaseOptions = {
+  def apply(): BreakLeaseOptions = {
     val __obj = js.Dynamic.literal()
-    if (accessConditions != null) __obj.updateDynamic("accessConditions")(accessConditions.asInstanceOf[js.Any])
-    if (leaseBreakPeriod != null) __obj.updateDynamic("leaseBreakPeriod")(leaseBreakPeriod.asInstanceOf[js.Any])
-    if (locationMode != null) __obj.updateDynamic("locationMode")(locationMode.asInstanceOf[js.Any])
-    if (maximumExecutionTimeInMs != null) __obj.updateDynamic("maximumExecutionTimeInMs")(maximumExecutionTimeInMs.asInstanceOf[js.Any])
-    if (timeoutIntervalInMs != null) __obj.updateDynamic("timeoutIntervalInMs")(timeoutIntervalInMs.asInstanceOf[js.Any])
     __obj.asInstanceOf[BreakLeaseOptions]
   }
+  @scala.inline
+  implicit class BreakLeaseOptionsOps[Self <: BreakLeaseOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLeaseBreakPeriod(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("leaseBreakPeriod")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLeaseBreakPeriod: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("leaseBreakPeriod")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

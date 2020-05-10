@@ -1,6 +1,5 @@
 package typingsSlinky.leapYear
 
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,6 +9,6 @@ import scala.scalajs.js.annotation._
 object mod extends js.Object {
   def apply(): Boolean = js.native
   def apply(year: Double): Boolean = js.native
-  def apply(year: Date): Boolean = js.native
+  def apply(year: js.Date): Boolean = js.native
 }
 

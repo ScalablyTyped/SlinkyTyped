@@ -58,7 +58,7 @@ trait ComposeView extends js.Object {
   def getThreadID(): String = js.native
   def getToRecipients(): js.Array[Contact] = js.native
   def insertHTMLIntoBodyAtCursor(html: String): HTMLElement = js.native
-  def insertHTMLIntoBodyAtCursor(html: typingsSlinky.std.HTMLElement): HTMLElement = js.native
+  def insertHTMLIntoBodyAtCursor(html: HTMLElement): HTMLElement = js.native
   def insertLinkChipIntoBodyAtCursor(text: String, url: String, iconUrl: String): HTMLElement = js.native
   def insertLinkIntoBodyAtCursor(text: String, url: String): HTMLElement = js.native
   def insertTextIntoBodyAtCursor(text: String): Unit = js.native

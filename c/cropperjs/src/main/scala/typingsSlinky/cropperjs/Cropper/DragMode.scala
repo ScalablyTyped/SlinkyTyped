@@ -13,12 +13,10 @@ trait DragMode extends js.Object
 
 object DragMode {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def crop: typingsSlinky.cropperjs.cropperjsStrings.crop = "crop".asInstanceOf[typingsSlinky.cropperjs.cropperjsStrings.crop]
   @scala.inline
-  def crop: typingsSlinky.cropperjs.cropperjsStrings.crop = this.cast("crop")
+  def move: typingsSlinky.cropperjs.cropperjsStrings.move = "move".asInstanceOf[typingsSlinky.cropperjs.cropperjsStrings.move]
   @scala.inline
-  def move: typingsSlinky.cropperjs.cropperjsStrings.move = this.cast("move")
-  @scala.inline
-  def none: typingsSlinky.cropperjs.cropperjsStrings.none = this.cast("none")
+  def none: typingsSlinky.cropperjs.cropperjsStrings.none = "none".asInstanceOf[typingsSlinky.cropperjs.cropperjsStrings.none]
 }
 

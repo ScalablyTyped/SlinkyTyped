@@ -1,9 +1,6 @@
 package typingsSlinky.reactToolbox.libAutocompleteAutocompleteMod
 
 import org.scalablytyped.runtime.StringDictionary
-import slinky.core.TagMod
-import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.react.mod.Key
 import typingsSlinky.reactToolbox.libInputInputMod.InputProps
 import typingsSlinky.reactToolbox.libInputInputMod.InputTheme
 import typingsSlinky.reactToolbox.reactToolboxStrings.above
@@ -20,6 +17,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AutocompleteProps
   extends InputProps
      with /**
@@ -30,180 +28,202 @@ trait AutocompleteProps
     * Determines if user can create a new option with the current typed value.
     * @default false
     */
-  var allowCreate: js.UndefOr[Boolean] = js.undefined
+  var allowCreate: js.UndefOr[Boolean] = js.native
   /**
     * Determines the opening direction. It can be auto, up or down.
     * @default auto
     */
-  var direction: js.UndefOr[auto | up | down] = js.undefined
+  var direction: js.UndefOr[auto | up | down] = js.native
   /**
     * Whether component should keep focus after value change.
     * @default false
     */
-  var keepFocusOnChange: js.UndefOr[Boolean] = js.undefined
+  var keepFocusOnChange: js.UndefOr[Boolean] = js.native
   /**
     * If true, component can hold multiple values.
     * @default true
     */
-  var multiple: js.UndefOr[Boolean] = js.undefined
+  var multiple: js.UndefOr[Boolean] = js.native
   /**
     * Callback function that is fired when the components's query value changes.
     */
-  var onQueryChange: js.UndefOr[js.Function] = js.undefined
+  var onQueryChange: js.UndefOr[js.Function] = js.native
   /**
     * Determines if the selected list is shown above or below input. It can be above or below.
     * @default above
     */
-  var selectedPosition: js.UndefOr[above | below | none] = js.undefined
+  var selectedPosition: js.UndefOr[above | below | none] = js.native
   /**
     * Determines if the selected list is shown if the `value` keys don't exist in the source. Only works if passing the `value` prop as an Object.
     * @default false
     */
-  var showSelectedWhenNotInSource: js.UndefOr[Boolean] = js.undefined
+  var showSelectedWhenNotInSource: js.UndefOr[Boolean] = js.native
   /**
     * If true, the list of suggestions will not be filtered when a value is selected.
     * @default false
     */
-  var showSuggestionsWhenValueIsSet: js.UndefOr[Boolean] = js.undefined
+  var showSuggestionsWhenValueIsSet: js.UndefOr[Boolean] = js.native
   /**
     * Object of key/values or array representing all items suggested.
     */
-  var source: js.UndefOr[js.Any] = js.undefined
+  var source: js.UndefOr[js.Any] = js.native
   /**
     * Determines how suggestions are supplied.
     * @default start
     */
-  var suggestionMatch: js.UndefOr[disabled | start | anywhere | word] = js.undefined
+  var suggestionMatch: js.UndefOr[disabled | start | anywhere | word] = js.native
   /**
     * Classnames object defining the component style.
     */
   @JSName("theme")
-  var theme_AutocompleteProps: js.UndefOr[AutocompleteTheme with InputTheme] = js.undefined
+  var theme_AutocompleteProps: js.UndefOr[AutocompleteTheme with InputTheme] = js.native
 }
 
 object AutocompleteProps {
   @scala.inline
-  def apply(
-    StringDictionary: /**
-    * Additional properties passed to inner Input component.
-    */
-  /* key */ StringDictionary[js.Any] = null,
-    allowCreate: js.UndefOr[Boolean] = js.undefined,
-    children: TagMod[Any] = null,
-    className: String = null,
-    direction: auto | up | down = null,
-    disabled: js.UndefOr[Boolean] = js.undefined,
-    error: TagMod[Any] = null,
-    floating: js.UndefOr[Boolean] = js.undefined,
-    hint: TagMod[Any] = null,
-    icon: TagMod[Any] = null,
-    keepFocusOnChange: js.UndefOr[Boolean] = js.undefined,
-    key: Key = null,
-    label: TagMod[Any] = null,
-    maxLength: Int | Double = null,
-    multiline: js.UndefOr[Boolean] = js.undefined,
-    multiple: js.UndefOr[Boolean] = js.undefined,
-    name: String = null,
-    onBlur: js.Function = null,
-    onChange: js.Function = null,
-    onClick: js.Function = null,
-    onContextMenu: js.Function = null,
-    onDoubleClick: js.Function = null,
-    onDrag: js.Function = null,
-    onDragEnd: js.Function = null,
-    onDragEnter: js.Function = null,
-    onDragExit: js.Function = null,
-    onDragLeave: js.Function = null,
-    onDragOver: js.Function = null,
-    onDragStart: js.Function = null,
-    onDrop: js.Function = null,
-    onFocus: js.Function = null,
-    onKeyDown: js.Function = null,
-    onKeyPress: js.Function = null,
-    onKeyUp: js.Function = null,
-    onMouseDown: js.Function = null,
-    onMouseEnter: js.Function = null,
-    onMouseLeave: js.Function = null,
-    onMouseMove: js.Function = null,
-    onMouseOut: js.Function = null,
-    onMouseOver: js.Function = null,
-    onMouseUp: js.Function = null,
-    onQueryChange: js.Function = null,
-    onTouchCancel: js.Function = null,
-    onTouchEnd: js.Function = null,
-    onTouchMove: js.Function = null,
-    onTouchStart: js.Function = null,
-    required: js.UndefOr[Boolean] = js.undefined,
-    rows: Int | Double = null,
-    selectedPosition: above | below | none = null,
-    showSelectedWhenNotInSource: js.UndefOr[Boolean] = js.undefined,
-    showSuggestionsWhenValueIsSet: js.UndefOr[Boolean] = js.undefined,
-    source: js.Any = null,
-    style: CSSProperties = null,
-    suggestionMatch: disabled | start | anywhere | word = null,
-    theme: AutocompleteTheme with InputTheme = null,
-    `type`: String = null,
-    value: js.Any = null
-  ): AutocompleteProps = {
+  def apply(): AutocompleteProps = {
     val __obj = js.Dynamic.literal()
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
-    if (!js.isUndefined(allowCreate)) __obj.updateDynamic("allowCreate")(allowCreate.asInstanceOf[js.Any])
-    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (direction != null) __obj.updateDynamic("direction")(direction.asInstanceOf[js.Any])
-    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.asInstanceOf[js.Any])
-    if (error != null) __obj.updateDynamic("error")(error.asInstanceOf[js.Any])
-    if (!js.isUndefined(floating)) __obj.updateDynamic("floating")(floating.asInstanceOf[js.Any])
-    if (hint != null) __obj.updateDynamic("hint")(hint.asInstanceOf[js.Any])
-    if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
-    if (!js.isUndefined(keepFocusOnChange)) __obj.updateDynamic("keepFocusOnChange")(keepFocusOnChange.asInstanceOf[js.Any])
-    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
-    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
-    if (maxLength != null) __obj.updateDynamic("maxLength")(maxLength.asInstanceOf[js.Any])
-    if (!js.isUndefined(multiline)) __obj.updateDynamic("multiline")(multiline.asInstanceOf[js.Any])
-    if (!js.isUndefined(multiple)) __obj.updateDynamic("multiple")(multiple.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (onBlur != null) __obj.updateDynamic("onBlur")(onBlur.asInstanceOf[js.Any])
-    if (onChange != null) __obj.updateDynamic("onChange")(onChange.asInstanceOf[js.Any])
-    if (onClick != null) __obj.updateDynamic("onClick")(onClick.asInstanceOf[js.Any])
-    if (onContextMenu != null) __obj.updateDynamic("onContextMenu")(onContextMenu.asInstanceOf[js.Any])
-    if (onDoubleClick != null) __obj.updateDynamic("onDoubleClick")(onDoubleClick.asInstanceOf[js.Any])
-    if (onDrag != null) __obj.updateDynamic("onDrag")(onDrag.asInstanceOf[js.Any])
-    if (onDragEnd != null) __obj.updateDynamic("onDragEnd")(onDragEnd.asInstanceOf[js.Any])
-    if (onDragEnter != null) __obj.updateDynamic("onDragEnter")(onDragEnter.asInstanceOf[js.Any])
-    if (onDragExit != null) __obj.updateDynamic("onDragExit")(onDragExit.asInstanceOf[js.Any])
-    if (onDragLeave != null) __obj.updateDynamic("onDragLeave")(onDragLeave.asInstanceOf[js.Any])
-    if (onDragOver != null) __obj.updateDynamic("onDragOver")(onDragOver.asInstanceOf[js.Any])
-    if (onDragStart != null) __obj.updateDynamic("onDragStart")(onDragStart.asInstanceOf[js.Any])
-    if (onDrop != null) __obj.updateDynamic("onDrop")(onDrop.asInstanceOf[js.Any])
-    if (onFocus != null) __obj.updateDynamic("onFocus")(onFocus.asInstanceOf[js.Any])
-    if (onKeyDown != null) __obj.updateDynamic("onKeyDown")(onKeyDown.asInstanceOf[js.Any])
-    if (onKeyPress != null) __obj.updateDynamic("onKeyPress")(onKeyPress.asInstanceOf[js.Any])
-    if (onKeyUp != null) __obj.updateDynamic("onKeyUp")(onKeyUp.asInstanceOf[js.Any])
-    if (onMouseDown != null) __obj.updateDynamic("onMouseDown")(onMouseDown.asInstanceOf[js.Any])
-    if (onMouseEnter != null) __obj.updateDynamic("onMouseEnter")(onMouseEnter.asInstanceOf[js.Any])
-    if (onMouseLeave != null) __obj.updateDynamic("onMouseLeave")(onMouseLeave.asInstanceOf[js.Any])
-    if (onMouseMove != null) __obj.updateDynamic("onMouseMove")(onMouseMove.asInstanceOf[js.Any])
-    if (onMouseOut != null) __obj.updateDynamic("onMouseOut")(onMouseOut.asInstanceOf[js.Any])
-    if (onMouseOver != null) __obj.updateDynamic("onMouseOver")(onMouseOver.asInstanceOf[js.Any])
-    if (onMouseUp != null) __obj.updateDynamic("onMouseUp")(onMouseUp.asInstanceOf[js.Any])
-    if (onQueryChange != null) __obj.updateDynamic("onQueryChange")(onQueryChange.asInstanceOf[js.Any])
-    if (onTouchCancel != null) __obj.updateDynamic("onTouchCancel")(onTouchCancel.asInstanceOf[js.Any])
-    if (onTouchEnd != null) __obj.updateDynamic("onTouchEnd")(onTouchEnd.asInstanceOf[js.Any])
-    if (onTouchMove != null) __obj.updateDynamic("onTouchMove")(onTouchMove.asInstanceOf[js.Any])
-    if (onTouchStart != null) __obj.updateDynamic("onTouchStart")(onTouchStart.asInstanceOf[js.Any])
-    if (!js.isUndefined(required)) __obj.updateDynamic("required")(required.asInstanceOf[js.Any])
-    if (rows != null) __obj.updateDynamic("rows")(rows.asInstanceOf[js.Any])
-    if (selectedPosition != null) __obj.updateDynamic("selectedPosition")(selectedPosition.asInstanceOf[js.Any])
-    if (!js.isUndefined(showSelectedWhenNotInSource)) __obj.updateDynamic("showSelectedWhenNotInSource")(showSelectedWhenNotInSource.asInstanceOf[js.Any])
-    if (!js.isUndefined(showSuggestionsWhenValueIsSet)) __obj.updateDynamic("showSuggestionsWhenValueIsSet")(showSuggestionsWhenValueIsSet.asInstanceOf[js.Any])
-    if (source != null) __obj.updateDynamic("source")(source.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (suggestionMatch != null) __obj.updateDynamic("suggestionMatch")(suggestionMatch.asInstanceOf[js.Any])
-    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     __obj.asInstanceOf[AutocompleteProps]
   }
+  @scala.inline
+  implicit class AutocompletePropsOps[Self <: AutocompleteProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAllowCreate(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowCreate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowCreate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowCreate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDirection(value: auto | up | down): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDirection: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKeepFocusOnChange(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keepFocusOnChange")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKeepFocusOnChange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keepFocusOnChange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMultiple(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("multiple")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMultiple: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("multiple")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnQueryChange(value: js.Function): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onQueryChange")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnQueryChange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onQueryChange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelectedPosition(value: above | below | none): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedPosition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelectedPosition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedPosition")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowSelectedWhenNotInSource(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showSelectedWhenNotInSource")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowSelectedWhenNotInSource: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showSelectedWhenNotInSource")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowSuggestionsWhenValueIsSet(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showSuggestionsWhenValueIsSet")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowSuggestionsWhenValueIsSet: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showSuggestionsWhenValueIsSet")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSource(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSource: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSuggestionMatch(value: disabled | start | anywhere | word): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suggestionMatch")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSuggestionMatch: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suggestionMatch")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTheme(value: AutocompleteTheme with InputTheme): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTheme: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

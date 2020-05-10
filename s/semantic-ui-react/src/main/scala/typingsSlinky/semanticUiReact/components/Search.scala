@@ -1,14 +1,14 @@
 package typingsSlinky.semanticUiReact.components
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLDivElement
 import org.scalajs.dom.raw.HTMLElement
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.core.ReactComponentClass
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.div.tag
+import typingsSlinky.StBuildingComponent
+import typingsSlinky.react.mod.ReactNodeArray
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandItem
 import typingsSlinky.semanticUiReact.inputInputMod.InputProps
 import typingsSlinky.semanticUiReact.searchCategoryMod.SearchCategoryProps
@@ -27,76 +27,84 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Search
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object Search {
   @JSImport("semantic-ui-react/dist/commonjs/modules/Search", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className */
-  def apply(
-    aligned: String = null,
-    as: js.Any = null,
-    category: js.UndefOr[Boolean] = js.undefined,
-    categoryLayoutRenderer: /* props */ SearchCategoryProps => ReactElement = null,
-    categoryRenderer: /* props */ SearchCategoryProps => ReactElement = null,
-    defaultOpen: js.UndefOr[Boolean] = js.undefined,
-    defaultValue: String = null,
-    fluid: js.UndefOr[Boolean] = js.undefined,
-    icon: js.Any = null,
-    input: SemanticShorthandItem[InputProps] = null,
-    loading: js.UndefOr[Boolean] = js.undefined,
-    minCharacters: Int | Double = null,
-    noResultsDescription: TagMod[Any] = null,
-    noResultsMessage: TagMod[Any] = null,
-    onBlur: (/* event */ SyntheticMouseEvent[HTMLElement], /* data */ SearchProps) => Unit = null,
-    onFocus: (/* event */ SyntheticMouseEvent[HTMLElement], /* data */ SearchProps) => Unit = null,
-    onMouseDown: (/* event */ SyntheticMouseEvent[HTMLElement], /* data */ SearchProps) => Unit = null,
-    onResultSelect: (/* event */ SyntheticMouseEvent[HTMLDivElement], /* data */ SearchResultData) => Unit = null,
-    onSearchChange: (/* event */ SyntheticMouseEvent[HTMLElement], /* data */ SearchProps) => Unit = null,
-    onSelectionChange: (/* event */ SyntheticMouseEvent[HTMLElement], /* data */ SearchResultData) => Unit = null,
-    open: js.UndefOr[Boolean] = js.undefined,
-    resultRenderer: /* props */ SearchResultProps => ReactElement = null,
-    results: js.Array[_] | js.Object = null,
-    selectFirstResult: js.UndefOr[Boolean] = js.undefined,
-    showNoResults: js.UndefOr[Boolean] = js.undefined,
-    size: mini | tiny | small | large | big | huge | massive = null,
-    value: String = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (aligned != null) __obj.updateDynamic("aligned")(aligned.asInstanceOf[js.Any])
-    if (as != null) __obj.updateDynamic("as")(as.asInstanceOf[js.Any])
-    if (!js.isUndefined(category)) __obj.updateDynamic("category")(category.asInstanceOf[js.Any])
-    if (categoryLayoutRenderer != null) __obj.updateDynamic("categoryLayoutRenderer")(js.Any.fromFunction1(categoryLayoutRenderer))
-    if (categoryRenderer != null) __obj.updateDynamic("categoryRenderer")(js.Any.fromFunction1(categoryRenderer))
-    if (!js.isUndefined(defaultOpen)) __obj.updateDynamic("defaultOpen")(defaultOpen.asInstanceOf[js.Any])
-    if (defaultValue != null) __obj.updateDynamic("defaultValue")(defaultValue.asInstanceOf[js.Any])
-    if (!js.isUndefined(fluid)) __obj.updateDynamic("fluid")(fluid.asInstanceOf[js.Any])
-    if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
-    if (input != null) __obj.updateDynamic("input")(input.asInstanceOf[js.Any])
-    if (!js.isUndefined(loading)) __obj.updateDynamic("loading")(loading.asInstanceOf[js.Any])
-    if (minCharacters != null) __obj.updateDynamic("minCharacters")(minCharacters.asInstanceOf[js.Any])
-    if (noResultsDescription != null) __obj.updateDynamic("noResultsDescription")(noResultsDescription.asInstanceOf[js.Any])
-    if (noResultsMessage != null) __obj.updateDynamic("noResultsMessage")(noResultsMessage.asInstanceOf[js.Any])
-    if (onBlur != null) __obj.updateDynamic("onBlur")(js.Any.fromFunction2(onBlur))
-    if (onFocus != null) __obj.updateDynamic("onFocus")(js.Any.fromFunction2(onFocus))
-    if (onMouseDown != null) __obj.updateDynamic("onMouseDown")(js.Any.fromFunction2(onMouseDown))
-    if (onResultSelect != null) __obj.updateDynamic("onResultSelect")(js.Any.fromFunction2(onResultSelect))
-    if (onSearchChange != null) __obj.updateDynamic("onSearchChange")(js.Any.fromFunction2(onSearchChange))
-    if (onSelectionChange != null) __obj.updateDynamic("onSelectionChange")(js.Any.fromFunction2(onSelectionChange))
-    if (!js.isUndefined(open)) __obj.updateDynamic("open")(open.asInstanceOf[js.Any])
-    if (resultRenderer != null) __obj.updateDynamic("resultRenderer")(js.Any.fromFunction1(resultRenderer))
-    if (results != null) __obj.updateDynamic("results")(results.asInstanceOf[js.Any])
-    if (!js.isUndefined(selectFirstResult)) __obj.updateDynamic("selectFirstResult")(selectFirstResult.asInstanceOf[js.Any])
-    if (!js.isUndefined(showNoResults)) __obj.updateDynamic("showNoResults")(showNoResults.asInstanceOf[js.Any])
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def aligned(value: String): this.type = set("aligned", value.asInstanceOf[js.Any])
+    @scala.inline
+    def as(value: js.Any): this.type = set("as", value.asInstanceOf[js.Any])
+    @scala.inline
+    def category(value: Boolean): this.type = set("category", value.asInstanceOf[js.Any])
+    @scala.inline
+    def categoryLayoutRenderer(value: /* props */ SearchCategoryProps => ReactElement): this.type = set("categoryLayoutRenderer", js.Any.fromFunction1(value))
+    @scala.inline
+    def categoryRenderer(value: /* props */ SearchCategoryProps => ReactElement): this.type = set("categoryRenderer", js.Any.fromFunction1(value))
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultOpen(value: Boolean): this.type = set("defaultOpen", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultValue(value: String): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def fluid(value: Boolean): this.type = set("fluid", value.asInstanceOf[js.Any])
+    @scala.inline
+    def icon(value: js.Any): this.type = set("icon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def inputReactElement(value: ReactElement): this.type = set("input", value.asInstanceOf[js.Any])
+    @scala.inline
+    def inputFunction3(
+      value: (/* component */ ReactComponentClass[InputProps], InputProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+    ): this.type = set("input", js.Any.fromFunction3(value))
+    @scala.inline
+    def input(value: SemanticShorthandItem[InputProps]): this.type = set("input", value.asInstanceOf[js.Any])
+    @scala.inline
+    def loading(value: Boolean): this.type = set("loading", value.asInstanceOf[js.Any])
+    @scala.inline
+    def minCharacters(value: Double): this.type = set("minCharacters", value.asInstanceOf[js.Any])
+    @scala.inline
+    def noResultsDescriptionReactElement(value: ReactElement): this.type = set("noResultsDescription", value.asInstanceOf[js.Any])
+    @scala.inline
+    def noResultsDescription(value: TagMod[Any]): this.type = set("noResultsDescription", value.asInstanceOf[js.Any])
+    @scala.inline
+    def noResultsMessageReactElement(value: ReactElement): this.type = set("noResultsMessage", value.asInstanceOf[js.Any])
+    @scala.inline
+    def noResultsMessage(value: TagMod[Any]): this.type = set("noResultsMessage", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onBlur(value: (/* event */ SyntheticMouseEvent[HTMLElement], /* data */ SearchProps) => Unit): this.type = set("onBlur", js.Any.fromFunction2(value))
+    @scala.inline
+    def onFocus(value: (/* event */ SyntheticMouseEvent[HTMLElement], /* data */ SearchProps) => Unit): this.type = set("onFocus", js.Any.fromFunction2(value))
+    @scala.inline
+    def onMouseDown(value: (/* event */ SyntheticMouseEvent[HTMLElement], /* data */ SearchProps) => Unit): this.type = set("onMouseDown", js.Any.fromFunction2(value))
+    @scala.inline
+    def onResultSelect(value: (/* event */ SyntheticMouseEvent[HTMLDivElement], /* data */ SearchResultData) => Unit): this.type = set("onResultSelect", js.Any.fromFunction2(value))
+    @scala.inline
+    def onSearchChange(value: (/* event */ SyntheticMouseEvent[HTMLElement], /* data */ SearchProps) => Unit): this.type = set("onSearchChange", js.Any.fromFunction2(value))
+    @scala.inline
+    def onSelectionChange(value: (/* event */ SyntheticMouseEvent[HTMLElement], /* data */ SearchResultData) => Unit): this.type = set("onSelectionChange", js.Any.fromFunction2(value))
+    @scala.inline
+    def open(value: Boolean): this.type = set("open", value.asInstanceOf[js.Any])
+    @scala.inline
+    def resultRenderer(value: /* props */ SearchResultProps => ReactElement): this.type = set("resultRenderer", js.Any.fromFunction1(value))
+    @scala.inline
+    def results(value: js.Array[_] | js.Object): this.type = set("results", value.asInstanceOf[js.Any])
+    @scala.inline
+    def selectFirstResult(value: Boolean): this.type = set("selectFirstResult", value.asInstanceOf[js.Any])
+    @scala.inline
+    def showNoResults(value: Boolean): this.type = set("showNoResults", value.asInstanceOf[js.Any])
+    @scala.inline
+    def size(value: mini | tiny | small | large | big | huge | massive): this.type = set("size", value.asInstanceOf[js.Any])
+    @scala.inline
+    def value(value: String): this.type = set("value", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.div.tag.type, typingsSlinky.semanticUiReact.searchMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = SearchProps
+  
+  def withProps(p: SearchProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Search.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

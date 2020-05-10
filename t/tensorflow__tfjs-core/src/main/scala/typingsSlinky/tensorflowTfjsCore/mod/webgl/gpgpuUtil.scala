@@ -1,14 +1,14 @@
 package typingsSlinky.tensorflowTfjsCore.mod.webgl
 
+import org.scalajs.dom.raw.HTMLCanvasElement
+import org.scalajs.dom.raw.HTMLImageElement
+import org.scalajs.dom.raw.HTMLVideoElement
+import org.scalajs.dom.raw.ImageData
 import org.scalajs.dom.raw.WebGLBuffer
 import org.scalajs.dom.raw.WebGLProgram
 import org.scalajs.dom.raw.WebGLRenderingContext
 import org.scalajs.dom.raw.WebGLShader
 import org.scalajs.dom.raw.WebGLTexture
-import typingsSlinky.std.HTMLCanvasElement
-import typingsSlinky.std.HTMLImageElement
-import typingsSlinky.std.HTMLVideoElement
-import typingsSlinky.std.ImageData
 import typingsSlinky.std.WebGL2RenderingContext
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.PixelData
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.TypedArray
@@ -72,9 +72,9 @@ object gpgpuUtil extends js.Object {
     rows: Double,
     columns: Double,
     textureConfig: TextureConfig
-  ): scala.scalajs.js.typedarray.Float32Array = js.native
-  def downloadFloat32MatrixFromBuffer(gl: WebGLRenderingContext, buffer: WebGLBuffer, size: Double): scala.scalajs.js.typedarray.Float32Array = js.native
-  def downloadMatrixFromPackedOutputTexture(gl: WebGLRenderingContext, debug: Boolean, physicalRows: Double, physicalCols: Double): scala.scalajs.js.typedarray.Float32Array = js.native
+  ): js.typedarray.Float32Array = js.native
+  def downloadFloat32MatrixFromBuffer(gl: WebGLRenderingContext, buffer: WebGLBuffer, size: Double): js.typedarray.Float32Array = js.native
+  def downloadMatrixFromPackedOutputTexture(gl: WebGLRenderingContext, debug: Boolean, physicalRows: Double, physicalCols: Double): js.typedarray.Float32Array = js.native
   def downloadPackedMatrixFromBuffer(
     gl: WebGLRenderingContext,
     buffer: WebGLBuffer,
@@ -84,7 +84,7 @@ object gpgpuUtil extends js.Object {
     physicalRows: Double,
     physicalCols: Double,
     textureConfig: TextureConfig
-  ): scala.scalajs.js.typedarray.Float32Array = js.native
+  ): js.typedarray.Float32Array = js.native
   def uploadDenseMatrixToTexture(
     gl: WebGLRenderingContext,
     debug: Boolean,

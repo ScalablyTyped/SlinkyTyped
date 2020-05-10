@@ -23,14 +23,41 @@ trait CrawlerJdbcTarget extends js.Object {
 
 object CrawlerJdbcTarget {
   @scala.inline
-  def apply(
-    connectionName: Input[String],
-    path: Input[String],
-    exclusions: Input[js.Array[Input[String]]] = null
-  ): CrawlerJdbcTarget = {
+  def apply(connectionName: Input[String], path: Input[String]): CrawlerJdbcTarget = {
     val __obj = js.Dynamic.literal(connectionName = connectionName.asInstanceOf[js.Any], path = path.asInstanceOf[js.Any])
-    if (exclusions != null) __obj.updateDynamic("exclusions")(exclusions.asInstanceOf[js.Any])
     __obj.asInstanceOf[CrawlerJdbcTarget]
   }
+  @scala.inline
+  implicit class CrawlerJdbcTargetOps[Self <: CrawlerJdbcTarget] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConnectionName(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("connectionName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPath(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withExclusions(value: Input[js.Array[Input[String]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exclusions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExclusions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exclusions")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

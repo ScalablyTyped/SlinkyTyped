@@ -34,22 +34,89 @@ trait ApplicationInfo extends js.Object {
 
 object ApplicationInfo {
   @scala.inline
-  def apply(
-    applicationId: ApplicationId = null,
-    applicationName: ApplicationName = null,
-    computePlatform: ComputePlatform = null,
-    createTime: js.Date = null,
-    gitHubAccountName: GitHubAccountTokenName = null,
-    linkedToGitHub: js.UndefOr[scala.Boolean] = js.undefined
-  ): ApplicationInfo = {
+  def apply(): ApplicationInfo = {
     val __obj = js.Dynamic.literal()
-    if (applicationId != null) __obj.updateDynamic("applicationId")(applicationId.asInstanceOf[js.Any])
-    if (applicationName != null) __obj.updateDynamic("applicationName")(applicationName.asInstanceOf[js.Any])
-    if (computePlatform != null) __obj.updateDynamic("computePlatform")(computePlatform.asInstanceOf[js.Any])
-    if (createTime != null) __obj.updateDynamic("createTime")(createTime.asInstanceOf[js.Any])
-    if (gitHubAccountName != null) __obj.updateDynamic("gitHubAccountName")(gitHubAccountName.asInstanceOf[js.Any])
-    if (!js.isUndefined(linkedToGitHub)) __obj.updateDynamic("linkedToGitHub")(linkedToGitHub.asInstanceOf[js.Any])
     __obj.asInstanceOf[ApplicationInfo]
   }
+  @scala.inline
+  implicit class ApplicationInfoOps[Self <: ApplicationInfo] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withApplicationId(value: ApplicationId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("applicationId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutApplicationId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("applicationId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withApplicationName(value: ApplicationName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("applicationName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutApplicationName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("applicationName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withComputePlatform(value: ComputePlatform): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("computePlatform")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutComputePlatform: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("computePlatform")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreateTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreateTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGitHubAccountName(value: GitHubAccountTokenName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gitHubAccountName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGitHubAccountName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gitHubAccountName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLinkedToGitHub(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("linkedToGitHub")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLinkedToGitHub: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("linkedToGitHub")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

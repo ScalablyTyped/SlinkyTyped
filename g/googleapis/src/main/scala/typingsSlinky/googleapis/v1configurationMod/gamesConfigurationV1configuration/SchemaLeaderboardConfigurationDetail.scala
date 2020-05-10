@@ -34,20 +34,77 @@ trait SchemaLeaderboardConfigurationDetail extends js.Object {
 
 object SchemaLeaderboardConfigurationDetail {
   @scala.inline
-  def apply(
-    iconUrl: String = null,
-    kind: String = null,
-    name: SchemaLocalizedStringBundle = null,
-    scoreFormat: SchemaGamesNumberFormatConfiguration = null,
-    sortRank: Int | Double = null
-  ): SchemaLeaderboardConfigurationDetail = {
+  def apply(): SchemaLeaderboardConfigurationDetail = {
     val __obj = js.Dynamic.literal()
-    if (iconUrl != null) __obj.updateDynamic("iconUrl")(iconUrl.asInstanceOf[js.Any])
-    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (scoreFormat != null) __obj.updateDynamic("scoreFormat")(scoreFormat.asInstanceOf[js.Any])
-    if (sortRank != null) __obj.updateDynamic("sortRank")(sortRank.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaLeaderboardConfigurationDetail]
   }
+  @scala.inline
+  implicit class SchemaLeaderboardConfigurationDetailOps[Self <: SchemaLeaderboardConfigurationDetail] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIconUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iconUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIconUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iconUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKind(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: SchemaLocalizedStringBundle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScoreFormat(value: SchemaGamesNumberFormatConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scoreFormat")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScoreFormat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scoreFormat")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSortRank(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sortRank")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSortRank: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sortRank")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

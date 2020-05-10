@@ -1,9 +1,8 @@
 package typingsSlinky.materialUiCore.cardContentCardContentMod
 
 import org.scalablytyped.runtime.TopLevel
+import slinky.core.ReactComponentClass
 import typingsSlinky.react.mod.Component
-import typingsSlinky.react.mod.ComponentState
-import typingsSlinky.react.mod.ComponentType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,12 +10,12 @@ import scala.scalajs.js.annotation._
 @JSImport("@material-ui/core/CardContent/CardContent", JSImport.Default)
 @js.native
 class default protected ()
-  extends Component[CardContentProps, ComponentState, js.Any] {
+  extends Component[CardContentProps, js.Object, js.Any] {
   def this(props: CardContentProps) = this()
   def this(props: CardContentProps, context: js.Any) = this()
 }
 
 @JSImport("@material-ui/core/CardContent/CardContent", JSImport.Default)
 @js.native
-object default extends TopLevel[ComponentType[CardContentProps]]
+object default extends TopLevel[ReactComponentClass[CardContentProps]]
 

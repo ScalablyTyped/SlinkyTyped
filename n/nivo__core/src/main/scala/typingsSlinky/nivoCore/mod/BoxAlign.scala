@@ -19,24 +19,22 @@ trait BoxAlign extends js.Object
 
 object BoxAlign {
   @scala.inline
-  def bottom: typingsSlinky.nivoCore.nivoCoreStrings.bottom = this.cast("bottom")
+  def bottom: typingsSlinky.nivoCore.nivoCoreStrings.bottom = "bottom".asInstanceOf[typingsSlinky.nivoCore.nivoCoreStrings.bottom]
   @scala.inline
-  def `bottom-left`: typingsSlinky.nivoCore.nivoCoreStrings.`bottom-left` = this.cast("bottom-left")
+  def `bottom-left`: typingsSlinky.nivoCore.nivoCoreStrings.`bottom-left` = "bottom-left".asInstanceOf[typingsSlinky.nivoCore.nivoCoreStrings.`bottom-left`]
   @scala.inline
-  def `bottom-right`: typingsSlinky.nivoCore.nivoCoreStrings.`bottom-right` = this.cast("bottom-right")
+  def `bottom-right`: typingsSlinky.nivoCore.nivoCoreStrings.`bottom-right` = "bottom-right".asInstanceOf[typingsSlinky.nivoCore.nivoCoreStrings.`bottom-right`]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def center: typingsSlinky.nivoCore.nivoCoreStrings.center = "center".asInstanceOf[typingsSlinky.nivoCore.nivoCoreStrings.center]
   @scala.inline
-  def center: typingsSlinky.nivoCore.nivoCoreStrings.center = this.cast("center")
+  def left: typingsSlinky.nivoCore.nivoCoreStrings.left = "left".asInstanceOf[typingsSlinky.nivoCore.nivoCoreStrings.left]
   @scala.inline
-  def left: typingsSlinky.nivoCore.nivoCoreStrings.left = this.cast("left")
+  def right: typingsSlinky.nivoCore.nivoCoreStrings.right = "right".asInstanceOf[typingsSlinky.nivoCore.nivoCoreStrings.right]
   @scala.inline
-  def right: typingsSlinky.nivoCore.nivoCoreStrings.right = this.cast("right")
+  def top: typingsSlinky.nivoCore.nivoCoreStrings.top = "top".asInstanceOf[typingsSlinky.nivoCore.nivoCoreStrings.top]
   @scala.inline
-  def top: typingsSlinky.nivoCore.nivoCoreStrings.top = this.cast("top")
+  def `top-left`: typingsSlinky.nivoCore.nivoCoreStrings.`top-left` = "top-left".asInstanceOf[typingsSlinky.nivoCore.nivoCoreStrings.`top-left`]
   @scala.inline
-  def `top-left`: typingsSlinky.nivoCore.nivoCoreStrings.`top-left` = this.cast("top-left")
-  @scala.inline
-  def `top-right`: typingsSlinky.nivoCore.nivoCoreStrings.`top-right` = this.cast("top-right")
+  def `top-right`: typingsSlinky.nivoCore.nivoCoreStrings.`top-right` = "top-right".asInstanceOf[typingsSlinky.nivoCore.nivoCoreStrings.`top-right`]
 }
 

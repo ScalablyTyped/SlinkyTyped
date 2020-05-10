@@ -18,10 +18,35 @@ trait GetDataSourceInput extends js.Object {
 
 object GetDataSourceInput {
   @scala.inline
-  def apply(DataSourceId: EntityId, Verbose: js.UndefOr[Boolean] = js.undefined): GetDataSourceInput = {
+  def apply(DataSourceId: EntityId): GetDataSourceInput = {
     val __obj = js.Dynamic.literal(DataSourceId = DataSourceId.asInstanceOf[js.Any])
-    if (!js.isUndefined(Verbose)) __obj.updateDynamic("Verbose")(Verbose.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetDataSourceInput]
   }
+  @scala.inline
+  implicit class GetDataSourceInputOps[Self <: GetDataSourceInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDataSourceId(value: EntityId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DataSourceId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVerbose(value: Verbose): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Verbose")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVerbose: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Verbose")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

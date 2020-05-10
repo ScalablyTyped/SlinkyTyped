@@ -15,12 +15,12 @@ trait FnCallModelArtifactsWeightSpecsWeightDataTrainingConfig extends js.Object 
   def apply(
     modelArtifacts: js.Object,
     weightSpecs: js.Array[WeightsManifestEntry],
-    weightData: scala.scalajs.js.typedarray.ArrayBuffer
+    weightData: js.typedarray.ArrayBuffer
   ): IOHandler = js.native
   def apply(
     modelArtifacts: js.Object,
     weightSpecs: js.Array[WeightsManifestEntry],
-    weightData: scala.scalajs.js.typedarray.ArrayBuffer,
+    weightData: js.typedarray.ArrayBuffer,
     trainingConfig: TrainingConfig
   ): IOHandler = js.native
   def apply(modelArtifacts: ModelArtifacts): IOHandler = js.native
@@ -28,12 +28,12 @@ trait FnCallModelArtifactsWeightSpecsWeightDataTrainingConfig extends js.Object 
   def apply(
     modelArtifacts: ModelArtifacts,
     weightSpecs: js.Array[WeightsManifestEntry],
-    weightData: scala.scalajs.js.typedarray.ArrayBuffer
+    weightData: js.typedarray.ArrayBuffer
   ): IOHandler = js.native
   def apply(
     modelArtifacts: ModelArtifacts,
     weightSpecs: js.Array[WeightsManifestEntry],
-    weightData: scala.scalajs.js.typedarray.ArrayBuffer,
+    weightData: js.typedarray.ArrayBuffer,
     trainingConfig: TrainingConfig
   ): IOHandler = js.native
 }

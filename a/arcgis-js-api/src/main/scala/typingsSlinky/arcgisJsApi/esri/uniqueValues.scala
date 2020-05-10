@@ -10,6 +10,7 @@ import scala.scalajs.js.annotation._
   *
   * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-smartMapping-statistics-uniqueValues.html)
   */
+@js.native
 trait uniqueValues extends js.Object {
   /**
     * Returns an object containing an array of unique values queried from a given field (or values returned from an expression) in a [Layer](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-Layer.html) along with the total count of features that belong to the given category.
@@ -25,9 +26,10 @@ trait uniqueValues extends js.Object {
     * @param params.returnAllCodedValues Indicates that all domain codes should be returned if the given field has domain values.
     * @param params.view A [SceneView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-SceneView.html) or [MapView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html) instance is required when a `valueExpression` is specified.
     * @param params.features A subset of features for which to generate the unique values.
+    * @param params.signal Allows for cancelable requests. If canceled, the promise will be rejected with an error named `AbortError`. See also [AbortController](https://developer.mozilla.org/en-US/docs/Web/API/AbortController).
     *
     */
-  def uniqueValues(params: uniqueValuesUniqueValuesParams): js.Promise[UniqueValuesResult]
+  def uniqueValues(params: uniqueValuesUniqueValuesParams): js.Promise[UniqueValuesResult] = js.native
 }
 
 @JSGlobal("__esri.uniqueValues")

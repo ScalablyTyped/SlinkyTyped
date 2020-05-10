@@ -1,15 +1,16 @@
 package typingsSlinky.officeUiFabricReact.components
 
+import typingsSlinky.officeUiFabricReact.autofillTypesMod.IAutofillProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object BaseAutoFill
-  extends SharedApply_IAutofillProps1294627884[typingsSlinky.officeUiFabricReact.mod.BaseAutoFill] {
+object BaseAutoFill {
   @JSImport("office-ui-fabric-react", "BaseAutoFill")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: IAutofillProps): SharedBuilder_IAutofillProps_786739988[typingsSlinky.officeUiFabricReact.mod.BaseAutoFill] = new SharedBuilder_IAutofillProps_786739988[typingsSlinky.officeUiFabricReact.mod.BaseAutoFill](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: BaseAutoFill.type): SharedBuilder_IAutofillProps_786739988[typingsSlinky.officeUiFabricReact.mod.BaseAutoFill] = new SharedBuilder_IAutofillProps_786739988[typingsSlinky.officeUiFabricReact.mod.BaseAutoFill](js.Array(this.component, js.Dictionary.empty))()
 }
 

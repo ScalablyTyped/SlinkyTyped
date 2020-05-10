@@ -26,115 +26,51 @@ trait ArmOperand extends js.Object
 
 object ArmOperand {
   @scala.inline
-  def ArmPimmOperand(
-    subtracted: Boolean,
-    `type`: pimm,
-    value: Double,
-    shift: AnonType = null,
-    vectorIndex: Int | Double = null
-  ): ArmOperand = {
+  def ArmPimmOperand(subtracted: Boolean, `type`: pimm, value: Double): ArmOperand = {
     val __obj = js.Dynamic.literal(subtracted = subtracted.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (shift != null) __obj.updateDynamic("shift")(shift.asInstanceOf[js.Any])
-    if (vectorIndex != null) __obj.updateDynamic("vectorIndex")(vectorIndex.asInstanceOf[js.Any])
     __obj.asInstanceOf[ArmOperand]
   }
   @scala.inline
-  def ArmRegOperand(
-    subtracted: Boolean,
-    `type`: reg,
-    value: ArmRegister,
-    shift: AnonType = null,
-    vectorIndex: Int | Double = null
-  ): ArmOperand = {
+  def ArmRegOperand(subtracted: Boolean, `type`: reg, value: ArmRegister): ArmOperand = {
     val __obj = js.Dynamic.literal(subtracted = subtracted.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (shift != null) __obj.updateDynamic("shift")(shift.asInstanceOf[js.Any])
-    if (vectorIndex != null) __obj.updateDynamic("vectorIndex")(vectorIndex.asInstanceOf[js.Any])
     __obj.asInstanceOf[ArmOperand]
   }
   @scala.inline
-  def ArmSysregOperand(
-    subtracted: Boolean,
-    `type`: sysreg,
-    value: ArmRegister,
-    shift: AnonType = null,
-    vectorIndex: Int | Double = null
-  ): ArmOperand = {
+  def ArmSysregOperand(subtracted: Boolean, `type`: sysreg, value: ArmRegister): ArmOperand = {
     val __obj = js.Dynamic.literal(subtracted = subtracted.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (shift != null) __obj.updateDynamic("shift")(shift.asInstanceOf[js.Any])
-    if (vectorIndex != null) __obj.updateDynamic("vectorIndex")(vectorIndex.asInstanceOf[js.Any])
     __obj.asInstanceOf[ArmOperand]
   }
   @scala.inline
-  def ArmMemOperand(
-    subtracted: Boolean,
-    `type`: mem,
-    value: AnonDisp,
-    shift: AnonType = null,
-    vectorIndex: Int | Double = null
-  ): ArmOperand = {
+  def ArmMemOperand(subtracted: Boolean, `type`: mem, value: AnonDisp): ArmOperand = {
     val __obj = js.Dynamic.literal(subtracted = subtracted.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (shift != null) __obj.updateDynamic("shift")(shift.asInstanceOf[js.Any])
-    if (vectorIndex != null) __obj.updateDynamic("vectorIndex")(vectorIndex.asInstanceOf[js.Any])
     __obj.asInstanceOf[ArmOperand]
   }
   @scala.inline
-  def ArmImmOperand(
-    subtracted: Boolean,
-    `type`: imm,
-    value: Double,
-    shift: AnonType = null,
-    vectorIndex: Int | Double = null
-  ): ArmOperand = {
+  def ArmImmOperand(subtracted: Boolean, `type`: imm, value: Double): ArmOperand = {
     val __obj = js.Dynamic.literal(subtracted = subtracted.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (shift != null) __obj.updateDynamic("shift")(shift.asInstanceOf[js.Any])
-    if (vectorIndex != null) __obj.updateDynamic("vectorIndex")(vectorIndex.asInstanceOf[js.Any])
     __obj.asInstanceOf[ArmOperand]
   }
   @scala.inline
-  def ArmFpOperand(
-    subtracted: Boolean,
-    `type`: fp,
-    value: Double,
-    shift: AnonType = null,
-    vectorIndex: Int | Double = null
-  ): ArmOperand = {
+  def ArmFpOperand(subtracted: Boolean, `type`: fp, value: Double): ArmOperand = {
     val __obj = js.Dynamic.literal(subtracted = subtracted.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (shift != null) __obj.updateDynamic("shift")(shift.asInstanceOf[js.Any])
-    if (vectorIndex != null) __obj.updateDynamic("vectorIndex")(vectorIndex.asInstanceOf[js.Any])
     __obj.asInstanceOf[ArmOperand]
   }
   @scala.inline
-  def ArmCimmOperand(
-    subtracted: Boolean,
-    `type`: cimm,
-    value: Double,
-    shift: AnonType = null,
-    vectorIndex: Int | Double = null
-  ): ArmOperand = {
+  def ArmCimmOperand(subtracted: Boolean, `type`: cimm, value: Double): ArmOperand = {
     val __obj = js.Dynamic.literal(subtracted = subtracted.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (shift != null) __obj.updateDynamic("shift")(shift.asInstanceOf[js.Any])
-    if (vectorIndex != null) __obj.updateDynamic("vectorIndex")(vectorIndex.asInstanceOf[js.Any])
     __obj.asInstanceOf[ArmOperand]
   }
   @scala.inline
-  def ArmSetendOperand(
-    subtracted: Boolean,
-    `type`: setend,
-    value: Endian,
-    shift: AnonType = null,
-    vectorIndex: Int | Double = null
-  ): ArmOperand = {
+  def ArmSetendOperand(subtracted: Boolean, `type`: setend, value: Endian): ArmOperand = {
     val __obj = js.Dynamic.literal(subtracted = subtracted.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (shift != null) __obj.updateDynamic("shift")(shift.asInstanceOf[js.Any])
-    if (vectorIndex != null) __obj.updateDynamic("vectorIndex")(vectorIndex.asInstanceOf[js.Any])
     __obj.asInstanceOf[ArmOperand]
   }
 }

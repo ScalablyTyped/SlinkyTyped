@@ -12,11 +12,41 @@ trait AnonIndexableText extends js.Object {
 
 object AnonIndexableText {
   @scala.inline
-  def apply(indexableText: String = null, thumbnail: AnonMimeType = null): AnonIndexableText = {
+  def apply(): AnonIndexableText = {
     val __obj = js.Dynamic.literal()
-    if (indexableText != null) __obj.updateDynamic("indexableText")(indexableText.asInstanceOf[js.Any])
-    if (thumbnail != null) __obj.updateDynamic("thumbnail")(thumbnail.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonIndexableText]
   }
+  @scala.inline
+  implicit class AnonIndexableTextOps[Self <: AnonIndexableText] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIndexableText(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("indexableText")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIndexableText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("indexableText")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withThumbnail(value: AnonMimeType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thumbnail")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutThumbnail: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thumbnail")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

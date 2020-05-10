@@ -26,11 +26,41 @@ trait SchemaLoggingDestination extends js.Object {
 
 object SchemaLoggingDestination {
   @scala.inline
-  def apply(logs: js.Array[String] = null, monitoredResource: String = null): SchemaLoggingDestination = {
+  def apply(): SchemaLoggingDestination = {
     val __obj = js.Dynamic.literal()
-    if (logs != null) __obj.updateDynamic("logs")(logs.asInstanceOf[js.Any])
-    if (monitoredResource != null) __obj.updateDynamic("monitoredResource")(monitoredResource.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaLoggingDestination]
   }
+  @scala.inline
+  implicit class SchemaLoggingDestinationOps[Self <: SchemaLoggingDestination] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLogs(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("logs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLogs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("logs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMonitoredResource(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("monitoredResource")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMonitoredResource: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("monitoredResource")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

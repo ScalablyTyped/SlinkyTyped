@@ -22,12 +22,53 @@ trait BlacklistEntry extends js.Object {
 
 object BlacklistEntry {
   @scala.inline
-  def apply(Description: BlacklistingDescription = null, ListingTime: js.Date = null, RblName: RblName = null): BlacklistEntry = {
+  def apply(): BlacklistEntry = {
     val __obj = js.Dynamic.literal()
-    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
-    if (ListingTime != null) __obj.updateDynamic("ListingTime")(ListingTime.asInstanceOf[js.Any])
-    if (RblName != null) __obj.updateDynamic("RblName")(RblName.asInstanceOf[js.Any])
     __obj.asInstanceOf[BlacklistEntry]
   }
+  @scala.inline
+  implicit class BlacklistEntryOps[Self <: BlacklistEntry] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDescription(value: BlacklistingDescription): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withListingTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ListingTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutListingTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ListingTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRblName(value: RblName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RblName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRblName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RblName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

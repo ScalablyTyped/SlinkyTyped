@@ -16,8 +16,21 @@ object DescribeObservationRequest {
   @scala.inline
   def apply(ObservationId: ObservationId): DescribeObservationRequest = {
     val __obj = js.Dynamic.literal(ObservationId = ObservationId.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[DescribeObservationRequest]
   }
+  @scala.inline
+  implicit class DescribeObservationRequestOps[Self <: DescribeObservationRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withObservationId(value: ObservationId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ObservationId")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

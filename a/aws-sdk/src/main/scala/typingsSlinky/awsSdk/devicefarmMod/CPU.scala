@@ -22,12 +22,53 @@ trait CPU extends js.Object {
 
 object CPU {
   @scala.inline
-  def apply(architecture: String = null, clock: Int | scala.Double = null, frequency: String = null): CPU = {
+  def apply(): CPU = {
     val __obj = js.Dynamic.literal()
-    if (architecture != null) __obj.updateDynamic("architecture")(architecture.asInstanceOf[js.Any])
-    if (clock != null) __obj.updateDynamic("clock")(clock.asInstanceOf[js.Any])
-    if (frequency != null) __obj.updateDynamic("frequency")(frequency.asInstanceOf[js.Any])
     __obj.asInstanceOf[CPU]
   }
+  @scala.inline
+  implicit class CPUOps[Self <: CPU] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withArchitecture(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("architecture")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutArchitecture: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("architecture")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClock(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clock")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClock: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clock")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFrequency(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("frequency")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFrequency: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("frequency")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

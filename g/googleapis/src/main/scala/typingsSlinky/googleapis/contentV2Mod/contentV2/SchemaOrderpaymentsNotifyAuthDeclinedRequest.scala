@@ -14,10 +14,29 @@ trait SchemaOrderpaymentsNotifyAuthDeclinedRequest extends js.Object {
 
 object SchemaOrderpaymentsNotifyAuthDeclinedRequest {
   @scala.inline
-  def apply(declineReason: String = null): SchemaOrderpaymentsNotifyAuthDeclinedRequest = {
+  def apply(): SchemaOrderpaymentsNotifyAuthDeclinedRequest = {
     val __obj = js.Dynamic.literal()
-    if (declineReason != null) __obj.updateDynamic("declineReason")(declineReason.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaOrderpaymentsNotifyAuthDeclinedRequest]
   }
+  @scala.inline
+  implicit class SchemaOrderpaymentsNotifyAuthDeclinedRequestOps[Self <: SchemaOrderpaymentsNotifyAuthDeclinedRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDeclineReason(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("declineReason")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeclineReason: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("declineReason")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

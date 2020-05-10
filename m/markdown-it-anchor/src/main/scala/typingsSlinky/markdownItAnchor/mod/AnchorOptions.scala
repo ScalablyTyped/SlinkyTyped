@@ -4,16 +4,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnchorOptions extends js.Object {
   var callback: js.UndefOr[
     js.Function2[/* token */ typingsSlinky.markdownIt.tokenMod.^, /* anchor_info */ AnchorInfo, Unit]
-  ] = js.undefined
-  var level: js.UndefOr[Double] = js.undefined
-  var permalink: js.UndefOr[Boolean] = js.undefined
-  var permalinkBefore: js.UndefOr[Boolean] = js.undefined
-  var permalinkClass: js.UndefOr[String] = js.undefined
-  var permalinkHref: js.UndefOr[js.Function1[/* slug */ String, String]] = js.undefined
-  var permalinkSymbol: js.UndefOr[String] = js.undefined
+  ] = js.native
+  var level: js.UndefOr[Double] = js.native
+  var permalink: js.UndefOr[Boolean] = js.native
+  var permalinkBefore: js.UndefOr[Boolean] = js.native
+  var permalinkClass: js.UndefOr[String] = js.native
+  var permalinkHref: js.UndefOr[js.Function1[/* slug */ String, String]] = js.native
+  var permalinkSymbol: js.UndefOr[String] = js.native
   var renderPermalink: js.UndefOr[
     js.Function4[
       /* slug */ String, 
@@ -22,34 +23,133 @@ trait AnchorOptions extends js.Object {
       /* idx */ Double, 
       Unit
     ]
-  ] = js.undefined
-  var slugify: js.UndefOr[js.Function1[/* str */ String, String]] = js.undefined
+  ] = js.native
+  var slugify: js.UndefOr[js.Function1[/* str */ String, String]] = js.native
 }
 
 object AnchorOptions {
   @scala.inline
-  def apply(
-    callback: (/* token */ typingsSlinky.markdownIt.tokenMod.^, /* anchor_info */ AnchorInfo) => Unit = null,
-    level: Int | Double = null,
-    permalink: js.UndefOr[Boolean] = js.undefined,
-    permalinkBefore: js.UndefOr[Boolean] = js.undefined,
-    permalinkClass: String = null,
-    permalinkHref: /* slug */ String => String = null,
-    permalinkSymbol: String = null,
-    renderPermalink: (/* slug */ String, AnchorOptions, /* state */ typingsSlinky.markdownIt.parserCoreMod.^, /* idx */ Double) => Unit = null,
-    slugify: /* str */ String => String = null
-  ): AnchorOptions = {
+  def apply(): AnchorOptions = {
     val __obj = js.Dynamic.literal()
-    if (callback != null) __obj.updateDynamic("callback")(js.Any.fromFunction2(callback))
-    if (level != null) __obj.updateDynamic("level")(level.asInstanceOf[js.Any])
-    if (!js.isUndefined(permalink)) __obj.updateDynamic("permalink")(permalink.asInstanceOf[js.Any])
-    if (!js.isUndefined(permalinkBefore)) __obj.updateDynamic("permalinkBefore")(permalinkBefore.asInstanceOf[js.Any])
-    if (permalinkClass != null) __obj.updateDynamic("permalinkClass")(permalinkClass.asInstanceOf[js.Any])
-    if (permalinkHref != null) __obj.updateDynamic("permalinkHref")(js.Any.fromFunction1(permalinkHref))
-    if (permalinkSymbol != null) __obj.updateDynamic("permalinkSymbol")(permalinkSymbol.asInstanceOf[js.Any])
-    if (renderPermalink != null) __obj.updateDynamic("renderPermalink")(js.Any.fromFunction4(renderPermalink))
-    if (slugify != null) __obj.updateDynamic("slugify")(js.Any.fromFunction1(slugify))
     __obj.asInstanceOf[AnchorOptions]
   }
+  @scala.inline
+  implicit class AnchorOptionsOps[Self <: AnchorOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCallback(value: (/* token */ typingsSlinky.markdownIt.tokenMod.^, /* anchor_info */ AnchorInfo) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("callback")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutCallback: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("callback")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLevel(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("level")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLevel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("level")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPermalink(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("permalink")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPermalink: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("permalink")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPermalinkBefore(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("permalinkBefore")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPermalinkBefore: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("permalinkBefore")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPermalinkClass(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("permalinkClass")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPermalinkClass: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("permalinkClass")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPermalinkHref(value: /* slug */ String => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("permalinkHref")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutPermalinkHref: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("permalinkHref")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPermalinkSymbol(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("permalinkSymbol")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPermalinkSymbol: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("permalinkSymbol")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRenderPermalink(
+      value: (/* slug */ String, AnchorOptions, /* state */ typingsSlinky.markdownIt.parserCoreMod.^, /* idx */ Double) => Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("renderPermalink")(js.Any.fromFunction4(value))
+        ret
+    }
+    @scala.inline
+    def withoutRenderPermalink: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("renderPermalink")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSlugify(value: /* str */ String => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("slugify")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutSlugify: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("slugify")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

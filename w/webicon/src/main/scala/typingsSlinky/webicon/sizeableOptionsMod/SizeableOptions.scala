@@ -5,33 +5,63 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SizeableOptions extends Sizeable {
   /**
     * An alias of the `iconSize`-property.
     */
   var size: js.UndefOr[
     /* import warning: importer.ImportType#apply Failed type conversion: this['iconSize'] */ js.Any
-  ] = js.undefined
+  ] = js.native
   /**
     * An alias of the `iconSize`-property.
     */
   var svgIconSize: js.UndefOr[
     /* import warning: importer.ImportType#apply Failed type conversion: this['iconSize'] */ js.Any
-  ] = js.undefined
+  ] = js.native
 }
 
 object SizeableOptions {
   @scala.inline
-  def apply(
-    iconSize: Int | Double = null,
-    size: /* import warning: importer.ImportType#apply Failed type conversion: this['iconSize'] */ js.Any = null,
-    svgIconSize: /* import warning: importer.ImportType#apply Failed type conversion: this['iconSize'] */ js.Any = null
-  ): SizeableOptions = {
+  def apply(): SizeableOptions = {
     val __obj = js.Dynamic.literal()
-    if (iconSize != null) __obj.updateDynamic("iconSize")(iconSize.asInstanceOf[js.Any])
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
-    if (svgIconSize != null) __obj.updateDynamic("svgIconSize")(svgIconSize.asInstanceOf[js.Any])
     __obj.asInstanceOf[SizeableOptions]
   }
+  @scala.inline
+  implicit class SizeableOptionsOps[Self <: SizeableOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSize(
+      value: /* import warning: importer.ImportType#apply Failed type conversion: this['iconSize'] */ js.Any
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSvgIconSize(
+      value: /* import warning: importer.ImportType#apply Failed type conversion: this['iconSize'] */ js.Any
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("svgIconSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSvgIconSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("svgIconSize")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

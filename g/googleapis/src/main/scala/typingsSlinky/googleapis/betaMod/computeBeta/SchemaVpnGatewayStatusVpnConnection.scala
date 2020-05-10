@@ -35,18 +35,65 @@ trait SchemaVpnGatewayStatusVpnConnection extends js.Object {
 
 object SchemaVpnGatewayStatusVpnConnection {
   @scala.inline
-  def apply(
-    peerExternalGateway: String = null,
-    peerGcpGateway: String = null,
-    state: SchemaVpnGatewayStatusHighAvailabilityRequirementState = null,
-    tunnels: js.Array[SchemaVpnGatewayStatusTunnel] = null
-  ): SchemaVpnGatewayStatusVpnConnection = {
+  def apply(): SchemaVpnGatewayStatusVpnConnection = {
     val __obj = js.Dynamic.literal()
-    if (peerExternalGateway != null) __obj.updateDynamic("peerExternalGateway")(peerExternalGateway.asInstanceOf[js.Any])
-    if (peerGcpGateway != null) __obj.updateDynamic("peerGcpGateway")(peerGcpGateway.asInstanceOf[js.Any])
-    if (state != null) __obj.updateDynamic("state")(state.asInstanceOf[js.Any])
-    if (tunnels != null) __obj.updateDynamic("tunnels")(tunnels.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaVpnGatewayStatusVpnConnection]
   }
+  @scala.inline
+  implicit class SchemaVpnGatewayStatusVpnConnectionOps[Self <: SchemaVpnGatewayStatusVpnConnection] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPeerExternalGateway(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("peerExternalGateway")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPeerExternalGateway: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("peerExternalGateway")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPeerGcpGateway(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("peerGcpGateway")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPeerGcpGateway: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("peerGcpGateway")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withState(value: SchemaVpnGatewayStatusHighAvailabilityRequirementState): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTunnels(value: js.Array[SchemaVpnGatewayStatusTunnel]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tunnels")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTunnels: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tunnels")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

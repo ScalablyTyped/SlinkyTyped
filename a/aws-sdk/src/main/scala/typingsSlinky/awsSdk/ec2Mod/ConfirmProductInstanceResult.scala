@@ -18,11 +18,41 @@ trait ConfirmProductInstanceResult extends js.Object {
 
 object ConfirmProductInstanceResult {
   @scala.inline
-  def apply(OwnerId: String = null, Return: js.UndefOr[scala.Boolean] = js.undefined): ConfirmProductInstanceResult = {
+  def apply(): ConfirmProductInstanceResult = {
     val __obj = js.Dynamic.literal()
-    if (OwnerId != null) __obj.updateDynamic("OwnerId")(OwnerId.asInstanceOf[js.Any])
-    if (!js.isUndefined(Return)) __obj.updateDynamic("Return")(Return.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConfirmProductInstanceResult]
   }
+  @scala.inline
+  implicit class ConfirmProductInstanceResultOps[Self <: ConfirmProductInstanceResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOwnerId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OwnerId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOwnerId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OwnerId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReturn(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Return")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReturn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Return")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

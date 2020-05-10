@@ -18,10 +18,35 @@ trait BlockPublicAccessConfiguration extends js.Object {
 
 object BlockPublicAccessConfiguration {
   @scala.inline
-  def apply(BlockPublicSecurityGroupRules: Boolean, PermittedPublicSecurityGroupRuleRanges: PortRanges = null): BlockPublicAccessConfiguration = {
+  def apply(BlockPublicSecurityGroupRules: Boolean): BlockPublicAccessConfiguration = {
     val __obj = js.Dynamic.literal(BlockPublicSecurityGroupRules = BlockPublicSecurityGroupRules.asInstanceOf[js.Any])
-    if (PermittedPublicSecurityGroupRuleRanges != null) __obj.updateDynamic("PermittedPublicSecurityGroupRuleRanges")(PermittedPublicSecurityGroupRuleRanges.asInstanceOf[js.Any])
     __obj.asInstanceOf[BlockPublicAccessConfiguration]
   }
+  @scala.inline
+  implicit class BlockPublicAccessConfigurationOps[Self <: BlockPublicAccessConfiguration] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBlockPublicSecurityGroupRules(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BlockPublicSecurityGroupRules")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPermittedPublicSecurityGroupRuleRanges(value: PortRanges): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PermittedPublicSecurityGroupRuleRanges")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPermittedPublicSecurityGroupRuleRanges: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PermittedPublicSecurityGroupRuleRanges")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

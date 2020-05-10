@@ -1,7 +1,6 @@
 package typingsSlinky.sdkBase.mod
 
 import typingsSlinky.node.eventsMod.EventEmitter
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +12,7 @@ trait Base extends EventEmitter {
   def await(args: js.Any*): js.Promise[_] = js.native
   def awaitFirst(args: js.Any*): js.Promise[_] = js.native
   def ready(): js.Promise[_] = js.native
-  def ready(err: Error): Unit = js.native
+  def ready(err: js.Error): Unit = js.native
   def ready(readyCallback: js.Function): Unit = js.native
   def ready(ready: Boolean): Unit = js.native
 }

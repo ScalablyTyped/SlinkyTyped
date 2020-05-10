@@ -12,10 +12,8 @@ trait OptionsOverflowValue extends js.Object
 
 object OptionsOverflowValue {
   @scala.inline
-  def allow: typingsSlinky.highcharts.highchartsStrings.allow = this.cast("allow")
+  def allow: typingsSlinky.highcharts.highchartsStrings.allow = "allow".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.allow]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
-  @scala.inline
-  def justify: typingsSlinky.highcharts.highchartsStrings.justify = this.cast("justify")
+  def justify: typingsSlinky.highcharts.highchartsStrings.justify = "justify".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.justify]
 }
 

@@ -49,6 +49,12 @@ package object comprehendmedicalMod {
     - typingsSlinky.awsSdk.awsSdkStrings.DIRECTION
     - typingsSlinky.awsSdk.awsSdkStrings.QUALITY
     - typingsSlinky.awsSdk.awsSdkStrings.QUANTITY
+    - typingsSlinky.awsSdk.awsSdkStrings.TIME_EXPRESSION
+    - typingsSlinky.awsSdk.awsSdkStrings.TIME_TO_MEDICATION_NAME
+    - typingsSlinky.awsSdk.awsSdkStrings.TIME_TO_DX_NAME
+    - typingsSlinky.awsSdk.awsSdkStrings.TIME_TO_TEST_NAME
+    - typingsSlinky.awsSdk.awsSdkStrings.TIME_TO_PROCEDURE_NAME
+    - typingsSlinky.awsSdk.awsSdkStrings.TIME_TO_TREATMENT_NAME
     - java.lang.String
   */
   type EntitySubType = typingsSlinky.awsSdk.comprehendmedicalMod._EntitySubType | java.lang.String
@@ -58,6 +64,7 @@ package object comprehendmedicalMod {
     - typingsSlinky.awsSdk.awsSdkStrings.PROTECTED_HEALTH_INFORMATION
     - typingsSlinky.awsSdk.awsSdkStrings.TEST_TREATMENT_PROCEDURE
     - typingsSlinky.awsSdk.awsSdkStrings.ANATOMY
+    - typingsSlinky.awsSdk.awsSdkStrings.TIME_EXPRESSION
     - java.lang.String
   */
   type EntityType = typingsSlinky.awsSdk.comprehendmedicalMod._EntityType | java.lang.String
@@ -106,6 +113,27 @@ package object comprehendmedicalMod {
   type MaxResultsInteger = scala.Double
   type ModelVersion = java.lang.String
   type OntologyLinkingBoundedLengthString = java.lang.String
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.EVERY
+    - typingsSlinky.awsSdk.awsSdkStrings.WITH_DOSAGE
+    - typingsSlinky.awsSdk.awsSdkStrings.ADMINISTERED_VIA
+    - typingsSlinky.awsSdk.awsSdkStrings.FOR
+    - typingsSlinky.awsSdk.awsSdkStrings.NEGATIVE
+    - typingsSlinky.awsSdk.awsSdkStrings.OVERLAP
+    - typingsSlinky.awsSdk.awsSdkStrings.DOSAGE
+    - typingsSlinky.awsSdk.awsSdkStrings.ROUTE_OR_MODE
+    - typingsSlinky.awsSdk.awsSdkStrings.FORM
+    - typingsSlinky.awsSdk.awsSdkStrings.FREQUENCY
+    - typingsSlinky.awsSdk.awsSdkStrings.DURATION
+    - typingsSlinky.awsSdk.awsSdkStrings.STRENGTH
+    - typingsSlinky.awsSdk.awsSdkStrings.RATE
+    - typingsSlinky.awsSdk.awsSdkStrings.ACUITY
+    - typingsSlinky.awsSdk.awsSdkStrings.TEST_VALUE
+    - typingsSlinky.awsSdk.awsSdkStrings.TEST_UNITS
+    - typingsSlinky.awsSdk.awsSdkStrings.DIRECTION
+    - java.lang.String
+  */
+  type RelationshipType = typingsSlinky.awsSdk.comprehendmedicalMod._RelationshipType | java.lang.String
   type RxNormAttributeList = js.Array[typingsSlinky.awsSdk.comprehendmedicalMod.RxNormAttribute]
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.DOSAGE

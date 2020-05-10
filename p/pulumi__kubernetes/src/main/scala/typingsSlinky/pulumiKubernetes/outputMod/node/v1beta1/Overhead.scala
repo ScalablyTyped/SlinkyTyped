@@ -7,19 +7,33 @@ import scala.scalajs.js.annotation._
 /**
   * Overhead structure represents the resource overhead associated with running a pod.
   */
+@js.native
 trait Overhead extends js.Object {
   /**
     * PodFixed represents the fixed resource overhead associated with running a pod.
     */
-  val podFixed: js.Object
+  val podFixed: js.Object = js.native
 }
 
 object Overhead {
   @scala.inline
   def apply(podFixed: js.Object): Overhead = {
     val __obj = js.Dynamic.literal(podFixed = podFixed.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[Overhead]
   }
+  @scala.inline
+  implicit class OverheadOps[Self <: Overhead] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPodFixed(value: js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("podFixed")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

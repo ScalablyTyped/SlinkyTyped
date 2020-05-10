@@ -24,8 +24,33 @@ object ReservationPlanSettings {
   @scala.inline
   def apply(Commitment: Commitment, RenewalType: RenewalType, ReservedSlots: integer): ReservationPlanSettings = {
     val __obj = js.Dynamic.literal(Commitment = Commitment.asInstanceOf[js.Any], RenewalType = RenewalType.asInstanceOf[js.Any], ReservedSlots = ReservedSlots.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[ReservationPlanSettings]
   }
+  @scala.inline
+  implicit class ReservationPlanSettingsOps[Self <: ReservationPlanSettings] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCommitment(value: Commitment): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Commitment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRenewalType(value: RenewalType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RenewalType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withReservedSlots(value: integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReservedSlots")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

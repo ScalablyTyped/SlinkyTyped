@@ -23,14 +23,41 @@ trait SchemaSheetsChartReferenceSuggestionState extends js.Object {
 
 object SchemaSheetsChartReferenceSuggestionState {
   @scala.inline
-  def apply(
-    chartIdSuggested: js.UndefOr[Boolean] = js.undefined,
-    spreadsheetIdSuggested: js.UndefOr[Boolean] = js.undefined
-  ): SchemaSheetsChartReferenceSuggestionState = {
+  def apply(): SchemaSheetsChartReferenceSuggestionState = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(chartIdSuggested)) __obj.updateDynamic("chartIdSuggested")(chartIdSuggested.asInstanceOf[js.Any])
-    if (!js.isUndefined(spreadsheetIdSuggested)) __obj.updateDynamic("spreadsheetIdSuggested")(spreadsheetIdSuggested.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSheetsChartReferenceSuggestionState]
   }
+  @scala.inline
+  implicit class SchemaSheetsChartReferenceSuggestionStateOps[Self <: SchemaSheetsChartReferenceSuggestionState] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withChartIdSuggested(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("chartIdSuggested")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChartIdSuggested: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("chartIdSuggested")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSpreadsheetIdSuggested(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("spreadsheetIdSuggested")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSpreadsheetIdSuggested: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("spreadsheetIdSuggested")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

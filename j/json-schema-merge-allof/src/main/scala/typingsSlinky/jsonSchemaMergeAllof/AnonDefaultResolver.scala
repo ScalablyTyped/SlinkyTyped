@@ -7,6 +7,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonDefaultResolver[Schema /* <: JSONSchema */] extends js.Object {
   /**
     * ### Default resolver
@@ -33,17 +34,36 @@ trait AnonDefaultResolver[Schema /* <: JSONSchema */] extends js.Object {
       /* options */ Options_[Schema], 
       _
     ]
-  ] = js.undefined
+  ] = js.native
 }
 
 object AnonDefaultResolver {
   @scala.inline
-  def apply[Schema /* <: JSONSchema */](
-    defaultResolver: (/* values */ js.Array[_], /* path */ js.Array[String], /* mergeSchemas */ MergeSchemas, /* options */ Options_[Schema]) => _ = null
-  ): AnonDefaultResolver[Schema] = {
+  def apply[Schema](): AnonDefaultResolver[Schema] = {
     val __obj = js.Dynamic.literal()
-    if (defaultResolver != null) __obj.updateDynamic("defaultResolver")(js.Any.fromFunction4(defaultResolver))
     __obj.asInstanceOf[AnonDefaultResolver[Schema]]
   }
+  @scala.inline
+  implicit class AnonDefaultResolverOps[Self[schema] <: AnonDefaultResolver[schema], Schema] (val x: Self[Schema]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[Schema] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[Schema]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self[Schema] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[Schema] with Other]
+    @scala.inline
+    def withDefaultResolver(
+      value: (/* values */ js.Array[_], /* path */ js.Array[String], /* mergeSchemas */ MergeSchemas, /* options */ Options_[Schema]) => _
+    ): Self[Schema] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultResolver")(js.Any.fromFunction4(value))
+        ret
+    }
+    @scala.inline
+    def withoutDefaultResolver: Self[Schema] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultResolver")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

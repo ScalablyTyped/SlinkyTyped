@@ -5,7 +5,6 @@ import typingsSlinky.hapiJoi.hapiJoiStrings.map
 import typingsSlinky.hapiJoi.hapiJoiStrings.number
 import typingsSlinky.hapiJoi.hapiJoiStrings.set
 import typingsSlinky.hapiJoi.hapiJoiStrings.string
-import typingsSlinky.std.Error
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -132,7 +131,7 @@ trait AnySchema
     * override, that error will be returned and the override will be ignored (unless the `abortEarly`
     * option has been set to `false`).
     */
-  def error(err: Error): this.type = js.native
+  def error(err: js.Error): this.type = js.native
   /**
     * Annotates the key with an example value, must be valid.
     */

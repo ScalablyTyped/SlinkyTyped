@@ -7,61 +7,107 @@ import scala.scalajs.js.annotation._
 /**
   * The absolute geographic location
   */
+@js.native
 trait LocationPosition extends BackboneElement {
   /**
     * Contains extended information for property 'altitude'.
     */
-  var _altitude: js.UndefOr[Element] = js.undefined
+  var _altitude: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'latitude'.
     */
-  var _latitude: js.UndefOr[Element] = js.undefined
+  var _latitude: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'longitude'.
     */
-  var _longitude: js.UndefOr[Element] = js.undefined
+  var _longitude: js.UndefOr[Element] = js.native
   /**
     * Altitude with WGS84 datum
     */
-  var altitude: js.UndefOr[decimal] = js.undefined
+  var altitude: js.UndefOr[decimal] = js.native
   /**
     * Latitude with WGS84 datum
     */
-  var latitude: decimal
+  var latitude: decimal = js.native
   /**
     * Longitude with WGS84 datum
     */
-  var longitude: decimal
+  var longitude: decimal = js.native
 }
 
 object LocationPosition {
   @scala.inline
-  def apply(
-    latitude: decimal,
-    longitude: decimal,
-    _altitude: Element = null,
-    _fhir_comments: js.Array[Element] = null,
-    _id: Element = null,
-    _latitude: Element = null,
-    _longitude: Element = null,
-    altitude: Int | Double = null,
-    extension: js.Array[Extension] = null,
-    fhir_comments: js.Array[String] = null,
-    id: String = null,
-    modifierExtension: js.Array[Extension] = null
-  ): LocationPosition = {
+  def apply(latitude: decimal, longitude: decimal): LocationPosition = {
     val __obj = js.Dynamic.literal(latitude = latitude.asInstanceOf[js.Any], longitude = longitude.asInstanceOf[js.Any])
-    if (_altitude != null) __obj.updateDynamic("_altitude")(_altitude.asInstanceOf[js.Any])
-    if (_fhir_comments != null) __obj.updateDynamic("_fhir_comments")(_fhir_comments.asInstanceOf[js.Any])
-    if (_id != null) __obj.updateDynamic("_id")(_id.asInstanceOf[js.Any])
-    if (_latitude != null) __obj.updateDynamic("_latitude")(_latitude.asInstanceOf[js.Any])
-    if (_longitude != null) __obj.updateDynamic("_longitude")(_longitude.asInstanceOf[js.Any])
-    if (altitude != null) __obj.updateDynamic("altitude")(altitude.asInstanceOf[js.Any])
-    if (extension != null) __obj.updateDynamic("extension")(extension.asInstanceOf[js.Any])
-    if (fhir_comments != null) __obj.updateDynamic("fhir_comments")(fhir_comments.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (modifierExtension != null) __obj.updateDynamic("modifierExtension")(modifierExtension.asInstanceOf[js.Any])
     __obj.asInstanceOf[LocationPosition]
   }
+  @scala.inline
+  implicit class LocationPositionOps[Self <: LocationPosition] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLatitude(value: decimal): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("latitude")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLongitude(value: decimal): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("longitude")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_altitude(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_altitude")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_altitude: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_altitude")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_latitude(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_latitude")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_latitude: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_latitude")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_longitude(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_longitude")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_longitude: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_longitude")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAltitude(value: decimal): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("altitude")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAltitude: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("altitude")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

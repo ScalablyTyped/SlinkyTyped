@@ -5,17 +5,37 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Options associated with a read operation. */
+@js.native
 trait IReadOptions extends js.Object {
   /** The conditional HTTP method ifNoneMatch value. */
-  var ifNoneMatch: js.UndefOr[String] = js.undefined
+  var ifNoneMatch: js.UndefOr[String] = js.native
 }
 
 object IReadOptions {
   @scala.inline
-  def apply(ifNoneMatch: String = null): IReadOptions = {
+  def apply(): IReadOptions = {
     val __obj = js.Dynamic.literal()
-    if (ifNoneMatch != null) __obj.updateDynamic("ifNoneMatch")(ifNoneMatch.asInstanceOf[js.Any])
     __obj.asInstanceOf[IReadOptions]
   }
+  @scala.inline
+  implicit class IReadOptionsOps[Self <: IReadOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIfNoneMatch(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ifNoneMatch")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIfNoneMatch: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ifNoneMatch")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

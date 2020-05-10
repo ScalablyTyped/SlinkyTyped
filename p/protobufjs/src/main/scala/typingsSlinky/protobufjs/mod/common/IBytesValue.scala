@@ -5,16 +5,36 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Properties of a google.protobuf.BytesValue message. */
+@js.native
 trait IBytesValue extends js.Object {
-  var value: js.UndefOr[scala.scalajs.js.typedarray.Uint8Array] = js.undefined
+  var value: js.UndefOr[js.typedarray.Uint8Array] = js.native
 }
 
 object IBytesValue {
   @scala.inline
-  def apply(value: scala.scalajs.js.typedarray.Uint8Array = null): IBytesValue = {
+  def apply(): IBytesValue = {
     val __obj = js.Dynamic.literal()
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     __obj.asInstanceOf[IBytesValue]
   }
+  @scala.inline
+  implicit class IBytesValueOps[Self <: IBytesValue] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withValue(value: js.typedarray.Uint8Array): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

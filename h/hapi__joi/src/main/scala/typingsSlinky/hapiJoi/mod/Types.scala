@@ -22,30 +22,28 @@ trait Types extends js.Object
 
 object Types {
   @scala.inline
-  def alternatives: typingsSlinky.hapiJoi.hapiJoiStrings.alternatives = this.cast("alternatives")
+  def alternatives: typingsSlinky.hapiJoi.hapiJoiStrings.alternatives = "alternatives".asInstanceOf[typingsSlinky.hapiJoi.hapiJoiStrings.alternatives]
   @scala.inline
-  def any: typingsSlinky.hapiJoi.hapiJoiStrings.any = this.cast("any")
+  def any: typingsSlinky.hapiJoi.hapiJoiStrings.any = "any".asInstanceOf[typingsSlinky.hapiJoi.hapiJoiStrings.any]
   @scala.inline
-  def array: typingsSlinky.hapiJoi.hapiJoiStrings.array = this.cast("array")
+  def array: typingsSlinky.hapiJoi.hapiJoiStrings.array = "array".asInstanceOf[typingsSlinky.hapiJoi.hapiJoiStrings.array]
   @scala.inline
-  def binary: typingsSlinky.hapiJoi.hapiJoiStrings.binary = this.cast("binary")
+  def binary: typingsSlinky.hapiJoi.hapiJoiStrings.binary = "binary".asInstanceOf[typingsSlinky.hapiJoi.hapiJoiStrings.binary]
   @scala.inline
-  def boolean: typingsSlinky.hapiJoi.hapiJoiStrings.boolean = this.cast("boolean")
+  def boolean: typingsSlinky.hapiJoi.hapiJoiStrings.boolean = "boolean".asInstanceOf[typingsSlinky.hapiJoi.hapiJoiStrings.boolean]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def date: typingsSlinky.hapiJoi.hapiJoiStrings.date = "date".asInstanceOf[typingsSlinky.hapiJoi.hapiJoiStrings.date]
   @scala.inline
-  def date: typingsSlinky.hapiJoi.hapiJoiStrings.date = this.cast("date")
+  def function: typingsSlinky.hapiJoi.hapiJoiStrings.function = "function".asInstanceOf[typingsSlinky.hapiJoi.hapiJoiStrings.function]
   @scala.inline
-  def function: typingsSlinky.hapiJoi.hapiJoiStrings.function = this.cast("function")
+  def link: typingsSlinky.hapiJoi.hapiJoiStrings.link = "link".asInstanceOf[typingsSlinky.hapiJoi.hapiJoiStrings.link]
   @scala.inline
-  def link: typingsSlinky.hapiJoi.hapiJoiStrings.link = this.cast("link")
+  def number: typingsSlinky.hapiJoi.hapiJoiStrings.number = "number".asInstanceOf[typingsSlinky.hapiJoi.hapiJoiStrings.number]
   @scala.inline
-  def number: typingsSlinky.hapiJoi.hapiJoiStrings.number = this.cast("number")
+  def `object`: typingsSlinky.hapiJoi.hapiJoiStrings.`object` = "object".asInstanceOf[typingsSlinky.hapiJoi.hapiJoiStrings.`object`]
   @scala.inline
-  def `object`: typingsSlinky.hapiJoi.hapiJoiStrings.`object` = this.cast("object")
+  def string: typingsSlinky.hapiJoi.hapiJoiStrings.string = "string".asInstanceOf[typingsSlinky.hapiJoi.hapiJoiStrings.string]
   @scala.inline
-  def string: typingsSlinky.hapiJoi.hapiJoiStrings.string = this.cast("string")
-  @scala.inline
-  def symbol: typingsSlinky.hapiJoi.hapiJoiStrings.symbol = this.cast("symbol")
+  def symbol: typingsSlinky.hapiJoi.hapiJoiStrings.symbol = "symbol".asInstanceOf[typingsSlinky.hapiJoi.hapiJoiStrings.symbol]
 }
 

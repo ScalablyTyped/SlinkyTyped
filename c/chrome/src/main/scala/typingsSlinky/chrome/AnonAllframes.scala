@@ -4,43 +4,141 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonAllframes extends js.Object {
-  var all_frames: js.UndefOr[Boolean] = js.undefined
-  var css: js.UndefOr[js.Array[String]] = js.undefined
-  var exclude_globs: js.UndefOr[js.Array[String]] = js.undefined
-  var exclude_matches: js.UndefOr[js.Array[String]] = js.undefined
-  var include_globs: js.UndefOr[js.Array[String]] = js.undefined
+  var all_frames: js.UndefOr[Boolean] = js.native
+  var css: js.UndefOr[js.Array[String]] = js.native
+  var exclude_globs: js.UndefOr[js.Array[String]] = js.native
+  var exclude_matches: js.UndefOr[js.Array[String]] = js.native
+  var include_globs: js.UndefOr[js.Array[String]] = js.native
   @JSName("js")
-  var js_ : js.UndefOr[js.Array[String]] = js.undefined
-  var match_about_blank: js.UndefOr[Boolean] = js.undefined
-  var matches: js.UndefOr[js.Array[String]] = js.undefined
-  var run_at: js.UndefOr[String] = js.undefined
+  var js_ : js.UndefOr[js.Array[String]] = js.native
+  var match_about_blank: js.UndefOr[Boolean] = js.native
+  var matches: js.UndefOr[js.Array[String]] = js.native
+  var run_at: js.UndefOr[String] = js.native
 }
 
 object AnonAllframes {
   @scala.inline
-  def apply(
-    all_frames: js.UndefOr[Boolean] = js.undefined,
-    css: js.Array[String] = null,
-    exclude_globs: js.Array[String] = null,
-    exclude_matches: js.Array[String] = null,
-    include_globs: js.Array[String] = null,
-    js_ : js.Array[String] = null,
-    match_about_blank: js.UndefOr[Boolean] = js.undefined,
-    matches: js.Array[String] = null,
-    run_at: String = null
-  ): AnonAllframes = {
+  def apply(): AnonAllframes = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(all_frames)) __obj.updateDynamic("all_frames")(all_frames.asInstanceOf[js.Any])
-    if (css != null) __obj.updateDynamic("css")(css.asInstanceOf[js.Any])
-    if (exclude_globs != null) __obj.updateDynamic("exclude_globs")(exclude_globs.asInstanceOf[js.Any])
-    if (exclude_matches != null) __obj.updateDynamic("exclude_matches")(exclude_matches.asInstanceOf[js.Any])
-    if (include_globs != null) __obj.updateDynamic("include_globs")(include_globs.asInstanceOf[js.Any])
-    if (js_ != null) __obj.updateDynamic("js")(js_.asInstanceOf[js.Any])
-    if (!js.isUndefined(match_about_blank)) __obj.updateDynamic("match_about_blank")(match_about_blank.asInstanceOf[js.Any])
-    if (matches != null) __obj.updateDynamic("matches")(matches.asInstanceOf[js.Any])
-    if (run_at != null) __obj.updateDynamic("run_at")(run_at.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonAllframes]
   }
+  @scala.inline
+  implicit class AnonAllframesOps[Self <: AnonAllframes] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAll_frames(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("all_frames")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAll_frames: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("all_frames")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCss(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("css")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCss: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("css")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExclude_globs(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exclude_globs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExclude_globs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exclude_globs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExclude_matches(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exclude_matches")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExclude_matches: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exclude_matches")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInclude_globs(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("include_globs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInclude_globs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("include_globs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withJs_(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("js")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutJs_ : Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("js")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMatch_about_blank(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("match_about_blank")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMatch_about_blank: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("match_about_blank")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMatches(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("matches")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMatches: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("matches")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRun_at(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("run_at")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRun_at: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("run_at")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

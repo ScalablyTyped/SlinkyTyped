@@ -12,10 +12,8 @@ trait PayoutMethods extends js.Object
 
 object PayoutMethods {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def instant: typingsSlinky.stripe.stripeStrings.instant = "instant".asInstanceOf[typingsSlinky.stripe.stripeStrings.instant]
   @scala.inline
-  def instant: typingsSlinky.stripe.stripeStrings.instant = this.cast("instant")
-  @scala.inline
-  def standard: typingsSlinky.stripe.stripeStrings.standard = this.cast("standard")
+  def standard: typingsSlinky.stripe.stripeStrings.standard = "standard".asInstanceOf[typingsSlinky.stripe.stripeStrings.standard]
 }
 

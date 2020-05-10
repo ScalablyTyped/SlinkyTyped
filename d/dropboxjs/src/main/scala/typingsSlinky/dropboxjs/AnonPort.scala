@@ -4,17 +4,43 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonPort extends js.Object {
-  var port: Double
-  var tls: js.UndefOr[js.Object] = js.undefined
+  var port: Double = js.native
+  var tls: js.UndefOr[js.Object] = js.native
 }
 
 object AnonPort {
   @scala.inline
-  def apply(port: Double, tls: js.Object = null): AnonPort = {
+  def apply(port: Double): AnonPort = {
     val __obj = js.Dynamic.literal(port = port.asInstanceOf[js.Any])
-    if (tls != null) __obj.updateDynamic("tls")(tls.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonPort]
   }
+  @scala.inline
+  implicit class AnonPortOps[Self <: AnonPort] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPort(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("port")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTls(value: js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tls")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTls: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tls")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

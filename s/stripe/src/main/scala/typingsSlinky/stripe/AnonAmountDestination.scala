@@ -4,24 +4,50 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonAmountDestination extends js.Object {
   /**
     * The amount transferred to the destination account, if specified.
     * By default, the entire charge amount is transferred to the destination account.
     */
-  var amount: js.UndefOr[Double] = js.undefined
+  var amount: js.UndefOr[Double] = js.native
   /**
     * ID of an existing, connected Stripe account.
     */
-  var destination: String
+  var destination: String = js.native
 }
 
 object AnonAmountDestination {
   @scala.inline
-  def apply(destination: String, amount: Int | Double = null): AnonAmountDestination = {
+  def apply(destination: String): AnonAmountDestination = {
     val __obj = js.Dynamic.literal(destination = destination.asInstanceOf[js.Any])
-    if (amount != null) __obj.updateDynamic("amount")(amount.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonAmountDestination]
   }
+  @scala.inline
+  implicit class AnonAmountDestinationOps[Self <: AnonAmountDestination] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDestination(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("destination")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAmount(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("amount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAmount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("amount")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

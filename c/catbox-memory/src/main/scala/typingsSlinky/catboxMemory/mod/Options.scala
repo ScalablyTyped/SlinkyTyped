@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Options extends js.Object {
   /**
     * by default, all data is cached as JSON strings, and converted to an object using JSON.parse() on retrieval.
@@ -11,42 +12,89 @@ trait Options extends js.Object {
     * Buffers are not stringified, and are copied before storage to prevent the value from changing while in the cache.
     * @default false
     */
-  var allowMixedContent: js.UndefOr[Boolean] = js.undefined
+  var allowMixedContent: js.UndefOr[Boolean] = js.native
   /**
     * by default, buffers stored in the cache with allowMixedContent set to true are copied when they are set but not when they are retrieved.
     * This means a change to the buffer returned by a get() will change the value in the cache. To prevent this,
     * set cloneBuffersOnGet to true to always return a copy of the cached buffer.
     * @default false
     */
-  var cloneBuffersOnGet: js.UndefOr[Boolean] = js.undefined
+  var cloneBuffersOnGet: js.UndefOr[Boolean] = js.native
   /**
     * Sets an upper limit on the number of bytes that can be stored in the cache.
     * Once this limit is reached no additional items will be added to the cache until some expire.
     * The utilized memory calculation is a rough approximation and must not be relied on.
     * @default 104857600 (100MB).
     */
-  var maxByteSize: js.UndefOr[Double] = js.undefined
+  var maxByteSize: js.UndefOr[Double] = js.native
   /**
     * The minimum number of milliseconds in between each cache cleanup.
     * @default 1000 (1 second)
     */
-  var minCleanupIntervalMsec: js.UndefOr[Double] = js.undefined
+  var minCleanupIntervalMsec: js.UndefOr[Double] = js.native
 }
 
 object Options {
   @scala.inline
-  def apply(
-    allowMixedContent: js.UndefOr[Boolean] = js.undefined,
-    cloneBuffersOnGet: js.UndefOr[Boolean] = js.undefined,
-    maxByteSize: Int | Double = null,
-    minCleanupIntervalMsec: Int | Double = null
-  ): Options = {
+  def apply(): Options = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(allowMixedContent)) __obj.updateDynamic("allowMixedContent")(allowMixedContent.asInstanceOf[js.Any])
-    if (!js.isUndefined(cloneBuffersOnGet)) __obj.updateDynamic("cloneBuffersOnGet")(cloneBuffersOnGet.asInstanceOf[js.Any])
-    if (maxByteSize != null) __obj.updateDynamic("maxByteSize")(maxByteSize.asInstanceOf[js.Any])
-    if (minCleanupIntervalMsec != null) __obj.updateDynamic("minCleanupIntervalMsec")(minCleanupIntervalMsec.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
+  @scala.inline
+  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAllowMixedContent(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowMixedContent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowMixedContent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowMixedContent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCloneBuffersOnGet(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cloneBuffersOnGet")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCloneBuffersOnGet: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cloneBuffersOnGet")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxByteSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxByteSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxByteSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxByteSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinCleanupIntervalMsec(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minCleanupIntervalMsec")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinCleanupIntervalMsec: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minCleanupIntervalMsec")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

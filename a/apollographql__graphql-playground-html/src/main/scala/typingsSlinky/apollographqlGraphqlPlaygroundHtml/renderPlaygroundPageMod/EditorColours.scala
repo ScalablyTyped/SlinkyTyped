@@ -4,28 +4,29 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait EditorColours extends js.Object {
-  var atom: String
-  var attribute: String
-  var builtin: String
-  var comment: String
-  var cursorColor: String
-  var `def`: String
-  var editorBackground: String
-  var keyword: String
-  var leftDrawerBackground: String
-  var meta: String
-  var number: String
-  var property: String
-  var punctuation: String
-  var qualifier: String
-  var resultBackground: String
-  var rightDrawerBackground: String
-  var selection: String
-  var string: String
-  var string2: String
-  var variable: String
-  var ws: String
+  var atom: String = js.native
+  var attribute: String = js.native
+  var builtin: String = js.native
+  var comment: String = js.native
+  var cursorColor: String = js.native
+  var `def`: String = js.native
+  var editorBackground: String = js.native
+  var keyword: String = js.native
+  var leftDrawerBackground: String = js.native
+  var meta: String = js.native
+  var number: String = js.native
+  var property: String = js.native
+  var punctuation: String = js.native
+  var qualifier: String = js.native
+  var resultBackground: String = js.native
+  var rightDrawerBackground: String = js.native
+  var selection: String = js.native
+  var string: String = js.native
+  var string2: String = js.native
+  var variable: String = js.native
+  var ws: String = js.native
 }
 
 object EditorColours {
@@ -57,5 +58,139 @@ object EditorColours {
     __obj.updateDynamic("def")(`def`.asInstanceOf[js.Any])
     __obj.asInstanceOf[EditorColours]
   }
+  @scala.inline
+  implicit class EditorColoursOps[Self <: EditorColours] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAtom(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("atom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAttribute(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attribute")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBuiltin(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("builtin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withComment(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("comment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCursorColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cursorColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDef(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("def")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEditorBackground(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("editorBackground")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withKeyword(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keyword")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLeftDrawerBackground(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("leftDrawerBackground")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMeta(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("meta")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNumber(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("number")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withProperty(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("property")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPunctuation(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("punctuation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withQualifier(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("qualifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withResultBackground(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resultBackground")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRightDrawerBackground(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rightDrawerBackground")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSelection(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selection")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withString(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("string")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withString2(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("string2")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVariable(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("variable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withWs(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ws")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

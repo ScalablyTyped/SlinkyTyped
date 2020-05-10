@@ -198,12 +198,12 @@ trait DocDB extends Service {
     callback: js.Function2[/* err */ AWSError, /* data */ js.Object, Unit]
   ): Request[js.Object, AWSError] = js.native
   /**
-    * Returns a list of certificate authority (CA) certificates provided by Amazon DocumentDB for this AWS account. For certain management features such as cluster and instance lifecycle management, Amazon DocumentDB leverages operational technology that is shared with Amazon RDS and Amazon Neptune. Use the filterName=engine,Values=docdb filter parameter to return only Amazon DocumentDB clusters.
+    * Returns a list of certificate authority (CA) certificates provided by Amazon DocumentDB for this AWS account.
     */
   def describeCertificates(): Request[CertificateMessage, AWSError] = js.native
   def describeCertificates(callback: js.Function2[/* err */ AWSError, /* data */ CertificateMessage, Unit]): Request[CertificateMessage, AWSError] = js.native
   /**
-    * Returns a list of certificate authority (CA) certificates provided by Amazon DocumentDB for this AWS account. For certain management features such as cluster and instance lifecycle management, Amazon DocumentDB leverages operational technology that is shared with Amazon RDS and Amazon Neptune. Use the filterName=engine,Values=docdb filter parameter to return only Amazon DocumentDB clusters.
+    * Returns a list of certificate authority (CA) certificates provided by Amazon DocumentDB for this AWS account.
     */
   def describeCertificates(params: DescribeCertificatesMessage): Request[CertificateMessage, AWSError] = js.native
   def describeCertificates(
@@ -265,12 +265,12 @@ trait DocDB extends Service {
     callback: js.Function2[/* err */ AWSError, /* data */ DBClusterSnapshotMessage, Unit]
   ): Request[DBClusterSnapshotMessage, AWSError] = js.native
   /**
-    * Returns information about provisioned Amazon DocumentDB clusters. This API operation supports pagination.
+    * Returns information about provisioned Amazon DocumentDB clusters. This API operation supports pagination. For certain management features such as cluster and instance lifecycle management, Amazon DocumentDB leverages operational technology that is shared with Amazon RDS and Amazon Neptune. Use the filterName=engine,Values=docdb filter parameter to return only Amazon DocumentDB clusters.
     */
   def describeDBClusters(): Request[DBClusterMessage, AWSError] = js.native
   def describeDBClusters(callback: js.Function2[/* err */ AWSError, /* data */ DBClusterMessage, Unit]): Request[DBClusterMessage, AWSError] = js.native
   /**
-    * Returns information about provisioned Amazon DocumentDB clusters. This API operation supports pagination.
+    * Returns information about provisioned Amazon DocumentDB clusters. This API operation supports pagination. For certain management features such as cluster and instance lifecycle management, Amazon DocumentDB leverages operational technology that is shared with Amazon RDS and Amazon Neptune. Use the filterName=engine,Values=docdb filter parameter to return only Amazon DocumentDB clusters.
     */
   def describeDBClusters(params: DescribeDBClustersMessage): Request[DBClusterMessage, AWSError] = js.native
   def describeDBClusters(

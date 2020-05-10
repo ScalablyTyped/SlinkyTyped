@@ -26,15 +26,47 @@ trait ActivityTaskTimedOutEventAttributes extends js.Object {
 
 object ActivityTaskTimedOutEventAttributes {
   @scala.inline
-  def apply(
-    scheduledEventId: EventId,
-    startedEventId: EventId,
-    timeoutType: ActivityTaskTimeoutType,
-    details: LimitedData = null
-  ): ActivityTaskTimedOutEventAttributes = {
+  def apply(scheduledEventId: EventId, startedEventId: EventId, timeoutType: ActivityTaskTimeoutType): ActivityTaskTimedOutEventAttributes = {
     val __obj = js.Dynamic.literal(scheduledEventId = scheduledEventId.asInstanceOf[js.Any], startedEventId = startedEventId.asInstanceOf[js.Any], timeoutType = timeoutType.asInstanceOf[js.Any])
-    if (details != null) __obj.updateDynamic("details")(details.asInstanceOf[js.Any])
     __obj.asInstanceOf[ActivityTaskTimedOutEventAttributes]
   }
+  @scala.inline
+  implicit class ActivityTaskTimedOutEventAttributesOps[Self <: ActivityTaskTimedOutEventAttributes] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withScheduledEventId(value: EventId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scheduledEventId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStartedEventId(value: EventId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startedEventId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTimeoutType(value: ActivityTaskTimeoutType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeoutType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDetails(value: LimitedData): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("details")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDetails: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("details")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -44,17 +44,37 @@ import scala.scalajs.js.annotation._
   *
   * StaticMapAllows for the creation and decoration of static map images.
   */
+@js.native
 trait BlobSource extends js.Object {
-  def getAs(contentType: String): Blob
-  def getBlob(): Blob
+  def getAs(contentType: String): Blob = js.native
+  def getBlob(): Blob = js.native
 }
 
 object BlobSource {
   @scala.inline
   def apply(getAs: String => Blob, getBlob: () => Blob): BlobSource = {
     val __obj = js.Dynamic.literal(getAs = js.Any.fromFunction1(getAs), getBlob = js.Any.fromFunction0(getBlob))
-  
     __obj.asInstanceOf[BlobSource]
   }
+  @scala.inline
+  implicit class BlobSourceOps[Self <: BlobSource] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetAs(value: String => Blob): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getAs")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetBlob(value: () => Blob): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getBlob")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

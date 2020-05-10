@@ -13,12 +13,10 @@ trait PointerEvents extends js.Object
 
 object PointerEvents {
   @scala.inline
-  def auto: typingsSlinky.reactNavigationStack.reactNavigationStackStrings.auto = this.cast("auto")
+  def auto: typingsSlinky.reactNavigationStack.reactNavigationStackStrings.auto = "auto".asInstanceOf[typingsSlinky.reactNavigationStack.reactNavigationStackStrings.auto]
   @scala.inline
-  def `box-only`: typingsSlinky.reactNavigationStack.reactNavigationStackStrings.`box-only` = this.cast("box-only")
+  def `box-only`: typingsSlinky.reactNavigationStack.reactNavigationStackStrings.`box-only` = "box-only".asInstanceOf[typingsSlinky.reactNavigationStack.reactNavigationStackStrings.`box-only`]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
-  @scala.inline
-  def none: typingsSlinky.reactNavigationStack.reactNavigationStackStrings.none = this.cast("none")
+  def none: typingsSlinky.reactNavigationStack.reactNavigationStackStrings.none = "none".asInstanceOf[typingsSlinky.reactNavigationStack.reactNavigationStackStrings.none]
 }
 

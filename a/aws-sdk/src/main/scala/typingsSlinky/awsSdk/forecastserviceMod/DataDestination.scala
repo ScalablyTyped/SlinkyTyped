@@ -16,8 +16,21 @@ object DataDestination {
   @scala.inline
   def apply(S3Config: S3Config): DataDestination = {
     val __obj = js.Dynamic.literal(S3Config = S3Config.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[DataDestination]
   }
+  @scala.inline
+  implicit class DataDestinationOps[Self <: DataDestination] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withS3Config(value: S3Config): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("S3Config")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -13,12 +13,10 @@ trait CacheKeys extends js.Object
 
 object CacheKeys {
   @scala.inline
-  def after: typingsSlinky.rrule.rruleStrings.after = this.cast("after")
+  def after: typingsSlinky.rrule.rruleStrings.after = "after".asInstanceOf[typingsSlinky.rrule.rruleStrings.after]
   @scala.inline
-  def before: typingsSlinky.rrule.rruleStrings.before = this.cast("before")
+  def before: typingsSlinky.rrule.rruleStrings.before = "before".asInstanceOf[typingsSlinky.rrule.rruleStrings.before]
   @scala.inline
-  def between: typingsSlinky.rrule.rruleStrings.between = this.cast("between")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def between: typingsSlinky.rrule.rruleStrings.between = "between".asInstanceOf[typingsSlinky.rrule.rruleStrings.between]
 }
 

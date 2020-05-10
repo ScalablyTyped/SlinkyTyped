@@ -12,10 +12,8 @@ trait IconFlip extends js.Object
 
 object IconFlip {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def horizontal: typingsSlinky.reactFa.reactFaStrings.horizontal = "horizontal".asInstanceOf[typingsSlinky.reactFa.reactFaStrings.horizontal]
   @scala.inline
-  def horizontal: typingsSlinky.reactFa.reactFaStrings.horizontal = this.cast("horizontal")
-  @scala.inline
-  def vertical: typingsSlinky.reactFa.reactFaStrings.vertical = this.cast("vertical")
+  def vertical: typingsSlinky.reactFa.reactFaStrings.vertical = "vertical".asInstanceOf[typingsSlinky.reactFa.reactFaStrings.vertical]
 }
 

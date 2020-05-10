@@ -1,9 +1,7 @@
 package typingsSlinky.reactMotion.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactMotion.mod.InterpolateFunction
 import typingsSlinky.reactMotion.mod.PlainStyle
 import typingsSlinky.reactMotion.mod.Style
@@ -14,29 +12,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object TransitionMotion
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactMotion.mod.TransitionMotion] {
+object TransitionMotion {
   @JSImport("react-motion", "TransitionMotion")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    styles: js.Array[TransitionStyle] | InterpolateFunction,
-    defaultStyles: js.Array[TransitionPlainStyle] = null,
-    didLeave: /* styleThatLeft */ TransitionStyle => Unit = null,
-    willEnter: /* styleThatEntered */ TransitionStyle => PlainStyle = null,
-    willLeave: /* styleThatLeft */ TransitionStyle => Style | Unit = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactMotion.mod.TransitionMotion] = {
-    val __obj = js.Dynamic.literal(styles = styles.asInstanceOf[js.Any])
-    if (defaultStyles != null) __obj.updateDynamic("defaultStyles")(defaultStyles.asInstanceOf[js.Any])
-    if (didLeave != null) __obj.updateDynamic("didLeave")(js.Any.fromFunction1(didLeave))
-    if (willEnter != null) __obj.updateDynamic("willEnter")(js.Any.fromFunction1(willEnter))
-    if (willLeave != null) __obj.updateDynamic("willLeave")(js.Any.fromFunction1(willLeave))
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactMotion.mod.TransitionMotion] {
+    @scala.inline
+    def defaultStyles(value: js.Array[TransitionPlainStyle]): this.type = set("defaultStyles", value.asInstanceOf[js.Any])
+    @scala.inline
+    def didLeave(value: /* styleThatLeft */ TransitionStyle => Unit): this.type = set("didLeave", js.Any.fromFunction1(value))
+    @scala.inline
+    def willEnter(value: /* styleThatEntered */ TransitionStyle => PlainStyle): this.type = set("willEnter", js.Any.fromFunction1(value))
+    @scala.inline
+    def willLeave(value: /* styleThatLeft */ TransitionStyle => Style | Unit): this.type = set("willLeave", js.Any.fromFunction1(value))
   }
-  type Props = TransitionProps
+  
+  def withProps(p: TransitionProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(styles: js.Array[TransitionStyle] | InterpolateFunction): Builder = {
+    val __props = js.Dynamic.literal(styles = styles.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[TransitionProps]))
+  }
 }
 

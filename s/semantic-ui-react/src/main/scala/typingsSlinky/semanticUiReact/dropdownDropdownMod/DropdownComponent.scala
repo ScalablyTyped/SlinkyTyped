@@ -2,7 +2,6 @@ package typingsSlinky.semanticUiReact.dropdownDropdownMod
 
 import slinky.core.ReactComponentClass
 import typingsSlinky.react.mod.ComponentClass
-import typingsSlinky.react.mod.ComponentState
 import typingsSlinky.semanticUiReact.dropdownDividerMod.DropdownDividerProps
 import typingsSlinky.semanticUiReact.dropdownHeaderMod.DropdownHeaderProps
 import typingsSlinky.semanticUiReact.dropdownItemMod.DropdownItemProps
@@ -13,7 +12,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait DropdownComponent extends ComponentClass[DropdownProps, ComponentState] {
+trait DropdownComponent
+  extends ComponentClass[DropdownProps, js.Object] {
   var Divider: ReactComponentClass[DropdownDividerProps] = js.native
   var Header: ReactComponentClass[DropdownHeaderProps] = js.native
   var Item: ReactComponentClass[DropdownItemProps] = js.native

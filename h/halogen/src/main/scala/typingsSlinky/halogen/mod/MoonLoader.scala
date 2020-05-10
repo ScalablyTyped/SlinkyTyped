@@ -1,13 +1,12 @@
 package typingsSlinky.halogen.mod
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.react.mod.ComponentClass
-import typingsSlinky.react.mod.ComponentState
+import slinky.core.ReactComponentClass
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSImport("halogen", "MoonLoader")
 @js.native
-object MoonLoader extends TopLevel[ComponentClass[SizeLoaderProps, ComponentState]]
+object MoonLoader extends TopLevel[ReactComponentClass[SizeLoaderProps]]
 

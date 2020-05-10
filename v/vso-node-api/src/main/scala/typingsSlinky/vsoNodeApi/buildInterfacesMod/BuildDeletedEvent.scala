@@ -4,16 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait BuildDeletedEvent extends RealtimeBuildEvent {
-  var build: Build
+  var build: Build = js.native
 }
 
 object BuildDeletedEvent {
   @scala.inline
   def apply(build: Build, buildId: Double): BuildDeletedEvent = {
     val __obj = js.Dynamic.literal(build = build.asInstanceOf[js.Any], buildId = buildId.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[BuildDeletedEvent]
   }
+  @scala.inline
+  implicit class BuildDeletedEventOps[Self <: BuildDeletedEvent] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBuild(value: Build): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("build")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

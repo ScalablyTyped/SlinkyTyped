@@ -34,12 +34,54 @@ object CreateBatchPredictionInput {
     BatchPredictionDataSourceId: EntityId,
     BatchPredictionId: EntityId,
     MLModelId: EntityId,
-    OutputUri: S3Url,
-    BatchPredictionName: EntityName = null
+    OutputUri: S3Url
   ): CreateBatchPredictionInput = {
     val __obj = js.Dynamic.literal(BatchPredictionDataSourceId = BatchPredictionDataSourceId.asInstanceOf[js.Any], BatchPredictionId = BatchPredictionId.asInstanceOf[js.Any], MLModelId = MLModelId.asInstanceOf[js.Any], OutputUri = OutputUri.asInstanceOf[js.Any])
-    if (BatchPredictionName != null) __obj.updateDynamic("BatchPredictionName")(BatchPredictionName.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateBatchPredictionInput]
   }
+  @scala.inline
+  implicit class CreateBatchPredictionInputOps[Self <: CreateBatchPredictionInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBatchPredictionDataSourceId(value: EntityId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BatchPredictionDataSourceId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBatchPredictionId(value: EntityId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BatchPredictionId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMLModelId(value: EntityId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MLModelId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOutputUri(value: S3Url): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OutputUri")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBatchPredictionName(value: EntityName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BatchPredictionName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBatchPredictionName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BatchPredictionName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

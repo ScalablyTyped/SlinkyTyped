@@ -1,12 +1,10 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`hide-children`
-import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.hide
-import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.show
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait WebTileLayerProperties
   extends LayerProperties
      with ScaleRangeLayerProperties
@@ -17,61 +15,88 @@ trait WebTileLayerProperties
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-WebTileLayer.html#copyright)
     */
-  var copyright: js.UndefOr[String] = js.undefined
+  var copyright: js.UndefOr[String] = js.native
   /**
     * A string of subDomain names where tiles are served to speed up tile retrieval. If subDomains are specified, the [urlTemplate](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-WebTileLayer.html#urlTemplate) should include a `{subDomain}` place holder.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-WebTileLayer.html#subDomains)
     */
-  var subDomains: js.UndefOr[js.Array[String]] = js.undefined
+  var subDomains: js.UndefOr[js.Array[String]] = js.native
   /**
     * The tiling scheme information for the layer.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-WebTileLayer.html#tileInfo)
     */
-  var tileInfo: js.UndefOr[TileInfoProperties] = js.undefined
+  var tileInfo: js.UndefOr[TileInfoProperties] = js.native
   /**
     * URL template for the hosted tiles. The `urlTemplate` should contain a `{subDomain}` place holder if [subDomains](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-WebTileLayer.html#subDomains) are specified.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-WebTileLayer.html#urlTemplate)
     */
-  var urlTemplate: js.UndefOr[String] = js.undefined
+  var urlTemplate: js.UndefOr[String] = js.native
 }
 
 object WebTileLayerProperties {
   @scala.inline
-  def apply(
-    copyright: String = null,
-    fullExtent: ExtentProperties = null,
-    id: String = null,
-    listMode: show | hide | `hide-children` = null,
-    maxScale: Int | Double = null,
-    minScale: Int | Double = null,
-    opacity: Int | Double = null,
-    portalItem: PortalItemProperties = null,
-    refreshInterval: Int | Double = null,
-    subDomains: js.Array[String] = null,
-    tileInfo: TileInfoProperties = null,
-    title: String = null,
-    urlTemplate: String = null,
-    visible: js.UndefOr[Boolean] = js.undefined
-  ): WebTileLayerProperties = {
+  def apply(): WebTileLayerProperties = {
     val __obj = js.Dynamic.literal()
-    if (copyright != null) __obj.updateDynamic("copyright")(copyright.asInstanceOf[js.Any])
-    if (fullExtent != null) __obj.updateDynamic("fullExtent")(fullExtent.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (listMode != null) __obj.updateDynamic("listMode")(listMode.asInstanceOf[js.Any])
-    if (maxScale != null) __obj.updateDynamic("maxScale")(maxScale.asInstanceOf[js.Any])
-    if (minScale != null) __obj.updateDynamic("minScale")(minScale.asInstanceOf[js.Any])
-    if (opacity != null) __obj.updateDynamic("opacity")(opacity.asInstanceOf[js.Any])
-    if (portalItem != null) __obj.updateDynamic("portalItem")(portalItem.asInstanceOf[js.Any])
-    if (refreshInterval != null) __obj.updateDynamic("refreshInterval")(refreshInterval.asInstanceOf[js.Any])
-    if (subDomains != null) __obj.updateDynamic("subDomains")(subDomains.asInstanceOf[js.Any])
-    if (tileInfo != null) __obj.updateDynamic("tileInfo")(tileInfo.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
-    if (urlTemplate != null) __obj.updateDynamic("urlTemplate")(urlTemplate.asInstanceOf[js.Any])
-    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.asInstanceOf[js.Any])
     __obj.asInstanceOf[WebTileLayerProperties]
   }
+  @scala.inline
+  implicit class WebTileLayerPropertiesOps[Self <: WebTileLayerProperties] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCopyright(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("copyright")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCopyright: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("copyright")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSubDomains(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subDomains")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubDomains: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subDomains")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTileInfo(value: TileInfoProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tileInfo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTileInfo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tileInfo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUrlTemplate(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("urlTemplate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUrlTemplate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("urlTemplate")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

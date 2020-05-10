@@ -12,10 +12,8 @@ trait ProjectsDatabasesDocumentsApiClientXgafv extends js.Object
 
 object ProjectsDatabasesDocumentsApiClientXgafv {
   @scala.inline
-  def `1`: typingsSlinky.firebaseFirestore.firebaseFirestoreStrings.`1` = this.cast("1")
+  def `1`: typingsSlinky.firebaseFirestore.firebaseFirestoreStrings.`1` = "1".asInstanceOf[typingsSlinky.firebaseFirestore.firebaseFirestoreStrings.`1`]
   @scala.inline
-  def `2`: typingsSlinky.firebaseFirestore.firebaseFirestoreStrings.`2` = this.cast("2")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def `2`: typingsSlinky.firebaseFirestore.firebaseFirestoreStrings.`2` = "2".asInstanceOf[typingsSlinky.firebaseFirestore.firebaseFirestoreStrings.`2`]
 }
 

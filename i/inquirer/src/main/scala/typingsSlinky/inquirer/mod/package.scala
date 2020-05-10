@@ -41,6 +41,14 @@ package object mod {
     */
   type DistinctChoice[TChoiceMap] = java.lang.String | (/* import warning: importer.ImportType#apply Failed type conversion: TChoiceMap[keyof TChoiceMap] */ js.Any)
   /**
+    * Represents one of the available questions.
+    *
+    * @template T
+    * The type of the answers.
+    */
+  /* Inlined inquirer.inquirer.QuestionMap<T>[keyof inquirer.inquirer.QuestionMap<T>] */
+  type DistinctQuestion[T /* <: typingsSlinky.inquirer.mod.Answers */] = typingsSlinky.inquirer.inquirerStrings.`type`
+  /**
     * Represents a dynamic property for a question.
     */
   type DynamicQuestionProperty[T, TAnswers /* <: typingsSlinky.inquirer.mod.Answers */] = T | (js.Function1[/* answers */ TAnswers, T])
@@ -64,7 +72,10 @@ package object mod {
     * @template T
     * The type of the keys to suggest.
     */
-  type KeyUnion[T] = typingsSlinky.inquirer.mod.LiteralUnion[typingsSlinky.std.Extract[java.lang.String, java.lang.String], java.lang.String]
+  type KeyUnion[T] = typingsSlinky.inquirer.mod.LiteralUnion[
+    typingsSlinky.std.Extract[/* keyof T */ java.lang.String, java.lang.String], 
+    java.lang.String
+  ]
   /**
     * Provides options for a question for the `ListPrompt`.
     *

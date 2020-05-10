@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait SVGPointList extends /* index */ NumberDictionary[DOMPoint] {
-  @JSName(scala.scalajs.js.Symbol.iterator)
+  @JSName(js.Symbol.iterator)
   var iterator: js.Function0[IterableIterator[DOMPoint]] = js.native
   val length: Double = js.native
   val numberOfItems: Double = js.native
@@ -23,5 +23,6 @@ trait SVGPointList extends /* index */ NumberDictionary[DOMPoint] {
 
 @JSGlobal("SVGPointList")
 @js.native
-object SVGPointList extends Instantiable0[SVGPointList]
+object SVGPointList
+  extends Instantiable0[org.scalajs.dom.raw.SVGPointList]
 

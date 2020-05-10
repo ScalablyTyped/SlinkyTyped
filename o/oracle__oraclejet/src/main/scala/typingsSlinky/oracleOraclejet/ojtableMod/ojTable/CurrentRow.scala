@@ -13,15 +13,13 @@ trait CurrentRow[K] extends js.Object
 
 object CurrentRow {
   @scala.inline
-  def AnonRowKey[K](rowIndex: Double, rowKey: K = null): CurrentRow[K] = {
+  def AnonRowKey[K](rowIndex: Double): CurrentRow[K] = {
     val __obj = js.Dynamic.literal(rowIndex = rowIndex.asInstanceOf[js.Any])
-    if (rowKey != null) __obj.updateDynamic("rowKey")(rowKey.asInstanceOf[js.Any])
     __obj.asInstanceOf[CurrentRow[K]]
   }
   @scala.inline
-  def AnonRowIndexRowKey[K](rowKey: K, rowIndex: Int | Double = null): CurrentRow[K] = {
+  def AnonRowIndexRowKey[K](rowKey: K): CurrentRow[K] = {
     val __obj = js.Dynamic.literal(rowKey = rowKey.asInstanceOf[js.Any])
-    if (rowIndex != null) __obj.updateDynamic("rowIndex")(rowIndex.asInstanceOf[js.Any])
     __obj.asInstanceOf[CurrentRow[K]]
   }
 }

@@ -60,24 +60,132 @@ object DefaultCacheBehavior {
     MinTTL: long,
     TargetOriginId: String,
     TrustedSigners: TrustedSigners,
-    ViewerProtocolPolicy: ViewerProtocolPolicy,
-    AllowedMethods: AllowedMethods = null,
-    Compress: js.UndefOr[Boolean] = js.undefined,
-    DefaultTTL: Int | Double = null,
-    FieldLevelEncryptionId: String = null,
-    LambdaFunctionAssociations: LambdaFunctionAssociations = null,
-    MaxTTL: Int | Double = null,
-    SmoothStreaming: js.UndefOr[Boolean] = js.undefined
+    ViewerProtocolPolicy: ViewerProtocolPolicy
   ): DefaultCacheBehavior = {
     val __obj = js.Dynamic.literal(ForwardedValues = ForwardedValues.asInstanceOf[js.Any], MinTTL = MinTTL.asInstanceOf[js.Any], TargetOriginId = TargetOriginId.asInstanceOf[js.Any], TrustedSigners = TrustedSigners.asInstanceOf[js.Any], ViewerProtocolPolicy = ViewerProtocolPolicy.asInstanceOf[js.Any])
-    if (AllowedMethods != null) __obj.updateDynamic("AllowedMethods")(AllowedMethods.asInstanceOf[js.Any])
-    if (!js.isUndefined(Compress)) __obj.updateDynamic("Compress")(Compress.asInstanceOf[js.Any])
-    if (DefaultTTL != null) __obj.updateDynamic("DefaultTTL")(DefaultTTL.asInstanceOf[js.Any])
-    if (FieldLevelEncryptionId != null) __obj.updateDynamic("FieldLevelEncryptionId")(FieldLevelEncryptionId.asInstanceOf[js.Any])
-    if (LambdaFunctionAssociations != null) __obj.updateDynamic("LambdaFunctionAssociations")(LambdaFunctionAssociations.asInstanceOf[js.Any])
-    if (MaxTTL != null) __obj.updateDynamic("MaxTTL")(MaxTTL.asInstanceOf[js.Any])
-    if (!js.isUndefined(SmoothStreaming)) __obj.updateDynamic("SmoothStreaming")(SmoothStreaming.asInstanceOf[js.Any])
     __obj.asInstanceOf[DefaultCacheBehavior]
   }
+  @scala.inline
+  implicit class DefaultCacheBehaviorOps[Self <: DefaultCacheBehavior] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withForwardedValues(value: ForwardedValues): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ForwardedValues")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMinTTL(value: long): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MinTTL")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTargetOriginId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetOriginId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTrustedSigners(value: TrustedSigners): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TrustedSigners")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withViewerProtocolPolicy(value: ViewerProtocolPolicy): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ViewerProtocolPolicy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAllowedMethods(value: AllowedMethods): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AllowedMethods")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowedMethods: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AllowedMethods")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCompress(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Compress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCompress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Compress")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultTTL(value: long): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultTTL")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultTTL: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultTTL")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFieldLevelEncryptionId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FieldLevelEncryptionId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFieldLevelEncryptionId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FieldLevelEncryptionId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLambdaFunctionAssociations(value: LambdaFunctionAssociations): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LambdaFunctionAssociations")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLambdaFunctionAssociations: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LambdaFunctionAssociations")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxTTL(value: long): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxTTL")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxTTL: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxTTL")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSmoothStreaming(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SmoothStreaming")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSmoothStreaming: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SmoothStreaming")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

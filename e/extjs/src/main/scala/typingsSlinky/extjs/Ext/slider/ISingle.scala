@@ -4,12 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ISingle extends IMulti {
-  /** [Method] Returns the current value of the slider
-  		* @returns any The current value of the slider
-  		*/
-  @JSName("getValue")
-  var getValue_ISingle: js.UndefOr[js.Function0[_]] = js.undefined
   /** [Method] Programmatically sets the value of the Slider
   		* @param value Number The value to set the slider to. (This will be constrained within minValue and maxValue)
   		* @param animate Boolean Turn on or off animation
@@ -17,21 +13,34 @@ trait ISingle extends IMulti {
   @JSName("setValue")
   var setValue_ISingle: js.UndefOr[
     js.Function2[/* value */ js.UndefOr[Double], /* animate */ js.UndefOr[Boolean], Unit]
-  ] = js.undefined
+  ] = js.native
 }
 
 object ISingle {
   @scala.inline
-  def apply(
-    IMulti: IMulti = null,
-    getValue: () => _ = null,
-    setValue: (/* value */ js.UndefOr[Double], /* animate */ js.UndefOr[Boolean]) => Unit = null
-  ): ISingle = {
+  def apply(): ISingle = {
     val __obj = js.Dynamic.literal()
-    if (IMulti != null) js.Dynamic.global.Object.assign(__obj, IMulti)
-    if (getValue != null) __obj.updateDynamic("getValue")(js.Any.fromFunction0(getValue))
-    if (setValue != null) __obj.updateDynamic("setValue")(js.Any.fromFunction2(setValue))
     __obj.asInstanceOf[ISingle]
   }
+  @scala.inline
+  implicit class ISingleOps[Self <: ISingle] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSetValue(value: (/* value */ js.UndefOr[Double], /* animate */ js.UndefOr[Boolean]) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setValue")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutSetValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setValue")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

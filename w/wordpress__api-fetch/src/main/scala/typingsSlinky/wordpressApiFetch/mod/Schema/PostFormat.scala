@@ -20,26 +20,24 @@ trait PostFormat extends js.Object
 
 object PostFormat {
   @scala.inline
-  def aside: typingsSlinky.wordpressApiFetch.wordpressApiFetchStrings.aside = this.cast("aside")
+  def aside: typingsSlinky.wordpressApiFetch.wordpressApiFetchStrings.aside = "aside".asInstanceOf[typingsSlinky.wordpressApiFetch.wordpressApiFetchStrings.aside]
   @scala.inline
-  def audio: typingsSlinky.wordpressApiFetch.wordpressApiFetchStrings.audio = this.cast("audio")
+  def audio: typingsSlinky.wordpressApiFetch.wordpressApiFetchStrings.audio = "audio".asInstanceOf[typingsSlinky.wordpressApiFetch.wordpressApiFetchStrings.audio]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def chat: typingsSlinky.wordpressApiFetch.wordpressApiFetchStrings.chat = "chat".asInstanceOf[typingsSlinky.wordpressApiFetch.wordpressApiFetchStrings.chat]
   @scala.inline
-  def chat: typingsSlinky.wordpressApiFetch.wordpressApiFetchStrings.chat = this.cast("chat")
+  def gallery: typingsSlinky.wordpressApiFetch.wordpressApiFetchStrings.gallery = "gallery".asInstanceOf[typingsSlinky.wordpressApiFetch.wordpressApiFetchStrings.gallery]
   @scala.inline
-  def gallery: typingsSlinky.wordpressApiFetch.wordpressApiFetchStrings.gallery = this.cast("gallery")
+  def image: typingsSlinky.wordpressApiFetch.wordpressApiFetchStrings.image = "image".asInstanceOf[typingsSlinky.wordpressApiFetch.wordpressApiFetchStrings.image]
   @scala.inline
-  def image: typingsSlinky.wordpressApiFetch.wordpressApiFetchStrings.image = this.cast("image")
+  def link: typingsSlinky.wordpressApiFetch.wordpressApiFetchStrings.link = "link".asInstanceOf[typingsSlinky.wordpressApiFetch.wordpressApiFetchStrings.link]
   @scala.inline
-  def link: typingsSlinky.wordpressApiFetch.wordpressApiFetchStrings.link = this.cast("link")
+  def quote: typingsSlinky.wordpressApiFetch.wordpressApiFetchStrings.quote = "quote".asInstanceOf[typingsSlinky.wordpressApiFetch.wordpressApiFetchStrings.quote]
   @scala.inline
-  def quote: typingsSlinky.wordpressApiFetch.wordpressApiFetchStrings.quote = this.cast("quote")
+  def standard: typingsSlinky.wordpressApiFetch.wordpressApiFetchStrings.standard = "standard".asInstanceOf[typingsSlinky.wordpressApiFetch.wordpressApiFetchStrings.standard]
   @scala.inline
-  def standard: typingsSlinky.wordpressApiFetch.wordpressApiFetchStrings.standard = this.cast("standard")
+  def status: typingsSlinky.wordpressApiFetch.wordpressApiFetchStrings.status = "status".asInstanceOf[typingsSlinky.wordpressApiFetch.wordpressApiFetchStrings.status]
   @scala.inline
-  def status: typingsSlinky.wordpressApiFetch.wordpressApiFetchStrings.status = this.cast("status")
-  @scala.inline
-  def video: typingsSlinky.wordpressApiFetch.wordpressApiFetchStrings.video = this.cast("video")
+  def video: typingsSlinky.wordpressApiFetch.wordpressApiFetchStrings.video = "video".asInstanceOf[typingsSlinky.wordpressApiFetch.wordpressApiFetchStrings.video]
 }
 

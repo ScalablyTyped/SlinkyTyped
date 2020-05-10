@@ -16,12 +16,6 @@ class Tooltip ()
     * If tooltip is hovered.
     */
   var isHovered: Boolean = js.native
-  /* CompleteClass */
-  override var isOpen: Boolean = js.native
-  /* CompleteClass */
-  override def close(): Unit = js.native
-  /* CompleteClass */
-  override def open(): Unit = js.native
 }
 
 /* static members */
@@ -40,7 +34,7 @@ object Tooltip extends js.Object {
   /**
     * Init Tooltip
     */
-  def init(els: typingsSlinky.std.Element): Tooltip = js.native
-  def init(els: typingsSlinky.std.Element, options: PartialTooltipOptions): Tooltip = js.native
+  def init(els: Element): Tooltip = js.native
+  def init(els: Element, options: PartialTooltipOptions): Tooltip = js.native
 }
 

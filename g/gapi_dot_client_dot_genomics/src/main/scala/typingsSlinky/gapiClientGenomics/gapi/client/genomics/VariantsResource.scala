@@ -8,6 +8,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait VariantsResource extends js.Object {
   /**
     * Creates a new variant.
@@ -16,7 +17,7 @@ trait VariantsResource extends js.Object {
     * [Fundamentals of Google
     * Genomics](https://cloud.google.com/genomics/fundamentals-of-google-genomics)
     */
-  def create(request: AnonAccesstoken): Request_[Variant]
+  def create(request: AnonAccesstoken): Request_[Variant] = js.native
   /**
     * Deletes a variant.
     *
@@ -24,7 +25,7 @@ trait VariantsResource extends js.Object {
     * [Fundamentals of Google
     * Genomics](https://cloud.google.com/genomics/fundamentals-of-google-genomics)
     */
-  def delete(request: AnonUploadType): Request_[js.Object]
+  def delete(request: AnonUploadType): Request_[js.Object] = js.native
   /**
     * Gets a variant by ID.
     *
@@ -32,7 +33,7 @@ trait VariantsResource extends js.Object {
     * [Fundamentals of Google
     * Genomics](https://cloud.google.com/genomics/fundamentals-of-google-genomics)
     */
-  def get(request: AnonUploadType): Request_[Variant]
+  def get(request: AnonUploadType): Request_[Variant] = js.native
   /**
     * Creates variant data by asynchronously importing the provided information.
     *
@@ -53,7 +54,7 @@ trait VariantsResource extends js.Object {
     * call-specific context.
     * Imported VCF headers are appended to the metadata already in a variant set.
     */
-  def `import`(request: AnonAccesstoken): Request_[Operation]
+  def `import`(request: AnonAccesstoken): Request_[Operation] = js.native
   /**
     * Merges the given variants with existing variants.
     *
@@ -147,7 +148,7 @@ trait VariantsResource extends js.Object {
     * This may be the desired outcome, but it is up to the user to determine if
     * if that is indeed the case.
     */
-  def merge(request: AnonAccesstoken): Request_[js.Object]
+  def merge(request: AnonAccesstoken): Request_[js.Object] = js.native
   /**
     * Updates a variant.
     *
@@ -158,7 +159,7 @@ trait VariantsResource extends js.Object {
     * This method supports patch semantics. Returns the modified variant without
     * its calls.
     */
-  def patch(request: AnonUpdateMask): Request_[Variant]
+  def patch(request: AnonUpdateMask): Request_[Variant] = js.native
   /**
     * Gets a list of variants matching the criteria.
     *
@@ -169,7 +170,7 @@ trait VariantsResource extends js.Object {
     * Implements
     * [GlobalAllianceApi.searchVariants](https://github.com/ga4gh/schemas/blob/v0.5.1/src/main/resources/avro/variantmethods.avdl#L126).
     */
-  def search(request: AnonAccesstoken): Request_[SearchVariantsResponse]
+  def search(request: AnonAccesstoken): Request_[SearchVariantsResponse] = js.native
 }
 
 object VariantsResource {
@@ -187,5 +188,55 @@ object VariantsResource {
     __obj.updateDynamic("import")(js.Any.fromFunction1(`import`))
     __obj.asInstanceOf[VariantsResource]
   }
+  @scala.inline
+  implicit class VariantsResourceOps[Self <: VariantsResource] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCreate(value: AnonAccesstoken => Request_[Variant]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withDelete(value: AnonUploadType => Request_[js.Object]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGet(value: AnonUploadType => Request_[Variant]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withImport(value: AnonAccesstoken => Request_[Operation]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("import")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMerge(value: AnonAccesstoken => Request_[js.Object]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("merge")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withPatch(value: AnonUpdateMask => Request_[Variant]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("patch")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSearch(value: AnonAccesstoken => Request_[SearchVariantsResponse]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("search")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

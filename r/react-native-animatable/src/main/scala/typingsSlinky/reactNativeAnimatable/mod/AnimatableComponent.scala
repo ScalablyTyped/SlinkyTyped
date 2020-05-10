@@ -1,7 +1,7 @@
 package typingsSlinky.reactNativeAnimatable.mod
 
 import typingsSlinky.react.mod.ClassicComponentClass
-import typingsSlinky.reactNative.mod.NativeMethodsMixinStatic
+import typingsSlinky.reactNative.mod.NativeMethods
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait AnimatableComponent[P /* <: js.Object */, S /* <: js.Object */]
   extends ClassicComponentClass[AnimatableProperties[S] with P]
-     with NativeMethodsMixinStatic
+     with NativeMethods
      with AnimatableAnimationMethods {
   def stopAnimation(): Unit = js.native
   def transition[T /* <: S */](fromValues: T, toValues: T): Unit = js.native

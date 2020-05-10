@@ -24,11 +24,41 @@ trait SchemaAccountWarning extends js.Object {
 
 object SchemaAccountWarning {
   @scala.inline
-  def apply(email: String = null, loginDetails: SchemaLoginDetails = null): SchemaAccountWarning = {
+  def apply(): SchemaAccountWarning = {
     val __obj = js.Dynamic.literal()
-    if (email != null) __obj.updateDynamic("email")(email.asInstanceOf[js.Any])
-    if (loginDetails != null) __obj.updateDynamic("loginDetails")(loginDetails.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAccountWarning]
   }
+  @scala.inline
+  implicit class SchemaAccountWarningOps[Self <: SchemaAccountWarning] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEmail(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("email")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEmail: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("email")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLoginDetails(value: SchemaLoginDetails): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loginDetails")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLoginDetails: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loginDetails")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

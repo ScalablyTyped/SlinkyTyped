@@ -27,8 +27,6 @@ class GLTexture protected ()
   def bind(unit: Double): Unit = js.native
   /* InferMemberOverrides */
   override def dispose(): Unit = js.native
-  /* CompleteClass */
-  override def restore(): Unit = js.native
   def unbind(): Unit = js.native
   def update(useMipMaps: Boolean): Unit = js.native
 }

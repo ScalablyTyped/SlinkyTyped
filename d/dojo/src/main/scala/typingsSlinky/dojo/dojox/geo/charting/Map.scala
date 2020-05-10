@@ -1,8 +1,8 @@
 package typingsSlinky.dojo.dojox.geo.charting
 
+import org.scalajs.dom.experimental.URL
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.dojo.dojo.data.ItemFileReadStore
-import typingsSlinky.std.URL
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -30,20 +30,77 @@ trait BlackoutSlate extends js.Object {
 
 object BlackoutSlate {
   @scala.inline
-  def apply(
-    BlackoutSlateImage: InputLocation = null,
-    NetworkEndBlackout: BlackoutSlateNetworkEndBlackout = null,
-    NetworkEndBlackoutImage: InputLocation = null,
-    NetworkId: stringMin34Max34 = null,
-    State: BlackoutSlateState = null
-  ): BlackoutSlate = {
+  def apply(): BlackoutSlate = {
     val __obj = js.Dynamic.literal()
-    if (BlackoutSlateImage != null) __obj.updateDynamic("BlackoutSlateImage")(BlackoutSlateImage.asInstanceOf[js.Any])
-    if (NetworkEndBlackout != null) __obj.updateDynamic("NetworkEndBlackout")(NetworkEndBlackout.asInstanceOf[js.Any])
-    if (NetworkEndBlackoutImage != null) __obj.updateDynamic("NetworkEndBlackoutImage")(NetworkEndBlackoutImage.asInstanceOf[js.Any])
-    if (NetworkId != null) __obj.updateDynamic("NetworkId")(NetworkId.asInstanceOf[js.Any])
-    if (State != null) __obj.updateDynamic("State")(State.asInstanceOf[js.Any])
     __obj.asInstanceOf[BlackoutSlate]
   }
+  @scala.inline
+  implicit class BlackoutSlateOps[Self <: BlackoutSlate] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBlackoutSlateImage(value: InputLocation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BlackoutSlateImage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBlackoutSlateImage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BlackoutSlateImage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNetworkEndBlackout(value: BlackoutSlateNetworkEndBlackout): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NetworkEndBlackout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNetworkEndBlackout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NetworkEndBlackout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNetworkEndBlackoutImage(value: InputLocation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NetworkEndBlackoutImage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNetworkEndBlackoutImage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NetworkEndBlackoutImage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNetworkId(value: stringMin34Max34): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NetworkId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNetworkId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NetworkId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withState(value: BlackoutSlateState): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("State")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("State")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

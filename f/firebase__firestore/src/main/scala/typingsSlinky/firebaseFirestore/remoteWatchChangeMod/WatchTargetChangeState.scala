@@ -1,47 +1,33 @@
 package typingsSlinky.firebaseFirestore.remoteWatchChangeMod
 
-import org.scalablytyped.runtime.TopLevel
+import typingsSlinky.firebaseFirestore.firebaseFirestoreNumbers.`0`
+import typingsSlinky.firebaseFirestore.firebaseFirestoreNumbers.`1`
+import typingsSlinky.firebaseFirestore.firebaseFirestoreNumbers.`2`
+import typingsSlinky.firebaseFirestore.firebaseFirestoreNumbers.`3`
+import typingsSlinky.firebaseFirestore.firebaseFirestoreNumbers.`4`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
-sealed trait WatchTargetChangeState extends js.Object
+/* Rewritten from type alias, can be one of: 
+  - typingsSlinky.firebaseFirestore.firebaseFirestoreNumbers.`0`
+  - typingsSlinky.firebaseFirestore.firebaseFirestoreNumbers.`1`
+  - typingsSlinky.firebaseFirestore.firebaseFirestoreNumbers.`2`
+  - typingsSlinky.firebaseFirestore.firebaseFirestoreNumbers.`3`
+  - typingsSlinky.firebaseFirestore.firebaseFirestoreNumbers.`4`
+*/
+trait WatchTargetChangeState extends js.Object
 
-@JSImport("@firebase/firestore/dist/src/remote/watch_change", "WatchTargetChangeState")
-@js.native
-object WatchTargetChangeState extends js.Object {
-  @js.native
-  sealed trait Added extends WatchTargetChangeState
-  
-  @js.native
-  sealed trait Current extends WatchTargetChangeState
-  
-  @js.native
-  sealed trait NoChange extends WatchTargetChangeState
-  
-  @js.native
-  sealed trait Removed extends WatchTargetChangeState
-  
-  @js.native
-  sealed trait Reset extends WatchTargetChangeState
-  
-  @JSBracketAccess
-  def apply(value: Double): js.UndefOr[WatchTargetChangeState with Double] = js.native
-  /* 1 */ @js.native
-  object Added extends TopLevel[Added with Double]
-  
-  /* 3 */ @js.native
-  object Current extends TopLevel[Current with Double]
-  
-  /* 0 */ @js.native
-  object NoChange extends TopLevel[NoChange with Double]
-  
-  /* 2 */ @js.native
-  object Removed extends TopLevel[Removed with Double]
-  
-  /* 4 */ @js.native
-  object Reset extends TopLevel[Reset with Double]
-  
+object WatchTargetChangeState {
+  @scala.inline
+  def Added: `1` = 1.asInstanceOf[`1`]
+  @scala.inline
+  def Current: `3` = 3.asInstanceOf[`3`]
+  @scala.inline
+  def NoChange: `0` = 0.asInstanceOf[`0`]
+  @scala.inline
+  def Removed: `2` = 2.asInstanceOf[`2`]
+  @scala.inline
+  def Reset: `4` = 4.asInstanceOf[`4`]
 }
 

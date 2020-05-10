@@ -1,9 +1,9 @@
 package typingsSlinky.androiduix.android.app
 
+import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.androiduix.android.content.Context
 import typingsSlinky.androiduix.android.content.Intent
 import typingsSlinky.androiduix.android.os.Bundle
-import typingsSlinky.androiduix.android.view.KeyEvent
 import typingsSlinky.androiduix.android.view.MenuItem
 import typingsSlinky.androiduix.android.view.Menu_
 import typingsSlinky.androiduix.android.view.MotionEvent
@@ -15,8 +15,7 @@ import typingsSlinky.androiduix.android.view.WindowManager
 import typingsSlinky.androiduix.android.view.animation.Animation
 import typingsSlinky.androiduix.android.view.menu.MenuPopupHelper
 import typingsSlinky.androiduix.androidui.AndroidUI
-import typingsSlinky.androiduix.java.lang.Runnable
-import typingsSlinky.std.HTMLElement
+import typingsSlinky.androiduix.java_.lang.Runnable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -46,12 +45,6 @@ class Activity protected ()
   def addContentView(view: View, params: LayoutParams): Unit = js.native
   def closeOptionsMenu(): Unit = js.native
   def dispatchActivityResult(who: String, requestCode: Double, resultCode: Double, data: Intent): Unit = js.native
-  /* CompleteClass */
-  override def dispatchGenericMotionEvent(event: MotionEvent): Boolean = js.native
-  /* CompleteClass */
-  override def dispatchKeyEvent(event: KeyEvent): Boolean = js.native
-  /* CompleteClass */
-  override def dispatchTouchEvent(event: MotionEvent): Boolean = js.native
   def findViewById(id: String): View = js.native
   def finish(): Unit = js.native
   def finishActivity(requestCode: Double): Unit = js.native
@@ -72,24 +65,12 @@ class Activity protected ()
   def navigateUpTo(upIntent: Intent): Boolean = js.native
   def navigateUpTo(upIntent: Intent, upToRootIfNotFound: Boolean): Boolean = js.native
   /* protected */ def onActivityResult(requestCode: Double, resultCode: Double, data: Intent): Unit = js.native
-  /* CompleteClass */
-  override def onAttachedToWindow(): Unit = js.native
   def onBackPressed(): Unit = js.native
-  /* CompleteClass */
-  override def onContentChanged(): Unit = js.native
   /* protected */ def onCreate(): Unit = js.native
   /* protected */ def onCreate(savedInstanceState: Bundle): Unit = js.native
   def onCreateOptionsMenu(menu: Menu_): Boolean = js.native
   /* protected */ def onDestroy(): Unit = js.native
-  /* CompleteClass */
-  override def onDetachedFromWindow(): Unit = js.native
   def onGenericMotionEvent(event: MotionEvent): Boolean = js.native
-  /* CompleteClass */
-  override def onKeyDown(keyCode: Double, event: KeyEvent): Boolean = js.native
-  /* CompleteClass */
-  override def onKeyLongPress(keyCode: Double, event: KeyEvent): Boolean = js.native
-  /* CompleteClass */
-  override def onKeyUp(keyCode: Double, event: KeyEvent): Boolean = js.native
   /* protected */ def onNewIntent(intent: Intent): Unit = js.native
   def onOptionsItemSelected(item: MenuItem): Boolean = js.native
   def onOptionsMenuClosed(menu: Menu_): Unit = js.native
@@ -108,10 +89,6 @@ class Activity protected ()
   def onTouchEvent(event: MotionEvent): Boolean = js.native
   def onUserInteraction(): Unit = js.native
   /* protected */ def onUserLeaveHint(): Unit = js.native
-  /* CompleteClass */
-  override def onWindowAttributesChanged(attrs: typingsSlinky.androiduix.android.view.WindowManager.LayoutParams): Unit = js.native
-  /* CompleteClass */
-  override def onWindowFocusChanged(hasFocus: Boolean): Unit = js.native
   def openOptionsMenu(): Unit = js.native
   def overrideNextTransition(
     enterAnimation: Animation,

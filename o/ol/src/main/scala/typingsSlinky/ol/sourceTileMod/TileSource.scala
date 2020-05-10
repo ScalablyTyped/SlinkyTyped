@@ -16,15 +16,12 @@ trait TileSource
   var tmpSize: Size = js.native
   def canExpireCache(): Boolean = js.native
   def clear(): Unit = js.native
-  def expireCache(
-    projection: typingsSlinky.ol.projectionMod.default,
-    usedTiles: StringDictionary[typingsSlinky.ol.tileRangeMod.default]
-  ): Unit = js.native
+  def expireCache(projection: typingsSlinky.ol.projectionMod.default, usedTiles: StringDictionary[Boolean]): Unit = js.native
   def forEachLoadedTile(
     projection: typingsSlinky.ol.projectionMod.default,
     z: Double,
     tileRange: typingsSlinky.ol.tileRangeMod.default,
-    callback: js.Function1[/* p0 */ typingsSlinky.ol.olTileMod.default, Boolean]
+    callback: js.Function1[/* p0 */ typingsSlinky.ol.olTileMod.default, Boolean | Unit]
   ): Boolean = js.native
   def getGutterForProjection(projection: typingsSlinky.ol.projectionMod.default): Double = js.native
   /* protected */ def getKey(): String = js.native

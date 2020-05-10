@@ -1,14 +1,20 @@
 package typingsSlinky.reactShare.components
 
+import typingsSlinky.reactShare.CommonShareButtonPropstitDescription
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object InstapaperShareButton extends SharedApply_CommonShareButtonPropstitDescription_945935299 {
+object InstapaperShareButton {
   @JSImport("react-share", "InstapaperShareButton")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: CommonShareButtonPropstitDescription): SharedBuilder_CommonShareButtonPropstitDescription245950307 = new SharedBuilder_CommonShareButtonPropstitDescription245950307(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(url: String): SharedBuilder_CommonShareButtonPropstitDescription245950307 = {
+    val __props = js.Dynamic.literal(url = url.asInstanceOf[js.Any])
+    new SharedBuilder_CommonShareButtonPropstitDescription245950307(js.Array(this.component, __props.asInstanceOf[CommonShareButtonPropstitDescription]))
+  }
 }
 

@@ -5,27 +5,75 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonDurationX extends js.Object {
-  var durationX: js.UndefOr[Double] = js.undefined
-  var durationY: js.UndefOr[Double] = js.undefined
-  var easingX: js.UndefOr[EasingType] = js.undefined
-  var easingY: js.UndefOr[EasingType] = js.undefined
+  var durationX: js.UndefOr[Double] = js.native
+  var durationY: js.UndefOr[Double] = js.native
+  var easingX: js.UndefOr[EasingType] = js.native
+  var easingY: js.UndefOr[EasingType] = js.native
 }
 
 object AnonDurationX {
   @scala.inline
-  def apply(
-    durationX: Int | Double = null,
-    durationY: Int | Double = null,
-    easingX: EasingType = null,
-    easingY: EasingType = null
-  ): AnonDurationX = {
+  def apply(): AnonDurationX = {
     val __obj = js.Dynamic.literal()
-    if (durationX != null) __obj.updateDynamic("durationX")(durationX.asInstanceOf[js.Any])
-    if (durationY != null) __obj.updateDynamic("durationY")(durationY.asInstanceOf[js.Any])
-    if (easingX != null) __obj.updateDynamic("easingX")(easingX.asInstanceOf[js.Any])
-    if (easingY != null) __obj.updateDynamic("easingY")(easingY.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonDurationX]
   }
+  @scala.inline
+  implicit class AnonDurationXOps[Self <: AnonDurationX] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDurationX(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("durationX")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDurationX: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("durationX")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDurationY(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("durationY")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDurationY: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("durationY")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEasingX(value: EasingType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("easingX")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEasingX: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("easingX")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEasingY(value: EasingType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("easingY")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEasingY: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("easingY")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

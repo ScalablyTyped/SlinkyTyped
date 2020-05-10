@@ -4,17 +4,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonTotalBytesExpectedToWrite extends js.Object {
-  var totalBytesExpectedToWrite: Double
-  var totalBytesWritten: Double
+  var totalBytesExpectedToWrite: Double = js.native
+  var totalBytesWritten: Double = js.native
 }
 
 object AnonTotalBytesExpectedToWrite {
   @scala.inline
   def apply(totalBytesExpectedToWrite: Double, totalBytesWritten: Double): AnonTotalBytesExpectedToWrite = {
     val __obj = js.Dynamic.literal(totalBytesExpectedToWrite = totalBytesExpectedToWrite.asInstanceOf[js.Any], totalBytesWritten = totalBytesWritten.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[AnonTotalBytesExpectedToWrite]
   }
+  @scala.inline
+  implicit class AnonTotalBytesExpectedToWriteOps[Self <: AnonTotalBytesExpectedToWrite] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withTotalBytesExpectedToWrite(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("totalBytesExpectedToWrite")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTotalBytesWritten(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("totalBytesWritten")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

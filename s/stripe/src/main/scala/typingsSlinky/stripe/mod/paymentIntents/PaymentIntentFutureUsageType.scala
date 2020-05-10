@@ -12,10 +12,8 @@ trait PaymentIntentFutureUsageType extends js.Object
 
 object PaymentIntentFutureUsageType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def off_session: typingsSlinky.stripe.stripeStrings.off_session = "off_session".asInstanceOf[typingsSlinky.stripe.stripeStrings.off_session]
   @scala.inline
-  def off_session: typingsSlinky.stripe.stripeStrings.off_session = this.cast("off_session")
-  @scala.inline
-  def on_session: typingsSlinky.stripe.stripeStrings.on_session = this.cast("on_session")
+  def on_session: typingsSlinky.stripe.stripeStrings.on_session = "on_session".asInstanceOf[typingsSlinky.stripe.stripeStrings.on_session]
 }
 

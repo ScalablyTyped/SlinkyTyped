@@ -1,10 +1,9 @@
 package typingsSlinky.materialUiCore
 
 import org.scalablytyped.runtime.TopLevel
+import slinky.core.ReactComponentClass
 import typingsSlinky.materialUiCore.avatarAvatarMod.AvatarProps
 import typingsSlinky.react.mod.Component
-import typingsSlinky.react.mod.ComponentState
-import typingsSlinky.react.mod.ComponentType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,13 +13,13 @@ import scala.scalajs.js.annotation._
 object avatarMod extends js.Object {
   @js.native
   class default protected ()
-    extends Component[AvatarProps, ComponentState, js.Any] {
+    extends Component[AvatarProps, js.Object, js.Any] {
     def this(props: AvatarProps) = this()
     def this(props: AvatarProps, context: js.Any) = this()
   }
   
   @js.native
-  object default extends TopLevel[ComponentType[AvatarProps]]
+  object default extends TopLevel[ReactComponentClass[AvatarProps]]
   
 }
 

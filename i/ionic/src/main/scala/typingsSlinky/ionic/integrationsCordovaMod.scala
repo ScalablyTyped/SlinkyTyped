@@ -3,8 +3,6 @@ package typingsSlinky.ionic
 import typingsSlinky.ionic.cordovaConfigMod.CordovaConfig
 import typingsSlinky.ionic.definitionsMod.ProjectIntegration
 import typingsSlinky.ionic.definitionsMod.ProjectType
-import typingsSlinky.ionic.ionicStrings.`Target native iOS and Android with Apache Cordova`
-import typingsSlinky.ionic.ionicStrings.`httpsColonSlashSlashd2ql0qc7j8u4b2DotcloudfrontDotnetSlashintegration-cordovaDottarDotgz`
 import typingsSlinky.ionic.libIntegrationsMod.BaseIntegration
 import typingsSlinky.ionic.libIntegrationsMod.IntegationUnion
 import typingsSlinky.ionic.libIntegrationsMod.IntegrationConfig
@@ -20,11 +18,9 @@ object integrationsCordovaMod extends js.Object {
     extends BaseIntegration[ProjectIntegration]
        with IntegationUnion {
     @JSName("archiveUrl")
-    val archiveUrl_Integration: `httpsColonSlashSlashd2ql0qc7j8u4b2DotcloudfrontDotnetSlashintegration-cordovaDottarDotgz` = js.native
-    @JSName("summary")
-    val summary_Integration: `Target native iOS and Android with Apache Cordova` = js.native
+    val archiveUrl_Integration: /* "https://d2ql0qc7j8u4b2.cloudfront.net/integration-cordova.tar.gz" */ String = js.native
     @JSName("config")
-    def config_MIntegration(): IntegrationConfig = js.native
+    def config_MIntegration: IntegrationConfig = js.native
     /* InferMemberOverrides */
     override def enable(config: ProjectIntegration): js.Promise[Unit] = js.native
     def getConfig(): js.Promise[js.UndefOr[CordovaConfig]] = js.native

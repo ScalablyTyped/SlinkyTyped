@@ -1,62 +1,59 @@
 package typingsSlinky.spectacle.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.spectacle.mod.CSSProperties
 import typingsSlinky.spectacle.mod.HeadingProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Heading
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.spectacle.mod.Heading] {
+object Heading {
   @JSImport("spectacle", "Heading")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, size */
-  def apply(
-    bgColor: String = null,
-    bgDarken: Int | Double = null,
-    bgImage: String = null,
-    bold: js.UndefOr[Boolean] = js.undefined,
-    caps: js.UndefOr[Boolean] = js.undefined,
-    fit: js.UndefOr[Boolean] = js.undefined,
-    italic: js.UndefOr[Boolean] = js.undefined,
-    lineHeight: Int | Double = null,
-    margin: Double | String = null,
-    padding: Double | String = null,
-    style: CSSProperties = null,
-    textAlign: String = null,
-    textColor: String = null,
-    textFont: String = null,
-    textSize: String = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.spectacle.mod.Heading] = {
-    val __obj = js.Dynamic.literal()
-    if (bgColor != null) __obj.updateDynamic("bgColor")(bgColor.asInstanceOf[js.Any])
-    if (bgDarken != null) __obj.updateDynamic("bgDarken")(bgDarken.asInstanceOf[js.Any])
-    if (bgImage != null) __obj.updateDynamic("bgImage")(bgImage.asInstanceOf[js.Any])
-    if (!js.isUndefined(bold)) __obj.updateDynamic("bold")(bold.asInstanceOf[js.Any])
-    if (!js.isUndefined(caps)) __obj.updateDynamic("caps")(caps.asInstanceOf[js.Any])
-    if (!js.isUndefined(fit)) __obj.updateDynamic("fit")(fit.asInstanceOf[js.Any])
-    if (!js.isUndefined(italic)) __obj.updateDynamic("italic")(italic.asInstanceOf[js.Any])
-    if (lineHeight != null) __obj.updateDynamic("lineHeight")(lineHeight.asInstanceOf[js.Any])
-    if (margin != null) __obj.updateDynamic("margin")(margin.asInstanceOf[js.Any])
-    if (padding != null) __obj.updateDynamic("padding")(padding.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (textAlign != null) __obj.updateDynamic("textAlign")(textAlign.asInstanceOf[js.Any])
-    if (textColor != null) __obj.updateDynamic("textColor")(textColor.asInstanceOf[js.Any])
-    if (textFont != null) __obj.updateDynamic("textFont")(textFont.asInstanceOf[js.Any])
-    if (textSize != null) __obj.updateDynamic("textSize")(textSize.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.spectacle.mod.Heading] {
+    @scala.inline
+    def bgColor(value: String): this.type = set("bgColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def bgDarken(value: Double): this.type = set("bgDarken", value.asInstanceOf[js.Any])
+    @scala.inline
+    def bgImage(value: String): this.type = set("bgImage", value.asInstanceOf[js.Any])
+    @scala.inline
+    def bold(value: Boolean): this.type = set("bold", value.asInstanceOf[js.Any])
+    @scala.inline
+    def caps(value: Boolean): this.type = set("caps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def fit(value: Boolean): this.type = set("fit", value.asInstanceOf[js.Any])
+    @scala.inline
+    def italic(value: Boolean): this.type = set("italic", value.asInstanceOf[js.Any])
+    @scala.inline
+    def lineHeight(value: Double): this.type = set("lineHeight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def margin(value: Double | String): this.type = set("margin", value.asInstanceOf[js.Any])
+    @scala.inline
+    def padding(value: Double | String): this.type = set("padding", value.asInstanceOf[js.Any])
+    @scala.inline
+    def size(value: Double): this.type = set("size", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def textAlign(value: String): this.type = set("textAlign", value.asInstanceOf[js.Any])
+    @scala.inline
+    def textColor(value: String): this.type = set("textColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def textFont(value: String): this.type = set("textFont", value.asInstanceOf[js.Any])
+    @scala.inline
+    def textSize(value: String): this.type = set("textSize", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.spectacle.mod.Heading] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.spectacle.mod.Heading](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = HeadingProps
+  
+  def withProps(p: HeadingProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Heading.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

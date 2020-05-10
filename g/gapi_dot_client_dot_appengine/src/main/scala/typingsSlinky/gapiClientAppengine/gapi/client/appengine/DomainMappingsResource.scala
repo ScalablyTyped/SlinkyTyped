@@ -9,23 +9,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait DomainMappingsResource extends js.Object {
   /**
     * Maps a domain to an application. A user must be authorized to administer a domain in order to map it to an application. For a list of available
     * authorized domains, see AuthorizedDomains.ListAuthorizedDomains.
     */
-  def create(request: AnonAccesstoken): Request_[Operation]
+  def create(request: AnonAccesstoken): Request_[Operation] = js.native
   /** Deletes the specified domain mapping. A user must be authorized to administer the associated domain in order to delete a DomainMapping resource. */
-  def delete(request: AnonDomainMappingsId): Request_[Operation]
+  def delete(request: AnonDomainMappingsId): Request_[Operation] = js.native
   /** Gets the specified domain mapping. */
-  def get(request: AnonDomainMappingsId): Request_[DomainMapping]
+  def get(request: AnonDomainMappingsId): Request_[DomainMapping] = js.native
   /** Lists the domain mappings on an application. */
-  def list(request: AnonCallback): Request_[ListDomainMappingsResponse]
+  def list(request: AnonCallback): Request_[ListDomainMappingsResponse] = js.native
   /**
     * Updates the specified domain mapping. To map an SSL certificate to a domain mapping, update certificate_id to point to an AuthorizedCertificate
     * resource. A user must be authorized to administer the associated domain in order to update a DomainMapping resource.
     */
-  def patch(request: AnonFields): Request_[Operation]
+  def patch(request: AnonFields): Request_[Operation] = js.native
 }
 
 object DomainMappingsResource {
@@ -38,8 +39,45 @@ object DomainMappingsResource {
     patch: AnonFields => Request_[Operation]
   ): DomainMappingsResource = {
     val __obj = js.Dynamic.literal(create = js.Any.fromFunction1(create), delete = js.Any.fromFunction1(delete), get = js.Any.fromFunction1(get), list = js.Any.fromFunction1(list), patch = js.Any.fromFunction1(patch))
-  
     __obj.asInstanceOf[DomainMappingsResource]
   }
+  @scala.inline
+  implicit class DomainMappingsResourceOps[Self <: DomainMappingsResource] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCreate(value: AnonAccesstoken => Request_[Operation]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withDelete(value: AnonDomainMappingsId => Request_[Operation]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGet(value: AnonDomainMappingsId => Request_[DomainMapping]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withList(value: AnonCallback => Request_[ListDomainMappingsResponse]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withPatch(value: AnonFields => Request_[Operation]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("patch")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

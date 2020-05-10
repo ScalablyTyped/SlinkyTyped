@@ -3,7 +3,6 @@ package typingsSlinky.node.utilMod
 import typingsSlinky.node.AnonFatal
 import typingsSlinky.node.AnonStream
 import typingsSlinky.node.NodeJS.ArrayBufferView
-import typingsSlinky.std.ArrayBuffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,7 +19,7 @@ class TextDecoder () extends js.Object {
   def decode(input: Null, options: AnonStream): String = js.native
   def decode(input: ArrayBufferView): String = js.native
   def decode(input: ArrayBufferView, options: AnonStream): String = js.native
-  def decode(input: ArrayBuffer): String = js.native
-  def decode(input: ArrayBuffer, options: AnonStream): String = js.native
+  def decode(input: js.typedarray.ArrayBuffer): String = js.native
+  def decode(input: js.typedarray.ArrayBuffer, options: AnonStream): String = js.native
 }
 

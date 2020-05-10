@@ -25,17 +25,59 @@ trait TransactWriteItemsInput extends js.Object {
 
 object TransactWriteItemsInput {
   @scala.inline
-  def apply(
-    TransactItems: TransactWriteItemList,
-    ClientRequestToken: ClientRequestToken = null,
-    ReturnConsumedCapacity: ReturnConsumedCapacity = null,
-    ReturnItemCollectionMetrics: ReturnItemCollectionMetrics = null
-  ): TransactWriteItemsInput = {
+  def apply(TransactItems: TransactWriteItemList): TransactWriteItemsInput = {
     val __obj = js.Dynamic.literal(TransactItems = TransactItems.asInstanceOf[js.Any])
-    if (ClientRequestToken != null) __obj.updateDynamic("ClientRequestToken")(ClientRequestToken.asInstanceOf[js.Any])
-    if (ReturnConsumedCapacity != null) __obj.updateDynamic("ReturnConsumedCapacity")(ReturnConsumedCapacity.asInstanceOf[js.Any])
-    if (ReturnItemCollectionMetrics != null) __obj.updateDynamic("ReturnItemCollectionMetrics")(ReturnItemCollectionMetrics.asInstanceOf[js.Any])
     __obj.asInstanceOf[TransactWriteItemsInput]
   }
+  @scala.inline
+  implicit class TransactWriteItemsInputOps[Self <: TransactWriteItemsInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withTransactItems(value: TransactWriteItemList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TransactItems")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withClientRequestToken(value: ClientRequestToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientRequestToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClientRequestToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientRequestToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReturnConsumedCapacity(value: ReturnConsumedCapacity): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReturnConsumedCapacity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReturnConsumedCapacity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReturnConsumedCapacity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReturnItemCollectionMetrics(value: ReturnItemCollectionMetrics): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReturnItemCollectionMetrics")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReturnItemCollectionMetrics: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReturnItemCollectionMetrics")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

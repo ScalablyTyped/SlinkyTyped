@@ -13,6 +13,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Configures data aggregation for the series. */
+@js.native
 trait dxChartSeriesTypesCommonSeriesAggregation extends js.Object {
   /** Specifies a custom aggregate function. Applies only if the aggregation method is "custom". */
   var calculate: js.UndefOr[
@@ -21,25 +22,64 @@ trait dxChartSeriesTypesCommonSeriesAggregation extends js.Object {
       /* series */ chartSeriesObject, 
       _ | js.Array[_]
     ]
-  ] = js.undefined
+  ] = js.native
   /** Enables data aggregation for the series. */
-  var enabled: js.UndefOr[Boolean] = js.undefined
+  var enabled: js.UndefOr[Boolean] = js.native
   /** Specifies how to aggregate series points. */
-  var method: js.UndefOr[avg | count | max | min | ohlc | range | sum | custom] = js.undefined
+  var method: js.UndefOr[avg | count | max | min | ohlc | range | sum | custom] = js.native
 }
 
 object dxChartSeriesTypesCommonSeriesAggregation {
   @scala.inline
-  def apply(
-    calculate: (/* aggregationInfo */ chartPointAggregationInfoObject, /* series */ chartSeriesObject) => _ | js.Array[_] = null,
-    enabled: js.UndefOr[Boolean] = js.undefined,
-    method: avg | count | max | min | ohlc | range | sum | custom = null
-  ): dxChartSeriesTypesCommonSeriesAggregation = {
+  def apply(): dxChartSeriesTypesCommonSeriesAggregation = {
     val __obj = js.Dynamic.literal()
-    if (calculate != null) __obj.updateDynamic("calculate")(js.Any.fromFunction2(calculate))
-    if (!js.isUndefined(enabled)) __obj.updateDynamic("enabled")(enabled.asInstanceOf[js.Any])
-    if (method != null) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
     __obj.asInstanceOf[dxChartSeriesTypesCommonSeriesAggregation]
   }
+  @scala.inline
+  implicit class dxChartSeriesTypesCommonSeriesAggregationOps[Self <: dxChartSeriesTypesCommonSeriesAggregation] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCalculate(
+      value: (/* aggregationInfo */ chartPointAggregationInfoObject, /* series */ chartSeriesObject) => _ | js.Array[_]
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("calculate")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutCalculate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("calculate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMethod(value: avg | count | max | min | ohlc | range | sum | custom): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMethod: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

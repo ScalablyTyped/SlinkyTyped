@@ -30,46 +30,44 @@ trait easingOptions extends js.Object
 
 object easingOptions {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def ease: typingsSlinky.aos.aosStrings.ease = "ease".asInstanceOf[typingsSlinky.aos.aosStrings.ease]
   @scala.inline
-  def ease: typingsSlinky.aos.aosStrings.ease = this.cast("ease")
+  def `ease-in`: typingsSlinky.aos.aosStrings.`ease-in` = "ease-in".asInstanceOf[typingsSlinky.aos.aosStrings.`ease-in`]
   @scala.inline
-  def `ease-in`: typingsSlinky.aos.aosStrings.`ease-in` = this.cast("ease-in")
+  def `ease-in-back`: typingsSlinky.aos.aosStrings.`ease-in-back` = "ease-in-back".asInstanceOf[typingsSlinky.aos.aosStrings.`ease-in-back`]
   @scala.inline
-  def `ease-in-back`: typingsSlinky.aos.aosStrings.`ease-in-back` = this.cast("ease-in-back")
+  def `ease-in-cubic`: typingsSlinky.aos.aosStrings.`ease-in-cubic` = "ease-in-cubic".asInstanceOf[typingsSlinky.aos.aosStrings.`ease-in-cubic`]
   @scala.inline
-  def `ease-in-cubic`: typingsSlinky.aos.aosStrings.`ease-in-cubic` = this.cast("ease-in-cubic")
+  def `ease-in-out`: typingsSlinky.aos.aosStrings.`ease-in-out` = "ease-in-out".asInstanceOf[typingsSlinky.aos.aosStrings.`ease-in-out`]
   @scala.inline
-  def `ease-in-out`: typingsSlinky.aos.aosStrings.`ease-in-out` = this.cast("ease-in-out")
+  def `ease-in-out-back`: typingsSlinky.aos.aosStrings.`ease-in-out-back` = "ease-in-out-back".asInstanceOf[typingsSlinky.aos.aosStrings.`ease-in-out-back`]
   @scala.inline
-  def `ease-in-out-back`: typingsSlinky.aos.aosStrings.`ease-in-out-back` = this.cast("ease-in-out-back")
+  def `ease-in-out-cubic`: typingsSlinky.aos.aosStrings.`ease-in-out-cubic` = "ease-in-out-cubic".asInstanceOf[typingsSlinky.aos.aosStrings.`ease-in-out-cubic`]
   @scala.inline
-  def `ease-in-out-cubic`: typingsSlinky.aos.aosStrings.`ease-in-out-cubic` = this.cast("ease-in-out-cubic")
+  def `ease-in-out-quad`: typingsSlinky.aos.aosStrings.`ease-in-out-quad` = "ease-in-out-quad".asInstanceOf[typingsSlinky.aos.aosStrings.`ease-in-out-quad`]
   @scala.inline
-  def `ease-in-out-quad`: typingsSlinky.aos.aosStrings.`ease-in-out-quad` = this.cast("ease-in-out-quad")
+  def `ease-in-out-quart`: typingsSlinky.aos.aosStrings.`ease-in-out-quart` = "ease-in-out-quart".asInstanceOf[typingsSlinky.aos.aosStrings.`ease-in-out-quart`]
   @scala.inline
-  def `ease-in-out-quart`: typingsSlinky.aos.aosStrings.`ease-in-out-quart` = this.cast("ease-in-out-quart")
+  def `ease-in-out-sine`: typingsSlinky.aos.aosStrings.`ease-in-out-sine` = "ease-in-out-sine".asInstanceOf[typingsSlinky.aos.aosStrings.`ease-in-out-sine`]
   @scala.inline
-  def `ease-in-out-sine`: typingsSlinky.aos.aosStrings.`ease-in-out-sine` = this.cast("ease-in-out-sine")
+  def `ease-in-quad`: typingsSlinky.aos.aosStrings.`ease-in-quad` = "ease-in-quad".asInstanceOf[typingsSlinky.aos.aosStrings.`ease-in-quad`]
   @scala.inline
-  def `ease-in-quad`: typingsSlinky.aos.aosStrings.`ease-in-quad` = this.cast("ease-in-quad")
+  def `ease-in-quart`: typingsSlinky.aos.aosStrings.`ease-in-quart` = "ease-in-quart".asInstanceOf[typingsSlinky.aos.aosStrings.`ease-in-quart`]
   @scala.inline
-  def `ease-in-quart`: typingsSlinky.aos.aosStrings.`ease-in-quart` = this.cast("ease-in-quart")
+  def `ease-in-sine`: typingsSlinky.aos.aosStrings.`ease-in-sine` = "ease-in-sine".asInstanceOf[typingsSlinky.aos.aosStrings.`ease-in-sine`]
   @scala.inline
-  def `ease-in-sine`: typingsSlinky.aos.aosStrings.`ease-in-sine` = this.cast("ease-in-sine")
+  def `ease-out`: typingsSlinky.aos.aosStrings.`ease-out` = "ease-out".asInstanceOf[typingsSlinky.aos.aosStrings.`ease-out`]
   @scala.inline
-  def `ease-out`: typingsSlinky.aos.aosStrings.`ease-out` = this.cast("ease-out")
+  def `ease-out-back`: typingsSlinky.aos.aosStrings.`ease-out-back` = "ease-out-back".asInstanceOf[typingsSlinky.aos.aosStrings.`ease-out-back`]
   @scala.inline
-  def `ease-out-back`: typingsSlinky.aos.aosStrings.`ease-out-back` = this.cast("ease-out-back")
+  def `ease-out-cubic`: typingsSlinky.aos.aosStrings.`ease-out-cubic` = "ease-out-cubic".asInstanceOf[typingsSlinky.aos.aosStrings.`ease-out-cubic`]
   @scala.inline
-  def `ease-out-cubic`: typingsSlinky.aos.aosStrings.`ease-out-cubic` = this.cast("ease-out-cubic")
+  def `ease-out-quad`: typingsSlinky.aos.aosStrings.`ease-out-quad` = "ease-out-quad".asInstanceOf[typingsSlinky.aos.aosStrings.`ease-out-quad`]
   @scala.inline
-  def `ease-out-quad`: typingsSlinky.aos.aosStrings.`ease-out-quad` = this.cast("ease-out-quad")
+  def `ease-out-quart`: typingsSlinky.aos.aosStrings.`ease-out-quart` = "ease-out-quart".asInstanceOf[typingsSlinky.aos.aosStrings.`ease-out-quart`]
   @scala.inline
-  def `ease-out-quart`: typingsSlinky.aos.aosStrings.`ease-out-quart` = this.cast("ease-out-quart")
+  def `ease-out-sine`: typingsSlinky.aos.aosStrings.`ease-out-sine` = "ease-out-sine".asInstanceOf[typingsSlinky.aos.aosStrings.`ease-out-sine`]
   @scala.inline
-  def `ease-out-sine`: typingsSlinky.aos.aosStrings.`ease-out-sine` = this.cast("ease-out-sine")
-  @scala.inline
-  def linear: typingsSlinky.aos.aosStrings.linear = this.cast("linear")
+  def linear: typingsSlinky.aos.aosStrings.linear = "linear".asInstanceOf[typingsSlinky.aos.aosStrings.linear]
 }
 

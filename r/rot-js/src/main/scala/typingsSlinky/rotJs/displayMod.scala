@@ -3,10 +3,10 @@ package typingsSlinky.rotJs
 import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLElement
+import org.scalajs.dom.raw.MouseEvent
+import org.scalajs.dom.raw.TouchEvent
 import typingsSlinky.rotJs.typesMod.DisplayData
 import typingsSlinky.rotJs.typesMod.DisplayOptions
-import typingsSlinky.std.MouseEvent
-import typingsSlinky.std.TouchEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

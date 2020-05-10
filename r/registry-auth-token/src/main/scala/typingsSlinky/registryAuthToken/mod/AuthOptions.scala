@@ -8,26 +8,57 @@ import scala.scalajs.js.annotation._
 /**
   * The options for passing into `registry-auth-token`
   */
+@js.native
 trait AuthOptions extends js.Object {
   /**
     * An npmrc configuration object used when searching for tokens. If no object is provided,
     * the `.npmrc` file at the base of the project is used.
     */
-  var npmrc: js.UndefOr[AnonDictregistryUrls] = js.undefined
+  var npmrc: js.UndefOr[AnonDictregistryUrls] = js.native
   /**
     * Wether or not url's path parts are recursively trimmed from the registry
     * url when searching for tokens
     */
-  var recursive: js.UndefOr[Boolean] = js.undefined
+  var recursive: js.UndefOr[Boolean] = js.native
 }
 
 object AuthOptions {
   @scala.inline
-  def apply(npmrc: AnonDictregistryUrls = null, recursive: js.UndefOr[Boolean] = js.undefined): AuthOptions = {
+  def apply(): AuthOptions = {
     val __obj = js.Dynamic.literal()
-    if (npmrc != null) __obj.updateDynamic("npmrc")(npmrc.asInstanceOf[js.Any])
-    if (!js.isUndefined(recursive)) __obj.updateDynamic("recursive")(recursive.asInstanceOf[js.Any])
     __obj.asInstanceOf[AuthOptions]
   }
+  @scala.inline
+  implicit class AuthOptionsOps[Self <: AuthOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNpmrc(value: AnonDictregistryUrls): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("npmrc")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNpmrc: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("npmrc")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRecursive(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("recursive")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRecursive: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("recursive")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

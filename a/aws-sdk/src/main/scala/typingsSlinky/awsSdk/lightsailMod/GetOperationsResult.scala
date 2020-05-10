@@ -7,22 +7,52 @@ import scala.scalajs.js.annotation._
 @js.native
 trait GetOperationsResult extends js.Object {
   /**
-    * A token used for advancing to the next page of results from your get operations request.
+    * The token to advance to the next page of resutls from your request. A next page token is not returned if there are no more results to display. To get the next page of results, perform another GetOperations request and specify the next page token using the pageToken parameter.
     */
   var nextPageToken: js.UndefOr[String] = js.native
   /**
-    * An array of key-value pairs containing information about the results of your get operations request.
+    * An array of objects that describe the result of the action, such as the status of the request, the time stamp of the request, and the resources affected by the request.
     */
   var operations: js.UndefOr[OperationList] = js.native
 }
 
 object GetOperationsResult {
   @scala.inline
-  def apply(nextPageToken: String = null, operations: OperationList = null): GetOperationsResult = {
+  def apply(): GetOperationsResult = {
     val __obj = js.Dynamic.literal()
-    if (nextPageToken != null) __obj.updateDynamic("nextPageToken")(nextPageToken.asInstanceOf[js.Any])
-    if (operations != null) __obj.updateDynamic("operations")(operations.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetOperationsResult]
   }
+  @scala.inline
+  implicit class GetOperationsResultOps[Self <: GetOperationsResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNextPageToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextPageToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOperations(value: OperationList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("operations")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOperations: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("operations")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

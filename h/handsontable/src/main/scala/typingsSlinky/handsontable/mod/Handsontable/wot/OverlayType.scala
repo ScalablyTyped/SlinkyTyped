@@ -16,18 +16,16 @@ trait OverlayType extends js.Object
 
 object OverlayType {
   @scala.inline
-  def bottom: typingsSlinky.handsontable.handsontableStrings.bottom = this.cast("bottom")
+  def bottom: typingsSlinky.handsontable.handsontableStrings.bottom = "bottom".asInstanceOf[typingsSlinky.handsontable.handsontableStrings.bottom]
   @scala.inline
-  def bottom_left_corner: typingsSlinky.handsontable.handsontableStrings.bottom_left_corner = this.cast("bottom_left_corner")
+  def bottom_left_corner: typingsSlinky.handsontable.handsontableStrings.bottom_left_corner = "bottom_left_corner".asInstanceOf[typingsSlinky.handsontable.handsontableStrings.bottom_left_corner]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def debug: typingsSlinky.handsontable.handsontableStrings.debug = "debug".asInstanceOf[typingsSlinky.handsontable.handsontableStrings.debug]
   @scala.inline
-  def debug: typingsSlinky.handsontable.handsontableStrings.debug = this.cast("debug")
+  def left: typingsSlinky.handsontable.handsontableStrings.left = "left".asInstanceOf[typingsSlinky.handsontable.handsontableStrings.left]
   @scala.inline
-  def left: typingsSlinky.handsontable.handsontableStrings.left = this.cast("left")
+  def top: typingsSlinky.handsontable.handsontableStrings.top = "top".asInstanceOf[typingsSlinky.handsontable.handsontableStrings.top]
   @scala.inline
-  def top: typingsSlinky.handsontable.handsontableStrings.top = this.cast("top")
-  @scala.inline
-  def top_left_corner: typingsSlinky.handsontable.handsontableStrings.top_left_corner = this.cast("top_left_corner")
+  def top_left_corner: typingsSlinky.handsontable.handsontableStrings.top_left_corner = "top_left_corner".asInstanceOf[typingsSlinky.handsontable.handsontableStrings.top_left_corner]
 }
 

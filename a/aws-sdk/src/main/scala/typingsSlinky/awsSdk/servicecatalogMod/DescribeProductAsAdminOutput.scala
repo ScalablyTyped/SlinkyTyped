@@ -30,20 +30,77 @@ trait DescribeProductAsAdminOutput extends js.Object {
 
 object DescribeProductAsAdminOutput {
   @scala.inline
-  def apply(
-    Budgets: Budgets = null,
-    ProductViewDetail: ProductViewDetail = null,
-    ProvisioningArtifactSummaries: ProvisioningArtifactSummaries = null,
-    TagOptions: TagOptionDetails = null,
-    Tags: Tags = null
-  ): DescribeProductAsAdminOutput = {
+  def apply(): DescribeProductAsAdminOutput = {
     val __obj = js.Dynamic.literal()
-    if (Budgets != null) __obj.updateDynamic("Budgets")(Budgets.asInstanceOf[js.Any])
-    if (ProductViewDetail != null) __obj.updateDynamic("ProductViewDetail")(ProductViewDetail.asInstanceOf[js.Any])
-    if (ProvisioningArtifactSummaries != null) __obj.updateDynamic("ProvisioningArtifactSummaries")(ProvisioningArtifactSummaries.asInstanceOf[js.Any])
-    if (TagOptions != null) __obj.updateDynamic("TagOptions")(TagOptions.asInstanceOf[js.Any])
-    if (Tags != null) __obj.updateDynamic("Tags")(Tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeProductAsAdminOutput]
   }
+  @scala.inline
+  implicit class DescribeProductAsAdminOutputOps[Self <: DescribeProductAsAdminOutput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBudgets(value: Budgets): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Budgets")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBudgets: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Budgets")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProductViewDetail(value: ProductViewDetail): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProductViewDetail")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProductViewDetail: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProductViewDetail")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProvisioningArtifactSummaries(value: ProvisioningArtifactSummaries): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProvisioningArtifactSummaries")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProvisioningArtifactSummaries: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProvisioningArtifactSummaries")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTagOptions(value: TagOptionDetails): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TagOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTagOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TagOptions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTags(value: Tags): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

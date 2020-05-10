@@ -9,32 +9,95 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonObserveParamsReportProgressResponseTypeWithCredentials extends js.Object {
-  var headers: js.UndefOr[HttpHeaders | (StringDictionary[String | js.Array[String]])] = js.undefined
-  var observe: events
-  var params: js.UndefOr[HttpParams | (StringDictionary[String | js.Array[String]])] = js.undefined
-  var reportProgress: js.UndefOr[Boolean] = js.undefined
-  var responseType: js.UndefOr[json] = js.undefined
-  var withCredentials: js.UndefOr[Boolean] = js.undefined
+  var headers: js.UndefOr[HttpHeaders | (StringDictionary[String | js.Array[String]])] = js.native
+  var observe: events = js.native
+  var params: js.UndefOr[HttpParams | (StringDictionary[String | js.Array[String]])] = js.native
+  var reportProgress: js.UndefOr[Boolean] = js.native
+  var responseType: js.UndefOr[json] = js.native
+  var withCredentials: js.UndefOr[Boolean] = js.native
 }
 
 object AnonObserveParamsReportProgressResponseTypeWithCredentials {
   @scala.inline
-  def apply(
-    observe: events,
-    headers: HttpHeaders | (StringDictionary[String | js.Array[String]]) = null,
-    params: HttpParams | (StringDictionary[String | js.Array[String]]) = null,
-    reportProgress: js.UndefOr[Boolean] = js.undefined,
-    responseType: json = null,
-    withCredentials: js.UndefOr[Boolean] = js.undefined
-  ): AnonObserveParamsReportProgressResponseTypeWithCredentials = {
+  def apply(observe: events): AnonObserveParamsReportProgressResponseTypeWithCredentials = {
     val __obj = js.Dynamic.literal(observe = observe.asInstanceOf[js.Any])
-    if (headers != null) __obj.updateDynamic("headers")(headers.asInstanceOf[js.Any])
-    if (params != null) __obj.updateDynamic("params")(params.asInstanceOf[js.Any])
-    if (!js.isUndefined(reportProgress)) __obj.updateDynamic("reportProgress")(reportProgress.asInstanceOf[js.Any])
-    if (responseType != null) __obj.updateDynamic("responseType")(responseType.asInstanceOf[js.Any])
-    if (!js.isUndefined(withCredentials)) __obj.updateDynamic("withCredentials")(withCredentials.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonObserveParamsReportProgressResponseTypeWithCredentials]
   }
+  @scala.inline
+  implicit class AnonObserveParamsReportProgressResponseTypeWithCredentialsOps[Self <: AnonObserveParamsReportProgressResponseTypeWithCredentials] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withObserve(value: events): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("observe")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHeaders(value: HttpHeaders | (StringDictionary[String | js.Array[String]])): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeaders: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParams(value: HttpParams | (StringDictionary[String | js.Array[String]])): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("params")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParams: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("params")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReportProgress(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reportProgress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReportProgress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reportProgress")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResponseType(value: json): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("responseType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResponseType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("responseType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWithCredentials(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("withCredentials")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWithCredentials: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("withCredentials")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

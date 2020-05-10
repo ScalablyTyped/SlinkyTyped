@@ -4,20 +4,51 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonLogBucket extends js.Object {
   /** The destination bucket where the current bucket's logs should be placed. */
-  var logBucket: js.UndefOr[String] = js.undefined
+  var logBucket: js.UndefOr[String] = js.native
   /** A prefix for log object names. */
-  var logObjectPrefix: js.UndefOr[String] = js.undefined
+  var logObjectPrefix: js.UndefOr[String] = js.native
 }
 
 object AnonLogBucket {
   @scala.inline
-  def apply(logBucket: String = null, logObjectPrefix: String = null): AnonLogBucket = {
+  def apply(): AnonLogBucket = {
     val __obj = js.Dynamic.literal()
-    if (logBucket != null) __obj.updateDynamic("logBucket")(logBucket.asInstanceOf[js.Any])
-    if (logObjectPrefix != null) __obj.updateDynamic("logObjectPrefix")(logObjectPrefix.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonLogBucket]
   }
+  @scala.inline
+  implicit class AnonLogBucketOps[Self <: AnonLogBucket] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLogBucket(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("logBucket")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLogBucket: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("logBucket")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLogObjectPrefix(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("logObjectPrefix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLogObjectPrefix: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("logObjectPrefix")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

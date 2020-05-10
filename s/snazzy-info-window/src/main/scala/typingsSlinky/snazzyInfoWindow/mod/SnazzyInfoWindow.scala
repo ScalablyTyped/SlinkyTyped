@@ -38,7 +38,7 @@ trait SnazzyInfoWindow extends OverlayView {
     * @param content string od DOM element
     */
   def setContent(content: String): Unit = js.native
-  def setContent(content: typingsSlinky.std.HTMLElement): Unit = js.native
+  def setContent(content: HTMLElement): Unit = js.native
   /**
     * Set the position of the info window.
     * A valid Google Map instance must be associated to the info window.

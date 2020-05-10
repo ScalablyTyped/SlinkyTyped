@@ -38,7 +38,7 @@ trait ScreenOrientation extends EventTarget {
   def removeEventListener_change(
     `type`: change,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   def unlock(): Unit = js.native
 }

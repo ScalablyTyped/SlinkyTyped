@@ -26,18 +26,71 @@ trait GetSnapshotBlockResponse extends js.Object {
 
 object GetSnapshotBlockResponse {
   @scala.inline
-  def apply(
-    BlockData: BlockData = null,
-    Checksum: Checksum = null,
-    ChecksumAlgorithm: ChecksumAlgorithm = null,
-    DataLength: Int | Double = null
-  ): GetSnapshotBlockResponse = {
+  def apply(): GetSnapshotBlockResponse = {
     val __obj = js.Dynamic.literal()
-    if (BlockData != null) __obj.updateDynamic("BlockData")(BlockData.asInstanceOf[js.Any])
-    if (Checksum != null) __obj.updateDynamic("Checksum")(Checksum.asInstanceOf[js.Any])
-    if (ChecksumAlgorithm != null) __obj.updateDynamic("ChecksumAlgorithm")(ChecksumAlgorithm.asInstanceOf[js.Any])
-    if (DataLength != null) __obj.updateDynamic("DataLength")(DataLength.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetSnapshotBlockResponse]
   }
+  @scala.inline
+  implicit class GetSnapshotBlockResponseOps[Self <: GetSnapshotBlockResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBlockDataUint8Array(value: js.typedarray.Uint8Array): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BlockData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBlockData(value: BlockData): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BlockData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBlockData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BlockData")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withChecksum(value: Checksum): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Checksum")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChecksum: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Checksum")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withChecksumAlgorithm(value: ChecksumAlgorithm): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ChecksumAlgorithm")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChecksumAlgorithm: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ChecksumAlgorithm")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDataLength(value: DataLength): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DataLength")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDataLength: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DataLength")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

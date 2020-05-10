@@ -13,12 +13,10 @@ trait SelectableRows extends js.Object
 
 object SelectableRows {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def multiple: typingsSlinky.muiDatatables.muiDatatablesStrings.multiple = "multiple".asInstanceOf[typingsSlinky.muiDatatables.muiDatatablesStrings.multiple]
   @scala.inline
-  def multiple: typingsSlinky.muiDatatables.muiDatatablesStrings.multiple = this.cast("multiple")
+  def none: typingsSlinky.muiDatatables.muiDatatablesStrings.none = "none".asInstanceOf[typingsSlinky.muiDatatables.muiDatatablesStrings.none]
   @scala.inline
-  def none: typingsSlinky.muiDatatables.muiDatatablesStrings.none = this.cast("none")
-  @scala.inline
-  def single: typingsSlinky.muiDatatables.muiDatatablesStrings.single = this.cast("single")
+  def single: typingsSlinky.muiDatatables.muiDatatablesStrings.single = "single".asInstanceOf[typingsSlinky.muiDatatables.muiDatatablesStrings.single]
 }
 

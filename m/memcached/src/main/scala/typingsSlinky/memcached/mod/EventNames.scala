@@ -24,16 +24,14 @@ trait EventNames extends js.Object
 
 object EventNames {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def failure: typingsSlinky.memcached.memcachedStrings.failure = "failure".asInstanceOf[typingsSlinky.memcached.memcachedStrings.failure]
   @scala.inline
-  def failure: typingsSlinky.memcached.memcachedStrings.failure = this.cast("failure")
+  def issue: typingsSlinky.memcached.memcachedStrings.issue = "issue".asInstanceOf[typingsSlinky.memcached.memcachedStrings.issue]
   @scala.inline
-  def issue: typingsSlinky.memcached.memcachedStrings.issue = this.cast("issue")
+  def reconnect: typingsSlinky.memcached.memcachedStrings.reconnect = "reconnect".asInstanceOf[typingsSlinky.memcached.memcachedStrings.reconnect]
   @scala.inline
-  def reconnect: typingsSlinky.memcached.memcachedStrings.reconnect = this.cast("reconnect")
+  def reconnecting: typingsSlinky.memcached.memcachedStrings.reconnecting = "reconnecting".asInstanceOf[typingsSlinky.memcached.memcachedStrings.reconnecting]
   @scala.inline
-  def reconnecting: typingsSlinky.memcached.memcachedStrings.reconnecting = this.cast("reconnecting")
-  @scala.inline
-  def remove: typingsSlinky.memcached.memcachedStrings.remove = this.cast("remove")
+  def remove: typingsSlinky.memcached.memcachedStrings.remove = "remove".asInstanceOf[typingsSlinky.memcached.memcachedStrings.remove]
 }
 

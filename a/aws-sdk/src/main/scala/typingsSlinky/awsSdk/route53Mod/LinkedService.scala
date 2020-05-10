@@ -18,11 +18,41 @@ trait LinkedService extends js.Object {
 
 object LinkedService {
   @scala.inline
-  def apply(Description: ResourceDescription = null, ServicePrincipal: ServicePrincipal = null): LinkedService = {
+  def apply(): LinkedService = {
     val __obj = js.Dynamic.literal()
-    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
-    if (ServicePrincipal != null) __obj.updateDynamic("ServicePrincipal")(ServicePrincipal.asInstanceOf[js.Any])
     __obj.asInstanceOf[LinkedService]
   }
+  @scala.inline
+  implicit class LinkedServiceOps[Self <: LinkedService] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDescription(value: ResourceDescription): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withServicePrincipal(value: ServicePrincipal): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ServicePrincipal")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutServicePrincipal: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ServicePrincipal")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

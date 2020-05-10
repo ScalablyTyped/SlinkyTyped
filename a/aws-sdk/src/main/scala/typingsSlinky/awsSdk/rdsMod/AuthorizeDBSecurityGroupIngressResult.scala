@@ -11,10 +11,29 @@ trait AuthorizeDBSecurityGroupIngressResult extends js.Object {
 
 object AuthorizeDBSecurityGroupIngressResult {
   @scala.inline
-  def apply(DBSecurityGroup: DBSecurityGroup = null): AuthorizeDBSecurityGroupIngressResult = {
+  def apply(): AuthorizeDBSecurityGroupIngressResult = {
     val __obj = js.Dynamic.literal()
-    if (DBSecurityGroup != null) __obj.updateDynamic("DBSecurityGroup")(DBSecurityGroup.asInstanceOf[js.Any])
     __obj.asInstanceOf[AuthorizeDBSecurityGroupIngressResult]
   }
+  @scala.inline
+  implicit class AuthorizeDBSecurityGroupIngressResultOps[Self <: AuthorizeDBSecurityGroupIngressResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDBSecurityGroup(value: DBSecurityGroup): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DBSecurityGroup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDBSecurityGroup: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DBSecurityGroup")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

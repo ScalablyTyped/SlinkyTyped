@@ -12,10 +12,8 @@ trait AxisDependency extends js.Object
 
 object AxisDependency {
   @scala.inline
-  def LEFT: typingsSlinky.reactNativeChartsWrapper.reactNativeChartsWrapperStrings.LEFT = this.cast("LEFT")
+  def LEFT: typingsSlinky.reactNativeChartsWrapper.reactNativeChartsWrapperStrings.LEFT = "LEFT".asInstanceOf[typingsSlinky.reactNativeChartsWrapper.reactNativeChartsWrapperStrings.LEFT]
   @scala.inline
-  def RIGHT: typingsSlinky.reactNativeChartsWrapper.reactNativeChartsWrapperStrings.RIGHT = this.cast("RIGHT")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def RIGHT: typingsSlinky.reactNativeChartsWrapper.reactNativeChartsWrapperStrings.RIGHT = "RIGHT".asInstanceOf[typingsSlinky.reactNativeChartsWrapper.reactNativeChartsWrapperStrings.RIGHT]
 }
 

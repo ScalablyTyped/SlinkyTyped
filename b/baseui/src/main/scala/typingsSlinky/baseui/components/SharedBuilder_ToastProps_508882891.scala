@@ -1,0 +1,44 @@
+package typingsSlinky.baseui.components
+
+import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
+import typingsSlinky.baseui.baseuiStrings.`inline`
+import typingsSlinky.baseui.baseuiStrings.info
+import typingsSlinky.baseui.baseuiStrings.negative
+import typingsSlinky.baseui.baseuiStrings.positive
+import typingsSlinky.baseui.baseuiStrings.toast
+import typingsSlinky.baseui.baseuiStrings.warning
+import typingsSlinky.baseui.toastMod.ToastOverrides
+import typingsSlinky.std.Event_
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@scala.inline
+class SharedBuilder_ToastProps_508882891[R <: js.Object] (val args: js.Array[js.Any])
+  extends AnyVal
+     with StBuildingComponent[tag.type, R] {
+  @scala.inline
+  def autoHideDuration(value: Double): this.type = set("autoHideDuration", value.asInstanceOf[js.Any])
+  @scala.inline
+  def closeable(value: Boolean): this.type = set("closeable", value.asInstanceOf[js.Any])
+  @scala.inline
+  def `data-baseweb`(value: String): this.type = set("data-baseweb", value.asInstanceOf[js.Any])
+  @scala.inline
+  def kind(value: info | positive | warning | negative): this.type = set("kind", value.asInstanceOf[js.Any])
+  @scala.inline
+  def notificationType(value: `inline` | toast): this.type = set("notificationType", value.asInstanceOf[js.Any])
+  @scala.inline
+  def onBlur(value: /* e */ Event_ => _): this.type = set("onBlur", js.Any.fromFunction1(value))
+  @scala.inline
+  def onClose(value: () => _): this.type = set("onClose", js.Any.fromFunction0(value))
+  @scala.inline
+  def onFocus(value: /* e */ Event_ => _): this.type = set("onFocus", js.Any.fromFunction1(value))
+  @scala.inline
+  def onMouseEnter(value: /* e */ Event_ => _): this.type = set("onMouseEnter", js.Any.fromFunction1(value))
+  @scala.inline
+  def onMouseLeave(value: /* e */ Event_ => _): this.type = set("onMouseLeave", js.Any.fromFunction1(value))
+  @scala.inline
+  def overrides(value: ToastOverrides): this.type = set("overrides", value.asInstanceOf[js.Any])
+}
+

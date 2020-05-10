@@ -1,15 +1,18 @@
 package typingsSlinky.solidReact.components
 
+import org.scalajs.dom.raw.HTMLButtonElement
+import typingsSlinky.react.mod.HTMLAttributes
+import typingsSlinky.solidReact.mod.ActivityButtonProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object LikeButton
-  extends `SharedApply_<intersection>2033407234`[typingsSlinky.solidReact.mod.LikeButton] {
+object LikeButton {
   @JSImport("@solid/react", "LikeButton")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: ActivityButtonProps with HTMLAttributes[HTMLButtonElement]): `SharedBuilder_<intersection>307943597`[typingsSlinky.solidReact.mod.LikeButton] = new `SharedBuilder_<intersection>307943597`[typingsSlinky.solidReact.mod.LikeButton](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: LikeButton.type): `SharedBuilder_<intersection>307943597`[typingsSlinky.solidReact.mod.LikeButton] = new `SharedBuilder_<intersection>307943597`[typingsSlinky.solidReact.mod.LikeButton](js.Array(this.component, js.Dictionary.empty))()
 }
 

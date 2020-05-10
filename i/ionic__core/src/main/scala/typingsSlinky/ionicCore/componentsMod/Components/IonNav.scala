@@ -1,5 +1,6 @@
 package typingsSlinky.ionicCore.componentsMod.Components
 
+import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.ionicCore.interfaceMod.RouteID
 import typingsSlinky.ionicCore.interfaceMod.RouteWrite
 import typingsSlinky.ionicCore.interfaceMod.RouterDirection
@@ -10,7 +11,6 @@ import typingsSlinky.ionicCore.navInterfaceMod.NavComponent
 import typingsSlinky.ionicCore.navInterfaceMod.NavOptions
 import typingsSlinky.ionicCore.navInterfaceMod.TransitionDoneFn
 import typingsSlinky.ionicCore.oldAnimationAnimationInterfaceMod.AnimationBuilder
-import typingsSlinky.std.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

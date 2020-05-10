@@ -99,7 +99,7 @@ class Tooltip_ () extends Widget {
     * 
     * @param node             
     */
-  def addTarget(node: typingsSlinky.std.HTMLElement): Unit = js.native
+  def addTarget(node: HTMLElement): Unit = js.native
   /**
     * User overridable function that return the text to display in the tooltip.
     * 
@@ -131,7 +131,7 @@ class Tooltip_ () extends Widget {
     * 
     * @param node             
     */
-  def removeTarget(node: typingsSlinky.std.HTMLElement): Unit = js.native
+  def removeTarget(node: HTMLElement): Unit = js.native
   @JSName("set")
   def set_connectId(property: connectId, value: String): Unit = js.native
   @JSName("set")

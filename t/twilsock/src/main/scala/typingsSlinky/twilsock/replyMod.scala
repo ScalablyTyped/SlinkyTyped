@@ -2,7 +2,6 @@ package typingsSlinky.twilsock
 
 import typingsSlinky.twilsock.abstractmessageMod.AbstractMessage
 import typingsSlinky.twilsock.protocolMod.Protocol.MessageType
-import typingsSlinky.twilsock.twilsockStrings.applicationSlashjson
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,7 +15,7 @@ object replyMod extends js.Object {
     val body: js.Any = js.native
     val header: js.Any = js.native
     val method: MessageType = js.native
-    val payload_type: applicationSlashjson = js.native
+    val payload_type: /* "application/json" */ String = js.native
     val status: AnonCode = js.native
   }
   

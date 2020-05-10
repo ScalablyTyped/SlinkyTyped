@@ -1,7 +1,7 @@
 package typingsSlinky.parseTorrent.mod
 
+import org.scalajs.dom.raw.Blob
 import typingsSlinky.node.Buffer
-import typingsSlinky.std.Blob
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

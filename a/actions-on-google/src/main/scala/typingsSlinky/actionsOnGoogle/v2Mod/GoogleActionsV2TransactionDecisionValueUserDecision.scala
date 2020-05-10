@@ -15,16 +15,14 @@ trait GoogleActionsV2TransactionDecisionValueUserDecision extends js.Object
 
 object GoogleActionsV2TransactionDecisionValueUserDecision {
   @scala.inline
-  def CART_CHANGE_REQUESTED: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.CART_CHANGE_REQUESTED = this.cast("CART_CHANGE_REQUESTED")
+  def CART_CHANGE_REQUESTED: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.CART_CHANGE_REQUESTED = "CART_CHANGE_REQUESTED".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.CART_CHANGE_REQUESTED]
   @scala.inline
-  def DELIVERY_ADDRESS_UPDATED: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.DELIVERY_ADDRESS_UPDATED = this.cast("DELIVERY_ADDRESS_UPDATED")
+  def DELIVERY_ADDRESS_UPDATED: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.DELIVERY_ADDRESS_UPDATED = "DELIVERY_ADDRESS_UPDATED".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.DELIVERY_ADDRESS_UPDATED]
   @scala.inline
-  def ORDER_ACCEPTED: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.ORDER_ACCEPTED = this.cast("ORDER_ACCEPTED")
+  def ORDER_ACCEPTED: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.ORDER_ACCEPTED = "ORDER_ACCEPTED".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.ORDER_ACCEPTED]
   @scala.inline
-  def ORDER_REJECTED: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.ORDER_REJECTED = this.cast("ORDER_REJECTED")
+  def ORDER_REJECTED: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.ORDER_REJECTED = "ORDER_REJECTED".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.ORDER_REJECTED]
   @scala.inline
-  def UNKNOWN_USER_DECISION: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.UNKNOWN_USER_DECISION = this.cast("UNKNOWN_USER_DECISION")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def UNKNOWN_USER_DECISION: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.UNKNOWN_USER_DECISION = "UNKNOWN_USER_DECISION".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.UNKNOWN_USER_DECISION]
 }
 

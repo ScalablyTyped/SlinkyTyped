@@ -13,10 +13,8 @@ trait InRestriction extends js.Object
 
 object InRestriction {
   @scala.inline
-  def IN: typingsSlinky.cassanknex.cassanknexStrings.IN = this.cast("IN")
+  def IN: typingsSlinky.cassanknex.cassanknexStrings.IN = "IN".asInstanceOf[typingsSlinky.cassanknex.cassanknexStrings.IN]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
-  @scala.inline
-  def in: in_ = this.cast("in")
+  def in: in_ = "in".asInstanceOf[in_]
 }
 

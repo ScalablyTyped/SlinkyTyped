@@ -14,7 +14,7 @@ import scala.scalajs.js.annotation._
   *
   * In version 7.6.0: introduced
   */
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.mendixmodelsdk.structuresMod.IStructure because Already inherited
 - typingsSlinky.mendixmodelsdk.elementsMod.IAbstractElement because Already inherited
 - typingsSlinky.mendixmodelsdk.elementsMod.IByNameReferrable because Already inherited
@@ -34,11 +34,11 @@ class EntityMessageDefinition protected () extends MessageDefinition {
   @JSName("model")
   var model_FEntityMessageDefinition: IModel = js.native
   @JSName("containerAsMessageDefinitionCollection")
-  def containerAsMessageDefinitionCollection_MEntityMessageDefinition(): MessageDefinitionCollection = js.native
+  def containerAsMessageDefinitionCollection_MEntityMessageDefinition: MessageDefinitionCollection = js.native
   def exposedEntity(): js.Any = js.native
   def exposedEntity(newValue: ExposedEntity): js.Any = js.native
   @JSName("exposedEntity")
-  def exposedEntity_Union(): ExposedEntity | Null = js.native
+  def exposedEntity_Union: ExposedEntity | Null = js.native
 }
 
 /* static members */

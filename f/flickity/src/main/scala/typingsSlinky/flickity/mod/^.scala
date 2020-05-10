@@ -30,6 +30,6 @@ object ^ extends js.Object {
     * @param element Element selector string
     */
   def data(element: String): Flickity = js.native
-  def data(element: typingsSlinky.std.Element): Flickity = js.native
+  def data(element: Element): Flickity = js.native
 }
 

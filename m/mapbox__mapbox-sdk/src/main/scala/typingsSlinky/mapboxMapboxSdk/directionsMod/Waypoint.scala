@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Waypoint extends js.Object {
   /**
     * Used to filter the road segment the waypoint will be placed on by direction and dictates the angle of approach.
@@ -15,35 +16,72 @@ trait Waypoint extends js.Object {
     * If provided, the list of bearings must be the same length as the list of waypoints.
     * However, you can skip a coordinate and show its position in the list with the  ; separator.
     */
-  var bearing: js.UndefOr[js.Array[Double]] = js.undefined
+  var bearing: js.UndefOr[js.Array[Double]] = js.native
   /**
     * Array of [ longitude, latitude ] for the snapped coordinate.
     */
-  var location: js.Array[Double]
+  var location: js.Array[Double] = js.native
   /**
     * String with the name of the way the coordinate snapped to.
     */
-  var name: String
+  var name: String = js.native
   /**
     * Custom names for waypoints used for the arrival instruction in banners and voice instructions, each separated by  ; .
     * Values can be any string and total number of all characters cannot exceed 500. If provided, the list of waypoint_names must be the same
     * length as the list of waypoints, but you can skip a coordinate and show its position with the  ; separator.
     */
-  var waypointName: js.UndefOr[String] = js.undefined
+  var waypointName: js.UndefOr[String] = js.native
 }
 
 object Waypoint {
   @scala.inline
-  def apply(
-    location: js.Array[Double],
-    name: String,
-    bearing: js.Array[Double] = null,
-    waypointName: String = null
-  ): Waypoint = {
+  def apply(location: js.Array[Double], name: String): Waypoint = {
     val __obj = js.Dynamic.literal(location = location.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
-    if (bearing != null) __obj.updateDynamic("bearing")(bearing.asInstanceOf[js.Any])
-    if (waypointName != null) __obj.updateDynamic("waypointName")(waypointName.asInstanceOf[js.Any])
     __obj.asInstanceOf[Waypoint]
   }
+  @scala.inline
+  implicit class WaypointOps[Self <: Waypoint] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLocation(value: js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBearing(value: js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bearing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBearing: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bearing")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWaypointName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("waypointName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWaypointName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("waypointName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,7 +1,6 @@
 package typingsSlinky.scryptJs
 
 import typingsSlinky.node.Buffer
-import typingsSlinky.std.Uint8Array
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -39,7 +38,7 @@ object mod extends js.Object {
   ): Unit = js.native
   def apply(
     password: js.Array[Double],
-    salt: Uint8Array,
+    salt: js.typedarray.Uint8Array,
     N: Double,
     r: Double,
     p: Double,
@@ -81,7 +80,7 @@ object mod extends js.Object {
   ): Unit = js.native
   def apply(
     password: Buffer,
-    salt: Uint8Array,
+    salt: js.typedarray.Uint8Array,
     N: Double,
     r: Double,
     p: Double,
@@ -94,7 +93,7 @@ object mod extends js.Object {
     ]
   ): Unit = js.native
   def apply(
-    password: Uint8Array,
+    password: js.typedarray.Uint8Array,
     salt: js.Array[Double],
     N: Double,
     r: Double,
@@ -108,7 +107,7 @@ object mod extends js.Object {
     ]
   ): Unit = js.native
   def apply(
-    password: Uint8Array,
+    password: js.typedarray.Uint8Array,
     salt: Buffer,
     N: Double,
     r: Double,
@@ -122,8 +121,8 @@ object mod extends js.Object {
     ]
   ): Unit = js.native
   def apply(
-    password: Uint8Array,
-    salt: Uint8Array,
+    password: js.typedarray.Uint8Array,
+    salt: js.typedarray.Uint8Array,
     N: Double,
     r: Double,
     p: Double,

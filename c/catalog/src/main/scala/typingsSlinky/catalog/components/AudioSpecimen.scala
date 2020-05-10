@@ -1,9 +1,7 @@
 package typingsSlinky.catalog.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.catalog.catalogNumbers.`1`
 import typingsSlinky.catalog.catalogNumbers.`2`
 import typingsSlinky.catalog.catalogNumbers.`3`
@@ -16,29 +14,34 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object AudioSpecimen
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.catalog.mod.AudioSpecimen] {
+object AudioSpecimen {
   @JSImport("catalog", "AudioSpecimen")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    src: String,
-    autoplay: js.UndefOr[Boolean] = js.undefined,
-    rawBody: String = null,
-    rawOptions: String = null,
-    span: `1` | `2` | `3` | `4` | `5` | `6` = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.catalog.mod.AudioSpecimen] = {
-    val __obj = js.Dynamic.literal(src = src.asInstanceOf[js.Any])
-    if (!js.isUndefined(autoplay)) __obj.updateDynamic("autoplay")(autoplay.asInstanceOf[js.Any])
-    if (rawBody != null) __obj.updateDynamic("rawBody")(rawBody.asInstanceOf[js.Any])
-    if (rawOptions != null) __obj.updateDynamic("rawOptions")(rawOptions.asInstanceOf[js.Any])
-    if (span != null) __obj.updateDynamic("span")(span.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.catalog.mod.AudioSpecimen] {
+    @scala.inline
+    def autoplay(value: Boolean): this.type = set("autoplay", value.asInstanceOf[js.Any])
+    @scala.inline
+    def loop(value: Boolean): this.type = set("loop", value.asInstanceOf[js.Any])
+    @scala.inline
+    def rawBody(value: String): this.type = set("rawBody", value.asInstanceOf[js.Any])
+    @scala.inline
+    def rawOptions(value: String): this.type = set("rawOptions", value.asInstanceOf[js.Any])
+    @scala.inline
+    def span(value: `1` | `2` | `3` | `4` | `5` | `6`): this.type = set("span", value.asInstanceOf[js.Any])
+    @scala.inline
+    def title(value: String): this.type = set("title", value.asInstanceOf[js.Any])
   }
-  type Props = SpecimenProps with AudioSpecimenProps
+  
+  def withProps(p: SpecimenProps with AudioSpecimenProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(src: String): Builder = {
+    val __props = js.Dynamic.literal(src = src.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[SpecimenProps with AudioSpecimenProps]))
+  }
 }
 

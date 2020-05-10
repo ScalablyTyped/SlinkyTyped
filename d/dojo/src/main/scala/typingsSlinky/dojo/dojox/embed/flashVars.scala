@@ -19,27 +19,47 @@ import scala.scalajs.js.annotation._
   * serialization at most is 200% larger than JSON.
   *
   */
+@js.native
 trait flashVars extends js.Object {
   /**
     * Deft/common/flashVars.as
     *
     */
-  var See: js.Object
+  var See: js.Object = js.native
   /**
     * Key method. Serializes an object.
     *
     * @param n The name for the object, such as: "button"
     * @param o The object to serialize
     */
-  def serialize(n: String, o: js.Object): js.Any
+  def serialize(n: String, o: js.Object): js.Any = js.native
 }
 
 object flashVars {
   @scala.inline
   def apply(See: js.Object, serialize: (String, js.Object) => js.Any): flashVars = {
     val __obj = js.Dynamic.literal(See = See.asInstanceOf[js.Any], serialize = js.Any.fromFunction2(serialize))
-  
     __obj.asInstanceOf[flashVars]
   }
+  @scala.inline
+  implicit class flashVarsOps[Self <: flashVars] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSee(value: js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("See")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSerialize(value: (String, js.Object) => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serialize")(js.Any.fromFunction2(value))
+        ret
+    }
+  }
+  
 }
 

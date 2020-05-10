@@ -13,7 +13,7 @@ import scala.scalajs.js.annotation._
 /**
   * See: {@link https://docs.mendix.com/refguide7/project relevant section in reference guide}
   */
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.mendixmodelsdk.structuresMod.IStructure because Already inherited
 - typingsSlinky.mendixmodelsdk.unitsMod.IAbstractUnit because Already inherited
 - typingsSlinky.mendixmodelsdk.projectsMod.projects.IProject because var conflicts: id, isLoaded, model, structureTypeName, unit. Inlined projectDocuments, modules, projectConversion, isSystemProject */ @JSImport("mendixmodelsdk/dist/gen/projects", "projects.Project")
@@ -39,12 +39,12 @@ class Project protected () extends StructuralUnit {
   var projectConversion_FProject: IProjectConversion = js.native
   @JSName("projectDocuments")
   var projectDocuments_FProject: IList[IProjectDocument] = js.native
-  def isSystemProject(): Boolean = js.native
+  def isSystemProject: Boolean = js.native
   def isSystemProject(newValue: Boolean): js.Any = js.native
-  def modules(): IList[IModule] = js.native
-  def projectConversion(): IProjectConversion = js.native
+  def modules: IList[IModule] = js.native
+  def projectConversion: IProjectConversion = js.native
   def projectConversion(newValue: IProjectConversion): js.Any = js.native
-  def projectDocuments(): IList[IProjectDocument] = js.native
+  def projectDocuments: IList[IProjectDocument] = js.native
 }
 
 /* static members */

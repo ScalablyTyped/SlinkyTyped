@@ -11,11 +11,11 @@ trait UpdateIntegrationRequest extends js.Object {
     */
   var ApiId: string = js.native
   /**
-    * The connection ID.
+    * The ID of the VPC link for a private integration. Supported only for HTTP APIs.
     */
   var ConnectionId: js.UndefOr[StringWithLengthBetween1And1024] = js.native
   /**
-    * The type of the network connection to the integration endpoint. Currently the only valid value is INTERNET, for connections through the public routable internet.
+    * The type of the network connection to the integration endpoint. Specify INTERNET for connections through the public routable internet or VPC_LINK for private connections between API Gateway and resources in a VPC. The default value is INTERNET.
     */
   var ConnectionType: js.UndefOr[typingsSlinky.awsSdk.apigatewayv2Mod.ConnectionType] = js.native
   /**
@@ -39,11 +39,11 @@ trait UpdateIntegrationRequest extends js.Object {
     */
   var IntegrationMethod: js.UndefOr[StringWithLengthBetween1And64] = js.native
   /**
-    * The integration type of an integration. One of the following: AWS: for integrating the route or method request with an AWS service action, including the Lambda function-invoking action. With the Lambda function-invoking action, this is referred to as the Lambda custom integration. With any other AWS service action, this is known as AWS integration. Supported only for WebSocket APIs. AWS_PROXY: for integrating the route or method request with the Lambda function-invoking action with the client request passed through as-is. This integration is also referred to as Lambda proxy integration. HTTP: for integrating the route or method request with an HTTP endpoint. This integration is also referred to as the HTTP custom integration. Supported only for WebSocket APIs. HTTP_PROXY: for integrating route or method request with an HTTP endpoint, with the client request passed through as-is. This is also referred to as HTTP proxy integration. MOCK: for integrating the route or method request with API Gateway as a "loopback" endpoint without invoking any backend. Supported only for WebSocket APIs.
+    * The integration type of an integration. One of the following: AWS: for integrating the route or method request with an AWS service action, including the Lambda function-invoking action. With the Lambda function-invoking action, this is referred to as the Lambda custom integration. With any other AWS service action, this is known as AWS integration. Supported only for WebSocket APIs. AWS_PROXY: for integrating the route or method request with the Lambda function-invoking action with the client request passed through as-is. This integration is also referred to as Lambda proxy integration. HTTP: for integrating the route or method request with an HTTP endpoint. This integration is also referred to as the HTTP custom integration. Supported only for WebSocket APIs. HTTP_PROXY: for integrating the route or method request with an HTTP endpoint, with the client request passed through as-is. This is also referred to as HTTP proxy integration. For HTTP API private integrations, use an HTTP_PROXY integration. MOCK: for integrating the route or method request with API Gateway as a "loopback" endpoint without invoking any backend. Supported only for WebSocket APIs.
     */
   var IntegrationType: js.UndefOr[typingsSlinky.awsSdk.apigatewayv2Mod.IntegrationType] = js.native
   /**
-    * For a Lambda proxy integration, this is the URI of the Lambda function.
+    * For a Lambda integration, specify the URI of a Lambda function. For an HTTP integration, specify a fully-qualified URL. For an HTTP API private integration, specify the ARN of an Application Load Balancer listener, Network Load Balancer listener, or AWS Cloud Map service. If you specify the ARN of an AWS Cloud Map service, API Gateway uses DiscoverInstances to identify resources. You can use query parameters to target specific resources. To learn more, see DiscoverInstances. For private integrations, all resources must be owned by the same AWS account.
     */
   var IntegrationUri: js.UndefOr[UriWithLengthBetween1And2048] = js.native
   /**
@@ -51,7 +51,7 @@ trait UpdateIntegrationRequest extends js.Object {
     */
   var PassthroughBehavior: js.UndefOr[typingsSlinky.awsSdk.apigatewayv2Mod.PassthroughBehavior] = js.native
   /**
-    * Specifies the format of the payload sent to an integration. Required for HTTP APIs. Currently, the only supported value is 1.0.
+    * Specifies the format of the payload sent to an integration. Required for HTTP APIs.
     */
   var PayloadFormatVersion: js.UndefOr[StringWithLengthBetween1And64] = js.native
   /**
@@ -75,44 +75,217 @@ trait UpdateIntegrationRequest extends js.Object {
     * Custom timeout between 50 and 29,000 milliseconds. The default value is 29,000 milliseconds or 29 seconds for WebSocket APIs. The default value is 5,000 milliseconds, or 5 seconds for HTTP APIs.
     */
   var TimeoutInMillis: js.UndefOr[IntegerWithLengthBetween50And29000] = js.native
+  /**
+    * The TLS configuration for a private integration. If you specify a TLS configuration, private integration traffic uses the HTTPS protocol. Supported only for HTTP APIs.
+    */
+  var TlsConfig: js.UndefOr[TlsConfigInput] = js.native
 }
 
 object UpdateIntegrationRequest {
   @scala.inline
-  def apply(
-    ApiId: string,
-    IntegrationId: string,
-    ConnectionId: StringWithLengthBetween1And1024 = null,
-    ConnectionType: ConnectionType = null,
-    ContentHandlingStrategy: ContentHandlingStrategy = null,
-    CredentialsArn: Arn = null,
-    Description: StringWithLengthBetween0And1024 = null,
-    IntegrationMethod: StringWithLengthBetween1And64 = null,
-    IntegrationType: IntegrationType = null,
-    IntegrationUri: UriWithLengthBetween1And2048 = null,
-    PassthroughBehavior: PassthroughBehavior = null,
-    PayloadFormatVersion: StringWithLengthBetween1And64 = null,
-    RequestParameters: IntegrationParameters = null,
-    RequestTemplates: TemplateMap = null,
-    TemplateSelectionExpression: SelectionExpression = null,
-    TimeoutInMillis: Int | Double = null
-  ): UpdateIntegrationRequest = {
+  def apply(ApiId: string, IntegrationId: string): UpdateIntegrationRequest = {
     val __obj = js.Dynamic.literal(ApiId = ApiId.asInstanceOf[js.Any], IntegrationId = IntegrationId.asInstanceOf[js.Any])
-    if (ConnectionId != null) __obj.updateDynamic("ConnectionId")(ConnectionId.asInstanceOf[js.Any])
-    if (ConnectionType != null) __obj.updateDynamic("ConnectionType")(ConnectionType.asInstanceOf[js.Any])
-    if (ContentHandlingStrategy != null) __obj.updateDynamic("ContentHandlingStrategy")(ContentHandlingStrategy.asInstanceOf[js.Any])
-    if (CredentialsArn != null) __obj.updateDynamic("CredentialsArn")(CredentialsArn.asInstanceOf[js.Any])
-    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
-    if (IntegrationMethod != null) __obj.updateDynamic("IntegrationMethod")(IntegrationMethod.asInstanceOf[js.Any])
-    if (IntegrationType != null) __obj.updateDynamic("IntegrationType")(IntegrationType.asInstanceOf[js.Any])
-    if (IntegrationUri != null) __obj.updateDynamic("IntegrationUri")(IntegrationUri.asInstanceOf[js.Any])
-    if (PassthroughBehavior != null) __obj.updateDynamic("PassthroughBehavior")(PassthroughBehavior.asInstanceOf[js.Any])
-    if (PayloadFormatVersion != null) __obj.updateDynamic("PayloadFormatVersion")(PayloadFormatVersion.asInstanceOf[js.Any])
-    if (RequestParameters != null) __obj.updateDynamic("RequestParameters")(RequestParameters.asInstanceOf[js.Any])
-    if (RequestTemplates != null) __obj.updateDynamic("RequestTemplates")(RequestTemplates.asInstanceOf[js.Any])
-    if (TemplateSelectionExpression != null) __obj.updateDynamic("TemplateSelectionExpression")(TemplateSelectionExpression.asInstanceOf[js.Any])
-    if (TimeoutInMillis != null) __obj.updateDynamic("TimeoutInMillis")(TimeoutInMillis.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateIntegrationRequest]
   }
+  @scala.inline
+  implicit class UpdateIntegrationRequestOps[Self <: UpdateIntegrationRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withApiId(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ApiId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIntegrationId(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IntegrationId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withConnectionId(value: StringWithLengthBetween1And1024): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConnectionId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConnectionId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConnectionId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConnectionType(value: ConnectionType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConnectionType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConnectionType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConnectionType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContentHandlingStrategy(value: ContentHandlingStrategy): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ContentHandlingStrategy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContentHandlingStrategy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ContentHandlingStrategy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCredentialsArn(value: Arn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CredentialsArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCredentialsArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CredentialsArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDescription(value: StringWithLengthBetween0And1024): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIntegrationMethod(value: StringWithLengthBetween1And64): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IntegrationMethod")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIntegrationMethod: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IntegrationMethod")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIntegrationType(value: IntegrationType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IntegrationType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIntegrationType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IntegrationType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIntegrationUri(value: UriWithLengthBetween1And2048): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IntegrationUri")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIntegrationUri: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IntegrationUri")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPassthroughBehavior(value: PassthroughBehavior): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PassthroughBehavior")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPassthroughBehavior: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PassthroughBehavior")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPayloadFormatVersion(value: StringWithLengthBetween1And64): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PayloadFormatVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPayloadFormatVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PayloadFormatVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequestParameters(value: IntegrationParameters): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RequestParameters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequestParameters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RequestParameters")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequestTemplates(value: TemplateMap): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RequestTemplates")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequestTemplates: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RequestTemplates")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTemplateSelectionExpression(value: SelectionExpression): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TemplateSelectionExpression")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTemplateSelectionExpression: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TemplateSelectionExpression")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimeoutInMillis(value: IntegerWithLengthBetween50And29000): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TimeoutInMillis")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimeoutInMillis: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TimeoutInMillis")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTlsConfig(value: TlsConfigInput): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TlsConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTlsConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TlsConfig")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

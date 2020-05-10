@@ -6,16 +6,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonNetworks extends js.Object {
-  var Networks: StringDictionary[NetworkInfo]
+  var Networks: StringDictionary[NetworkInfo] = js.native
 }
 
 object AnonNetworks {
   @scala.inline
   def apply(Networks: StringDictionary[NetworkInfo]): AnonNetworks = {
     val __obj = js.Dynamic.literal(Networks = Networks.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[AnonNetworks]
   }
+  @scala.inline
+  implicit class AnonNetworksOps[Self <: AnonNetworks] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNetworks(value: StringDictionary[NetworkInfo]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Networks")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

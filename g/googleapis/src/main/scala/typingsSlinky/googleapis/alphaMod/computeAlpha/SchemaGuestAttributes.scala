@@ -39,22 +39,89 @@ trait SchemaGuestAttributes extends js.Object {
 
 object SchemaGuestAttributes {
   @scala.inline
-  def apply(
-    kind: String = null,
-    queryPath: String = null,
-    queryValue: SchemaGuestAttributesValue = null,
-    selfLink: String = null,
-    variableKey: String = null,
-    variableValue: String = null
-  ): SchemaGuestAttributes = {
+  def apply(): SchemaGuestAttributes = {
     val __obj = js.Dynamic.literal()
-    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
-    if (queryPath != null) __obj.updateDynamic("queryPath")(queryPath.asInstanceOf[js.Any])
-    if (queryValue != null) __obj.updateDynamic("queryValue")(queryValue.asInstanceOf[js.Any])
-    if (selfLink != null) __obj.updateDynamic("selfLink")(selfLink.asInstanceOf[js.Any])
-    if (variableKey != null) __obj.updateDynamic("variableKey")(variableKey.asInstanceOf[js.Any])
-    if (variableValue != null) __obj.updateDynamic("variableValue")(variableValue.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGuestAttributes]
   }
+  @scala.inline
+  implicit class SchemaGuestAttributesOps[Self <: SchemaGuestAttributes] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withKind(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQueryPath(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("queryPath")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQueryPath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("queryPath")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQueryValue(value: SchemaGuestAttributesValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("queryValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQueryValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("queryValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelfLink(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selfLink")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelfLink: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selfLink")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVariableKey(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("variableKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVariableKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("variableKey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVariableValue(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("variableValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVariableValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("variableValue")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

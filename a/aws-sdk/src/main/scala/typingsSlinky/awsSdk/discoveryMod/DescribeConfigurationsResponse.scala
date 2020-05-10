@@ -14,10 +14,29 @@ trait DescribeConfigurationsResponse extends js.Object {
 
 object DescribeConfigurationsResponse {
   @scala.inline
-  def apply(configurations: DescribeConfigurationsAttributes = null): DescribeConfigurationsResponse = {
+  def apply(): DescribeConfigurationsResponse = {
     val __obj = js.Dynamic.literal()
-    if (configurations != null) __obj.updateDynamic("configurations")(configurations.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeConfigurationsResponse]
   }
+  @scala.inline
+  implicit class DescribeConfigurationsResponseOps[Self <: DescribeConfigurationsResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConfigurations(value: DescribeConfigurationsAttributes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("configurations")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConfigurations: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("configurations")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

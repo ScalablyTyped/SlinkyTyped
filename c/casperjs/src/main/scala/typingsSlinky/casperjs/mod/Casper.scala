@@ -4,7 +4,6 @@ import typingsSlinky.casperjs.AnonUrl
 import typingsSlinky.casperjs.casperjsBooleans.`false`
 import typingsSlinky.casperjs.casperjsBooleans.`true`
 import typingsSlinky.phantomjs.ClipRect
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -108,7 +107,7 @@ class Casper protected () extends js.Object {
   def repeat(times: Double, `then`: FunctionThen): Casper = js.native
   def resourceExists(test: String): Boolean = js.native
   def resourceExists(test: js.Function): Boolean = js.native
-  def resourceExists(test: RegExp): Boolean = js.native
+  def resourceExists(test: js.RegExp): Boolean = js.native
   def run(): Casper = js.native
   def run(onComplete: js.Function): Casper = js.native
   def run(onComplete: js.Function, time: Double): Casper = js.native
@@ -197,10 +196,10 @@ class Casper protected () extends js.Object {
   def waitForPopup(urlPattern: FindByUrlNameTitle, `then`: FunctionThen): Casper = js.native
   def waitForPopup(urlPattern: FindByUrlNameTitle, `then`: FunctionThen, onTimeout: js.Function): Casper = js.native
   def waitForPopup(urlPattern: FindByUrlNameTitle, `then`: FunctionThen, onTimeout: js.Function, timeout: Double): Casper = js.native
-  def waitForPopup(urlPattern: RegExp): Casper = js.native
-  def waitForPopup(urlPattern: RegExp, `then`: FunctionThen): Casper = js.native
-  def waitForPopup(urlPattern: RegExp, `then`: FunctionThen, onTimeout: js.Function): Casper = js.native
-  def waitForPopup(urlPattern: RegExp, `then`: FunctionThen, onTimeout: js.Function, timeout: Double): Casper = js.native
+  def waitForPopup(urlPattern: js.RegExp): Casper = js.native
+  def waitForPopup(urlPattern: js.RegExp, `then`: FunctionThen): Casper = js.native
+  def waitForPopup(urlPattern: js.RegExp, `then`: FunctionThen, onTimeout: js.Function): Casper = js.native
+  def waitForPopup(urlPattern: js.RegExp, `then`: FunctionThen, onTimeout: js.Function, timeout: Double): Casper = js.native
   def waitForResource(testFx: String): Casper = js.native
   def waitForResource(testFx: String, `then`: FunctionThen): Casper = js.native
   def waitForResource(testFx: String, `then`: FunctionThen, onTimeout: js.Function): Casper = js.native
@@ -218,10 +217,10 @@ class Casper protected () extends js.Object {
     onTimeout: js.Function,
     timeout: Double
   ): Casper = js.native
-  def waitForResource(testFx: RegExp): Casper = js.native
-  def waitForResource(testFx: RegExp, `then`: FunctionThen): Casper = js.native
-  def waitForResource(testFx: RegExp, `then`: FunctionThen, onTimeout: js.Function): Casper = js.native
-  def waitForResource(testFx: RegExp, `then`: FunctionThen, onTimeout: js.Function, timeout: Double): Casper = js.native
+  def waitForResource(testFx: js.RegExp): Casper = js.native
+  def waitForResource(testFx: js.RegExp, `then`: FunctionThen): Casper = js.native
+  def waitForResource(testFx: js.RegExp, `then`: FunctionThen, onTimeout: js.Function): Casper = js.native
+  def waitForResource(testFx: js.RegExp, `then`: FunctionThen, onTimeout: js.Function, timeout: Double): Casper = js.native
   def waitForSelector(selector: String): Casper = js.native
   def waitForSelector(selector: String, `then`: FunctionThen): Casper = js.native
   def waitForSelector(selector: String, `then`: FunctionThen, onTimeout: FunctionOnTimeout): Casper = js.native
@@ -234,18 +233,18 @@ class Casper protected () extends js.Object {
   def waitForText(pattern: String, `then`: FunctionThen): Casper = js.native
   def waitForText(pattern: String, `then`: FunctionThen, onTimeout: FunctionOnTimeout): Casper = js.native
   def waitForText(pattern: String, `then`: FunctionThen, onTimeout: FunctionOnTimeout, timeout: Double): Casper = js.native
-  def waitForText(pattern: RegExp): Casper = js.native
-  def waitForText(pattern: RegExp, `then`: FunctionThen): Casper = js.native
-  def waitForText(pattern: RegExp, `then`: FunctionThen, onTimeout: FunctionOnTimeout): Casper = js.native
-  def waitForText(pattern: RegExp, `then`: FunctionThen, onTimeout: FunctionOnTimeout, timeout: Double): Casper = js.native
+  def waitForText(pattern: js.RegExp): Casper = js.native
+  def waitForText(pattern: js.RegExp, `then`: FunctionThen): Casper = js.native
+  def waitForText(pattern: js.RegExp, `then`: FunctionThen, onTimeout: FunctionOnTimeout): Casper = js.native
+  def waitForText(pattern: js.RegExp, `then`: FunctionThen, onTimeout: FunctionOnTimeout, timeout: Double): Casper = js.native
   def waitForUrl(url: String): Casper = js.native
   def waitForUrl(url: String, `then`: FunctionThen): Casper = js.native
   def waitForUrl(url: String, `then`: FunctionThen, onTimeout: FunctionOnTimeout): Casper = js.native
   def waitForUrl(url: String, `then`: FunctionThen, onTimeout: FunctionOnTimeout, timeout: Double): Casper = js.native
-  def waitForUrl(url: RegExp): Casper = js.native
-  def waitForUrl(url: RegExp, `then`: FunctionThen): Casper = js.native
-  def waitForUrl(url: RegExp, `then`: FunctionThen, onTimeout: FunctionOnTimeout): Casper = js.native
-  def waitForUrl(url: RegExp, `then`: FunctionThen, onTimeout: FunctionOnTimeout, timeout: Double): Casper = js.native
+  def waitForUrl(url: js.RegExp): Casper = js.native
+  def waitForUrl(url: js.RegExp, `then`: FunctionThen): Casper = js.native
+  def waitForUrl(url: js.RegExp, `then`: FunctionThen, onTimeout: FunctionOnTimeout): Casper = js.native
+  def waitForUrl(url: js.RegExp, `then`: FunctionThen, onTimeout: FunctionOnTimeout, timeout: Double): Casper = js.native
   def waitUntilVisible(selector: String): Casper = js.native
   def waitUntilVisible(selector: String, `then`: FunctionThen): Casper = js.native
   def waitUntilVisible(selector: String, `then`: FunctionThen, onTimeout: FunctionOnTimeout): Casper = js.native
@@ -264,7 +263,7 @@ class Casper protected () extends js.Object {
   def withPopup(popupInfo: String, step: FunctionThen): Casper = js.native
   def withPopup(popupInfo: Double, step: FunctionThen): Casper = js.native
   def withPopup(popupInfo: FindByUrlNameTitle, step: FunctionThen): Casper = js.native
-  def withPopup(popupInfo: RegExp, step: FunctionThen): Casper = js.native
+  def withPopup(popupInfo: js.RegExp, step: FunctionThen): Casper = js.native
   def withSelectorScope(selector: String, `then`: FunctionThen): Casper = js.native
   def zoom(factor: Double): Casper = js.native
 }

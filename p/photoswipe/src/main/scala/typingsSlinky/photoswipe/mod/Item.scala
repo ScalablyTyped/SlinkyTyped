@@ -5,82 +5,200 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Item extends js.Object {
   /**
     * Internal property added by PhotoSwipe.
     */
-  var bounds: js.UndefOr[js.Any] = js.undefined
+  var bounds: js.UndefOr[js.Any] = js.native
   /**
     * Internal property added by PhotoSwipe.
     * This number is computed to be this item's smaller dimension divided by the larger dimension.
     */
-  var fitRatio: js.UndefOr[Double] = js.undefined
+  var fitRatio: js.UndefOr[Double] = js.native
   /**
     * The height of this image.
     */
-  var h: js.UndefOr[Double] = js.undefined
+  var h: js.UndefOr[Double] = js.native
   /**
     * HTML content instead of image.
     */
-  var html: js.UndefOr[String] = js.undefined
+  var html: js.UndefOr[String] = js.native
   /**
     * Internal property added by PhotoSwipe.
     */
-  var initialPosition: js.UndefOr[js.Any] = js.undefined
+  var initialPosition: js.UndefOr[js.Any] = js.native
   /**
     * Internal property added by PhotoSwipe.
     */
-  var initialZoomLevel: js.UndefOr[Double] = js.undefined
+  var initialZoomLevel: js.UndefOr[Double] = js.native
   /**
     * Internal property added by PhotoSwipe.
     */
-  var loadError: js.UndefOr[Boolean] = js.undefined
+  var loadError: js.UndefOr[Boolean] = js.native
   /**
     * The url to small image placeholder, large image will be loaded on top
     */
-  var msrc: js.UndefOr[String] = js.undefined
+  var msrc: js.UndefOr[String] = js.native
   /**
     * The url of this image.
     */
-  var src: js.UndefOr[String] = js.undefined
+  var src: js.UndefOr[String] = js.native
   /**
     * Internal property added by PhotoSwipe.
     */
-  var vGap: js.UndefOr[AnonTop] = js.undefined
+  var vGap: js.UndefOr[AnonTop] = js.native
   /**
     * The width of this image.
     */
-  var w: js.UndefOr[Double] = js.undefined
+  var w: js.UndefOr[Double] = js.native
 }
 
 object Item {
   @scala.inline
-  def apply(
-    bounds: js.Any = null,
-    fitRatio: Int | Double = null,
-    h: Int | Double = null,
-    html: String = null,
-    initialPosition: js.Any = null,
-    initialZoomLevel: Int | Double = null,
-    loadError: js.UndefOr[Boolean] = js.undefined,
-    msrc: String = null,
-    src: String = null,
-    vGap: AnonTop = null,
-    w: Int | Double = null
-  ): Item = {
+  def apply(): Item = {
     val __obj = js.Dynamic.literal()
-    if (bounds != null) __obj.updateDynamic("bounds")(bounds.asInstanceOf[js.Any])
-    if (fitRatio != null) __obj.updateDynamic("fitRatio")(fitRatio.asInstanceOf[js.Any])
-    if (h != null) __obj.updateDynamic("h")(h.asInstanceOf[js.Any])
-    if (html != null) __obj.updateDynamic("html")(html.asInstanceOf[js.Any])
-    if (initialPosition != null) __obj.updateDynamic("initialPosition")(initialPosition.asInstanceOf[js.Any])
-    if (initialZoomLevel != null) __obj.updateDynamic("initialZoomLevel")(initialZoomLevel.asInstanceOf[js.Any])
-    if (!js.isUndefined(loadError)) __obj.updateDynamic("loadError")(loadError.asInstanceOf[js.Any])
-    if (msrc != null) __obj.updateDynamic("msrc")(msrc.asInstanceOf[js.Any])
-    if (src != null) __obj.updateDynamic("src")(src.asInstanceOf[js.Any])
-    if (vGap != null) __obj.updateDynamic("vGap")(vGap.asInstanceOf[js.Any])
-    if (w != null) __obj.updateDynamic("w")(w.asInstanceOf[js.Any])
     __obj.asInstanceOf[Item]
   }
+  @scala.inline
+  implicit class ItemOps[Self <: Item] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBounds(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bounds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBounds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bounds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFitRatio(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fitRatio")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFitRatio: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fitRatio")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withH(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("h")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutH: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("h")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHtml(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("html")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHtml: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("html")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInitialPosition(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initialPosition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInitialPosition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initialPosition")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInitialZoomLevel(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initialZoomLevel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInitialZoomLevel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initialZoomLevel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLoadError(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loadError")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLoadError: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loadError")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMsrc(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("msrc")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMsrc: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("msrc")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSrc(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("src")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSrc: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("src")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVGap(value: AnonTop): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vGap")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVGap: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vGap")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withW(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("w")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutW: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("w")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

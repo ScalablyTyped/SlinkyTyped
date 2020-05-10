@@ -5,19 +5,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typingsSlinky.babelTypes.mod._Node because Already inherited */ trait ObjectTypeAnnotation_
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
+- typingsSlinky.babelTypes.mod._Node because Already inherited */ @js.native
+trait ObjectTypeAnnotation_
   extends Flow
      with BaseNode
      with FlowType {
-  var callProperties: js.Array[ObjectTypeCallProperty_] | Null
-  var exact: Boolean
-  var indexers: js.Array[ObjectTypeIndexer_] | Null
-  var inexact: Boolean | Null
-  var internalSlots: js.Array[ObjectTypeInternalSlot_] | Null
-  var properties: js.Array[ObjectTypeProperty_ | ObjectTypeSpreadProperty_]
+  var callProperties: js.Array[ObjectTypeCallProperty_] | Null = js.native
+  var exact: Boolean = js.native
+  var indexers: js.Array[ObjectTypeIndexer_] | Null = js.native
+  var inexact: Boolean | Null = js.native
+  var internalSlots: js.Array[ObjectTypeInternalSlot_] | Null = js.native
+  var properties: js.Array[ObjectTypeProperty_ | ObjectTypeSpreadProperty_] = js.native
   @JSName("type")
-  var type_ObjectTypeAnnotation_ : ObjectTypeAnnotation
+  var type_ObjectTypeAnnotation_ : ObjectTypeAnnotation = js.native
 }
 
 object ObjectTypeAnnotation_ {
@@ -25,31 +26,85 @@ object ObjectTypeAnnotation_ {
   def apply(
     exact: Boolean,
     properties: js.Array[ObjectTypeProperty_ | ObjectTypeSpreadProperty_],
-    `type`: ObjectTypeAnnotation,
-    callProperties: js.Array[ObjectTypeCallProperty_] = null,
-    end: Int | Double = null,
-    indexers: js.Array[ObjectTypeIndexer_] = null,
-    inexact: js.UndefOr[Boolean] = js.undefined,
-    innerComments: js.Array[Comment] = null,
-    internalSlots: js.Array[ObjectTypeInternalSlot_] = null,
-    leadingComments: js.Array[Comment] = null,
-    loc: SourceLocation = null,
-    start: Int | Double = null,
-    trailingComments: js.Array[Comment] = null
+    `type`: ObjectTypeAnnotation
   ): ObjectTypeAnnotation_ = {
     val __obj = js.Dynamic.literal(exact = exact.asInstanceOf[js.Any], properties = properties.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (callProperties != null) __obj.updateDynamic("callProperties")(callProperties.asInstanceOf[js.Any])
-    if (end != null) __obj.updateDynamic("end")(end.asInstanceOf[js.Any])
-    if (indexers != null) __obj.updateDynamic("indexers")(indexers.asInstanceOf[js.Any])
-    if (!js.isUndefined(inexact)) __obj.updateDynamic("inexact")(inexact.asInstanceOf[js.Any])
-    if (innerComments != null) __obj.updateDynamic("innerComments")(innerComments.asInstanceOf[js.Any])
-    if (internalSlots != null) __obj.updateDynamic("internalSlots")(internalSlots.asInstanceOf[js.Any])
-    if (leadingComments != null) __obj.updateDynamic("leadingComments")(leadingComments.asInstanceOf[js.Any])
-    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
-    if (start != null) __obj.updateDynamic("start")(start.asInstanceOf[js.Any])
-    if (trailingComments != null) __obj.updateDynamic("trailingComments")(trailingComments.asInstanceOf[js.Any])
     __obj.asInstanceOf[ObjectTypeAnnotation_]
   }
+  @scala.inline
+  implicit class ObjectTypeAnnotation_Ops[Self <: ObjectTypeAnnotation_] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withExact(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exact")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withProperties(value: js.Array[ObjectTypeProperty_ | ObjectTypeSpreadProperty_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: ObjectTypeAnnotation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCallProperties(value: js.Array[ObjectTypeCallProperty_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("callProperties")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCallPropertiesNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("callProperties")(null)
+        ret
+    }
+    @scala.inline
+    def withIndexers(value: js.Array[ObjectTypeIndexer_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("indexers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIndexersNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("indexers")(null)
+        ret
+    }
+    @scala.inline
+    def withInexact(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inexact")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInexactNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inexact")(null)
+        ret
+    }
+    @scala.inline
+    def withInternalSlots(value: js.Array[ObjectTypeInternalSlot_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("internalSlots")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInternalSlotsNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("internalSlots")(null)
+        ret
+    }
+  }
+  
 }
 

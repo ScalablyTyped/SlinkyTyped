@@ -18,10 +18,35 @@ trait DomainInfos extends js.Object {
 
 object DomainInfos {
   @scala.inline
-  def apply(domainInfos: DomainInfoList, nextPageToken: PageToken = null): DomainInfos = {
+  def apply(domainInfos: DomainInfoList): DomainInfos = {
     val __obj = js.Dynamic.literal(domainInfos = domainInfos.asInstanceOf[js.Any])
-    if (nextPageToken != null) __obj.updateDynamic("nextPageToken")(nextPageToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[DomainInfos]
   }
+  @scala.inline
+  implicit class DomainInfosOps[Self <: DomainInfos] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDomainInfos(value: DomainInfoList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("domainInfos")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNextPageToken(value: PageToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextPageToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

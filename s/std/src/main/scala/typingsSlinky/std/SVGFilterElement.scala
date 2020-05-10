@@ -50,11 +50,12 @@ trait SVGFilterElement
   override def removeEventListener(
     `type`: java.lang.String,
     callback: EventListenerOrEventListenerObject,
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
 }
 
 @JSGlobal("SVGFilterElement")
 @js.native
-object SVGFilterElement extends Instantiable0[SVGFilterElement]
+object SVGFilterElement
+  extends Instantiable0[org.scalajs.dom.raw.SVGFilterElement]
 

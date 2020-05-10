@@ -1,17 +1,11 @@
 package typingsSlinky.stripe.mod.accounts
 
-import typingsSlinky.stripe.AnonAccountholdername
-import typingsSlinky.stripe.AnonBranding
-import typingsSlinky.stripe.AnonDate
-import typingsSlinky.stripe.AnonMcc
-import typingsSlinky.stripe.mod.IOptionsMetadata
-import typingsSlinky.stripe.stripeStrings.company
 import typingsSlinky.stripe.stripeStrings.custom
-import typingsSlinky.stripe.stripeStrings.individual
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IAccountCreationOptions extends IAccountUpdateOptions {
   /**
     * The country the account holder resides in or that the business is legally
@@ -21,54 +15,46 @@ trait IAccountCreationOptions extends IAccountUpdateOptions {
     *
     * optional, default is your own country
     */
-  var country: js.UndefOr[String] = js.undefined
+  var country: js.UndefOr[String] = js.native
   /**
     * The type of Stripe account to create. Currently must be custom, as only Custom
     * accounts may be created via the API.
     */
-  var `type`: custom
+  var `type`: custom = js.native
 }
 
 object IAccountCreationOptions {
   @scala.inline
-  def apply(
-    `type`: custom,
-    account_token: String = null,
-    business_profile: AnonMcc = null,
-    business_type: individual | company = null,
-    company: ICompanyCreateUpdateOptions = null,
-    country: String = null,
-    default_currency: String = null,
-    email: String = null,
-    expand: js.Array[String] = null,
-    external_account: AnonAccountholdername = null,
-    include: js.Array[String] = null,
-    individual: IIndividualCreateUpdateOptions = null,
-    metadata: IOptionsMetadata = null,
-    product_description: String = null,
-    requested_capabilities: js.Array[String] = null,
-    settings: AnonBranding = null,
-    tos_acceptance: AnonDate = null
-  ): IAccountCreationOptions = {
+  def apply(`type`: custom): IAccountCreationOptions = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (account_token != null) __obj.updateDynamic("account_token")(account_token.asInstanceOf[js.Any])
-    if (business_profile != null) __obj.updateDynamic("business_profile")(business_profile.asInstanceOf[js.Any])
-    if (business_type != null) __obj.updateDynamic("business_type")(business_type.asInstanceOf[js.Any])
-    if (company != null) __obj.updateDynamic("company")(company.asInstanceOf[js.Any])
-    if (country != null) __obj.updateDynamic("country")(country.asInstanceOf[js.Any])
-    if (default_currency != null) __obj.updateDynamic("default_currency")(default_currency.asInstanceOf[js.Any])
-    if (email != null) __obj.updateDynamic("email")(email.asInstanceOf[js.Any])
-    if (expand != null) __obj.updateDynamic("expand")(expand.asInstanceOf[js.Any])
-    if (external_account != null) __obj.updateDynamic("external_account")(external_account.asInstanceOf[js.Any])
-    if (include != null) __obj.updateDynamic("include")(include.asInstanceOf[js.Any])
-    if (individual != null) __obj.updateDynamic("individual")(individual.asInstanceOf[js.Any])
-    if (metadata != null) __obj.updateDynamic("metadata")(metadata.asInstanceOf[js.Any])
-    if (product_description != null) __obj.updateDynamic("product_description")(product_description.asInstanceOf[js.Any])
-    if (requested_capabilities != null) __obj.updateDynamic("requested_capabilities")(requested_capabilities.asInstanceOf[js.Any])
-    if (settings != null) __obj.updateDynamic("settings")(settings.asInstanceOf[js.Any])
-    if (tos_acceptance != null) __obj.updateDynamic("tos_acceptance")(tos_acceptance.asInstanceOf[js.Any])
     __obj.asInstanceOf[IAccountCreationOptions]
   }
+  @scala.inline
+  implicit class IAccountCreationOptionsOps[Self <: IAccountCreationOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withType(value: custom): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCountry(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("country")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCountry: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("country")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

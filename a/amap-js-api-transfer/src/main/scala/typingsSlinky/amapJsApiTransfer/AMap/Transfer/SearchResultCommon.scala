@@ -5,27 +5,28 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SearchResultCommon extends js.Object {
   /**
     * 公交换乘终点坐标
     */
-  var destination: LngLat
+  var destination: LngLat = js.native
   /**
     * 成功状态说明
     */
-  var info: String
+  var info: String = js.native
   /**
     * 公交换乘起点坐标
     */
-  var origin: LngLat
+  var origin: LngLat = js.native
   /**
     * 换乘方案列表
     */
-  var plans: js.Array[TransferPlan]
+  var plans: js.Array[TransferPlan] = js.native
   /**
     * 出租车费用，单位：元
     */
-  var taxi_cost: Double
+  var taxi_cost: Double = js.native
 }
 
 object SearchResultCommon {
@@ -38,8 +39,45 @@ object SearchResultCommon {
     taxi_cost: Double
   ): SearchResultCommon = {
     val __obj = js.Dynamic.literal(destination = destination.asInstanceOf[js.Any], info = info.asInstanceOf[js.Any], origin = origin.asInstanceOf[js.Any], plans = plans.asInstanceOf[js.Any], taxi_cost = taxi_cost.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[SearchResultCommon]
   }
+  @scala.inline
+  implicit class SearchResultCommonOps[Self <: SearchResultCommon] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDestination(value: LngLat): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("destination")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInfo(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("info")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOrigin(value: LngLat): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("origin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPlans(value: js.Array[TransferPlan]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("plans")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTaxi_cost(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("taxi_cost")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -22,16 +22,53 @@ trait SuspendedState extends js.Object {
 
 object SuspendedState {
   @scala.inline
-  def apply(
-    DynamicScalingInSuspended: js.UndefOr[Boolean] = js.undefined,
-    DynamicScalingOutSuspended: js.UndefOr[Boolean] = js.undefined,
-    ScheduledScalingSuspended: js.UndefOr[Boolean] = js.undefined
-  ): SuspendedState = {
+  def apply(): SuspendedState = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(DynamicScalingInSuspended)) __obj.updateDynamic("DynamicScalingInSuspended")(DynamicScalingInSuspended.asInstanceOf[js.Any])
-    if (!js.isUndefined(DynamicScalingOutSuspended)) __obj.updateDynamic("DynamicScalingOutSuspended")(DynamicScalingOutSuspended.asInstanceOf[js.Any])
-    if (!js.isUndefined(ScheduledScalingSuspended)) __obj.updateDynamic("ScheduledScalingSuspended")(ScheduledScalingSuspended.asInstanceOf[js.Any])
     __obj.asInstanceOf[SuspendedState]
   }
+  @scala.inline
+  implicit class SuspendedStateOps[Self <: SuspendedState] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDynamicScalingInSuspended(value: ScalingSuspended): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DynamicScalingInSuspended")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDynamicScalingInSuspended: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DynamicScalingInSuspended")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDynamicScalingOutSuspended(value: ScalingSuspended): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DynamicScalingOutSuspended")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDynamicScalingOutSuspended: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DynamicScalingOutSuspended")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScheduledScalingSuspended(value: ScalingSuspended): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ScheduledScalingSuspended")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScheduledScalingSuspended: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ScheduledScalingSuspended")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

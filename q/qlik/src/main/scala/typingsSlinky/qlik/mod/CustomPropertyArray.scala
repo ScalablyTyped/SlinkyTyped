@@ -5,45 +5,112 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait CustomPropertyArray
   extends CustomPropertyCommon
      with CustomProperty {
-  var addTranslation: js.UndefOr[String] = js.undefined
-  var allowAdd: js.UndefOr[Boolean] = js.undefined
-  var allowMove: js.UndefOr[Boolean] = js.undefined
-  var allowRemove: js.UndefOr[Boolean] = js.undefined
-  var component: js.UndefOr[scala.Nothing] = js.undefined
-  var itemTitleRef: js.UndefOr[String] = js.undefined
+  var addTranslation: js.UndefOr[String] = js.native
+  var allowAdd: js.UndefOr[Boolean] = js.native
+  var allowMove: js.UndefOr[Boolean] = js.native
+  var allowRemove: js.UndefOr[Boolean] = js.native
+  var component: js.UndefOr[scala.Nothing] = js.native
+  var itemTitleRef: js.UndefOr[String] = js.native
   @JSName("type")
-  var type_CustomPropertyArray: array
+  var type_CustomPropertyArray: array = js.native
 }
 
 object CustomPropertyArray {
   @scala.inline
-  def apply(
-    `type`: array,
-    addTranslation: String = null,
-    allowAdd: js.UndefOr[Boolean] = js.undefined,
-    allowMove: js.UndefOr[Boolean] = js.undefined,
-    allowRemove: js.UndefOr[Boolean] = js.undefined,
-    component: js.UndefOr[scala.Nothing] = js.undefined,
-    itemTitleRef: String = null,
-    label: String = null,
-    ref: String = null,
-    show: Boolean | ShowFunction = null
-  ): CustomPropertyArray = {
+  def apply(`type`: array): CustomPropertyArray = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (addTranslation != null) __obj.updateDynamic("addTranslation")(addTranslation.asInstanceOf[js.Any])
-    if (!js.isUndefined(allowAdd)) __obj.updateDynamic("allowAdd")(allowAdd.asInstanceOf[js.Any])
-    if (!js.isUndefined(allowMove)) __obj.updateDynamic("allowMove")(allowMove.asInstanceOf[js.Any])
-    if (!js.isUndefined(allowRemove)) __obj.updateDynamic("allowRemove")(allowRemove.asInstanceOf[js.Any])
-    if (!js.isUndefined(component)) __obj.updateDynamic("component")(component.asInstanceOf[js.Any])
-    if (itemTitleRef != null) __obj.updateDynamic("itemTitleRef")(itemTitleRef.asInstanceOf[js.Any])
-    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
-    if (ref != null) __obj.updateDynamic("ref")(ref.asInstanceOf[js.Any])
-    if (show != null) __obj.updateDynamic("show")(show.asInstanceOf[js.Any])
     __obj.asInstanceOf[CustomPropertyArray]
   }
+  @scala.inline
+  implicit class CustomPropertyArrayOps[Self <: CustomPropertyArray] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withType(value: array): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAddTranslation(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addTranslation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAddTranslation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addTranslation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAllowAdd(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowAdd")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowAdd: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowAdd")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAllowMove(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowMove")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowMove: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowMove")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAllowRemove(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowRemove")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowRemove: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowRemove")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withComponent(value: scala.Nothing): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("component")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutComponent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("component")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withItemTitleRef(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemTitleRef")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutItemTitleRef: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemTitleRef")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

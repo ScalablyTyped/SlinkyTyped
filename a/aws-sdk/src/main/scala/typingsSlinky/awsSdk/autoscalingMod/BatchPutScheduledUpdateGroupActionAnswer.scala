@@ -14,10 +14,29 @@ trait BatchPutScheduledUpdateGroupActionAnswer extends js.Object {
 
 object BatchPutScheduledUpdateGroupActionAnswer {
   @scala.inline
-  def apply(FailedScheduledUpdateGroupActions: FailedScheduledUpdateGroupActionRequests = null): BatchPutScheduledUpdateGroupActionAnswer = {
+  def apply(): BatchPutScheduledUpdateGroupActionAnswer = {
     val __obj = js.Dynamic.literal()
-    if (FailedScheduledUpdateGroupActions != null) __obj.updateDynamic("FailedScheduledUpdateGroupActions")(FailedScheduledUpdateGroupActions.asInstanceOf[js.Any])
     __obj.asInstanceOf[BatchPutScheduledUpdateGroupActionAnswer]
   }
+  @scala.inline
+  implicit class BatchPutScheduledUpdateGroupActionAnswerOps[Self <: BatchPutScheduledUpdateGroupActionAnswer] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFailedScheduledUpdateGroupActions(value: FailedScheduledUpdateGroupActionRequests): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FailedScheduledUpdateGroupActions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFailedScheduledUpdateGroupActions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FailedScheduledUpdateGroupActions")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -74,22 +74,22 @@ class TextureMatrix protected () extends js.Object {
     * @member {Float32Array} PIXI.TextureMatrix#uClampFrame
     * @readonly
     */
-  val uClampFrame: scala.scalajs.js.typedarray.Float32Array = js.native
+  val uClampFrame: js.typedarray.Float32Array = js.native
   /**
     * Normalized clamp offset.
     * Calculated based on clampOffset.
     * @member {Float32Array} PIXI.TextureMatrix#uClampOffset
     * @readonly
     */
-  val uClampOffset: scala.scalajs.js.typedarray.Float32Array = js.native
+  val uClampOffset: js.typedarray.Float32Array = js.native
   /**
     * Multiplies uvs array to transform
     * @param {Float32Array} uvs mesh uvs
     * @param {Float32Array} [out=uvs] output
     * @returns {Float32Array} output
     */
-  def multiplyUvs(uvs: scala.scalajs.js.typedarray.Float32Array): scala.scalajs.js.typedarray.Float32Array = js.native
-  def multiplyUvs(uvs: scala.scalajs.js.typedarray.Float32Array, out: scala.scalajs.js.typedarray.Float32Array): scala.scalajs.js.typedarray.Float32Array = js.native
+  def multiplyUvs(uvs: js.typedarray.Float32Array): js.typedarray.Float32Array = js.native
+  def multiplyUvs(uvs: js.typedarray.Float32Array, out: js.typedarray.Float32Array): js.typedarray.Float32Array = js.native
   /**
     * updates matrices if texture was changed
     * @param {boolean} [forceUpdate=false] if true, matrices will be updated any case

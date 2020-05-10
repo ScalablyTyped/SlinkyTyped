@@ -4,20 +4,34 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AxiosCancelOptions extends js.Object {
   /**
     * Enables logging
     * default: false
     */
-  var debug: Boolean
+  var debug: Boolean = js.native
 }
 
 object AxiosCancelOptions {
   @scala.inline
   def apply(debug: Boolean): AxiosCancelOptions = {
     val __obj = js.Dynamic.literal(debug = debug.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[AxiosCancelOptions]
   }
+  @scala.inline
+  implicit class AxiosCancelOptionsOps[Self <: AxiosCancelOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDebug(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("debug")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -56,8 +56,6 @@ class TextureAtlas () extends Disposable {
     ],
     stripExtension: Boolean
   ): Unit = js.native
-  /* CompleteClass */
-  override def dispose(): Unit = js.native
   def findRegion(name: String): TextureAtlasRegion = js.native
 }
 

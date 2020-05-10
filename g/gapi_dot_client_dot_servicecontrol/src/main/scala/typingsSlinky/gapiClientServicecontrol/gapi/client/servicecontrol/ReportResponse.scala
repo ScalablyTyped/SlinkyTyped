@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ReportResponse extends js.Object {
   /**
     * Partial failures, one for each `Operation` in the request that failed
@@ -21,7 +22,7 @@ trait ReportResponse extends js.Object {
     * When this happens, it's impossible to know which of the
     * 'Operations' in the request succeeded or failed.
     */
-  var reportErrors: js.UndefOr[js.Array[ReportError]] = js.undefined
+  var reportErrors: js.UndefOr[js.Array[ReportError]] = js.native
   /**
     * Quota usage for each quota release `Operation` request.
     *
@@ -32,23 +33,60 @@ trait ReportResponse extends js.Object {
     *
     * If there is no quota release request, report_quota_info will be empty.
     */
-  var reportInfos: js.UndefOr[js.Array[ReportInfo]] = js.undefined
+  var reportInfos: js.UndefOr[js.Array[ReportInfo]] = js.native
   /** The actual config id used to process the request. */
-  var serviceConfigId: js.UndefOr[String] = js.undefined
+  var serviceConfigId: js.UndefOr[String] = js.native
 }
 
 object ReportResponse {
   @scala.inline
-  def apply(
-    reportErrors: js.Array[ReportError] = null,
-    reportInfos: js.Array[ReportInfo] = null,
-    serviceConfigId: String = null
-  ): ReportResponse = {
+  def apply(): ReportResponse = {
     val __obj = js.Dynamic.literal()
-    if (reportErrors != null) __obj.updateDynamic("reportErrors")(reportErrors.asInstanceOf[js.Any])
-    if (reportInfos != null) __obj.updateDynamic("reportInfos")(reportInfos.asInstanceOf[js.Any])
-    if (serviceConfigId != null) __obj.updateDynamic("serviceConfigId")(serviceConfigId.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReportResponse]
   }
+  @scala.inline
+  implicit class ReportResponseOps[Self <: ReportResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withReportErrors(value: js.Array[ReportError]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reportErrors")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReportErrors: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reportErrors")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReportInfos(value: js.Array[ReportInfo]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reportInfos")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReportInfos: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reportInfos")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withServiceConfigId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceConfigId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutServiceConfigId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceConfigId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

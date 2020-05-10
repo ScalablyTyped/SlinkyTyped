@@ -3,18 +3,17 @@ package typingsSlinky.hapiJoi.mod
 import typingsSlinky.hapiJoi.hapiJoiStrings.javascript
 import typingsSlinky.hapiJoi.hapiJoiStrings.now
 import typingsSlinky.hapiJoi.hapiJoiStrings.unix
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.hapiJoi.mod._Schema because Already inherited */ @js.native
 trait DateSchema extends AnySchema {
   def greater(date: String): this.type = js.native
   def greater(date: Double): this.type = js.native
   def greater(date: Reference): this.type = js.native
-  def greater(date: Date): this.type = js.native
+  def greater(date: js.Date): this.type = js.native
   /**
     * Specifies that the value must be greater than date.
     * Notes: 'now' can be passed in lieu of date so as to always compare relatively to the current date,
@@ -30,7 +29,7 @@ trait DateSchema extends AnySchema {
   def less(date: String): this.type = js.native
   def less(date: Double): this.type = js.native
   def less(date: Reference): this.type = js.native
-  def less(date: Date): this.type = js.native
+  def less(date: js.Date): this.type = js.native
   /**
     * Specifies that the value must be less than date.
     * Notes: 'now' can be passed in lieu of date so as to always compare relatively to the current date,
@@ -42,7 +41,7 @@ trait DateSchema extends AnySchema {
   def max(date: String): this.type = js.native
   def max(date: Double): this.type = js.native
   def max(date: Reference): this.type = js.native
-  def max(date: Date): this.type = js.native
+  def max(date: js.Date): this.type = js.native
   /**
     * Specifies the latest date allowed.
     * Notes: 'now' can be passed in lieu of date so as to always compare relatively to the current date,
@@ -54,7 +53,7 @@ trait DateSchema extends AnySchema {
   def min(date: String): this.type = js.native
   def min(date: Double): this.type = js.native
   def min(date: Reference): this.type = js.native
-  def min(date: Date): this.type = js.native
+  def min(date: js.Date): this.type = js.native
   /**
     * Specifies the oldest date allowed.
     * Notes: 'now' can be passed in lieu of date so as to always compare relatively to the current date,

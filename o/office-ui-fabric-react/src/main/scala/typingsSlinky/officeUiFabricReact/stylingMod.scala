@@ -1,20 +1,11 @@
 package typingsSlinky.officeUiFabricReact
 
 import org.scalablytyped.runtime.StringDictionary
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactBooleans.`false`
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactNumbers.`0`
-import typingsSlinky.officeUiFabricReact.officeUiFabricReactNumbers.`1024`
-import typingsSlinky.officeUiFabricReact.officeUiFabricReactNumbers.`1366`
-import typingsSlinky.officeUiFabricReact.officeUiFabricReactNumbers.`1920`
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactNumbers.`1`
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactNumbers.`2`
-import typingsSlinky.officeUiFabricReact.officeUiFabricReactNumbers.`320`
-import typingsSlinky.officeUiFabricReact.officeUiFabricReactNumbers.`480`
-import typingsSlinky.officeUiFabricReact.officeUiFabricReactNumbers.`640`
-import typingsSlinky.officeUiFabricReact.officeUiFabricReactNumbers.`768`
-import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.`@media screen and Leftparenthesis-ms-high-contrastColon activeRightparenthesis`
-import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.`@media screen and Leftparenthesis-ms-high-contrastColon black-on-whiteRightparenthesis`
-import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.`@media screen and Leftparenthesis-ms-high-contrastColon white-on-blackRightparenthesis`
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.absolute
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.accent
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.black
@@ -56,7 +47,6 @@ import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.relative
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.teal
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.tealDark
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.tealLight
-import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.theme
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.themeDark
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.themeDarkAlt
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.themeDarker
@@ -117,28 +107,28 @@ object stylingMod extends js.Object {
   val DefaultEffects: IEffects = js.native
   val DefaultFontStyles: IFontStyles = js.native
   val DefaultPalette: IPalette = js.native
-  val HighContrastSelector: `@media screen and Leftparenthesis-ms-high-contrastColon activeRightparenthesis` = js.native
-  val HighContrastSelectorBlack: `@media screen and Leftparenthesis-ms-high-contrastColon white-on-blackRightparenthesis` = js.native
-  val HighContrastSelectorWhite: `@media screen and Leftparenthesis-ms-high-contrastColon black-on-whiteRightparenthesis` = js.native
+  val HighContrastSelector: /* "@media screen and (-ms-high-contrast: active)" */ String = js.native
+  val HighContrastSelectorBlack: /* "@media screen and (-ms-high-contrast: white-on-black)" */ String = js.native
+  val HighContrastSelectorWhite: /* "@media screen and (-ms-high-contrast: black-on-white)" */ String = js.native
   val ScreenWidthMaxLarge: Double = js.native
   val ScreenWidthMaxMedium: Double = js.native
   val ScreenWidthMaxSmall: Double = js.native
   val ScreenWidthMaxXLarge: Double = js.native
   val ScreenWidthMaxXXLarge: Double = js.native
-  val ScreenWidthMinLarge: `640` = js.native
-  val ScreenWidthMinMedium: `480` = js.native
-  val ScreenWidthMinSmall: `320` = js.native
-  val ScreenWidthMinUhfMobile: `768` = js.native
-  val ScreenWidthMinXLarge: `1024` = js.native
-  val ScreenWidthMinXXLarge: `1366` = js.native
-  val ScreenWidthMinXXXLarge: `1920` = js.native
-  val ThemeSettingName: theme = js.native
+  val ScreenWidthMinLarge: /* 640 */ Double = js.native
+  val ScreenWidthMinMedium: /* 480 */ Double = js.native
+  val ScreenWidthMinSmall: /* 320 */ Double = js.native
+  val ScreenWidthMinUhfMobile: /* 768 */ Double = js.native
+  val ScreenWidthMinXLarge: /* 1024 */ Double = js.native
+  val ScreenWidthMinXXLarge: /* 1366 */ Double = js.native
+  val ScreenWidthMinXXXLarge: /* 1920 */ Double = js.native
+  val ThemeSettingName: /* "theme" */ String = js.native
   val hiddenContentStyle: IRawStyle = js.native
   val noWrap: IRawStyle = js.native
   val normalize: IRawStyle = js.native
   def buildClassMap[T /* <: js.Object */](styles: T): /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ key in keyof T ]:? string}
-    */ typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.buildClassMap with js.Any = js.native
+    */ typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.buildClassMap with TopLevel[js.Any] = js.native
   def concatStyleSets[TStyleSet /* <: IStyleSet[TStyleSet] */](): IConcatenatedStyleSet[TStyleSet] = js.native
   def concatStyleSets[TStyleSet /* <: IStyleSet[TStyleSet] */](styleSet: TStyleSet): IConcatenatedStyleSet[TStyleSet] = js.native
   def concatStyleSets[TStyleSet1 /* <: IStyleSet[TStyleSet1] */, TStyleSet2 /* <: IStyleSet[TStyleSet2] */](styleSet1: TStyleSet1, styleSet2: TStyleSet2): IConcatenatedStyleSet[TStyleSet1 with TStyleSet2] = js.native

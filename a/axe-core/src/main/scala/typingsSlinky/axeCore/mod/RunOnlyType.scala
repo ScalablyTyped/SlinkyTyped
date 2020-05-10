@@ -14,14 +14,12 @@ trait RunOnlyType extends js.Object
 
 object RunOnlyType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def rule: typingsSlinky.axeCore.axeCoreStrings.rule = "rule".asInstanceOf[typingsSlinky.axeCore.axeCoreStrings.rule]
   @scala.inline
-  def rule: typingsSlinky.axeCore.axeCoreStrings.rule = this.cast("rule")
+  def rules: typingsSlinky.axeCore.axeCoreStrings.rules = "rules".asInstanceOf[typingsSlinky.axeCore.axeCoreStrings.rules]
   @scala.inline
-  def rules: typingsSlinky.axeCore.axeCoreStrings.rules = this.cast("rules")
+  def tag: typingsSlinky.axeCore.axeCoreStrings.tag = "tag".asInstanceOf[typingsSlinky.axeCore.axeCoreStrings.tag]
   @scala.inline
-  def tag: typingsSlinky.axeCore.axeCoreStrings.tag = this.cast("tag")
-  @scala.inline
-  def tags: typingsSlinky.axeCore.axeCoreStrings.tags = this.cast("tags")
+  def tags: typingsSlinky.axeCore.axeCoreStrings.tags = "tags".asInstanceOf[typingsSlinky.axeCore.axeCoreStrings.tags]
 }
 

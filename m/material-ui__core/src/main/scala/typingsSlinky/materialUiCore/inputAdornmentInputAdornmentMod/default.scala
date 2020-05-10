@@ -1,9 +1,8 @@
 package typingsSlinky.materialUiCore.inputAdornmentInputAdornmentMod
 
 import org.scalablytyped.runtime.TopLevel
+import slinky.core.ReactComponentClass
 import typingsSlinky.react.mod.Component
-import typingsSlinky.react.mod.ComponentState
-import typingsSlinky.react.mod.ComponentType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,12 +10,12 @@ import scala.scalajs.js.annotation._
 @JSImport("@material-ui/core/InputAdornment/InputAdornment", JSImport.Default)
 @js.native
 class default protected ()
-  extends Component[InputAdornmentProps, ComponentState, js.Any] {
+  extends Component[InputAdornmentProps, js.Object, js.Any] {
   def this(props: InputAdornmentProps) = this()
   def this(props: InputAdornmentProps, context: js.Any) = this()
 }
 
 @JSImport("@material-ui/core/InputAdornment/InputAdornment", JSImport.Default)
 @js.native
-object default extends TopLevel[ComponentType[InputAdornmentProps]]
+object default extends TopLevel[ReactComponentClass[InputAdornmentProps]]
 

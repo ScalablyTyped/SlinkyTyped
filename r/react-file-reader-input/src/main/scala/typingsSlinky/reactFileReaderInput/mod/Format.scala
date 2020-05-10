@@ -14,14 +14,12 @@ trait Format extends js.Object
 
 object Format {
   @scala.inline
-  def binary: typingsSlinky.reactFileReaderInput.reactFileReaderInputStrings.binary = this.cast("binary")
+  def binary: typingsSlinky.reactFileReaderInput.reactFileReaderInputStrings.binary = "binary".asInstanceOf[typingsSlinky.reactFileReaderInput.reactFileReaderInputStrings.binary]
   @scala.inline
-  def buffer: typingsSlinky.reactFileReaderInput.reactFileReaderInputStrings.buffer = this.cast("buffer")
+  def buffer: typingsSlinky.reactFileReaderInput.reactFileReaderInputStrings.buffer = "buffer".asInstanceOf[typingsSlinky.reactFileReaderInput.reactFileReaderInputStrings.buffer]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def text: typingsSlinky.reactFileReaderInput.reactFileReaderInputStrings.text = "text".asInstanceOf[typingsSlinky.reactFileReaderInput.reactFileReaderInputStrings.text]
   @scala.inline
-  def text: typingsSlinky.reactFileReaderInput.reactFileReaderInputStrings.text = this.cast("text")
-  @scala.inline
-  def url: typingsSlinky.reactFileReaderInput.reactFileReaderInputStrings.url = this.cast("url")
+  def url: typingsSlinky.reactFileReaderInput.reactFileReaderInputStrings.url = "url".asInstanceOf[typingsSlinky.reactFileReaderInput.reactFileReaderInputStrings.url]
 }
 

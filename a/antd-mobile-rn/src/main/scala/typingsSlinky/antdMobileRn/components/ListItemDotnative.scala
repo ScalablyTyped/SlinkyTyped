@@ -1,10 +1,9 @@
 package typingsSlinky.antdMobileRn.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.antdMobileRn.AnonArrow
 import typingsSlinky.antdMobileRn.antdMobileRnStrings._empty
 import typingsSlinky.antdMobileRn.antdMobileRnStrings.android
@@ -24,50 +23,58 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ListItemDotnative
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object ListItemDotnative {
   @JSImport("antd-mobile-rn/lib/list/ListItem.native", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: disabled */
-  def apply(
-    activeStyle: StyleProp[ViewStyle] = null,
-    align: top | middle | bottom = null,
-    arrow: horizontal | down | up | empty | _empty = null,
-    error: js.UndefOr[Boolean] = js.undefined,
-    extra: TagMod[Any] = null,
-    multipleLine: js.UndefOr[Boolean] = js.undefined,
-    onClick: () => Unit = null,
-    onPressIn: () => Unit = null,
-    onPressOut: () => Unit = null,
-    platform: android | ios = null,
-    style: StyleProp[ViewStyle] = null,
-    styles: AnonArrow = null,
-    thumb: TagMod[Any] = null,
-    wrap: js.UndefOr[Boolean] = js.undefined,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (activeStyle != null) __obj.updateDynamic("activeStyle")(activeStyle.asInstanceOf[js.Any])
-    if (align != null) __obj.updateDynamic("align")(align.asInstanceOf[js.Any])
-    if (arrow != null) __obj.updateDynamic("arrow")(arrow.asInstanceOf[js.Any])
-    if (!js.isUndefined(error)) __obj.updateDynamic("error")(error.asInstanceOf[js.Any])
-    if (extra != null) __obj.updateDynamic("extra")(extra.asInstanceOf[js.Any])
-    if (!js.isUndefined(multipleLine)) __obj.updateDynamic("multipleLine")(multipleLine.asInstanceOf[js.Any])
-    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction0(onClick))
-    if (onPressIn != null) __obj.updateDynamic("onPressIn")(js.Any.fromFunction0(onPressIn))
-    if (onPressOut != null) __obj.updateDynamic("onPressOut")(js.Any.fromFunction0(onPressOut))
-    if (platform != null) __obj.updateDynamic("platform")(platform.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (styles != null) __obj.updateDynamic("styles")(styles.asInstanceOf[js.Any])
-    if (thumb != null) __obj.updateDynamic("thumb")(thumb.asInstanceOf[js.Any])
-    if (!js.isUndefined(wrap)) __obj.updateDynamic("wrap")(wrap.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def activeStyle(value: StyleProp[ViewStyle]): this.type = set("activeStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def activeStyleNull: this.type = set("activeStyle", null)
+    @scala.inline
+    def align(value: top | middle | bottom): this.type = set("align", value.asInstanceOf[js.Any])
+    @scala.inline
+    def arrow(value: horizontal | down | up | empty | _empty): this.type = set("arrow", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def error(value: Boolean): this.type = set("error", value.asInstanceOf[js.Any])
+    @scala.inline
+    def extraReactElement(value: ReactElement): this.type = set("extra", value.asInstanceOf[js.Any])
+    @scala.inline
+    def extra(value: TagMod[Any]): this.type = set("extra", value.asInstanceOf[js.Any])
+    @scala.inline
+    def multipleLine(value: Boolean): this.type = set("multipleLine", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onClick(value: () => Unit): this.type = set("onClick", js.Any.fromFunction0(value))
+    @scala.inline
+    def onPressIn(value: () => Unit): this.type = set("onPressIn", js.Any.fromFunction0(value))
+    @scala.inline
+    def onPressOut(value: () => Unit): this.type = set("onPressOut", js.Any.fromFunction0(value))
+    @scala.inline
+    def platform(value: android | ios): this.type = set("platform", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: StyleProp[ViewStyle]): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def styleNull: this.type = set("style", null)
+    @scala.inline
+    def styles(value: AnonArrow): this.type = set("styles", value.asInstanceOf[js.Any])
+    @scala.inline
+    def thumbReactElement(value: ReactElement): this.type = set("thumb", value.asInstanceOf[js.Any])
+    @scala.inline
+    def thumb(value: TagMod[Any]): this.type = set("thumb", value.asInstanceOf[js.Any])
+    @scala.inline
+    def thumbNull: this.type = set("thumb", null)
+    @scala.inline
+    def wrap(value: Boolean): this.type = set("wrap", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.antdMobileRn.listItemNativeMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = ListItemProps
+  
+  def withProps(p: ListItemProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: ListItemDotnative.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

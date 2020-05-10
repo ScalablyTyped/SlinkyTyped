@@ -9,7 +9,10 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.gestalt.gestaltStrings.`ad-group`
   - typingsSlinky.gestalt.gestaltStrings.add
   - typingsSlinky.gestalt.gestaltStrings.`add-circle`
+  - typingsSlinky.gestalt.gestaltStrings.`add-layout`
   - typingsSlinky.gestalt.gestaltStrings.`add-pin`
+  - typingsSlinky.gestalt.gestaltStrings.`ads-stats`
+  - typingsSlinky.gestalt.gestaltStrings.`ads-overview`
   - typingsSlinky.gestalt.gestaltStrings.alert
   - typingsSlinky.gestalt.gestaltStrings.`align-bottom-center`
   - typingsSlinky.gestalt.gestaltStrings.`align-bottom-left`
@@ -49,6 +52,8 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.gestalt.gestaltStrings.compose
   - typingsSlinky.gestalt.gestaltStrings.crop
   - typingsSlinky.gestalt.gestaltStrings.dash
+  - typingsSlinky.gestalt.gestaltStrings.`directional-arrow-left`
+  - typingsSlinky.gestalt.gestaltStrings.`directional-arrow-right`
   - typingsSlinky.gestalt.gestaltStrings.download
   - typingsSlinky.gestalt.gestaltStrings.duplicate
   - typingsSlinky.gestalt.gestaltStrings.edit
@@ -60,13 +65,16 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.gestalt.gestaltStrings.`face-happy`
   - typingsSlinky.gestalt.gestaltStrings.`face-sad`
   - typingsSlinky.gestalt.gestaltStrings.`face-smiley`
+  - typingsSlinky.gestalt.gestaltStrings.`file-unknown`
   - typingsSlinky.gestalt.gestaltStrings.`fill-opaque`
   - typingsSlinky.gestalt.gestaltStrings.`fill-transparent`
   - typingsSlinky.gestalt.gestaltStrings.filter
   - typingsSlinky.gestalt.gestaltStrings.flag
+  - typingsSlinky.gestalt.gestaltStrings.flash
   - typingsSlinky.gestalt.gestaltStrings.flashlight
   - typingsSlinky.gestalt.gestaltStrings.flipHorizontal
   - typingsSlinky.gestalt.gestaltStrings.flipVertical
+  - typingsSlinky.gestalt.gestaltStrings.folder
   - typingsSlinky.gestalt.gestaltStrings.gif
   - typingsSlinky.gestalt.gestaltStrings.globe
   - typingsSlinky.gestalt.gestaltStrings.`globe-checked`
@@ -76,8 +84,10 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.gestalt.gestaltStrings.handle
   - typingsSlinky.gestalt.gestaltStrings.`hand-pointing`
   - typingsSlinky.gestalt.gestaltStrings.heart
+  - typingsSlinky.gestalt.gestaltStrings.`heart-outline`
   - typingsSlinky.gestalt.gestaltStrings.`heart-broken`
   - typingsSlinky.gestalt.gestaltStrings.impressum
+  - typingsSlinky.gestalt.gestaltStrings.`info-circle`
   - typingsSlinky.gestalt.gestaltStrings.key
   - typingsSlinky.gestalt.gestaltStrings.knoop
   - typingsSlinky.gestalt.gestaltStrings.lightbulb
@@ -110,8 +120,10 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.gestalt.gestaltStrings.`question-mark`
   - typingsSlinky.gestalt.gestaltStrings.remove
   - typingsSlinky.gestalt.gestaltStrings.`reorder-images`
+  - typingsSlinky.gestalt.gestaltStrings.replace
   - typingsSlinky.gestalt.gestaltStrings.report
   - typingsSlinky.gestalt.gestaltStrings.rotate
+  - typingsSlinky.gestalt.gestaltStrings.scale
   - typingsSlinky.gestalt.gestaltStrings.search
   - typingsSlinky.gestalt.gestaltStrings.security
   - typingsSlinky.gestalt.gestaltStrings.`shopping-bag`
@@ -146,293 +158,336 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.gestalt.gestaltStrings.`view-type-default`
   - typingsSlinky.gestalt.gestaltStrings.`view-type-dense`
   - typingsSlinky.gestalt.gestaltStrings.`view-type-list`
+  - typingsSlinky.gestalt.gestaltStrings.`workflow-status-all`
+  - typingsSlinky.gestalt.gestaltStrings.`workflow-status-halted`
+  - typingsSlinky.gestalt.gestaltStrings.`workflow-status-in-progress`
+  - typingsSlinky.gestalt.gestaltStrings.`workflow-status-ok`
+  - typingsSlinky.gestalt.gestaltStrings.`workflow-status-problem`
+  - typingsSlinky.gestalt.gestaltStrings.`workflow-status-unstarted`
+  - typingsSlinky.gestalt.gestaltStrings.`workflow-status-warning`
 */
 trait Icons extends js.Object
 
 object Icons {
   @scala.inline
-  def ad: typingsSlinky.gestalt.gestaltStrings.ad = this.cast("ad")
+  def ad: typingsSlinky.gestalt.gestaltStrings.ad = "ad".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.ad]
   @scala.inline
-  def `ad-group`: typingsSlinky.gestalt.gestaltStrings.`ad-group` = this.cast("ad-group")
+  def `ad-group`: typingsSlinky.gestalt.gestaltStrings.`ad-group` = "ad-group".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.`ad-group`]
   @scala.inline
-  def add: typingsSlinky.gestalt.gestaltStrings.add = this.cast("add")
+  def add: typingsSlinky.gestalt.gestaltStrings.add = "add".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.add]
   @scala.inline
-  def `add-circle`: typingsSlinky.gestalt.gestaltStrings.`add-circle` = this.cast("add-circle")
+  def `add-circle`: typingsSlinky.gestalt.gestaltStrings.`add-circle` = "add-circle".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.`add-circle`]
   @scala.inline
-  def `add-pin`: typingsSlinky.gestalt.gestaltStrings.`add-pin` = this.cast("add-pin")
+  def `add-layout`: typingsSlinky.gestalt.gestaltStrings.`add-layout` = "add-layout".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.`add-layout`]
   @scala.inline
-  def alert: typingsSlinky.gestalt.gestaltStrings.alert = this.cast("alert")
+  def `add-pin`: typingsSlinky.gestalt.gestaltStrings.`add-pin` = "add-pin".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.`add-pin`]
   @scala.inline
-  def `align-bottom`: typingsSlinky.gestalt.gestaltStrings.`align-bottom` = this.cast("align-bottom")
+  def `ads-overview`: typingsSlinky.gestalt.gestaltStrings.`ads-overview` = "ads-overview".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.`ads-overview`]
   @scala.inline
-  def `align-bottom-center`: typingsSlinky.gestalt.gestaltStrings.`align-bottom-center` = this.cast("align-bottom-center")
+  def `ads-stats`: typingsSlinky.gestalt.gestaltStrings.`ads-stats` = "ads-stats".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.`ads-stats`]
   @scala.inline
-  def `align-bottom-left`: typingsSlinky.gestalt.gestaltStrings.`align-bottom-left` = this.cast("align-bottom-left")
+  def alert: typingsSlinky.gestalt.gestaltStrings.alert = "alert".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.alert]
   @scala.inline
-  def `align-bottom-right`: typingsSlinky.gestalt.gestaltStrings.`align-bottom-right` = this.cast("align-bottom-right")
+  def `align-bottom`: typingsSlinky.gestalt.gestaltStrings.`align-bottom` = "align-bottom".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.`align-bottom`]
   @scala.inline
-  def `align-middle`: typingsSlinky.gestalt.gestaltStrings.`align-middle` = this.cast("align-middle")
+  def `align-bottom-center`: typingsSlinky.gestalt.gestaltStrings.`align-bottom-center` = "align-bottom-center".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.`align-bottom-center`]
   @scala.inline
-  def `align-top`: typingsSlinky.gestalt.gestaltStrings.`align-top` = this.cast("align-top")
+  def `align-bottom-left`: typingsSlinky.gestalt.gestaltStrings.`align-bottom-left` = "align-bottom-left".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.`align-bottom-left`]
   @scala.inline
-  def `align-top-center`: typingsSlinky.gestalt.gestaltStrings.`align-top-center` = this.cast("align-top-center")
+  def `align-bottom-right`: typingsSlinky.gestalt.gestaltStrings.`align-bottom-right` = "align-bottom-right".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.`align-bottom-right`]
   @scala.inline
-  def `align-top-left`: typingsSlinky.gestalt.gestaltStrings.`align-top-left` = this.cast("align-top-left")
+  def `align-middle`: typingsSlinky.gestalt.gestaltStrings.`align-middle` = "align-middle".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.`align-middle`]
   @scala.inline
-  def `align-top-right`: typingsSlinky.gestalt.gestaltStrings.`align-top-right` = this.cast("align-top-right")
+  def `align-top`: typingsSlinky.gestalt.gestaltStrings.`align-top` = "align-top".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.`align-top`]
   @scala.inline
-  def `angled-pin`: typingsSlinky.gestalt.gestaltStrings.`angled-pin` = this.cast("angled-pin")
+  def `align-top-center`: typingsSlinky.gestalt.gestaltStrings.`align-top-center` = "align-top-center".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.`align-top-center`]
   @scala.inline
-  def apps: typingsSlinky.gestalt.gestaltStrings.apps = this.cast("apps")
+  def `align-top-left`: typingsSlinky.gestalt.gestaltStrings.`align-top-left` = "align-top-left".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.`align-top-left`]
   @scala.inline
-  def `arrow-back`: typingsSlinky.gestalt.gestaltStrings.`arrow-back` = this.cast("arrow-back")
+  def `align-top-right`: typingsSlinky.gestalt.gestaltStrings.`align-top-right` = "align-top-right".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.`align-top-right`]
   @scala.inline
-  def `arrow-circle-down`: typingsSlinky.gestalt.gestaltStrings.`arrow-circle-down` = this.cast("arrow-circle-down")
+  def `angled-pin`: typingsSlinky.gestalt.gestaltStrings.`angled-pin` = "angled-pin".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.`angled-pin`]
   @scala.inline
-  def `arrow-circle-forward`: typingsSlinky.gestalt.gestaltStrings.`arrow-circle-forward` = this.cast("arrow-circle-forward")
+  def apps: typingsSlinky.gestalt.gestaltStrings.apps = "apps".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.apps]
   @scala.inline
-  def `arrow-circle-up`: typingsSlinky.gestalt.gestaltStrings.`arrow-circle-up` = this.cast("arrow-circle-up")
+  def `arrow-back`: typingsSlinky.gestalt.gestaltStrings.`arrow-back` = "arrow-back".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.`arrow-back`]
   @scala.inline
-  def `arrow-down`: typingsSlinky.gestalt.gestaltStrings.`arrow-down` = this.cast("arrow-down")
+  def `arrow-circle-down`: typingsSlinky.gestalt.gestaltStrings.`arrow-circle-down` = "arrow-circle-down".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.`arrow-circle-down`]
   @scala.inline
-  def `arrow-end`: typingsSlinky.gestalt.gestaltStrings.`arrow-end` = this.cast("arrow-end")
+  def `arrow-circle-forward`: typingsSlinky.gestalt.gestaltStrings.`arrow-circle-forward` = "arrow-circle-forward".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.`arrow-circle-forward`]
   @scala.inline
-  def `arrow-forward`: typingsSlinky.gestalt.gestaltStrings.`arrow-forward` = this.cast("arrow-forward")
+  def `arrow-circle-up`: typingsSlinky.gestalt.gestaltStrings.`arrow-circle-up` = "arrow-circle-up".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.`arrow-circle-up`]
   @scala.inline
-  def `arrow-start`: typingsSlinky.gestalt.gestaltStrings.`arrow-start` = this.cast("arrow-start")
+  def `arrow-down`: typingsSlinky.gestalt.gestaltStrings.`arrow-down` = "arrow-down".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.`arrow-down`]
   @scala.inline
-  def `arrow-up`: typingsSlinky.gestalt.gestaltStrings.`arrow-up` = this.cast("arrow-up")
+  def `arrow-end`: typingsSlinky.gestalt.gestaltStrings.`arrow-end` = "arrow-end".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.`arrow-end`]
   @scala.inline
-  def `arrow-up-right`: typingsSlinky.gestalt.gestaltStrings.`arrow-up-right` = this.cast("arrow-up-right")
+  def `arrow-forward`: typingsSlinky.gestalt.gestaltStrings.`arrow-forward` = "arrow-forward".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.`arrow-forward`]
   @scala.inline
-  def bell: typingsSlinky.gestalt.gestaltStrings.bell = this.cast("bell")
+  def `arrow-start`: typingsSlinky.gestalt.gestaltStrings.`arrow-start` = "arrow-start".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.`arrow-start`]
   @scala.inline
-  def calendar: typingsSlinky.gestalt.gestaltStrings.calendar = this.cast("calendar")
+  def `arrow-up`: typingsSlinky.gestalt.gestaltStrings.`arrow-up` = "arrow-up".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.`arrow-up`]
   @scala.inline
-  def camera: typingsSlinky.gestalt.gestaltStrings.camera = this.cast("camera")
+  def `arrow-up-right`: typingsSlinky.gestalt.gestaltStrings.`arrow-up-right` = "arrow-up-right".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.`arrow-up-right`]
   @scala.inline
-  def `camera-roll`: typingsSlinky.gestalt.gestaltStrings.`camera-roll` = this.cast("camera-roll")
+  def bell: typingsSlinky.gestalt.gestaltStrings.bell = "bell".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.bell]
   @scala.inline
-  def cancel: typingsSlinky.gestalt.gestaltStrings.cancel = this.cast("cancel")
+  def calendar: typingsSlinky.gestalt.gestaltStrings.calendar = "calendar".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.calendar]
   @scala.inline
-  def `canonical-pin`: typingsSlinky.gestalt.gestaltStrings.`canonical-pin` = this.cast("canonical-pin")
+  def camera: typingsSlinky.gestalt.gestaltStrings.camera = "camera".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.camera]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def `camera-roll`: typingsSlinky.gestalt.gestaltStrings.`camera-roll` = "camera-roll".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.`camera-roll`]
   @scala.inline
-  def check: typingsSlinky.gestalt.gestaltStrings.check = this.cast("check")
+  def cancel: typingsSlinky.gestalt.gestaltStrings.cancel = "cancel".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.cancel]
   @scala.inline
-  def `check-circle`: typingsSlinky.gestalt.gestaltStrings.`check-circle` = this.cast("check-circle")
+  def `canonical-pin`: typingsSlinky.gestalt.gestaltStrings.`canonical-pin` = "canonical-pin".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.`canonical-pin`]
   @scala.inline
-  def `circle-outline`: typingsSlinky.gestalt.gestaltStrings.`circle-outline` = this.cast("circle-outline")
+  def check: typingsSlinky.gestalt.gestaltStrings.check = "check".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.check]
   @scala.inline
-  def clear: typingsSlinky.gestalt.gestaltStrings.clear = this.cast("clear")
+  def `check-circle`: typingsSlinky.gestalt.gestaltStrings.`check-circle` = "check-circle".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.`check-circle`]
   @scala.inline
-  def clock: typingsSlinky.gestalt.gestaltStrings.clock = this.cast("clock")
+  def `circle-outline`: typingsSlinky.gestalt.gestaltStrings.`circle-outline` = "circle-outline".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.`circle-outline`]
   @scala.inline
-  def cog: typingsSlinky.gestalt.gestaltStrings.cog = this.cast("cog")
+  def clear: typingsSlinky.gestalt.gestaltStrings.clear = "clear".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.clear]
   @scala.inline
-  def `color-picker`: typingsSlinky.gestalt.gestaltStrings.`color-picker` = this.cast("color-picker")
+  def clock: typingsSlinky.gestalt.gestaltStrings.clock = "clock".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.clock]
   @scala.inline
-  def compass: typingsSlinky.gestalt.gestaltStrings.compass = this.cast("compass")
+  def cog: typingsSlinky.gestalt.gestaltStrings.cog = "cog".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.cog]
   @scala.inline
-  def compose: typingsSlinky.gestalt.gestaltStrings.compose = this.cast("compose")
+  def `color-picker`: typingsSlinky.gestalt.gestaltStrings.`color-picker` = "color-picker".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.`color-picker`]
   @scala.inline
-  def crop: typingsSlinky.gestalt.gestaltStrings.crop = this.cast("crop")
+  def compass: typingsSlinky.gestalt.gestaltStrings.compass = "compass".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.compass]
   @scala.inline
-  def dash: typingsSlinky.gestalt.gestaltStrings.dash = this.cast("dash")
+  def compose: typingsSlinky.gestalt.gestaltStrings.compose = "compose".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.compose]
   @scala.inline
-  def download: typingsSlinky.gestalt.gestaltStrings.download = this.cast("download")
+  def crop: typingsSlinky.gestalt.gestaltStrings.crop = "crop".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.crop]
   @scala.inline
-  def duplicate: typingsSlinky.gestalt.gestaltStrings.duplicate = this.cast("duplicate")
+  def dash: typingsSlinky.gestalt.gestaltStrings.dash = "dash".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.dash]
   @scala.inline
-  def edit: typingsSlinky.gestalt.gestaltStrings.edit = this.cast("edit")
+  def `directional-arrow-left`: typingsSlinky.gestalt.gestaltStrings.`directional-arrow-left` = "directional-arrow-left".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.`directional-arrow-left`]
   @scala.inline
-  def ellipsis: typingsSlinky.gestalt.gestaltStrings.ellipsis = this.cast("ellipsis")
+  def `directional-arrow-right`: typingsSlinky.gestalt.gestaltStrings.`directional-arrow-right` = "directional-arrow-right".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.`directional-arrow-right`]
   @scala.inline
-  def `ellipsis-circle-outline`: typingsSlinky.gestalt.gestaltStrings.`ellipsis-circle-outline` = this.cast("ellipsis-circle-outline")
+  def download: typingsSlinky.gestalt.gestaltStrings.download = "download".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.download]
   @scala.inline
-  def envelope: typingsSlinky.gestalt.gestaltStrings.envelope = this.cast("envelope")
+  def duplicate: typingsSlinky.gestalt.gestaltStrings.duplicate = "duplicate".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.duplicate]
   @scala.inline
-  def eye: typingsSlinky.gestalt.gestaltStrings.eye = this.cast("eye")
+  def edit: typingsSlinky.gestalt.gestaltStrings.edit = "edit".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.edit]
   @scala.inline
-  def `face-happy`: typingsSlinky.gestalt.gestaltStrings.`face-happy` = this.cast("face-happy")
+  def ellipsis: typingsSlinky.gestalt.gestaltStrings.ellipsis = "ellipsis".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.ellipsis]
   @scala.inline
-  def `face-sad`: typingsSlinky.gestalt.gestaltStrings.`face-sad` = this.cast("face-sad")
+  def `ellipsis-circle-outline`: typingsSlinky.gestalt.gestaltStrings.`ellipsis-circle-outline` = "ellipsis-circle-outline".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.`ellipsis-circle-outline`]
   @scala.inline
-  def `face-smiley`: typingsSlinky.gestalt.gestaltStrings.`face-smiley` = this.cast("face-smiley")
+  def envelope: typingsSlinky.gestalt.gestaltStrings.envelope = "envelope".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.envelope]
   @scala.inline
-  def facebook: typingsSlinky.gestalt.gestaltStrings.facebook = this.cast("facebook")
+  def eye: typingsSlinky.gestalt.gestaltStrings.eye = "eye".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.eye]
   @scala.inline
-  def `fill-opaque`: typingsSlinky.gestalt.gestaltStrings.`fill-opaque` = this.cast("fill-opaque")
+  def `face-happy`: typingsSlinky.gestalt.gestaltStrings.`face-happy` = "face-happy".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.`face-happy`]
   @scala.inline
-  def `fill-transparent`: typingsSlinky.gestalt.gestaltStrings.`fill-transparent` = this.cast("fill-transparent")
+  def `face-sad`: typingsSlinky.gestalt.gestaltStrings.`face-sad` = "face-sad".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.`face-sad`]
   @scala.inline
-  def filter: typingsSlinky.gestalt.gestaltStrings.filter = this.cast("filter")
+  def `face-smiley`: typingsSlinky.gestalt.gestaltStrings.`face-smiley` = "face-smiley".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.`face-smiley`]
   @scala.inline
-  def flag: typingsSlinky.gestalt.gestaltStrings.flag = this.cast("flag")
+  def facebook: typingsSlinky.gestalt.gestaltStrings.facebook = "facebook".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.facebook]
   @scala.inline
-  def flashlight: typingsSlinky.gestalt.gestaltStrings.flashlight = this.cast("flashlight")
+  def `file-unknown`: typingsSlinky.gestalt.gestaltStrings.`file-unknown` = "file-unknown".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.`file-unknown`]
   @scala.inline
-  def flipHorizontal: typingsSlinky.gestalt.gestaltStrings.flipHorizontal = this.cast("flipHorizontal")
+  def `fill-opaque`: typingsSlinky.gestalt.gestaltStrings.`fill-opaque` = "fill-opaque".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.`fill-opaque`]
   @scala.inline
-  def flipVertical: typingsSlinky.gestalt.gestaltStrings.flipVertical = this.cast("flipVertical")
+  def `fill-transparent`: typingsSlinky.gestalt.gestaltStrings.`fill-transparent` = "fill-transparent".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.`fill-transparent`]
   @scala.inline
-  def gif: typingsSlinky.gestalt.gestaltStrings.gif = this.cast("gif")
+  def filter: typingsSlinky.gestalt.gestaltStrings.filter = "filter".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.filter]
   @scala.inline
-  def globe: typingsSlinky.gestalt.gestaltStrings.globe = this.cast("globe")
+  def flag: typingsSlinky.gestalt.gestaltStrings.flag = "flag".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.flag]
   @scala.inline
-  def `globe-checked`: typingsSlinky.gestalt.gestaltStrings.`globe-checked` = this.cast("globe-checked")
+  def flash: typingsSlinky.gestalt.gestaltStrings.flash = "flash".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.flash]
   @scala.inline
-  def gmail: typingsSlinky.gestalt.gestaltStrings.gmail = this.cast("gmail")
+  def flashlight: typingsSlinky.gestalt.gestaltStrings.flashlight = "flashlight".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.flashlight]
   @scala.inline
-  def `google-plus`: typingsSlinky.gestalt.gestaltStrings.`google-plus` = this.cast("google-plus")
+  def flipHorizontal: typingsSlinky.gestalt.gestaltStrings.flipHorizontal = "flipHorizontal".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.flipHorizontal]
   @scala.inline
-  def `graph-bar`: typingsSlinky.gestalt.gestaltStrings.`graph-bar` = this.cast("graph-bar")
+  def flipVertical: typingsSlinky.gestalt.gestaltStrings.flipVertical = "flipVertical".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.flipVertical]
   @scala.inline
-  def `hand-pointing`: typingsSlinky.gestalt.gestaltStrings.`hand-pointing` = this.cast("hand-pointing")
+  def folder: typingsSlinky.gestalt.gestaltStrings.folder = "folder".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.folder]
   @scala.inline
-  def handle: typingsSlinky.gestalt.gestaltStrings.handle = this.cast("handle")
+  def gif: typingsSlinky.gestalt.gestaltStrings.gif = "gif".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.gif]
   @scala.inline
-  def heart: typingsSlinky.gestalt.gestaltStrings.heart = this.cast("heart")
+  def globe: typingsSlinky.gestalt.gestaltStrings.globe = "globe".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.globe]
   @scala.inline
-  def `heart-broken`: typingsSlinky.gestalt.gestaltStrings.`heart-broken` = this.cast("heart-broken")
+  def `globe-checked`: typingsSlinky.gestalt.gestaltStrings.`globe-checked` = "globe-checked".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.`globe-checked`]
   @scala.inline
-  def impressum: typingsSlinky.gestalt.gestaltStrings.impressum = this.cast("impressum")
+  def gmail: typingsSlinky.gestalt.gestaltStrings.gmail = "gmail".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.gmail]
   @scala.inline
-  def key: typingsSlinky.gestalt.gestaltStrings.key = this.cast("key")
+  def `google-plus`: typingsSlinky.gestalt.gestaltStrings.`google-plus` = "google-plus".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.`google-plus`]
   @scala.inline
-  def knoop: typingsSlinky.gestalt.gestaltStrings.knoop = this.cast("knoop")
+  def `graph-bar`: typingsSlinky.gestalt.gestaltStrings.`graph-bar` = "graph-bar".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.`graph-bar`]
   @scala.inline
-  def lightbulb: typingsSlinky.gestalt.gestaltStrings.lightbulb = this.cast("lightbulb")
+  def `hand-pointing`: typingsSlinky.gestalt.gestaltStrings.`hand-pointing` = "hand-pointing".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.`hand-pointing`]
   @scala.inline
-  def `lightning-bolt-circle`: typingsSlinky.gestalt.gestaltStrings.`lightning-bolt-circle` = this.cast("lightning-bolt-circle")
+  def handle: typingsSlinky.gestalt.gestaltStrings.handle = "handle".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.handle]
   @scala.inline
-  def link: typingsSlinky.gestalt.gestaltStrings.link = this.cast("link")
+  def heart: typingsSlinky.gestalt.gestaltStrings.heart = "heart".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.heart]
   @scala.inline
-  def location: typingsSlinky.gestalt.gestaltStrings.location = this.cast("location")
+  def `heart-broken`: typingsSlinky.gestalt.gestaltStrings.`heart-broken` = "heart-broken".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.`heart-broken`]
   @scala.inline
-  def lock: typingsSlinky.gestalt.gestaltStrings.lock = this.cast("lock")
+  def `heart-outline`: typingsSlinky.gestalt.gestaltStrings.`heart-outline` = "heart-outline".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.`heart-outline`]
   @scala.inline
-  def `logo-large`: typingsSlinky.gestalt.gestaltStrings.`logo-large` = this.cast("logo-large")
+  def impressum: typingsSlinky.gestalt.gestaltStrings.impressum = "impressum".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.impressum]
   @scala.inline
-  def `logo-small`: typingsSlinky.gestalt.gestaltStrings.`logo-small` = this.cast("logo-small")
+  def `info-circle`: typingsSlinky.gestalt.gestaltStrings.`info-circle` = "info-circle".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.`info-circle`]
   @scala.inline
-  def logout: typingsSlinky.gestalt.gestaltStrings.logout = this.cast("logout")
+  def key: typingsSlinky.gestalt.gestaltStrings.key = "key".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.key]
   @scala.inline
-  def `margins-large`: typingsSlinky.gestalt.gestaltStrings.`margins-large` = this.cast("margins-large")
+  def knoop: typingsSlinky.gestalt.gestaltStrings.knoop = "knoop".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.knoop]
   @scala.inline
-  def `margins-medium`: typingsSlinky.gestalt.gestaltStrings.`margins-medium` = this.cast("margins-medium")
+  def lightbulb: typingsSlinky.gestalt.gestaltStrings.lightbulb = "lightbulb".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.lightbulb]
   @scala.inline
-  def `margins-small`: typingsSlinky.gestalt.gestaltStrings.`margins-small` = this.cast("margins-small")
+  def `lightning-bolt-circle`: typingsSlinky.gestalt.gestaltStrings.`lightning-bolt-circle` = "lightning-bolt-circle".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.`lightning-bolt-circle`]
   @scala.inline
-  def maximize: typingsSlinky.gestalt.gestaltStrings.maximize = this.cast("maximize")
+  def link: typingsSlinky.gestalt.gestaltStrings.link = "link".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.link]
   @scala.inline
-  def megaphone: typingsSlinky.gestalt.gestaltStrings.megaphone = this.cast("megaphone")
+  def location: typingsSlinky.gestalt.gestaltStrings.location = "location".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.location]
   @scala.inline
-  def menu: typingsSlinky.gestalt.gestaltStrings.menu = this.cast("menu")
+  def lock: typingsSlinky.gestalt.gestaltStrings.lock = "lock".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.lock]
   @scala.inline
-  def minimize: typingsSlinky.gestalt.gestaltStrings.minimize = this.cast("minimize")
+  def `logo-large`: typingsSlinky.gestalt.gestaltStrings.`logo-large` = "logo-large".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.`logo-large`]
   @scala.inline
-  def move: typingsSlinky.gestalt.gestaltStrings.move = this.cast("move")
+  def `logo-small`: typingsSlinky.gestalt.gestaltStrings.`logo-small` = "logo-small".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.`logo-small`]
   @scala.inline
-  def mute: typingsSlinky.gestalt.gestaltStrings.mute = this.cast("mute")
+  def logout: typingsSlinky.gestalt.gestaltStrings.logout = "logout".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.logout]
   @scala.inline
-  def `overlay-text`: typingsSlinky.gestalt.gestaltStrings.`overlay-text` = this.cast("overlay-text")
+  def `margins-large`: typingsSlinky.gestalt.gestaltStrings.`margins-large` = "margins-large".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.`margins-large`]
   @scala.inline
-  def pause: typingsSlinky.gestalt.gestaltStrings.pause = this.cast("pause")
+  def `margins-medium`: typingsSlinky.gestalt.gestaltStrings.`margins-medium` = "margins-medium".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.`margins-medium`]
   @scala.inline
-  def people: typingsSlinky.gestalt.gestaltStrings.people = this.cast("people")
+  def `margins-small`: typingsSlinky.gestalt.gestaltStrings.`margins-small` = "margins-small".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.`margins-small`]
   @scala.inline
-  def person: typingsSlinky.gestalt.gestaltStrings.person = this.cast("person")
+  def maximize: typingsSlinky.gestalt.gestaltStrings.maximize = "maximize".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.maximize]
   @scala.inline
-  def `person-add`: typingsSlinky.gestalt.gestaltStrings.`person-add` = this.cast("person-add")
+  def megaphone: typingsSlinky.gestalt.gestaltStrings.megaphone = "megaphone".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.megaphone]
   @scala.inline
-  def pin: typingsSlinky.gestalt.gestaltStrings.pin = this.cast("pin")
+  def menu: typingsSlinky.gestalt.gestaltStrings.menu = "menu".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.menu]
   @scala.inline
-  def `pin-hide`: typingsSlinky.gestalt.gestaltStrings.`pin-hide` = this.cast("pin-hide")
+  def minimize: typingsSlinky.gestalt.gestaltStrings.minimize = "minimize".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.minimize]
   @scala.inline
-  def pinterest: typingsSlinky.gestalt.gestaltStrings.pinterest = this.cast("pinterest")
+  def move: typingsSlinky.gestalt.gestaltStrings.move = "move".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.move]
   @scala.inline
-  def play: typingsSlinky.gestalt.gestaltStrings.play = this.cast("play")
+  def mute: typingsSlinky.gestalt.gestaltStrings.mute = "mute".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.mute]
   @scala.inline
-  def `question-mark`: typingsSlinky.gestalt.gestaltStrings.`question-mark` = this.cast("question-mark")
+  def `overlay-text`: typingsSlinky.gestalt.gestaltStrings.`overlay-text` = "overlay-text".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.`overlay-text`]
   @scala.inline
-  def refresh: typingsSlinky.gestalt.gestaltStrings.refresh = this.cast("refresh")
+  def pause: typingsSlinky.gestalt.gestaltStrings.pause = "pause".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.pause]
   @scala.inline
-  def remove: typingsSlinky.gestalt.gestaltStrings.remove = this.cast("remove")
+  def people: typingsSlinky.gestalt.gestaltStrings.people = "people".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.people]
   @scala.inline
-  def `reorder-images`: typingsSlinky.gestalt.gestaltStrings.`reorder-images` = this.cast("reorder-images")
+  def person: typingsSlinky.gestalt.gestaltStrings.person = "person".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.person]
   @scala.inline
-  def report: typingsSlinky.gestalt.gestaltStrings.report = this.cast("report")
+  def `person-add`: typingsSlinky.gestalt.gestaltStrings.`person-add` = "person-add".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.`person-add`]
   @scala.inline
-  def rotate: typingsSlinky.gestalt.gestaltStrings.rotate = this.cast("rotate")
+  def pin: typingsSlinky.gestalt.gestaltStrings.pin = "pin".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.pin]
   @scala.inline
-  def search: typingsSlinky.gestalt.gestaltStrings.search = this.cast("search")
+  def `pin-hide`: typingsSlinky.gestalt.gestaltStrings.`pin-hide` = "pin-hide".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.`pin-hide`]
   @scala.inline
-  def security: typingsSlinky.gestalt.gestaltStrings.security = this.cast("security")
+  def pinterest: typingsSlinky.gestalt.gestaltStrings.pinterest = "pinterest".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.pinterest]
   @scala.inline
-  def send: typingsSlinky.gestalt.gestaltStrings.send = this.cast("send")
+  def play: typingsSlinky.gestalt.gestaltStrings.play = "play".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.play]
   @scala.inline
-  def share: typingsSlinky.gestalt.gestaltStrings.share = this.cast("share")
+  def `question-mark`: typingsSlinky.gestalt.gestaltStrings.`question-mark` = "question-mark".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.`question-mark`]
   @scala.inline
-  def `shopping-bag`: typingsSlinky.gestalt.gestaltStrings.`shopping-bag` = this.cast("shopping-bag")
+  def refresh: typingsSlinky.gestalt.gestaltStrings.refresh = "refresh".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.refresh]
   @scala.inline
-  def smiley: typingsSlinky.gestalt.gestaltStrings.smiley = this.cast("smiley")
+  def remove: typingsSlinky.gestalt.gestaltStrings.remove = "remove".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.remove]
   @scala.inline
-  def `smiley-outline`: typingsSlinky.gestalt.gestaltStrings.`smiley-outline` = this.cast("smiley-outline")
+  def `reorder-images`: typingsSlinky.gestalt.gestaltStrings.`reorder-images` = "reorder-images".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.`reorder-images`]
   @scala.inline
-  def `sort-ascending`: typingsSlinky.gestalt.gestaltStrings.`sort-ascending` = this.cast("sort-ascending")
+  def replace: typingsSlinky.gestalt.gestaltStrings.replace = "replace".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.replace]
   @scala.inline
-  def `sort-descending`: typingsSlinky.gestalt.gestaltStrings.`sort-descending` = this.cast("sort-descending")
+  def report: typingsSlinky.gestalt.gestaltStrings.report = "report".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.report]
   @scala.inline
-  def sound: typingsSlinky.gestalt.gestaltStrings.sound = this.cast("sound")
+  def rotate: typingsSlinky.gestalt.gestaltStrings.rotate = "rotate".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.rotate]
   @scala.inline
-  def speech: typingsSlinky.gestalt.gestaltStrings.speech = this.cast("speech")
+  def scale: typingsSlinky.gestalt.gestaltStrings.scale = "scale".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.scale]
   @scala.inline
-  def `speech-ellipsis`: typingsSlinky.gestalt.gestaltStrings.`speech-ellipsis` = this.cast("speech-ellipsis")
+  def search: typingsSlinky.gestalt.gestaltStrings.search = "search".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.search]
   @scala.inline
-  def star: typingsSlinky.gestalt.gestaltStrings.star = this.cast("star")
+  def security: typingsSlinky.gestalt.gestaltStrings.security = "security".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.security]
   @scala.inline
-  def `switch-account`: typingsSlinky.gestalt.gestaltStrings.`switch-account` = this.cast("switch-account")
+  def send: typingsSlinky.gestalt.gestaltStrings.send = "send".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.send]
   @scala.inline
-  def tag: typingsSlinky.gestalt.gestaltStrings.tag = this.cast("tag")
+  def share: typingsSlinky.gestalt.gestaltStrings.share = "share".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.share]
   @scala.inline
-  def terms: typingsSlinky.gestalt.gestaltStrings.terms = this.cast("terms")
+  def `shopping-bag`: typingsSlinky.gestalt.gestaltStrings.`shopping-bag` = "shopping-bag".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.`shopping-bag`]
   @scala.inline
-  def `text-align-center`: typingsSlinky.gestalt.gestaltStrings.`text-align-center` = this.cast("text-align-center")
+  def smiley: typingsSlinky.gestalt.gestaltStrings.smiley = "smiley".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.smiley]
   @scala.inline
-  def `text-align-left`: typingsSlinky.gestalt.gestaltStrings.`text-align-left` = this.cast("text-align-left")
+  def `smiley-outline`: typingsSlinky.gestalt.gestaltStrings.`smiley-outline` = "smiley-outline".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.`smiley-outline`]
   @scala.inline
-  def `text-align-right`: typingsSlinky.gestalt.gestaltStrings.`text-align-right` = this.cast("text-align-right")
+  def `sort-ascending`: typingsSlinky.gestalt.gestaltStrings.`sort-ascending` = "sort-ascending".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.`sort-ascending`]
   @scala.inline
-  def `text-all-caps`: typingsSlinky.gestalt.gestaltStrings.`text-all-caps` = this.cast("text-all-caps")
+  def `sort-descending`: typingsSlinky.gestalt.gestaltStrings.`sort-descending` = "sort-descending".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.`sort-descending`]
   @scala.inline
-  def `text-extra-small`: typingsSlinky.gestalt.gestaltStrings.`text-extra-small` = this.cast("text-extra-small")
+  def sound: typingsSlinky.gestalt.gestaltStrings.sound = "sound".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.sound]
   @scala.inline
-  def `text-large`: typingsSlinky.gestalt.gestaltStrings.`text-large` = this.cast("text-large")
+  def speech: typingsSlinky.gestalt.gestaltStrings.speech = "speech".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.speech]
   @scala.inline
-  def `text-line-height`: typingsSlinky.gestalt.gestaltStrings.`text-line-height` = this.cast("text-line-height")
+  def `speech-ellipsis`: typingsSlinky.gestalt.gestaltStrings.`speech-ellipsis` = "speech-ellipsis".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.`speech-ellipsis`]
   @scala.inline
-  def `text-medium`: typingsSlinky.gestalt.gestaltStrings.`text-medium` = this.cast("text-medium")
+  def star: typingsSlinky.gestalt.gestaltStrings.star = "star".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.star]
   @scala.inline
-  def `text-sentence-case`: typingsSlinky.gestalt.gestaltStrings.`text-sentence-case` = this.cast("text-sentence-case")
+  def `switch-account`: typingsSlinky.gestalt.gestaltStrings.`switch-account` = "switch-account".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.`switch-account`]
   @scala.inline
-  def `text-size`: typingsSlinky.gestalt.gestaltStrings.`text-size` = this.cast("text-size")
+  def tag: typingsSlinky.gestalt.gestaltStrings.tag = "tag".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.tag]
   @scala.inline
-  def `text-small`: typingsSlinky.gestalt.gestaltStrings.`text-small` = this.cast("text-small")
+  def terms: typingsSlinky.gestalt.gestaltStrings.terms = "terms".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.terms]
   @scala.inline
-  def `text-spacing`: typingsSlinky.gestalt.gestaltStrings.`text-spacing` = this.cast("text-spacing")
+  def `text-align-center`: typingsSlinky.gestalt.gestaltStrings.`text-align-center` = "text-align-center".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.`text-align-center`]
   @scala.inline
-  def `trash-can`: typingsSlinky.gestalt.gestaltStrings.`trash-can` = this.cast("trash-can")
+  def `text-align-left`: typingsSlinky.gestalt.gestaltStrings.`text-align-left` = "text-align-left".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.`text-align-left`]
   @scala.inline
-  def twitter: typingsSlinky.gestalt.gestaltStrings.twitter = this.cast("twitter")
+  def `text-align-right`: typingsSlinky.gestalt.gestaltStrings.`text-align-right` = "text-align-right".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.`text-align-right`]
   @scala.inline
-  def `video-camera`: typingsSlinky.gestalt.gestaltStrings.`video-camera` = this.cast("video-camera")
+  def `text-all-caps`: typingsSlinky.gestalt.gestaltStrings.`text-all-caps` = "text-all-caps".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.`text-all-caps`]
   @scala.inline
-  def `view-type-default`: typingsSlinky.gestalt.gestaltStrings.`view-type-default` = this.cast("view-type-default")
+  def `text-extra-small`: typingsSlinky.gestalt.gestaltStrings.`text-extra-small` = "text-extra-small".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.`text-extra-small`]
   @scala.inline
-  def `view-type-dense`: typingsSlinky.gestalt.gestaltStrings.`view-type-dense` = this.cast("view-type-dense")
+  def `text-large`: typingsSlinky.gestalt.gestaltStrings.`text-large` = "text-large".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.`text-large`]
   @scala.inline
-  def `view-type-list`: typingsSlinky.gestalt.gestaltStrings.`view-type-list` = this.cast("view-type-list")
+  def `text-line-height`: typingsSlinky.gestalt.gestaltStrings.`text-line-height` = "text-line-height".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.`text-line-height`]
+  @scala.inline
+  def `text-medium`: typingsSlinky.gestalt.gestaltStrings.`text-medium` = "text-medium".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.`text-medium`]
+  @scala.inline
+  def `text-sentence-case`: typingsSlinky.gestalt.gestaltStrings.`text-sentence-case` = "text-sentence-case".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.`text-sentence-case`]
+  @scala.inline
+  def `text-size`: typingsSlinky.gestalt.gestaltStrings.`text-size` = "text-size".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.`text-size`]
+  @scala.inline
+  def `text-small`: typingsSlinky.gestalt.gestaltStrings.`text-small` = "text-small".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.`text-small`]
+  @scala.inline
+  def `text-spacing`: typingsSlinky.gestalt.gestaltStrings.`text-spacing` = "text-spacing".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.`text-spacing`]
+  @scala.inline
+  def `trash-can`: typingsSlinky.gestalt.gestaltStrings.`trash-can` = "trash-can".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.`trash-can`]
+  @scala.inline
+  def twitter: typingsSlinky.gestalt.gestaltStrings.twitter = "twitter".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.twitter]
+  @scala.inline
+  def `video-camera`: typingsSlinky.gestalt.gestaltStrings.`video-camera` = "video-camera".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.`video-camera`]
+  @scala.inline
+  def `view-type-default`: typingsSlinky.gestalt.gestaltStrings.`view-type-default` = "view-type-default".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.`view-type-default`]
+  @scala.inline
+  def `view-type-dense`: typingsSlinky.gestalt.gestaltStrings.`view-type-dense` = "view-type-dense".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.`view-type-dense`]
+  @scala.inline
+  def `view-type-list`: typingsSlinky.gestalt.gestaltStrings.`view-type-list` = "view-type-list".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.`view-type-list`]
+  @scala.inline
+  def `workflow-status-all`: typingsSlinky.gestalt.gestaltStrings.`workflow-status-all` = "workflow-status-all".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.`workflow-status-all`]
+  @scala.inline
+  def `workflow-status-halted`: typingsSlinky.gestalt.gestaltStrings.`workflow-status-halted` = "workflow-status-halted".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.`workflow-status-halted`]
+  @scala.inline
+  def `workflow-status-in-progress`: typingsSlinky.gestalt.gestaltStrings.`workflow-status-in-progress` = "workflow-status-in-progress".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.`workflow-status-in-progress`]
+  @scala.inline
+  def `workflow-status-ok`: typingsSlinky.gestalt.gestaltStrings.`workflow-status-ok` = "workflow-status-ok".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.`workflow-status-ok`]
+  @scala.inline
+  def `workflow-status-problem`: typingsSlinky.gestalt.gestaltStrings.`workflow-status-problem` = "workflow-status-problem".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.`workflow-status-problem`]
+  @scala.inline
+  def `workflow-status-unstarted`: typingsSlinky.gestalt.gestaltStrings.`workflow-status-unstarted` = "workflow-status-unstarted".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.`workflow-status-unstarted`]
+  @scala.inline
+  def `workflow-status-warning`: typingsSlinky.gestalt.gestaltStrings.`workflow-status-warning` = "workflow-status-warning".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.`workflow-status-warning`]
 }
 

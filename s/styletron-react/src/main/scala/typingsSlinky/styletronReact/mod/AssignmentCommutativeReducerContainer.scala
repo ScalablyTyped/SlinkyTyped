@@ -6,11 +6,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AssignmentCommutativeReducerContainer extends ReducerContainer {
-  var assignmentCommutative: `true`
-  var reducer: Reducer
-  var style: StyleObject
-  def factory(style: StyleObject): AssignmentCommutativeReducerContainer
+  var assignmentCommutative: `true` = js.native
+  var reducer: Reducer = js.native
+  var style: StyleObject = js.native
+  def factory(style: StyleObject): AssignmentCommutativeReducerContainer = js.native
 }
 
 object AssignmentCommutativeReducerContainer {
@@ -22,8 +23,39 @@ object AssignmentCommutativeReducerContainer {
     style: StyleObject
   ): AssignmentCommutativeReducerContainer = {
     val __obj = js.Dynamic.literal(assignmentCommutative = assignmentCommutative.asInstanceOf[js.Any], factory = js.Any.fromFunction1(factory), reducer = js.Any.fromFunction2(reducer), style = style.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[AssignmentCommutativeReducerContainer]
   }
+  @scala.inline
+  implicit class AssignmentCommutativeReducerContainerOps[Self <: AssignmentCommutativeReducerContainer] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAssignmentCommutative(value: `true`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("assignmentCommutative")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFactory(value: StyleObject => AssignmentCommutativeReducerContainer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("factory")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withReducer(value: (/* style */ StyleObject, /* props */ js.UndefOr[js.Object]) => StyleObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reducer")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withStyle(value: StyleObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

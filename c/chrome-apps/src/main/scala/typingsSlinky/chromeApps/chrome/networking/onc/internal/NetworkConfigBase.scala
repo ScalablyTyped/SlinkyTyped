@@ -24,63 +24,183 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait NetworkConfigBase[M /* <: ManagedObject */, IF /* <: InterfaceType */, OF /* <: ObjectFunction */] extends js.Object {
   /** For cellular networks, cellular network properties. */
-  var Cellular: js.UndefOr[CellularProperties[M] | CellularBase] = js.undefined
+  var Cellular: js.UndefOr[CellularProperties[M] | CellularBase] = js.native
   /** For Ethernet networks, the Ethernet network properties. */
-  var Ethernet: js.UndefOr[EthernetProperties[M] | AnonAuthentication] = js.undefined
+  var Ethernet: js.UndefOr[EthernetProperties[M] | AnonAuthentication] = js.native
   /** The network GUID. */
-  var GUID: js.UndefOr[String] = js.undefined
+  var GUID: js.UndefOr[String] = js.native
   /** The network's IP address configuration type. */
-  var IPAddressConfigType: js.UndefOr[IPConfigType | ManagedIPConfigType] = js.undefined
+  var IPAddressConfigType: js.UndefOr[IPConfigType | ManagedIPConfigType] = js.native
   /** A user friendly network name. */
-  var Name: js.UndefOr[String | ManagedDOMString] = js.undefined
+  var Name: js.UndefOr[String | ManagedDOMString] = js.native
   /** The IP configuration type for the name servers used by the network. */
-  var NameServersConfigType: js.UndefOr[IPConfigType | ManagedIPConfigType] = js.undefined
+  var NameServersConfigType: js.UndefOr[IPConfigType | ManagedIPConfigType] = js.native
   /** The network priority. */
-  var Priority: js.UndefOr[integer | ManagedLong] = js.undefined
+  var Priority: js.UndefOr[integer | ManagedLong] = js.native
   /** The network type. */
-  var Type: js.UndefOr[NetworkType] = js.undefined
+  var Type: js.UndefOr[NetworkType] = js.native
   /** For VPN networks, the network VPN properties. */
   var VPN: js.UndefOr[
     (VPNProperties[M, Boolean | ManagedBoolean, String | ManagedDOMString]) | AnonType
-  ] = js.undefined
+  ] = js.native
   /** For WiFi networks, the network WiFi properties. */
   var WiFi: js.UndefOr[
     (WiFiProperties[M, OF, Boolean | ManagedBoolean, String | ManagedDOMString, integer | ManagedLong]) | (WiFiPropertiesBase[unmanaged, String | ManagedDOMString])
-  ] = js.undefined
+  ] = js.native
   /** For WiMAX networks, the network WiMAX properties. */
-  var WiMAX: js.UndefOr[(WiMAXProperties[M, Boolean | ManagedBoolean]) | AnonSignalStrength] = js.undefined
+  var WiMAX: js.UndefOr[(WiMAXProperties[M, Boolean | ManagedBoolean]) | AnonSignalStrength] = js.native
 }
 
 object NetworkConfigBase {
   @scala.inline
-  def apply[M /* <: ManagedObject */, IF /* <: InterfaceType */, OF /* <: ObjectFunction */](
-    Cellular: CellularProperties[M] | CellularBase = null,
-    Ethernet: EthernetProperties[M] | AnonAuthentication = null,
-    GUID: String = null,
-    IPAddressConfigType: IPConfigType | ManagedIPConfigType = null,
-    Name: String | ManagedDOMString = null,
-    NameServersConfigType: IPConfigType | ManagedIPConfigType = null,
-    Priority: integer | ManagedLong = null,
-    Type: NetworkType = null,
-    VPN: (VPNProperties[M, Boolean | ManagedBoolean, String | ManagedDOMString]) | AnonType = null,
-    WiFi: (WiFiProperties[M, OF, Boolean | ManagedBoolean, String | ManagedDOMString, integer | ManagedLong]) | (WiFiPropertiesBase[unmanaged, String | ManagedDOMString]) = null,
-    WiMAX: (WiMAXProperties[M, Boolean | ManagedBoolean]) | AnonSignalStrength = null
-  ): NetworkConfigBase[M, IF, OF] = {
+  def apply[M, IF, OF](): NetworkConfigBase[M, IF, OF] = {
     val __obj = js.Dynamic.literal()
-    if (Cellular != null) __obj.updateDynamic("Cellular")(Cellular.asInstanceOf[js.Any])
-    if (Ethernet != null) __obj.updateDynamic("Ethernet")(Ethernet.asInstanceOf[js.Any])
-    if (GUID != null) __obj.updateDynamic("GUID")(GUID.asInstanceOf[js.Any])
-    if (IPAddressConfigType != null) __obj.updateDynamic("IPAddressConfigType")(IPAddressConfigType.asInstanceOf[js.Any])
-    if (Name != null) __obj.updateDynamic("Name")(Name.asInstanceOf[js.Any])
-    if (NameServersConfigType != null) __obj.updateDynamic("NameServersConfigType")(NameServersConfigType.asInstanceOf[js.Any])
-    if (Priority != null) __obj.updateDynamic("Priority")(Priority.asInstanceOf[js.Any])
-    if (Type != null) __obj.updateDynamic("Type")(Type.asInstanceOf[js.Any])
-    if (VPN != null) __obj.updateDynamic("VPN")(VPN.asInstanceOf[js.Any])
-    if (WiFi != null) __obj.updateDynamic("WiFi")(WiFi.asInstanceOf[js.Any])
-    if (WiMAX != null) __obj.updateDynamic("WiMAX")(WiMAX.asInstanceOf[js.Any])
     __obj.asInstanceOf[NetworkConfigBase[M, IF, OF]]
   }
+  @scala.inline
+  implicit class NetworkConfigBaseOps[Self[m, `if`, of] <: NetworkConfigBase[m, `if`, of], M, IF, OF] (val x: Self[M, IF, OF]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[M, IF, OF] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[M, IF, OF]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): (Self[M, IF, OF]) with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[(Self[M, IF, OF]) with Other]
+    @scala.inline
+    def withCellular(value: CellularProperties[M] | CellularBase): Self[M, IF, OF] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Cellular")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCellular: Self[M, IF, OF] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Cellular")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEthernet(value: EthernetProperties[M] | AnonAuthentication): Self[M, IF, OF] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Ethernet")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEthernet: Self[M, IF, OF] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Ethernet")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGUID(value: String): Self[M, IF, OF] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GUID")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGUID: Self[M, IF, OF] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GUID")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIPAddressConfigType(value: IPConfigType | ManagedIPConfigType): Self[M, IF, OF] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IPAddressConfigType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIPAddressConfigType: Self[M, IF, OF] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IPAddressConfigType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String | ManagedDOMString): Self[M, IF, OF] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self[M, IF, OF] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNameServersConfigType(value: IPConfigType | ManagedIPConfigType): Self[M, IF, OF] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NameServersConfigType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNameServersConfigType: Self[M, IF, OF] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NameServersConfigType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPriority(value: integer | ManagedLong): Self[M, IF, OF] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Priority")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPriority: Self[M, IF, OF] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Priority")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: NetworkType): Self[M, IF, OF] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self[M, IF, OF] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVPN(value: (VPNProperties[M, Boolean | ManagedBoolean, String | ManagedDOMString]) | AnonType): Self[M, IF, OF] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VPN")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVPN: Self[M, IF, OF] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VPN")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWiFi(
+      value: (WiFiProperties[M, OF, Boolean | ManagedBoolean, String | ManagedDOMString, integer | ManagedLong]) | (WiFiPropertiesBase[unmanaged, String | ManagedDOMString])
+    ): Self[M, IF, OF] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WiFi")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWiFi: Self[M, IF, OF] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WiFi")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWiMAX(value: (WiMAXProperties[M, Boolean | ManagedBoolean]) | AnonSignalStrength): Self[M, IF, OF] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WiMAX")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWiMAX: Self[M, IF, OF] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WiMAX")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

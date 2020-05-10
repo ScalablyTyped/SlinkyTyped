@@ -13,12 +13,10 @@ trait LayoutAlign extends js.Object
 
 object LayoutAlign {
   @scala.inline
-  def all: typingsSlinky.vegaTypings.vegaTypingsStrings.all = this.cast("all")
+  def all: typingsSlinky.vegaTypings.vegaTypingsStrings.all = "all".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.all]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def each: typingsSlinky.vegaTypings.vegaTypingsStrings.each = "each".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.each]
   @scala.inline
-  def each: typingsSlinky.vegaTypings.vegaTypingsStrings.each = this.cast("each")
-  @scala.inline
-  def none: typingsSlinky.vegaTypings.vegaTypingsStrings.none = this.cast("none")
+  def none: typingsSlinky.vegaTypings.vegaTypingsStrings.none = "none".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.none]
 }
 

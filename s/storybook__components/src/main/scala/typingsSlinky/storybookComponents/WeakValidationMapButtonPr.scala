@@ -25,32 +25,149 @@ trait WeakValidationMapButtonPr extends js.Object {
 
 object WeakValidationMapButtonPr {
   @scala.inline
-  def apply(
-    containsIcon: Validator[js.UndefOr[Boolean | Null]] = null,
-    disabled: Validator[js.UndefOr[Boolean | Null]] = null,
-    inForm: Validator[js.UndefOr[Boolean | Null]] = null,
-    isLink: Validator[js.UndefOr[Boolean | Null]] = null,
-    key: Validator[js.UndefOr[Key | Null]] = null,
-    outline: Validator[js.UndefOr[Boolean | Null]] = null,
-    primary: Validator[js.UndefOr[Boolean | Null]] = null,
-    ref: Validator[js.UndefOr[Null | Ref[_]]] = null,
-    secondary: Validator[js.UndefOr[Boolean | Null]] = null,
-    small: Validator[js.UndefOr[Boolean | Null]] = null,
-    tertiary: Validator[js.UndefOr[Boolean | Null]] = null
-  ): WeakValidationMapButtonPr = {
+  def apply(): WeakValidationMapButtonPr = {
     val __obj = js.Dynamic.literal()
-    if (containsIcon != null) __obj.updateDynamic("containsIcon")(containsIcon.asInstanceOf[js.Any])
-    if (disabled != null) __obj.updateDynamic("disabled")(disabled.asInstanceOf[js.Any])
-    if (inForm != null) __obj.updateDynamic("inForm")(inForm.asInstanceOf[js.Any])
-    if (isLink != null) __obj.updateDynamic("isLink")(isLink.asInstanceOf[js.Any])
-    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
-    if (outline != null) __obj.updateDynamic("outline")(outline.asInstanceOf[js.Any])
-    if (primary != null) __obj.updateDynamic("primary")(primary.asInstanceOf[js.Any])
-    if (ref != null) __obj.updateDynamic("ref")(ref.asInstanceOf[js.Any])
-    if (secondary != null) __obj.updateDynamic("secondary")(secondary.asInstanceOf[js.Any])
-    if (small != null) __obj.updateDynamic("small")(small.asInstanceOf[js.Any])
-    if (tertiary != null) __obj.updateDynamic("tertiary")(tertiary.asInstanceOf[js.Any])
     __obj.asInstanceOf[WeakValidationMapButtonPr]
   }
+  @scala.inline
+  implicit class WeakValidationMapButtonPrOps[Self <: WeakValidationMapButtonPr] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withContainsIcon(value: Validator[js.UndefOr[Boolean | Null]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("containsIcon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContainsIcon: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("containsIcon")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisabled(value: Validator[js.UndefOr[Boolean | Null]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInForm(value: Validator[js.UndefOr[Boolean | Null]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inForm")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInForm: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inForm")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsLink(value: Validator[js.UndefOr[Boolean | Null]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isLink")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsLink: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isLink")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKey(value: Validator[js.UndefOr[Key | Null]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOutline(value: Validator[js.UndefOr[Boolean | Null]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outline")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOutline: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outline")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrimary(value: Validator[js.UndefOr[Boolean | Null]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("primary")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrimary: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("primary")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRef(value: Validator[js.UndefOr[Null | Ref[_]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ref")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRef: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ref")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSecondary(value: Validator[js.UndefOr[Boolean | Null]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("secondary")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSecondary: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("secondary")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSmall(value: Validator[js.UndefOr[Boolean | Null]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("small")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSmall: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("small")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTertiary(value: Validator[js.UndefOr[Boolean | Null]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tertiary")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTertiary: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tertiary")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

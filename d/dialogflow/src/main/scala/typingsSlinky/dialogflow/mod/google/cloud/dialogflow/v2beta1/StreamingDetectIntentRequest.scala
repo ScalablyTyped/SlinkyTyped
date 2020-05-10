@@ -4,7 +4,6 @@ import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.protobufjs.mod.IConversionOptions
 import typingsSlinky.protobufjs.mod.Reader
 import typingsSlinky.protobufjs.mod.Writer
-import typingsSlinky.std.Uint8Array
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,7 +19,7 @@ class StreamingDetectIntentRequest () extends IStreamingDetectIntentRequest {
   def this(properties: IStreamingDetectIntentRequest) = this()
   /** StreamingDetectIntentRequest inputAudio. */
   @JSName("inputAudio")
-  var inputAudio_StreamingDetectIntentRequest: scala.scalajs.js.typedarray.Uint8Array = js.native
+  var inputAudio_StreamingDetectIntentRequest: js.typedarray.Uint8Array = js.native
   /** StreamingDetectIntentRequest session. */
   @JSName("session")
   var session_StreamingDetectIntentRequest: String = js.native
@@ -55,8 +54,8 @@ object StreamingDetectIntentRequest extends js.Object {
     */
   def decode(reader: Reader): StreamingDetectIntentRequest = js.native
   def decode(reader: Reader, length: Double): StreamingDetectIntentRequest = js.native
-  def decode(reader: Uint8Array): StreamingDetectIntentRequest = js.native
-  def decode(reader: Uint8Array, length: Double): StreamingDetectIntentRequest = js.native
+  def decode(reader: js.typedarray.Uint8Array): StreamingDetectIntentRequest = js.native
+  def decode(reader: js.typedarray.Uint8Array, length: Double): StreamingDetectIntentRequest = js.native
   /**
     * Decodes a StreamingDetectIntentRequest message from the specified reader or buffer, length delimited.
     * @param reader Reader or buffer to decode from
@@ -65,7 +64,7 @@ object StreamingDetectIntentRequest extends js.Object {
     * @throws {$protobuf.util.ProtocolError} If required fields are missing
     */
   def decodeDelimited(reader: Reader): StreamingDetectIntentRequest = js.native
-  def decodeDelimited(reader: Uint8Array): StreamingDetectIntentRequest = js.native
+  def decodeDelimited(reader: js.typedarray.Uint8Array): StreamingDetectIntentRequest = js.native
   /**
     * Encodes the specified StreamingDetectIntentRequest message. Does not implicitly {@link google.cloud.dialogflow.v2beta1.StreamingDetectIntentRequest.verify|verify} messages.
     * @param message StreamingDetectIntentRequest message or plain object to encode

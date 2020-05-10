@@ -16,7 +16,7 @@ trait DeploymentArgs extends js.Object {
   /**
     * The ID of the associated REST API
     */
-  val restApi: Input[RestApi] = js.native
+  val restApi: Input[String | RestApi] = js.native
   /**
     * The description of the stage
     */
@@ -33,19 +33,71 @@ trait DeploymentArgs extends js.Object {
 
 object DeploymentArgs {
   @scala.inline
-  def apply(
-    restApi: Input[RestApi],
-    description: Input[String] = null,
-    stageDescription: Input[String] = null,
-    stageName: Input[String] = null,
-    variables: Input[StringDictionary[Input[String]]] = null
-  ): DeploymentArgs = {
+  def apply(restApi: Input[String | RestApi]): DeploymentArgs = {
     val __obj = js.Dynamic.literal(restApi = restApi.asInstanceOf[js.Any])
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (stageDescription != null) __obj.updateDynamic("stageDescription")(stageDescription.asInstanceOf[js.Any])
-    if (stageName != null) __obj.updateDynamic("stageName")(stageName.asInstanceOf[js.Any])
-    if (variables != null) __obj.updateDynamic("variables")(variables.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeploymentArgs]
   }
+  @scala.inline
+  implicit class DeploymentArgsOps[Self <: DeploymentArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRestApi(value: Input[String | RestApi]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("restApi")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDescription(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStageDescription(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stageDescription")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStageDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stageDescription")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStageName(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stageName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStageName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stageName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVariables(value: Input[StringDictionary[Input[String]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("variables")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVariables: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("variables")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

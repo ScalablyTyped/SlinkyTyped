@@ -54,7 +54,7 @@ object FormSelect extends js.Object {
   /**
     * Init FormSelect
     */
-  def init(els: typingsSlinky.std.Element): FormSelect = js.native
-  def init(els: typingsSlinky.std.Element, options: PartialFormSelectOptions): FormSelect = js.native
+  def init(els: Element): FormSelect = js.native
+  def init(els: Element, options: PartialFormSelectOptions): FormSelect = js.native
 }
 

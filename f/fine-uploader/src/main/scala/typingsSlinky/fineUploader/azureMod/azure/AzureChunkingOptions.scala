@@ -1,49 +1,64 @@
 package typingsSlinky.fineUploader.azureMod.azure
 
 import typingsSlinky.fineUploader.coreMod.ChunkingOptions
-import typingsSlinky.fineUploader.coreMod.ConcurrentOptions
-import typingsSlinky.fineUploader.coreMod.ParamNamesOptions
-import typingsSlinky.fineUploader.coreMod.SuccessOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AzureChunkingOptions extends ChunkingOptions {
   /**
     * Files smaller than this value will not be chunked.
     *
     * @default `4000001`
     */
-  var minFileSize: js.UndefOr[Double] = js.undefined
+  var minFileSize: js.UndefOr[Double] = js.native
   /**
     * The maximum size of each part, in bytes
     *
     * @default `5242880`
     */
   @JSName("partSize")
-  var partSize_AzureChunkingOptions: js.UndefOr[Double] = js.undefined
+  var partSize_AzureChunkingOptions: js.UndefOr[Double] = js.native
 }
 
 object AzureChunkingOptions {
   @scala.inline
-  def apply(
-    concurrent: ConcurrentOptions = null,
-    enabled: js.UndefOr[Boolean] = js.undefined,
-    mandatory: js.UndefOr[Boolean] = js.undefined,
-    minFileSize: Int | Double = null,
-    paramNames: ParamNamesOptions = null,
-    partSize: Int | Double = null,
-    success: SuccessOptions = null
-  ): AzureChunkingOptions = {
+  def apply(): AzureChunkingOptions = {
     val __obj = js.Dynamic.literal()
-    if (concurrent != null) __obj.updateDynamic("concurrent")(concurrent.asInstanceOf[js.Any])
-    if (!js.isUndefined(enabled)) __obj.updateDynamic("enabled")(enabled.asInstanceOf[js.Any])
-    if (!js.isUndefined(mandatory)) __obj.updateDynamic("mandatory")(mandatory.asInstanceOf[js.Any])
-    if (minFileSize != null) __obj.updateDynamic("minFileSize")(minFileSize.asInstanceOf[js.Any])
-    if (paramNames != null) __obj.updateDynamic("paramNames")(paramNames.asInstanceOf[js.Any])
-    if (partSize != null) __obj.updateDynamic("partSize")(partSize.asInstanceOf[js.Any])
-    if (success != null) __obj.updateDynamic("success")(success.asInstanceOf[js.Any])
     __obj.asInstanceOf[AzureChunkingOptions]
   }
+  @scala.inline
+  implicit class AzureChunkingOptionsOps[Self <: AzureChunkingOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMinFileSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minFileSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinFileSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minFileSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPartSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("partSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPartSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("partSize")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

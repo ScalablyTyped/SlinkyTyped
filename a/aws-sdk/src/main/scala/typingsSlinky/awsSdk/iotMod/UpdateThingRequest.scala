@@ -30,19 +30,71 @@ trait UpdateThingRequest extends js.Object {
 
 object UpdateThingRequest {
   @scala.inline
-  def apply(
-    thingName: ThingName,
-    attributePayload: AttributePayload = null,
-    expectedVersion: Int | Double = null,
-    removeThingType: js.UndefOr[scala.Boolean] = js.undefined,
-    thingTypeName: ThingTypeName = null
-  ): UpdateThingRequest = {
+  def apply(thingName: ThingName): UpdateThingRequest = {
     val __obj = js.Dynamic.literal(thingName = thingName.asInstanceOf[js.Any])
-    if (attributePayload != null) __obj.updateDynamic("attributePayload")(attributePayload.asInstanceOf[js.Any])
-    if (expectedVersion != null) __obj.updateDynamic("expectedVersion")(expectedVersion.asInstanceOf[js.Any])
-    if (!js.isUndefined(removeThingType)) __obj.updateDynamic("removeThingType")(removeThingType.asInstanceOf[js.Any])
-    if (thingTypeName != null) __obj.updateDynamic("thingTypeName")(thingTypeName.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateThingRequest]
   }
+  @scala.inline
+  implicit class UpdateThingRequestOps[Self <: UpdateThingRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withThingName(value: ThingName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thingName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAttributePayload(value: AttributePayload): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attributePayload")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAttributePayload: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attributePayload")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExpectedVersion(value: OptionalVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expectedVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExpectedVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expectedVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRemoveThingType(value: RemoveThingType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeThingType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRemoveThingType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeThingType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withThingTypeName(value: ThingTypeName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thingTypeName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutThingTypeName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thingTypeName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

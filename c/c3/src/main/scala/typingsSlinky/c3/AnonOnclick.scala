@@ -5,42 +5,90 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonOnclick extends js.Object {
   /**
     * Set click event handler to the legend item.
     * @param id The ID of the legend item.
     */
-  var onclick: js.UndefOr[js.ThisFunction1[/* this */ ChartInternal, /* id */ String, Unit]] = js.undefined
+  var onclick: js.UndefOr[js.ThisFunction1[/* this */ ChartInternal, /* id */ String, Unit]] = js.native
   /**
     * Set mouseout event handler to the legend item.
     * @param id The ID of the legend item.
     */
-  var onmouseout: js.UndefOr[js.ThisFunction1[/* this */ ChartInternal, /* id */ String, Unit]] = js.undefined
+  var onmouseout: js.UndefOr[js.ThisFunction1[/* this */ ChartInternal, /* id */ String, Unit]] = js.native
   /**
     * Set mouseover event handler to the legend item.
     * @param id The ID of the legend item.
     */
-  var onmouseover: js.UndefOr[js.ThisFunction1[/* this */ ChartInternal, /* id */ String, Unit]] = js.undefined
+  var onmouseover: js.UndefOr[js.ThisFunction1[/* this */ ChartInternal, /* id */ String, Unit]] = js.native
   /**
     * Tile settings for legend color display.
     */
-  var tile: js.UndefOr[AnonHeight] = js.undefined
+  var tile: js.UndefOr[AnonHeight] = js.native
 }
 
 object AnonOnclick {
   @scala.inline
-  def apply(
-    onclick: js.ThisFunction1[/* this */ ChartInternal, /* id */ String, Unit] = null,
-    onmouseout: js.ThisFunction1[/* this */ ChartInternal, /* id */ String, Unit] = null,
-    onmouseover: js.ThisFunction1[/* this */ ChartInternal, /* id */ String, Unit] = null,
-    tile: AnonHeight = null
-  ): AnonOnclick = {
+  def apply(): AnonOnclick = {
     val __obj = js.Dynamic.literal()
-    if (onclick != null) __obj.updateDynamic("onclick")(onclick.asInstanceOf[js.Any])
-    if (onmouseout != null) __obj.updateDynamic("onmouseout")(onmouseout.asInstanceOf[js.Any])
-    if (onmouseover != null) __obj.updateDynamic("onmouseover")(onmouseover.asInstanceOf[js.Any])
-    if (tile != null) __obj.updateDynamic("tile")(tile.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonOnclick]
   }
+  @scala.inline
+  implicit class AnonOnclickOps[Self <: AnonOnclick] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOnclick(value: js.ThisFunction1[/* this */ ChartInternal, /* id */ String, Unit]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onclick")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnclick: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onclick")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnmouseout(value: js.ThisFunction1[/* this */ ChartInternal, /* id */ String, Unit]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onmouseout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnmouseout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onmouseout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnmouseover(value: js.ThisFunction1[/* this */ ChartInternal, /* id */ String, Unit]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onmouseover")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnmouseover: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onmouseover")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTile(value: AnonHeight): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tile")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTile: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tile")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

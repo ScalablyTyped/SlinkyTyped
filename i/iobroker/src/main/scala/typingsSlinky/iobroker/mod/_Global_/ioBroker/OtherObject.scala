@@ -15,13 +15,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait OtherObject
   extends BaseObject
-     with Object {
+     with AnyObject {
   @JSName("common")
-  var common_OtherObject: OtherCommon
+  var common_OtherObject: OtherCommon = js.native
   @JSName("type")
-  var type_OtherObject: adapter | config | enum | group | host | info | instance | meta | script | user
+  var type_OtherObject: adapter | config | enum | group | host | info | instance | meta | script | user = js.native
 }
 
 object OtherObject {
@@ -29,16 +30,32 @@ object OtherObject {
   def apply(
     _id: String,
     common: OtherCommon,
-    native: Record[String, _],
-    `type`: adapter | config | enum | group | host | info | instance | meta | script | user,
-    acl: ObjectACL = null,
-    enums: Record[String, String] = null
+    native: Record[String, ObjectField],
+    `type`: adapter | config | enum | group | host | info | instance | meta | script | user
   ): OtherObject = {
     val __obj = js.Dynamic.literal(_id = _id.asInstanceOf[js.Any], common = common.asInstanceOf[js.Any], native = native.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (acl != null) __obj.updateDynamic("acl")(acl.asInstanceOf[js.Any])
-    if (enums != null) __obj.updateDynamic("enums")(enums.asInstanceOf[js.Any])
     __obj.asInstanceOf[OtherObject]
   }
+  @scala.inline
+  implicit class OtherObjectOps[Self <: OtherObject] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCommon(value: OtherCommon): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("common")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: adapter | config | enum | group | host | info | instance | meta | script | user): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

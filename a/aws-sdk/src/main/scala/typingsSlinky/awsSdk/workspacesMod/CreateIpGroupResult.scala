@@ -14,10 +14,29 @@ trait CreateIpGroupResult extends js.Object {
 
 object CreateIpGroupResult {
   @scala.inline
-  def apply(GroupId: IpGroupId = null): CreateIpGroupResult = {
+  def apply(): CreateIpGroupResult = {
     val __obj = js.Dynamic.literal()
-    if (GroupId != null) __obj.updateDynamic("GroupId")(GroupId.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateIpGroupResult]
   }
+  @scala.inline
+  implicit class CreateIpGroupResultOps[Self <: CreateIpGroupResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGroupId(value: IpGroupId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GroupId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGroupId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GroupId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

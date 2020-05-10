@@ -5,24 +5,62 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 // tslint:disable-next-line interface-name
+@js.native
 trait IDesktopNotificationOptions extends js.Object {
-  var autoClose: js.UndefOr[Boolean] = js.undefined
-  var duration: js.UndefOr[Double] = js.undefined
-  var showOnPageHidden: js.UndefOr[Boolean] = js.undefined
+  var autoClose: js.UndefOr[Boolean] = js.native
+  var duration: js.UndefOr[Double] = js.native
+  var showOnPageHidden: js.UndefOr[Boolean] = js.native
 }
 
 object IDesktopNotificationOptions {
   @scala.inline
-  def apply(
-    autoClose: js.UndefOr[Boolean] = js.undefined,
-    duration: Int | Double = null,
-    showOnPageHidden: js.UndefOr[Boolean] = js.undefined
-  ): IDesktopNotificationOptions = {
+  def apply(): IDesktopNotificationOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(autoClose)) __obj.updateDynamic("autoClose")(autoClose.asInstanceOf[js.Any])
-    if (duration != null) __obj.updateDynamic("duration")(duration.asInstanceOf[js.Any])
-    if (!js.isUndefined(showOnPageHidden)) __obj.updateDynamic("showOnPageHidden")(showOnPageHidden.asInstanceOf[js.Any])
     __obj.asInstanceOf[IDesktopNotificationOptions]
   }
+  @scala.inline
+  implicit class IDesktopNotificationOptionsOps[Self <: IDesktopNotificationOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAutoClose(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoClose")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoClose: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoClose")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDuration(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDuration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowOnPageHidden(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showOnPageHidden")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowOnPageHidden: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showOnPageHidden")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

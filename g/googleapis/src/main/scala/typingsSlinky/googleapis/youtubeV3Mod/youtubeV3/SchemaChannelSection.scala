@@ -43,24 +43,101 @@ trait SchemaChannelSection extends js.Object {
 
 object SchemaChannelSection {
   @scala.inline
-  def apply(
-    contentDetails: SchemaChannelSectionContentDetails = null,
-    etag: String = null,
-    id: String = null,
-    kind: String = null,
-    localizations: StringDictionary[SchemaChannelSectionLocalization] = null,
-    snippet: SchemaChannelSectionSnippet = null,
-    targeting: SchemaChannelSectionTargeting = null
-  ): SchemaChannelSection = {
+  def apply(): SchemaChannelSection = {
     val __obj = js.Dynamic.literal()
-    if (contentDetails != null) __obj.updateDynamic("contentDetails")(contentDetails.asInstanceOf[js.Any])
-    if (etag != null) __obj.updateDynamic("etag")(etag.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
-    if (localizations != null) __obj.updateDynamic("localizations")(localizations.asInstanceOf[js.Any])
-    if (snippet != null) __obj.updateDynamic("snippet")(snippet.asInstanceOf[js.Any])
-    if (targeting != null) __obj.updateDynamic("targeting")(targeting.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaChannelSection]
   }
+  @scala.inline
+  implicit class SchemaChannelSectionOps[Self <: SchemaChannelSection] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withContentDetails(value: SchemaChannelSectionContentDetails): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentDetails")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContentDetails: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentDetails")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEtag(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("etag")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEtag: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("etag")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKind(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocalizations(value: StringDictionary[SchemaChannelSectionLocalization]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("localizations")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocalizations: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("localizations")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSnippet(value: SchemaChannelSectionSnippet): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("snippet")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSnippet: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("snippet")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTargeting(value: SchemaChannelSectionTargeting): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targeting")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTargeting: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targeting")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

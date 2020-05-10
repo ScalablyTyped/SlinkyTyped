@@ -1,6 +1,5 @@
 package typingsSlinky.balancedMatch.mod
 
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,8 +12,8 @@ object range extends js.Object {
     * return an array with indexes: `[ <a index>, <b index> ]`.
     */
   def apply(a: String, b: String, str: String): Output | Unit = js.native
-  def apply(a: String, b: RegExp, str: String): Output | Unit = js.native
-  def apply(a: RegExp, b: String, str: String): Output | Unit = js.native
-  def apply(a: RegExp, b: RegExp, str: String): Output | Unit = js.native
+  def apply(a: String, b: js.RegExp, str: String): Output | Unit = js.native
+  def apply(a: js.RegExp, b: String, str: String): Output | Unit = js.native
+  def apply(a: js.RegExp, b: js.RegExp, str: String): Output | Unit = js.native
 }
 

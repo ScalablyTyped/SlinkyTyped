@@ -10,5 +10,6 @@ import scala.scalajs.js.annotation._
   * Back compatibility module, new code should use windowUtils directly instead of using this module.
   * 
   */
+@js.native
 trait window extends js.Object
 

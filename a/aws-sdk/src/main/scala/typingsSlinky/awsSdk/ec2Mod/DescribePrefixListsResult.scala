@@ -18,11 +18,41 @@ trait DescribePrefixListsResult extends js.Object {
 
 object DescribePrefixListsResult {
   @scala.inline
-  def apply(NextToken: String = null, PrefixLists: PrefixListSet = null): DescribePrefixListsResult = {
+  def apply(): DescribePrefixListsResult = {
     val __obj = js.Dynamic.literal()
-    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
-    if (PrefixLists != null) __obj.updateDynamic("PrefixLists")(PrefixLists.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribePrefixListsResult]
   }
+  @scala.inline
+  implicit class DescribePrefixListsResultOps[Self <: DescribePrefixListsResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNextToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrefixLists(value: PrefixListSet): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PrefixLists")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrefixLists: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PrefixLists")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

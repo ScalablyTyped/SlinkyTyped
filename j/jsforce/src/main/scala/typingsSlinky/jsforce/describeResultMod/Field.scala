@@ -5,62 +5,63 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Field extends js.Object {
-  var aggregatable: Boolean
-  var autonumber: Boolean
-  var byteLength: Double
-  var calculated: Boolean
-  var calculatedFormula: js.UndefOr[maybe[String]] = js.undefined
-  var cascadeDelete: Boolean
-  var caseSensitive: Boolean
-  var compoundFieldName: js.UndefOr[maybe[String]] = js.undefined
-  var controllerName: js.UndefOr[maybe[String]] = js.undefined
-  var createable: Boolean
-  var custom: Boolean
-  var defaultValue: js.UndefOr[maybe[String | Boolean]] = js.undefined
-  var defaultValueFormula: js.UndefOr[maybe[String]] = js.undefined
-  var defaultedOnCreate: Boolean
-  var dependentPicklist: Boolean
-  var deprecatedAndHidden: Boolean
-  var digits: js.UndefOr[maybe[Double]] = js.undefined
-  var displayLocationInDecimal: js.UndefOr[maybe[Boolean]] = js.undefined
-  var encrypted: js.UndefOr[maybe[`true`]] = js.undefined
-  var externalId: Boolean
-  var extraTypeInfo: js.UndefOr[maybe[ExtraTypeInfo]] = js.undefined
-  var filterable: Boolean
-  var filteredLookupInfo: js.UndefOr[maybe[FilteredLookupInfo]] = js.undefined
-  var formula: js.UndefOr[maybe[String]] = js.undefined
-  var groupable: Boolean
-  var highScaleNumber: js.UndefOr[maybe[Boolean]] = js.undefined
-  var htmlFormatted: Boolean
-  var idLookup: Boolean
-  var inlineHelpText: js.UndefOr[maybe[String]] = js.undefined
-  var label: String
-  var length: Double
-  var mask: js.UndefOr[maybe[String]] = js.undefined
-  var maskType: js.UndefOr[maybe[String]] = js.undefined
-  var name: String
-  var nameField: Boolean
-  var namePointing: Boolean
-  var nillable: Boolean
-  var permissionable: Boolean
-  var picklistValues: js.UndefOr[maybe[js.Array[PicklistEntry]]] = js.undefined
-  var polymorphicForeignKey: Boolean
-  var precision: js.UndefOr[maybe[Double]] = js.undefined
-  var queryByDistance: Boolean
-  var referenceTargetField: js.UndefOr[maybe[String]] = js.undefined
-  var referenceTo: js.UndefOr[maybe[js.Array[String]]] = js.undefined
-  var relationshipName: js.UndefOr[maybe[String]] = js.undefined
-  var relationshipOrder: js.UndefOr[maybe[Double]] = js.undefined
-  var restrictedPicklist: Boolean
-  var scale: Double
-  var searchPrefilterable: Boolean
-  var soapType: SOAPType
-  var sortable: Boolean
-  var `type`: FieldType
-  var unique: Boolean
-  var updateable: Boolean
-  var writeRequiresMasterRead: js.UndefOr[maybe[Boolean]] = js.undefined
+  var aggregatable: Boolean = js.native
+  var autonumber: Boolean = js.native
+  var byteLength: Double = js.native
+  var calculated: Boolean = js.native
+  var calculatedFormula: js.UndefOr[maybe[String]] = js.native
+  var cascadeDelete: Boolean = js.native
+  var caseSensitive: Boolean = js.native
+  var compoundFieldName: js.UndefOr[maybe[String]] = js.native
+  var controllerName: js.UndefOr[maybe[String]] = js.native
+  var createable: Boolean = js.native
+  var custom: Boolean = js.native
+  var defaultValue: js.UndefOr[maybe[String | Boolean]] = js.native
+  var defaultValueFormula: js.UndefOr[maybe[String]] = js.native
+  var defaultedOnCreate: Boolean = js.native
+  var dependentPicklist: Boolean = js.native
+  var deprecatedAndHidden: Boolean = js.native
+  var digits: js.UndefOr[maybe[Double]] = js.native
+  var displayLocationInDecimal: js.UndefOr[maybe[Boolean]] = js.native
+  var encrypted: js.UndefOr[maybe[`true`]] = js.native
+  var externalId: Boolean = js.native
+  var extraTypeInfo: js.UndefOr[maybe[ExtraTypeInfo]] = js.native
+  var filterable: Boolean = js.native
+  var filteredLookupInfo: js.UndefOr[maybe[FilteredLookupInfo]] = js.native
+  var formula: js.UndefOr[maybe[String]] = js.native
+  var groupable: Boolean = js.native
+  var highScaleNumber: js.UndefOr[maybe[Boolean]] = js.native
+  var htmlFormatted: Boolean = js.native
+  var idLookup: Boolean = js.native
+  var inlineHelpText: js.UndefOr[maybe[String]] = js.native
+  var label: String = js.native
+  var length: Double = js.native
+  var mask: js.UndefOr[maybe[String]] = js.native
+  var maskType: js.UndefOr[maybe[String]] = js.native
+  var name: String = js.native
+  var nameField: Boolean = js.native
+  var namePointing: Boolean = js.native
+  var nillable: Boolean = js.native
+  var permissionable: Boolean = js.native
+  var picklistValues: js.UndefOr[maybe[js.Array[PicklistEntry]]] = js.native
+  var polymorphicForeignKey: Boolean = js.native
+  var precision: js.UndefOr[maybe[Double]] = js.native
+  var queryByDistance: Boolean = js.native
+  var referenceTargetField: js.UndefOr[maybe[String]] = js.native
+  var referenceTo: js.UndefOr[maybe[js.Array[String]]] = js.native
+  var relationshipName: js.UndefOr[maybe[String]] = js.native
+  var relationshipOrder: js.UndefOr[maybe[Double]] = js.native
+  var restrictedPicklist: Boolean = js.native
+  var scale: Double = js.native
+  var searchPrefilterable: Boolean = js.native
+  var soapType: SOAPType = js.native
+  var sortable: Boolean = js.native
+  var `type`: FieldType = js.native
+  var unique: Boolean = js.native
+  var updateable: Boolean = js.native
+  var writeRequiresMasterRead: js.UndefOr[maybe[Boolean]] = js.native
 }
 
 object Field {
@@ -98,55 +99,613 @@ object Field {
     sortable: Boolean,
     `type`: FieldType,
     unique: Boolean,
-    updateable: Boolean,
-    calculatedFormula: maybe[String] = null,
-    compoundFieldName: maybe[String] = null,
-    controllerName: maybe[String] = null,
-    defaultValue: maybe[String | Boolean] = null,
-    defaultValueFormula: maybe[String] = null,
-    digits: Int | Double = null,
-    displayLocationInDecimal: js.UndefOr[Boolean] = js.undefined,
-    encrypted: maybe[`true`] = null,
-    extraTypeInfo: maybe[ExtraTypeInfo] = null,
-    filteredLookupInfo: maybe[FilteredLookupInfo] = null,
-    formula: maybe[String] = null,
-    highScaleNumber: js.UndefOr[Boolean] = js.undefined,
-    inlineHelpText: maybe[String] = null,
-    mask: maybe[String] = null,
-    maskType: maybe[String] = null,
-    picklistValues: maybe[js.Array[PicklistEntry]] = null,
-    precision: Int | Double = null,
-    referenceTargetField: maybe[String] = null,
-    referenceTo: maybe[js.Array[String]] = null,
-    relationshipName: maybe[String] = null,
-    relationshipOrder: Int | Double = null,
-    writeRequiresMasterRead: js.UndefOr[Boolean] = js.undefined
+    updateable: Boolean
   ): Field = {
     val __obj = js.Dynamic.literal(aggregatable = aggregatable.asInstanceOf[js.Any], autonumber = autonumber.asInstanceOf[js.Any], byteLength = byteLength.asInstanceOf[js.Any], calculated = calculated.asInstanceOf[js.Any], cascadeDelete = cascadeDelete.asInstanceOf[js.Any], caseSensitive = caseSensitive.asInstanceOf[js.Any], createable = createable.asInstanceOf[js.Any], custom = custom.asInstanceOf[js.Any], defaultedOnCreate = defaultedOnCreate.asInstanceOf[js.Any], dependentPicklist = dependentPicklist.asInstanceOf[js.Any], deprecatedAndHidden = deprecatedAndHidden.asInstanceOf[js.Any], externalId = externalId.asInstanceOf[js.Any], filterable = filterable.asInstanceOf[js.Any], groupable = groupable.asInstanceOf[js.Any], htmlFormatted = htmlFormatted.asInstanceOf[js.Any], idLookup = idLookup.asInstanceOf[js.Any], label = label.asInstanceOf[js.Any], length = length.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], nameField = nameField.asInstanceOf[js.Any], namePointing = namePointing.asInstanceOf[js.Any], nillable = nillable.asInstanceOf[js.Any], permissionable = permissionable.asInstanceOf[js.Any], polymorphicForeignKey = polymorphicForeignKey.asInstanceOf[js.Any], queryByDistance = queryByDistance.asInstanceOf[js.Any], restrictedPicklist = restrictedPicklist.asInstanceOf[js.Any], scale = scale.asInstanceOf[js.Any], searchPrefilterable = searchPrefilterable.asInstanceOf[js.Any], soapType = soapType.asInstanceOf[js.Any], sortable = sortable.asInstanceOf[js.Any], unique = unique.asInstanceOf[js.Any], updateable = updateable.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (calculatedFormula != null) __obj.updateDynamic("calculatedFormula")(calculatedFormula.asInstanceOf[js.Any])
-    if (compoundFieldName != null) __obj.updateDynamic("compoundFieldName")(compoundFieldName.asInstanceOf[js.Any])
-    if (controllerName != null) __obj.updateDynamic("controllerName")(controllerName.asInstanceOf[js.Any])
-    if (defaultValue != null) __obj.updateDynamic("defaultValue")(defaultValue.asInstanceOf[js.Any])
-    if (defaultValueFormula != null) __obj.updateDynamic("defaultValueFormula")(defaultValueFormula.asInstanceOf[js.Any])
-    if (digits != null) __obj.updateDynamic("digits")(digits.asInstanceOf[js.Any])
-    if (!js.isUndefined(displayLocationInDecimal)) __obj.updateDynamic("displayLocationInDecimal")(displayLocationInDecimal.asInstanceOf[js.Any])
-    if (encrypted != null) __obj.updateDynamic("encrypted")(encrypted.asInstanceOf[js.Any])
-    if (extraTypeInfo != null) __obj.updateDynamic("extraTypeInfo")(extraTypeInfo.asInstanceOf[js.Any])
-    if (filteredLookupInfo != null) __obj.updateDynamic("filteredLookupInfo")(filteredLookupInfo.asInstanceOf[js.Any])
-    if (formula != null) __obj.updateDynamic("formula")(formula.asInstanceOf[js.Any])
-    if (!js.isUndefined(highScaleNumber)) __obj.updateDynamic("highScaleNumber")(highScaleNumber.asInstanceOf[js.Any])
-    if (inlineHelpText != null) __obj.updateDynamic("inlineHelpText")(inlineHelpText.asInstanceOf[js.Any])
-    if (mask != null) __obj.updateDynamic("mask")(mask.asInstanceOf[js.Any])
-    if (maskType != null) __obj.updateDynamic("maskType")(maskType.asInstanceOf[js.Any])
-    if (picklistValues != null) __obj.updateDynamic("picklistValues")(picklistValues.asInstanceOf[js.Any])
-    if (precision != null) __obj.updateDynamic("precision")(precision.asInstanceOf[js.Any])
-    if (referenceTargetField != null) __obj.updateDynamic("referenceTargetField")(referenceTargetField.asInstanceOf[js.Any])
-    if (referenceTo != null) __obj.updateDynamic("referenceTo")(referenceTo.asInstanceOf[js.Any])
-    if (relationshipName != null) __obj.updateDynamic("relationshipName")(relationshipName.asInstanceOf[js.Any])
-    if (relationshipOrder != null) __obj.updateDynamic("relationshipOrder")(relationshipOrder.asInstanceOf[js.Any])
-    if (!js.isUndefined(writeRequiresMasterRead)) __obj.updateDynamic("writeRequiresMasterRead")(writeRequiresMasterRead.asInstanceOf[js.Any])
     __obj.asInstanceOf[Field]
   }
+  @scala.inline
+  implicit class FieldOps[Self <: Field] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAggregatable(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aggregatable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAutonumber(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autonumber")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withByteLength(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("byteLength")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCalculated(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("calculated")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCascadeDelete(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cascadeDelete")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCaseSensitive(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("caseSensitive")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCreateable(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCustom(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("custom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDefaultedOnCreate(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultedOnCreate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDependentPicklist(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dependentPicklist")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDeprecatedAndHidden(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deprecatedAndHidden")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withExternalId(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("externalId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFilterable(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filterable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGroupable(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("groupable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHtmlFormatted(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("htmlFormatted")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIdLookup(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("idLookup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLabel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLength(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("length")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNameField(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nameField")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNamePointing(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("namePointing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNillable(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nillable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPermissionable(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("permissionable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPolymorphicForeignKey(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("polymorphicForeignKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withQueryByDistance(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("queryByDistance")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRestrictedPicklist(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("restrictedPicklist")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withScale(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scale")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSearchPrefilterable(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("searchPrefilterable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSoapType(value: SOAPType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("soapType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSortable(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sortable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: FieldType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUnique(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unique")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUpdateable(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCalculatedFormula(value: maybe[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("calculatedFormula")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCalculatedFormula: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("calculatedFormula")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCalculatedFormulaNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("calculatedFormula")(null)
+        ret
+    }
+    @scala.inline
+    def withCompoundFieldName(value: maybe[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("compoundFieldName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCompoundFieldName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("compoundFieldName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCompoundFieldNameNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("compoundFieldName")(null)
+        ret
+    }
+    @scala.inline
+    def withControllerName(value: maybe[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("controllerName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutControllerName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("controllerName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withControllerNameNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("controllerName")(null)
+        ret
+    }
+    @scala.inline
+    def withDefaultValue(value: maybe[String | Boolean]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultValueNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValue")(null)
+        ret
+    }
+    @scala.inline
+    def withDefaultValueFormula(value: maybe[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValueFormula")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultValueFormula: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValueFormula")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultValueFormulaNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValueFormula")(null)
+        ret
+    }
+    @scala.inline
+    def withDigits(value: maybe[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("digits")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDigits: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("digits")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDigitsNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("digits")(null)
+        ret
+    }
+    @scala.inline
+    def withDisplayLocationInDecimal(value: maybe[Boolean]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("displayLocationInDecimal")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisplayLocationInDecimal: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("displayLocationInDecimal")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisplayLocationInDecimalNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("displayLocationInDecimal")(null)
+        ret
+    }
+    @scala.inline
+    def withEncrypted(value: maybe[`true`]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encrypted")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEncrypted: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encrypted")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEncryptedNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encrypted")(null)
+        ret
+    }
+    @scala.inline
+    def withExtraTypeInfo(value: maybe[ExtraTypeInfo]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extraTypeInfo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExtraTypeInfo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extraTypeInfo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExtraTypeInfoNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extraTypeInfo")(null)
+        ret
+    }
+    @scala.inline
+    def withFilteredLookupInfo(value: maybe[FilteredLookupInfo]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filteredLookupInfo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFilteredLookupInfo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filteredLookupInfo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFilteredLookupInfoNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filteredLookupInfo")(null)
+        ret
+    }
+    @scala.inline
+    def withFormula(value: maybe[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formula")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFormula: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formula")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFormulaNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formula")(null)
+        ret
+    }
+    @scala.inline
+    def withHighScaleNumber(value: maybe[Boolean]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("highScaleNumber")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHighScaleNumber: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("highScaleNumber")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHighScaleNumberNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("highScaleNumber")(null)
+        ret
+    }
+    @scala.inline
+    def withInlineHelpText(value: maybe[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inlineHelpText")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInlineHelpText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inlineHelpText")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInlineHelpTextNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inlineHelpText")(null)
+        ret
+    }
+    @scala.inline
+    def withMask(value: maybe[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mask")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMask: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mask")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaskNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mask")(null)
+        ret
+    }
+    @scala.inline
+    def withMaskType(value: maybe[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maskType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaskType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maskType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaskTypeNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maskType")(null)
+        ret
+    }
+    @scala.inline
+    def withPicklistValues(value: maybe[js.Array[PicklistEntry]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("picklistValues")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPicklistValues: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("picklistValues")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPicklistValuesNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("picklistValues")(null)
+        ret
+    }
+    @scala.inline
+    def withPrecision(value: maybe[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("precision")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrecision: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("precision")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrecisionNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("precision")(null)
+        ret
+    }
+    @scala.inline
+    def withReferenceTargetField(value: maybe[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("referenceTargetField")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReferenceTargetField: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("referenceTargetField")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReferenceTargetFieldNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("referenceTargetField")(null)
+        ret
+    }
+    @scala.inline
+    def withReferenceTo(value: maybe[js.Array[String]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("referenceTo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReferenceTo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("referenceTo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReferenceToNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("referenceTo")(null)
+        ret
+    }
+    @scala.inline
+    def withRelationshipName(value: maybe[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("relationshipName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRelationshipName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("relationshipName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRelationshipNameNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("relationshipName")(null)
+        ret
+    }
+    @scala.inline
+    def withRelationshipOrder(value: maybe[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("relationshipOrder")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRelationshipOrder: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("relationshipOrder")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRelationshipOrderNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("relationshipOrder")(null)
+        ret
+    }
+    @scala.inline
+    def withWriteRequiresMasterRead(value: maybe[Boolean]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("writeRequiresMasterRead")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWriteRequiresMasterRead: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("writeRequiresMasterRead")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWriteRequiresMasterReadNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("writeRequiresMasterRead")(null)
+        ret
+    }
+  }
+  
 }
 

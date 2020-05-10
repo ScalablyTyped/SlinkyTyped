@@ -1,6 +1,5 @@
 package typingsSlinky.rxjs
 
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,11 +17,11 @@ object operatorsTimeoutWithMod extends js.Object {
     scheduler: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify SchedulerLike */ js.Any
   ): js.Any = js.native
   def timeoutWith[T](
-    due: Date,
+    due: js.Date,
     withObservable: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ObservableInput<T> */ js.Any
   ): js.Any = js.native
   def timeoutWith[T](
-    due: Date,
+    due: js.Date,
     withObservable: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ObservableInput<T> */ js.Any,
     scheduler: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify SchedulerLike */ js.Any
   ): js.Any = js.native
@@ -39,12 +38,12 @@ object operatorsTimeoutWithMod extends js.Object {
   ): js.Any = js.native
   @JSName("timeoutWith")
   def timeoutWith_TR[T, R](
-    due: Date,
+    due: js.Date,
     withObservable: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ObservableInput<R> */ js.Any
   ): js.Any = js.native
   @JSName("timeoutWith")
   def timeoutWith_TR[T, R](
-    due: Date,
+    due: js.Date,
     withObservable: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ObservableInput<R> */ js.Any,
     scheduler: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify SchedulerLike */ js.Any
   ): js.Any = js.native

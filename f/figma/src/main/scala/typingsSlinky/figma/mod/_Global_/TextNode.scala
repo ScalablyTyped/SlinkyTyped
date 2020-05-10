@@ -1,5 +1,7 @@
 package typingsSlinky.figma.mod._Global_
 
+import typingsSlinky.figma.figmaStrings.AFTER
+import typingsSlinky.figma.figmaStrings.BEFORE
 import typingsSlinky.figma.figmaStrings.BOTTOM
 import typingsSlinky.figma.figmaStrings.CENTER
 import typingsSlinky.figma.figmaStrings.HEIGHT
@@ -41,6 +43,7 @@ trait TextNode
   var textDecoration: TextDecoration | js.Symbol = js.native
   var textStyleId: String | js.Symbol = js.native
   val `type`: TEXT = js.native
+  def deleteCharacters(start: Double, end: Double): Unit = js.native
   def getRangeFillStyleId(start: Double, end: Double): String | js.Symbol = js.native
   def getRangeFills(start: Double, end: Double): js.Array[Paint] | js.Symbol = js.native
   def getRangeFontName(start: Double, end: Double): FontName | js.Symbol = js.native
@@ -50,6 +53,11 @@ trait TextNode
   def getRangeTextCase(start: Double, end: Double): TextCase | js.Symbol = js.native
   def getRangeTextDecoration(start: Double, end: Double): TextDecoration | js.Symbol = js.native
   def getRangeTextStyleId(start: Double, end: Double): String | js.Symbol = js.native
+  def insertCharacters(start: Double, characters: String): Unit = js.native
+  @JSName("insertCharacters")
+  def insertCharacters_AFTER(start: Double, characters: String, useStyle: AFTER): Unit = js.native
+  @JSName("insertCharacters")
+  def insertCharacters_BEFORE(start: Double, characters: String, useStyle: BEFORE): Unit = js.native
   def setRangeFillStyleId(start: Double, end: Double, value: String): Unit = js.native
   def setRangeFills(start: Double, end: Double, value: js.Array[Paint]): Unit = js.native
   def setRangeFontName(start: Double, end: Double, value: FontName): Unit = js.native

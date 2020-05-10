@@ -16,18 +16,16 @@ trait TreemapMethod extends js.Object
 
 object TreemapMethod {
   @scala.inline
-  def binary: typingsSlinky.vegaTypings.vegaTypingsStrings.binary = this.cast("binary")
+  def binary: typingsSlinky.vegaTypings.vegaTypingsStrings.binary = "binary".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.binary]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def dice: typingsSlinky.vegaTypings.vegaTypingsStrings.dice = "dice".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.dice]
   @scala.inline
-  def dice: typingsSlinky.vegaTypings.vegaTypingsStrings.dice = this.cast("dice")
+  def resquarify: typingsSlinky.vegaTypings.vegaTypingsStrings.resquarify = "resquarify".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.resquarify]
   @scala.inline
-  def resquarify: typingsSlinky.vegaTypings.vegaTypingsStrings.resquarify = this.cast("resquarify")
+  def slice: typingsSlinky.vegaTypings.vegaTypingsStrings.slice = "slice".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.slice]
   @scala.inline
-  def slice: typingsSlinky.vegaTypings.vegaTypingsStrings.slice = this.cast("slice")
+  def slicedice: typingsSlinky.vegaTypings.vegaTypingsStrings.slicedice = "slicedice".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.slicedice]
   @scala.inline
-  def slicedice: typingsSlinky.vegaTypings.vegaTypingsStrings.slicedice = this.cast("slicedice")
-  @scala.inline
-  def squarify: typingsSlinky.vegaTypings.vegaTypingsStrings.squarify = this.cast("squarify")
+  def squarify: typingsSlinky.vegaTypings.vegaTypingsStrings.squarify = "squarify".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.squarify]
 }
 

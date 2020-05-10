@@ -18,14 +18,41 @@ trait ThingTypeProperties extends js.Object {
 
 object ThingTypeProperties {
   @scala.inline
-  def apply(
-    searchableAttributes: SearchableAttributes = null,
-    thingTypeDescription: ThingTypeDescription = null
-  ): ThingTypeProperties = {
+  def apply(): ThingTypeProperties = {
     val __obj = js.Dynamic.literal()
-    if (searchableAttributes != null) __obj.updateDynamic("searchableAttributes")(searchableAttributes.asInstanceOf[js.Any])
-    if (thingTypeDescription != null) __obj.updateDynamic("thingTypeDescription")(thingTypeDescription.asInstanceOf[js.Any])
     __obj.asInstanceOf[ThingTypeProperties]
   }
+  @scala.inline
+  implicit class ThingTypePropertiesOps[Self <: ThingTypeProperties] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSearchableAttributes(value: SearchableAttributes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("searchableAttributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSearchableAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("searchableAttributes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withThingTypeDescription(value: ThingTypeDescription): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thingTypeDescription")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutThingTypeDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thingTypeDescription")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -26,29 +26,30 @@ import scala.scalajs.js.annotation._
 
 /* Inlined parent ast-types.ast-types/types.Omit<ast-types.ast-types/gen/namedTypes.namedTypes.Node, 'type'> */
 /* Inlined parent ast-types.ast-types/types.Omit<ast-types.ast-types/gen/namedTypes.namedTypes.Function, 'type' | 'params' | 'body' | 'generator' | 'async'> */
+@js.native
 trait ObjectMethod
   extends ASTNode
      with FunctionKind
      with NodeKind
      with PrintableKind {
-  var accessibility: js.UndefOr[LiteralKind | Null] = js.undefined
-  var async: js.UndefOr[Boolean] = js.undefined
-  var body: BlockStatementKind
-  var comments: js.UndefOr[js.Array[CommentKind]] = js.undefined
-  var computed: js.UndefOr[Boolean] = js.undefined
-  var decorators: js.UndefOr[js.Array[DecoratorKind] | Null] = js.undefined
-  var defaults: js.UndefOr[js.Array[ExpressionKind | Null]] = js.undefined
-  var expression: js.UndefOr[Boolean] = js.undefined
-  var generator: js.UndefOr[Boolean] = js.undefined
-  var id: js.UndefOr[IdentifierKind] = js.undefined
-  var key: LiteralKind | IdentifierKind | ExpressionKind
-  var kind: method | get | set
-  var loc: js.UndefOr[SourceLocationKind] = js.undefined
-  var params: js.Array[PatternKind]
-  var rest: js.UndefOr[IdentifierKind] = js.undefined
-  var returnType: js.UndefOr[TypeAnnotationKind | TSTypeAnnotationKind] = js.undefined
-  var `type`: typingsSlinky.astTypes.astTypesStrings.ObjectMethod
-  var typeParameters: js.UndefOr[TypeParameterDeclarationKind | TSTypeParameterDeclarationKind] = js.undefined
+  var accessibility: js.UndefOr[LiteralKind | Null] = js.native
+  var async: js.UndefOr[Boolean] = js.native
+  var body: BlockStatementKind = js.native
+  var comments: js.UndefOr[js.Array[CommentKind]] = js.native
+  var computed: js.UndefOr[Boolean] = js.native
+  var decorators: js.UndefOr[js.Array[DecoratorKind] | Null] = js.native
+  var defaults: js.UndefOr[js.Array[ExpressionKind | Null]] = js.native
+  var expression: js.UndefOr[Boolean] = js.native
+  var generator: js.UndefOr[Boolean] = js.native
+  var id: js.UndefOr[IdentifierKind] = js.native
+  var key: LiteralKind | IdentifierKind | ExpressionKind = js.native
+  var kind: method | get | set = js.native
+  var loc: js.UndefOr[SourceLocationKind] = js.native
+  var params: js.Array[PatternKind] = js.native
+  var rest: js.UndefOr[IdentifierKind] = js.native
+  var returnType: js.UndefOr[TypeAnnotationKind | TSTypeAnnotationKind] = js.native
+  var `type`: typingsSlinky.astTypes.astTypesStrings.ObjectMethod = js.native
+  var typeParameters: js.UndefOr[TypeParameterDeclarationKind | TSTypeParameterDeclarationKind] = js.native
 }
 
 @JSImport("ast-types/gen/namedTypes", "namedTypes.ObjectMethod")

@@ -6,9 +6,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ViewTargetActionSupport extends js.Object {
-  var actionContext: js.Any
-  var target: js.Any
+  var actionContext: js.Any = js.native
+  var target: js.Any = js.native
 }
 
 @JSImport("ember", "Ember.ViewTargetActionSupport")

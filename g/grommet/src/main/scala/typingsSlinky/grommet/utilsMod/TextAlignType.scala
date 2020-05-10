@@ -13,12 +13,10 @@ trait TextAlignType extends js.Object
 
 object TextAlignType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def center: typingsSlinky.grommet.grommetStrings.center = "center".asInstanceOf[typingsSlinky.grommet.grommetStrings.center]
   @scala.inline
-  def center: typingsSlinky.grommet.grommetStrings.center = this.cast("center")
+  def end: typingsSlinky.grommet.grommetStrings.end = "end".asInstanceOf[typingsSlinky.grommet.grommetStrings.end]
   @scala.inline
-  def end: typingsSlinky.grommet.grommetStrings.end = this.cast("end")
-  @scala.inline
-  def start: typingsSlinky.grommet.grommetStrings.start = this.cast("start")
+  def start: typingsSlinky.grommet.grommetStrings.start = "start".asInstanceOf[typingsSlinky.grommet.grommetStrings.start]
 }
 

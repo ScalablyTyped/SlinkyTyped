@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait UpdateUserRequest extends js.Object {
   /**
-    * Amazon WorkDocs authentication token. Do not set this field when using administrative API actions, as in accessing the API using AWS credentials.
+    * Amazon WorkDocs authentication token. Not required when using AWS administrator credentials to access the API.
     */
   var AuthenticationToken: js.UndefOr[AuthenticationHeaderType] = js.native
   /**
@@ -46,27 +46,119 @@ trait UpdateUserRequest extends js.Object {
 
 object UpdateUserRequest {
   @scala.inline
-  def apply(
-    UserId: IdType,
-    AuthenticationToken: AuthenticationHeaderType = null,
-    GivenName: UserAttributeValueType = null,
-    GrantPoweruserPrivileges: BooleanEnumType = null,
-    Locale: LocaleType = null,
-    StorageRule: StorageRuleType = null,
-    Surname: UserAttributeValueType = null,
-    TimeZoneId: TimeZoneIdType = null,
-    Type: UserType = null
-  ): UpdateUserRequest = {
+  def apply(UserId: IdType): UpdateUserRequest = {
     val __obj = js.Dynamic.literal(UserId = UserId.asInstanceOf[js.Any])
-    if (AuthenticationToken != null) __obj.updateDynamic("AuthenticationToken")(AuthenticationToken.asInstanceOf[js.Any])
-    if (GivenName != null) __obj.updateDynamic("GivenName")(GivenName.asInstanceOf[js.Any])
-    if (GrantPoweruserPrivileges != null) __obj.updateDynamic("GrantPoweruserPrivileges")(GrantPoweruserPrivileges.asInstanceOf[js.Any])
-    if (Locale != null) __obj.updateDynamic("Locale")(Locale.asInstanceOf[js.Any])
-    if (StorageRule != null) __obj.updateDynamic("StorageRule")(StorageRule.asInstanceOf[js.Any])
-    if (Surname != null) __obj.updateDynamic("Surname")(Surname.asInstanceOf[js.Any])
-    if (TimeZoneId != null) __obj.updateDynamic("TimeZoneId")(TimeZoneId.asInstanceOf[js.Any])
-    if (Type != null) __obj.updateDynamic("Type")(Type.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateUserRequest]
   }
+  @scala.inline
+  implicit class UpdateUserRequestOps[Self <: UpdateUserRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withUserId(value: IdType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UserId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAuthenticationToken(value: AuthenticationHeaderType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AuthenticationToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAuthenticationToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AuthenticationToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGivenName(value: UserAttributeValueType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GivenName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGivenName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GivenName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGrantPoweruserPrivileges(value: BooleanEnumType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GrantPoweruserPrivileges")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGrantPoweruserPrivileges: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GrantPoweruserPrivileges")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocale(value: LocaleType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Locale")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocale: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Locale")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStorageRule(value: StorageRuleType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StorageRule")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStorageRule: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StorageRule")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSurname(value: UserAttributeValueType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Surname")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSurname: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Surname")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimeZoneId(value: TimeZoneIdType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TimeZoneId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimeZoneId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TimeZoneId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: UserType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

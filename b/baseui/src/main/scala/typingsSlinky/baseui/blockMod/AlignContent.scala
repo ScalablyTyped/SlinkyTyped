@@ -28,42 +28,40 @@ trait AlignContent extends js.Object
 
 object AlignContent {
   @scala.inline
-  def baseline: typingsSlinky.baseui.baseuiStrings.baseline = this.cast("baseline")
+  def baseline: typingsSlinky.baseui.baseuiStrings.baseline = "baseline".asInstanceOf[typingsSlinky.baseui.baseuiStrings.baseline]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def center: typingsSlinky.baseui.baseuiStrings.center = "center".asInstanceOf[typingsSlinky.baseui.baseuiStrings.center]
   @scala.inline
-  def center: typingsSlinky.baseui.baseuiStrings.center = this.cast("center")
+  def end: typingsSlinky.baseui.baseuiStrings.end = "end".asInstanceOf[typingsSlinky.baseui.baseuiStrings.end]
   @scala.inline
-  def end: typingsSlinky.baseui.baseuiStrings.end = this.cast("end")
+  def `first baseline`: typingsSlinky.baseui.baseuiStrings.`first baseline` = ("first baseline").asInstanceOf[typingsSlinky.baseui.baseuiStrings.`first baseline`]
   @scala.inline
-  def `first baseline`: typingsSlinky.baseui.baseuiStrings.`first baseline` = this.cast("first baseline")
+  def `flex-end`: typingsSlinky.baseui.baseuiStrings.`flex-end` = "flex-end".asInstanceOf[typingsSlinky.baseui.baseuiStrings.`flex-end`]
   @scala.inline
-  def `flex-end`: typingsSlinky.baseui.baseuiStrings.`flex-end` = this.cast("flex-end")
+  def `flex-start`: typingsSlinky.baseui.baseuiStrings.`flex-start` = "flex-start".asInstanceOf[typingsSlinky.baseui.baseuiStrings.`flex-start`]
   @scala.inline
-  def `flex-start`: typingsSlinky.baseui.baseuiStrings.`flex-start` = this.cast("flex-start")
+  def inherit: typingsSlinky.baseui.baseuiStrings.inherit = "inherit".asInstanceOf[typingsSlinky.baseui.baseuiStrings.inherit]
   @scala.inline
-  def inherit: typingsSlinky.baseui.baseuiStrings.inherit = this.cast("inherit")
+  def initial: typingsSlinky.baseui.baseuiStrings.initial = "initial".asInstanceOf[typingsSlinky.baseui.baseuiStrings.initial]
   @scala.inline
-  def initial: typingsSlinky.baseui.baseuiStrings.initial = this.cast("initial")
+  def `last baseline`: typingsSlinky.baseui.baseuiStrings.`last baseline` = ("last baseline").asInstanceOf[typingsSlinky.baseui.baseuiStrings.`last baseline`]
   @scala.inline
-  def `last baseline`: typingsSlinky.baseui.baseuiStrings.`last baseline` = this.cast("last baseline")
+  def normal: typingsSlinky.baseui.baseuiStrings.normal = "normal".asInstanceOf[typingsSlinky.baseui.baseuiStrings.normal]
   @scala.inline
-  def normal: typingsSlinky.baseui.baseuiStrings.normal = this.cast("normal")
+  def `safe center`: typingsSlinky.baseui.baseuiStrings.`safe center` = ("safe center").asInstanceOf[typingsSlinky.baseui.baseuiStrings.`safe center`]
   @scala.inline
-  def `safe center`: typingsSlinky.baseui.baseuiStrings.`safe center` = this.cast("safe center")
+  def `space-around`: typingsSlinky.baseui.baseuiStrings.`space-around` = "space-around".asInstanceOf[typingsSlinky.baseui.baseuiStrings.`space-around`]
   @scala.inline
-  def `space-around`: typingsSlinky.baseui.baseuiStrings.`space-around` = this.cast("space-around")
+  def `space-between`: typingsSlinky.baseui.baseuiStrings.`space-between` = "space-between".asInstanceOf[typingsSlinky.baseui.baseuiStrings.`space-between`]
   @scala.inline
-  def `space-between`: typingsSlinky.baseui.baseuiStrings.`space-between` = this.cast("space-between")
+  def `space-evenly`: typingsSlinky.baseui.baseuiStrings.`space-evenly` = "space-evenly".asInstanceOf[typingsSlinky.baseui.baseuiStrings.`space-evenly`]
   @scala.inline
-  def `space-evenly`: typingsSlinky.baseui.baseuiStrings.`space-evenly` = this.cast("space-evenly")
+  def start: typingsSlinky.baseui.baseuiStrings.start = "start".asInstanceOf[typingsSlinky.baseui.baseuiStrings.start]
   @scala.inline
-  def start: typingsSlinky.baseui.baseuiStrings.start = this.cast("start")
+  def stretch: typingsSlinky.baseui.baseuiStrings.stretch = "stretch".asInstanceOf[typingsSlinky.baseui.baseuiStrings.stretch]
   @scala.inline
-  def stretch: typingsSlinky.baseui.baseuiStrings.stretch = this.cast("stretch")
+  def `unsafe center`: typingsSlinky.baseui.baseuiStrings.`unsafe center` = ("unsafe center").asInstanceOf[typingsSlinky.baseui.baseuiStrings.`unsafe center`]
   @scala.inline
-  def `unsafe center`: typingsSlinky.baseui.baseuiStrings.`unsafe center` = this.cast("unsafe center")
-  @scala.inline
-  def unset: typingsSlinky.baseui.baseuiStrings.unset = this.cast("unset")
+  def unset: typingsSlinky.baseui.baseuiStrings.unset = "unset".asInstanceOf[typingsSlinky.baseui.baseuiStrings.unset]
 }
 

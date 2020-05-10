@@ -5,6 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait kernel extends js.Object {
   /**
     * Current version of the ArcGIS API for JavaScript.
@@ -18,7 +19,7 @@ trait kernel extends js.Object {
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-kernel.html#version)
     */
-  val version: String
+  val version: String = js.native
 }
 
 @JSGlobal("__esri.kernel")

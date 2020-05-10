@@ -1,38 +1,42 @@
 package typingsSlinky.jupyterlabExtensionmanager.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.jupyterlabExtensionmanager.widgetMod.CollapsibleSection.IProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object CollapsibleSection
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.jupyterlabExtensionmanager.mod.CollapsibleSection] {
+object CollapsibleSection {
   @JSImport("@jupyterlab/extensionmanager", "CollapsibleSection")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    header: String,
-    errorMessage: String = null,
-    headerElements: TagMod[Any] = null,
-    isOpen: js.UndefOr[Boolean] = js.undefined,
-    onCollapse: /* isOpen */ Boolean => Unit = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.jupyterlabExtensionmanager.mod.CollapsibleSection] = {
-    val __obj = js.Dynamic.literal(header = header.asInstanceOf[js.Any])
-    if (errorMessage != null) __obj.updateDynamic("errorMessage")(errorMessage.asInstanceOf[js.Any])
-    if (headerElements != null) __obj.updateDynamic("headerElements")(headerElements.asInstanceOf[js.Any])
-    if (!js.isUndefined(isOpen)) __obj.updateDynamic("isOpen")(isOpen.asInstanceOf[js.Any])
-    if (onCollapse != null) __obj.updateDynamic("onCollapse")(js.Any.fromFunction1(onCollapse))
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.jupyterlabExtensionmanager.mod.CollapsibleSection] {
+    @scala.inline
+    def errorMessage(value: String): this.type = set("errorMessage", value.asInstanceOf[js.Any])
+    @scala.inline
+    def errorMessageNull: this.type = set("errorMessage", null)
+    @scala.inline
+    def headerElementsReactElement(value: ReactElement): this.type = set("headerElements", value.asInstanceOf[js.Any])
+    @scala.inline
+    def headerElements(value: TagMod[Any]): this.type = set("headerElements", value.asInstanceOf[js.Any])
+    @scala.inline
+    def isOpen(value: Boolean): this.type = set("isOpen", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onCollapse(value: /* isOpen */ Boolean => Unit): this.type = set("onCollapse", js.Any.fromFunction1(value))
   }
-  type Props = IProperties
+  
+  def withProps(p: IProperties): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(header: String): Builder = {
+    val __props = js.Dynamic.literal(header = header.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[IProperties]))
+  }
 }
 

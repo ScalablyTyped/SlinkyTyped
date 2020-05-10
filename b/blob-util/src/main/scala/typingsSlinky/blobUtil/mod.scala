@@ -1,8 +1,8 @@
 package typingsSlinky.blobUtil
 
 import org.scalajs.dom.raw.Blob
+import org.scalajs.dom.raw.BlobPropertyBag
 import org.scalajs.dom.raw.HTMLCanvasElement
-import typingsSlinky.std.BlobPropertyBag
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,15 +10,15 @@ import scala.scalajs.js.annotation._
 @JSImport("blob-util", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
-  def arrayBufferToBinaryString(buffer: scala.scalajs.js.typedarray.ArrayBuffer): String = js.native
-  def arrayBufferToBlob(buffer: scala.scalajs.js.typedarray.ArrayBuffer): Blob = js.native
-  def arrayBufferToBlob(buffer: scala.scalajs.js.typedarray.ArrayBuffer, `type`: String): Blob = js.native
+  def arrayBufferToBinaryString(buffer: js.typedarray.ArrayBuffer): String = js.native
+  def arrayBufferToBlob(buffer: js.typedarray.ArrayBuffer): Blob = js.native
+  def arrayBufferToBlob(buffer: js.typedarray.ArrayBuffer, `type`: String): Blob = js.native
   def base64StringToBlob(base64: String): Blob = js.native
   def base64StringToBlob(base64: String, `type`: String): Blob = js.native
-  def binaryStringToArrayBuffer(binary: String): scala.scalajs.js.typedarray.ArrayBuffer = js.native
+  def binaryStringToArrayBuffer(binary: String): js.typedarray.ArrayBuffer = js.native
   def binaryStringToBlob(binary: String): Blob = js.native
   def binaryStringToBlob(binary: String, `type`: String): Blob = js.native
-  def blobToArrayBuffer(blob: Blob): js.Promise[scala.scalajs.js.typedarray.ArrayBuffer] = js.native
+  def blobToArrayBuffer(blob: Blob): js.Promise[js.typedarray.ArrayBuffer] = js.native
   def blobToBase64String(blob: Blob): js.Promise[String] = js.native
   def blobToBinaryString(blob: Blob): js.Promise[String] = js.native
   def blobToDataURL(blob: Blob): js.Promise[String] = js.native

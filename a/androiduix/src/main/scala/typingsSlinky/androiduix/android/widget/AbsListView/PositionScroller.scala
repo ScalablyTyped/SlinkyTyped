@@ -1,6 +1,6 @@
 package typingsSlinky.androiduix.android.widget.AbsListView
 
-import typingsSlinky.androiduix.java.lang.Runnable
+import typingsSlinky.androiduix.java_.lang.Runnable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,8 +19,6 @@ class PositionScroller protected () extends Runnable {
   var mTargetPos: js.Any = js.native
   /* private */ def _start_1(position: js.Any): js.Any = js.native
   /* private */ def _start_2(position: js.Any, boundPosition: js.Any): js.Any = js.native
-  /* CompleteClass */
-  override def run(): js.Any = js.native
   /* private */ def scrollToVisible(targetPos: js.Any, boundPos: js.Any, duration: js.Any): js.Any = js.native
   def start(position: Double): Unit = js.native
   def start(position: Double, boundPosition: Double): Unit = js.native

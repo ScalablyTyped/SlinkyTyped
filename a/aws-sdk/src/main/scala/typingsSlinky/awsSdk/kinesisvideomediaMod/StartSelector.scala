@@ -26,17 +26,59 @@ trait StartSelector extends js.Object {
 
 object StartSelector {
   @scala.inline
-  def apply(
-    StartSelectorType: StartSelectorType,
-    AfterFragmentNumber: FragmentNumberString = null,
-    ContinuationToken: ContinuationToken = null,
-    StartTimestamp: js.Date = null
-  ): StartSelector = {
+  def apply(StartSelectorType: StartSelectorType): StartSelector = {
     val __obj = js.Dynamic.literal(StartSelectorType = StartSelectorType.asInstanceOf[js.Any])
-    if (AfterFragmentNumber != null) __obj.updateDynamic("AfterFragmentNumber")(AfterFragmentNumber.asInstanceOf[js.Any])
-    if (ContinuationToken != null) __obj.updateDynamic("ContinuationToken")(ContinuationToken.asInstanceOf[js.Any])
-    if (StartTimestamp != null) __obj.updateDynamic("StartTimestamp")(StartTimestamp.asInstanceOf[js.Any])
     __obj.asInstanceOf[StartSelector]
   }
+  @scala.inline
+  implicit class StartSelectorOps[Self <: StartSelector] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withStartSelectorType(value: StartSelectorType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StartSelectorType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAfterFragmentNumber(value: FragmentNumberString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AfterFragmentNumber")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAfterFragmentNumber: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AfterFragmentNumber")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContinuationToken(value: ContinuationToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ContinuationToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContinuationToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ContinuationToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartTimestamp(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StartTimestamp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartTimestamp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StartTimestamp")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

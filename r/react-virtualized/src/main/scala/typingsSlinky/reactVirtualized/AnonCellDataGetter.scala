@@ -10,24 +10,25 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonCellDataGetter extends js.Object {
-  var `aria-label`: Requireable[String]
-  var cellDataGetter: Requireable[TableCellDataGetter]
-  var cellRenderer: Requireable[TableCellRenderer]
-  var className: Requireable[String]
-  var columnData: Requireable[js.Object]
-  var dataKey: Validator[String]
-  var disableSort: Requireable[Boolean]
-  var flexGrow: Requireable[Double]
-  var flexShrink: Requireable[Double]
-  var headerClassName: Requireable[String]
-  var headerRenderer: Validator[TableHeaderRowRenderer]
-  var id: Requireable[String]
-  var label: Requireable[String]
-  var maxWidth: Requireable[Double]
-  var minWidth: Requireable[Double]
-  var style: Requireable[CSSProperties]
-  var width: Validator[Double]
+  var `aria-label`: Requireable[String] = js.native
+  var cellDataGetter: Requireable[TableCellDataGetter] = js.native
+  var cellRenderer: Requireable[TableCellRenderer] = js.native
+  var className: Requireable[String] = js.native
+  var columnData: Requireable[js.Object] = js.native
+  var dataKey: Validator[String] = js.native
+  var disableSort: Requireable[Boolean] = js.native
+  var flexGrow: Requireable[Double] = js.native
+  var flexShrink: Requireable[Double] = js.native
+  var headerClassName: Requireable[String] = js.native
+  var headerRenderer: Validator[TableHeaderRowRenderer] = js.native
+  var id: Requireable[String] = js.native
+  var label: Requireable[String] = js.native
+  var maxWidth: Requireable[Double] = js.native
+  var minWidth: Requireable[Double] = js.native
+  var style: Requireable[CSSProperties] = js.native
+  var width: Validator[Double] = js.native
 }
 
 object AnonCellDataGetter {
@@ -55,5 +56,115 @@ object AnonCellDataGetter {
     __obj.updateDynamic("aria-label")(`aria-label`.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonCellDataGetter]
   }
+  @scala.inline
+  implicit class AnonCellDataGetterOps[Self <: AnonCellDataGetter] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def `withAria-label`(value: Requireable[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-label")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCellDataGetter(value: Requireable[TableCellDataGetter]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellDataGetter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCellRenderer(value: Requireable[TableCellRenderer]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellRenderer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withClassName(value: Requireable[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withColumnData(value: Requireable[js.Object]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDataKey(value: Validator[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDisableSort(value: Requireable[Boolean]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableSort")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFlexGrow(value: Requireable[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("flexGrow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFlexShrink(value: Requireable[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("flexShrink")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHeaderClassName(value: Requireable[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headerClassName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHeaderRenderer(value: Validator[TableHeaderRowRenderer]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headerRenderer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withId(value: Requireable[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLabel(value: Requireable[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMaxWidth(value: Requireable[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMinWidth(value: Requireable[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStyle(value: Requireable[CSSProperties]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withWidth(value: Validator[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

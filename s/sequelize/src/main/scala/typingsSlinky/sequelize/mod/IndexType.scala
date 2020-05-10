@@ -13,12 +13,10 @@ trait IndexType extends js.Object
 
 object IndexType {
   @scala.inline
-  def FULLTEXT: typingsSlinky.sequelize.sequelizeStrings.FULLTEXT = this.cast("FULLTEXT")
+  def FULLTEXT: typingsSlinky.sequelize.sequelizeStrings.FULLTEXT = "FULLTEXT".asInstanceOf[typingsSlinky.sequelize.sequelizeStrings.FULLTEXT]
   @scala.inline
-  def SPATIAL: typingsSlinky.sequelize.sequelizeStrings.SPATIAL = this.cast("SPATIAL")
+  def SPATIAL: typingsSlinky.sequelize.sequelizeStrings.SPATIAL = "SPATIAL".asInstanceOf[typingsSlinky.sequelize.sequelizeStrings.SPATIAL]
   @scala.inline
-  def UNIQUE: typingsSlinky.sequelize.sequelizeStrings.UNIQUE = this.cast("UNIQUE")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def UNIQUE: typingsSlinky.sequelize.sequelizeStrings.UNIQUE = "UNIQUE".asInstanceOf[typingsSlinky.sequelize.sequelizeStrings.UNIQUE]
 }
 

@@ -1,36 +1,28 @@
 package typingsSlinky.atlaskitFeedbackCollector.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.atlaskitFeedbackCollector.mod.FeedbackFlagProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object FeedbackFlag
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.atlaskitFeedbackCollector.mod.FeedbackFlag] {
+object FeedbackFlag {
   @JSImport("@atlaskit/feedback-collector", "FeedbackFlag")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    isDismissAllowed: js.UndefOr[Boolean] = js.undefined,
-    onDismissed: /* repeated */ js.Any => _ = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.atlaskitFeedbackCollector.mod.FeedbackFlag] = {
-    val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(isDismissAllowed)) __obj.updateDynamic("isDismissAllowed")(isDismissAllowed.asInstanceOf[js.Any])
-    if (onDismissed != null) __obj.updateDynamic("onDismissed")(js.Any.fromFunction1(onDismissed))
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.atlaskitFeedbackCollector.mod.FeedbackFlag] {
+    @scala.inline
+    def isDismissAllowed(value: Boolean): this.type = set("isDismissAllowed", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onDismissed(value: /* repeated */ js.Any => _): this.type = set("onDismissed", js.Any.fromFunction1(value))
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.atlaskitFeedbackCollector.mod.FeedbackFlag] = new slinky.core.BuildingComponent[
-  slinky.web.html.`*`.tag.type, 
-  typingsSlinky.atlaskitFeedbackCollector.mod.FeedbackFlag](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = FeedbackFlagProps
+  
+  def withProps(p: FeedbackFlagProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: FeedbackFlag.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

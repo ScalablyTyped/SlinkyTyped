@@ -6,51 +6,135 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SettingsListProps extends js.Object {
   /**
     * default: white
     */
-  var backgroundColor: js.UndefOr[String] = js.undefined
+  var backgroundColor: js.UndefOr[String] = js.native
   /**
     * default: black
     */
-  var borderColor: js.UndefOr[String] = js.undefined
+  var borderColor: js.UndefOr[String] = js.native
   /**
     * default: 50
     */
-  var defaultItemSize: js.UndefOr[Double] = js.undefined
-  var defaultTitleInfoPosition: js.UndefOr[String] = js.undefined
+  var defaultItemSize: js.UndefOr[Double] = js.native
+  var defaultTitleInfoPosition: js.UndefOr[String] = js.native
   /**
     * default: {fontSize: 16}
     */
-  var defaultTitleStyle: js.UndefOr[StyleProp[TextStyle]] = js.undefined
-  var scrollViewProps: js.UndefOr[js.Object] = js.undefined
+  var defaultTitleStyle: js.UndefOr[StyleProp[TextStyle]] = js.native
+  var scrollViewProps: js.UndefOr[js.Object] = js.native
   /**
     * default: transparent
     */
-  var underlayColor: js.UndefOr[String] = js.undefined
+  var underlayColor: js.UndefOr[String] = js.native
 }
 
 object SettingsListProps {
   @scala.inline
-  def apply(
-    backgroundColor: String = null,
-    borderColor: String = null,
-    defaultItemSize: Int | Double = null,
-    defaultTitleInfoPosition: String = null,
-    defaultTitleStyle: StyleProp[TextStyle] = null,
-    scrollViewProps: js.Object = null,
-    underlayColor: String = null
-  ): SettingsListProps = {
+  def apply(): SettingsListProps = {
     val __obj = js.Dynamic.literal()
-    if (backgroundColor != null) __obj.updateDynamic("backgroundColor")(backgroundColor.asInstanceOf[js.Any])
-    if (borderColor != null) __obj.updateDynamic("borderColor")(borderColor.asInstanceOf[js.Any])
-    if (defaultItemSize != null) __obj.updateDynamic("defaultItemSize")(defaultItemSize.asInstanceOf[js.Any])
-    if (defaultTitleInfoPosition != null) __obj.updateDynamic("defaultTitleInfoPosition")(defaultTitleInfoPosition.asInstanceOf[js.Any])
-    if (defaultTitleStyle != null) __obj.updateDynamic("defaultTitleStyle")(defaultTitleStyle.asInstanceOf[js.Any])
-    if (scrollViewProps != null) __obj.updateDynamic("scrollViewProps")(scrollViewProps.asInstanceOf[js.Any])
-    if (underlayColor != null) __obj.updateDynamic("underlayColor")(underlayColor.asInstanceOf[js.Any])
     __obj.asInstanceOf[SettingsListProps]
   }
+  @scala.inline
+  implicit class SettingsListPropsOps[Self <: SettingsListProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBackgroundColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackgroundColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBorderColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorderColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultItemSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultItemSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultItemSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultItemSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultTitleInfoPosition(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultTitleInfoPosition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultTitleInfoPosition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultTitleInfoPosition")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultTitleStyle(value: StyleProp[TextStyle]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultTitleStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultTitleStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultTitleStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultTitleStyleNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultTitleStyle")(null)
+        ret
+    }
+    @scala.inline
+    def withScrollViewProps(value: js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollViewProps")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScrollViewProps: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollViewProps")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUnderlayColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("underlayColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUnderlayColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("underlayColor")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

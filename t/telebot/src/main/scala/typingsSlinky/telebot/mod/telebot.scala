@@ -2,7 +2,6 @@ package typingsSlinky.telebot.mod
 
 import typingsSlinky.node.Buffer
 import typingsSlinky.node.NodeJS.ReadableStream
-import typingsSlinky.std.RegExp
 import typingsSlinky.telebot.AnonCacheTime
 import typingsSlinky.telebot.AnonCaption
 import typingsSlinky.telebot.AnonChatId
@@ -99,8 +98,8 @@ trait telebot extends js.Object {
   def on(types: String, fn: genericCb, opt: js.Any): Boolean = js.native
   def on(types: js.Array[String], fn: genericCb): Boolean = js.native
   def on(types: js.Array[String], fn: genericCb, opt: js.Any): Boolean = js.native
-  def on(types: RegExp, fn: genericCb): Boolean = js.native
-  def on(types: RegExp, fn: genericCb, opt: js.Any): Boolean = js.native
+  def on(types: js.RegExp, fn: genericCb): Boolean = js.native
+  def on(types: js.RegExp, fn: genericCb, opt: js.Any): Boolean = js.native
   def plug(module: module): Unit = js.native
   def properties(form: js.Any, opt: js.Any): js.Any = js.native
   def receiveUpdates(updateList: js.Array[_]): js.Promise[_] = js.native

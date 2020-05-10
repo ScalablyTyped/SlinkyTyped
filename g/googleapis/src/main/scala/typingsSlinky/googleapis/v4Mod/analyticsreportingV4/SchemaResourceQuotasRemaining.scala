@@ -22,11 +22,41 @@ trait SchemaResourceQuotasRemaining extends js.Object {
 
 object SchemaResourceQuotasRemaining {
   @scala.inline
-  def apply(dailyQuotaTokensRemaining: Int | Double = null, hourlyQuotaTokensRemaining: Int | Double = null): SchemaResourceQuotasRemaining = {
+  def apply(): SchemaResourceQuotasRemaining = {
     val __obj = js.Dynamic.literal()
-    if (dailyQuotaTokensRemaining != null) __obj.updateDynamic("dailyQuotaTokensRemaining")(dailyQuotaTokensRemaining.asInstanceOf[js.Any])
-    if (hourlyQuotaTokensRemaining != null) __obj.updateDynamic("hourlyQuotaTokensRemaining")(hourlyQuotaTokensRemaining.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaResourceQuotasRemaining]
   }
+  @scala.inline
+  implicit class SchemaResourceQuotasRemainingOps[Self <: SchemaResourceQuotasRemaining] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDailyQuotaTokensRemaining(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dailyQuotaTokensRemaining")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDailyQuotaTokensRemaining: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dailyQuotaTokensRemaining")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHourlyQuotaTokensRemaining(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hourlyQuotaTokensRemaining")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHourlyQuotaTokensRemaining: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hourlyQuotaTokensRemaining")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

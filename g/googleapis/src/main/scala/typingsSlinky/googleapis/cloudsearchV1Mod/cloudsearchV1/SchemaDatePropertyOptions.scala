@@ -17,10 +17,29 @@ trait SchemaDatePropertyOptions extends js.Object {
 
 object SchemaDatePropertyOptions {
   @scala.inline
-  def apply(operatorOptions: SchemaDateOperatorOptions = null): SchemaDatePropertyOptions = {
+  def apply(): SchemaDatePropertyOptions = {
     val __obj = js.Dynamic.literal()
-    if (operatorOptions != null) __obj.updateDynamic("operatorOptions")(operatorOptions.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDatePropertyOptions]
   }
+  @scala.inline
+  implicit class SchemaDatePropertyOptionsOps[Self <: SchemaDatePropertyOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOperatorOptions(value: SchemaDateOperatorOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("operatorOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOperatorOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("operatorOptions")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

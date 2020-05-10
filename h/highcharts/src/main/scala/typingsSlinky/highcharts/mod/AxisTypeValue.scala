@@ -15,16 +15,14 @@ trait AxisTypeValue extends js.Object
 
 object AxisTypeValue {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def category: typingsSlinky.highcharts.highchartsStrings.category = "category".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.category]
   @scala.inline
-  def category: typingsSlinky.highcharts.highchartsStrings.category = this.cast("category")
+  def datetime: typingsSlinky.highcharts.highchartsStrings.datetime = "datetime".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.datetime]
   @scala.inline
-  def datetime: typingsSlinky.highcharts.highchartsStrings.datetime = this.cast("datetime")
+  def linear: typingsSlinky.highcharts.highchartsStrings.linear = "linear".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.linear]
   @scala.inline
-  def linear: typingsSlinky.highcharts.highchartsStrings.linear = this.cast("linear")
+  def logarithmic: typingsSlinky.highcharts.highchartsStrings.logarithmic = "logarithmic".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.logarithmic]
   @scala.inline
-  def logarithmic: typingsSlinky.highcharts.highchartsStrings.logarithmic = this.cast("logarithmic")
-  @scala.inline
-  def treegrid: typingsSlinky.highcharts.highchartsStrings.treegrid = this.cast("treegrid")
+  def treegrid: typingsSlinky.highcharts.highchartsStrings.treegrid = "treegrid".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.treegrid]
 }
 

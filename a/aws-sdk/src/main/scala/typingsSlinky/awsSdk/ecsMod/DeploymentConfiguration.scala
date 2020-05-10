@@ -18,11 +18,41 @@ trait DeploymentConfiguration extends js.Object {
 
 object DeploymentConfiguration {
   @scala.inline
-  def apply(maximumPercent: Int | scala.Double = null, minimumHealthyPercent: Int | scala.Double = null): DeploymentConfiguration = {
+  def apply(): DeploymentConfiguration = {
     val __obj = js.Dynamic.literal()
-    if (maximumPercent != null) __obj.updateDynamic("maximumPercent")(maximumPercent.asInstanceOf[js.Any])
-    if (minimumHealthyPercent != null) __obj.updateDynamic("minimumHealthyPercent")(minimumHealthyPercent.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeploymentConfiguration]
   }
+  @scala.inline
+  implicit class DeploymentConfigurationOps[Self <: DeploymentConfiguration] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMaximumPercent(value: BoxedInteger): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maximumPercent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaximumPercent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maximumPercent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinimumHealthyPercent(value: BoxedInteger): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minimumHealthyPercent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinimumHealthyPercent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minimumHealthyPercent")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,11 +1,9 @@
 package typingsSlinky.pixiJs.PIXI
 
+import org.scalajs.dom.raw.HTMLCanvasElement
+import org.scalajs.dom.raw.HTMLImageElement
+import org.scalajs.dom.raw.HTMLVideoElement
 import typingsSlinky.pixiJs.PIXI.utils.EventEmitter
-import typingsSlinky.std.Float32Array
-import typingsSlinky.std.HTMLCanvasElement
-import typingsSlinky.std.HTMLImageElement
-import typingsSlinky.std.HTMLVideoElement
-import typingsSlinky.std.Uint8Array
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -283,10 +281,10 @@ object Texture extends js.Object {
     * @param {object} [options] See {@link PIXI.BaseTexture}'s constructor for options.
     * @return {PIXI.Texture} The resulting new BaseTexture
     */
-  def fromBuffer(buffer: Float32Array, width: Double, height: Double): Texture = js.native
-  def fromBuffer(buffer: Float32Array, width: Double, height: Double, options: js.Any): Texture = js.native
-  def fromBuffer(buffer: Uint8Array, width: Double, height: Double): Texture = js.native
-  def fromBuffer(buffer: Uint8Array, width: Double, height: Double, options: js.Any): Texture = js.native
+  def fromBuffer(buffer: js.typedarray.Float32Array, width: Double, height: Double): Texture = js.native
+  def fromBuffer(buffer: js.typedarray.Float32Array, width: Double, height: Double, options: js.Any): Texture = js.native
+  def fromBuffer(buffer: js.typedarray.Uint8Array, width: Double, height: Double): Texture = js.native
+  def fromBuffer(buffer: js.typedarray.Uint8Array, width: Double, height: Double, options: js.Any): Texture = js.native
   def fromLoader(source: HTMLCanvasElement, imageUrl: String): Texture = js.native
   def fromLoader(source: HTMLCanvasElement, imageUrl: String, name: String): Texture = js.native
   /**

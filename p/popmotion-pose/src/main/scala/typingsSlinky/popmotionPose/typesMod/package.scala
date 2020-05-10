@@ -8,11 +8,11 @@ package object typesMod {
   type AnimationDef = typingsSlinky.popmotionPose.typesMod.TransitionDefinition
   type BoundingBox = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ key in popmotion-pose.popmotion-pose/lib/types.BoundingBoxDimension ]: number}
-    */ typingsSlinky.popmotionPose.popmotionPoseStrings.BoundingBox with js.Any
+    */ typingsSlinky.popmotionPose.popmotionPoseStrings.BoundingBox with org.scalablytyped.runtime.TopLevel[js.Any]
   type CubicBezierArgs = js.Tuple4[scala.Double, scala.Double, scala.Double, scala.Double]
   type DragBounds = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ key in popmotion-pose.popmotion-pose/lib/types.BoundingBoxDimension ]:? number | string}
-    */ typingsSlinky.popmotionPose.popmotionPoseStrings.DragBounds with js.Any
+    */ typingsSlinky.popmotionPose.popmotionPoseStrings.DragBounds with org.scalablytyped.runtime.TopLevel[js.Any]
   /* Rewritten from type alias, can be one of: 
     - scala.Boolean
     - typingsSlinky.popmotionPose.popmotionPoseStrings.x

@@ -3,6 +3,7 @@ package typingsSlinky.sinonExpressMock
 import typingsSlinky.express.mod.Request_
 import typingsSlinky.express.mod.Response_
 import typingsSlinky.expressServeStaticCore.mod.ParamsDictionary
+import typingsSlinky.expressServeStaticCore.mod.Query
 import typingsSlinky.sinon.mod.SinonStub
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -49,8 +50,8 @@ object mod extends js.Object {
       def is(args: js.Any*): js.Any = js.native
     }
     
-    def apply[T /* <: js.Object */](): MockReq with T with Request_[ParamsDictionary] = js.native
-    def apply[T /* <: js.Object */](options: T): MockReq with T with Request_[ParamsDictionary] = js.native
+    def apply[T /* <: js.Object */](): MockReq with T with (Request_[ParamsDictionary, _, _, Query]) = js.native
+    def apply[T /* <: js.Object */](options: T): MockReq with T with (Request_[ParamsDictionary, _, _, Query]) = js.native
   }
   
   @js.native
@@ -145,8 +146,8 @@ object mod extends js.Object {
       def vary(args: js.Any*): js.Any = js.native
     }
     
-    def apply[T /* <: js.Object */](): MockRes with T with Response_ = js.native
-    def apply[T /* <: js.Object */](options: T): MockRes with T with Response_ = js.native
+    def apply[T /* <: js.Object */](): MockRes with T with Response_[_] = js.native
+    def apply[T /* <: js.Object */](options: T): MockRes with T with Response_[_] = js.native
   }
   
 }

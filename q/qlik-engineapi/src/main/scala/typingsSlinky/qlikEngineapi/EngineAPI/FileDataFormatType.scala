@@ -20,26 +20,24 @@ trait FileDataFormatType extends js.Object
 
 object FileDataFormatType {
   @scala.inline
-  def CSV: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.CSV = this.cast("CSV")
+  def CSV: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.CSV = "CSV".asInstanceOf[typingsSlinky.qlikEngineapi.qlikEngineapiStrings.CSV]
   @scala.inline
-  def DIF: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.DIF = this.cast("DIF")
+  def DIF: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.DIF = "DIF".asInstanceOf[typingsSlinky.qlikEngineapi.qlikEngineapiStrings.DIF]
   @scala.inline
-  def EXCEL_BIFF: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.EXCEL_BIFF = this.cast("EXCEL_BIFF")
+  def EXCEL_BIFF: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.EXCEL_BIFF = "EXCEL_BIFF".asInstanceOf[typingsSlinky.qlikEngineapi.qlikEngineapiStrings.EXCEL_BIFF]
   @scala.inline
-  def EXCEL_OOXML: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.EXCEL_OOXML = this.cast("EXCEL_OOXML")
+  def EXCEL_OOXML: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.EXCEL_OOXML = "EXCEL_OOXML".asInstanceOf[typingsSlinky.qlikEngineapi.qlikEngineapiStrings.EXCEL_OOXML]
   @scala.inline
-  def FIX: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.FIX = this.cast("FIX")
+  def FIX: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.FIX = "FIX".asInstanceOf[typingsSlinky.qlikEngineapi.qlikEngineapiStrings.FIX]
   @scala.inline
-  def HTML: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.HTML = this.cast("HTML")
+  def HTML: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.HTML = "HTML".asInstanceOf[typingsSlinky.qlikEngineapi.qlikEngineapiStrings.HTML]
   @scala.inline
-  def JSON: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.JSON = this.cast("JSON")
+  def JSON: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.JSON = "JSON".asInstanceOf[typingsSlinky.qlikEngineapi.qlikEngineapiStrings.JSON]
   @scala.inline
-  def KML: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.KML = this.cast("KML")
+  def KML: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.KML = "KML".asInstanceOf[typingsSlinky.qlikEngineapi.qlikEngineapiStrings.KML]
   @scala.inline
-  def QVX: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.QVX = this.cast("QVX")
+  def QVX: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.QVX = "QVX".asInstanceOf[typingsSlinky.qlikEngineapi.qlikEngineapiStrings.QVX]
   @scala.inline
-  def XML: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.XML = this.cast("XML")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def XML: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.XML = "XML".asInstanceOf[typingsSlinky.qlikEngineapi.qlikEngineapiStrings.XML]
 }
 

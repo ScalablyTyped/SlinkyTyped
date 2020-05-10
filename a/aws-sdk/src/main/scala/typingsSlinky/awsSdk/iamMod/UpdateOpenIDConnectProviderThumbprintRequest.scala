@@ -20,8 +20,27 @@ object UpdateOpenIDConnectProviderThumbprintRequest {
   @scala.inline
   def apply(OpenIDConnectProviderArn: arnType, ThumbprintList: thumbprintListType): UpdateOpenIDConnectProviderThumbprintRequest = {
     val __obj = js.Dynamic.literal(OpenIDConnectProviderArn = OpenIDConnectProviderArn.asInstanceOf[js.Any], ThumbprintList = ThumbprintList.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[UpdateOpenIDConnectProviderThumbprintRequest]
   }
+  @scala.inline
+  implicit class UpdateOpenIDConnectProviderThumbprintRequestOps[Self <: UpdateOpenIDConnectProviderThumbprintRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOpenIDConnectProviderArn(value: arnType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OpenIDConnectProviderArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withThumbprintList(value: thumbprintListType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ThumbprintList")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

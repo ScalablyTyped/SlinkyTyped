@@ -1,26 +1,26 @@
 package typingsSlinky.pkijs
 
+import org.scalajs.dom.crypto.AesCbcParams
+import org.scalajs.dom.crypto.AesCfbParams
+import org.scalajs.dom.crypto.AesCmacParams
+import org.scalajs.dom.crypto.AesCtrParams
+import org.scalajs.dom.crypto.AesGcmParams
 import org.scalajs.dom.crypto.Algorithm
 import org.scalajs.dom.crypto.CryptoKey
+import org.scalajs.dom.crypto.DhImportKeyParams
+import org.scalajs.dom.crypto.EcKeyImportParams
+import org.scalajs.dom.crypto.EcdsaParams
+import org.scalajs.dom.crypto.HmacImportParams
 import org.scalajs.dom.crypto.JsonWebKey
+import org.scalajs.dom.crypto.RsaHashedImportParams
+import org.scalajs.dom.crypto.RsaOaepParams
+import org.scalajs.dom.crypto.RsaPssParams
 import typingsSlinky.pkijs.pkijsStrings.jwk
 import typingsSlinky.pkijs.pkijsStrings.pkcs8
 import typingsSlinky.pkijs.pkijsStrings.raw
 import typingsSlinky.pkijs.pkijsStrings.spki
-import typingsSlinky.std.AesCbcParams
-import typingsSlinky.std.AesCfbParams
-import typingsSlinky.std.AesCmacParams
-import typingsSlinky.std.AesCtrParams
-import typingsSlinky.std.AesGcmParams
 import typingsSlinky.std.AlgorithmIdentifier
 import typingsSlinky.std.BufferSource
-import typingsSlinky.std.DhImportKeyParams
-import typingsSlinky.std.EcKeyImportParams
-import typingsSlinky.std.EcdsaParams
-import typingsSlinky.std.HmacImportParams
-import typingsSlinky.std.RsaHashedImportParams
-import typingsSlinky.std.RsaOaepParams
-import typingsSlinky.std.RsaPssParams
 import typingsSlinky.std.SubtleCrypto
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -54,34 +54,34 @@ object cryptoEngineMod extends js.Object {
     def convert(
       inputFormat: String,
       outputFormat: String,
-      keyData: typingsSlinky.std.JsonWebKey,
+      keyData: JsonWebKey,
       algorithm: Algorithm,
       extractable: Boolean,
       keyUsages: js.Array[String]
     ): js.Thenable[BufferSource | JsonWebKey] = js.native
-    def decrypt(algorithm: String, key: CryptoKey, data: BufferSource): js.Thenable[scala.scalajs.js.typedarray.ArrayBuffer] = js.native
-    def decrypt(algorithm: AesCbcParams, key: CryptoKey, data: BufferSource): js.Thenable[scala.scalajs.js.typedarray.ArrayBuffer] = js.native
-    def decrypt(algorithm: AesCfbParams, key: CryptoKey, data: BufferSource): js.Thenable[scala.scalajs.js.typedarray.ArrayBuffer] = js.native
-    def decrypt(algorithm: AesCmacParams, key: CryptoKey, data: BufferSource): js.Thenable[scala.scalajs.js.typedarray.ArrayBuffer] = js.native
-    def decrypt(algorithm: AesCtrParams, key: CryptoKey, data: BufferSource): js.Thenable[scala.scalajs.js.typedarray.ArrayBuffer] = js.native
-    def decrypt(algorithm: AesGcmParams, key: CryptoKey, data: BufferSource): js.Thenable[scala.scalajs.js.typedarray.ArrayBuffer] = js.native
-    def decrypt(algorithm: RsaOaepParams, key: CryptoKey, data: BufferSource): js.Thenable[scala.scalajs.js.typedarray.ArrayBuffer] = js.native
-    def digest(algorithm: AlgorithmIdentifier, data: BufferSource): js.Thenable[scala.scalajs.js.typedarray.ArrayBuffer] = js.native
-    def encrypt(algorithm: String, key: CryptoKey, data: BufferSource): js.Thenable[scala.scalajs.js.typedarray.ArrayBuffer] = js.native
-    def encrypt(algorithm: AesCbcParams, key: CryptoKey, data: BufferSource): js.Thenable[scala.scalajs.js.typedarray.ArrayBuffer] = js.native
-    def encrypt(algorithm: AesCfbParams, key: CryptoKey, data: BufferSource): js.Thenable[scala.scalajs.js.typedarray.ArrayBuffer] = js.native
-    def encrypt(algorithm: AesCmacParams, key: CryptoKey, data: BufferSource): js.Thenable[scala.scalajs.js.typedarray.ArrayBuffer] = js.native
-    def encrypt(algorithm: AesCtrParams, key: CryptoKey, data: BufferSource): js.Thenable[scala.scalajs.js.typedarray.ArrayBuffer] = js.native
-    def encrypt(algorithm: AesGcmParams, key: CryptoKey, data: BufferSource): js.Thenable[scala.scalajs.js.typedarray.ArrayBuffer] = js.native
-    def encrypt(algorithm: RsaOaepParams, key: CryptoKey, data: BufferSource): js.Thenable[scala.scalajs.js.typedarray.ArrayBuffer] = js.native
+    def decrypt(algorithm: String, key: CryptoKey, data: BufferSource): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+    def decrypt(algorithm: AesCbcParams, key: CryptoKey, data: BufferSource): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+    def decrypt(algorithm: AesCfbParams, key: CryptoKey, data: BufferSource): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+    def decrypt(algorithm: AesCmacParams, key: CryptoKey, data: BufferSource): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+    def decrypt(algorithm: AesCtrParams, key: CryptoKey, data: BufferSource): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+    def decrypt(algorithm: AesGcmParams, key: CryptoKey, data: BufferSource): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+    def decrypt(algorithm: RsaOaepParams, key: CryptoKey, data: BufferSource): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+    def digest(algorithm: AlgorithmIdentifier, data: BufferSource): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+    def encrypt(algorithm: String, key: CryptoKey, data: BufferSource): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+    def encrypt(algorithm: AesCbcParams, key: CryptoKey, data: BufferSource): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+    def encrypt(algorithm: AesCfbParams, key: CryptoKey, data: BufferSource): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+    def encrypt(algorithm: AesCmacParams, key: CryptoKey, data: BufferSource): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+    def encrypt(algorithm: AesCtrParams, key: CryptoKey, data: BufferSource): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+    def encrypt(algorithm: AesGcmParams, key: CryptoKey, data: BufferSource): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+    def encrypt(algorithm: RsaOaepParams, key: CryptoKey, data: BufferSource): js.Thenable[js.typedarray.ArrayBuffer] = js.native
     @JSName("exportKey")
     def exportKey_jwk(format: jwk, key: CryptoKey): js.Thenable[JsonWebKey] = js.native
     @JSName("exportKey")
-    def exportKey_pkcs8(format: pkcs8, key: CryptoKey): js.Thenable[scala.scalajs.js.typedarray.ArrayBuffer] = js.native
+    def exportKey_pkcs8(format: pkcs8, key: CryptoKey): js.Thenable[js.typedarray.ArrayBuffer] = js.native
     @JSName("exportKey")
-    def exportKey_raw(format: raw, key: CryptoKey): js.Thenable[scala.scalajs.js.typedarray.ArrayBuffer] = js.native
+    def exportKey_raw(format: raw, key: CryptoKey): js.Thenable[js.typedarray.ArrayBuffer] = js.native
     @JSName("exportKey")
-    def exportKey_spki(format: spki, key: CryptoKey): js.Thenable[scala.scalajs.js.typedarray.ArrayBuffer] = js.native
+    def exportKey_spki(format: spki, key: CryptoKey): js.Thenable[js.typedarray.ArrayBuffer] = js.native
     def importKey(
       format: String,
       keyData: BufferSource,
@@ -119,35 +119,35 @@ object cryptoEngineMod extends js.Object {
     ): js.Thenable[CryptoKey] = js.native
     def importKey(
       format: String,
-      keyData: typingsSlinky.std.JsonWebKey,
+      keyData: JsonWebKey,
       algorithm: String,
       extractable: Boolean,
       keyUsages: js.Array[String]
     ): js.Thenable[CryptoKey] = js.native
     def importKey(
       format: String,
-      keyData: typingsSlinky.std.JsonWebKey,
+      keyData: JsonWebKey,
       algorithm: DhImportKeyParams,
       extractable: Boolean,
       keyUsages: js.Array[String]
     ): js.Thenable[CryptoKey] = js.native
     def importKey(
       format: String,
-      keyData: typingsSlinky.std.JsonWebKey,
+      keyData: JsonWebKey,
       algorithm: EcKeyImportParams,
       extractable: Boolean,
       keyUsages: js.Array[String]
     ): js.Thenable[CryptoKey] = js.native
     def importKey(
       format: String,
-      keyData: typingsSlinky.std.JsonWebKey,
+      keyData: JsonWebKey,
       algorithm: HmacImportParams,
       extractable: Boolean,
       keyUsages: js.Array[String]
     ): js.Thenable[CryptoKey] = js.native
     def importKey(
       format: String,
-      keyData: typingsSlinky.std.JsonWebKey,
+      keyData: JsonWebKey,
       algorithm: RsaHashedImportParams,
       extractable: Boolean,
       keyUsages: js.Array[String]
@@ -312,10 +312,10 @@ object cryptoEngineMod extends js.Object {
       extractable: Boolean,
       keyUsages: js.Array[String]
     ): js.Thenable[CryptoKey] = js.native
-    def sign(algorithm: String, key: CryptoKey, data: BufferSource): js.Thenable[scala.scalajs.js.typedarray.ArrayBuffer] = js.native
-    def sign(algorithm: AesCmacParams, key: CryptoKey, data: BufferSource): js.Thenable[scala.scalajs.js.typedarray.ArrayBuffer] = js.native
-    def sign(algorithm: EcdsaParams, key: CryptoKey, data: BufferSource): js.Thenable[scala.scalajs.js.typedarray.ArrayBuffer] = js.native
-    def sign(algorithm: RsaPssParams, key: CryptoKey, data: BufferSource): js.Thenable[scala.scalajs.js.typedarray.ArrayBuffer] = js.native
+    def sign(algorithm: String, key: CryptoKey, data: BufferSource): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+    def sign(algorithm: AesCmacParams, key: CryptoKey, data: BufferSource): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+    def sign(algorithm: EcdsaParams, key: CryptoKey, data: BufferSource): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+    def sign(algorithm: RsaPssParams, key: CryptoKey, data: BufferSource): js.Thenable[js.typedarray.ArrayBuffer] = js.native
     def unwrapKey(
       format: String,
       wrappedKey: BufferSource,
@@ -329,7 +329,7 @@ object cryptoEngineMod extends js.Object {
     def verify(algorithm: AesCmacParams, key: CryptoKey, signature: BufferSource, data: BufferSource): js.Thenable[Boolean] = js.native
     def verify(algorithm: EcdsaParams, key: CryptoKey, signature: BufferSource, data: BufferSource): js.Thenable[Boolean] = js.native
     def verify(algorithm: RsaPssParams, key: CryptoKey, signature: BufferSource, data: BufferSource): js.Thenable[Boolean] = js.native
-    def wrapKey(format: String, key: CryptoKey, wrappingKey: CryptoKey, wrapAlgorithm: AlgorithmIdentifier): js.Thenable[scala.scalajs.js.typedarray.ArrayBuffer] = js.native
+    def wrapKey(format: String, key: CryptoKey, wrappingKey: CryptoKey, wrapAlgorithm: AlgorithmIdentifier): js.Thenable[js.typedarray.ArrayBuffer] = js.native
   }
   
   @js.native

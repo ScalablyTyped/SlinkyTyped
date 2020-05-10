@@ -40,18 +40,65 @@ trait SchemaComplianceRule extends js.Object {
 
 object SchemaComplianceRule {
   @scala.inline
-  def apply(
-    apiLevelCondition: SchemaApiLevelCondition = null,
-    disableApps: js.UndefOr[Boolean] = js.undefined,
-    nonComplianceDetailCondition: SchemaNonComplianceDetailCondition = null,
-    packageNamesToDisable: js.Array[String] = null
-  ): SchemaComplianceRule = {
+  def apply(): SchemaComplianceRule = {
     val __obj = js.Dynamic.literal()
-    if (apiLevelCondition != null) __obj.updateDynamic("apiLevelCondition")(apiLevelCondition.asInstanceOf[js.Any])
-    if (!js.isUndefined(disableApps)) __obj.updateDynamic("disableApps")(disableApps.asInstanceOf[js.Any])
-    if (nonComplianceDetailCondition != null) __obj.updateDynamic("nonComplianceDetailCondition")(nonComplianceDetailCondition.asInstanceOf[js.Any])
-    if (packageNamesToDisable != null) __obj.updateDynamic("packageNamesToDisable")(packageNamesToDisable.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaComplianceRule]
   }
+  @scala.inline
+  implicit class SchemaComplianceRuleOps[Self <: SchemaComplianceRule] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withApiLevelCondition(value: SchemaApiLevelCondition): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("apiLevelCondition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutApiLevelCondition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("apiLevelCondition")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisableApps(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableApps")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisableApps: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableApps")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNonComplianceDetailCondition(value: SchemaNonComplianceDetailCondition): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nonComplianceDetailCondition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNonComplianceDetailCondition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nonComplianceDetailCondition")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPackageNamesToDisable(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("packageNamesToDisable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPackageNamesToDisable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("packageNamesToDisable")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

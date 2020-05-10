@@ -1,36 +1,34 @@
 package typingsSlinky.storybookComponents.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.storybookComponents.toolbarMod.ToolbarProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Toolbar
-  extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+object Toolbar {
   @JSImport("@storybook/components/dist/blocks/Toolbar", "Toolbar")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    resetZoom: () => Unit,
-    zoom: Double => Unit,
-    baseUrl: String = null,
-    border: js.UndefOr[Boolean] = js.undefined,
-    storyId: String = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, js.Object] = {
-    val __obj = js.Dynamic.literal(resetZoom = js.Any.fromFunction0(resetZoom), zoom = js.Any.fromFunction1(zoom))
-    if (baseUrl != null) __obj.updateDynamic("baseUrl")(baseUrl.asInstanceOf[js.Any])
-    if (!js.isUndefined(border)) __obj.updateDynamic("border")(border.asInstanceOf[js.Any])
-    if (storyId != null) __obj.updateDynamic("storyId")(storyId.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, js.Object] {
+    @scala.inline
+    def baseUrl(value: String): this.type = set("baseUrl", value.asInstanceOf[js.Any])
+    @scala.inline
+    def border(value: Boolean): this.type = set("border", value.asInstanceOf[js.Any])
+    @scala.inline
+    def storyId(value: String): this.type = set("storyId", value.asInstanceOf[js.Any])
   }
-  type Props = ToolbarProps
+  
+  def withProps(p: ToolbarProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(resetZoom: () => Unit, zoom: Double => Unit): Builder = {
+    val __props = js.Dynamic.literal(resetZoom = js.Any.fromFunction0(resetZoom), zoom = js.Any.fromFunction1(zoom))
+    new Builder(js.Array(this.component, __props.asInstanceOf[ToolbarProps]))
+  }
 }
 

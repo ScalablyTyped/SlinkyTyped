@@ -19,11 +19,41 @@ trait AssociationState extends js.Object {
 
 object AssociationState {
   @scala.inline
-  def apply(licenseConfigurationArn: Input[String] = null, resourceArn: Input[String] = null): AssociationState = {
+  def apply(): AssociationState = {
     val __obj = js.Dynamic.literal()
-    if (licenseConfigurationArn != null) __obj.updateDynamic("licenseConfigurationArn")(licenseConfigurationArn.asInstanceOf[js.Any])
-    if (resourceArn != null) __obj.updateDynamic("resourceArn")(resourceArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[AssociationState]
   }
+  @scala.inline
+  implicit class AssociationStateOps[Self <: AssociationState] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLicenseConfigurationArn(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("licenseConfigurationArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLicenseConfigurationArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("licenseConfigurationArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResourceArn(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResourceArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceArn")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

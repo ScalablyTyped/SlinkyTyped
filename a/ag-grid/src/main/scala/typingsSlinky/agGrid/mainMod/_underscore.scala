@@ -7,13 +7,13 @@ import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.KeyboardEvent
+import org.scalajs.dom.raw.MouseEvent
 import org.scalajs.dom.raw.NamedNodeMap
 import org.scalajs.dom.raw.Node
 import org.scalajs.dom.raw.NodeList
+import org.scalajs.dom.raw.Touch
 import typingsSlinky.std.EventListener
 import typingsSlinky.std.Event_
-import typingsSlinky.std.MouseEvent
-import typingsSlinky.std.Touch
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

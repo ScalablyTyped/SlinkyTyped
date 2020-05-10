@@ -5,41 +5,134 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonDetectRetina extends js.Object {
-  var detectRetina: js.UndefOr[Boolean] = js.undefined
-  var errorUrl: js.UndefOr[String] = js.undefined
-  var getTileUrl: js.UndefOr[js.Function3[/* x */ Double, /* y */ Double, /* z */ Double, String]] = js.undefined
-  var map: Map
-  var opacity: js.UndefOr[Double] = js.undefined
-  var tileSize: js.UndefOr[Double] = js.undefined
-  var tileUrl: js.UndefOr[String] = js.undefined
-  var zIndex: js.UndefOr[Double] = js.undefined
-  var zooms: js.UndefOr[js.Array[Double]] = js.undefined
+  var detectRetina: js.UndefOr[Boolean] = js.native
+  var errorUrl: js.UndefOr[String] = js.native
+  var getTileUrl: js.UndefOr[js.Function3[/* x */ Double, /* y */ Double, /* z */ Double, String]] = js.native
+  var map: Map = js.native
+  var opacity: js.UndefOr[Double] = js.native
+  var tileSize: js.UndefOr[Double] = js.native
+  var tileUrl: js.UndefOr[String] = js.native
+  var zIndex: js.UndefOr[Double] = js.native
+  var zooms: js.UndefOr[js.Array[Double]] = js.native
 }
 
 object AnonDetectRetina {
   @scala.inline
-  def apply(
-    map: Map,
-    detectRetina: js.UndefOr[Boolean] = js.undefined,
-    errorUrl: String = null,
-    getTileUrl: (/* x */ Double, /* y */ Double, /* z */ Double) => String = null,
-    opacity: Int | Double = null,
-    tileSize: Int | Double = null,
-    tileUrl: String = null,
-    zIndex: Int | Double = null,
-    zooms: js.Array[Double] = null
-  ): AnonDetectRetina = {
+  def apply(map: Map): AnonDetectRetina = {
     val __obj = js.Dynamic.literal(map = map.asInstanceOf[js.Any])
-    if (!js.isUndefined(detectRetina)) __obj.updateDynamic("detectRetina")(detectRetina.asInstanceOf[js.Any])
-    if (errorUrl != null) __obj.updateDynamic("errorUrl")(errorUrl.asInstanceOf[js.Any])
-    if (getTileUrl != null) __obj.updateDynamic("getTileUrl")(js.Any.fromFunction3(getTileUrl))
-    if (opacity != null) __obj.updateDynamic("opacity")(opacity.asInstanceOf[js.Any])
-    if (tileSize != null) __obj.updateDynamic("tileSize")(tileSize.asInstanceOf[js.Any])
-    if (tileUrl != null) __obj.updateDynamic("tileUrl")(tileUrl.asInstanceOf[js.Any])
-    if (zIndex != null) __obj.updateDynamic("zIndex")(zIndex.asInstanceOf[js.Any])
-    if (zooms != null) __obj.updateDynamic("zooms")(zooms.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonDetectRetina]
   }
+  @scala.inline
+  implicit class AnonDetectRetinaOps[Self <: AnonDetectRetina] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMap(value: Map): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("map")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDetectRetina(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("detectRetina")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDetectRetina: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("detectRetina")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withErrorUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errorUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutErrorUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errorUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetTileUrl(value: (/* x */ Double, /* y */ Double, /* z */ Double) => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getTileUrl")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetTileUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getTileUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOpacity(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("opacity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOpacity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("opacity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTileSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tileSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTileSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tileSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTileUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tileUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTileUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tileUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withZIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutZIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zIndex")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withZooms(value: js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zooms")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutZooms: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zooms")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

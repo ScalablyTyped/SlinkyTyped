@@ -12,10 +12,8 @@ trait WalkStatEvent extends js.Object
 
 object WalkStatEvent {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def directory: typingsSlinky.walk.walkStrings.directory = "directory".asInstanceOf[typingsSlinky.walk.walkStrings.directory]
   @scala.inline
-  def directory: typingsSlinky.walk.walkStrings.directory = this.cast("directory")
-  @scala.inline
-  def file: typingsSlinky.walk.walkStrings.file = this.cast("file")
+  def file: typingsSlinky.walk.walkStrings.file = "file".asInstanceOf[typingsSlinky.walk.walkStrings.file]
 }
 

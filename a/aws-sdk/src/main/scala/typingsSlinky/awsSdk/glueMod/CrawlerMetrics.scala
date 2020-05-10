@@ -42,26 +42,113 @@ trait CrawlerMetrics extends js.Object {
 
 object CrawlerMetrics {
   @scala.inline
-  def apply(
-    CrawlerName: NameString = null,
-    LastRuntimeSeconds: Int | Double = null,
-    MedianRuntimeSeconds: Int | Double = null,
-    StillEstimating: js.UndefOr[scala.Boolean] = js.undefined,
-    TablesCreated: Int | Double = null,
-    TablesDeleted: Int | Double = null,
-    TablesUpdated: Int | Double = null,
-    TimeLeftSeconds: Int | Double = null
-  ): CrawlerMetrics = {
+  def apply(): CrawlerMetrics = {
     val __obj = js.Dynamic.literal()
-    if (CrawlerName != null) __obj.updateDynamic("CrawlerName")(CrawlerName.asInstanceOf[js.Any])
-    if (LastRuntimeSeconds != null) __obj.updateDynamic("LastRuntimeSeconds")(LastRuntimeSeconds.asInstanceOf[js.Any])
-    if (MedianRuntimeSeconds != null) __obj.updateDynamic("MedianRuntimeSeconds")(MedianRuntimeSeconds.asInstanceOf[js.Any])
-    if (!js.isUndefined(StillEstimating)) __obj.updateDynamic("StillEstimating")(StillEstimating.asInstanceOf[js.Any])
-    if (TablesCreated != null) __obj.updateDynamic("TablesCreated")(TablesCreated.asInstanceOf[js.Any])
-    if (TablesDeleted != null) __obj.updateDynamic("TablesDeleted")(TablesDeleted.asInstanceOf[js.Any])
-    if (TablesUpdated != null) __obj.updateDynamic("TablesUpdated")(TablesUpdated.asInstanceOf[js.Any])
-    if (TimeLeftSeconds != null) __obj.updateDynamic("TimeLeftSeconds")(TimeLeftSeconds.asInstanceOf[js.Any])
     __obj.asInstanceOf[CrawlerMetrics]
   }
+  @scala.inline
+  implicit class CrawlerMetricsOps[Self <: CrawlerMetrics] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCrawlerName(value: NameString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CrawlerName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCrawlerName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CrawlerName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLastRuntimeSeconds(value: NonNegativeDouble): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LastRuntimeSeconds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLastRuntimeSeconds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LastRuntimeSeconds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMedianRuntimeSeconds(value: NonNegativeDouble): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MedianRuntimeSeconds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMedianRuntimeSeconds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MedianRuntimeSeconds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStillEstimating(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StillEstimating")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStillEstimating: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StillEstimating")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTablesCreated(value: NonNegativeInteger): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TablesCreated")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTablesCreated: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TablesCreated")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTablesDeleted(value: NonNegativeInteger): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TablesDeleted")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTablesDeleted: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TablesDeleted")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTablesUpdated(value: NonNegativeInteger): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TablesUpdated")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTablesUpdated: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TablesUpdated")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimeLeftSeconds(value: NonNegativeDouble): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TimeLeftSeconds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimeLeftSeconds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TimeLeftSeconds")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

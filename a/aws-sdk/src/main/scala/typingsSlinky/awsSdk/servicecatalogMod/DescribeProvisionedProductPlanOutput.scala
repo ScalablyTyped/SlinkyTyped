@@ -22,16 +22,53 @@ trait DescribeProvisionedProductPlanOutput extends js.Object {
 
 object DescribeProvisionedProductPlanOutput {
   @scala.inline
-  def apply(
-    NextPageToken: PageToken = null,
-    ProvisionedProductPlanDetails: ProvisionedProductPlanDetails = null,
-    ResourceChanges: ResourceChanges = null
-  ): DescribeProvisionedProductPlanOutput = {
+  def apply(): DescribeProvisionedProductPlanOutput = {
     val __obj = js.Dynamic.literal()
-    if (NextPageToken != null) __obj.updateDynamic("NextPageToken")(NextPageToken.asInstanceOf[js.Any])
-    if (ProvisionedProductPlanDetails != null) __obj.updateDynamic("ProvisionedProductPlanDetails")(ProvisionedProductPlanDetails.asInstanceOf[js.Any])
-    if (ResourceChanges != null) __obj.updateDynamic("ResourceChanges")(ResourceChanges.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeProvisionedProductPlanOutput]
   }
+  @scala.inline
+  implicit class DescribeProvisionedProductPlanOutputOps[Self <: DescribeProvisionedProductPlanOutput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNextPageToken(value: PageToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextPageToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextPageToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextPageToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProvisionedProductPlanDetails(value: ProvisionedProductPlanDetails): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProvisionedProductPlanDetails")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProvisionedProductPlanDetails: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProvisionedProductPlanDetails")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResourceChanges(value: ResourceChanges): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceChanges")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResourceChanges: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceChanges")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

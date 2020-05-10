@@ -13,23 +13,11 @@ object avgPoolBackpropGpuMod extends js.Object {
   @js.native
   class AvgPool2DBackpropProgram protected () extends GPGPUProgram {
     def this(convInfo: Conv2DInfo) = this()
-    /* CompleteClass */
-    override var outputShape: js.Array[Double] = js.native
-    /* CompleteClass */
-    override var userCode: String = js.native
-    /* CompleteClass */
-    override var variableNames: js.Array[String] = js.native
   }
   
   @js.native
   class AvgPool3DBackpropProgram protected () extends GPGPUProgram {
     def this(convInfo: Conv3DInfo) = this()
-    /* CompleteClass */
-    override var outputShape: js.Array[Double] = js.native
-    /* CompleteClass */
-    override var userCode: String = js.native
-    /* CompleteClass */
-    override var variableNames: js.Array[String] = js.native
   }
   
 }

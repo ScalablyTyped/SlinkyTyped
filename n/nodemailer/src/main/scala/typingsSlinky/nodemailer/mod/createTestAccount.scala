@@ -1,6 +1,5 @@
 package typingsSlinky.nodemailer.mod
 
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,6 +13,6 @@ object createTestAccount extends js.Object {
     apiUrl: String,
     callback: js.Function2[/* err */ js.Error | Null, /* testAccount */ TestAccount, Unit]
   ): Unit = js.native
-  def apply(callback: js.Function2[/* err */ Error | Null, /* testAccount */ TestAccount, Unit]): Unit = js.native
+  def apply(callback: js.Function2[/* err */ js.Error | Null, /* testAccount */ TestAccount, Unit]): Unit = js.native
 }
 

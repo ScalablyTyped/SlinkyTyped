@@ -16,18 +16,16 @@ trait ResponseType extends js.Object
 
 object ResponseType {
   @scala.inline
-  def basic: typingsSlinky.nodeFetch.nodeFetchStrings.basic = this.cast("basic")
+  def basic: typingsSlinky.nodeFetch.nodeFetchStrings.basic = "basic".asInstanceOf[typingsSlinky.nodeFetch.nodeFetchStrings.basic]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def cors: typingsSlinky.nodeFetch.nodeFetchStrings.cors = "cors".asInstanceOf[typingsSlinky.nodeFetch.nodeFetchStrings.cors]
   @scala.inline
-  def cors: typingsSlinky.nodeFetch.nodeFetchStrings.cors = this.cast("cors")
+  def default: typingsSlinky.nodeFetch.nodeFetchStrings.default = "default".asInstanceOf[typingsSlinky.nodeFetch.nodeFetchStrings.default]
   @scala.inline
-  def default: typingsSlinky.nodeFetch.nodeFetchStrings.default = this.cast("default")
+  def error: typingsSlinky.nodeFetch.nodeFetchStrings.error = "error".asInstanceOf[typingsSlinky.nodeFetch.nodeFetchStrings.error]
   @scala.inline
-  def error: typingsSlinky.nodeFetch.nodeFetchStrings.error = this.cast("error")
+  def opaque: typingsSlinky.nodeFetch.nodeFetchStrings.opaque = "opaque".asInstanceOf[typingsSlinky.nodeFetch.nodeFetchStrings.opaque]
   @scala.inline
-  def opaque: typingsSlinky.nodeFetch.nodeFetchStrings.opaque = this.cast("opaque")
-  @scala.inline
-  def opaqueredirect: typingsSlinky.nodeFetch.nodeFetchStrings.opaqueredirect = this.cast("opaqueredirect")
+  def opaqueredirect: typingsSlinky.nodeFetch.nodeFetchStrings.opaqueredirect = "opaqueredirect".asInstanceOf[typingsSlinky.nodeFetch.nodeFetchStrings.opaqueredirect]
 }
 

@@ -17,20 +17,18 @@ trait GoogleActionsTransactionsV3CompletePurchaseValuePurchaseStatus extends js.
 
 object GoogleActionsTransactionsV3CompletePurchaseValuePurchaseStatus {
   @scala.inline
-  def PURCHASE_STATUS_ALREADY_OWNED: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.PURCHASE_STATUS_ALREADY_OWNED = this.cast("PURCHASE_STATUS_ALREADY_OWNED")
+  def PURCHASE_STATUS_ALREADY_OWNED: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.PURCHASE_STATUS_ALREADY_OWNED = "PURCHASE_STATUS_ALREADY_OWNED".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.PURCHASE_STATUS_ALREADY_OWNED]
   @scala.inline
-  def PURCHASE_STATUS_ERROR: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.PURCHASE_STATUS_ERROR = this.cast("PURCHASE_STATUS_ERROR")
+  def PURCHASE_STATUS_ERROR: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.PURCHASE_STATUS_ERROR = "PURCHASE_STATUS_ERROR".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.PURCHASE_STATUS_ERROR]
   @scala.inline
-  def PURCHASE_STATUS_ITEM_CHANGE_REQUESTED: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.PURCHASE_STATUS_ITEM_CHANGE_REQUESTED = this.cast("PURCHASE_STATUS_ITEM_CHANGE_REQUESTED")
+  def PURCHASE_STATUS_ITEM_CHANGE_REQUESTED: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.PURCHASE_STATUS_ITEM_CHANGE_REQUESTED = "PURCHASE_STATUS_ITEM_CHANGE_REQUESTED".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.PURCHASE_STATUS_ITEM_CHANGE_REQUESTED]
   @scala.inline
-  def PURCHASE_STATUS_ITEM_UNAVAILABLE: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.PURCHASE_STATUS_ITEM_UNAVAILABLE = this.cast("PURCHASE_STATUS_ITEM_UNAVAILABLE")
+  def PURCHASE_STATUS_ITEM_UNAVAILABLE: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.PURCHASE_STATUS_ITEM_UNAVAILABLE = "PURCHASE_STATUS_ITEM_UNAVAILABLE".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.PURCHASE_STATUS_ITEM_UNAVAILABLE]
   @scala.inline
-  def PURCHASE_STATUS_OK: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.PURCHASE_STATUS_OK = this.cast("PURCHASE_STATUS_OK")
+  def PURCHASE_STATUS_OK: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.PURCHASE_STATUS_OK = "PURCHASE_STATUS_OK".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.PURCHASE_STATUS_OK]
   @scala.inline
-  def PURCHASE_STATUS_UNSPECIFIED: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.PURCHASE_STATUS_UNSPECIFIED = this.cast("PURCHASE_STATUS_UNSPECIFIED")
+  def PURCHASE_STATUS_UNSPECIFIED: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.PURCHASE_STATUS_UNSPECIFIED = "PURCHASE_STATUS_UNSPECIFIED".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.PURCHASE_STATUS_UNSPECIFIED]
   @scala.inline
-  def PURCHASE_STATUS_USER_CANCELLED: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.PURCHASE_STATUS_USER_CANCELLED = this.cast("PURCHASE_STATUS_USER_CANCELLED")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def PURCHASE_STATUS_USER_CANCELLED: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.PURCHASE_STATUS_USER_CANCELLED = "PURCHASE_STATUS_USER_CANCELLED".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.PURCHASE_STATUS_USER_CANCELLED]
 }
 

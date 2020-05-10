@@ -4,17 +4,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait RuntimeMetadata extends js.Object {
   /** Execution information specific to Google Compute Engine. */
-  var computeEngine: js.UndefOr[ComputeEngine] = js.undefined
+  var computeEngine: js.UndefOr[ComputeEngine] = js.native
 }
 
 object RuntimeMetadata {
   @scala.inline
-  def apply(computeEngine: ComputeEngine = null): RuntimeMetadata = {
+  def apply(): RuntimeMetadata = {
     val __obj = js.Dynamic.literal()
-    if (computeEngine != null) __obj.updateDynamic("computeEngine")(computeEngine.asInstanceOf[js.Any])
     __obj.asInstanceOf[RuntimeMetadata]
   }
+  @scala.inline
+  implicit class RuntimeMetadataOps[Self <: RuntimeMetadata] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withComputeEngine(value: ComputeEngine): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("computeEngine")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutComputeEngine: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("computeEngine")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

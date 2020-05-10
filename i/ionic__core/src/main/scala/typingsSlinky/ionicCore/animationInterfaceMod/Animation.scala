@@ -1,12 +1,12 @@
 package typingsSlinky.ionicCore.animationInterfaceMod
 
 import org.scalablytyped.runtime.StringDictionary
+import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.HTMLElement
+import org.scalajs.dom.raw.Node
+import org.scalajs.dom.raw.NodeList
 import typingsSlinky.ionicCore.ionicCoreNumbers.`0`
 import typingsSlinky.ionicCore.ionicCoreNumbers.`1`
-import typingsSlinky.std.Element
-import typingsSlinky.std.Node
-import typingsSlinky.std.NodeList
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

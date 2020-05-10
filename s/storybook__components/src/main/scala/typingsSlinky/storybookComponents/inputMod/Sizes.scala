@@ -13,12 +13,10 @@ trait Sizes extends js.Object
 
 object Sizes {
   @scala.inline
-  def `100Percentsign`: typingsSlinky.storybookComponents.storybookComponentsStrings.`100Percentsign` = this.cast("100%")
+  def `100Percentsign`: typingsSlinky.storybookComponents.storybookComponentsStrings.`100Percentsign` = "100%".asInstanceOf[typingsSlinky.storybookComponents.storybookComponentsStrings.`100Percentsign`]
   @scala.inline
-  def auto: typingsSlinky.storybookComponents.storybookComponentsStrings.auto = this.cast("auto")
+  def auto: typingsSlinky.storybookComponents.storybookComponentsStrings.auto = "auto".asInstanceOf[typingsSlinky.storybookComponents.storybookComponentsStrings.auto]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
-  @scala.inline
-  def flex: typingsSlinky.storybookComponents.storybookComponentsStrings.flex = this.cast("flex")
+  def flex: typingsSlinky.storybookComponents.storybookComponentsStrings.flex = "flex".asInstanceOf[typingsSlinky.storybookComponents.storybookComponentsStrings.flex]
 }
 

@@ -14,14 +14,12 @@ trait GoogleActionsV2SignInValueStatus extends js.Object
 
 object GoogleActionsV2SignInValueStatus {
   @scala.inline
-  def CANCELLED: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.CANCELLED = this.cast("CANCELLED")
+  def CANCELLED: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.CANCELLED = "CANCELLED".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.CANCELLED]
   @scala.inline
-  def ERROR: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.ERROR = this.cast("ERROR")
+  def ERROR: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.ERROR = "ERROR".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.ERROR]
   @scala.inline
-  def OK: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.OK = this.cast("OK")
+  def OK: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.OK = "OK".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.OK]
   @scala.inline
-  def SIGN_IN_STATUS_UNSPECIFIED: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.SIGN_IN_STATUS_UNSPECIFIED = this.cast("SIGN_IN_STATUS_UNSPECIFIED")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def SIGN_IN_STATUS_UNSPECIFIED: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.SIGN_IN_STATUS_UNSPECIFIED = "SIGN_IN_STATUS_UNSPECIFIED".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.SIGN_IN_STATUS_UNSPECIFIED]
 }
 

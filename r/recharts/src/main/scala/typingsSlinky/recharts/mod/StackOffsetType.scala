@@ -15,16 +15,14 @@ trait StackOffsetType extends js.Object
 
 object StackOffsetType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def expand: typingsSlinky.recharts.rechartsStrings.expand = "expand".asInstanceOf[typingsSlinky.recharts.rechartsStrings.expand]
   @scala.inline
-  def expand: typingsSlinky.recharts.rechartsStrings.expand = this.cast("expand")
+  def none: typingsSlinky.recharts.rechartsStrings.none = "none".asInstanceOf[typingsSlinky.recharts.rechartsStrings.none]
   @scala.inline
-  def none: typingsSlinky.recharts.rechartsStrings.none = this.cast("none")
+  def sign: typingsSlinky.recharts.rechartsStrings.sign = "sign".asInstanceOf[typingsSlinky.recharts.rechartsStrings.sign]
   @scala.inline
-  def sign: typingsSlinky.recharts.rechartsStrings.sign = this.cast("sign")
+  def silhouette: typingsSlinky.recharts.rechartsStrings.silhouette = "silhouette".asInstanceOf[typingsSlinky.recharts.rechartsStrings.silhouette]
   @scala.inline
-  def silhouette: typingsSlinky.recharts.rechartsStrings.silhouette = this.cast("silhouette")
-  @scala.inline
-  def wiggle: typingsSlinky.recharts.rechartsStrings.wiggle = this.cast("wiggle")
+  def wiggle: typingsSlinky.recharts.rechartsStrings.wiggle = "wiggle".asInstanceOf[typingsSlinky.recharts.rechartsStrings.wiggle]
 }
 

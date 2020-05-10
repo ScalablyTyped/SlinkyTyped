@@ -1,12 +1,11 @@
 package typingsSlinky.officeUiFabricReact.components
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLElement
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.facade.ReactElement
+import slinky.core.facade.ReactRef
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.officeUiFabricReact.detailsColumnTypesMod.IDetailsColumnRenderTooltipProps
 import typingsSlinky.officeUiFabricReact.detailsHeaderTypesMod.IColumnReorderHeaderProps
 import typingsSlinky.officeUiFabricReact.detailsHeaderTypesMod.IDetailsHeader
@@ -23,6 +22,7 @@ import typingsSlinky.officeUiFabricReact.detailsRowTypesMod.ICellStyleProps
 import typingsSlinky.officeUiFabricReact.groupedListTypesMod.CollapseAllVisibility
 import typingsSlinky.officeUiFabricReact.withViewportMod.IViewport
 import typingsSlinky.react.mod.LegacyRef
+import typingsSlinky.std.Partial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
@@ -33,86 +33,98 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object DetailsHeader
-  extends ExternalComponentWithAttributesWithRefType[tag.type, LegacyRef[js.Any] with js.Object] {
+object DetailsHeader {
   @JSImport("office-ui-fabric-react", "DetailsHeader")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className */
-  def apply(
-    layoutMode: DetailsListLayoutMode,
-    ariaLabel: String = null,
-    ariaLabelForSelectAllCheckbox: String = null,
-    ariaLabelForSelectionColumn: String = null,
-    ariaLabelForToggleAllGroupsButton: String = null,
-    cellStyleProps: ICellStyleProps = null,
-    checkboxVisibility: CheckboxVisibility = null,
-    collapseAllVisibility: CollapseAllVisibility = null,
-    columnReorderOptions: IColumnReorderOptions = null,
-    columnReorderProps: IColumnReorderHeaderProps = null,
-    columns: js.Array[IColumn] = null,
-    componentRef: IRefObject[IDetailsHeader] = null,
-    groupNestingDepth: Int | Double = null,
-    indentWidth: Int | Double = null,
-    isAllCollapsed: js.UndefOr[Boolean] = js.undefined,
-    minimumPixelsForDrag: Int | Double = null,
-    onColumnAutoResized: (/* column */ IColumn, /* columnIndex */ Double) => Unit = null,
-    onColumnClick: (/* ev */ SyntheticMouseEvent[HTMLElement], /* column */ IColumn) => Unit = null,
-    onColumnContextMenu: (/* column */ IColumn, /* ev */ SyntheticMouseEvent[HTMLElement]) => Unit = null,
-    onColumnIsSizingChanged: (/* column */ IColumn, /* isSizing */ Boolean) => Unit = null,
-    onColumnResized: (/* column */ IColumn, /* newWidth */ Double, /* columnIndex */ Double) => Unit = null,
-    onRenderColumnHeaderTooltip: (/* props */ js.UndefOr[IDetailsColumnRenderTooltipProps], /* defaultRender */ js.UndefOr[
-      js.Function1[/* props */ js.UndefOr[IDetailsColumnRenderTooltipProps], ReactElement | Null]
-    ]) => ReactElement | Null = null,
-    onRenderDetailsCheckbox: (/* props */ js.UndefOr[IDetailsCheckboxProps], /* defaultRender */ js.UndefOr[js.Function1[/* props */ js.UndefOr[IDetailsCheckboxProps], ReactElement | Null]]) => ReactElement | Null = null,
-    onToggleCollapseAll: /* isAllCollapsed */ Boolean => Unit = null,
-    rowWidth: Int | Double = null,
-    selectAllVisibility: SelectAllVisibility = null,
-    selection: ISelection[IObjectWithKey] = null,
-    selectionMode: SelectionMode = null,
-    styles: IStyleFunctionOrObject[IDetailsHeaderStyleProps, IDetailsHeaderStyles] = null,
-    theme: ITheme = null,
-    useFastIcons: js.UndefOr[Boolean] = js.undefined,
-    viewport: IViewport = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, LegacyRef[js.Any] with js.Object] = {
-    val __obj = js.Dynamic.literal(layoutMode = layoutMode.asInstanceOf[js.Any])
-    if (ariaLabel != null) __obj.updateDynamic("ariaLabel")(ariaLabel.asInstanceOf[js.Any])
-    if (ariaLabelForSelectAllCheckbox != null) __obj.updateDynamic("ariaLabelForSelectAllCheckbox")(ariaLabelForSelectAllCheckbox.asInstanceOf[js.Any])
-    if (ariaLabelForSelectionColumn != null) __obj.updateDynamic("ariaLabelForSelectionColumn")(ariaLabelForSelectionColumn.asInstanceOf[js.Any])
-    if (ariaLabelForToggleAllGroupsButton != null) __obj.updateDynamic("ariaLabelForToggleAllGroupsButton")(ariaLabelForToggleAllGroupsButton.asInstanceOf[js.Any])
-    if (cellStyleProps != null) __obj.updateDynamic("cellStyleProps")(cellStyleProps.asInstanceOf[js.Any])
-    if (checkboxVisibility != null) __obj.updateDynamic("checkboxVisibility")(checkboxVisibility.asInstanceOf[js.Any])
-    if (collapseAllVisibility != null) __obj.updateDynamic("collapseAllVisibility")(collapseAllVisibility.asInstanceOf[js.Any])
-    if (columnReorderOptions != null) __obj.updateDynamic("columnReorderOptions")(columnReorderOptions.asInstanceOf[js.Any])
-    if (columnReorderProps != null) __obj.updateDynamic("columnReorderProps")(columnReorderProps.asInstanceOf[js.Any])
-    if (columns != null) __obj.updateDynamic("columns")(columns.asInstanceOf[js.Any])
-    if (componentRef != null) __obj.updateDynamic("componentRef")(componentRef.asInstanceOf[js.Any])
-    if (groupNestingDepth != null) __obj.updateDynamic("groupNestingDepth")(groupNestingDepth.asInstanceOf[js.Any])
-    if (indentWidth != null) __obj.updateDynamic("indentWidth")(indentWidth.asInstanceOf[js.Any])
-    if (!js.isUndefined(isAllCollapsed)) __obj.updateDynamic("isAllCollapsed")(isAllCollapsed.asInstanceOf[js.Any])
-    if (minimumPixelsForDrag != null) __obj.updateDynamic("minimumPixelsForDrag")(minimumPixelsForDrag.asInstanceOf[js.Any])
-    if (onColumnAutoResized != null) __obj.updateDynamic("onColumnAutoResized")(js.Any.fromFunction2(onColumnAutoResized))
-    if (onColumnClick != null) __obj.updateDynamic("onColumnClick")(js.Any.fromFunction2(onColumnClick))
-    if (onColumnContextMenu != null) __obj.updateDynamic("onColumnContextMenu")(js.Any.fromFunction2(onColumnContextMenu))
-    if (onColumnIsSizingChanged != null) __obj.updateDynamic("onColumnIsSizingChanged")(js.Any.fromFunction2(onColumnIsSizingChanged))
-    if (onColumnResized != null) __obj.updateDynamic("onColumnResized")(js.Any.fromFunction3(onColumnResized))
-    if (onRenderColumnHeaderTooltip != null) __obj.updateDynamic("onRenderColumnHeaderTooltip")(js.Any.fromFunction2(onRenderColumnHeaderTooltip))
-    if (onRenderDetailsCheckbox != null) __obj.updateDynamic("onRenderDetailsCheckbox")(js.Any.fromFunction2(onRenderDetailsCheckbox))
-    if (onToggleCollapseAll != null) __obj.updateDynamic("onToggleCollapseAll")(js.Any.fromFunction1(onToggleCollapseAll))
-    if (rowWidth != null) __obj.updateDynamic("rowWidth")(rowWidth.asInstanceOf[js.Any])
-    if (selectAllVisibility != null) __obj.updateDynamic("selectAllVisibility")(selectAllVisibility.asInstanceOf[js.Any])
-    if (selection != null) __obj.updateDynamic("selection")(selection.asInstanceOf[js.Any])
-    if (selectionMode != null) __obj.updateDynamic("selectionMode")(selectionMode.asInstanceOf[js.Any])
-    if (styles != null) __obj.updateDynamic("styles")(styles.asInstanceOf[js.Any])
-    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
-    if (!js.isUndefined(useFastIcons)) __obj.updateDynamic("useFastIcons")(useFastIcons.asInstanceOf[js.Any])
-    if (viewport != null) __obj.updateDynamic("viewport")(viewport.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, LegacyRef[js.Any] with js.Object] {
+    @scala.inline
+    def ariaLabel(value: String): this.type = set("ariaLabel", value.asInstanceOf[js.Any])
+    @scala.inline
+    def ariaLabelForSelectAllCheckbox(value: String): this.type = set("ariaLabelForSelectAllCheckbox", value.asInstanceOf[js.Any])
+    @scala.inline
+    def ariaLabelForSelectionColumn(value: String): this.type = set("ariaLabelForSelectionColumn", value.asInstanceOf[js.Any])
+    @scala.inline
+    def ariaLabelForToggleAllGroupsButton(value: String): this.type = set("ariaLabelForToggleAllGroupsButton", value.asInstanceOf[js.Any])
+    @scala.inline
+    def cellStyleProps(value: ICellStyleProps): this.type = set("cellStyleProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def checkboxVisibility(value: CheckboxVisibility): this.type = set("checkboxVisibility", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def collapseAllVisibility(value: CollapseAllVisibility): this.type = set("collapseAllVisibility", value.asInstanceOf[js.Any])
+    @scala.inline
+    def columnReorderOptions(value: IColumnReorderOptions): this.type = set("columnReorderOptions", value.asInstanceOf[js.Any])
+    @scala.inline
+    def columnReorderProps(value: IColumnReorderHeaderProps): this.type = set("columnReorderProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def columns(value: js.Array[IColumn]): this.type = set("columns", value.asInstanceOf[js.Any])
+    @scala.inline
+    def componentRefFunction1(value: /* ref */ IDetailsHeader | Null => Unit): this.type = set("componentRef", js.Any.fromFunction1(value))
+    @scala.inline
+    def componentRefRefObject(value: ReactRef[IDetailsHeader]): this.type = set("componentRef", value.asInstanceOf[js.Any])
+    @scala.inline
+    def componentRef(value: IRefObject[IDetailsHeader]): this.type = set("componentRef", value.asInstanceOf[js.Any])
+    @scala.inline
+    def groupNestingDepth(value: Double): this.type = set("groupNestingDepth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def indentWidth(value: Double): this.type = set("indentWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def isAllCollapsed(value: Boolean): this.type = set("isAllCollapsed", value.asInstanceOf[js.Any])
+    @scala.inline
+    def minimumPixelsForDrag(value: Double): this.type = set("minimumPixelsForDrag", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onColumnAutoResized(value: (/* column */ IColumn, /* columnIndex */ Double) => Unit): this.type = set("onColumnAutoResized", js.Any.fromFunction2(value))
+    @scala.inline
+    def onColumnClick(value: (/* ev */ SyntheticMouseEvent[HTMLElement], /* column */ IColumn) => Unit): this.type = set("onColumnClick", js.Any.fromFunction2(value))
+    @scala.inline
+    def onColumnContextMenu(value: (/* column */ IColumn, /* ev */ SyntheticMouseEvent[HTMLElement]) => Unit): this.type = set("onColumnContextMenu", js.Any.fromFunction2(value))
+    @scala.inline
+    def onColumnIsSizingChanged(value: (/* column */ IColumn, /* isSizing */ Boolean) => Unit): this.type = set("onColumnIsSizingChanged", js.Any.fromFunction2(value))
+    @scala.inline
+    def onColumnResized(value: (/* column */ IColumn, /* newWidth */ Double, /* columnIndex */ Double) => Unit): this.type = set("onColumnResized", js.Any.fromFunction3(value))
+    @scala.inline
+    def onRenderColumnHeaderTooltip(
+      value: (/* props */ js.UndefOr[IDetailsColumnRenderTooltipProps], /* defaultRender */ js.UndefOr[
+          js.Function1[/* props */ js.UndefOr[IDetailsColumnRenderTooltipProps], ReactElement | Null]
+        ]) => ReactElement | Null
+    ): this.type = set("onRenderColumnHeaderTooltip", js.Any.fromFunction2(value))
+    @scala.inline
+    def onRenderDetailsCheckbox(
+      value: (/* props */ js.UndefOr[IDetailsCheckboxProps], /* defaultRender */ js.UndefOr[js.Function1[/* props */ js.UndefOr[IDetailsCheckboxProps], ReactElement | Null]]) => ReactElement | Null
+    ): this.type = set("onRenderDetailsCheckbox", js.Any.fromFunction2(value))
+    @scala.inline
+    def onToggleCollapseAll(value: /* isAllCollapsed */ Boolean => Unit): this.type = set("onToggleCollapseAll", js.Any.fromFunction1(value))
+    @scala.inline
+    def rowWidth(value: Double): this.type = set("rowWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def selectAllVisibility(value: SelectAllVisibility): this.type = set("selectAllVisibility", value.asInstanceOf[js.Any])
+    @scala.inline
+    def selection(value: ISelection[IObjectWithKey]): this.type = set("selection", value.asInstanceOf[js.Any])
+    @scala.inline
+    def selectionMode(value: SelectionMode): this.type = set("selectionMode", value.asInstanceOf[js.Any])
+    @scala.inline
+    def stylesFunction1(value: IDetailsHeaderStyleProps => Partial[IDetailsHeaderStyles]): this.type = set("styles", js.Any.fromFunction1(value))
+    @scala.inline
+    def styles(value: IStyleFunctionOrObject[IDetailsHeaderStyleProps, IDetailsHeaderStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
+    @scala.inline
+    def theme(value: ITheme): this.type = set("theme", value.asInstanceOf[js.Any])
+    @scala.inline
+    def useFastIcons(value: Boolean): this.type = set("useFastIcons", value.asInstanceOf[js.Any])
+    @scala.inline
+    def viewport(value: IViewport): this.type = set("viewport", value.asInstanceOf[js.Any])
   }
-  type Props = IDetailsHeaderBaseProps
+  
+  def withProps(p: IDetailsHeaderBaseProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(layoutMode: DetailsListLayoutMode): Builder = {
+    val __props = js.Dynamic.literal(layoutMode = layoutMode.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[IDetailsHeaderBaseProps]))
+  }
 }
 

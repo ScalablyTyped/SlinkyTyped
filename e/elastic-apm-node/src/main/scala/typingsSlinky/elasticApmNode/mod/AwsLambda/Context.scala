@@ -1,6 +1,5 @@
 package typingsSlinky.elasticApmNode.mod.AwsLambda
 
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -24,7 +23,7 @@ trait Context extends js.Object {
   def done(error: js.Error): Unit = js.native
   def done(error: js.Error, result: js.Any): Unit = js.native
   def fail(error: String): Unit = js.native
-  def fail(error: Error): Unit = js.native
+  def fail(error: js.Error): Unit = js.native
   // Functions
   def getRemainingTimeInMillis(): Double = js.native
   def succeed(messageOrObject: js.Any): Unit = js.native

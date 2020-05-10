@@ -18,11 +18,41 @@ trait ListJobsResult extends js.Object {
 
 object ListJobsResult {
   @scala.inline
-  def apply(Jobs: JobListDescriptorList = null, NextToken: NonEmptyMaxLength1024String = null): ListJobsResult = {
+  def apply(): ListJobsResult = {
     val __obj = js.Dynamic.literal()
-    if (Jobs != null) __obj.updateDynamic("Jobs")(Jobs.asInstanceOf[js.Any])
-    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListJobsResult]
   }
+  @scala.inline
+  implicit class ListJobsResultOps[Self <: ListJobsResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withJobs(value: JobListDescriptorList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Jobs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutJobs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Jobs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextToken(value: NonEmptyMaxLength1024String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

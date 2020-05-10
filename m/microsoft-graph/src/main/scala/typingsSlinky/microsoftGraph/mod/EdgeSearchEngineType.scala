@@ -12,10 +12,8 @@ trait EdgeSearchEngineType extends js.Object
 
 object EdgeSearchEngineType {
   @scala.inline
-  def bing: typingsSlinky.microsoftGraph.microsoftGraphStrings.bing = this.cast("bing")
+  def bing: typingsSlinky.microsoftGraph.microsoftGraphStrings.bing = "bing".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.bing]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
-  @scala.inline
-  def default: typingsSlinky.microsoftGraph.microsoftGraphStrings.default = this.cast("default")
+  def default: typingsSlinky.microsoftGraph.microsoftGraphStrings.default = "default".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.default]
 }
 

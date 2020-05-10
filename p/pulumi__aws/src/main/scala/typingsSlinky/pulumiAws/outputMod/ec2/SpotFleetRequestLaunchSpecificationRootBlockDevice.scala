@@ -16,17 +16,59 @@ trait SpotFleetRequestLaunchSpecificationRootBlockDevice extends js.Object {
 
 object SpotFleetRequestLaunchSpecificationRootBlockDevice {
   @scala.inline
-  def apply(
-    encrypted: Boolean,
-    iops: Double,
-    kmsKeyId: String,
-    volumeSize: Double,
-    volumeType: String,
-    deleteOnTermination: js.UndefOr[Boolean] = js.undefined
-  ): SpotFleetRequestLaunchSpecificationRootBlockDevice = {
+  def apply(encrypted: Boolean, iops: Double, kmsKeyId: String, volumeSize: Double, volumeType: String): SpotFleetRequestLaunchSpecificationRootBlockDevice = {
     val __obj = js.Dynamic.literal(encrypted = encrypted.asInstanceOf[js.Any], iops = iops.asInstanceOf[js.Any], kmsKeyId = kmsKeyId.asInstanceOf[js.Any], volumeSize = volumeSize.asInstanceOf[js.Any], volumeType = volumeType.asInstanceOf[js.Any])
-    if (!js.isUndefined(deleteOnTermination)) __obj.updateDynamic("deleteOnTermination")(deleteOnTermination.asInstanceOf[js.Any])
     __obj.asInstanceOf[SpotFleetRequestLaunchSpecificationRootBlockDevice]
   }
+  @scala.inline
+  implicit class SpotFleetRequestLaunchSpecificationRootBlockDeviceOps[Self <: SpotFleetRequestLaunchSpecificationRootBlockDevice] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEncrypted(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encrypted")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIops(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iops")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withKmsKeyId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kmsKeyId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVolumeSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("volumeSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVolumeType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("volumeType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDeleteOnTermination(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteOnTermination")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeleteOnTermination: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteOnTermination")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

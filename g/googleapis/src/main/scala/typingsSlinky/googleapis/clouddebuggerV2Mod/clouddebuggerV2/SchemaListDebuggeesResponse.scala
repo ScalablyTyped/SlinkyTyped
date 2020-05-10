@@ -20,10 +20,29 @@ trait SchemaListDebuggeesResponse extends js.Object {
 
 object SchemaListDebuggeesResponse {
   @scala.inline
-  def apply(debuggees: js.Array[SchemaDebuggee] = null): SchemaListDebuggeesResponse = {
+  def apply(): SchemaListDebuggeesResponse = {
     val __obj = js.Dynamic.literal()
-    if (debuggees != null) __obj.updateDynamic("debuggees")(debuggees.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaListDebuggeesResponse]
   }
+  @scala.inline
+  implicit class SchemaListDebuggeesResponseOps[Self <: SchemaListDebuggeesResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDebuggees(value: js.Array[SchemaDebuggee]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("debuggees")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDebuggees: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("debuggees")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -14,8 +14,27 @@ object WebhookFilter {
   @scala.inline
   def apply(jsonPath: String, matchEquals: String): WebhookFilter = {
     val __obj = js.Dynamic.literal(jsonPath = jsonPath.asInstanceOf[js.Any], matchEquals = matchEquals.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[WebhookFilter]
   }
+  @scala.inline
+  implicit class WebhookFilterOps[Self <: WebhookFilter] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withJsonPath(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jsonPath")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMatchEquals(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("matchEquals")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

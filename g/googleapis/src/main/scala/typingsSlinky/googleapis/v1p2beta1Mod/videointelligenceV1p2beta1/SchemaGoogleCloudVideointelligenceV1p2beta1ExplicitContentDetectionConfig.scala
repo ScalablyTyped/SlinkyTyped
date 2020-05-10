@@ -19,10 +19,29 @@ trait SchemaGoogleCloudVideointelligenceV1p2beta1ExplicitContentDetectionConfig 
 
 object SchemaGoogleCloudVideointelligenceV1p2beta1ExplicitContentDetectionConfig {
   @scala.inline
-  def apply(model: String = null): SchemaGoogleCloudVideointelligenceV1p2beta1ExplicitContentDetectionConfig = {
+  def apply(): SchemaGoogleCloudVideointelligenceV1p2beta1ExplicitContentDetectionConfig = {
     val __obj = js.Dynamic.literal()
-    if (model != null) __obj.updateDynamic("model")(model.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudVideointelligenceV1p2beta1ExplicitContentDetectionConfig]
   }
+  @scala.inline
+  implicit class SchemaGoogleCloudVideointelligenceV1p2beta1ExplicitContentDetectionConfigOps[Self <: SchemaGoogleCloudVideointelligenceV1p2beta1ExplicitContentDetectionConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withModel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("model")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutModel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("model")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

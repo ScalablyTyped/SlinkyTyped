@@ -18,22 +18,20 @@ trait RequiredUserLegalData extends js.Object
 
 object RequiredUserLegalData {
   @scala.inline
-  def Email: typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.Email = this.cast("Email")
+  def Email: typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.Email = "Email".asInstanceOf[typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.Email]
   @scala.inline
-  def LegalPersonType: typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.LegalPersonType = this.cast("LegalPersonType")
+  def LegalPersonType: typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.LegalPersonType = "LegalPersonType".asInstanceOf[typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.LegalPersonType]
   @scala.inline
-  def LegalRepresentativeBirthday: typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.LegalRepresentativeBirthday = this.cast("LegalRepresentativeBirthday")
+  def LegalRepresentativeBirthday: typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.LegalRepresentativeBirthday = "LegalRepresentativeBirthday".asInstanceOf[typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.LegalRepresentativeBirthday]
   @scala.inline
-  def LegalRepresentativeCountryOfResidence: typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.LegalRepresentativeCountryOfResidence = this.cast("LegalRepresentativeCountryOfResidence")
+  def LegalRepresentativeCountryOfResidence: typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.LegalRepresentativeCountryOfResidence = "LegalRepresentativeCountryOfResidence".asInstanceOf[typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.LegalRepresentativeCountryOfResidence]
   @scala.inline
-  def LegalRepresentativeFirstName: typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.LegalRepresentativeFirstName = this.cast("LegalRepresentativeFirstName")
+  def LegalRepresentativeFirstName: typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.LegalRepresentativeFirstName = "LegalRepresentativeFirstName".asInstanceOf[typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.LegalRepresentativeFirstName]
   @scala.inline
-  def LegalRepresentativeLastName: typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.LegalRepresentativeLastName = this.cast("LegalRepresentativeLastName")
+  def LegalRepresentativeLastName: typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.LegalRepresentativeLastName = "LegalRepresentativeLastName".asInstanceOf[typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.LegalRepresentativeLastName]
   @scala.inline
-  def LegalRepresentativeNationality: typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.LegalRepresentativeNationality = this.cast("LegalRepresentativeNationality")
+  def LegalRepresentativeNationality: typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.LegalRepresentativeNationality = "LegalRepresentativeNationality".asInstanceOf[typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.LegalRepresentativeNationality]
   @scala.inline
-  def Name: typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.Name = this.cast("Name")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def Name: typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.Name = "Name".asInstanceOf[typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.Name]
 }
 

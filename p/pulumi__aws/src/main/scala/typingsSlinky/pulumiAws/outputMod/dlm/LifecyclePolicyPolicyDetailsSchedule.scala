@@ -35,12 +35,54 @@ object LifecyclePolicyPolicyDetailsSchedule {
     copyTags: Boolean,
     createRule: LifecyclePolicyPolicyDetailsScheduleCreateRule,
     name: String,
-    retainRule: LifecyclePolicyPolicyDetailsScheduleRetainRule,
-    tagsToAdd: StringDictionary[js.Any] = null
+    retainRule: LifecyclePolicyPolicyDetailsScheduleRetainRule
   ): LifecyclePolicyPolicyDetailsSchedule = {
     val __obj = js.Dynamic.literal(copyTags = copyTags.asInstanceOf[js.Any], createRule = createRule.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], retainRule = retainRule.asInstanceOf[js.Any])
-    if (tagsToAdd != null) __obj.updateDynamic("tagsToAdd")(tagsToAdd.asInstanceOf[js.Any])
     __obj.asInstanceOf[LifecyclePolicyPolicyDetailsSchedule]
   }
+  @scala.inline
+  implicit class LifecyclePolicyPolicyDetailsScheduleOps[Self <: LifecyclePolicyPolicyDetailsSchedule] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCopyTags(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("copyTags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCreateRule(value: LifecyclePolicyPolicyDetailsScheduleCreateRule): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createRule")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRetainRule(value: LifecyclePolicyPolicyDetailsScheduleRetainRule): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("retainRule")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTagsToAdd(value: StringDictionary[js.Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tagsToAdd")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTagsToAdd: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tagsToAdd")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

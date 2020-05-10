@@ -2,7 +2,6 @@ package typingsSlinky.firebaseFirestoreTypes.mod
 
 import typingsSlinky.firebaseFirestoreTypes.AnonError
 import typingsSlinky.firebaseFirestoreTypes.AnonNext
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,11 +22,11 @@ class DocumentReference[T] protected () extends js.Object {
   def onSnapshot(onNext: js.Function1[/* snapshot */ DocumentSnapshot[T], Unit]): js.Function0[Unit] = js.native
   def onSnapshot(
     onNext: js.Function1[/* snapshot */ DocumentSnapshot[T], Unit],
-    onError: js.Function1[/* error */ Error, Unit]
+    onError: js.Function1[/* error */ js.Error, Unit]
   ): js.Function0[Unit] = js.native
   def onSnapshot(
     onNext: js.Function1[/* snapshot */ DocumentSnapshot[T], Unit],
-    onError: js.Function1[/* error */ Error, Unit],
+    onError: js.Function1[/* error */ js.Error, Unit],
     onCompletion: js.Function0[Unit]
   ): js.Function0[Unit] = js.native
   def onSnapshot(options: SnapshotListenOptions, observer: AnonNext[T]): js.Function0[Unit] = js.native
@@ -35,12 +34,12 @@ class DocumentReference[T] protected () extends js.Object {
   def onSnapshot(
     options: SnapshotListenOptions,
     onNext: js.Function1[/* snapshot */ DocumentSnapshot[T], Unit],
-    onError: js.Function1[/* error */ Error, Unit]
+    onError: js.Function1[/* error */ js.Error, Unit]
   ): js.Function0[Unit] = js.native
   def onSnapshot(
     options: SnapshotListenOptions,
     onNext: js.Function1[/* snapshot */ DocumentSnapshot[T], Unit],
-    onError: js.Function1[/* error */ Error, Unit],
+    onError: js.Function1[/* error */ js.Error, Unit],
     onCompletion: js.Function0[Unit]
   ): js.Function0[Unit] = js.native
   def set(data: T): js.Promise[Unit] = js.native

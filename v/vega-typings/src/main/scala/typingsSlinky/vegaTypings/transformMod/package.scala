@@ -39,6 +39,7 @@ package object transformMod {
     - typingsSlinky.vegaTypings.transformMod.JoinAggregateTransform
     - typingsSlinky.vegaTypings.transformMod.KDETransform
     - typingsSlinky.vegaTypings.transformMod.KDE2DTransform
+    - typingsSlinky.vegaTypings.transformMod.LabelTransform
     - typingsSlinky.vegaTypings.transformMod.LinkPathTransform
     - typingsSlinky.vegaTypings.transformMod.LoessTransform
     - typingsSlinky.vegaTypings.transformMod.LookupTransform

@@ -1,7 +1,6 @@
 package typingsSlinky.backbone.mod
 
 import typingsSlinky.std.Location_
-import typingsSlinky.std.RegExp
 import typingsSlinky.std.Window_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -30,7 +29,7 @@ class History_ () extends js.Object {
   def navigate(fragment: String): Boolean = js.native
   def navigate(fragment: String, options: js.Any): Boolean = js.native
   def route(route: String, callback: js.Function): Double = js.native
-  def route(route: RegExp, callback: js.Function): Double = js.native
+  def route(route: js.RegExp, callback: js.Function): Double = js.native
   def start(): Boolean = js.native
   def start(options: HistoryOptions): Boolean = js.native
   def stop(): Unit = js.native

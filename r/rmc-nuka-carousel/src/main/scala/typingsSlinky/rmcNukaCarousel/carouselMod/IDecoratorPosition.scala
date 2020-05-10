@@ -19,24 +19,22 @@ trait IDecoratorPosition extends js.Object
 
 object IDecoratorPosition {
   @scala.inline
-  def BottomCenter: typingsSlinky.rmcNukaCarousel.rmcNukaCarouselStrings.BottomCenter = this.cast("BottomCenter")
+  def BottomCenter: typingsSlinky.rmcNukaCarousel.rmcNukaCarouselStrings.BottomCenter = "BottomCenter".asInstanceOf[typingsSlinky.rmcNukaCarousel.rmcNukaCarouselStrings.BottomCenter]
   @scala.inline
-  def BottomLeft: typingsSlinky.rmcNukaCarousel.rmcNukaCarouselStrings.BottomLeft = this.cast("BottomLeft")
+  def BottomLeft: typingsSlinky.rmcNukaCarousel.rmcNukaCarouselStrings.BottomLeft = "BottomLeft".asInstanceOf[typingsSlinky.rmcNukaCarousel.rmcNukaCarouselStrings.BottomLeft]
   @scala.inline
-  def BottomRight: typingsSlinky.rmcNukaCarousel.rmcNukaCarouselStrings.BottomRight = this.cast("BottomRight")
+  def BottomRight: typingsSlinky.rmcNukaCarousel.rmcNukaCarouselStrings.BottomRight = "BottomRight".asInstanceOf[typingsSlinky.rmcNukaCarousel.rmcNukaCarouselStrings.BottomRight]
   @scala.inline
-  def CenterCenter: typingsSlinky.rmcNukaCarousel.rmcNukaCarouselStrings.CenterCenter = this.cast("CenterCenter")
+  def CenterCenter: typingsSlinky.rmcNukaCarousel.rmcNukaCarouselStrings.CenterCenter = "CenterCenter".asInstanceOf[typingsSlinky.rmcNukaCarousel.rmcNukaCarouselStrings.CenterCenter]
   @scala.inline
-  def CenterLeft: typingsSlinky.rmcNukaCarousel.rmcNukaCarouselStrings.CenterLeft = this.cast("CenterLeft")
+  def CenterLeft: typingsSlinky.rmcNukaCarousel.rmcNukaCarouselStrings.CenterLeft = "CenterLeft".asInstanceOf[typingsSlinky.rmcNukaCarousel.rmcNukaCarouselStrings.CenterLeft]
   @scala.inline
-  def CenterRight: typingsSlinky.rmcNukaCarousel.rmcNukaCarouselStrings.CenterRight = this.cast("CenterRight")
+  def CenterRight: typingsSlinky.rmcNukaCarousel.rmcNukaCarouselStrings.CenterRight = "CenterRight".asInstanceOf[typingsSlinky.rmcNukaCarousel.rmcNukaCarouselStrings.CenterRight]
   @scala.inline
-  def TopCenter: typingsSlinky.rmcNukaCarousel.rmcNukaCarouselStrings.TopCenter = this.cast("TopCenter")
+  def TopCenter: typingsSlinky.rmcNukaCarousel.rmcNukaCarouselStrings.TopCenter = "TopCenter".asInstanceOf[typingsSlinky.rmcNukaCarousel.rmcNukaCarouselStrings.TopCenter]
   @scala.inline
-  def TopLeft: typingsSlinky.rmcNukaCarousel.rmcNukaCarouselStrings.TopLeft = this.cast("TopLeft")
+  def TopLeft: typingsSlinky.rmcNukaCarousel.rmcNukaCarouselStrings.TopLeft = "TopLeft".asInstanceOf[typingsSlinky.rmcNukaCarousel.rmcNukaCarouselStrings.TopLeft]
   @scala.inline
-  def TopRight: typingsSlinky.rmcNukaCarousel.rmcNukaCarouselStrings.TopRight = this.cast("TopRight")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def TopRight: typingsSlinky.rmcNukaCarousel.rmcNukaCarouselStrings.TopRight = "TopRight".asInstanceOf[typingsSlinky.rmcNukaCarousel.rmcNukaCarouselStrings.TopRight]
 }
 

@@ -1,6 +1,5 @@
 package typingsSlinky.calHeatmap.mod._Global_.CalHeatMap
 
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -41,8 +40,8 @@ trait CalHeatMap extends js.Object {
   			 * @param {string|Date|Date[]} dates The date or dates to highlight.
   			 */
   def highlight(dates: String): Unit = js.native
-  def highlight(dates: js.Array[Date]): Unit = js.native
-  def highlight(dates: Date): Unit = js.native
+  def highlight(dates: js.Array[js.Date]): Unit = js.native
+  def highlight(dates: js.Date): Unit = js.native
   /**
   			 * Initialise the CalHeatMap with the specified options
   			 * @param {InitOptions} options The CalHeatMap options

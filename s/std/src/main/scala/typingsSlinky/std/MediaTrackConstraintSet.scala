@@ -4,60 +4,218 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait MediaTrackConstraintSet extends js.Object {
-  var aspectRatio: js.UndefOr[ConstrainDouble] = js.undefined
-  var autoGainControl: js.UndefOr[ConstrainBoolean] = js.undefined
-  var channelCount: js.UndefOr[ConstrainULong] = js.undefined
-  var deviceId: js.UndefOr[ConstrainDOMString] = js.undefined
-  var echoCancellation: js.UndefOr[ConstrainBoolean] = js.undefined
-  var facingMode: js.UndefOr[ConstrainDOMString] = js.undefined
-  var frameRate: js.UndefOr[ConstrainDouble] = js.undefined
-  var groupId: js.UndefOr[ConstrainDOMString] = js.undefined
-  var height: js.UndefOr[ConstrainULong] = js.undefined
-  var latency: js.UndefOr[ConstrainDouble] = js.undefined
-  var noiseSuppression: js.UndefOr[ConstrainBoolean] = js.undefined
-  var resizeMode: js.UndefOr[ConstrainDOMString] = js.undefined
-  var sampleRate: js.UndefOr[ConstrainULong] = js.undefined
-  var sampleSize: js.UndefOr[ConstrainULong] = js.undefined
-  var width: js.UndefOr[ConstrainULong] = js.undefined
+  var aspectRatio: js.UndefOr[ConstrainDouble] = js.native
+  var autoGainControl: js.UndefOr[ConstrainBoolean] = js.native
+  var channelCount: js.UndefOr[ConstrainULong] = js.native
+  var deviceId: js.UndefOr[ConstrainDOMString] = js.native
+  var echoCancellation: js.UndefOr[ConstrainBoolean] = js.native
+  var facingMode: js.UndefOr[ConstrainDOMString] = js.native
+  var frameRate: js.UndefOr[ConstrainDouble] = js.native
+  var groupId: js.UndefOr[ConstrainDOMString] = js.native
+  var height: js.UndefOr[ConstrainULong] = js.native
+  var latency: js.UndefOr[ConstrainDouble] = js.native
+  var noiseSuppression: js.UndefOr[ConstrainBoolean] = js.native
+  var resizeMode: js.UndefOr[ConstrainDOMString] = js.native
+  var sampleRate: js.UndefOr[ConstrainULong] = js.native
+  var sampleSize: js.UndefOr[ConstrainULong] = js.native
+  var width: js.UndefOr[ConstrainULong] = js.native
 }
 
 object MediaTrackConstraintSet {
   @scala.inline
-  def apply(
-    aspectRatio: ConstrainDouble = null,
-    autoGainControl: ConstrainBoolean = null,
-    channelCount: ConstrainULong = null,
-    deviceId: ConstrainDOMString = null,
-    echoCancellation: ConstrainBoolean = null,
-    facingMode: ConstrainDOMString = null,
-    frameRate: ConstrainDouble = null,
-    groupId: ConstrainDOMString = null,
-    height: ConstrainULong = null,
-    latency: ConstrainDouble = null,
-    noiseSuppression: ConstrainBoolean = null,
-    resizeMode: ConstrainDOMString = null,
-    sampleRate: ConstrainULong = null,
-    sampleSize: ConstrainULong = null,
-    width: ConstrainULong = null
-  ): MediaTrackConstraintSet = {
+  def apply(): MediaTrackConstraintSet = {
     val __obj = js.Dynamic.literal()
-    if (aspectRatio != null) __obj.updateDynamic("aspectRatio")(aspectRatio.asInstanceOf[js.Any])
-    if (autoGainControl != null) __obj.updateDynamic("autoGainControl")(autoGainControl.asInstanceOf[js.Any])
-    if (channelCount != null) __obj.updateDynamic("channelCount")(channelCount.asInstanceOf[js.Any])
-    if (deviceId != null) __obj.updateDynamic("deviceId")(deviceId.asInstanceOf[js.Any])
-    if (echoCancellation != null) __obj.updateDynamic("echoCancellation")(echoCancellation.asInstanceOf[js.Any])
-    if (facingMode != null) __obj.updateDynamic("facingMode")(facingMode.asInstanceOf[js.Any])
-    if (frameRate != null) __obj.updateDynamic("frameRate")(frameRate.asInstanceOf[js.Any])
-    if (groupId != null) __obj.updateDynamic("groupId")(groupId.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (latency != null) __obj.updateDynamic("latency")(latency.asInstanceOf[js.Any])
-    if (noiseSuppression != null) __obj.updateDynamic("noiseSuppression")(noiseSuppression.asInstanceOf[js.Any])
-    if (resizeMode != null) __obj.updateDynamic("resizeMode")(resizeMode.asInstanceOf[js.Any])
-    if (sampleRate != null) __obj.updateDynamic("sampleRate")(sampleRate.asInstanceOf[js.Any])
-    if (sampleSize != null) __obj.updateDynamic("sampleSize")(sampleSize.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     __obj.asInstanceOf[MediaTrackConstraintSet]
   }
+  @scala.inline
+  implicit class MediaTrackConstraintSetOps[Self <: org.scalajs.dom.experimental.mediastream.MediaTrackConstraintSet] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAspectRatio(value: ConstrainDouble): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aspectRatio")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAspectRatio: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aspectRatio")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutoGainControl(value: ConstrainBoolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoGainControl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoGainControl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoGainControl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withChannelCount(value: ConstrainULong): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("channelCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChannelCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("channelCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeviceId(value: ConstrainDOMString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeviceId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEchoCancellation(value: ConstrainBoolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("echoCancellation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEchoCancellation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("echoCancellation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFacingMode(value: ConstrainDOMString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("facingMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFacingMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("facingMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFrameRate(value: ConstrainDouble): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("frameRate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFrameRate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("frameRate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGroupId(value: ConstrainDOMString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("groupId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGroupId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("groupId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeight(value: ConstrainULong): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLatency(value: ConstrainDouble): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("latency")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLatency: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("latency")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNoiseSuppression(value: ConstrainBoolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noiseSuppression")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNoiseSuppression: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noiseSuppression")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResizeMode(value: ConstrainDOMString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resizeMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResizeMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resizeMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSampleRate(value: ConstrainULong): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sampleRate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSampleRate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sampleRate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSampleSize(value: ConstrainULong): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sampleSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSampleSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sampleSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWidth(value: ConstrainULong): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

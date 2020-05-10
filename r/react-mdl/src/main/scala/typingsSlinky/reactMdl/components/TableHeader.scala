@@ -1,11 +1,9 @@
 package typingsSlinky.reactMdl.components
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.EventTarget
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.SyntheticEvent
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.SyntheticClipboardEvent
 import slinky.web.SyntheticCompositionEvent
 import slinky.web.SyntheticFocusEvent
@@ -15,6 +13,8 @@ import slinky.web.SyntheticTouchEvent
 import slinky.web.SyntheticUIEvent
 import slinky.web.SyntheticWheelEvent
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
+import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DragEvent
 import typingsSlinky.reactMdl.AnonHtml
 import typingsSlinky.reactMdl.mod.TableHeaderProps
@@ -23,282 +23,434 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object TableHeader
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactMdl.mod.TableHeader] {
+object TableHeader {
   @JSImport("react-mdl", "TableHeader")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: accept, action, alt, async, autoComplete, autoFocus, challenge, checked, className, colSpan, cols, content, controls, coords, default, defaultChecked, defer, dir, disabled, download, draggable, form, headers, height, hidden, high, href, htmlFor, id, integrity, kind, lang, list, loop, low, manifest, max, media, method, min, multiple, muted, nonce, open, optimum, pattern, placeholder, poster, preload, readOnly, rel, required, reversed, rowSpan, sandbox, scope, scoped, scrolling, selected, shape, sizes, span, spellCheck, src, start, step, style, summary, tabIndex, target, title, type, width, wrap */
-  def apply(
-    name: String,
-    about: String = null,
-    acceptCharset: String = null,
-    accessKey: String = null,
-    allowFullScreen: js.UndefOr[Boolean] = js.undefined,
-    allowTransparency: js.UndefOr[Boolean] = js.undefined,
-    autoCapitalize: String = null,
-    autoCorrect: String = null,
-    autoPlay: js.UndefOr[Boolean] = js.undefined,
-    autoSave: String = null,
-    capture: js.UndefOr[Boolean] = js.undefined,
-    cellFormatter: (/* value */ js.Any, /* row */ js.Any, /* index */ Double) => TagMod[Any] = null,
-    cellPadding: Double | String = null,
-    cellSpacing: Double | String = null,
-    charSet: String = null,
-    classID: String = null,
-    color: String = null,
-    contentEditable: js.UndefOr[Boolean] = js.undefined,
-    contextMenu: String = null,
-    crossOrigin: String = null,
-    dangerouslySetInnerHTML: AnonHtml = null,
-    datatype: String = null,
-    dateTime: String = null,
-    defaultValue: Double | String | js.Array[String] = null,
-    encType: String = null,
-    formAction: String = null,
-    formEncType: String = null,
-    formMethod: String = null,
-    formNoValidate: js.UndefOr[Boolean] = js.undefined,
-    formTarget: String = null,
-    frameBorder: Double | String = null,
-    hrefLang: String = null,
-    httpEquiv: String = null,
-    inlist: js.Any = null,
-    inputMode: String = null,
-    is: String = null,
-    itemID: String = null,
-    itemProp: String = null,
-    itemRef: String = null,
-    itemScope: js.UndefOr[Boolean] = js.undefined,
-    itemType: String = null,
-    keyParams: String = null,
-    keyType: String = null,
-    marginHeight: Int | Double = null,
-    marginWidth: Int | Double = null,
-    maxLength: Int | Double = null,
-    mediaGroup: String = null,
-    minLength: Int | Double = null,
-    noValidate: js.UndefOr[Boolean] = js.undefined,
-    nosort: js.UndefOr[Boolean] = js.undefined,
-    numeric: js.UndefOr[Boolean] = js.undefined,
-    onAbort: SyntheticEvent[Event_, typingsSlinky.reactMdl.mod.TableHeader] => Unit = null,
-    onBlur: SyntheticFocusEvent[typingsSlinky.reactMdl.mod.TableHeader] => Unit = null,
-    onCanPlay: SyntheticEvent[Event_, typingsSlinky.reactMdl.mod.TableHeader] => Unit = null,
-    onCanPlayThrough: SyntheticEvent[Event_, typingsSlinky.reactMdl.mod.TableHeader] => Unit = null,
-    onClick: (/* e */ SyntheticMouseEvent[typingsSlinky.reactMdl.mod.TableHeader], /* name */ String) => _ = null,
-    onCompositionEnd: SyntheticCompositionEvent[typingsSlinky.reactMdl.mod.TableHeader] => Unit = null,
-    onCompositionStart: SyntheticCompositionEvent[typingsSlinky.reactMdl.mod.TableHeader] => Unit = null,
-    onCompositionUpdate: SyntheticCompositionEvent[typingsSlinky.reactMdl.mod.TableHeader] => Unit = null,
-    onContextMenu: SyntheticMouseEvent[typingsSlinky.reactMdl.mod.TableHeader] => Unit = null,
-    onCopy: SyntheticClipboardEvent[typingsSlinky.reactMdl.mod.TableHeader] => Unit = null,
-    onCut: SyntheticClipboardEvent[typingsSlinky.reactMdl.mod.TableHeader] => Unit = null,
-    onDoubleClick: SyntheticMouseEvent[typingsSlinky.reactMdl.mod.TableHeader] => Unit = null,
-    onDrag: DragEvent[typingsSlinky.reactMdl.mod.TableHeader] => Unit = null,
-    onDragEnd: DragEvent[typingsSlinky.reactMdl.mod.TableHeader] => Unit = null,
-    onDragEnter: DragEvent[typingsSlinky.reactMdl.mod.TableHeader] => Unit = null,
-    onDragExit: DragEvent[typingsSlinky.reactMdl.mod.TableHeader] => Unit = null,
-    onDragLeave: DragEvent[typingsSlinky.reactMdl.mod.TableHeader] => Unit = null,
-    onDragOver: DragEvent[typingsSlinky.reactMdl.mod.TableHeader] => Unit = null,
-    onDragStart: DragEvent[typingsSlinky.reactMdl.mod.TableHeader] => Unit = null,
-    onDrop: DragEvent[typingsSlinky.reactMdl.mod.TableHeader] => Unit = null,
-    onDurationChange: SyntheticEvent[Event_, typingsSlinky.reactMdl.mod.TableHeader] => Unit = null,
-    onEmptied: SyntheticEvent[Event_, typingsSlinky.reactMdl.mod.TableHeader] => Unit = null,
-    onEncrypted: SyntheticEvent[Event_, typingsSlinky.reactMdl.mod.TableHeader] => Unit = null,
-    onEnded: SyntheticEvent[Event_, typingsSlinky.reactMdl.mod.TableHeader] => Unit = null,
-    onError: SyntheticEvent[Event_, typingsSlinky.reactMdl.mod.TableHeader] => Unit = null,
-    onFocus: SyntheticFocusEvent[typingsSlinky.reactMdl.mod.TableHeader] => Unit = null,
-    onInput: SyntheticEvent[EventTarget with typingsSlinky.reactMdl.mod.TableHeader, Event_] => Unit = null,
-    onKeyDown: SyntheticKeyboardEvent[typingsSlinky.reactMdl.mod.TableHeader] => Unit = null,
-    onKeyPress: SyntheticKeyboardEvent[typingsSlinky.reactMdl.mod.TableHeader] => Unit = null,
-    onKeyUp: SyntheticKeyboardEvent[typingsSlinky.reactMdl.mod.TableHeader] => Unit = null,
-    onLoad: SyntheticEvent[Event_, typingsSlinky.reactMdl.mod.TableHeader] => Unit = null,
-    onLoadStart: SyntheticEvent[Event_, typingsSlinky.reactMdl.mod.TableHeader] => Unit = null,
-    onLoadedData: SyntheticEvent[Event_, typingsSlinky.reactMdl.mod.TableHeader] => Unit = null,
-    onLoadedMetadata: SyntheticEvent[Event_, typingsSlinky.reactMdl.mod.TableHeader] => Unit = null,
-    onMouseDown: SyntheticMouseEvent[typingsSlinky.reactMdl.mod.TableHeader] => Unit = null,
-    onMouseEnter: SyntheticMouseEvent[typingsSlinky.reactMdl.mod.TableHeader] => Unit = null,
-    onMouseLeave: SyntheticMouseEvent[typingsSlinky.reactMdl.mod.TableHeader] => Unit = null,
-    onMouseMove: SyntheticMouseEvent[typingsSlinky.reactMdl.mod.TableHeader] => Unit = null,
-    onMouseOut: SyntheticMouseEvent[typingsSlinky.reactMdl.mod.TableHeader] => Unit = null,
-    onMouseOver: SyntheticMouseEvent[typingsSlinky.reactMdl.mod.TableHeader] => Unit = null,
-    onMouseUp: SyntheticMouseEvent[typingsSlinky.reactMdl.mod.TableHeader] => Unit = null,
-    onPaste: SyntheticClipboardEvent[typingsSlinky.reactMdl.mod.TableHeader] => Unit = null,
-    onPause: SyntheticEvent[Event_, typingsSlinky.reactMdl.mod.TableHeader] => Unit = null,
-    onPlay: SyntheticEvent[Event_, typingsSlinky.reactMdl.mod.TableHeader] => Unit = null,
-    onPlaying: SyntheticEvent[Event_, typingsSlinky.reactMdl.mod.TableHeader] => Unit = null,
-    onProgress: SyntheticEvent[Event_, typingsSlinky.reactMdl.mod.TableHeader] => Unit = null,
-    onRateChange: SyntheticEvent[Event_, typingsSlinky.reactMdl.mod.TableHeader] => Unit = null,
-    onScroll: SyntheticUIEvent[typingsSlinky.reactMdl.mod.TableHeader] => Unit = null,
-    onSeeked: SyntheticEvent[Event_, typingsSlinky.reactMdl.mod.TableHeader] => Unit = null,
-    onSeeking: SyntheticEvent[Event_, typingsSlinky.reactMdl.mod.TableHeader] => Unit = null,
-    onSelect: SyntheticEvent[Event_, typingsSlinky.reactMdl.mod.TableHeader] => Unit = null,
-    onStalled: SyntheticEvent[Event_, typingsSlinky.reactMdl.mod.TableHeader] => Unit = null,
-    onSubmit: SyntheticEvent[EventTarget with typingsSlinky.reactMdl.mod.TableHeader, Event_] => Unit = null,
-    onSuspend: SyntheticEvent[Event_, typingsSlinky.reactMdl.mod.TableHeader] => Unit = null,
-    onTimeUpdate: SyntheticEvent[Event_, typingsSlinky.reactMdl.mod.TableHeader] => Unit = null,
-    onTouchCancel: SyntheticTouchEvent[typingsSlinky.reactMdl.mod.TableHeader] => Unit = null,
-    onTouchEnd: SyntheticTouchEvent[typingsSlinky.reactMdl.mod.TableHeader] => Unit = null,
-    onTouchMove: SyntheticTouchEvent[typingsSlinky.reactMdl.mod.TableHeader] => Unit = null,
-    onTouchStart: SyntheticTouchEvent[typingsSlinky.reactMdl.mod.TableHeader] => Unit = null,
-    onVolumeChange: SyntheticEvent[Event_, typingsSlinky.reactMdl.mod.TableHeader] => Unit = null,
-    onWaiting: SyntheticEvent[Event_, typingsSlinky.reactMdl.mod.TableHeader] => Unit = null,
-    onWheel: SyntheticWheelEvent[typingsSlinky.reactMdl.mod.TableHeader] => Unit = null,
-    prefix: String = null,
-    property: String = null,
-    radioGroup: String = null,
-    resource: String = null,
-    results: Int | Double = null,
-    role: String = null,
-    seamless: js.UndefOr[Boolean] = js.undefined,
-    security: String = null,
-    sortFn: (/* a */ js.Any, /* b */ js.Any, /* isAsc */ Boolean) => Double = null,
-    srcDoc: String = null,
-    srcLang: String = null,
-    srcSet: String = null,
-    tooltip: TagMod[Any] = null,
-    typeof: String = null,
-    unselectable: js.UndefOr[Boolean] = js.undefined,
-    useMap: String = null,
-    vocab: String = null,
-    wmode: String = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactMdl.mod.TableHeader] = {
-    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
-    if (about != null) __obj.updateDynamic("about")(about.asInstanceOf[js.Any])
-    if (acceptCharset != null) __obj.updateDynamic("acceptCharset")(acceptCharset.asInstanceOf[js.Any])
-    if (accessKey != null) __obj.updateDynamic("accessKey")(accessKey.asInstanceOf[js.Any])
-    if (!js.isUndefined(allowFullScreen)) __obj.updateDynamic("allowFullScreen")(allowFullScreen.asInstanceOf[js.Any])
-    if (!js.isUndefined(allowTransparency)) __obj.updateDynamic("allowTransparency")(allowTransparency.asInstanceOf[js.Any])
-    if (autoCapitalize != null) __obj.updateDynamic("autoCapitalize")(autoCapitalize.asInstanceOf[js.Any])
-    if (autoCorrect != null) __obj.updateDynamic("autoCorrect")(autoCorrect.asInstanceOf[js.Any])
-    if (!js.isUndefined(autoPlay)) __obj.updateDynamic("autoPlay")(autoPlay.asInstanceOf[js.Any])
-    if (autoSave != null) __obj.updateDynamic("autoSave")(autoSave.asInstanceOf[js.Any])
-    if (!js.isUndefined(capture)) __obj.updateDynamic("capture")(capture.asInstanceOf[js.Any])
-    if (cellFormatter != null) __obj.updateDynamic("cellFormatter")(js.Any.fromFunction3(cellFormatter))
-    if (cellPadding != null) __obj.updateDynamic("cellPadding")(cellPadding.asInstanceOf[js.Any])
-    if (cellSpacing != null) __obj.updateDynamic("cellSpacing")(cellSpacing.asInstanceOf[js.Any])
-    if (charSet != null) __obj.updateDynamic("charSet")(charSet.asInstanceOf[js.Any])
-    if (classID != null) __obj.updateDynamic("classID")(classID.asInstanceOf[js.Any])
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (!js.isUndefined(contentEditable)) __obj.updateDynamic("contentEditable")(contentEditable.asInstanceOf[js.Any])
-    if (contextMenu != null) __obj.updateDynamic("contextMenu")(contextMenu.asInstanceOf[js.Any])
-    if (crossOrigin != null) __obj.updateDynamic("crossOrigin")(crossOrigin.asInstanceOf[js.Any])
-    if (dangerouslySetInnerHTML != null) __obj.updateDynamic("dangerouslySetInnerHTML")(dangerouslySetInnerHTML.asInstanceOf[js.Any])
-    if (datatype != null) __obj.updateDynamic("datatype")(datatype.asInstanceOf[js.Any])
-    if (dateTime != null) __obj.updateDynamic("dateTime")(dateTime.asInstanceOf[js.Any])
-    if (defaultValue != null) __obj.updateDynamic("defaultValue")(defaultValue.asInstanceOf[js.Any])
-    if (encType != null) __obj.updateDynamic("encType")(encType.asInstanceOf[js.Any])
-    if (formAction != null) __obj.updateDynamic("formAction")(formAction.asInstanceOf[js.Any])
-    if (formEncType != null) __obj.updateDynamic("formEncType")(formEncType.asInstanceOf[js.Any])
-    if (formMethod != null) __obj.updateDynamic("formMethod")(formMethod.asInstanceOf[js.Any])
-    if (!js.isUndefined(formNoValidate)) __obj.updateDynamic("formNoValidate")(formNoValidate.asInstanceOf[js.Any])
-    if (formTarget != null) __obj.updateDynamic("formTarget")(formTarget.asInstanceOf[js.Any])
-    if (frameBorder != null) __obj.updateDynamic("frameBorder")(frameBorder.asInstanceOf[js.Any])
-    if (hrefLang != null) __obj.updateDynamic("hrefLang")(hrefLang.asInstanceOf[js.Any])
-    if (httpEquiv != null) __obj.updateDynamic("httpEquiv")(httpEquiv.asInstanceOf[js.Any])
-    if (inlist != null) __obj.updateDynamic("inlist")(inlist.asInstanceOf[js.Any])
-    if (inputMode != null) __obj.updateDynamic("inputMode")(inputMode.asInstanceOf[js.Any])
-    if (is != null) __obj.updateDynamic("is")(is.asInstanceOf[js.Any])
-    if (itemID != null) __obj.updateDynamic("itemID")(itemID.asInstanceOf[js.Any])
-    if (itemProp != null) __obj.updateDynamic("itemProp")(itemProp.asInstanceOf[js.Any])
-    if (itemRef != null) __obj.updateDynamic("itemRef")(itemRef.asInstanceOf[js.Any])
-    if (!js.isUndefined(itemScope)) __obj.updateDynamic("itemScope")(itemScope.asInstanceOf[js.Any])
-    if (itemType != null) __obj.updateDynamic("itemType")(itemType.asInstanceOf[js.Any])
-    if (keyParams != null) __obj.updateDynamic("keyParams")(keyParams.asInstanceOf[js.Any])
-    if (keyType != null) __obj.updateDynamic("keyType")(keyType.asInstanceOf[js.Any])
-    if (marginHeight != null) __obj.updateDynamic("marginHeight")(marginHeight.asInstanceOf[js.Any])
-    if (marginWidth != null) __obj.updateDynamic("marginWidth")(marginWidth.asInstanceOf[js.Any])
-    if (maxLength != null) __obj.updateDynamic("maxLength")(maxLength.asInstanceOf[js.Any])
-    if (mediaGroup != null) __obj.updateDynamic("mediaGroup")(mediaGroup.asInstanceOf[js.Any])
-    if (minLength != null) __obj.updateDynamic("minLength")(minLength.asInstanceOf[js.Any])
-    if (!js.isUndefined(noValidate)) __obj.updateDynamic("noValidate")(noValidate.asInstanceOf[js.Any])
-    if (!js.isUndefined(nosort)) __obj.updateDynamic("nosort")(nosort.asInstanceOf[js.Any])
-    if (!js.isUndefined(numeric)) __obj.updateDynamic("numeric")(numeric.asInstanceOf[js.Any])
-    if (onAbort != null) __obj.updateDynamic("onAbort")(js.Any.fromFunction1(onAbort))
-    if (onBlur != null) __obj.updateDynamic("onBlur")(js.Any.fromFunction1(onBlur))
-    if (onCanPlay != null) __obj.updateDynamic("onCanPlay")(js.Any.fromFunction1(onCanPlay))
-    if (onCanPlayThrough != null) __obj.updateDynamic("onCanPlayThrough")(js.Any.fromFunction1(onCanPlayThrough))
-    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction2(onClick))
-    if (onCompositionEnd != null) __obj.updateDynamic("onCompositionEnd")(js.Any.fromFunction1(onCompositionEnd))
-    if (onCompositionStart != null) __obj.updateDynamic("onCompositionStart")(js.Any.fromFunction1(onCompositionStart))
-    if (onCompositionUpdate != null) __obj.updateDynamic("onCompositionUpdate")(js.Any.fromFunction1(onCompositionUpdate))
-    if (onContextMenu != null) __obj.updateDynamic("onContextMenu")(js.Any.fromFunction1(onContextMenu))
-    if (onCopy != null) __obj.updateDynamic("onCopy")(js.Any.fromFunction1(onCopy))
-    if (onCut != null) __obj.updateDynamic("onCut")(js.Any.fromFunction1(onCut))
-    if (onDoubleClick != null) __obj.updateDynamic("onDoubleClick")(js.Any.fromFunction1(onDoubleClick))
-    if (onDrag != null) __obj.updateDynamic("onDrag")(js.Any.fromFunction1(onDrag))
-    if (onDragEnd != null) __obj.updateDynamic("onDragEnd")(js.Any.fromFunction1(onDragEnd))
-    if (onDragEnter != null) __obj.updateDynamic("onDragEnter")(js.Any.fromFunction1(onDragEnter))
-    if (onDragExit != null) __obj.updateDynamic("onDragExit")(js.Any.fromFunction1(onDragExit))
-    if (onDragLeave != null) __obj.updateDynamic("onDragLeave")(js.Any.fromFunction1(onDragLeave))
-    if (onDragOver != null) __obj.updateDynamic("onDragOver")(js.Any.fromFunction1(onDragOver))
-    if (onDragStart != null) __obj.updateDynamic("onDragStart")(js.Any.fromFunction1(onDragStart))
-    if (onDrop != null) __obj.updateDynamic("onDrop")(js.Any.fromFunction1(onDrop))
-    if (onDurationChange != null) __obj.updateDynamic("onDurationChange")(js.Any.fromFunction1(onDurationChange))
-    if (onEmptied != null) __obj.updateDynamic("onEmptied")(js.Any.fromFunction1(onEmptied))
-    if (onEncrypted != null) __obj.updateDynamic("onEncrypted")(js.Any.fromFunction1(onEncrypted))
-    if (onEnded != null) __obj.updateDynamic("onEnded")(js.Any.fromFunction1(onEnded))
-    if (onError != null) __obj.updateDynamic("onError")(js.Any.fromFunction1(onError))
-    if (onFocus != null) __obj.updateDynamic("onFocus")(js.Any.fromFunction1(onFocus))
-    if (onInput != null) __obj.updateDynamic("onInput")(js.Any.fromFunction1(onInput))
-    if (onKeyDown != null) __obj.updateDynamic("onKeyDown")(js.Any.fromFunction1(onKeyDown))
-    if (onKeyPress != null) __obj.updateDynamic("onKeyPress")(js.Any.fromFunction1(onKeyPress))
-    if (onKeyUp != null) __obj.updateDynamic("onKeyUp")(js.Any.fromFunction1(onKeyUp))
-    if (onLoad != null) __obj.updateDynamic("onLoad")(js.Any.fromFunction1(onLoad))
-    if (onLoadStart != null) __obj.updateDynamic("onLoadStart")(js.Any.fromFunction1(onLoadStart))
-    if (onLoadedData != null) __obj.updateDynamic("onLoadedData")(js.Any.fromFunction1(onLoadedData))
-    if (onLoadedMetadata != null) __obj.updateDynamic("onLoadedMetadata")(js.Any.fromFunction1(onLoadedMetadata))
-    if (onMouseDown != null) __obj.updateDynamic("onMouseDown")(js.Any.fromFunction1(onMouseDown))
-    if (onMouseEnter != null) __obj.updateDynamic("onMouseEnter")(js.Any.fromFunction1(onMouseEnter))
-    if (onMouseLeave != null) __obj.updateDynamic("onMouseLeave")(js.Any.fromFunction1(onMouseLeave))
-    if (onMouseMove != null) __obj.updateDynamic("onMouseMove")(js.Any.fromFunction1(onMouseMove))
-    if (onMouseOut != null) __obj.updateDynamic("onMouseOut")(js.Any.fromFunction1(onMouseOut))
-    if (onMouseOver != null) __obj.updateDynamic("onMouseOver")(js.Any.fromFunction1(onMouseOver))
-    if (onMouseUp != null) __obj.updateDynamic("onMouseUp")(js.Any.fromFunction1(onMouseUp))
-    if (onPaste != null) __obj.updateDynamic("onPaste")(js.Any.fromFunction1(onPaste))
-    if (onPause != null) __obj.updateDynamic("onPause")(js.Any.fromFunction1(onPause))
-    if (onPlay != null) __obj.updateDynamic("onPlay")(js.Any.fromFunction1(onPlay))
-    if (onPlaying != null) __obj.updateDynamic("onPlaying")(js.Any.fromFunction1(onPlaying))
-    if (onProgress != null) __obj.updateDynamic("onProgress")(js.Any.fromFunction1(onProgress))
-    if (onRateChange != null) __obj.updateDynamic("onRateChange")(js.Any.fromFunction1(onRateChange))
-    if (onScroll != null) __obj.updateDynamic("onScroll")(js.Any.fromFunction1(onScroll))
-    if (onSeeked != null) __obj.updateDynamic("onSeeked")(js.Any.fromFunction1(onSeeked))
-    if (onSeeking != null) __obj.updateDynamic("onSeeking")(js.Any.fromFunction1(onSeeking))
-    if (onSelect != null) __obj.updateDynamic("onSelect")(js.Any.fromFunction1(onSelect))
-    if (onStalled != null) __obj.updateDynamic("onStalled")(js.Any.fromFunction1(onStalled))
-    if (onSubmit != null) __obj.updateDynamic("onSubmit")(js.Any.fromFunction1(onSubmit))
-    if (onSuspend != null) __obj.updateDynamic("onSuspend")(js.Any.fromFunction1(onSuspend))
-    if (onTimeUpdate != null) __obj.updateDynamic("onTimeUpdate")(js.Any.fromFunction1(onTimeUpdate))
-    if (onTouchCancel != null) __obj.updateDynamic("onTouchCancel")(js.Any.fromFunction1(onTouchCancel))
-    if (onTouchEnd != null) __obj.updateDynamic("onTouchEnd")(js.Any.fromFunction1(onTouchEnd))
-    if (onTouchMove != null) __obj.updateDynamic("onTouchMove")(js.Any.fromFunction1(onTouchMove))
-    if (onTouchStart != null) __obj.updateDynamic("onTouchStart")(js.Any.fromFunction1(onTouchStart))
-    if (onVolumeChange != null) __obj.updateDynamic("onVolumeChange")(js.Any.fromFunction1(onVolumeChange))
-    if (onWaiting != null) __obj.updateDynamic("onWaiting")(js.Any.fromFunction1(onWaiting))
-    if (onWheel != null) __obj.updateDynamic("onWheel")(js.Any.fromFunction1(onWheel))
-    if (prefix != null) __obj.updateDynamic("prefix")(prefix.asInstanceOf[js.Any])
-    if (property != null) __obj.updateDynamic("property")(property.asInstanceOf[js.Any])
-    if (radioGroup != null) __obj.updateDynamic("radioGroup")(radioGroup.asInstanceOf[js.Any])
-    if (resource != null) __obj.updateDynamic("resource")(resource.asInstanceOf[js.Any])
-    if (results != null) __obj.updateDynamic("results")(results.asInstanceOf[js.Any])
-    if (role != null) __obj.updateDynamic("role")(role.asInstanceOf[js.Any])
-    if (!js.isUndefined(seamless)) __obj.updateDynamic("seamless")(seamless.asInstanceOf[js.Any])
-    if (security != null) __obj.updateDynamic("security")(security.asInstanceOf[js.Any])
-    if (sortFn != null) __obj.updateDynamic("sortFn")(js.Any.fromFunction3(sortFn))
-    if (srcDoc != null) __obj.updateDynamic("srcDoc")(srcDoc.asInstanceOf[js.Any])
-    if (srcLang != null) __obj.updateDynamic("srcLang")(srcLang.asInstanceOf[js.Any])
-    if (srcSet != null) __obj.updateDynamic("srcSet")(srcSet.asInstanceOf[js.Any])
-    if (tooltip != null) __obj.updateDynamic("tooltip")(tooltip.asInstanceOf[js.Any])
-    if (typeof != null) __obj.updateDynamic("typeof")(typeof.asInstanceOf[js.Any])
-    if (!js.isUndefined(unselectable)) __obj.updateDynamic("unselectable")(unselectable.asInstanceOf[js.Any])
-    if (useMap != null) __obj.updateDynamic("useMap")(useMap.asInstanceOf[js.Any])
-    if (vocab != null) __obj.updateDynamic("vocab")(vocab.asInstanceOf[js.Any])
-    if (wmode != null) __obj.updateDynamic("wmode")(wmode.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactMdl.mod.TableHeader] {
+    @scala.inline
+    def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
+    @scala.inline
+    def accept(value: String): this.type = set("accept", value.asInstanceOf[js.Any])
+    @scala.inline
+    def acceptCharset(value: String): this.type = set("acceptCharset", value.asInstanceOf[js.Any])
+    @scala.inline
+    def accessKey(value: String): this.type = set("accessKey", value.asInstanceOf[js.Any])
+    @scala.inline
+    def action(value: String): this.type = set("action", value.asInstanceOf[js.Any])
+    @scala.inline
+    def allowFullScreen(value: Boolean): this.type = set("allowFullScreen", value.asInstanceOf[js.Any])
+    @scala.inline
+    def allowTransparency(value: Boolean): this.type = set("allowTransparency", value.asInstanceOf[js.Any])
+    @scala.inline
+    def alt(value: String): this.type = set("alt", value.asInstanceOf[js.Any])
+    @scala.inline
+    def async(value: Boolean): this.type = set("async", value.asInstanceOf[js.Any])
+    @scala.inline
+    def autoCapitalize(value: String): this.type = set("autoCapitalize", value.asInstanceOf[js.Any])
+    @scala.inline
+    def autoComplete(value: String): this.type = set("autoComplete", value.asInstanceOf[js.Any])
+    @scala.inline
+    def autoCorrect(value: String): this.type = set("autoCorrect", value.asInstanceOf[js.Any])
+    @scala.inline
+    def autoFocus(value: Boolean): this.type = set("autoFocus", value.asInstanceOf[js.Any])
+    @scala.inline
+    def autoPlay(value: Boolean): this.type = set("autoPlay", value.asInstanceOf[js.Any])
+    @scala.inline
+    def autoSave(value: String): this.type = set("autoSave", value.asInstanceOf[js.Any])
+    @scala.inline
+    def capture(value: Boolean): this.type = set("capture", value.asInstanceOf[js.Any])
+    @scala.inline
+    def cellFormatter(value: (/* value */ js.Any, /* row */ js.Any, /* index */ Double) => TagMod[Any]): this.type = set("cellFormatter", js.Any.fromFunction3(value))
+    @scala.inline
+    def cellPadding(value: Double | String): this.type = set("cellPadding", value.asInstanceOf[js.Any])
+    @scala.inline
+    def cellSpacing(value: Double | String): this.type = set("cellSpacing", value.asInstanceOf[js.Any])
+    @scala.inline
+    def challenge(value: String): this.type = set("challenge", value.asInstanceOf[js.Any])
+    @scala.inline
+    def charSet(value: String): this.type = set("charSet", value.asInstanceOf[js.Any])
+    @scala.inline
+    def checked(value: Boolean): this.type = set("checked", value.asInstanceOf[js.Any])
+    @scala.inline
+    def classID(value: String): this.type = set("classID", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def colSpan(value: Double): this.type = set("colSpan", value.asInstanceOf[js.Any])
+    @scala.inline
+    def color(value: String): this.type = set("color", value.asInstanceOf[js.Any])
+    @scala.inline
+    def cols(value: Double): this.type = set("cols", value.asInstanceOf[js.Any])
+    @scala.inline
+    def content(value: String): this.type = set("content", value.asInstanceOf[js.Any])
+    @scala.inline
+    def contentEditable(value: Boolean): this.type = set("contentEditable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def contextMenu(value: String): this.type = set("contextMenu", value.asInstanceOf[js.Any])
+    @scala.inline
+    def controls(value: Boolean): this.type = set("controls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def coords(value: String): this.type = set("coords", value.asInstanceOf[js.Any])
+    @scala.inline
+    def crossOrigin(value: String): this.type = set("crossOrigin", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dangerouslySetInnerHTML(value: AnonHtml): this.type = set("dangerouslySetInnerHTML", value.asInstanceOf[js.Any])
+    @scala.inline
+    def datatype(value: String): this.type = set("datatype", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dateTime(value: String): this.type = set("dateTime", value.asInstanceOf[js.Any])
+    @scala.inline
+    def default(value: Boolean): this.type = set("default", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultValue(value: Double | String | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defer(value: Boolean): this.type = set("defer", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def download(value: js.Any): this.type = set("download", value.asInstanceOf[js.Any])
+    @scala.inline
+    def draggable(value: Boolean): this.type = set("draggable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def encType(value: String): this.type = set("encType", value.asInstanceOf[js.Any])
+    @scala.inline
+    def form(value: String): this.type = set("form", value.asInstanceOf[js.Any])
+    @scala.inline
+    def formAction(value: String): this.type = set("formAction", value.asInstanceOf[js.Any])
+    @scala.inline
+    def formEncType(value: String): this.type = set("formEncType", value.asInstanceOf[js.Any])
+    @scala.inline
+    def formMethod(value: String): this.type = set("formMethod", value.asInstanceOf[js.Any])
+    @scala.inline
+    def formNoValidate(value: Boolean): this.type = set("formNoValidate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def formTarget(value: String): this.type = set("formTarget", value.asInstanceOf[js.Any])
+    @scala.inline
+    def frameBorder(value: Double | String): this.type = set("frameBorder", value.asInstanceOf[js.Any])
+    @scala.inline
+    def headers(value: String): this.type = set("headers", value.asInstanceOf[js.Any])
+    @scala.inline
+    def height(value: Double | String): this.type = set("height", value.asInstanceOf[js.Any])
+    @scala.inline
+    def hidden(value: Boolean): this.type = set("hidden", value.asInstanceOf[js.Any])
+    @scala.inline
+    def high(value: Double): this.type = set("high", value.asInstanceOf[js.Any])
+    @scala.inline
+    def href(value: String): this.type = set("href", value.asInstanceOf[js.Any])
+    @scala.inline
+    def hrefLang(value: String): this.type = set("hrefLang", value.asInstanceOf[js.Any])
+    @scala.inline
+    def htmlFor(value: String): this.type = set("htmlFor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def httpEquiv(value: String): this.type = set("httpEquiv", value.asInstanceOf[js.Any])
+    @scala.inline
+    def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
+    @scala.inline
+    def inlist(value: js.Any): this.type = set("inlist", value.asInstanceOf[js.Any])
+    @scala.inline
+    def inputMode(value: String): this.type = set("inputMode", value.asInstanceOf[js.Any])
+    @scala.inline
+    def integrity(value: String): this.type = set("integrity", value.asInstanceOf[js.Any])
+    @scala.inline
+    def is(value: String): this.type = set("is", value.asInstanceOf[js.Any])
+    @scala.inline
+    def itemID(value: String): this.type = set("itemID", value.asInstanceOf[js.Any])
+    @scala.inline
+    def itemProp(value: String): this.type = set("itemProp", value.asInstanceOf[js.Any])
+    @scala.inline
+    def itemRef(value: String): this.type = set("itemRef", value.asInstanceOf[js.Any])
+    @scala.inline
+    def itemScope(value: Boolean): this.type = set("itemScope", value.asInstanceOf[js.Any])
+    @scala.inline
+    def itemType(value: String): this.type = set("itemType", value.asInstanceOf[js.Any])
+    @scala.inline
+    def keyParams(value: String): this.type = set("keyParams", value.asInstanceOf[js.Any])
+    @scala.inline
+    def keyType(value: String): this.type = set("keyType", value.asInstanceOf[js.Any])
+    @scala.inline
+    def kind(value: String): this.type = set("kind", value.asInstanceOf[js.Any])
+    @scala.inline
+    def lang(value: String): this.type = set("lang", value.asInstanceOf[js.Any])
+    @scala.inline
+    def list(value: String): this.type = set("list", value.asInstanceOf[js.Any])
+    @scala.inline
+    def loop(value: Boolean): this.type = set("loop", value.asInstanceOf[js.Any])
+    @scala.inline
+    def low(value: Double): this.type = set("low", value.asInstanceOf[js.Any])
+    @scala.inline
+    def manifest(value: String): this.type = set("manifest", value.asInstanceOf[js.Any])
+    @scala.inline
+    def marginHeight(value: Double): this.type = set("marginHeight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def marginWidth(value: Double): this.type = set("marginWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def max(value: Double | String): this.type = set("max", value.asInstanceOf[js.Any])
+    @scala.inline
+    def maxLength(value: Double): this.type = set("maxLength", value.asInstanceOf[js.Any])
+    @scala.inline
+    def media(value: String): this.type = set("media", value.asInstanceOf[js.Any])
+    @scala.inline
+    def mediaGroup(value: String): this.type = set("mediaGroup", value.asInstanceOf[js.Any])
+    @scala.inline
+    def method(value: String): this.type = set("method", value.asInstanceOf[js.Any])
+    @scala.inline
+    def min(value: Double | String): this.type = set("min", value.asInstanceOf[js.Any])
+    @scala.inline
+    def minLength(value: Double): this.type = set("minLength", value.asInstanceOf[js.Any])
+    @scala.inline
+    def multiple(value: Boolean): this.type = set("multiple", value.asInstanceOf[js.Any])
+    @scala.inline
+    def muted(value: Boolean): this.type = set("muted", value.asInstanceOf[js.Any])
+    @scala.inline
+    def noValidate(value: Boolean): this.type = set("noValidate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def nonce(value: String): this.type = set("nonce", value.asInstanceOf[js.Any])
+    @scala.inline
+    def nosort(value: Boolean): this.type = set("nosort", value.asInstanceOf[js.Any])
+    @scala.inline
+    def numeric(value: Boolean): this.type = set("numeric", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onAbort(value: SyntheticEvent[Event_, typingsSlinky.reactMdl.mod.TableHeader] => Unit): this.type = set("onAbort", js.Any.fromFunction1(value))
+    @scala.inline
+    def onBlur(value: SyntheticFocusEvent[typingsSlinky.reactMdl.mod.TableHeader] => Unit): this.type = set("onBlur", js.Any.fromFunction1(value))
+    @scala.inline
+    def onCanPlay(value: SyntheticEvent[Event_, typingsSlinky.reactMdl.mod.TableHeader] => Unit): this.type = set("onCanPlay", js.Any.fromFunction1(value))
+    @scala.inline
+    def onCanPlayThrough(value: SyntheticEvent[Event_, typingsSlinky.reactMdl.mod.TableHeader] => Unit): this.type = set("onCanPlayThrough", js.Any.fromFunction1(value))
+    @scala.inline
+    def onClick(
+      value: (/* e */ SyntheticMouseEvent[typingsSlinky.reactMdl.mod.TableHeader], /* name */ String) => _
+    ): this.type = set("onClick", js.Any.fromFunction2(value))
+    @scala.inline
+    def onCompositionEnd(value: SyntheticCompositionEvent[typingsSlinky.reactMdl.mod.TableHeader] => Unit): this.type = set("onCompositionEnd", js.Any.fromFunction1(value))
+    @scala.inline
+    def onCompositionStart(value: SyntheticCompositionEvent[typingsSlinky.reactMdl.mod.TableHeader] => Unit): this.type = set("onCompositionStart", js.Any.fromFunction1(value))
+    @scala.inline
+    def onCompositionUpdate(value: SyntheticCompositionEvent[typingsSlinky.reactMdl.mod.TableHeader] => Unit): this.type = set("onCompositionUpdate", js.Any.fromFunction1(value))
+    @scala.inline
+    def onContextMenu(value: SyntheticMouseEvent[typingsSlinky.reactMdl.mod.TableHeader] => Unit): this.type = set("onContextMenu", js.Any.fromFunction1(value))
+    @scala.inline
+    def onCopy(value: SyntheticClipboardEvent[typingsSlinky.reactMdl.mod.TableHeader] => Unit): this.type = set("onCopy", js.Any.fromFunction1(value))
+    @scala.inline
+    def onCut(value: SyntheticClipboardEvent[typingsSlinky.reactMdl.mod.TableHeader] => Unit): this.type = set("onCut", js.Any.fromFunction1(value))
+    @scala.inline
+    def onDoubleClick(value: SyntheticMouseEvent[typingsSlinky.reactMdl.mod.TableHeader] => Unit): this.type = set("onDoubleClick", js.Any.fromFunction1(value))
+    @scala.inline
+    def onDrag(value: DragEvent[typingsSlinky.reactMdl.mod.TableHeader] => Unit): this.type = set("onDrag", js.Any.fromFunction1(value))
+    @scala.inline
+    def onDragEnd(value: DragEvent[typingsSlinky.reactMdl.mod.TableHeader] => Unit): this.type = set("onDragEnd", js.Any.fromFunction1(value))
+    @scala.inline
+    def onDragEnter(value: DragEvent[typingsSlinky.reactMdl.mod.TableHeader] => Unit): this.type = set("onDragEnter", js.Any.fromFunction1(value))
+    @scala.inline
+    def onDragExit(value: DragEvent[typingsSlinky.reactMdl.mod.TableHeader] => Unit): this.type = set("onDragExit", js.Any.fromFunction1(value))
+    @scala.inline
+    def onDragLeave(value: DragEvent[typingsSlinky.reactMdl.mod.TableHeader] => Unit): this.type = set("onDragLeave", js.Any.fromFunction1(value))
+    @scala.inline
+    def onDragOver(value: DragEvent[typingsSlinky.reactMdl.mod.TableHeader] => Unit): this.type = set("onDragOver", js.Any.fromFunction1(value))
+    @scala.inline
+    def onDragStart(value: DragEvent[typingsSlinky.reactMdl.mod.TableHeader] => Unit): this.type = set("onDragStart", js.Any.fromFunction1(value))
+    @scala.inline
+    def onDrop(value: DragEvent[typingsSlinky.reactMdl.mod.TableHeader] => Unit): this.type = set("onDrop", js.Any.fromFunction1(value))
+    @scala.inline
+    def onDurationChange(value: SyntheticEvent[Event_, typingsSlinky.reactMdl.mod.TableHeader] => Unit): this.type = set("onDurationChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def onEmptied(value: SyntheticEvent[Event_, typingsSlinky.reactMdl.mod.TableHeader] => Unit): this.type = set("onEmptied", js.Any.fromFunction1(value))
+    @scala.inline
+    def onEncrypted(value: SyntheticEvent[Event_, typingsSlinky.reactMdl.mod.TableHeader] => Unit): this.type = set("onEncrypted", js.Any.fromFunction1(value))
+    @scala.inline
+    def onEnded(value: SyntheticEvent[Event_, typingsSlinky.reactMdl.mod.TableHeader] => Unit): this.type = set("onEnded", js.Any.fromFunction1(value))
+    @scala.inline
+    def onError(value: SyntheticEvent[Event_, typingsSlinky.reactMdl.mod.TableHeader] => Unit): this.type = set("onError", js.Any.fromFunction1(value))
+    @scala.inline
+    def onFocus(value: SyntheticFocusEvent[typingsSlinky.reactMdl.mod.TableHeader] => Unit): this.type = set("onFocus", js.Any.fromFunction1(value))
+    @scala.inline
+    def onInput(value: SyntheticEvent[EventTarget with typingsSlinky.reactMdl.mod.TableHeader, Event_] => Unit): this.type = set("onInput", js.Any.fromFunction1(value))
+    @scala.inline
+    def onKeyDown(value: SyntheticKeyboardEvent[typingsSlinky.reactMdl.mod.TableHeader] => Unit): this.type = set("onKeyDown", js.Any.fromFunction1(value))
+    @scala.inline
+    def onKeyPress(value: SyntheticKeyboardEvent[typingsSlinky.reactMdl.mod.TableHeader] => Unit): this.type = set("onKeyPress", js.Any.fromFunction1(value))
+    @scala.inline
+    def onKeyUp(value: SyntheticKeyboardEvent[typingsSlinky.reactMdl.mod.TableHeader] => Unit): this.type = set("onKeyUp", js.Any.fromFunction1(value))
+    @scala.inline
+    def onLoad(value: SyntheticEvent[Event_, typingsSlinky.reactMdl.mod.TableHeader] => Unit): this.type = set("onLoad", js.Any.fromFunction1(value))
+    @scala.inline
+    def onLoadStart(value: SyntheticEvent[Event_, typingsSlinky.reactMdl.mod.TableHeader] => Unit): this.type = set("onLoadStart", js.Any.fromFunction1(value))
+    @scala.inline
+    def onLoadedData(value: SyntheticEvent[Event_, typingsSlinky.reactMdl.mod.TableHeader] => Unit): this.type = set("onLoadedData", js.Any.fromFunction1(value))
+    @scala.inline
+    def onLoadedMetadata(value: SyntheticEvent[Event_, typingsSlinky.reactMdl.mod.TableHeader] => Unit): this.type = set("onLoadedMetadata", js.Any.fromFunction1(value))
+    @scala.inline
+    def onMouseDown(value: SyntheticMouseEvent[typingsSlinky.reactMdl.mod.TableHeader] => Unit): this.type = set("onMouseDown", js.Any.fromFunction1(value))
+    @scala.inline
+    def onMouseEnter(value: SyntheticMouseEvent[typingsSlinky.reactMdl.mod.TableHeader] => Unit): this.type = set("onMouseEnter", js.Any.fromFunction1(value))
+    @scala.inline
+    def onMouseLeave(value: SyntheticMouseEvent[typingsSlinky.reactMdl.mod.TableHeader] => Unit): this.type = set("onMouseLeave", js.Any.fromFunction1(value))
+    @scala.inline
+    def onMouseMove(value: SyntheticMouseEvent[typingsSlinky.reactMdl.mod.TableHeader] => Unit): this.type = set("onMouseMove", js.Any.fromFunction1(value))
+    @scala.inline
+    def onMouseOut(value: SyntheticMouseEvent[typingsSlinky.reactMdl.mod.TableHeader] => Unit): this.type = set("onMouseOut", js.Any.fromFunction1(value))
+    @scala.inline
+    def onMouseOver(value: SyntheticMouseEvent[typingsSlinky.reactMdl.mod.TableHeader] => Unit): this.type = set("onMouseOver", js.Any.fromFunction1(value))
+    @scala.inline
+    def onMouseUp(value: SyntheticMouseEvent[typingsSlinky.reactMdl.mod.TableHeader] => Unit): this.type = set("onMouseUp", js.Any.fromFunction1(value))
+    @scala.inline
+    def onPaste(value: SyntheticClipboardEvent[typingsSlinky.reactMdl.mod.TableHeader] => Unit): this.type = set("onPaste", js.Any.fromFunction1(value))
+    @scala.inline
+    def onPause(value: SyntheticEvent[Event_, typingsSlinky.reactMdl.mod.TableHeader] => Unit): this.type = set("onPause", js.Any.fromFunction1(value))
+    @scala.inline
+    def onPlay(value: SyntheticEvent[Event_, typingsSlinky.reactMdl.mod.TableHeader] => Unit): this.type = set("onPlay", js.Any.fromFunction1(value))
+    @scala.inline
+    def onPlaying(value: SyntheticEvent[Event_, typingsSlinky.reactMdl.mod.TableHeader] => Unit): this.type = set("onPlaying", js.Any.fromFunction1(value))
+    @scala.inline
+    def onProgress(value: SyntheticEvent[Event_, typingsSlinky.reactMdl.mod.TableHeader] => Unit): this.type = set("onProgress", js.Any.fromFunction1(value))
+    @scala.inline
+    def onRateChange(value: SyntheticEvent[Event_, typingsSlinky.reactMdl.mod.TableHeader] => Unit): this.type = set("onRateChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def onScroll(value: SyntheticUIEvent[typingsSlinky.reactMdl.mod.TableHeader] => Unit): this.type = set("onScroll", js.Any.fromFunction1(value))
+    @scala.inline
+    def onSeeked(value: SyntheticEvent[Event_, typingsSlinky.reactMdl.mod.TableHeader] => Unit): this.type = set("onSeeked", js.Any.fromFunction1(value))
+    @scala.inline
+    def onSeeking(value: SyntheticEvent[Event_, typingsSlinky.reactMdl.mod.TableHeader] => Unit): this.type = set("onSeeking", js.Any.fromFunction1(value))
+    @scala.inline
+    def onSelect(value: SyntheticEvent[Event_, typingsSlinky.reactMdl.mod.TableHeader] => Unit): this.type = set("onSelect", js.Any.fromFunction1(value))
+    @scala.inline
+    def onStalled(value: SyntheticEvent[Event_, typingsSlinky.reactMdl.mod.TableHeader] => Unit): this.type = set("onStalled", js.Any.fromFunction1(value))
+    @scala.inline
+    def onSubmit(value: SyntheticEvent[EventTarget with typingsSlinky.reactMdl.mod.TableHeader, Event_] => Unit): this.type = set("onSubmit", js.Any.fromFunction1(value))
+    @scala.inline
+    def onSuspend(value: SyntheticEvent[Event_, typingsSlinky.reactMdl.mod.TableHeader] => Unit): this.type = set("onSuspend", js.Any.fromFunction1(value))
+    @scala.inline
+    def onTimeUpdate(value: SyntheticEvent[Event_, typingsSlinky.reactMdl.mod.TableHeader] => Unit): this.type = set("onTimeUpdate", js.Any.fromFunction1(value))
+    @scala.inline
+    def onTouchCancel(value: SyntheticTouchEvent[typingsSlinky.reactMdl.mod.TableHeader] => Unit): this.type = set("onTouchCancel", js.Any.fromFunction1(value))
+    @scala.inline
+    def onTouchEnd(value: SyntheticTouchEvent[typingsSlinky.reactMdl.mod.TableHeader] => Unit): this.type = set("onTouchEnd", js.Any.fromFunction1(value))
+    @scala.inline
+    def onTouchMove(value: SyntheticTouchEvent[typingsSlinky.reactMdl.mod.TableHeader] => Unit): this.type = set("onTouchMove", js.Any.fromFunction1(value))
+    @scala.inline
+    def onTouchStart(value: SyntheticTouchEvent[typingsSlinky.reactMdl.mod.TableHeader] => Unit): this.type = set("onTouchStart", js.Any.fromFunction1(value))
+    @scala.inline
+    def onVolumeChange(value: SyntheticEvent[Event_, typingsSlinky.reactMdl.mod.TableHeader] => Unit): this.type = set("onVolumeChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def onWaiting(value: SyntheticEvent[Event_, typingsSlinky.reactMdl.mod.TableHeader] => Unit): this.type = set("onWaiting", js.Any.fromFunction1(value))
+    @scala.inline
+    def onWheel(value: SyntheticWheelEvent[typingsSlinky.reactMdl.mod.TableHeader] => Unit): this.type = set("onWheel", js.Any.fromFunction1(value))
+    @scala.inline
+    def open(value: Boolean): this.type = set("open", value.asInstanceOf[js.Any])
+    @scala.inline
+    def optimum(value: Double): this.type = set("optimum", value.asInstanceOf[js.Any])
+    @scala.inline
+    def pattern(value: String): this.type = set("pattern", value.asInstanceOf[js.Any])
+    @scala.inline
+    def placeholder(value: String): this.type = set("placeholder", value.asInstanceOf[js.Any])
+    @scala.inline
+    def poster(value: String): this.type = set("poster", value.asInstanceOf[js.Any])
+    @scala.inline
+    def prefix(value: String): this.type = set("prefix", value.asInstanceOf[js.Any])
+    @scala.inline
+    def preload(value: String): this.type = set("preload", value.asInstanceOf[js.Any])
+    @scala.inline
+    def property(value: String): this.type = set("property", value.asInstanceOf[js.Any])
+    @scala.inline
+    def radioGroup(value: String): this.type = set("radioGroup", value.asInstanceOf[js.Any])
+    @scala.inline
+    def readOnly(value: Boolean): this.type = set("readOnly", value.asInstanceOf[js.Any])
+    @scala.inline
+    def rel(value: String): this.type = set("rel", value.asInstanceOf[js.Any])
+    @scala.inline
+    def required(value: Boolean): this.type = set("required", value.asInstanceOf[js.Any])
+    @scala.inline
+    def resource(value: String): this.type = set("resource", value.asInstanceOf[js.Any])
+    @scala.inline
+    def results(value: Double): this.type = set("results", value.asInstanceOf[js.Any])
+    @scala.inline
+    def reversed(value: Boolean): this.type = set("reversed", value.asInstanceOf[js.Any])
+    @scala.inline
+    def role(value: String): this.type = set("role", value.asInstanceOf[js.Any])
+    @scala.inline
+    def rowSpan(value: Double): this.type = set("rowSpan", value.asInstanceOf[js.Any])
+    @scala.inline
+    def sandbox(value: String): this.type = set("sandbox", value.asInstanceOf[js.Any])
+    @scala.inline
+    def scope(value: String): this.type = set("scope", value.asInstanceOf[js.Any])
+    @scala.inline
+    def scoped(value: Boolean): this.type = set("scoped", value.asInstanceOf[js.Any])
+    @scala.inline
+    def scrolling(value: String): this.type = set("scrolling", value.asInstanceOf[js.Any])
+    @scala.inline
+    def seamless(value: Boolean): this.type = set("seamless", value.asInstanceOf[js.Any])
+    @scala.inline
+    def security(value: String): this.type = set("security", value.asInstanceOf[js.Any])
+    @scala.inline
+    def selected(value: Boolean): this.type = set("selected", value.asInstanceOf[js.Any])
+    @scala.inline
+    def shape(value: String): this.type = set("shape", value.asInstanceOf[js.Any])
+    @scala.inline
+    def sizes(value: String): this.type = set("sizes", value.asInstanceOf[js.Any])
+    @scala.inline
+    def sortFn(value: (/* a */ js.Any, /* b */ js.Any, /* isAsc */ Boolean) => Double): this.type = set("sortFn", js.Any.fromFunction3(value))
+    @scala.inline
+    def span(value: Double): this.type = set("span", value.asInstanceOf[js.Any])
+    @scala.inline
+    def spellCheck(value: Boolean): this.type = set("spellCheck", value.asInstanceOf[js.Any])
+    @scala.inline
+    def src(value: String): this.type = set("src", value.asInstanceOf[js.Any])
+    @scala.inline
+    def srcDoc(value: String): this.type = set("srcDoc", value.asInstanceOf[js.Any])
+    @scala.inline
+    def srcLang(value: String): this.type = set("srcLang", value.asInstanceOf[js.Any])
+    @scala.inline
+    def srcSet(value: String): this.type = set("srcSet", value.asInstanceOf[js.Any])
+    @scala.inline
+    def start(value: Double): this.type = set("start", value.asInstanceOf[js.Any])
+    @scala.inline
+    def step(value: Double | String): this.type = set("step", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def summary(value: String): this.type = set("summary", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tabIndex(value: Double): this.type = set("tabIndex", value.asInstanceOf[js.Any])
+    @scala.inline
+    def target(value: String): this.type = set("target", value.asInstanceOf[js.Any])
+    @scala.inline
+    def title(value: String): this.type = set("title", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tooltipReactElement(value: ReactElement): this.type = set("tooltip", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tooltip(value: TagMod[Any]): this.type = set("tooltip", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `type`(value: String): this.type = set("type", value.asInstanceOf[js.Any])
+    @scala.inline
+    def typeof(value: String): this.type = set("typeof", value.asInstanceOf[js.Any])
+    @scala.inline
+    def unselectable(value: Boolean): this.type = set("unselectable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def useMap(value: String): this.type = set("useMap", value.asInstanceOf[js.Any])
+    @scala.inline
+    def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
+    @scala.inline
+    def width(value: Double | String): this.type = set("width", value.asInstanceOf[js.Any])
+    @scala.inline
+    def wmode(value: String): this.type = set("wmode", value.asInstanceOf[js.Any])
+    @scala.inline
+    def wrap(value: String): this.type = set("wrap", value.asInstanceOf[js.Any])
   }
-  type Props = TableHeaderProps
+  
+  def withProps(p: TableHeaderProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(name: String): Builder = {
+    val __props = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[TableHeaderProps]))
+  }
 }
 

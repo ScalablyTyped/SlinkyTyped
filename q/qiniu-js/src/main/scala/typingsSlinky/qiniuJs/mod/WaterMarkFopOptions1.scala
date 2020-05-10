@@ -14,8 +14,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait WaterMarkFopOptions1 extends WaterMarkOptions1 {
-  var fop: typingsSlinky.qiniuJs.qiniuJsStrings.watermark
+  var fop: typingsSlinky.qiniuJs.qiniuJsStrings.watermark = js.native
 }
 
 object WaterMarkFopOptions1 {
@@ -30,8 +31,21 @@ object WaterMarkFopOptions1 {
     mode: `1`
   ): WaterMarkFopOptions1 = {
     val __obj = js.Dynamic.literal(dissolve = dissolve.asInstanceOf[js.Any], dx = dx.asInstanceOf[js.Any], dy = dy.asInstanceOf[js.Any], fop = fop.asInstanceOf[js.Any], gravity = gravity.asInstanceOf[js.Any], image = image.asInstanceOf[js.Any], mode = mode.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[WaterMarkFopOptions1]
   }
+  @scala.inline
+  implicit class WaterMarkFopOptions1Ops[Self <: WaterMarkFopOptions1] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFop(value: typingsSlinky.qiniuJs.qiniuJsStrings.watermark): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fop")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

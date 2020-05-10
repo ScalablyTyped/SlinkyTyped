@@ -1,6 +1,5 @@
 package typingsSlinky.axeCore.mod
 
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,7 +16,7 @@ object run extends js.Object {
   	 * @returns {Promise<AxeResults>|void} If the callback was not defined, axe will return a Promise.
   	 */
   def apply(): js.Promise[AxeResults] = js.native
-  def apply(callback: js.Function2[/* error */ Error, /* results */ AxeResults, Unit]): Unit = js.native
+  def apply(callback: js.Function2[/* error */ js.Error, /* results */ AxeResults, Unit]): Unit = js.native
   def apply(context: ElementContext): js.Promise[AxeResults] = js.native
   def apply(context: ElementContext, callback: RunCallback): Unit = js.native
   def apply(context: ElementContext, options: RunOptions): js.Promise[AxeResults] = js.native

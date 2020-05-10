@@ -6,51 +6,209 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Options extends js.Object {
-  var cache: js.UndefOr[String | Boolean] = js.undefined
-  var cacheKeys: js.UndefOr[js.Function2[/* defaultCacheKeys */ js.Any, /* file */ js.Any, js.Object]] = js.undefined
-  var chunkFilter: js.UndefOr[js.Function1[/* chunk */ js.Any, Boolean]] = js.undefined
-  var exclude: js.UndefOr[TestType | js.Array[TestType]] = js.undefined
-  var extractComments: js.UndefOr[Boolean | String | js.RegExp | ExtractCommentsFunction] = js.undefined
-  var include: js.UndefOr[TestType | js.Array[TestType]] = js.undefined
-  var minify: js.UndefOr[js.Function2[/* file */ js.Any, /* sourceMap */ js.Any, AnonCode]] = js.undefined
-  var parallel: js.UndefOr[Boolean | Double] = js.undefined
-  var sourceMap: js.UndefOr[Boolean] = js.undefined
-  var test: js.UndefOr[TestType | js.Array[TestType]] = js.undefined
-  var uglifyOptions: js.UndefOr[MinifyOptions] = js.undefined
-  var warningsFilter: js.UndefOr[js.Function2[/* warning */ js.Any, /* source */ js.Any, Boolean]] = js.undefined
+  var cache: js.UndefOr[String | Boolean] = js.native
+  var cacheKeys: js.UndefOr[js.Function2[/* defaultCacheKeys */ js.Any, /* file */ js.Any, js.Object]] = js.native
+  var chunkFilter: js.UndefOr[js.Function1[/* chunk */ js.Any, Boolean]] = js.native
+  var exclude: js.UndefOr[TestType | js.Array[TestType]] = js.native
+  var extractComments: js.UndefOr[Boolean | String | js.RegExp | ExtractCommentsFunction] = js.native
+  var include: js.UndefOr[TestType | js.Array[TestType]] = js.native
+  var minify: js.UndefOr[js.Function2[/* file */ js.Any, /* sourceMap */ js.Any, AnonCode]] = js.native
+  var parallel: js.UndefOr[Boolean | Double] = js.native
+  var sourceMap: js.UndefOr[Boolean] = js.native
+  var test: js.UndefOr[TestType | js.Array[TestType]] = js.native
+  var uglifyOptions: js.UndefOr[MinifyOptions] = js.native
+  var warningsFilter: js.UndefOr[js.Function2[/* warning */ js.Any, /* source */ js.Any, Boolean]] = js.native
 }
 
 object Options {
   @scala.inline
-  def apply(
-    cache: String | Boolean = null,
-    cacheKeys: (/* defaultCacheKeys */ js.Any, /* file */ js.Any) => js.Object = null,
-    chunkFilter: /* chunk */ js.Any => Boolean = null,
-    exclude: TestType | js.Array[TestType] = null,
-    extractComments: Boolean | String | js.RegExp | ExtractCommentsFunction = null,
-    include: TestType | js.Array[TestType] = null,
-    minify: (/* file */ js.Any, /* sourceMap */ js.Any) => AnonCode = null,
-    parallel: Boolean | Double = null,
-    sourceMap: js.UndefOr[Boolean] = js.undefined,
-    test: TestType | js.Array[TestType] = null,
-    uglifyOptions: MinifyOptions = null,
-    warningsFilter: (/* warning */ js.Any, /* source */ js.Any) => Boolean = null
-  ): Options = {
+  def apply(): Options = {
     val __obj = js.Dynamic.literal()
-    if (cache != null) __obj.updateDynamic("cache")(cache.asInstanceOf[js.Any])
-    if (cacheKeys != null) __obj.updateDynamic("cacheKeys")(js.Any.fromFunction2(cacheKeys))
-    if (chunkFilter != null) __obj.updateDynamic("chunkFilter")(js.Any.fromFunction1(chunkFilter))
-    if (exclude != null) __obj.updateDynamic("exclude")(exclude.asInstanceOf[js.Any])
-    if (extractComments != null) __obj.updateDynamic("extractComments")(extractComments.asInstanceOf[js.Any])
-    if (include != null) __obj.updateDynamic("include")(include.asInstanceOf[js.Any])
-    if (minify != null) __obj.updateDynamic("minify")(js.Any.fromFunction2(minify))
-    if (parallel != null) __obj.updateDynamic("parallel")(parallel.asInstanceOf[js.Any])
-    if (!js.isUndefined(sourceMap)) __obj.updateDynamic("sourceMap")(sourceMap.asInstanceOf[js.Any])
-    if (test != null) __obj.updateDynamic("test")(test.asInstanceOf[js.Any])
-    if (uglifyOptions != null) __obj.updateDynamic("uglifyOptions")(uglifyOptions.asInstanceOf[js.Any])
-    if (warningsFilter != null) __obj.updateDynamic("warningsFilter")(js.Any.fromFunction2(warningsFilter))
     __obj.asInstanceOf[Options]
   }
+  @scala.inline
+  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCache(value: String | Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cache")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCache: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cache")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCacheKeys(value: (/* defaultCacheKeys */ js.Any, /* file */ js.Any) => js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cacheKeys")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutCacheKeys: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cacheKeys")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withChunkFilter(value: /* chunk */ js.Any => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("chunkFilter")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutChunkFilter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("chunkFilter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExcludeRegExp(value: js.RegExp): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exclude")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withExclude(value: TestType | js.Array[TestType]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exclude")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExclude: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exclude")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExtractCommentsFunction2(value: (/* node */ js.Any, /* comment */ js.Any) => Boolean | ExtractCommentsObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extractComments")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withExtractCommentsRegExp(value: js.RegExp): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extractComments")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withExtractComments(value: Boolean | String | js.RegExp | ExtractCommentsFunction): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extractComments")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExtractComments: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extractComments")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIncludeRegExp(value: js.RegExp): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("include")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInclude(value: TestType | js.Array[TestType]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("include")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInclude: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("include")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinify(value: (/* file */ js.Any, /* sourceMap */ js.Any) => AnonCode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minify")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutMinify: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minify")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParallel(value: Boolean | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parallel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParallel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parallel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSourceMap(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceMap")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSourceMap: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceMap")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTestRegExp(value: js.RegExp): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("test")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTest(value: TestType | js.Array[TestType]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("test")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTest: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("test")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUglifyOptions(value: MinifyOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("uglifyOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUglifyOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("uglifyOptions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWarningsFilter(value: (/* warning */ js.Any, /* source */ js.Any) => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("warningsFilter")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutWarningsFilter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("warningsFilter")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

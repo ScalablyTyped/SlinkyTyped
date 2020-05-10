@@ -4,29 +4,71 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait GetWeRunDataRes extends js.Object {
   /**
     * 包括敏感数据在内的完整用户信息的加密数据
     */
-  var encryptedData: js.UndefOr[String] = js.undefined
+  var encryptedData: js.UndefOr[String] = js.native
   /**
     * 调用结果
     */
-  var errMsg: js.UndefOr[String] = js.undefined
+  var errMsg: js.UndefOr[String] = js.native
   /**
     * 加密算法的初始向量
     */
-  var iv: js.UndefOr[String] = js.undefined
+  var iv: js.UndefOr[String] = js.native
 }
 
 object GetWeRunDataRes {
   @scala.inline
-  def apply(encryptedData: String = null, errMsg: String = null, iv: String = null): GetWeRunDataRes = {
+  def apply(): GetWeRunDataRes = {
     val __obj = js.Dynamic.literal()
-    if (encryptedData != null) __obj.updateDynamic("encryptedData")(encryptedData.asInstanceOf[js.Any])
-    if (errMsg != null) __obj.updateDynamic("errMsg")(errMsg.asInstanceOf[js.Any])
-    if (iv != null) __obj.updateDynamic("iv")(iv.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetWeRunDataRes]
   }
+  @scala.inline
+  implicit class GetWeRunDataResOps[Self <: GetWeRunDataRes] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEncryptedData(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encryptedData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEncryptedData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encryptedData")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withErrMsg(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errMsg")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutErrMsg: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errMsg")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIv(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iv")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIv: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iv")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

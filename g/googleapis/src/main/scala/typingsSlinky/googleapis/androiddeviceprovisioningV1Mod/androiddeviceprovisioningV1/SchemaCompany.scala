@@ -49,22 +49,89 @@ trait SchemaCompany extends js.Object {
 
 object SchemaCompany {
   @scala.inline
-  def apply(
-    adminEmails: js.Array[String] = null,
-    companyId: String = null,
-    companyName: String = null,
-    name: String = null,
-    ownerEmails: js.Array[String] = null,
-    termsStatus: String = null
-  ): SchemaCompany = {
+  def apply(): SchemaCompany = {
     val __obj = js.Dynamic.literal()
-    if (adminEmails != null) __obj.updateDynamic("adminEmails")(adminEmails.asInstanceOf[js.Any])
-    if (companyId != null) __obj.updateDynamic("companyId")(companyId.asInstanceOf[js.Any])
-    if (companyName != null) __obj.updateDynamic("companyName")(companyName.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (ownerEmails != null) __obj.updateDynamic("ownerEmails")(ownerEmails.asInstanceOf[js.Any])
-    if (termsStatus != null) __obj.updateDynamic("termsStatus")(termsStatus.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaCompany]
   }
+  @scala.inline
+  implicit class SchemaCompanyOps[Self <: SchemaCompany] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAdminEmails(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("adminEmails")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAdminEmails: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("adminEmails")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCompanyId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("companyId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCompanyId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("companyId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCompanyName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("companyName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCompanyName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("companyName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOwnerEmails(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ownerEmails")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOwnerEmails: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ownerEmails")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTermsStatus(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("termsStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTermsStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("termsStatus")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -86,46 +86,233 @@ trait CreateFleetInput extends js.Object {
 
 object CreateFleetInput {
   @scala.inline
-  def apply(
-    EC2InstanceType: EC2InstanceType,
-    Name: NonZeroAndMaxString,
-    BuildId: BuildId = null,
-    CertificateConfiguration: CertificateConfiguration = null,
-    Description: NonZeroAndMaxString = null,
-    EC2InboundPermissions: IpPermissionsList = null,
-    FleetType: FleetType = null,
-    InstanceRoleArn: NonEmptyString = null,
-    LogPaths: StringList = null,
-    MetricGroups: MetricGroupList = null,
-    NewGameSessionProtectionPolicy: ProtectionPolicy = null,
-    PeerVpcAwsAccountId: NonZeroAndMaxString = null,
-    PeerVpcId: NonZeroAndMaxString = null,
-    ResourceCreationLimitPolicy: ResourceCreationLimitPolicy = null,
-    RuntimeConfiguration: RuntimeConfiguration = null,
-    ScriptId: ScriptId = null,
-    ServerLaunchParameters: NonZeroAndMaxString = null,
-    ServerLaunchPath: NonZeroAndMaxString = null,
-    Tags: TagList = null
-  ): CreateFleetInput = {
+  def apply(EC2InstanceType: EC2InstanceType, Name: NonZeroAndMaxString): CreateFleetInput = {
     val __obj = js.Dynamic.literal(EC2InstanceType = EC2InstanceType.asInstanceOf[js.Any], Name = Name.asInstanceOf[js.Any])
-    if (BuildId != null) __obj.updateDynamic("BuildId")(BuildId.asInstanceOf[js.Any])
-    if (CertificateConfiguration != null) __obj.updateDynamic("CertificateConfiguration")(CertificateConfiguration.asInstanceOf[js.Any])
-    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
-    if (EC2InboundPermissions != null) __obj.updateDynamic("EC2InboundPermissions")(EC2InboundPermissions.asInstanceOf[js.Any])
-    if (FleetType != null) __obj.updateDynamic("FleetType")(FleetType.asInstanceOf[js.Any])
-    if (InstanceRoleArn != null) __obj.updateDynamic("InstanceRoleArn")(InstanceRoleArn.asInstanceOf[js.Any])
-    if (LogPaths != null) __obj.updateDynamic("LogPaths")(LogPaths.asInstanceOf[js.Any])
-    if (MetricGroups != null) __obj.updateDynamic("MetricGroups")(MetricGroups.asInstanceOf[js.Any])
-    if (NewGameSessionProtectionPolicy != null) __obj.updateDynamic("NewGameSessionProtectionPolicy")(NewGameSessionProtectionPolicy.asInstanceOf[js.Any])
-    if (PeerVpcAwsAccountId != null) __obj.updateDynamic("PeerVpcAwsAccountId")(PeerVpcAwsAccountId.asInstanceOf[js.Any])
-    if (PeerVpcId != null) __obj.updateDynamic("PeerVpcId")(PeerVpcId.asInstanceOf[js.Any])
-    if (ResourceCreationLimitPolicy != null) __obj.updateDynamic("ResourceCreationLimitPolicy")(ResourceCreationLimitPolicy.asInstanceOf[js.Any])
-    if (RuntimeConfiguration != null) __obj.updateDynamic("RuntimeConfiguration")(RuntimeConfiguration.asInstanceOf[js.Any])
-    if (ScriptId != null) __obj.updateDynamic("ScriptId")(ScriptId.asInstanceOf[js.Any])
-    if (ServerLaunchParameters != null) __obj.updateDynamic("ServerLaunchParameters")(ServerLaunchParameters.asInstanceOf[js.Any])
-    if (ServerLaunchPath != null) __obj.updateDynamic("ServerLaunchPath")(ServerLaunchPath.asInstanceOf[js.Any])
-    if (Tags != null) __obj.updateDynamic("Tags")(Tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateFleetInput]
   }
+  @scala.inline
+  implicit class CreateFleetInputOps[Self <: CreateFleetInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEC2InstanceType(value: EC2InstanceType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EC2InstanceType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withName(value: NonZeroAndMaxString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBuildId(value: BuildId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BuildId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBuildId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BuildId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCertificateConfiguration(value: CertificateConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CertificateConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCertificateConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CertificateConfiguration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDescription(value: NonZeroAndMaxString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEC2InboundPermissions(value: IpPermissionsList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EC2InboundPermissions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEC2InboundPermissions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EC2InboundPermissions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFleetType(value: FleetType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FleetType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFleetType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FleetType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInstanceRoleArn(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceRoleArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstanceRoleArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceRoleArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLogPaths(value: StringList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LogPaths")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLogPaths: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LogPaths")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMetricGroups(value: MetricGroupList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MetricGroups")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMetricGroups: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MetricGroups")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNewGameSessionProtectionPolicy(value: ProtectionPolicy): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NewGameSessionProtectionPolicy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNewGameSessionProtectionPolicy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NewGameSessionProtectionPolicy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPeerVpcAwsAccountId(value: NonZeroAndMaxString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PeerVpcAwsAccountId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPeerVpcAwsAccountId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PeerVpcAwsAccountId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPeerVpcId(value: NonZeroAndMaxString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PeerVpcId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPeerVpcId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PeerVpcId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResourceCreationLimitPolicy(value: ResourceCreationLimitPolicy): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceCreationLimitPolicy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResourceCreationLimitPolicy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceCreationLimitPolicy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRuntimeConfiguration(value: RuntimeConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RuntimeConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRuntimeConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RuntimeConfiguration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScriptId(value: ScriptId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ScriptId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScriptId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ScriptId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withServerLaunchParameters(value: NonZeroAndMaxString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ServerLaunchParameters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutServerLaunchParameters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ServerLaunchParameters")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withServerLaunchPath(value: NonZeroAndMaxString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ServerLaunchPath")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutServerLaunchPath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ServerLaunchPath")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTags(value: TagList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

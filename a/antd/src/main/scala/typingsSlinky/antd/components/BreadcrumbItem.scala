@@ -1,14 +1,12 @@
 package typingsSlinky.antd.components
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLAnchorElement
 import org.scalajs.dom.raw.HTMLSpanElement
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.span.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.antd.breadcrumbItemMod.BreadcrumbItemProps
 import typingsSlinky.antd.breadcrumbItemMod.default
 import typingsSlinky.antd.dropdownDropdownMod.OverlayFunc
@@ -16,31 +14,34 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object BreadcrumbItem
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object BreadcrumbItem {
   @JSImport("antd/lib/breadcrumb/BreadcrumbItem", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    href: String = null,
-    onClick: SyntheticMouseEvent[HTMLAnchorElement | HTMLSpanElement] => Unit = null,
-    overlay: ReactElement | OverlayFunc = null,
-    prefixCls: String = null,
-    separator: TagMod[Any] = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (href != null) __obj.updateDynamic("href")(href.asInstanceOf[js.Any])
-    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction1(onClick))
-    if (overlay != null) __obj.updateDynamic("overlay")(overlay.asInstanceOf[js.Any])
-    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
-    if (separator != null) __obj.updateDynamic("separator")(separator.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def href(value: String): this.type = set("href", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onClick(value: SyntheticMouseEvent[HTMLAnchorElement | HTMLSpanElement] => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
+    @scala.inline
+    def overlayReactElement(value: ReactElement): this.type = set("overlay", value.asInstanceOf[js.Any])
+    @scala.inline
+    def overlayFunction0(value: () => ReactElement): this.type = set("overlay", js.Any.fromFunction0(value))
+    @scala.inline
+    def overlay(value: ReactElement | OverlayFunc): this.type = set("overlay", value.asInstanceOf[js.Any])
+    @scala.inline
+    def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def separatorReactElement(value: ReactElement): this.type = set("separator", value.asInstanceOf[js.Any])
+    @scala.inline
+    def separator(value: TagMod[Any]): this.type = set("separator", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.span.tag.type, typingsSlinky.antd.breadcrumbItemMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = BreadcrumbItemProps
+  
+  def withProps(p: BreadcrumbItemProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: BreadcrumbItem.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

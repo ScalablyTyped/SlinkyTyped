@@ -22,11 +22,41 @@ trait SchemaAnnotateFileResponse extends js.Object {
 
 object SchemaAnnotateFileResponse {
   @scala.inline
-  def apply(inputConfig: SchemaInputConfig = null, responses: js.Array[SchemaAnnotateImageResponse] = null): SchemaAnnotateFileResponse = {
+  def apply(): SchemaAnnotateFileResponse = {
     val __obj = js.Dynamic.literal()
-    if (inputConfig != null) __obj.updateDynamic("inputConfig")(inputConfig.asInstanceOf[js.Any])
-    if (responses != null) __obj.updateDynamic("responses")(responses.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAnnotateFileResponse]
   }
+  @scala.inline
+  implicit class SchemaAnnotateFileResponseOps[Self <: SchemaAnnotateFileResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withInputConfig(value: SchemaInputConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInputConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResponses(value: js.Array[SchemaAnnotateImageResponse]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("responses")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResponses: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("responses")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -130,7 +130,7 @@ trait XMLHttpRequest extends XMLHttpRequestEventTarget {
   def removeEventListener_readystatechange(
     `type`: readystatechange,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   /**
     * Initiates the request. The body argument provides the request body, if any, and is ignored if the request method is GET or HEAD.
@@ -152,7 +152,8 @@ trait XMLHttpRequest extends XMLHttpRequestEventTarget {
 
 @JSGlobal("XMLHttpRequest")
 @js.native
-object XMLHttpRequest extends Instantiable0[XMLHttpRequest] {
+object XMLHttpRequest
+  extends Instantiable0[org.scalajs.dom.raw.XMLHttpRequest] {
   val DONE: Double = js.native
   val HEADERS_RECEIVED: Double = js.native
   val LOADING: Double = js.native

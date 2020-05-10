@@ -18,22 +18,20 @@ trait PopoverPlace extends js.Object
 
 object PopoverPlace {
   @scala.inline
-  def above: typingsSlinky.reactPopover.reactPopoverStrings.above = this.cast("above")
+  def above: typingsSlinky.reactPopover.reactPopoverStrings.above = "above".asInstanceOf[typingsSlinky.reactPopover.reactPopoverStrings.above]
   @scala.inline
-  def below: typingsSlinky.reactPopover.reactPopoverStrings.below = this.cast("below")
+  def below: typingsSlinky.reactPopover.reactPopoverStrings.below = "below".asInstanceOf[typingsSlinky.reactPopover.reactPopoverStrings.below]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def column: typingsSlinky.reactPopover.reactPopoverStrings.column = "column".asInstanceOf[typingsSlinky.reactPopover.reactPopoverStrings.column]
   @scala.inline
-  def column: typingsSlinky.reactPopover.reactPopoverStrings.column = this.cast("column")
+  def end: typingsSlinky.reactPopover.reactPopoverStrings.end = "end".asInstanceOf[typingsSlinky.reactPopover.reactPopoverStrings.end]
   @scala.inline
-  def end: typingsSlinky.reactPopover.reactPopoverStrings.end = this.cast("end")
+  def left: typingsSlinky.reactPopover.reactPopoverStrings.left = "left".asInstanceOf[typingsSlinky.reactPopover.reactPopoverStrings.left]
   @scala.inline
-  def left: typingsSlinky.reactPopover.reactPopoverStrings.left = this.cast("left")
+  def right: typingsSlinky.reactPopover.reactPopoverStrings.right = "right".asInstanceOf[typingsSlinky.reactPopover.reactPopoverStrings.right]
   @scala.inline
-  def right: typingsSlinky.reactPopover.reactPopoverStrings.right = this.cast("right")
+  def row: typingsSlinky.reactPopover.reactPopoverStrings.row = "row".asInstanceOf[typingsSlinky.reactPopover.reactPopoverStrings.row]
   @scala.inline
-  def row: typingsSlinky.reactPopover.reactPopoverStrings.row = this.cast("row")
-  @scala.inline
-  def start: typingsSlinky.reactPopover.reactPopoverStrings.start = this.cast("start")
+  def start: typingsSlinky.reactPopover.reactPopoverStrings.start = "start".asInstanceOf[typingsSlinky.reactPopover.reactPopoverStrings.start]
 }
 

@@ -12,31 +12,57 @@ import scala.scalajs.js.annotation._
   * available to normal per-pod metrics using the "pods" source.  Only one "target" type should
   * be set.
   */
+@js.native
 trait ResourceMetricSource extends js.Object {
   /**
     * name is the name of the resource in question.
     */
-  val name: String
+  val name: String = js.native
   /**
     * targetAverageUtilization is the target value of the average of the resource metric across
     * all relevant pods, represented as a percentage of the requested value of the resource for
     * the pods.
     */
-  val targetAverageUtilization: Double
+  val targetAverageUtilization: Double = js.native
   /**
     * targetAverageValue is the target value of the average of the resource metric across all
     * relevant pods, as a raw value (instead of as a percentage of the request), similar to the
     * "pods" metric source type.
     */
-  val targetAverageValue: String
+  val targetAverageValue: String = js.native
 }
 
 object ResourceMetricSource {
   @scala.inline
   def apply(name: String, targetAverageUtilization: Double, targetAverageValue: String): ResourceMetricSource = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], targetAverageUtilization = targetAverageUtilization.asInstanceOf[js.Any], targetAverageValue = targetAverageValue.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[ResourceMetricSource]
   }
+  @scala.inline
+  implicit class ResourceMetricSourceOps[Self <: ResourceMetricSource] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTargetAverageUtilization(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetAverageUtilization")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTargetAverageValue(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetAverageValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

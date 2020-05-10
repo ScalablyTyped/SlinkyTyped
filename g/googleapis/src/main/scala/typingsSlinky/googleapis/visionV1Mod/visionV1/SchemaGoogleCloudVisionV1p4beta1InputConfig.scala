@@ -30,16 +30,53 @@ trait SchemaGoogleCloudVisionV1p4beta1InputConfig extends js.Object {
 
 object SchemaGoogleCloudVisionV1p4beta1InputConfig {
   @scala.inline
-  def apply(
-    content: String = null,
-    gcsSource: SchemaGoogleCloudVisionV1p4beta1GcsSource = null,
-    mimeType: String = null
-  ): SchemaGoogleCloudVisionV1p4beta1InputConfig = {
+  def apply(): SchemaGoogleCloudVisionV1p4beta1InputConfig = {
     val __obj = js.Dynamic.literal()
-    if (content != null) __obj.updateDynamic("content")(content.asInstanceOf[js.Any])
-    if (gcsSource != null) __obj.updateDynamic("gcsSource")(gcsSource.asInstanceOf[js.Any])
-    if (mimeType != null) __obj.updateDynamic("mimeType")(mimeType.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudVisionV1p4beta1InputConfig]
   }
+  @scala.inline
+  implicit class SchemaGoogleCloudVisionV1p4beta1InputConfigOps[Self <: SchemaGoogleCloudVisionV1p4beta1InputConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withContent(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGcsSource(value: SchemaGoogleCloudVisionV1p4beta1GcsSource): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gcsSource")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGcsSource: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gcsSource")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMimeType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mimeType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMimeType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mimeType")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

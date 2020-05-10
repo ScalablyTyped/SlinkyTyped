@@ -76,9 +76,9 @@ object resources extends js.Object {
   @js.native
   class BufferResource protected ()
     extends typingsSlinky.pixiJs.PIXI.resources.BufferResource {
-    def this(source: scala.scalajs.js.typedarray.Float32Array, options: AnonHeightWidth) = this()
-    def this(source: scala.scalajs.js.typedarray.Uint32Array, options: AnonHeightWidth) = this()
-    def this(source: scala.scalajs.js.typedarray.Uint8Array, options: AnonHeightWidth) = this()
+    def this(source: js.typedarray.Float32Array, options: AnonHeightWidth) = this()
+    def this(source: js.typedarray.Uint32Array, options: AnonHeightWidth) = this()
+    def this(source: js.typedarray.Uint8Array, options: AnonHeightWidth) = this()
   }
   
   /**
@@ -307,7 +307,7 @@ object resources extends js.Object {
       * @param {HTMLCanvasElement|OffscreenCanvas} source - The source object
       * @return {boolean} `true` if source is HTMLCanvasElement or OffscreenCanvas
       */
-    def test(source: typingsSlinky.std.HTMLCanvasElement): Boolean = js.native
+    def test(source: HTMLCanvasElement): Boolean = js.native
     def test(source: OffscreenCanvas): Boolean = js.native
   }
   

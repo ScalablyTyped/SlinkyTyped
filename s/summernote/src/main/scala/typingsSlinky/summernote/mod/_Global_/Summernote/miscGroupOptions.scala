@@ -15,16 +15,14 @@ trait miscGroupOptions extends js.Object
 
 object miscGroupOptions {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def codeview: typingsSlinky.summernote.summernoteStrings.codeview = "codeview".asInstanceOf[typingsSlinky.summernote.summernoteStrings.codeview]
   @scala.inline
-  def codeview: typingsSlinky.summernote.summernoteStrings.codeview = this.cast("codeview")
+  def fullscreen: typingsSlinky.summernote.summernoteStrings.fullscreen = "fullscreen".asInstanceOf[typingsSlinky.summernote.summernoteStrings.fullscreen]
   @scala.inline
-  def fullscreen: typingsSlinky.summernote.summernoteStrings.fullscreen = this.cast("fullscreen")
+  def help: typingsSlinky.summernote.summernoteStrings.help = "help".asInstanceOf[typingsSlinky.summernote.summernoteStrings.help]
   @scala.inline
-  def help: typingsSlinky.summernote.summernoteStrings.help = this.cast("help")
+  def redo: typingsSlinky.summernote.summernoteStrings.redo = "redo".asInstanceOf[typingsSlinky.summernote.summernoteStrings.redo]
   @scala.inline
-  def redo: typingsSlinky.summernote.summernoteStrings.redo = this.cast("redo")
-  @scala.inline
-  def undo: typingsSlinky.summernote.summernoteStrings.undo = this.cast("undo")
+  def undo: typingsSlinky.summernote.summernoteStrings.undo = "undo".asInstanceOf[typingsSlinky.summernote.summernoteStrings.undo]
 }
 

@@ -1,9 +1,7 @@
 package typingsSlinky.reactMce.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactMce.mod.ReactMCEProps
 import typingsSlinky.reactMce.mod.^
 import typingsSlinky.tinymce.mod.Editor
@@ -12,148 +10,150 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactMce
-  extends ExternalComponentWithAttributesWithRefType[tag.type, ^] {
+object ReactMce {
   @JSImport("react-mce", JSImport.Namespace)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: content */
-  def apply(
-    config: Settings_,
-    onActivate: (/* event */ js.Any, /* editor */ Editor) => Unit = null,
-    onAddUndo: (/* event */ js.Any, /* editor */ Editor) => Unit = null,
-    onBeforeAddUndo: (/* event */ js.Any, /* editor */ Editor) => Unit = null,
-    onBeforeExecCommand: (/* event */ js.Any, /* editor */ Editor) => Unit = null,
-    onBeforeGetContent: (/* event */ js.Any, /* editor */ Editor) => Unit = null,
-    onBeforeRenderUI: (/* event */ js.Any, /* editor */ Editor) => Unit = null,
-    onBeforeSetContent: (/* event */ js.Any, /* editor */ Editor) => Unit = null,
-    onBeforepaste: (/* event */ js.Any, /* editor */ Editor) => Unit = null,
-    onBlur: (/* event */ js.Any, /* editor */ Editor) => Unit = null,
-    onChange: (/* event */ js.Any, /* editor */ Editor) => Unit = null,
-    onClearUndos: (/* event */ js.Any, /* editor */ Editor) => Unit = null,
-    onClick: (/* event */ js.Any, /* editor */ Editor) => Unit = null,
-    onContextmenu: (/* event */ js.Any, /* editor */ Editor) => Unit = null,
-    onCopy: (/* event */ js.Any, /* editor */ Editor) => Unit = null,
-    onCut: (/* event */ js.Any, /* editor */ Editor) => Unit = null,
-    onDblclick: (/* event */ js.Any, /* editor */ Editor) => Unit = null,
-    onDeactivate: (/* event */ js.Any, /* editor */ Editor) => Unit = null,
-    onDirty: (/* event */ js.Any, /* editor */ Editor) => Unit = null,
-    onDrag: (/* event */ js.Any, /* editor */ Editor) => Unit = null,
-    onDragdrop: (/* event */ js.Any, /* editor */ Editor) => Unit = null,
-    onDragend: (/* event */ js.Any, /* editor */ Editor) => Unit = null,
-    onDraggesture: (/* event */ js.Any, /* editor */ Editor) => Unit = null,
-    onDragover: (/* event */ js.Any, /* editor */ Editor) => Unit = null,
-    onDrop: (/* event */ js.Any, /* editor */ Editor) => Unit = null,
-    onExecCommand: (/* event */ js.Any, /* editor */ Editor) => Unit = null,
-    onFocus: (/* event */ js.Any, /* editor */ Editor) => Unit = null,
-    onFocusin: (/* event */ js.Any, /* editor */ Editor) => Unit = null,
-    onFocusout: (/* event */ js.Any, /* editor */ Editor) => Unit = null,
-    onGetContent: (/* event */ js.Any, /* editor */ Editor) => Unit = null,
-    onHide: (/* event */ js.Any, /* editor */ Editor) => Unit = null,
-    onInit: (/* event */ js.Any, /* editor */ Editor) => Unit = null,
-    onKeydown: (/* event */ js.Any, /* editor */ Editor) => Unit = null,
-    onKeypress: (/* event */ js.Any, /* editor */ Editor) => Unit = null,
-    onKeyup: (/* event */ js.Any, /* editor */ Editor) => Unit = null,
-    onLoadContent: (/* event */ js.Any, /* editor */ Editor) => Unit = null,
-    onMousedown: (/* event */ js.Any, /* editor */ Editor) => Unit = null,
-    onMouseenter: (/* event */ js.Any, /* editor */ Editor) => Unit = null,
-    onMouseleave: (/* event */ js.Any, /* editor */ Editor) => Unit = null,
-    onMousemove: (/* event */ js.Any, /* editor */ Editor) => Unit = null,
-    onMouseout: (/* event */ js.Any, /* editor */ Editor) => Unit = null,
-    onMouseover: (/* event */ js.Any, /* editor */ Editor) => Unit = null,
-    onMouseup: (/* event */ js.Any, /* editor */ Editor) => Unit = null,
-    onNodeChange: (/* event */ js.Any, /* editor */ Editor) => Unit = null,
-    onObjectResizeStart: (/* event */ js.Any, /* editor */ Editor) => Unit = null,
-    onObjectResized: (/* event */ js.Any, /* editor */ Editor) => Unit = null,
-    onObjectSelected: (/* event */ js.Any, /* editor */ Editor) => Unit = null,
-    onPaste: (/* event */ js.Any, /* editor */ Editor) => Unit = null,
-    onPostProcess: (/* event */ js.Any, /* editor */ Editor) => Unit = null,
-    onPostRender: (/* event */ js.Any, /* editor */ Editor) => Unit = null,
-    onPreInit: (/* event */ js.Any, /* editor */ Editor) => Unit = null,
-    onPreProcess: (/* event */ js.Any, /* editor */ Editor) => Unit = null,
-    onProgressState: (/* event */ js.Any, /* editor */ Editor) => Unit = null,
-    onRedo: (/* event */ js.Any, /* editor */ Editor) => Unit = null,
-    onRemove: (/* event */ js.Any, /* editor */ Editor) => Unit = null,
-    onReset: (/* event */ js.Any, /* editor */ Editor) => Unit = null,
-    onSaveContent: (/* event */ js.Any, /* editor */ Editor) => Unit = null,
-    onSelectionchange: (/* event */ js.Any, /* editor */ Editor) => Unit = null,
-    onSetAttrib: (/* event */ js.Any, /* editor */ Editor) => Unit = null,
-    onSetContent: (/* event */ js.Any, /* editor */ Editor) => Unit = null,
-    onShow: (/* event */ js.Any, /* editor */ Editor) => Unit = null,
-    onSubmit: (/* event */ js.Any, /* editor */ Editor) => Unit = null,
-    onUndo: (/* event */ js.Any, /* editor */ Editor) => Unit = null,
-    onVisualAid: (/* event */ js.Any, /* editor */ Editor) => Unit = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, ^] = {
-    val __obj = js.Dynamic.literal(config = config.asInstanceOf[js.Any])
-    if (onActivate != null) __obj.updateDynamic("onActivate")(js.Any.fromFunction2(onActivate))
-    if (onAddUndo != null) __obj.updateDynamic("onAddUndo")(js.Any.fromFunction2(onAddUndo))
-    if (onBeforeAddUndo != null) __obj.updateDynamic("onBeforeAddUndo")(js.Any.fromFunction2(onBeforeAddUndo))
-    if (onBeforeExecCommand != null) __obj.updateDynamic("onBeforeExecCommand")(js.Any.fromFunction2(onBeforeExecCommand))
-    if (onBeforeGetContent != null) __obj.updateDynamic("onBeforeGetContent")(js.Any.fromFunction2(onBeforeGetContent))
-    if (onBeforeRenderUI != null) __obj.updateDynamic("onBeforeRenderUI")(js.Any.fromFunction2(onBeforeRenderUI))
-    if (onBeforeSetContent != null) __obj.updateDynamic("onBeforeSetContent")(js.Any.fromFunction2(onBeforeSetContent))
-    if (onBeforepaste != null) __obj.updateDynamic("onBeforepaste")(js.Any.fromFunction2(onBeforepaste))
-    if (onBlur != null) __obj.updateDynamic("onBlur")(js.Any.fromFunction2(onBlur))
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction2(onChange))
-    if (onClearUndos != null) __obj.updateDynamic("onClearUndos")(js.Any.fromFunction2(onClearUndos))
-    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction2(onClick))
-    if (onContextmenu != null) __obj.updateDynamic("onContextmenu")(js.Any.fromFunction2(onContextmenu))
-    if (onCopy != null) __obj.updateDynamic("onCopy")(js.Any.fromFunction2(onCopy))
-    if (onCut != null) __obj.updateDynamic("onCut")(js.Any.fromFunction2(onCut))
-    if (onDblclick != null) __obj.updateDynamic("onDblclick")(js.Any.fromFunction2(onDblclick))
-    if (onDeactivate != null) __obj.updateDynamic("onDeactivate")(js.Any.fromFunction2(onDeactivate))
-    if (onDirty != null) __obj.updateDynamic("onDirty")(js.Any.fromFunction2(onDirty))
-    if (onDrag != null) __obj.updateDynamic("onDrag")(js.Any.fromFunction2(onDrag))
-    if (onDragdrop != null) __obj.updateDynamic("onDragdrop")(js.Any.fromFunction2(onDragdrop))
-    if (onDragend != null) __obj.updateDynamic("onDragend")(js.Any.fromFunction2(onDragend))
-    if (onDraggesture != null) __obj.updateDynamic("onDraggesture")(js.Any.fromFunction2(onDraggesture))
-    if (onDragover != null) __obj.updateDynamic("onDragover")(js.Any.fromFunction2(onDragover))
-    if (onDrop != null) __obj.updateDynamic("onDrop")(js.Any.fromFunction2(onDrop))
-    if (onExecCommand != null) __obj.updateDynamic("onExecCommand")(js.Any.fromFunction2(onExecCommand))
-    if (onFocus != null) __obj.updateDynamic("onFocus")(js.Any.fromFunction2(onFocus))
-    if (onFocusin != null) __obj.updateDynamic("onFocusin")(js.Any.fromFunction2(onFocusin))
-    if (onFocusout != null) __obj.updateDynamic("onFocusout")(js.Any.fromFunction2(onFocusout))
-    if (onGetContent != null) __obj.updateDynamic("onGetContent")(js.Any.fromFunction2(onGetContent))
-    if (onHide != null) __obj.updateDynamic("onHide")(js.Any.fromFunction2(onHide))
-    if (onInit != null) __obj.updateDynamic("onInit")(js.Any.fromFunction2(onInit))
-    if (onKeydown != null) __obj.updateDynamic("onKeydown")(js.Any.fromFunction2(onKeydown))
-    if (onKeypress != null) __obj.updateDynamic("onKeypress")(js.Any.fromFunction2(onKeypress))
-    if (onKeyup != null) __obj.updateDynamic("onKeyup")(js.Any.fromFunction2(onKeyup))
-    if (onLoadContent != null) __obj.updateDynamic("onLoadContent")(js.Any.fromFunction2(onLoadContent))
-    if (onMousedown != null) __obj.updateDynamic("onMousedown")(js.Any.fromFunction2(onMousedown))
-    if (onMouseenter != null) __obj.updateDynamic("onMouseenter")(js.Any.fromFunction2(onMouseenter))
-    if (onMouseleave != null) __obj.updateDynamic("onMouseleave")(js.Any.fromFunction2(onMouseleave))
-    if (onMousemove != null) __obj.updateDynamic("onMousemove")(js.Any.fromFunction2(onMousemove))
-    if (onMouseout != null) __obj.updateDynamic("onMouseout")(js.Any.fromFunction2(onMouseout))
-    if (onMouseover != null) __obj.updateDynamic("onMouseover")(js.Any.fromFunction2(onMouseover))
-    if (onMouseup != null) __obj.updateDynamic("onMouseup")(js.Any.fromFunction2(onMouseup))
-    if (onNodeChange != null) __obj.updateDynamic("onNodeChange")(js.Any.fromFunction2(onNodeChange))
-    if (onObjectResizeStart != null) __obj.updateDynamic("onObjectResizeStart")(js.Any.fromFunction2(onObjectResizeStart))
-    if (onObjectResized != null) __obj.updateDynamic("onObjectResized")(js.Any.fromFunction2(onObjectResized))
-    if (onObjectSelected != null) __obj.updateDynamic("onObjectSelected")(js.Any.fromFunction2(onObjectSelected))
-    if (onPaste != null) __obj.updateDynamic("onPaste")(js.Any.fromFunction2(onPaste))
-    if (onPostProcess != null) __obj.updateDynamic("onPostProcess")(js.Any.fromFunction2(onPostProcess))
-    if (onPostRender != null) __obj.updateDynamic("onPostRender")(js.Any.fromFunction2(onPostRender))
-    if (onPreInit != null) __obj.updateDynamic("onPreInit")(js.Any.fromFunction2(onPreInit))
-    if (onPreProcess != null) __obj.updateDynamic("onPreProcess")(js.Any.fromFunction2(onPreProcess))
-    if (onProgressState != null) __obj.updateDynamic("onProgressState")(js.Any.fromFunction2(onProgressState))
-    if (onRedo != null) __obj.updateDynamic("onRedo")(js.Any.fromFunction2(onRedo))
-    if (onRemove != null) __obj.updateDynamic("onRemove")(js.Any.fromFunction2(onRemove))
-    if (onReset != null) __obj.updateDynamic("onReset")(js.Any.fromFunction2(onReset))
-    if (onSaveContent != null) __obj.updateDynamic("onSaveContent")(js.Any.fromFunction2(onSaveContent))
-    if (onSelectionchange != null) __obj.updateDynamic("onSelectionchange")(js.Any.fromFunction2(onSelectionchange))
-    if (onSetAttrib != null) __obj.updateDynamic("onSetAttrib")(js.Any.fromFunction2(onSetAttrib))
-    if (onSetContent != null) __obj.updateDynamic("onSetContent")(js.Any.fromFunction2(onSetContent))
-    if (onShow != null) __obj.updateDynamic("onShow")(js.Any.fromFunction2(onShow))
-    if (onSubmit != null) __obj.updateDynamic("onSubmit")(js.Any.fromFunction2(onSubmit))
-    if (onUndo != null) __obj.updateDynamic("onUndo")(js.Any.fromFunction2(onUndo))
-    if (onVisualAid != null) __obj.updateDynamic("onVisualAid")(js.Any.fromFunction2(onVisualAid))
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, ^] {
+    @scala.inline
+    def content(value: String): this.type = set("content", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onActivate(value: (/* event */ js.Any, /* editor */ Editor) => Unit): this.type = set("onActivate", js.Any.fromFunction2(value))
+    @scala.inline
+    def onAddUndo(value: (/* event */ js.Any, /* editor */ Editor) => Unit): this.type = set("onAddUndo", js.Any.fromFunction2(value))
+    @scala.inline
+    def onBeforeAddUndo(value: (/* event */ js.Any, /* editor */ Editor) => Unit): this.type = set("onBeforeAddUndo", js.Any.fromFunction2(value))
+    @scala.inline
+    def onBeforeExecCommand(value: (/* event */ js.Any, /* editor */ Editor) => Unit): this.type = set("onBeforeExecCommand", js.Any.fromFunction2(value))
+    @scala.inline
+    def onBeforeGetContent(value: (/* event */ js.Any, /* editor */ Editor) => Unit): this.type = set("onBeforeGetContent", js.Any.fromFunction2(value))
+    @scala.inline
+    def onBeforeRenderUI(value: (/* event */ js.Any, /* editor */ Editor) => Unit): this.type = set("onBeforeRenderUI", js.Any.fromFunction2(value))
+    @scala.inline
+    def onBeforeSetContent(value: (/* event */ js.Any, /* editor */ Editor) => Unit): this.type = set("onBeforeSetContent", js.Any.fromFunction2(value))
+    @scala.inline
+    def onBeforepaste(value: (/* event */ js.Any, /* editor */ Editor) => Unit): this.type = set("onBeforepaste", js.Any.fromFunction2(value))
+    @scala.inline
+    def onBlur(value: (/* event */ js.Any, /* editor */ Editor) => Unit): this.type = set("onBlur", js.Any.fromFunction2(value))
+    @scala.inline
+    def onChange(value: (/* event */ js.Any, /* editor */ Editor) => Unit): this.type = set("onChange", js.Any.fromFunction2(value))
+    @scala.inline
+    def onClearUndos(value: (/* event */ js.Any, /* editor */ Editor) => Unit): this.type = set("onClearUndos", js.Any.fromFunction2(value))
+    @scala.inline
+    def onClick(value: (/* event */ js.Any, /* editor */ Editor) => Unit): this.type = set("onClick", js.Any.fromFunction2(value))
+    @scala.inline
+    def onContextmenu(value: (/* event */ js.Any, /* editor */ Editor) => Unit): this.type = set("onContextmenu", js.Any.fromFunction2(value))
+    @scala.inline
+    def onCopy(value: (/* event */ js.Any, /* editor */ Editor) => Unit): this.type = set("onCopy", js.Any.fromFunction2(value))
+    @scala.inline
+    def onCut(value: (/* event */ js.Any, /* editor */ Editor) => Unit): this.type = set("onCut", js.Any.fromFunction2(value))
+    @scala.inline
+    def onDblclick(value: (/* event */ js.Any, /* editor */ Editor) => Unit): this.type = set("onDblclick", js.Any.fromFunction2(value))
+    @scala.inline
+    def onDeactivate(value: (/* event */ js.Any, /* editor */ Editor) => Unit): this.type = set("onDeactivate", js.Any.fromFunction2(value))
+    @scala.inline
+    def onDirty(value: (/* event */ js.Any, /* editor */ Editor) => Unit): this.type = set("onDirty", js.Any.fromFunction2(value))
+    @scala.inline
+    def onDrag(value: (/* event */ js.Any, /* editor */ Editor) => Unit): this.type = set("onDrag", js.Any.fromFunction2(value))
+    @scala.inline
+    def onDragdrop(value: (/* event */ js.Any, /* editor */ Editor) => Unit): this.type = set("onDragdrop", js.Any.fromFunction2(value))
+    @scala.inline
+    def onDragend(value: (/* event */ js.Any, /* editor */ Editor) => Unit): this.type = set("onDragend", js.Any.fromFunction2(value))
+    @scala.inline
+    def onDraggesture(value: (/* event */ js.Any, /* editor */ Editor) => Unit): this.type = set("onDraggesture", js.Any.fromFunction2(value))
+    @scala.inline
+    def onDragover(value: (/* event */ js.Any, /* editor */ Editor) => Unit): this.type = set("onDragover", js.Any.fromFunction2(value))
+    @scala.inline
+    def onDrop(value: (/* event */ js.Any, /* editor */ Editor) => Unit): this.type = set("onDrop", js.Any.fromFunction2(value))
+    @scala.inline
+    def onExecCommand(value: (/* event */ js.Any, /* editor */ Editor) => Unit): this.type = set("onExecCommand", js.Any.fromFunction2(value))
+    @scala.inline
+    def onFocus(value: (/* event */ js.Any, /* editor */ Editor) => Unit): this.type = set("onFocus", js.Any.fromFunction2(value))
+    @scala.inline
+    def onFocusin(value: (/* event */ js.Any, /* editor */ Editor) => Unit): this.type = set("onFocusin", js.Any.fromFunction2(value))
+    @scala.inline
+    def onFocusout(value: (/* event */ js.Any, /* editor */ Editor) => Unit): this.type = set("onFocusout", js.Any.fromFunction2(value))
+    @scala.inline
+    def onGetContent(value: (/* event */ js.Any, /* editor */ Editor) => Unit): this.type = set("onGetContent", js.Any.fromFunction2(value))
+    @scala.inline
+    def onHide(value: (/* event */ js.Any, /* editor */ Editor) => Unit): this.type = set("onHide", js.Any.fromFunction2(value))
+    @scala.inline
+    def onInit(value: (/* event */ js.Any, /* editor */ Editor) => Unit): this.type = set("onInit", js.Any.fromFunction2(value))
+    @scala.inline
+    def onKeydown(value: (/* event */ js.Any, /* editor */ Editor) => Unit): this.type = set("onKeydown", js.Any.fromFunction2(value))
+    @scala.inline
+    def onKeypress(value: (/* event */ js.Any, /* editor */ Editor) => Unit): this.type = set("onKeypress", js.Any.fromFunction2(value))
+    @scala.inline
+    def onKeyup(value: (/* event */ js.Any, /* editor */ Editor) => Unit): this.type = set("onKeyup", js.Any.fromFunction2(value))
+    @scala.inline
+    def onLoadContent(value: (/* event */ js.Any, /* editor */ Editor) => Unit): this.type = set("onLoadContent", js.Any.fromFunction2(value))
+    @scala.inline
+    def onMousedown(value: (/* event */ js.Any, /* editor */ Editor) => Unit): this.type = set("onMousedown", js.Any.fromFunction2(value))
+    @scala.inline
+    def onMouseenter(value: (/* event */ js.Any, /* editor */ Editor) => Unit): this.type = set("onMouseenter", js.Any.fromFunction2(value))
+    @scala.inline
+    def onMouseleave(value: (/* event */ js.Any, /* editor */ Editor) => Unit): this.type = set("onMouseleave", js.Any.fromFunction2(value))
+    @scala.inline
+    def onMousemove(value: (/* event */ js.Any, /* editor */ Editor) => Unit): this.type = set("onMousemove", js.Any.fromFunction2(value))
+    @scala.inline
+    def onMouseout(value: (/* event */ js.Any, /* editor */ Editor) => Unit): this.type = set("onMouseout", js.Any.fromFunction2(value))
+    @scala.inline
+    def onMouseover(value: (/* event */ js.Any, /* editor */ Editor) => Unit): this.type = set("onMouseover", js.Any.fromFunction2(value))
+    @scala.inline
+    def onMouseup(value: (/* event */ js.Any, /* editor */ Editor) => Unit): this.type = set("onMouseup", js.Any.fromFunction2(value))
+    @scala.inline
+    def onNodeChange(value: (/* event */ js.Any, /* editor */ Editor) => Unit): this.type = set("onNodeChange", js.Any.fromFunction2(value))
+    @scala.inline
+    def onObjectResizeStart(value: (/* event */ js.Any, /* editor */ Editor) => Unit): this.type = set("onObjectResizeStart", js.Any.fromFunction2(value))
+    @scala.inline
+    def onObjectResized(value: (/* event */ js.Any, /* editor */ Editor) => Unit): this.type = set("onObjectResized", js.Any.fromFunction2(value))
+    @scala.inline
+    def onObjectSelected(value: (/* event */ js.Any, /* editor */ Editor) => Unit): this.type = set("onObjectSelected", js.Any.fromFunction2(value))
+    @scala.inline
+    def onPaste(value: (/* event */ js.Any, /* editor */ Editor) => Unit): this.type = set("onPaste", js.Any.fromFunction2(value))
+    @scala.inline
+    def onPostProcess(value: (/* event */ js.Any, /* editor */ Editor) => Unit): this.type = set("onPostProcess", js.Any.fromFunction2(value))
+    @scala.inline
+    def onPostRender(value: (/* event */ js.Any, /* editor */ Editor) => Unit): this.type = set("onPostRender", js.Any.fromFunction2(value))
+    @scala.inline
+    def onPreInit(value: (/* event */ js.Any, /* editor */ Editor) => Unit): this.type = set("onPreInit", js.Any.fromFunction2(value))
+    @scala.inline
+    def onPreProcess(value: (/* event */ js.Any, /* editor */ Editor) => Unit): this.type = set("onPreProcess", js.Any.fromFunction2(value))
+    @scala.inline
+    def onProgressState(value: (/* event */ js.Any, /* editor */ Editor) => Unit): this.type = set("onProgressState", js.Any.fromFunction2(value))
+    @scala.inline
+    def onRedo(value: (/* event */ js.Any, /* editor */ Editor) => Unit): this.type = set("onRedo", js.Any.fromFunction2(value))
+    @scala.inline
+    def onRemove(value: (/* event */ js.Any, /* editor */ Editor) => Unit): this.type = set("onRemove", js.Any.fromFunction2(value))
+    @scala.inline
+    def onReset(value: (/* event */ js.Any, /* editor */ Editor) => Unit): this.type = set("onReset", js.Any.fromFunction2(value))
+    @scala.inline
+    def onSaveContent(value: (/* event */ js.Any, /* editor */ Editor) => Unit): this.type = set("onSaveContent", js.Any.fromFunction2(value))
+    @scala.inline
+    def onSelectionchange(value: (/* event */ js.Any, /* editor */ Editor) => Unit): this.type = set("onSelectionchange", js.Any.fromFunction2(value))
+    @scala.inline
+    def onSetAttrib(value: (/* event */ js.Any, /* editor */ Editor) => Unit): this.type = set("onSetAttrib", js.Any.fromFunction2(value))
+    @scala.inline
+    def onSetContent(value: (/* event */ js.Any, /* editor */ Editor) => Unit): this.type = set("onSetContent", js.Any.fromFunction2(value))
+    @scala.inline
+    def onShow(value: (/* event */ js.Any, /* editor */ Editor) => Unit): this.type = set("onShow", js.Any.fromFunction2(value))
+    @scala.inline
+    def onSubmit(value: (/* event */ js.Any, /* editor */ Editor) => Unit): this.type = set("onSubmit", js.Any.fromFunction2(value))
+    @scala.inline
+    def onUndo(value: (/* event */ js.Any, /* editor */ Editor) => Unit): this.type = set("onUndo", js.Any.fromFunction2(value))
+    @scala.inline
+    def onVisualAid(value: (/* event */ js.Any, /* editor */ Editor) => Unit): this.type = set("onVisualAid", js.Any.fromFunction2(value))
   }
-  type Props = ReactMCEProps
+  
+  def withProps(p: ReactMCEProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(config: Settings_): Builder = {
+    val __props = js.Dynamic.literal(config = config.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ReactMCEProps]))
+  }
 }
 

@@ -17,20 +17,18 @@ trait RestHTTPMethods extends js.Object
 
 object RestHTTPMethods {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def delete: typingsSlinky.servicenow.servicenowStrings.delete = "delete".asInstanceOf[typingsSlinky.servicenow.servicenowStrings.delete]
   @scala.inline
-  def delete: typingsSlinky.servicenow.servicenowStrings.delete = this.cast("delete")
+  def get: typingsSlinky.servicenow.servicenowStrings.get = "get".asInstanceOf[typingsSlinky.servicenow.servicenowStrings.get]
   @scala.inline
-  def get: typingsSlinky.servicenow.servicenowStrings.get = this.cast("get")
+  def head: typingsSlinky.servicenow.servicenowStrings.head = "head".asInstanceOf[typingsSlinky.servicenow.servicenowStrings.head]
   @scala.inline
-  def head: typingsSlinky.servicenow.servicenowStrings.head = this.cast("head")
+  def options: typingsSlinky.servicenow.servicenowStrings.options = "options".asInstanceOf[typingsSlinky.servicenow.servicenowStrings.options]
   @scala.inline
-  def options: typingsSlinky.servicenow.servicenowStrings.options = this.cast("options")
+  def patch: typingsSlinky.servicenow.servicenowStrings.patch = "patch".asInstanceOf[typingsSlinky.servicenow.servicenowStrings.patch]
   @scala.inline
-  def patch: typingsSlinky.servicenow.servicenowStrings.patch = this.cast("patch")
+  def post: typingsSlinky.servicenow.servicenowStrings.post = "post".asInstanceOf[typingsSlinky.servicenow.servicenowStrings.post]
   @scala.inline
-  def post: typingsSlinky.servicenow.servicenowStrings.post = this.cast("post")
-  @scala.inline
-  def put: typingsSlinky.servicenow.servicenowStrings.put = this.cast("put")
+  def put: typingsSlinky.servicenow.servicenowStrings.put = "put".asInstanceOf[typingsSlinky.servicenow.servicenowStrings.put]
 }
 

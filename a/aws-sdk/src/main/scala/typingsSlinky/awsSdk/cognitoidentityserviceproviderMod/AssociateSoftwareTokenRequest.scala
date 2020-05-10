@@ -18,11 +18,41 @@ trait AssociateSoftwareTokenRequest extends js.Object {
 
 object AssociateSoftwareTokenRequest {
   @scala.inline
-  def apply(AccessToken: TokenModelType = null, Session: SessionType = null): AssociateSoftwareTokenRequest = {
+  def apply(): AssociateSoftwareTokenRequest = {
     val __obj = js.Dynamic.literal()
-    if (AccessToken != null) __obj.updateDynamic("AccessToken")(AccessToken.asInstanceOf[js.Any])
-    if (Session != null) __obj.updateDynamic("Session")(Session.asInstanceOf[js.Any])
     __obj.asInstanceOf[AssociateSoftwareTokenRequest]
   }
+  @scala.inline
+  implicit class AssociateSoftwareTokenRequestOps[Self <: AssociateSoftwareTokenRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAccessToken(value: TokenModelType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AccessToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccessToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AccessToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSession(value: SessionType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Session")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSession: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Session")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

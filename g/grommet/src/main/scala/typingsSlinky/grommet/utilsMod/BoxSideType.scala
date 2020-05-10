@@ -10,28 +10,35 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.grommet.grommetStrings.left
   - typingsSlinky.grommet.grommetStrings.bottom
   - typingsSlinky.grommet.grommetStrings.right
+  - typingsSlinky.grommet.grommetStrings.start
+  - typingsSlinky.grommet.grommetStrings.end
   - typingsSlinky.grommet.grommetStrings.horizontal
   - typingsSlinky.grommet.grommetStrings.vertical
   - typingsSlinky.grommet.grommetStrings.all
+  - typingsSlinky.grommet.grommetStrings.between
 */
 trait BoxSideType extends _BorderType
 
 object BoxSideType {
   @scala.inline
-  def all: typingsSlinky.grommet.grommetStrings.all = this.cast("all")
+  def all: typingsSlinky.grommet.grommetStrings.all = "all".asInstanceOf[typingsSlinky.grommet.grommetStrings.all]
   @scala.inline
-  def bottom: typingsSlinky.grommet.grommetStrings.bottom = this.cast("bottom")
+  def between: typingsSlinky.grommet.grommetStrings.between = "between".asInstanceOf[typingsSlinky.grommet.grommetStrings.between]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def bottom: typingsSlinky.grommet.grommetStrings.bottom = "bottom".asInstanceOf[typingsSlinky.grommet.grommetStrings.bottom]
   @scala.inline
-  def horizontal: typingsSlinky.grommet.grommetStrings.horizontal = this.cast("horizontal")
+  def end: typingsSlinky.grommet.grommetStrings.end = "end".asInstanceOf[typingsSlinky.grommet.grommetStrings.end]
   @scala.inline
-  def left: typingsSlinky.grommet.grommetStrings.left = this.cast("left")
+  def horizontal: typingsSlinky.grommet.grommetStrings.horizontal = "horizontal".asInstanceOf[typingsSlinky.grommet.grommetStrings.horizontal]
   @scala.inline
-  def right: typingsSlinky.grommet.grommetStrings.right = this.cast("right")
+  def left: typingsSlinky.grommet.grommetStrings.left = "left".asInstanceOf[typingsSlinky.grommet.grommetStrings.left]
   @scala.inline
-  def top: typingsSlinky.grommet.grommetStrings.top = this.cast("top")
+  def right: typingsSlinky.grommet.grommetStrings.right = "right".asInstanceOf[typingsSlinky.grommet.grommetStrings.right]
   @scala.inline
-  def vertical: typingsSlinky.grommet.grommetStrings.vertical = this.cast("vertical")
+  def start: typingsSlinky.grommet.grommetStrings.start = "start".asInstanceOf[typingsSlinky.grommet.grommetStrings.start]
+  @scala.inline
+  def top: typingsSlinky.grommet.grommetStrings.top = "top".asInstanceOf[typingsSlinky.grommet.grommetStrings.top]
+  @scala.inline
+  def vertical: typingsSlinky.grommet.grommetStrings.vertical = "vertical".asInstanceOf[typingsSlinky.grommet.grommetStrings.vertical]
 }
 

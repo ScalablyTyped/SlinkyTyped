@@ -17,7 +17,7 @@ trait Fileeventaddchangeunlink extends js.Object {
   val name: String = js.native
   val size: Double = js.native
   val `type`: String = js.native
-  def arrayBuffer(): js.Promise[scala.scalajs.js.typedarray.ArrayBuffer] = js.native
+  def arrayBuffer(): js.Promise[js.typedarray.ArrayBuffer] = js.native
   def slice(): Blob = js.native
   def slice(start: Double): Blob = js.native
   def slice(start: Double, end: Double): Blob = js.native

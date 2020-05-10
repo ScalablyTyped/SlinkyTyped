@@ -2,9 +2,9 @@ package typingsSlinky.jss.mod
 
 import org.scalajs.dom.raw.CSSRule
 import org.scalajs.dom.raw.CSSRuleList
+import org.scalajs.dom.raw.CSSStyleRule
+import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.jss.jssBooleans.`false`
-import typingsSlinky.std.CSSStyleRule
-import typingsSlinky.std.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,6 +25,6 @@ trait Renderer extends js.Object {
   def replaceRule(cssRule: CSSRule, rule: Rule): `false` | CSSRule = js.native
   def setProperty(cssRule: CSSStyleRule, prop: String, value: JssValue): Boolean = js.native
   def setProperty(cssRule: HTMLElement, prop: String, value: JssValue): Boolean = js.native
-  def setSelector(cssRule: org.scalajs.dom.raw.CSSStyleRule, selectorText: String): Boolean = js.native
+  def setSelector(cssRule: CSSStyleRule, selectorText: String): Boolean = js.native
 }
 

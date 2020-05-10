@@ -14,10 +14,29 @@ trait GetDefaultCreditSpecificationResult extends js.Object {
 
 object GetDefaultCreditSpecificationResult {
   @scala.inline
-  def apply(InstanceFamilyCreditSpecification: InstanceFamilyCreditSpecification = null): GetDefaultCreditSpecificationResult = {
+  def apply(): GetDefaultCreditSpecificationResult = {
     val __obj = js.Dynamic.literal()
-    if (InstanceFamilyCreditSpecification != null) __obj.updateDynamic("InstanceFamilyCreditSpecification")(InstanceFamilyCreditSpecification.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetDefaultCreditSpecificationResult]
   }
+  @scala.inline
+  implicit class GetDefaultCreditSpecificationResultOps[Self <: GetDefaultCreditSpecificationResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withInstanceFamilyCreditSpecification(value: InstanceFamilyCreditSpecification): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceFamilyCreditSpecification")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstanceFamilyCreditSpecification: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceFamilyCreditSpecification")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

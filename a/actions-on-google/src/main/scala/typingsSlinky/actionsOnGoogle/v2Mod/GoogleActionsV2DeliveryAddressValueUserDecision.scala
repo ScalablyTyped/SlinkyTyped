@@ -13,12 +13,10 @@ trait GoogleActionsV2DeliveryAddressValueUserDecision extends js.Object
 
 object GoogleActionsV2DeliveryAddressValueUserDecision {
   @scala.inline
-  def ACCEPTED: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.ACCEPTED = this.cast("ACCEPTED")
+  def ACCEPTED: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.ACCEPTED = "ACCEPTED".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.ACCEPTED]
   @scala.inline
-  def REJECTED: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.REJECTED = this.cast("REJECTED")
+  def REJECTED: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.REJECTED = "REJECTED".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.REJECTED]
   @scala.inline
-  def UNKNOWN_USER_DECISION: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.UNKNOWN_USER_DECISION = this.cast("UNKNOWN_USER_DECISION")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def UNKNOWN_USER_DECISION: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.UNKNOWN_USER_DECISION = "UNKNOWN_USER_DECISION".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.UNKNOWN_USER_DECISION]
 }
 

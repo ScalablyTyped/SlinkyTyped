@@ -7,9 +7,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait PluralRules extends js.Object {
-  def resolvedOptions(): ResolvedPluralRulesOptions
-  def select(n: Double): String
+  def resolvedOptions(): ResolvedPluralRulesOptions = js.native
+  def select(n: Double): String = js.native
 }
 
 @JSGlobal("Intl.PluralRules")

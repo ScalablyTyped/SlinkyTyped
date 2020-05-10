@@ -29,16 +29,53 @@ trait SchemaDocumentChange extends js.Object {
 
 object SchemaDocumentChange {
   @scala.inline
-  def apply(
-    document: SchemaDocument = null,
-    removedTargetIds: js.Array[Double] = null,
-    targetIds: js.Array[Double] = null
-  ): SchemaDocumentChange = {
+  def apply(): SchemaDocumentChange = {
     val __obj = js.Dynamic.literal()
-    if (document != null) __obj.updateDynamic("document")(document.asInstanceOf[js.Any])
-    if (removedTargetIds != null) __obj.updateDynamic("removedTargetIds")(removedTargetIds.asInstanceOf[js.Any])
-    if (targetIds != null) __obj.updateDynamic("targetIds")(targetIds.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDocumentChange]
   }
+  @scala.inline
+  implicit class SchemaDocumentChangeOps[Self <: SchemaDocumentChange] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDocument(value: SchemaDocument): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("document")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDocument: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("document")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRemovedTargetIds(value: js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removedTargetIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRemovedTargetIds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removedTargetIds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTargetIds(value: js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTargetIds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetIds")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

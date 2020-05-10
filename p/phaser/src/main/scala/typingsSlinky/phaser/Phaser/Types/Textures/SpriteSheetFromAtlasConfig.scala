@@ -5,60 +5,133 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SpriteSheetFromAtlasConfig extends js.Object {
   /**
     * The key of the Texture Atlas in which this Sprite Sheet can be found.
     */
-  var atlas: String
+  var atlas: String = js.native
   /**
     * The total number of frames to extract from the Sprite Sheet. The default value of -1 means "extract all frames".
     */
-  var endFrame: js.UndefOr[integer] = js.undefined
+  var endFrame: js.UndefOr[integer] = js.native
   /**
     * The key of the Texture Atlas Frame in which this Sprite Sheet can be found.
     */
-  var frame: String
+  var frame: String = js.native
   /**
     * The fixed height of each frame. If not set it will use the frameWidth as the height.
     */
-  var frameHeight: js.UndefOr[integer] = js.undefined
+  var frameHeight: js.UndefOr[integer] = js.native
   /**
     * The fixed width of each frame.
     */
-  var frameWidth: integer
+  var frameWidth: integer = js.native
   /**
     * If the frames have been drawn with a margin, specify the amount here.
     */
-  var margin: js.UndefOr[integer] = js.undefined
+  var margin: js.UndefOr[integer] = js.native
   /**
     * If the frames have been drawn with spacing between them, specify the amount here.
     */
-  var spacing: js.UndefOr[integer] = js.undefined
+  var spacing: js.UndefOr[integer] = js.native
   /**
     * Skip a number of frames. Useful when there are multiple sprite sheets in one Texture.
     */
-  var startFrame: js.UndefOr[integer] = js.undefined
+  var startFrame: js.UndefOr[integer] = js.native
 }
 
 object SpriteSheetFromAtlasConfig {
   @scala.inline
-  def apply(
-    atlas: String,
-    frame: String,
-    frameWidth: integer,
-    endFrame: Int | Double = null,
-    frameHeight: Int | Double = null,
-    margin: Int | Double = null,
-    spacing: Int | Double = null,
-    startFrame: Int | Double = null
-  ): SpriteSheetFromAtlasConfig = {
+  def apply(atlas: String, frame: String, frameWidth: integer): SpriteSheetFromAtlasConfig = {
     val __obj = js.Dynamic.literal(atlas = atlas.asInstanceOf[js.Any], frame = frame.asInstanceOf[js.Any], frameWidth = frameWidth.asInstanceOf[js.Any])
-    if (endFrame != null) __obj.updateDynamic("endFrame")(endFrame.asInstanceOf[js.Any])
-    if (frameHeight != null) __obj.updateDynamic("frameHeight")(frameHeight.asInstanceOf[js.Any])
-    if (margin != null) __obj.updateDynamic("margin")(margin.asInstanceOf[js.Any])
-    if (spacing != null) __obj.updateDynamic("spacing")(spacing.asInstanceOf[js.Any])
-    if (startFrame != null) __obj.updateDynamic("startFrame")(startFrame.asInstanceOf[js.Any])
     __obj.asInstanceOf[SpriteSheetFromAtlasConfig]
   }
+  @scala.inline
+  implicit class SpriteSheetFromAtlasConfigOps[Self <: SpriteSheetFromAtlasConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAtlas(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("atlas")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFrame(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("frame")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFrameWidth(value: integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("frameWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEndFrame(value: integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endFrame")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEndFrame: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endFrame")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFrameHeight(value: integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("frameHeight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFrameHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("frameHeight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMargin(value: integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("margin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMargin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("margin")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSpacing(value: integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("spacing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSpacing: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("spacing")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartFrame(value: integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startFrame")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartFrame: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startFrame")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

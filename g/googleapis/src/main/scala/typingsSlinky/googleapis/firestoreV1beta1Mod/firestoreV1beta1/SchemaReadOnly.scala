@@ -17,10 +17,29 @@ trait SchemaReadOnly extends js.Object {
 
 object SchemaReadOnly {
   @scala.inline
-  def apply(readTime: String = null): SchemaReadOnly = {
+  def apply(): SchemaReadOnly = {
     val __obj = js.Dynamic.literal()
-    if (readTime != null) __obj.updateDynamic("readTime")(readTime.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaReadOnly]
   }
+  @scala.inline
+  implicit class SchemaReadOnlyOps[Self <: SchemaReadOnly] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withReadTime(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("readTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReadTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("readTime")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

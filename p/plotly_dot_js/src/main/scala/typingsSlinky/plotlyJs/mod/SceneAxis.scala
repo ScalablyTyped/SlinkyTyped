@@ -1,5 +1,6 @@
 package typingsSlinky.plotlyJs.mod
 
+import typingsSlinky.plotlyJs.PartialDataTitle
 import typingsSlinky.plotlyJs.PartialFont
 import typingsSlinky.plotlyJs.plotlyJsBooleans.`false`
 import typingsSlinky.plotlyJs.plotlyJsBooleans.`true`
@@ -9,6 +10,18 @@ import typingsSlinky.plotlyJs.plotlyJsStrings.SI
 import typingsSlinky.plotlyJs.plotlyJsStrings._empty
 import typingsSlinky.plotlyJs.plotlyJsStrings.`category ascending`
 import typingsSlinky.plotlyJs.plotlyJsStrings.`category descending`
+import typingsSlinky.plotlyJs.plotlyJsStrings.`max ascending`
+import typingsSlinky.plotlyJs.plotlyJsStrings.`max descending`
+import typingsSlinky.plotlyJs.plotlyJsStrings.`mean ascending`
+import typingsSlinky.plotlyJs.plotlyJsStrings.`mean descending`
+import typingsSlinky.plotlyJs.plotlyJsStrings.`median ascending`
+import typingsSlinky.plotlyJs.plotlyJsStrings.`median descending`
+import typingsSlinky.plotlyJs.plotlyJsStrings.`min ascending`
+import typingsSlinky.plotlyJs.plotlyJsStrings.`min descending`
+import typingsSlinky.plotlyJs.plotlyJsStrings.`sum ascending`
+import typingsSlinky.plotlyJs.plotlyJsStrings.`sum descending`
+import typingsSlinky.plotlyJs.plotlyJsStrings.`total ascending`
+import typingsSlinky.plotlyJs.plotlyJsStrings.`total descending`
 import typingsSlinky.plotlyJs.plotlyJsStrings.all
 import typingsSlinky.plotlyJs.plotlyJsStrings.allticks
 import typingsSlinky.plotlyJs.plotlyJsStrings.array
@@ -31,11 +44,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SceneAxis extends Axis {
-  var backgroundcolor: Color
-  var showaxeslabels: Boolean
-  var showbackground: Boolean
-  var spikesides: Boolean
+  var backgroundcolor: Color = js.native
+  var showaxeslabels: Boolean = js.native
+  var showbackground: Boolean = js.native
+  var spikesides: Boolean = js.native
 }
 
 object SceneAxis {
@@ -45,7 +59,7 @@ object SceneAxis {
     backgroundcolor: Color,
     calendar: Calendar,
     categoryarray: js.Array[_],
-    categoryorder: trace | (`category ascending`) | (`category descending`) | array,
+    categoryorder: trace | (`category ascending`) | (`category descending`) | array | (`total ascending`) | (`total descending`) | (`min ascending`) | (`min descending`) | (`max ascending`) | (`max descending`) | (`sum ascending`) | (`sum descending`) | (`mean ascending`) | (`mean descending`) | (`median ascending`) | (`median descending`),
     color: Color,
     dtick: Double | String,
     exponentformat: none | e_ | E | power | SI | B,
@@ -84,7 +98,7 @@ object SceneAxis {
     ticktext: js.Array[String],
     tickvals: js.Array[_],
     tickwidth: Double,
-    title: String,
+    title: String | PartialDataTitle,
     titlefont: PartialFont,
     `type`: AxisType,
     visible: Boolean,
@@ -96,5 +110,37 @@ object SceneAxis {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[SceneAxis]
   }
+  @scala.inline
+  implicit class SceneAxisOps[Self <: SceneAxis] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBackgroundcolor(value: Color): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundcolor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withShowaxeslabels(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showaxeslabels")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withShowbackground(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showbackground")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSpikesides(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("spikesides")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -20,26 +20,24 @@ trait SearchDominantColor extends js.Object
 
 object SearchDominantColor {
   @scala.inline
-  def black: typingsSlinky.googleImages.googleImagesStrings.black = this.cast("black")
+  def black: typingsSlinky.googleImages.googleImagesStrings.black = "black".asInstanceOf[typingsSlinky.googleImages.googleImagesStrings.black]
   @scala.inline
-  def blue: typingsSlinky.googleImages.googleImagesStrings.blue = this.cast("blue")
+  def blue: typingsSlinky.googleImages.googleImagesStrings.blue = "blue".asInstanceOf[typingsSlinky.googleImages.googleImagesStrings.blue]
   @scala.inline
-  def brown: typingsSlinky.googleImages.googleImagesStrings.brown = this.cast("brown")
+  def brown: typingsSlinky.googleImages.googleImagesStrings.brown = "brown".asInstanceOf[typingsSlinky.googleImages.googleImagesStrings.brown]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def gray: typingsSlinky.googleImages.googleImagesStrings.gray = "gray".asInstanceOf[typingsSlinky.googleImages.googleImagesStrings.gray]
   @scala.inline
-  def gray: typingsSlinky.googleImages.googleImagesStrings.gray = this.cast("gray")
+  def green: typingsSlinky.googleImages.googleImagesStrings.green = "green".asInstanceOf[typingsSlinky.googleImages.googleImagesStrings.green]
   @scala.inline
-  def green: typingsSlinky.googleImages.googleImagesStrings.green = this.cast("green")
+  def pink: typingsSlinky.googleImages.googleImagesStrings.pink = "pink".asInstanceOf[typingsSlinky.googleImages.googleImagesStrings.pink]
   @scala.inline
-  def pink: typingsSlinky.googleImages.googleImagesStrings.pink = this.cast("pink")
+  def purple: typingsSlinky.googleImages.googleImagesStrings.purple = "purple".asInstanceOf[typingsSlinky.googleImages.googleImagesStrings.purple]
   @scala.inline
-  def purple: typingsSlinky.googleImages.googleImagesStrings.purple = this.cast("purple")
+  def teal: typingsSlinky.googleImages.googleImagesStrings.teal = "teal".asInstanceOf[typingsSlinky.googleImages.googleImagesStrings.teal]
   @scala.inline
-  def teal: typingsSlinky.googleImages.googleImagesStrings.teal = this.cast("teal")
+  def white: typingsSlinky.googleImages.googleImagesStrings.white = "white".asInstanceOf[typingsSlinky.googleImages.googleImagesStrings.white]
   @scala.inline
-  def white: typingsSlinky.googleImages.googleImagesStrings.white = this.cast("white")
-  @scala.inline
-  def yellow: typingsSlinky.googleImages.googleImagesStrings.yellow = this.cast("yellow")
+  def yellow: typingsSlinky.googleImages.googleImagesStrings.yellow = "yellow".asInstanceOf[typingsSlinky.googleImages.googleImagesStrings.yellow]
 }
 

@@ -18,14 +18,41 @@ trait ItemCollectionMetrics extends js.Object {
 
 object ItemCollectionMetrics {
   @scala.inline
-  def apply(
-    ItemCollectionKey: ItemCollectionKeyAttributeMap = null,
-    SizeEstimateRangeGB: ItemCollectionSizeEstimateRange = null
-  ): ItemCollectionMetrics = {
+  def apply(): ItemCollectionMetrics = {
     val __obj = js.Dynamic.literal()
-    if (ItemCollectionKey != null) __obj.updateDynamic("ItemCollectionKey")(ItemCollectionKey.asInstanceOf[js.Any])
-    if (SizeEstimateRangeGB != null) __obj.updateDynamic("SizeEstimateRangeGB")(SizeEstimateRangeGB.asInstanceOf[js.Any])
     __obj.asInstanceOf[ItemCollectionMetrics]
   }
+  @scala.inline
+  implicit class ItemCollectionMetricsOps[Self <: ItemCollectionMetrics] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withItemCollectionKey(value: ItemCollectionKeyAttributeMap): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ItemCollectionKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutItemCollectionKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ItemCollectionKey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSizeEstimateRangeGB(value: ItemCollectionSizeEstimateRange): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SizeEstimateRangeGB")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSizeEstimateRangeGB: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SizeEstimateRangeGB")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

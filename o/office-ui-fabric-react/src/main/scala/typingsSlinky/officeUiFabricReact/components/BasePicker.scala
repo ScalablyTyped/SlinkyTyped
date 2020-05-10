@@ -1,19 +1,24 @@
 package typingsSlinky.officeUiFabricReact.components
 
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
+import typingsSlinky.officeUiFabricReact.basePickerTypesMod.IBasePickerProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* This component has complicated props, you'll have to assemble `props` yourself using js.Dynamic.literal(...) or similar. Could't extract props from TypeRef(QualifiedName(IArray(Name(P))),IArray(),NoComments) because couldn't resolve ClassTree. */
-object BasePicker
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.officeUiFabricReact.mod.BasePicker[js.Any, js.Any]] {
+/* The props of this component has an unsupported shape. You can use `set` manually to use it, but with no compiler support :/ . Could't extract props from P because couldn't resolve ClassTree. */
+object BasePicker {
   @JSImport("office-ui-fabric-react", "BasePicker")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  type Props = js.Any
+  @scala.inline
+  class Builder[T, P <: IBasePickerProps[T]] (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.officeUiFabricReact.mod.BasePicker[js.Any, js.Any]]
+  
+  def apply[T, P <: IBasePickerProps[T]](p: P): Builder[T, P] = new Builder[T, P](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make[T, P <: IBasePickerProps[T]](companion: BasePicker.type): Builder[T, P] = new Builder[T, P](js.Array(this.component, js.Dictionary.empty))()
 }
 

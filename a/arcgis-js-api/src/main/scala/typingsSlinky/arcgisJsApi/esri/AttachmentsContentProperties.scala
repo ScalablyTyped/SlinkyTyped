@@ -6,28 +6,41 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AttachmentsContentProperties extends ContentProperties {
-  /**
-    * An array of [AttachmentInfo](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-AttachmentInfo.html) objects used to display within the popup's content.
-    *
-    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-popup-content-AttachmentsContent.html#attachmentInfos)
-    */
-  var attachmentInfos: js.UndefOr[AttachmentInfoProperties] = js.undefined
   /**
     * A string value indicating how to display the attachment.  If `list` is specified, attachments show as links.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-popup-content-AttachmentsContent.html#displayType)
     */
-  var displayType: js.UndefOr[preview | list] = js.undefined
+  var displayType: js.UndefOr[preview | list] = js.native
 }
 
 object AttachmentsContentProperties {
   @scala.inline
-  def apply(attachmentInfos: AttachmentInfoProperties = null, displayType: preview | list = null): AttachmentsContentProperties = {
+  def apply(): AttachmentsContentProperties = {
     val __obj = js.Dynamic.literal()
-    if (attachmentInfos != null) __obj.updateDynamic("attachmentInfos")(attachmentInfos.asInstanceOf[js.Any])
-    if (displayType != null) __obj.updateDynamic("displayType")(displayType.asInstanceOf[js.Any])
     __obj.asInstanceOf[AttachmentsContentProperties]
   }
+  @scala.inline
+  implicit class AttachmentsContentPropertiesOps[Self <: AttachmentsContentProperties] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDisplayType(value: preview | list): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("displayType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisplayType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("displayType")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

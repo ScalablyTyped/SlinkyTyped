@@ -6,27 +6,75 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait GridOptions extends js.Object {
-  var focus: js.UndefOr[AnonShow] = js.undefined
-  var lines: js.UndefOr[AnonFront] = js.undefined
-  var x: js.UndefOr[AxisGridOptions] = js.undefined
-  var y: js.UndefOr[AxisGridOptions] = js.undefined
+  var focus: js.UndefOr[AnonShow] = js.native
+  var lines: js.UndefOr[AnonFront] = js.native
+  var x: js.UndefOr[AxisGridOptions] = js.native
+  var y: js.UndefOr[AxisGridOptions] = js.native
 }
 
 object GridOptions {
   @scala.inline
-  def apply(
-    focus: AnonShow = null,
-    lines: AnonFront = null,
-    x: AxisGridOptions = null,
-    y: AxisGridOptions = null
-  ): GridOptions = {
+  def apply(): GridOptions = {
     val __obj = js.Dynamic.literal()
-    if (focus != null) __obj.updateDynamic("focus")(focus.asInstanceOf[js.Any])
-    if (lines != null) __obj.updateDynamic("lines")(lines.asInstanceOf[js.Any])
-    if (x != null) __obj.updateDynamic("x")(x.asInstanceOf[js.Any])
-    if (y != null) __obj.updateDynamic("y")(y.asInstanceOf[js.Any])
     __obj.asInstanceOf[GridOptions]
   }
+  @scala.inline
+  implicit class GridOptionsOps[Self <: GridOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFocus(value: AnonShow): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("focus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFocus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("focus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLines(value: AnonFront): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lines")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLines: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lines")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withX(value: AxisGridOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutX: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withY(value: AxisGridOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutY: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

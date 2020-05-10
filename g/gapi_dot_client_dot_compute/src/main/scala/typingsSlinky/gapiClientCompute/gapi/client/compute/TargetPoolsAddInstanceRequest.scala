@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait TargetPoolsAddInstanceRequest extends js.Object {
   /**
     * A full or partial URL to an instance to add to this target pool. This can be a full or partial URL. For example, the following are valid URLs:
@@ -11,15 +12,34 @@ trait TargetPoolsAddInstanceRequest extends js.Object {
     * - projects/project-id/zones/zone/instances/instance-name
     * - zones/zone/instances/instance-name
     */
-  var instances: js.UndefOr[js.Array[InstanceReference]] = js.undefined
+  var instances: js.UndefOr[js.Array[InstanceReference]] = js.native
 }
 
 object TargetPoolsAddInstanceRequest {
   @scala.inline
-  def apply(instances: js.Array[InstanceReference] = null): TargetPoolsAddInstanceRequest = {
+  def apply(): TargetPoolsAddInstanceRequest = {
     val __obj = js.Dynamic.literal()
-    if (instances != null) __obj.updateDynamic("instances")(instances.asInstanceOf[js.Any])
     __obj.asInstanceOf[TargetPoolsAddInstanceRequest]
   }
+  @scala.inline
+  implicit class TargetPoolsAddInstanceRequestOps[Self <: TargetPoolsAddInstanceRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withInstances(value: js.Array[InstanceReference]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("instances")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstances: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("instances")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

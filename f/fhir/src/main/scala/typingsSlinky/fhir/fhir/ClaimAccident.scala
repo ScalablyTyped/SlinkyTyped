@@ -7,58 +7,99 @@ import scala.scalajs.js.annotation._
 /**
   * Details about an accident
   */
+@js.native
 trait ClaimAccident extends BackboneElement {
   /**
     * Contains extended information for property 'date'.
     */
-  var _date: js.UndefOr[Element] = js.undefined
+  var _date: js.UndefOr[Element] = js.native
   /**
     * When the accident occurred
     * see information codes
     * see information codes
     */
-  var date: typingsSlinky.fhir.fhir.date
+  var date: typingsSlinky.fhir.fhir.date = js.native
   /**
     * Accident Place
     */
-  var locationAddress: js.UndefOr[Address] = js.undefined
+  var locationAddress: js.UndefOr[Address] = js.native
   /**
     * Accident Place
     */
-  var locationReference: js.UndefOr[Reference] = js.undefined
+  var locationReference: js.UndefOr[Reference] = js.native
   /**
     * The nature of the accident
     */
-  var `type`: js.UndefOr[CodeableConcept] = js.undefined
+  var `type`: js.UndefOr[CodeableConcept] = js.native
 }
 
 object ClaimAccident {
   @scala.inline
-  def apply(
-    date: date,
-    _date: Element = null,
-    _fhir_comments: js.Array[Element] = null,
-    _id: Element = null,
-    extension: js.Array[Extension] = null,
-    fhir_comments: js.Array[String] = null,
-    id: String = null,
-    locationAddress: Address = null,
-    locationReference: Reference = null,
-    modifierExtension: js.Array[Extension] = null,
-    `type`: CodeableConcept = null
-  ): ClaimAccident = {
+  def apply(date: date): ClaimAccident = {
     val __obj = js.Dynamic.literal(date = date.asInstanceOf[js.Any])
-    if (_date != null) __obj.updateDynamic("_date")(_date.asInstanceOf[js.Any])
-    if (_fhir_comments != null) __obj.updateDynamic("_fhir_comments")(_fhir_comments.asInstanceOf[js.Any])
-    if (_id != null) __obj.updateDynamic("_id")(_id.asInstanceOf[js.Any])
-    if (extension != null) __obj.updateDynamic("extension")(extension.asInstanceOf[js.Any])
-    if (fhir_comments != null) __obj.updateDynamic("fhir_comments")(fhir_comments.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (locationAddress != null) __obj.updateDynamic("locationAddress")(locationAddress.asInstanceOf[js.Any])
-    if (locationReference != null) __obj.updateDynamic("locationReference")(locationReference.asInstanceOf[js.Any])
-    if (modifierExtension != null) __obj.updateDynamic("modifierExtension")(modifierExtension.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ClaimAccident]
   }
+  @scala.inline
+  implicit class ClaimAccidentOps[Self <: ClaimAccident] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDate(value: date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("date")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_date(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_date")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_date: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_date")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocationAddress(value: Address): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locationAddress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocationAddress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locationAddress")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocationReference(value: Reference): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locationReference")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocationReference: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locationReference")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: CodeableConcept): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

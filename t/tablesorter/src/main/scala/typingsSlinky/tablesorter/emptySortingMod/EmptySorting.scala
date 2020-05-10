@@ -15,16 +15,14 @@ trait EmptySorting extends js.Object
 
 object EmptySorting {
   @scala.inline
-  def bottom: typingsSlinky.tablesorter.tablesorterStrings.bottom = this.cast("bottom")
+  def bottom: typingsSlinky.tablesorter.tablesorterStrings.bottom = "bottom".asInstanceOf[typingsSlinky.tablesorter.tablesorterStrings.bottom]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def emptyMax: typingsSlinky.tablesorter.tablesorterStrings.emptyMax = "emptyMax".asInstanceOf[typingsSlinky.tablesorter.tablesorterStrings.emptyMax]
   @scala.inline
-  def emptyMax: typingsSlinky.tablesorter.tablesorterStrings.emptyMax = this.cast("emptyMax")
+  def emptyMin: typingsSlinky.tablesorter.tablesorterStrings.emptyMin = "emptyMin".asInstanceOf[typingsSlinky.tablesorter.tablesorterStrings.emptyMin]
   @scala.inline
-  def emptyMin: typingsSlinky.tablesorter.tablesorterStrings.emptyMin = this.cast("emptyMin")
+  def top: typingsSlinky.tablesorter.tablesorterStrings.top = "top".asInstanceOf[typingsSlinky.tablesorter.tablesorterStrings.top]
   @scala.inline
-  def top: typingsSlinky.tablesorter.tablesorterStrings.top = this.cast("top")
-  @scala.inline
-  def zero: typingsSlinky.tablesorter.tablesorterStrings.zero = this.cast("zero")
+  def zero: typingsSlinky.tablesorter.tablesorterStrings.zero = "zero".asInstanceOf[typingsSlinky.tablesorter.tablesorterStrings.zero]
 }
 

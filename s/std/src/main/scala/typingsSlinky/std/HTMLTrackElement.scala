@@ -23,7 +23,8 @@ trait HTMLTrackElement extends HTMLElement {
 
 @JSGlobal("HTMLTrackElement")
 @js.native
-object HTMLTrackElement extends Instantiable0[HTMLTrackElement] {
+object HTMLTrackElement
+  extends Instantiable0[org.scalajs.dom.raw.HTMLTrackElement] {
   val ERROR: Double = js.native
   val LOADED: Double = js.native
   val LOADING: Double = js.native

@@ -22,15 +22,47 @@ trait FeaturizationConfig extends js.Object {
 
 object FeaturizationConfig {
   @scala.inline
-  def apply(
-    ForecastFrequency: Frequency,
-    Featurizations: Featurizations = null,
-    ForecastDimensions: ForecastDimensions = null
-  ): FeaturizationConfig = {
+  def apply(ForecastFrequency: Frequency): FeaturizationConfig = {
     val __obj = js.Dynamic.literal(ForecastFrequency = ForecastFrequency.asInstanceOf[js.Any])
-    if (Featurizations != null) __obj.updateDynamic("Featurizations")(Featurizations.asInstanceOf[js.Any])
-    if (ForecastDimensions != null) __obj.updateDynamic("ForecastDimensions")(ForecastDimensions.asInstanceOf[js.Any])
     __obj.asInstanceOf[FeaturizationConfig]
   }
+  @scala.inline
+  implicit class FeaturizationConfigOps[Self <: FeaturizationConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withForecastFrequency(value: Frequency): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ForecastFrequency")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFeaturizations(value: Featurizations): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Featurizations")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFeaturizations: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Featurizations")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withForecastDimensions(value: ForecastDimensions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ForecastDimensions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutForecastDimensions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ForecastDimensions")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -57,30 +57,137 @@ trait SchemaSoftwareInfo extends js.Object {
 
 object SchemaSoftwareInfo {
   @scala.inline
-  def apply(
-    androidBuildNumber: String = null,
-    androidBuildTime: String = null,
-    androidDevicePolicyVersionCode: Int | Double = null,
-    androidDevicePolicyVersionName: String = null,
-    androidVersion: String = null,
-    bootloaderVersion: String = null,
-    deviceBuildSignature: String = null,
-    deviceKernelVersion: String = null,
-    primaryLanguageCode: String = null,
-    securityPatchLevel: String = null
-  ): SchemaSoftwareInfo = {
+  def apply(): SchemaSoftwareInfo = {
     val __obj = js.Dynamic.literal()
-    if (androidBuildNumber != null) __obj.updateDynamic("androidBuildNumber")(androidBuildNumber.asInstanceOf[js.Any])
-    if (androidBuildTime != null) __obj.updateDynamic("androidBuildTime")(androidBuildTime.asInstanceOf[js.Any])
-    if (androidDevicePolicyVersionCode != null) __obj.updateDynamic("androidDevicePolicyVersionCode")(androidDevicePolicyVersionCode.asInstanceOf[js.Any])
-    if (androidDevicePolicyVersionName != null) __obj.updateDynamic("androidDevicePolicyVersionName")(androidDevicePolicyVersionName.asInstanceOf[js.Any])
-    if (androidVersion != null) __obj.updateDynamic("androidVersion")(androidVersion.asInstanceOf[js.Any])
-    if (bootloaderVersion != null) __obj.updateDynamic("bootloaderVersion")(bootloaderVersion.asInstanceOf[js.Any])
-    if (deviceBuildSignature != null) __obj.updateDynamic("deviceBuildSignature")(deviceBuildSignature.asInstanceOf[js.Any])
-    if (deviceKernelVersion != null) __obj.updateDynamic("deviceKernelVersion")(deviceKernelVersion.asInstanceOf[js.Any])
-    if (primaryLanguageCode != null) __obj.updateDynamic("primaryLanguageCode")(primaryLanguageCode.asInstanceOf[js.Any])
-    if (securityPatchLevel != null) __obj.updateDynamic("securityPatchLevel")(securityPatchLevel.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSoftwareInfo]
   }
+  @scala.inline
+  implicit class SchemaSoftwareInfoOps[Self <: SchemaSoftwareInfo] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAndroidBuildNumber(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("androidBuildNumber")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAndroidBuildNumber: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("androidBuildNumber")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAndroidBuildTime(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("androidBuildTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAndroidBuildTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("androidBuildTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAndroidDevicePolicyVersionCode(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("androidDevicePolicyVersionCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAndroidDevicePolicyVersionCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("androidDevicePolicyVersionCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAndroidDevicePolicyVersionName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("androidDevicePolicyVersionName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAndroidDevicePolicyVersionName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("androidDevicePolicyVersionName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAndroidVersion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("androidVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAndroidVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("androidVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBootloaderVersion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bootloaderVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBootloaderVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bootloaderVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeviceBuildSignature(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceBuildSignature")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeviceBuildSignature: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceBuildSignature")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeviceKernelVersion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceKernelVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeviceKernelVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceKernelVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrimaryLanguageCode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("primaryLanguageCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrimaryLanguageCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("primaryLanguageCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSecurityPatchLevel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("securityPatchLevel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSecurityPatchLevel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("securityPatchLevel")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

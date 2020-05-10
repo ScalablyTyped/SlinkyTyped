@@ -11,8 +11,8 @@ class LocalLengthBlock () extends LocalBaseBlock {
   var isIndefiniteForm: scala.Boolean = js.native
   var length: Double = js.native
   var longFormUsed: scala.Boolean = js.native
-  def fromBER(inputBuffer: scala.scalajs.js.typedarray.ArrayBuffer, inputOffset: Double, inputLength: Double): Unit = js.native
-  def toBER(): scala.scalajs.js.typedarray.ArrayBuffer = js.native
-  def toBER(sizeOnly: scala.Boolean): scala.scalajs.js.typedarray.ArrayBuffer = js.native
+  def fromBER(inputBuffer: js.typedarray.ArrayBuffer, inputOffset: Double, inputLength: Double): Unit = js.native
+  def toBER(): js.typedarray.ArrayBuffer = js.native
+  def toBER(sizeOnly: scala.Boolean): js.typedarray.ArrayBuffer = js.native
 }
 

@@ -1,7 +1,6 @@
 package typingsSlinky.vegaTypings
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.std.Date
 import typingsSlinky.std.Partial
 import typingsSlinky.std.PropertyKey
 import typingsSlinky.vegaTypings.dataMod.Format
@@ -185,7 +184,7 @@ object mod extends js.Object {
   def peek(array: js.Array[_]): js.Any = js.native
   def projection(`type`: String, projection: js.Any): typingsSlinky.vegaTypings.runtimeMod.View = js.native
   def quarter(date: Double): Double = js.native
-  def quarter(date: Date): Double = js.native
+  def quarter(date: js.Date): Double = js.native
   def read(data: String, schema: Format): js.Array[js.Object] = js.native
   def read(data: String, schema: Format, dateParse: js.Function1[/* dateString */ String, js.Date]): js.Array[js.Object] = js.native
   def renderModule(moduleName: String, renderModule: RenderModule_): RenderModule_ = js.native
@@ -225,7 +224,7 @@ object mod extends js.Object {
   def truthy(): `true` = js.native
   def tupleid(t: js.Any): Double = js.native
   def utcquarter(date: Double): Double = js.native
-  def utcquarter(date: Date): Double = js.native
+  def utcquarter(date: js.Date): Double = js.native
   def visitArray(
     array: js.UndefOr[scala.Nothing],
     filter: js.Function1[/* any */ js.Any, js.UndefOr[Boolean]],

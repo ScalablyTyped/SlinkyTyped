@@ -13,12 +13,10 @@ trait KeyUse extends js.Object
 
 object KeyUse {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def desc: typingsSlinky.nodeJose.nodeJoseStrings.desc = "desc".asInstanceOf[typingsSlinky.nodeJose.nodeJoseStrings.desc]
   @scala.inline
-  def desc: typingsSlinky.nodeJose.nodeJoseStrings.desc = this.cast("desc")
+  def enc: typingsSlinky.nodeJose.nodeJoseStrings.enc = "enc".asInstanceOf[typingsSlinky.nodeJose.nodeJoseStrings.enc]
   @scala.inline
-  def enc: typingsSlinky.nodeJose.nodeJoseStrings.enc = this.cast("enc")
-  @scala.inline
-  def sig: typingsSlinky.nodeJose.nodeJoseStrings.sig = this.cast("sig")
+  def sig: typingsSlinky.nodeJose.nodeJoseStrings.sig = "sig".asInstanceOf[typingsSlinky.nodeJose.nodeJoseStrings.sig]
 }
 

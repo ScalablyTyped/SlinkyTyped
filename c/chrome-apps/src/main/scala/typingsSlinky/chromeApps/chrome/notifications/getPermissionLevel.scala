@@ -2,8 +2,10 @@ package typingsSlinky.chromeApps.chrome.notifications
 
 import typingsSlinky.chromeApps.AnonDENIED
 import typingsSlinky.chromeApps.chrome.ToStringLiteral
-import typingsSlinky.chromeApps.chromeAppsStrings.denied
-import typingsSlinky.chromeApps.chromeAppsStrings.granted
+import typingsSlinky.chromeApps.chromeAppsStrings.DENIED
+import typingsSlinky.chromeApps.chromeAppsStrings.GRANTED
+import typingsSlinky.chromeApps.chromeAppsStrings.denied_
+import typingsSlinky.chromeApps.chromeAppsStrings.granted_
 import typingsSlinky.std.Exclude
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -20,7 +22,11 @@ object getPermissionLevel extends js.Object {
     */
   def apply(
     callback: js.Function1[
-      /* level */ ToStringLiteral[AnonDENIED, String, Exclude[String, granted | denied]], 
+      /* level */ ToStringLiteral[
+        AnonDENIED, 
+        /* keyof chrome-apps.AnonDENIED */ GRANTED | DENIED, 
+        Exclude[/* keyof chrome-apps.AnonDENIED */ GRANTED | DENIED, granted_ | denied_]
+      ], 
       Unit
     ]
   ): Unit = js.native

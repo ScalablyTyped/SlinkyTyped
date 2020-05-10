@@ -4,24 +4,55 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait InstanceGroupsSetNamedPortsRequest extends js.Object {
   /**
     * The fingerprint of the named ports information for this instance group. Use this optional property to prevent conflicts when multiple users change the
     * named ports settings concurrently. Obtain the fingerprint with the instanceGroups.get method. Then, include the fingerprint in your request to ensure
     * that you do not overwrite changes that were applied from another concurrent request.
     */
-  var fingerprint: js.UndefOr[String] = js.undefined
+  var fingerprint: js.UndefOr[String] = js.native
   /** The list of named ports to set for this instance group. */
-  var namedPorts: js.UndefOr[js.Array[NamedPort]] = js.undefined
+  var namedPorts: js.UndefOr[js.Array[NamedPort]] = js.native
 }
 
 object InstanceGroupsSetNamedPortsRequest {
   @scala.inline
-  def apply(fingerprint: String = null, namedPorts: js.Array[NamedPort] = null): InstanceGroupsSetNamedPortsRequest = {
+  def apply(): InstanceGroupsSetNamedPortsRequest = {
     val __obj = js.Dynamic.literal()
-    if (fingerprint != null) __obj.updateDynamic("fingerprint")(fingerprint.asInstanceOf[js.Any])
-    if (namedPorts != null) __obj.updateDynamic("namedPorts")(namedPorts.asInstanceOf[js.Any])
     __obj.asInstanceOf[InstanceGroupsSetNamedPortsRequest]
   }
+  @scala.inline
+  implicit class InstanceGroupsSetNamedPortsRequestOps[Self <: InstanceGroupsSetNamedPortsRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFingerprint(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fingerprint")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFingerprint: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fingerprint")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNamedPorts(value: js.Array[NamedPort]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("namedPorts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNamedPorts: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("namedPorts")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

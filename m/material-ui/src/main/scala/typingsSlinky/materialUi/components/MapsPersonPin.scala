@@ -1,15 +1,16 @@
 package typingsSlinky.materialUi.components
 
+import typingsSlinky.materialUi.MaterialUI.SvgIconProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object MapsPersonPin
-  extends SharedApply_SvgIconProps1666625642[typingsSlinky.materialUi.svgIconsMod.MapsPersonPin] {
+object MapsPersonPin {
   @JSImport("material-ui/svg-icons", "MapsPersonPin")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: SvgIconProps): SharedBuilder_SvgIconProps_1073724525[typingsSlinky.materialUi.svgIconsMod.MapsPersonPin] = new SharedBuilder_SvgIconProps_1073724525[typingsSlinky.materialUi.svgIconsMod.MapsPersonPin](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: MapsPersonPin.type): SharedBuilder_SvgIconProps_1073724525[typingsSlinky.materialUi.svgIconsMod.MapsPersonPin] = new SharedBuilder_SvgIconProps_1073724525[typingsSlinky.materialUi.svgIconsMod.MapsPersonPin](js.Array(this.component, js.Dictionary.empty))()
 }
 

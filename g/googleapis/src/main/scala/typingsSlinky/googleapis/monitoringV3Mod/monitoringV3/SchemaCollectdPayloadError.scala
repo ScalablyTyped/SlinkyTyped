@@ -29,16 +29,53 @@ trait SchemaCollectdPayloadError extends js.Object {
 
 object SchemaCollectdPayloadError {
   @scala.inline
-  def apply(
-    error: SchemaStatus = null,
-    index: Int | Double = null,
-    valueErrors: js.Array[SchemaCollectdValueError] = null
-  ): SchemaCollectdPayloadError = {
+  def apply(): SchemaCollectdPayloadError = {
     val __obj = js.Dynamic.literal()
-    if (error != null) __obj.updateDynamic("error")(error.asInstanceOf[js.Any])
-    if (index != null) __obj.updateDynamic("index")(index.asInstanceOf[js.Any])
-    if (valueErrors != null) __obj.updateDynamic("valueErrors")(valueErrors.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaCollectdPayloadError]
   }
+  @scala.inline
+  implicit class SchemaCollectdPayloadErrorOps[Self <: SchemaCollectdPayloadError] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withError(value: SchemaStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutError: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValueErrors(value: js.Array[SchemaCollectdValueError]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valueErrors")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValueErrors: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valueErrors")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

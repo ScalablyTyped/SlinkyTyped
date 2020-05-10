@@ -15,16 +15,14 @@ trait ResponseType extends js.Object
 
 object ResponseType {
   @scala.inline
-  def arrayBuffer: typingsSlinky.reactRequest.reactRequestStrings.arrayBuffer = this.cast("arrayBuffer")
+  def arrayBuffer: typingsSlinky.reactRequest.reactRequestStrings.arrayBuffer = "arrayBuffer".asInstanceOf[typingsSlinky.reactRequest.reactRequestStrings.arrayBuffer]
   @scala.inline
-  def blob: typingsSlinky.reactRequest.reactRequestStrings.blob = this.cast("blob")
+  def blob: typingsSlinky.reactRequest.reactRequestStrings.blob = "blob".asInstanceOf[typingsSlinky.reactRequest.reactRequestStrings.blob]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def formData: typingsSlinky.reactRequest.reactRequestStrings.formData = "formData".asInstanceOf[typingsSlinky.reactRequest.reactRequestStrings.formData]
   @scala.inline
-  def formData: typingsSlinky.reactRequest.reactRequestStrings.formData = this.cast("formData")
+  def json: typingsSlinky.reactRequest.reactRequestStrings.json = "json".asInstanceOf[typingsSlinky.reactRequest.reactRequestStrings.json]
   @scala.inline
-  def json: typingsSlinky.reactRequest.reactRequestStrings.json = this.cast("json")
-  @scala.inline
-  def text: typingsSlinky.reactRequest.reactRequestStrings.text = this.cast("text")
+  def text: typingsSlinky.reactRequest.reactRequestStrings.text = "text".asInstanceOf[typingsSlinky.reactRequest.reactRequestStrings.text]
 }
 

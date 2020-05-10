@@ -6,9 +6,6 @@ import scala.scalajs.js.annotation._
 
 object tensorflowTfjsNodeStrings {
   @js.native
-  sealed trait `1Dot5Dot2` extends js.Object
-  
-  @js.native
   sealed trait NCDHW extends js.Object
   
   @js.native
@@ -63,9 +60,6 @@ object tensorflowTfjsNodeStrings {
   sealed trait euclidean extends js.Object
   
   @js.native
-  sealed trait fileColonSlashSlash extends js.Object
-  
-  @js.native
   sealed trait float32 extends js.Object
   
   @js.native
@@ -87,9 +81,6 @@ object tensorflowTfjsNodeStrings {
   sealed trait max extends js.Object
   
   @js.native
-  sealed trait modelDotjson extends js.Object
-  
-  @js.native
   sealed trait nearest extends js.Object
   
   @js.native
@@ -105,16 +96,8 @@ object tensorflowTfjsNodeStrings {
   sealed trait string extends js.Object
   
   @js.native
-  sealed trait tensorflowjsDotpb extends js.Object
-  
-  @js.native
   sealed trait valid extends js.Object
   
-  @js.native
-  sealed trait weightsDotbin extends js.Object
-  
-  @scala.inline
-  def `1Dot5Dot2`: `1Dot5Dot2` = "1.5.2".asInstanceOf[`1Dot5Dot2`]
   @scala.inline
   def NCDHW: NCDHW = "NCDHW".asInstanceOf[NCDHW]
   @scala.inline
@@ -152,8 +135,6 @@ object tensorflowTfjsNodeStrings {
   @scala.inline
   def euclidean: euclidean = "euclidean".asInstanceOf[euclidean]
   @scala.inline
-  def fileColonSlashSlash: fileColonSlashSlash = "file://".asInstanceOf[fileColonSlashSlash]
-  @scala.inline
   def float32: float32 = "float32".asInstanceOf[float32]
   @scala.inline
   def floor: floor = "floor".asInstanceOf[floor]
@@ -168,8 +149,6 @@ object tensorflowTfjsNodeStrings {
   @scala.inline
   def max: max = "max".asInstanceOf[max]
   @scala.inline
-  def modelDotjson: modelDotjson = "model.json".asInstanceOf[modelDotjson]
-  @scala.inline
   def nearest: nearest = "nearest".asInstanceOf[nearest]
   @scala.inline
   def rgb: rgb = "rgb".asInstanceOf[rgb]
@@ -180,10 +159,6 @@ object tensorflowTfjsNodeStrings {
   @scala.inline
   def string: string = "string".asInstanceOf[string]
   @scala.inline
-  def tensorflowjsDotpb: tensorflowjsDotpb = "tensorflowjs.pb".asInstanceOf[tensorflowjsDotpb]
-  @scala.inline
   def valid: valid = "valid".asInstanceOf[valid]
-  @scala.inline
-  def weightsDotbin: weightsDotbin = "weights.bin".asInstanceOf[weightsDotbin]
 }
 

@@ -46,26 +46,113 @@ trait CreateIdentityPoolInput extends js.Object {
 
 object CreateIdentityPoolInput {
   @scala.inline
-  def apply(
-    AllowUnauthenticatedIdentities: IdentityPoolUnauthenticated,
-    IdentityPoolName: IdentityPoolName,
-    AllowClassicFlow: js.UndefOr[Boolean] = js.undefined,
-    CognitoIdentityProviders: CognitoIdentityProviderList = null,
-    DeveloperProviderName: DeveloperProviderName = null,
-    IdentityPoolTags: IdentityPoolTagsType = null,
-    OpenIdConnectProviderARNs: OIDCProviderList = null,
-    SamlProviderARNs: SAMLProviderList = null,
-    SupportedLoginProviders: IdentityProviders = null
-  ): CreateIdentityPoolInput = {
+  def apply(AllowUnauthenticatedIdentities: IdentityPoolUnauthenticated, IdentityPoolName: IdentityPoolName): CreateIdentityPoolInput = {
     val __obj = js.Dynamic.literal(AllowUnauthenticatedIdentities = AllowUnauthenticatedIdentities.asInstanceOf[js.Any], IdentityPoolName = IdentityPoolName.asInstanceOf[js.Any])
-    if (!js.isUndefined(AllowClassicFlow)) __obj.updateDynamic("AllowClassicFlow")(AllowClassicFlow.asInstanceOf[js.Any])
-    if (CognitoIdentityProviders != null) __obj.updateDynamic("CognitoIdentityProviders")(CognitoIdentityProviders.asInstanceOf[js.Any])
-    if (DeveloperProviderName != null) __obj.updateDynamic("DeveloperProviderName")(DeveloperProviderName.asInstanceOf[js.Any])
-    if (IdentityPoolTags != null) __obj.updateDynamic("IdentityPoolTags")(IdentityPoolTags.asInstanceOf[js.Any])
-    if (OpenIdConnectProviderARNs != null) __obj.updateDynamic("OpenIdConnectProviderARNs")(OpenIdConnectProviderARNs.asInstanceOf[js.Any])
-    if (SamlProviderARNs != null) __obj.updateDynamic("SamlProviderARNs")(SamlProviderARNs.asInstanceOf[js.Any])
-    if (SupportedLoginProviders != null) __obj.updateDynamic("SupportedLoginProviders")(SupportedLoginProviders.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateIdentityPoolInput]
   }
+  @scala.inline
+  implicit class CreateIdentityPoolInputOps[Self <: CreateIdentityPoolInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAllowUnauthenticatedIdentities(value: IdentityPoolUnauthenticated): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AllowUnauthenticatedIdentities")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIdentityPoolName(value: IdentityPoolName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IdentityPoolName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAllowClassicFlow(value: ClassicFlow): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AllowClassicFlow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowClassicFlow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AllowClassicFlow")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCognitoIdentityProviders(value: CognitoIdentityProviderList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CognitoIdentityProviders")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCognitoIdentityProviders: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CognitoIdentityProviders")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeveloperProviderName(value: DeveloperProviderName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeveloperProviderName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeveloperProviderName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeveloperProviderName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIdentityPoolTags(value: IdentityPoolTagsType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IdentityPoolTags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIdentityPoolTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IdentityPoolTags")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOpenIdConnectProviderARNs(value: OIDCProviderList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OpenIdConnectProviderARNs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOpenIdConnectProviderARNs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OpenIdConnectProviderARNs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSamlProviderARNs(value: SAMLProviderList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SamlProviderARNs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSamlProviderARNs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SamlProviderARNs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSupportedLoginProviders(value: IdentityProviders): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SupportedLoginProviders")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSupportedLoginProviders: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SupportedLoginProviders")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,24 +1,19 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalajs.dom.raw.HTMLDivElement
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`bottom-left`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`bottom-right`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`top-left`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`top-right`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.bottom
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.center
-import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.large
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.left
-import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.medium
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.right
-import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.small
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.top
-import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.xlarge
-import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.xsmall
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait MapViewProperties
   extends ViewProperties
      with BreakpointsOwnerProperties {
@@ -27,13 +22,13 @@ trait MapViewProperties
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html#center)
     */
-  var center: js.UndefOr[PointProperties | js.Array[Double]] = js.undefined
+  var center: js.UndefOr[PointProperties | js.Array[Double]] = js.native
   /**
     * Specifies constraints to [scale](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html#scale), [zoom](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html#zoom), and [rotation](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html#rotation) that may be applied to the MapView. See object specification below.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html#constraints)
     */
-  var constraints: js.UndefOr[MapViewConstraints] = js.undefined
+  var constraints: js.UndefOr[MapViewConstraints] = js.native
   /**
     * The extent represents the visible portion of a [map](https://developers.arcgis.com/javascript/latest/api-reference/esri-Map.html) within the view as an instance of [Extent](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Extent.html). Setting the extent immediately changes the view without animation. To animate the view, see [goTo()](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html#goTo).  The returned [Extent](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Extent.html) object is an internal reference which may be modified internally. To persist the returned object, create a copy using [Extent.clone()](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Extent.html#clone).
     *
@@ -41,13 +36,13 @@ trait MapViewProperties
     *
     * @default null
     */
-  var extent: js.UndefOr[ExtentProperties] = js.undefined
+  var extent: js.UndefOr[ExtentProperties] = js.native
   /**
     * Options for configuring the highlight. Use the highlight method on the appropriate [LayerView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-layers-LayerView.html) to highlight a feature.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html#highlightOptions)
     */
-  var highlightOptions: js.UndefOr[MapViewHighlightOptionsProperties] = js.undefined
+  var highlightOptions: js.UndefOr[MapViewHighlightOptionsProperties] = js.native
   /**
     * Defines which anchor stays still while resizing the browser window. The default, `center`, ensures the view's center point remains constantly visible as the window size changes. The other options allow  the respective portion of the view to remain visible when the window's size is changed.
     *
@@ -57,7 +52,7 @@ trait MapViewProperties
     */
   var resizeAlign: js.UndefOr[
     center | left | right | top | bottom | `top-left` | `top-right` | `bottom-left` | `bottom-right`
-  ] = js.undefined
+  ] = js.native
   /**
     * The clockwise rotation of due north in relation to the top of the view in degrees. The view may be rotated by directly setting the rotation or by using the following mouse event: `Right-click + Drag`. Map rotation may be disabled by setting the `rotationEnabled` property in [constraints](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html#constraints) to `false`. See the code snippet below for an example of this.
     *
@@ -65,85 +60,150 @@ trait MapViewProperties
     *
     * @default 0
     */
-  var rotation: js.UndefOr[Double] = js.undefined
+  var rotation: js.UndefOr[Double] = js.native
   /**
     * Represents the map scale at the center of the view. Setting the scale immediately changes the view. For animating the view, see [goTo()](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html#goTo).
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html#scale)
     */
-  var scale: js.UndefOr[Double] = js.undefined
+  var scale: js.UndefOr[Double] = js.native
   /**
     * Represents the current view as a [Viewpoint](https://developers.arcgis.com/javascript/latest/api-reference/esri-Viewpoint.html) or point of observation on the view. Setting the viewpoint immediately changes the current view. For animating the view, see [goTo()](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html#goTo).  The returned [Viewpoint](https://developers.arcgis.com/javascript/latest/api-reference/esri-Viewpoint.html) object is an internal reference which may be modified internally. To persist the returned object, create a copy using [Viewpoint.clone()](https://developers.arcgis.com/javascript/latest/api-reference/esri-Viewpoint.html#clone).
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html#viewpoint)
     */
-  var viewpoint: js.UndefOr[ViewpointProperties] = js.undefined
+  var viewpoint: js.UndefOr[ViewpointProperties] = js.native
   /**
     * Represents the level of detail (LOD) at the center of the view. Setting the zoom immediately changes the current view. For animating the view, see [goTo()](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html#goTo).  Setting this property in conjunction with [center](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html#center) is a convenient way to set the initial extent of the view.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html#zoom)
     */
-  var zoom: js.UndefOr[Double] = js.undefined
+  var zoom: js.UndefOr[Double] = js.native
 }
 
 object MapViewProperties {
   @scala.inline
-  def apply(
-    allLayerViews: CollectionProperties[LayerViewProperties] = null,
-    animation: ViewAnimationProperties = null,
-    basemapView: BasemapViewProperties = null,
-    breakpoints: BreakpointsOwnerBreakpoints = null,
-    center: PointProperties | js.Array[Double] = null,
-    constraints: MapViewConstraints = null,
-    container: HTMLDivElement | String = null,
-    extent: ExtentProperties = null,
-    fatalError: Error = null,
-    graphics: CollectionProperties[GraphicProperties] = null,
-    heightBreakpoint: xsmall | small | medium | large | xlarge = null,
-    highlightOptions: MapViewHighlightOptionsProperties = null,
-    layerViews: CollectionProperties[LayerViewProperties] = null,
-    map: MapProperties = null,
-    navigation: NavigationProperties = null,
-    padding: ViewPadding = null,
-    popup: PopupProperties = null,
-    resizeAlign: center | left | right | top | bottom | `top-left` | `top-right` | `bottom-left` | `bottom-right` = null,
-    rotation: Int | Double = null,
-    scale: Int | Double = null,
-    spatialReference: SpatialReferenceProperties = null,
-    timeExtent: TimeExtentProperties = null,
-    ui: DefaultUIProperties = null,
-    viewpoint: ViewpointProperties = null,
-    widthBreakpoint: xsmall | small | medium | large | xlarge = null,
-    zoom: Int | Double = null
-  ): MapViewProperties = {
+  def apply(): MapViewProperties = {
     val __obj = js.Dynamic.literal()
-    if (allLayerViews != null) __obj.updateDynamic("allLayerViews")(allLayerViews.asInstanceOf[js.Any])
-    if (animation != null) __obj.updateDynamic("animation")(animation.asInstanceOf[js.Any])
-    if (basemapView != null) __obj.updateDynamic("basemapView")(basemapView.asInstanceOf[js.Any])
-    if (breakpoints != null) __obj.updateDynamic("breakpoints")(breakpoints.asInstanceOf[js.Any])
-    if (center != null) __obj.updateDynamic("center")(center.asInstanceOf[js.Any])
-    if (constraints != null) __obj.updateDynamic("constraints")(constraints.asInstanceOf[js.Any])
-    if (container != null) __obj.updateDynamic("container")(container.asInstanceOf[js.Any])
-    if (extent != null) __obj.updateDynamic("extent")(extent.asInstanceOf[js.Any])
-    if (fatalError != null) __obj.updateDynamic("fatalError")(fatalError.asInstanceOf[js.Any])
-    if (graphics != null) __obj.updateDynamic("graphics")(graphics.asInstanceOf[js.Any])
-    if (heightBreakpoint != null) __obj.updateDynamic("heightBreakpoint")(heightBreakpoint.asInstanceOf[js.Any])
-    if (highlightOptions != null) __obj.updateDynamic("highlightOptions")(highlightOptions.asInstanceOf[js.Any])
-    if (layerViews != null) __obj.updateDynamic("layerViews")(layerViews.asInstanceOf[js.Any])
-    if (map != null) __obj.updateDynamic("map")(map.asInstanceOf[js.Any])
-    if (navigation != null) __obj.updateDynamic("navigation")(navigation.asInstanceOf[js.Any])
-    if (padding != null) __obj.updateDynamic("padding")(padding.asInstanceOf[js.Any])
-    if (popup != null) __obj.updateDynamic("popup")(popup.asInstanceOf[js.Any])
-    if (resizeAlign != null) __obj.updateDynamic("resizeAlign")(resizeAlign.asInstanceOf[js.Any])
-    if (rotation != null) __obj.updateDynamic("rotation")(rotation.asInstanceOf[js.Any])
-    if (scale != null) __obj.updateDynamic("scale")(scale.asInstanceOf[js.Any])
-    if (spatialReference != null) __obj.updateDynamic("spatialReference")(spatialReference.asInstanceOf[js.Any])
-    if (timeExtent != null) __obj.updateDynamic("timeExtent")(timeExtent.asInstanceOf[js.Any])
-    if (ui != null) __obj.updateDynamic("ui")(ui.asInstanceOf[js.Any])
-    if (viewpoint != null) __obj.updateDynamic("viewpoint")(viewpoint.asInstanceOf[js.Any])
-    if (widthBreakpoint != null) __obj.updateDynamic("widthBreakpoint")(widthBreakpoint.asInstanceOf[js.Any])
-    if (zoom != null) __obj.updateDynamic("zoom")(zoom.asInstanceOf[js.Any])
     __obj.asInstanceOf[MapViewProperties]
   }
+  @scala.inline
+  implicit class MapViewPropertiesOps[Self <: MapViewProperties] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCenter(value: PointProperties | js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("center")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCenter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("center")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConstraints(value: MapViewConstraints): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("constraints")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConstraints: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("constraints")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExtent(value: ExtentProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExtent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHighlightOptions(value: MapViewHighlightOptionsProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("highlightOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHighlightOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("highlightOptions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResizeAlign(
+      value: center | left | right | top | bottom | `top-left` | `top-right` | `bottom-left` | `bottom-right`
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resizeAlign")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResizeAlign: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resizeAlign")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRotation(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rotation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRotation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rotation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScale(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scale")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScale: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scale")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withViewpoint(value: ViewpointProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("viewpoint")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutViewpoint: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("viewpoint")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withZoom(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zoom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutZoom: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zoom")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -4,18 +4,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait DirectThreadRepositoryUpdateTitleResponseUsersItem extends js.Object {
-  var friendship_status: DirectThreadRepositoryUpdateTitleResponseFriendshipStatus
-  var full_name: String
-  var has_anonymous_profile_picture: Boolean
-  var is_directapp_installed: Boolean
-  var is_private: Boolean
-  var is_using_unified_inbox_for_direct: Boolean
-  var is_verified: Boolean
-  var pk: Double
-  var profile_pic_id: String
-  var profile_pic_url: String
-  var username: String
+  var friendship_status: DirectThreadRepositoryUpdateTitleResponseFriendshipStatus = js.native
+  var full_name: String = js.native
+  var has_anonymous_profile_picture: Boolean = js.native
+  var is_directapp_installed: Boolean = js.native
+  var is_private: Boolean = js.native
+  var is_using_unified_inbox_for_direct: Boolean = js.native
+  var is_verified: Boolean = js.native
+  var pk: Double = js.native
+  var profile_pic_id: String = js.native
+  var profile_pic_url: String = js.native
+  var username: String = js.native
 }
 
 object DirectThreadRepositoryUpdateTitleResponseUsersItem {
@@ -34,8 +35,81 @@ object DirectThreadRepositoryUpdateTitleResponseUsersItem {
     username: String
   ): DirectThreadRepositoryUpdateTitleResponseUsersItem = {
     val __obj = js.Dynamic.literal(friendship_status = friendship_status.asInstanceOf[js.Any], full_name = full_name.asInstanceOf[js.Any], has_anonymous_profile_picture = has_anonymous_profile_picture.asInstanceOf[js.Any], is_directapp_installed = is_directapp_installed.asInstanceOf[js.Any], is_private = is_private.asInstanceOf[js.Any], is_using_unified_inbox_for_direct = is_using_unified_inbox_for_direct.asInstanceOf[js.Any], is_verified = is_verified.asInstanceOf[js.Any], pk = pk.asInstanceOf[js.Any], profile_pic_id = profile_pic_id.asInstanceOf[js.Any], profile_pic_url = profile_pic_url.asInstanceOf[js.Any], username = username.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[DirectThreadRepositoryUpdateTitleResponseUsersItem]
   }
+  @scala.inline
+  implicit class DirectThreadRepositoryUpdateTitleResponseUsersItemOps[Self <: DirectThreadRepositoryUpdateTitleResponseUsersItem] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFriendship_status(value: DirectThreadRepositoryUpdateTitleResponseFriendshipStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("friendship_status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFull_name(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("full_name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHas_anonymous_profile_picture(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("has_anonymous_profile_picture")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIs_directapp_installed(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("is_directapp_installed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIs_private(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("is_private")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIs_using_unified_inbox_for_direct(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("is_using_unified_inbox_for_direct")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIs_verified(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("is_verified")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPk(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pk")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withProfile_pic_id(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("profile_pic_id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withProfile_pic_url(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("profile_pic_url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUsername(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("username")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

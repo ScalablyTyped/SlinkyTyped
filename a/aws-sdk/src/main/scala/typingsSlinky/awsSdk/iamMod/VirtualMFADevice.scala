@@ -30,19 +30,83 @@ trait VirtualMFADevice extends js.Object {
 
 object VirtualMFADevice {
   @scala.inline
-  def apply(
-    SerialNumber: serialNumberType,
-    Base32StringSeed: BootstrapDatum = null,
-    EnableDate: js.Date = null,
-    QRCodePNG: BootstrapDatum = null,
-    User: User = null
-  ): VirtualMFADevice = {
+  def apply(SerialNumber: serialNumberType): VirtualMFADevice = {
     val __obj = js.Dynamic.literal(SerialNumber = SerialNumber.asInstanceOf[js.Any])
-    if (Base32StringSeed != null) __obj.updateDynamic("Base32StringSeed")(Base32StringSeed.asInstanceOf[js.Any])
-    if (EnableDate != null) __obj.updateDynamic("EnableDate")(EnableDate.asInstanceOf[js.Any])
-    if (QRCodePNG != null) __obj.updateDynamic("QRCodePNG")(QRCodePNG.asInstanceOf[js.Any])
-    if (User != null) __obj.updateDynamic("User")(User.asInstanceOf[js.Any])
     __obj.asInstanceOf[VirtualMFADevice]
   }
+  @scala.inline
+  implicit class VirtualMFADeviceOps[Self <: VirtualMFADevice] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSerialNumber(value: serialNumberType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SerialNumber")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBase32StringSeedUint8Array(value: js.typedarray.Uint8Array): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Base32StringSeed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBase32StringSeed(value: BootstrapDatum): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Base32StringSeed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBase32StringSeed: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Base32StringSeed")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnableDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EnableDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnableDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EnableDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQRCodePNGUint8Array(value: js.typedarray.Uint8Array): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("QRCodePNG")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withQRCodePNG(value: BootstrapDatum): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("QRCodePNG")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQRCodePNG: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("QRCodePNG")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUser(value: User): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("User")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUser: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("User")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

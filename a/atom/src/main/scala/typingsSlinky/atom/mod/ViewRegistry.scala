@@ -1,7 +1,7 @@
 package typingsSlinky.atom.mod
 
+import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.atom.AnonInstantiable
-import typingsSlinky.std.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,9 +20,9 @@ trait ViewRegistry extends js.Object {
   // tslint:disable-next-line:no-any
   def addViewProvider[T](
     modelConstructor: AnonInstantiable[T],
-    createView: js.Function1[/* instance */ T, js.UndefOr[org.scalajs.dom.raw.HTMLElement]]
+    createView: js.Function1[/* instance */ T, js.UndefOr[HTMLElement]]
   ): Disposable = js.native
-  def getView(obj: js.Object): org.scalajs.dom.raw.HTMLElement = js.native
+  def getView(obj: js.Object): HTMLElement = js.native
   /** Get the view associated with an object in the workspace. */
   def getView(obj: TextEditor): TextEditorElement = js.native
 }

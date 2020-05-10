@@ -30,20 +30,77 @@ trait LifecyclePolicyPreviewResult extends js.Object {
 
 object LifecyclePolicyPreviewResult {
   @scala.inline
-  def apply(
-    action: LifecyclePolicyRuleAction = null,
-    appliedRulePriority: Int | Double = null,
-    imageDigest: ImageDigest = null,
-    imagePushedAt: js.Date = null,
-    imageTags: ImageTagList = null
-  ): LifecyclePolicyPreviewResult = {
+  def apply(): LifecyclePolicyPreviewResult = {
     val __obj = js.Dynamic.literal()
-    if (action != null) __obj.updateDynamic("action")(action.asInstanceOf[js.Any])
-    if (appliedRulePriority != null) __obj.updateDynamic("appliedRulePriority")(appliedRulePriority.asInstanceOf[js.Any])
-    if (imageDigest != null) __obj.updateDynamic("imageDigest")(imageDigest.asInstanceOf[js.Any])
-    if (imagePushedAt != null) __obj.updateDynamic("imagePushedAt")(imagePushedAt.asInstanceOf[js.Any])
-    if (imageTags != null) __obj.updateDynamic("imageTags")(imageTags.asInstanceOf[js.Any])
     __obj.asInstanceOf[LifecyclePolicyPreviewResult]
   }
+  @scala.inline
+  implicit class LifecyclePolicyPreviewResultOps[Self <: LifecyclePolicyPreviewResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAction(value: LifecyclePolicyRuleAction): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("action")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAction: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("action")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAppliedRulePriority(value: LifecyclePolicyRulePriority): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appliedRulePriority")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAppliedRulePriority: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appliedRulePriority")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withImageDigest(value: ImageDigest): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imageDigest")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImageDigest: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imageDigest")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withImagePushedAt(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imagePushedAt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImagePushedAt: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imagePushedAt")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withImageTags(value: ImageTagList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imageTags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImageTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imageTags")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

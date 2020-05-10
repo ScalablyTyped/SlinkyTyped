@@ -1,13 +1,13 @@
 package typingsSlinky.blueprintjsCore.componentsMod
 
 import org.scalablytyped.runtime.TopLevel
+import slinky.core.ReactComponentClass
 import typingsSlinky.blueprintjsCore.breadcrumbMod.IBreadcrumbProps
-import typingsSlinky.react.mod.SFC
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSImport("@blueprintjs/core/lib/esm/components", "Breadcrumb")
 @js.native
-object Breadcrumb extends TopLevel[SFC[IBreadcrumbProps]]
+object Breadcrumb extends TopLevel[ReactComponentClass[IBreadcrumbProps]]
 

@@ -13,12 +13,10 @@ trait PadType extends js.Object
 
 object PadType {
   @scala.inline
-  def NUMBER: typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.NUMBER = this.cast("NUMBER")
+  def NUMBER: typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.NUMBER = "NUMBER".asInstanceOf[typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.NUMBER]
   @scala.inline
-  def SAME: typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.SAME = this.cast("SAME")
+  def SAME: typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.SAME = "SAME".asInstanceOf[typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.SAME]
   @scala.inline
-  def VALID: typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.VALID = this.cast("VALID")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def VALID: typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.VALID = "VALID".asInstanceOf[typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.VALID]
 }
 

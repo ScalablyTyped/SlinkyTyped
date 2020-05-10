@@ -4,22 +4,23 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait FbsearchRepositoryTopsearchFlatResponseUser extends js.Object {
-  var byline: String
-  var follower_count: Double
-  var friendship_status: FbsearchRepositoryTopsearchFlatResponseFriendshipStatus
-  var full_name: String
-  var has_anonymous_profile_picture: Boolean
-  var is_private: Boolean
-  var is_verified: Boolean
-  var latest_reel_media: js.UndefOr[Double] = js.undefined
-  var mutual_followers_count: Double
-  var pk: Double
-  var profile_pic_id: js.UndefOr[String] = js.undefined
-  var profile_pic_url: String
-  var search_social_context: js.UndefOr[String] = js.undefined
-  var social_context: js.UndefOr[String] = js.undefined
-  var username: String
+  var byline: String = js.native
+  var follower_count: Double = js.native
+  var friendship_status: FbsearchRepositoryTopsearchFlatResponseFriendshipStatus = js.native
+  var full_name: String = js.native
+  var has_anonymous_profile_picture: Boolean = js.native
+  var is_private: Boolean = js.native
+  var is_verified: Boolean = js.native
+  var latest_reel_media: js.UndefOr[Double] = js.native
+  var mutual_followers_count: Double = js.native
+  var pk: Double = js.native
+  var profile_pic_id: js.UndefOr[String] = js.native
+  var profile_pic_url: String = js.native
+  var search_social_context: js.UndefOr[String] = js.native
+  var social_context: js.UndefOr[String] = js.native
+  var username: String = js.native
 }
 
 object FbsearchRepositoryTopsearchFlatResponseUser {
@@ -35,18 +36,132 @@ object FbsearchRepositoryTopsearchFlatResponseUser {
     mutual_followers_count: Double,
     pk: Double,
     profile_pic_url: String,
-    username: String,
-    latest_reel_media: Int | Double = null,
-    profile_pic_id: String = null,
-    search_social_context: String = null,
-    social_context: String = null
+    username: String
   ): FbsearchRepositoryTopsearchFlatResponseUser = {
     val __obj = js.Dynamic.literal(byline = byline.asInstanceOf[js.Any], follower_count = follower_count.asInstanceOf[js.Any], friendship_status = friendship_status.asInstanceOf[js.Any], full_name = full_name.asInstanceOf[js.Any], has_anonymous_profile_picture = has_anonymous_profile_picture.asInstanceOf[js.Any], is_private = is_private.asInstanceOf[js.Any], is_verified = is_verified.asInstanceOf[js.Any], mutual_followers_count = mutual_followers_count.asInstanceOf[js.Any], pk = pk.asInstanceOf[js.Any], profile_pic_url = profile_pic_url.asInstanceOf[js.Any], username = username.asInstanceOf[js.Any])
-    if (latest_reel_media != null) __obj.updateDynamic("latest_reel_media")(latest_reel_media.asInstanceOf[js.Any])
-    if (profile_pic_id != null) __obj.updateDynamic("profile_pic_id")(profile_pic_id.asInstanceOf[js.Any])
-    if (search_social_context != null) __obj.updateDynamic("search_social_context")(search_social_context.asInstanceOf[js.Any])
-    if (social_context != null) __obj.updateDynamic("social_context")(social_context.asInstanceOf[js.Any])
     __obj.asInstanceOf[FbsearchRepositoryTopsearchFlatResponseUser]
   }
+  @scala.inline
+  implicit class FbsearchRepositoryTopsearchFlatResponseUserOps[Self <: FbsearchRepositoryTopsearchFlatResponseUser] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withByline(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("byline")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFollower_count(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("follower_count")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFriendship_status(value: FbsearchRepositoryTopsearchFlatResponseFriendshipStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("friendship_status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFull_name(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("full_name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHas_anonymous_profile_picture(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("has_anonymous_profile_picture")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIs_private(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("is_private")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIs_verified(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("is_verified")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMutual_followers_count(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mutual_followers_count")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPk(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pk")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withProfile_pic_url(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("profile_pic_url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUsername(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("username")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLatest_reel_media(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("latest_reel_media")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLatest_reel_media: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("latest_reel_media")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProfile_pic_id(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("profile_pic_id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProfile_pic_id: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("profile_pic_id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSearch_social_context(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("search_social_context")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSearch_social_context: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("search_social_context")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSocial_context(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("social_context")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSocial_context: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("social_context")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

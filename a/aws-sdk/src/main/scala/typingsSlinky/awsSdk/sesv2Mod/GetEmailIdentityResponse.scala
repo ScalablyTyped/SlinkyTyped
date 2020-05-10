@@ -34,22 +34,89 @@ trait GetEmailIdentityResponse extends js.Object {
 
 object GetEmailIdentityResponse {
   @scala.inline
-  def apply(
-    DkimAttributes: DkimAttributes = null,
-    FeedbackForwardingStatus: js.UndefOr[Boolean] = js.undefined,
-    IdentityType: IdentityType = null,
-    MailFromAttributes: MailFromAttributes = null,
-    Tags: TagList = null,
-    VerifiedForSendingStatus: js.UndefOr[Boolean] = js.undefined
-  ): GetEmailIdentityResponse = {
+  def apply(): GetEmailIdentityResponse = {
     val __obj = js.Dynamic.literal()
-    if (DkimAttributes != null) __obj.updateDynamic("DkimAttributes")(DkimAttributes.asInstanceOf[js.Any])
-    if (!js.isUndefined(FeedbackForwardingStatus)) __obj.updateDynamic("FeedbackForwardingStatus")(FeedbackForwardingStatus.asInstanceOf[js.Any])
-    if (IdentityType != null) __obj.updateDynamic("IdentityType")(IdentityType.asInstanceOf[js.Any])
-    if (MailFromAttributes != null) __obj.updateDynamic("MailFromAttributes")(MailFromAttributes.asInstanceOf[js.Any])
-    if (Tags != null) __obj.updateDynamic("Tags")(Tags.asInstanceOf[js.Any])
-    if (!js.isUndefined(VerifiedForSendingStatus)) __obj.updateDynamic("VerifiedForSendingStatus")(VerifiedForSendingStatus.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetEmailIdentityResponse]
   }
+  @scala.inline
+  implicit class GetEmailIdentityResponseOps[Self <: GetEmailIdentityResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDkimAttributes(value: DkimAttributes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DkimAttributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDkimAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DkimAttributes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFeedbackForwardingStatus(value: Enabled): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FeedbackForwardingStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFeedbackForwardingStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FeedbackForwardingStatus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIdentityType(value: IdentityType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IdentityType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIdentityType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IdentityType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMailFromAttributes(value: MailFromAttributes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MailFromAttributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMailFromAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MailFromAttributes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTags(value: TagList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVerifiedForSendingStatus(value: Enabled): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VerifiedForSendingStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVerifiedForSendingStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VerifiedForSendingStatus")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

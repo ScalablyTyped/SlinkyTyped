@@ -12,10 +12,8 @@ trait MediaType extends js.Object
 
 object MediaType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def print: typingsSlinky.puppeteer.puppeteerStrings.print = "print".asInstanceOf[typingsSlinky.puppeteer.puppeteerStrings.print]
   @scala.inline
-  def print: typingsSlinky.puppeteer.puppeteerStrings.print = this.cast("print")
-  @scala.inline
-  def screen: typingsSlinky.puppeteer.puppeteerStrings.screen = this.cast("screen")
+  def screen: typingsSlinky.puppeteer.puppeteerStrings.screen = "screen".asInstanceOf[typingsSlinky.puppeteer.puppeteerStrings.screen]
 }
 

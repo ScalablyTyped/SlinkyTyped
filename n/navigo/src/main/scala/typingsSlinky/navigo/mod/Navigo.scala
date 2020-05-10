@@ -2,7 +2,6 @@ package typingsSlinky.navigo.mod
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.navigo.AnonHooks
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,8 +25,8 @@ trait Navigo extends js.Object {
   def off(location: String, handler: RouteHandler): Unit = js.native
   def on(location: String, handler: RouteHandler): Navigo = js.native
   def on(location: String, handler: RouteHandler, hooks: NavigoHooks): Navigo = js.native
-  def on(location: RegExp, handler: js.Function1[/* repeated */ String, Unit]): Navigo = js.native
-  def on(location: RegExp, handler: js.Function1[/* repeated */ String, Unit], hooks: NavigoHooks): Navigo = js.native
+  def on(location: js.RegExp, handler: js.Function1[/* repeated */ String, Unit]): Navigo = js.native
+  def on(location: js.RegExp, handler: js.Function1[/* repeated */ String, Unit], hooks: NavigoHooks): Navigo = js.native
   def on(rootHandler: RouteHandler): Navigo = js.native
   def on(rootHandler: RouteHandler, hooks: NavigoHooks): Navigo = js.native
   def on(routes: StringDictionary[RouteHandler]): Navigo = js.native

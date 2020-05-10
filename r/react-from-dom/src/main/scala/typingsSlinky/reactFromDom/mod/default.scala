@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
 object default extends js.Object {
   def apply(input: String): TagMod[Any] | Node = js.native
   def apply(input: String, options: IOptions): TagMod[Any] | Node = js.native
-  def apply(input: typingsSlinky.std.Node): TagMod[Any] | Node = js.native
-  def apply(input: typingsSlinky.std.Node, options: IOptions): TagMod[Any] | Node = js.native
+  def apply(input: Node): TagMod[Any] | Node = js.native
+  def apply(input: Node, options: IOptions): TagMod[Any] | Node = js.native
 }
 

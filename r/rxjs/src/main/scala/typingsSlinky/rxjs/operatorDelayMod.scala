@@ -1,6 +1,5 @@
 package typingsSlinky.rxjs
 
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,9 +12,9 @@ object operatorDelayMod extends js.Object {
     delay: Double,
     scheduler: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify SchedulerLike */ js.Any
   ): js.Any = js.native
-  def delay[T](delay: Date): js.Any = js.native
+  def delay[T](delay: js.Date): js.Any = js.native
   def delay[T](
-    delay: Date,
+    delay: js.Date,
     scheduler: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify SchedulerLike */ js.Any
   ): js.Any = js.native
 }

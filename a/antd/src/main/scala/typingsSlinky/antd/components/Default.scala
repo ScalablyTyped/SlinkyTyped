@@ -1,15 +1,17 @@
 package typingsSlinky.antd.components
 
 import typingsSlinky.antd.modalMod.defaultCls
+import typingsSlinky.antd.modalModalMod.ModalProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Default extends SharedApply_ModalProps_1401836015[defaultCls] {
+object Default {
   @JSImport("antd/lib/modal", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: ModalProps): SharedBuilder_ModalProps_568751350[defaultCls] = new SharedBuilder_ModalProps_568751350[defaultCls](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Default.type): SharedBuilder_ModalProps_568751350[defaultCls] = new SharedBuilder_ModalProps_568751350[defaultCls](js.Array(this.component, js.Dictionary.empty))()
 }
 

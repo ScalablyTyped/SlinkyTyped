@@ -26,18 +26,65 @@ trait DBClusterMember extends js.Object {
 
 object DBClusterMember {
   @scala.inline
-  def apply(
-    DBClusterParameterGroupStatus: String = null,
-    DBInstanceIdentifier: String = null,
-    IsClusterWriter: js.UndefOr[scala.Boolean] = js.undefined,
-    PromotionTier: Int | Double = null
-  ): DBClusterMember = {
+  def apply(): DBClusterMember = {
     val __obj = js.Dynamic.literal()
-    if (DBClusterParameterGroupStatus != null) __obj.updateDynamic("DBClusterParameterGroupStatus")(DBClusterParameterGroupStatus.asInstanceOf[js.Any])
-    if (DBInstanceIdentifier != null) __obj.updateDynamic("DBInstanceIdentifier")(DBInstanceIdentifier.asInstanceOf[js.Any])
-    if (!js.isUndefined(IsClusterWriter)) __obj.updateDynamic("IsClusterWriter")(IsClusterWriter.asInstanceOf[js.Any])
-    if (PromotionTier != null) __obj.updateDynamic("PromotionTier")(PromotionTier.asInstanceOf[js.Any])
     __obj.asInstanceOf[DBClusterMember]
   }
+  @scala.inline
+  implicit class DBClusterMemberOps[Self <: DBClusterMember] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDBClusterParameterGroupStatus(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DBClusterParameterGroupStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDBClusterParameterGroupStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DBClusterParameterGroupStatus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDBInstanceIdentifier(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DBInstanceIdentifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDBInstanceIdentifier: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DBInstanceIdentifier")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsClusterWriter(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IsClusterWriter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsClusterWriter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IsClusterWriter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPromotionTier(value: IntegerOptional): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PromotionTier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPromotionTier: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PromotionTier")(js.undefined)
+        ret
+    }
+  }
+  
 }
 
